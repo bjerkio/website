@@ -6,9 +6,13 @@ pipelines:
           image: teracy/angular-cli
           caches:
             - node
+            - globalnode
           script:
             - npm install
             - ng lint
             - ng build --env staging
             - npm install -g aerobatic-cli
             - aero deploy --directory build
+definitions:
+  caches:
+    globalnode: /usr/local/lib/node_modules
