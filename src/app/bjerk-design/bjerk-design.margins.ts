@@ -5,4 +5,4 @@ export const margins = {
   lg: 11.88, // 190 px
   xl: 15, // 240 px
   maxWidth: 1640 // in px!
-}
+};

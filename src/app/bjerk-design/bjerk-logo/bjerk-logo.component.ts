@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./bjerk-logo.component.scss']
 })
 export class BjerkLogoComponent implements OnInit {
-  @Input() height: number = 2.125;
-  @Input() inverted: boolean = false;
+  @Input() height = 2.125;
+  @Input() inverted = false;
 
   constructor() {
 
