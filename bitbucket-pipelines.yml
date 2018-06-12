@@ -10,7 +10,7 @@ pipelines:
           script:
             - npm install
             - ng lint
-            - ng build --env staging
+            - ng build
             - npm install -g aerobatic-cli
             - aero deploy
 definitions:
