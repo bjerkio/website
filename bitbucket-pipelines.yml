@@ -11,10 +11,4 @@ pipelines:
             - ng lint
             - ng build --env staging
             - npm install -g aerobatic-cli
-            - aero deploy --directory build 
-      - step:
-          name: Upload to staging
-          image: cgswong/aws
-          deployment: staging
-          script:
-            - aws s3 --region "eu-west-1" sync dist/ s3://$BUCKET_STAGING --cache-control "public, max-age=14400" --acl public-read --delete
+            - aero deploy --directory build
