@@ -1,0 +1,19 @@
+@import '../bjerk-design.config';
+
+:host {
+  display: flex;
+}
+ul {
+  font-size: 1.25rem;
+  margin:0px;
+  padding:0px;
+
+  > li {
+    margin: 1.2rem;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $dark;
+    }
+  }
+}
