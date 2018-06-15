@@ -24,10 +24,16 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/pwa": "^0.6.8",
     "@angular/router": "^6.0.3",
+    "@angular/service-worker": "^6.0.3",
+    "apollo-angular": "^1.1.0",
+    "apollo-angular-link-http": "^1.1.0",
+    "apollo-cache-inmemory": "^1.2.3",
+    "apollo-client": "^2.3.3",
     "core-js": "^2.5.4",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "@angular/service-worker": "^6.0.3"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
