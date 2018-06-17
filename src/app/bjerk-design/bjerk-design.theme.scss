@@ -1,0 +1,95 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'TTCommons-Regular, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@import './bjerk-design.config.scss';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+.mat-button-focus-overlay {
+  background: none !important;
+}
+
+.mat-button:hover {
+  box-shadow: 0 .187rem .937rem rgba(0,0,0, 0.06);
+  &.dark {
+    box-shadow: 0 .187rem .937rem rgba(0,0,0, 0.24);
+  }
+}
+
+.mat-button {
+  border-radius: 0px !important;
+  font-family: 'TTCommons-Medium', sans-serif;
+  font-size: 1.33rem;
+  text-decoration: underline !important;
+  color: $primary;
+  padding: 1rem 1.5rem 0.7rem 1.5rem !important;
+
+  mat-icon {
+    color: $dark;
+  }
+
+  &.dark {
+    background: $dark;
+
+    mat-icon {
+      color: $dry;
+    }
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article.offer-showcase {
+  header h2 {
+    color: $iron;
+    font-size: 9.37rem;
+    font-family: 'TTCommons-Medium', sans-serif;
+    font-weight: normal;
+    margin: 3.75rem;
+    margin-top: 2.5rem;
+    @media (max-width: 1120px) {
+      font-size: 5rem;
+    }
+    span {
+      display: inline-block;
+      border-bottom: .625rem solid $primary;
+    }
+  }
+  section {
+    font-size: 1.5rem;
+    margin: 3.75rem;
+    color: $iron;
+  }
+}
+
+@media (min-width: 1639px) {
+  .container {
+    width: 1640px;
+    margin: auto !important;
+  }
+}
+
+@media (max-width: 1470px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 1rem;
+  }
+}

@@ -24,9 +24,7 @@
               "src/manifest.json"
             ],
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
+              "src/app/bjerk-design/bjerk-design.theme.scss",
               "src/styles.css"
             ],
             "scripts": []
