@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BjerkNavigationComponent implements OnInit {
 
+  showMobile = false;
+
   constructor() { }
+
+  showMobileNav() {
+    this.showMobile = this.showMobile ? false : true;
+  }
 
   ngOnInit() {
   }
