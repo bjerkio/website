@@ -1,0 +1,45 @@
+@import '../bjerk-design/bjerk-design.config.scss';
+.big-b {
+  background-image: url('/assets/bjerk-big-b.svg');
+  height: 50rem;
+  background-size: cover;
+  position: relative;
+  .slogan {
+    color: $dry;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    text-align: right;
+  }
+}
+
+.call-block {
+  .content {
+    margin: 3.75rem;
+    height: 47.5rem;
+  }
+  h1 {
+    font-family: 'TTCommons-Light', sans-serif;
+    font-weight: normal;
+    font-size: 9.75rem;
+    color: $iron;
+  }
+}
+
+
+@media (max-width: 1120px) {
+  .big-b {
+    height: 40rem;
+    .slogan {
+      right: 5%;
+      font-size: 1.8rem;
+    }
+  }
+  .call-block {
+    .content { height: auto; }
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}

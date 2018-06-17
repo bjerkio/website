@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 @Component({
   selector: 'app-page-home',
   templateUrl: './page-home.component.html',
-  styleUrls: ['./page-home.component.css']
+  styleUrls: ['./page-home.component.scss']
 })
 export class PageHomeComponent implements OnInit {
 
