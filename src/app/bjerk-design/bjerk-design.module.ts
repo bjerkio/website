@@ -15,6 +15,11 @@ import { BjerkNavigationComponent } from './bjerk-navigation/bjerk-navigation.co
     BjerkLogoComponent,
     BjerkNavigationComponent
   ],
-  exports: [BjerkHeaderComponent, BjerkLogoComponent, BjerkNavigationComponent, MaterialDesignModule]
+  exports: [
+    BjerkHeaderComponent,
+    BjerkLogoComponent,
+    BjerkNavigationComponent,
+    MaterialDesignModule
+  ]
 })
 export class BjerkDesignModule { }
