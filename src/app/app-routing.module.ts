@@ -6,8 +6,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
 export const routes: Routes = [
   {path: '', component: PageHomeComponent, children:
     [
-      {path: '', component: PageHomeComponent},
-      {path: 'dashboard', loadChildren: './pages/main/main.module#MainModule'}
+      {path: '', component: PageHomeComponent}
     ]
   },
   {path: '**', redirectTo: ''}
