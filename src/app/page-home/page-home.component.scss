@@ -38,8 +38,11 @@
   }
   .call-block {
     .content { height: auto; }
-    h1 {
-      font-size: 6rem;
-    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .call-block h1 {
+    font-size: 3rem;
   }
 }

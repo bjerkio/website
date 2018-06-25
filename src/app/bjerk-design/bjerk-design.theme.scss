@@ -65,6 +65,9 @@ article.offer-showcase {
     @media (max-width: 1120px) {
       font-size: 5rem;
     }
+    @media screen and (max-width: 599px) {
+      font-size: 3rem;
+    }
     span {
       display: inline-block;
       border-bottom: .625rem solid $primary;
@@ -87,11 +90,5 @@ article.offer-showcase {
 @media (max-width: 1470px) {
   html {
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 375px) {
-  html {
-    font-size: 1rem;
   }
 }
