@@ -24,6 +24,7 @@
               "src/manifest.json"
             ],
             "styles": [
+              "src/app/bjerk-design/bjerk-design.fonts.scss",
               "src/app/bjerk-design/bjerk-design.theme.scss",
               "src/styles.css"
             ],

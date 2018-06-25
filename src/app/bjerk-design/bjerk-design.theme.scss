@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 
 $custom-typography: mat-typography-config(
-  $font-family: 'TTCommons-Regular, sans-serif',
+  $font-family: 'TTCommons, sans-serif',
   $headline: mat-typography-level(32px, 48px, 700),
   $body-1: mat-typography-level(16px, 24px, 500)
 );
@@ -29,7 +29,8 @@ $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 .mat-button {
   background: none;
   border-radius: 0px !important;
-  font-family: 'TTCommons-Medium', sans-serif;
+  font-family: 'TTCommons', sans-serif;
+  font-weight: 200;
   font-size: 1.33rem;
   text-decoration: underline !important;
   color: $primary;
@@ -57,8 +58,8 @@ article.offer-showcase {
   header h2 {
     color: $iron;
     font-size: 9.37rem;
-    font-family: 'TTCommons-Medium', sans-serif;
-    font-weight: normal;
+    font-family: 'TTCommons', sans-serif;
+    font-weight: 200;
     margin: 3.75rem;
     margin-top: 2.5rem;
     @media (max-width: 1120px) {
