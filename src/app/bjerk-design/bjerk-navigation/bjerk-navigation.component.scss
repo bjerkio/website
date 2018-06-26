@@ -22,17 +22,12 @@
 
 @keyframes showMobileAni {
   0% {
-    height: 56px;
-    width: 56px;
-    transform: translateX(100vw) translateY(100vh);
-    border-radius: 100vw;
+    transform: scale(0.3) translateX(100vw) translateY(100vh);
+    border-radius: 100%;
     background-color: $primary;
   }
   100% {
-    transform: translateX(-50vw) translateY(-50vh);
-    width: 400vh;
-    height: 400vh;
-    border-radius: 200vw;
+    transform: scale(3);
   }
 }
 
@@ -40,7 +35,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100vw;
+  width: 100vh;
   height: 100vh;
   background-color: $dark;
   animation-name: showMobileAni;
