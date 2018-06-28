@@ -30,7 +30,7 @@ export class PageHomeComponent implements OnInit {
     this.getCardLinks();
   }
 
-  private getCardLinks():void {
+  private getCardLinks(): void {
     this.cardLinkService.getItems().subscribe(cardLinks => this.cardLinks = cardLinks);
   }
 

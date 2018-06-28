@@ -1,4 +1,5 @@
 @import '../bjerk-design/bjerk-design.config.scss';
+@import '../styles-lib/variables';
 .big-b {
   background-image: url('/assets/bjerk-big-b.svg');
   height: 50rem;
@@ -16,7 +17,7 @@
 
 .call-block {
   .content {
-    margin: 3.75rem;
+    margin: 3.75rem 0;
     height: 47.5rem;
   }
   h1 {
@@ -28,13 +29,32 @@
 }
 .links{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: stretch;
-  padding: 3.75rem;
+  padding: 3.75rem 0;
+  @include media-mf-dmd{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  @include media-df-dmd{
+    align-items: center;
+  }
 }
 link-card{
-  max-width: 30%;
+  max-width: 100%;
+  @include media-mf-dmd{
+    max-width: 32.6%;
+  }
+  @include media-df-dmd{
+    max-width: 80%;
+    width: 536px;
+    margin-bottom: 30px;
+  }
+  @include media-df-tp{
+    max-width: 100%;
+  }
 }
 
 
