@@ -1,0 +1,16 @@
+<a href="javascript:void(0)" class="link-card">
+  <article class='link-card__body'>
+    <div class="link-card__img-container" [attr.aria-role]='presentation' [ngStyle]="{'background-image': 'url(' + cardLink.img + ')'}">
+      <person-avatar *ngIf='userData' [imagePath]="userData.img"
+      [alt]=''
+      [className]="'link-card__person'"
+      [size]="'sm'"
+      ></person-avatar>
+    </div>
+    <footer class='link-card__foter'>
+      <h3 class="link-card__title">{{cardLink.title}}</h3>
+      <p class="link-card__text">{{cardLink.shortDescription}}</p>
+      <mat-icon class='link-card__arrow'>arrow_right_alt</mat-icon>
+    </footer>
+  </article>
+</a>

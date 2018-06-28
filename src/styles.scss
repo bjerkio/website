@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './app/styles-lib/link-card/link-card';
+@import './app/styles-lib/person-avatar/person-avatar';
 body {
   margin: 0;
   font-family: 'TTCommons-Regular', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
 }

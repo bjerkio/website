@@ -26,6 +26,16 @@
     color: $iron;
   }
 }
+.links{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 3.75rem;
+}
+link-card{
+  max-width: 30%;
+}
 
 
 @media (max-width: 1120px) {

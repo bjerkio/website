@@ -1,0 +1,62 @@
+.link-card{
+    $this: '.link-card';
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    &:hover,
+    &:focus{
+        color: inherit;
+        text-decoration: none;
+        box-shadow: 0 0.187rem 0.937rem rgba(0, 0, 0, 0.06);
+    }
+    &__img-container{
+        position: relative;
+        height: 13.5vw;
+        overflow: hidden;
+    }
+    &__img{
+        min-width: 100%;
+        min-height: 100%;
+    }
+    &__person{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+    }
+    &__text,
+    &__title{
+        max-width: 85%;
+    }
+    &__title{
+        margin-top: 0;
+    }
+    &__text{
+        overflow: hidden;
+        height: 2.2em;
+    }
+    &__foter{
+        position: relative;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    & #{$this}__arrow{
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 15px;
+        margin: auto;
+        color: #393e46;
+    }
+}

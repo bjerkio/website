@@ -39,3 +39,8 @@
     </button>
   </section>
 </article>
+
+<section class="container links">
+    <h2 hidden>Usefull links</h2>
+    <link-card *ngFor='let cardLink of cardLinks' [cardLink]='cardLink'></link-card>
+</section>
