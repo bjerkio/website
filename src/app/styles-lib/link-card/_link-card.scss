@@ -18,6 +18,10 @@
         position: relative;
         height: 13.5vw;
         overflow: hidden;
+        background: {
+            position: center;
+            size: cover;
+        }
     }
     &__img{
         min-width: 100%;
