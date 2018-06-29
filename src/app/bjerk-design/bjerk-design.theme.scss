@@ -67,6 +67,9 @@ article.offer-showcase {
     margin: 3.75rem;
     margin-top: 2.5rem;
     margin-right: 0;
+    @include media-df-dmd{
+      margin-left: 0;
+    }
     @media (max-width: 1120px) {
       font-size: 5rem;
     }
