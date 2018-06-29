@@ -1,9 +1,14 @@
 @import '../bjerk-design.config';
+@import '../../styles-lib/variables';
 .header {
-  margin: auto;
   height: 10rem;
-  margin-left: 3.75rem;
-  margin-right: 3.75rem;
+  @include media-mf-dmd{
+    margin: auto;
+    margin: {
+      left: 3.75rem;
+      right: 3.75rem;
+    }
+  }
 }
 
 .fill-remaining-space {
