@@ -1,6 +1,6 @@
 <a href="javascript:void(0)" class="link-card">
   <article class='link-card__body'>
-    <div class="link-card__img-container" [attr.aria-role]='presentation' [ngStyle]="{'background-image': 'url(' + cardLink.img + ')'}">
+    <div class="link-card__img-container" [attr.role]='presentation' [ngStyle]="{'background-image': 'url(' + cardLink.img + ')'}">
       <img [src]="cardLink.img" [alt]="cardLink.title" class="link-card__img">
       <app-person-avatar *ngIf='userData' [imagePath]="userData.img"
       [alt]='userData.name'
