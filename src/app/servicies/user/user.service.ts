@@ -10,10 +10,10 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   constructor() { }
-  
+
   public getUser(id: number): Observable<UserInterface> {
     return  Observable.create( observer => {
-      observer.next(UsersMock.find( user => user.id === id))      
+      observer.next(UsersMock.find( user => user.id === id));
     });
   }
 }
