@@ -16,6 +16,9 @@ $my-app-warn:    mat-palette($mat-deep-orange);
 
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
+html {
+  font-size: 16px;
+}
 .mat-button-focus-overlay {
   background: none !important;
 }
@@ -101,6 +104,6 @@ article.offer-showcase {
 
 @media (max-width: 1470px) {
   html {
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 }
