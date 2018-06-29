@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from '../../servicies/user/user.service';
 import { UserInterface } from '../../interfaces/user.interface';
-import { CardLinkInterface } from '../../interfaces/card-link.interface';
+import { ContentMarketingInterface } from '../../interfaces/content-marketing.interface';
 
 @Component({
   selector: 'link-card',
@@ -10,12 +10,12 @@ import { CardLinkInterface } from '../../interfaces/card-link.interface';
 })
 export class LinkCardComponent implements OnInit {
   @Input()
-  cardLink: CardLinkInterface;
+  cardLink: ContentMarketingInterface;
   userData: UserInterface;
-  constructor(private userService: UserService){ }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.getUserInfo()
+    this.getUserInfo();
   }
 
   getUserInfo(): void {

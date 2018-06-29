@@ -15,8 +15,8 @@ import { environment } from '../environments/environment';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { LinkCardComponent } from './ui-elements/link-card/link-card.component';
 import { PersonAvatarComponent } from './ui-elements/person-avatar/person-avatar.component';
-import { CardLinkService } from './servicies/card-link/card-link.service';
 import { UserService } from './servicies/user/user.service';
+import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,8 @@ import { UserService } from './servicies/user/user.service';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    CardLinkService,
-    UserService
+    UserService,
+    ContentMarcetingService
   ],
   bootstrap: [AppComponent]
 })

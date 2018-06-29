@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
-import { CardLinkService } from '../servicies/card-link/card-link.service';
-import { CardLinkInterface } from '../interfaces/card-link.interface';
+import { ContentMarketingInterface } from '../interfaces/content-marketing.interface';
+import { ContentMarcetingService } from '../servicies/content-marketing/content-marketing.service';
 
 @Component({
   selector: 'app-page-home',
@@ -10,9 +10,9 @@ import { CardLinkInterface } from '../interfaces/card-link.interface';
   styleUrls: ['./page-home.component.scss']
 })
 export class PageHomeComponent implements OnInit {
-  cardLinks: CardLinkInterface[] = [];
+  cardLinks: ContentMarketingInterface[] = [];
 
-  constructor(apollo: Apollo, private cardLinkService: CardLinkService) {
+  constructor(apollo: Apollo, private cardLinkService: ContentMarcetingService) {
     apollo
       .query({
         query: gql`
