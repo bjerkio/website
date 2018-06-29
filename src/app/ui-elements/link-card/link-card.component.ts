@@ -4,7 +4,7 @@ import { UserInterface } from '../../interfaces/user.interface';
 import { ContentMarketingInterface } from '../../interfaces/content-marketing.interface';
 
 @Component({
-  selector: 'link-card',
+  selector: 'app-link-card',
   templateUrl: './link-card.component.html',
   styleUrls: ['./link-card.component.scss']
 })
