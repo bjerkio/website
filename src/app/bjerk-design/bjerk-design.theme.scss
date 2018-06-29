@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import '../styles-lib/variables';
 
 $custom-typography: mat-typography-config(
   $font-family: 'TTCommons, sans-serif',
@@ -15,6 +16,9 @@ $my-app-warn:    mat-palette($mat-deep-orange);
 
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
+html {
+  font-size: 16px;
+}
 .mat-button-focus-overlay {
   background: none !important;
 }
@@ -62,6 +66,10 @@ article.offer-showcase {
     font-weight: 200;
     margin: 3.75rem;
     margin-top: 2.5rem;
+    margin-right: 0;
+    @include media-df-dmd{
+      margin-left: 0;
+    }
     @media (max-width: 1120px) {
       font-size: 5rem;
     }
@@ -76,19 +84,29 @@ article.offer-showcase {
   section {
     font-size: 1.5rem;
     margin: 3.75rem;
+    margin-left: 0;
     color: $iron;
   }
 }
 
-@media (min-width: 1639px) {
-  .container {
+.container{
+  margin: 0 15px;
+  width: calc(100% - 30px);
+  @include media-mf-dmd{
+    width: 1170px;
+    margin: auto;
+  }
+  @include media-mf-dlg{
+    width: 1360px;
+  }
+  @include media-mf-dxlg{
     width: 1640px;
-    margin: auto !important;
   }
 }
 
+
 @media (max-width: 1470px) {
   html {
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 }

@@ -13,11 +13,17 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import { PageHomeComponent } from './page-home/page-home.component';
+import { LinkCardComponent } from './ui-elements/link-card/link-card.component';
+import { PersonAvatarComponent } from './ui-elements/person-avatar/person-avatar.component';
+import { UserService } from './servicies/user/user.service';
+import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageHomeComponent
+    PageHomeComponent,
+    LinkCardComponent,
+    PersonAvatarComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +35,10 @@ import { PageHomeComponent } from './page-home/page-home.component';
     HttpLinkModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    UserService,
+    ContentMarcetingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
