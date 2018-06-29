@@ -1,0 +1,81 @@
+.page-wrapper{
+    position: relative;
+    padding-top: 3.75rem;
+    padding-bottom: 7.35rem;
+    overflow: hidden;
+}
+.contract-bg{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    &__img{
+        max-width: 40vw;
+        position: absolute;
+        &_top{
+            right: -5vw;
+            top: -5vw;
+            transform: rotate(-7deg);
+        }
+        &_bottom{
+            left: -6vw;
+            bottom: -5vw;
+            transform: rotate(7deg);
+        }
+    }
+}
+.form-contract{
+    background-color: #fff;
+    padding-top: 8vw;
+    padding-bottom: 15.5vw;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    &__field{
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: -1rem;
+            left: 0;
+            height: 2px;
+            width: calc(100% - 4.5rem);
+            background-color: #232931;
+        }
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 5vw;
+    }
+    &__input{
+        font-size: 3.5rem;
+        height: 4rem;
+        border: none;
+        outline: none !important;
+        display: inline-block;
+        align-items: center;
+        vertical-align: top;
+        transform: translateY(-4%);
+    }
+    &__button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: 0 !important;
+        height: 4rem;
+        width: 4.5rem;
+        display: inline-block;
+        vertical-align: top;
+        .material-icons{
+            width: 100%;
+            height: 100%;
+            font-size: 4rem;
+        }
+    }
+
+}

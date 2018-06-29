@@ -19,6 +19,7 @@ import { UserService } from './servicies/user/user.service';
 import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageContractComponent } from './page-contract/page-contract.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PageContractComponent } from './page-contract/page-contract.component';
     BrowserModule,
     BjerkDesignModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     ApolloModule,

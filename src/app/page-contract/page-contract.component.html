@@ -1,3 +1,17 @@
-<p>
-  page-contract works!
-</p>
+<app-bjerk-header></app-bjerk-header>
+<div class="page-wrapper">
+  <div class="contract-bg">
+    <img src="assets/bjerk-logo.svg" class="contract-bg__img contract-bg__img_top" alt="" [attr.aria-hedden]='true'>
+    <img src="assets/bjerk-logo.svg" class="contract-bg__img contract-bg__img_bottom" alt="" [attr.aria-hedden]='true'>
+  </div>
+  <form [formGroup]="contractForm" class="container form-contract" (submit)='onSubmit($event)'>
+    <h1 class='form-contract__title'>Let’s get to know each other.</h1>
+    <label for="email" class='access-helper'>your email</label>
+    <div class="form-contract__field">
+        <input type="email" formControlName='email' id="email" placeholder="your email" class='form-contract__input'>
+        <button [attr.aria-label]="'submit form'" class='form-contract__button'>
+          <mat-icon>arrow_right_alt</mat-icon>
+        </button>
+    </div>
+  </form>
+</div>
