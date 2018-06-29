@@ -17,13 +17,15 @@ import { LinkCardComponent } from './ui-elements/link-card/link-card.component';
 import { PersonAvatarComponent } from './ui-elements/person-avatar/person-avatar.component';
 import { UserService } from './servicies/user/user.service';
 import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
+import { FooterComponent } from './ui-elements/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageHomeComponent,
     LinkCardComponent,
-    PersonAvatarComponent
+    PersonAvatarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
