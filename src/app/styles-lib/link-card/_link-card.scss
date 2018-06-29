@@ -34,7 +34,7 @@
         min-width: 100%;
         @include media-mf-dmd{
             display: none;
-        } 
+        }
     }
     &__person{
         position: absolute;
@@ -53,6 +53,8 @@
     }
     &__title{
         margin-top: 0;
+        font-weight: normal;
+        font-size: 1.56rem;
     }
     &__text{
         overflow: hidden;
@@ -60,10 +62,10 @@
     }
     &__foter{
         position: relative;
-        padding: 15px;
         display: flex;
         flex-direction: column;
         justify-content: stretch;
+        padding: 1.875rem;
     }
     &__body{
         width: 100%;
