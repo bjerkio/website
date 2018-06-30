@@ -48,6 +48,13 @@
         @content;
     }
 }
+
+@mixin media-df-tl {
+    @media (max-width: 1025px) {
+        @content;
+    }
+}
+
 @mixin media-df-tp {
     @media (max-width: 768px) {
         @content;
