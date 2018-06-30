@@ -4,11 +4,13 @@ import { MaterialDesignModule } from '../material-design/material-design.module'
 import { BjerkHeaderComponent } from './bjerk-header/bjerk-header.component';
 import { BjerkLogoComponent } from './bjerk-logo/bjerk-logo.component';
 import { BjerkNavigationComponent } from './bjerk-navigation/bjerk-navigation.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    AppRoutingModule
   ],
   declarations: [
     BjerkHeaderComponent,

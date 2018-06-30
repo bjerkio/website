@@ -18,6 +18,8 @@ import { PersonAvatarComponent } from './ui-elements/person-avatar/person-avatar
 import { UserService } from './servicies/user/user.service';
 import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 import { FooterComponent } from './ui-elements/footer/footer.component';
+import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
+import { HeroComponent } from './ui-elements/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FooterComponent } from './ui-elements/footer/footer.component';
     PageHomeComponent,
     LinkCardComponent,
     PersonAvatarComponent,
-    FooterComponent
+    FooterComponent,
+    PageCompetenciesComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
