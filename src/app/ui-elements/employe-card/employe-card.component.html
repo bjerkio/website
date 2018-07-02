@@ -1,6 +1,6 @@
 <div class='employe'>
-  <div class="employe__photo">
-    <app-person-avatar [imagePath]='user.img' [alt]='user.name' [size]='"lg"'></app-person-avatar>
+  <div class="employe__photo-container">
+    <app-person-avatar [imagePath]='user.img' [alt]='user.name' [size]='"lg"' [className]="'employe__img'"></app-person-avatar>
   </div>
   <div class="employe__text-content">
     <h3 class="employe__name">{{user.name}}</h3>

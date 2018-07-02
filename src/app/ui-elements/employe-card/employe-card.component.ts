@@ -3,8 +3,7 @@ import { UserInterface } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-employe-card',
-  templateUrl: './employe-card.component.html',
-  styleUrls: ['./employe-card.component.scss']
+  templateUrl: './employe-card.component.html'
 })
 export class EmployeCardComponent implements OnInit {
   @Input()
@@ -18,7 +17,7 @@ export class EmployeCardComponent implements OnInit {
 
   parseEmloyeRole() {
     if (this.user.role.length > 1) {
-      this.parsedRole = this.user.role.reduce((total, role: string) => total += role + ' / ', '');
+      this.parsedRole = this.user.role.reduce((total, role: string) => total += role + '\xa0/ ', '');
     } else {
       this.parsedRole = this.user.role[0];
     }

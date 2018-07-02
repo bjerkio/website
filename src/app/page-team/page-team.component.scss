@@ -9,17 +9,38 @@
         margin-right: 10%;
         margin-top: 11.5vw;
         margin-bottom: 8vw;
+        @include media-df-dmd{
+            font-size: 9rem;
+        }
+        @include media-df-tp{
+            font-size: 4rem;
+            margin-right: 0;
+        }
+        @media (max-width: 600px) {
+            margin-top: 0;
+        }
     }
     &__slogan{
-        display: flex;
+        @include media-mf-dmd{
+            display: flex;
+        }
+
+
     }
     &__dog{
         flex-basis: 40%;
+        @include media-df-dmd{
+            max-width: 50%;
+        }
     }
     &__text-content{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        @include media-df-dmd{
+            display: block;
+            margin-top: 8vw;
+        }
     }
     &__article{
         flex-basis: 50%;
@@ -44,12 +65,18 @@
     &__columns{
         column-count: 2;
         column-gap: 3.125rem;
+        @include media-df-tp{
+            column-count: 1;
+        }
     }
     &__text{
         margin-top: 0;
     }
     &__footer{
         margin-left: 1.25rem;
+        @include media-df-tp{
+            margin-left: 0;
+        }
     }
     &__message{
         font-size: .9rem;
@@ -67,13 +94,19 @@
         margin: auto;
         margin-top: 4.28rem;
     }
+    @include media-df-dmd{
+        text-align: left;
+        &__img{
+            display: none;
+        }
+    }
 }
 .employees{
     list-style: none;
     padding: 0;
     margin: 0;
-}
-.employe{
-    margin: 3.8rem 0;
-    display: block;
+    &__item{
+        margin: 8.5vw 0;
+        display: block;
+    }
 }
