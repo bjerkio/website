@@ -20,6 +20,7 @@ import { ContentMarcetingService } from './servicies/content-marketing/content-m
 import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageTeamComponent } from './page-team/page-team.component';
 import { EmployeCardComponent } from './ui-elements/employe-card/employe-card.component';
+import { PageBlogComponent } from './page-blog/page-blog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EmployeCardComponent } from './ui-elements/employe-card/employe-card.co
     PersonAvatarComponent,
     FooterComponent,
     PageTeamComponent,
-    EmployeCardComponent
+    EmployeCardComponent,
+    PageBlogComponent
   ],
   imports: [
     BrowserModule,

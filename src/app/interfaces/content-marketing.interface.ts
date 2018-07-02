@@ -4,4 +4,5 @@ export interface ContentMarketingInterface {
     title: string;
     content: string;
     shortDescription: string;
+    id: number;
 }

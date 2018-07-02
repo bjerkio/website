@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageTeamComponent } from './page-team/page-team.component';
+import { PageBlogComponent } from './page-blog/page-blog.component';
 
 export const routes: Routes = [
   {path: '', component: PageHomeComponent, children:
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path: 'team',
     component: PageTeamComponent
+  },
+  {
+    path: 'blog/:id',
+    component: PageBlogComponent
   },
   {path: '**', redirectTo: ''}
 ];
