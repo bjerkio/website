@@ -1,0 +1,33 @@
+<div class="team container">
+  <div class="team__slogan">
+    <h1 class="team__title">We are people.</h1>
+    <img class="team__dog dog" src="assets/bjerk-dog.svg" alt="">
+  </div>
+  <div class='team__text-content'>
+      <article class='team__article team-article'>
+        <h2 class='team-article__title'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id libero et dui porttitor auctor. Aliquam erat volutpat. Donec euismod nibh ligula, sed aliquet arcu feugiat ac. Sed cursus placerat nibh, ut tincidunt dui lacinia et. Phasellus accumsan finibus elit sed ultricies. Fusce quis efficitur nisl.</h2>
+        <div class='team-article__columns'>
+          <p class='team-article__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id libero et dui porttitor auctor. Aliquam erat volutpat. Donec euismod nibh ligula, sed aliquet arcu feugiat ac. Sed cursus placerat nibh, ut tincidunt dui lacinia et. Phasellus accumsan finibus elit sed ultricies. Fusce quis efficitur nisl. Quisque ac suscipit libero, lacinia facilisis sapien. Proin imperdiet eleifend tortor. Sed eget nulla a lacus suscipit accumsan. Duis aliquet ex in sagittis placerat.</p>
+          <p class='team-article__text'>Cras nec felis placerat, facilisis dui sed, tincidunt nibh. Vestibulum ut quam velit. Maecenas dignissim gravida mauris, vel feugiat sem vestibulum nec. Nam pretium mattis metus et imperdiet. Quisque ac suscipit libero, lacinia facilisis sapien. Proin imperdiet eleifend tortor. Sed eget nulla a lacus suscipit accumsan. Duis aliquet ex in sagittis placerat. Cras nec felis placerat, facilisis dui sed, tincidunt nibh. Vestibulum ut quam velit. Maecenas dignissim gravida mauris, vel feugiat sem vestibulum nec. Nam pretium mattis metus et imperdiet.</p>
+          <p class='team-article__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id libero et dui porttitor auctor. Aliquam erat volutpat. Donec euismod nibh ligula, sed aliquet arcu feugiat ac. Sed cursus placerat nibh, ut tincidunt dui lacinia et. Phasellus accumsan finibus elit sed ultricies. Fusce quis efficitur nisl.</p>
+          <p class='team-article__text'>Quisque ac suscipit libero, lacinia facilisis sapien. Proin imperdiet eleifend tortor. Sed eget nulla a lacus suscipit accumsan. Duis aliquet ex in sagittis placerat. Cras nec felis placerat, facilisis dui sed, tincidunt nibh. Vestibulum ut quam velit. Maecenas dignissim gravida mauris, vel feugiat sem vestibulum nec. Nam pretium mattis metus et imperdiet.</p>
+          <p class='team-article__text'>Quisque ac suscipit libero, lacinia facilisis sapien. Proin imperdiet eleifend tortor. Sed eget nulla a lacus suscipit accumsan. Duis aliquet ex in sagittis placerat.</p>
+        </div>
+        <footer class="team-article__footer">
+          <a class="team__link link" href="javascript:void(0)"><span class="link__text">Wanna join us?</span></a>
+          <p class="team-article__message">We might be <i [attr.aria-hedden]='true'>🕶️</i> for you!</p>
+        </footer>
+      </article>
+      <div class="team-logo">
+        <a href="javascript:void(0)" class='team__link link'>
+          <span class="link__text">Learn more about how we’re setup</span>   <mat-icon>arrow_right_alt</mat-icon></a>
+        <img src="assets/bjerk-prototype.svg" alt="" class="team-logo__img">
+      </div>
+  </div>
+  <ul class='employees'>
+    <li class="employe" *ngFor='let user of userList'>
+      <app-employe-card [user]='user'>
+      </app-employe-card>
+    </li>
+  </ul>
+</div>

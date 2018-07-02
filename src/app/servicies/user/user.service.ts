@@ -16,6 +16,12 @@ export class UserService {
       observer.next(UsersMock.find( user => user.id === id));
     });
   }
+
+  public getUsers(): Observable<UserInterface[]> {
+    return Observable.create(observer => {
+      observer.next(UsersMock);
+    });
+  }
 }
 
 

@@ -1,0 +1,14 @@
+<div class='employe'>
+  <div class="employe__photo">
+    <app-person-avatar [imagePath]='user.img' [alt]='user.name' [size]='"lg"'></app-person-avatar>
+  </div>
+  <div class="employe__text-content">
+    <h3 class="employe__name">{{user.name}}</h3>
+    <h4 class="employe__role">{{parsedRole}}</h4>
+    <p class='employe__text' *ngFor='let info of user.info'>{{info}}</p>
+    <div class="employe__contacts">
+      <a class='employe__link' [href]='"mailto:"+user.email'>{{user.email}}</a>
+      <a class='employe__link' [href]='"tel:"+phoneToLink()'>{{user.phone}}</a>
+    </div>
+  </div>
+</div>
