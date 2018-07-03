@@ -4,7 +4,7 @@
 <ul ngClass.xs="mobile-nav" [fxHide]="!showMobile" fxShow.gt-xs>
   <li><a href="#about">About</a></li>
   <li><a href="#events">Events</a></li>
-  <li><a href="#Principles">Principles</a></li>
+  <li><a [routerLink]="['/principles']">Principles</a></li>
   <li><a href="#Competencies">Competencies</a></li>
   <li><a href="#Contract">Contract</a></li>
 </ul>

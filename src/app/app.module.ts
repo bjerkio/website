@@ -19,6 +19,7 @@ import { UserService } from './servicies/user/user.service';
 import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
+import { PrinciplesPageComponent } from './principles-page/principles-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PageBlogComponent } from './page-blog/page-blog.component';
     LinkCardComponent,
     PersonAvatarComponent,
     FooterComponent,
-    PageBlogComponent
+    PageBlogComponent,
+    PrinciplesPageComponent
   ],
   imports: [
     BrowserModule,
