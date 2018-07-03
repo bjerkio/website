@@ -1,0 +1,28 @@
+.links-list{
+    padding-left: 25px;
+    &__container{
+        display: inline-block;
+    }
+    &__title{
+        color: $primary;
+        font-weight: normal;
+        margin: 0;
+        font-size: 1.5rem;
+        margin-bottom: 1.25em;
+    }
+    &__link{
+        display: block;
+        color: $dark !important;
+        font-size: 1.5rem;
+        padding: 1.25em 0;
+        position: relative;
+    }
+    &__emoji{
+        position: absolute;
+        right: 0;
+        top: 15%;
+        bottom: 0;
+        margin: auto;
+        font-size: 0.8em;
+    }
+}
