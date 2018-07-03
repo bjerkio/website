@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageHomeComponent } from './page-home/page-home.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
+import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 
 export const routes: Routes = [
   {path: '', component: PageHomeComponent, children:
@@ -18,6 +19,10 @@ export const routes: Routes = [
   {
     path: 'principles',
     component: PrinciplesPageComponent
+  },
+  {
+    path: 'competencies',
+    component: PageCompetenciesComponent
   },
   {path: '**', redirectTo: ''}
 ];

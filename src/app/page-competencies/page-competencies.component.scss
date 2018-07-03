@@ -1,0 +1,88 @@
+@import '../styles-lib/variables';
+.competencies{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10vw 0;
+    justify-content: space-between;
+    &__column{
+       flex-basis: calc(100% - 340px);
+        &_small{
+            flex-basis: 340px;
+        }
+    }
+    &__subtitle{
+        font-weight: normal;
+        font-size: 3rem;
+        margin: 0;
+    }
+    &__we-got{
+        margin: auto;
+        max-width: 60%;
+        margin-top: -12%;
+        transform: translateX(30%);
+    }
+    &__title{
+        color: $primary;
+        font-size: 4.25rem;
+        margin-top: 0;
+        font-weight: normal;
+        line-height: 1.15em;
+        margin-bottom: 6vw;
+        flex-basis: 100%;
+    }
+    &__content{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__text{
+        flex-basis: 48%;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin: 0;
+    }
+    &__menu{
+        margin-top: 3.6vw;
+        flex-basis: 100%;
+    }
+    @include media-df-dmd{
+        justify-content: center;
+        &__column{
+            &:not(&_small){
+                flex-basis: 100%;
+            }
+            &_small{
+                margin-bottom: 10vw;
+            }
+        }
+        &__content{
+            display: block;
+        }
+        &__title{
+            font-size: 3rem;
+        }
+        &__text{
+            margin-bottom: 2rem;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+.comp-menu{
+    padding-left: 25px;
+    &__title{
+        color: $primary;
+        font-weight: normal;
+        margin: 0;
+        font-size: 1.5rem;
+        margin-bottom: 1.25em;
+    }
+    &__link{
+        display: block;
+        color: $dark !important;
+        font-size: 1.5rem;
+        padding: 1.25em 0;
+    }
+}

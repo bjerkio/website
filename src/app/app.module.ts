@@ -20,6 +20,8 @@ import { ContentMarcetingService } from './servicies/content-marketing/content-m
 import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
+import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
+import { HeroComponent } from './ui-elements/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { PrinciplesPageComponent } from './principles-page/principles-page.compo
     PersonAvatarComponent,
     FooterComponent,
     PageBlogComponent,
-    PrinciplesPageComponent
+    PrinciplesPageComponent,
+    PageCompetenciesComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
