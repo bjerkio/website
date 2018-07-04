@@ -3,7 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-person-avatar',
   templateUrl: './person-avatar.component.html',
-  styleUrls: ['./person-avatar.component.scss']
 })
 export class PersonAvatarComponent implements OnInit {
   @Input()
