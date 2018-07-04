@@ -50,9 +50,6 @@
         }
     }
     @include media-df-dsm{
-        font-size: .8rem;
-    }
-    @include media-df-tp{
         font-size: .6rem;
         padding-bottom: 100px;
     }
