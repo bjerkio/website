@@ -9,7 +9,12 @@
   <li><a href="#Contract">Contract</a></li>
 </ul>
 
-<button fxHide fxShow.xs mat-fab class="mobile-nav-fab" (click)="showMobileNav()">
+<button fxHide
+        fxShow.xs
+        mat-fab class="mobile-nav-fab"
+        (click)="showMobileNav()"
+        [attr.aria-label]="showMobile?'hide menu':'show menu'"
+>
   <mat-icon *ngIf="!showMobile" svgIcon="bjerk-menu"></mat-icon>
   <mat-icon *ngIf="showMobile">close</mat-icon>
 </button>
