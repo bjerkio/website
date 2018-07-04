@@ -21,6 +21,9 @@ import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageTeamComponent } from './page-team/page-team.component';
 import { EmployeCardComponent } from './ui-elements/employe-card/employe-card.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
+import { PrinciplesPageComponent } from './principles-page/principles-page.component';
+import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
+import { HeroComponent } from './ui-elements/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,10 @@ import { PageBlogComponent } from './page-blog/page-blog.component';
     LinkCardComponent,
     PersonAvatarComponent,
     FooterComponent,
+    PageBlogComponent,
+    PrinciplesPageComponent,
+    PageCompetenciesComponent,
+    HeroComponent,
     PageTeamComponent,
     EmployeCardComponent,
     PageBlogComponent
