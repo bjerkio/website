@@ -1,0 +1,12 @@
+.link{
+    color: $primary;
+    text-decoration: none;
+    padding: 15px;
+    transition: all .3s;
+    &__text{
+        text-decoration: underline;
+    }
+    &:hover{
+        box-shadow: 0 0.187rem 0.937rem rgba(0, 0, 0, 0.06);
+    }
+}
