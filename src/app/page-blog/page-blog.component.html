@@ -1,10 +1,10 @@
-<section class="container blog">
-  <img src="assets/images/blog-header.jpg" alt="" class="blog__header-img"/>
+<section class="container blog" lazy-load-images>
+  <img [attr.data-src]="'assets/images/blog-header.jpg'" alt="" class="blog__header-img"/>
   <h1 class="blog__title">Let’s talk about Serverless</h1>
   <p class="blog__info">Written by our very own Simen A. W. Olsen, 10th of May 2018.</p>
   <article class="blog__article">
     <figure class="blog__img-container">
-        <img src="assets/images/blog-pic.jpg" alt="We should talk more about Chromebook – I love it." class="blog__img"/>
+        <img [attr.data-src]="'assets/images/blog-pic.jpg'" alt="We should talk more about Chromebook – I love it." class="blog__img"/>
         <figcaption class="blog__img-descr">We should talk more about Chromebook – I love it.</figcaption>
     </figure>
     <h2 class="blog__sub-title">Some interesting words about Serverless technology, how we evolve by utilizing the building blocks of tomorrow and the step guide into keeping yourself relevant.</h2>
