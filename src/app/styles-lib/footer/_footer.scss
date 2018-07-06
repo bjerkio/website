@@ -37,16 +37,7 @@
             }
         }
         &_decorated{
-            &::after{
-                content: '';
-                width: 90%;
-                height: 2px;
-                display: block;
-                position: absolute;
-                background-color: currentColor;
-                bottom: -10px;
-                left: 0;
-            }
+            text-decoration: underline;
         }
     }
     @include media-df-dsm{

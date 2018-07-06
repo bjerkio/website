@@ -59,15 +59,21 @@ html {
 }
 
 article.offer-showcase {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  @include media-df-dlg{
+    flex-direction: column;
+  }
   header h2 {
     color: $iron;
     font-size: 9.37rem;
     font-family: 'TTCommons', sans-serif;
     font-weight: 200;
     margin: 3.75rem;
-    margin-top: 2.5rem;
+    margin-top: 0;
     margin-right: 0;
-    @include media-df-dmd{
+    @include media-df-dlg{
       margin-left: 0;
     }
     @media (max-width: 1120px) {
