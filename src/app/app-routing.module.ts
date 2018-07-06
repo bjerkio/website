@@ -6,6 +6,7 @@ import { PageTeamComponent } from './page-team/page-team.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
+import { PageStructureComponent } from './page-structure/page-structure.component';
 
 export const routes: Routes = [
   {path: '', component: PageHomeComponent, children:
@@ -28,6 +29,10 @@ export const routes: Routes = [
   {
     path: 'competencies',
     component: PageCompetenciesComponent
+  },
+  {
+    path: 'structure',
+    component: PageStructureComponent
   },
   {path: '**', redirectTo: ''}
 ];

@@ -25,6 +25,8 @@ import { PrinciplesPageComponent } from './principles-page/principles-page.compo
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 import { HeroComponent } from './ui-elements/hero/hero.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+import { PageStructureComponent } from './page-structure/page-structure.component';
+import { PartnersService } from './servicies/partners/partners.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
     HeroComponent,
     PageTeamComponent,
     EmployeCardComponent,
-    PageBlogComponent
+    PageBlogComponent,
+    PageStructureComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
   ],
   providers: [
     UserService,
-    ContentMarcetingService
+    ContentMarcetingService,
+    PartnersService
   ],
   bootstrap: [AppComponent]
 })
