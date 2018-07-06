@@ -1,13 +1,15 @@
 @import '../bjerk-design.config';
 @import '../../styles-lib/variables';
+:host{
+  @media (min-width: 600px) {
+    background-color: #F7F7F7;
+    display: block;
+  }
+}
 .header {
   height: 10rem;
   @include media-mf-dmd{
     margin: auto;
-    margin: {
-      left: 3.75rem;
-      right: 3.75rem;
-    }
   }
 }
 

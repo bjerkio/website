@@ -1,0 +1,107 @@
+@import '../styles-lib/variables';
+
+.blog{
+   &__header-img{
+       display: block;
+       margin: {
+           top: 5.9vw;
+           bottom: 6vw;
+       };
+       max-width: 83%;
+       @include media-df-dmd {
+           max-width: unset;
+           width: 100%;
+       }
+       @include media-df-tp {
+           display: none;
+       }
+   }
+   &__title{
+       margin-top: 0;
+       line-height: 1.2em;
+       font-size: 4.68rem;
+       font-weight: normal;
+       margin-bottom: 2.62rem;
+       @include media-df-tp{
+        margin-top: 2.62rem;
+        font-size: 3rem;
+       }
+   }
+   &__info{
+       color: #778292;
+       font-size: 1.5rem;
+       margin-bottom: 5.375rem;
+       @include media-df-tp{
+           margin-bottom: 3rem;
+       }
+   }
+   &__article{
+       display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12.4vw;
+        @include media-df-tp{
+            display: block;
+        }
+   }
+   &__sub-title{
+       order: -1;
+       margin-top: 0;
+       font-weight: normal;
+       font-size: 2rem;
+       line-height: 1.18em;
+       margin-bottom: 6.125rem;
+       @include media-df-tp {
+           margin-bottom: 3rem;
+       }
+   }
+   &__img-container,
+   &__text{
+       flex-basis: 48%;
+   }
+   &__img-container{
+       order: 20;
+       position: relative;
+       margin: 0;
+       margin-bottom: 3.05rem;
+       &::after{
+           content: '';
+           position: absolute;
+           left: 0;
+           top: 0;
+           bottom: 0;
+           right: 0;
+           z-index: 2;
+           background-color: rgba(0,0,0,.3);
+       }
+   }
+   &__img{
+       max-width: 100%;
+       display: block;
+       width: 100%;
+   }
+   &__img-descr{
+       position: absolute;
+       width: 100%;
+       display: block;
+       left: 0;
+       z-index: 3;
+       color: $yelloooo;
+       line-height: 1.2em;
+       bottom: 0;
+       font-size: 1.69rem;
+       padding: 3.1rem;
+       @include media-df-tp{
+           padding: 15px;
+       }
+   }
+   &__text{
+       font-size: 1.25rem;
+       p{
+           margin-top: 0;
+           line-height: 1.2em;
+           margin-bottom: 2.25rem;
+       }
+   }
+}

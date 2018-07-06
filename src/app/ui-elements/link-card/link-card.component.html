@@ -1,4 +1,4 @@
-<a href="javascript:void(0)" class="link-card">
+<a [routerLink]="['/blog', cardLink.id]" class="link-card">
   <article class='link-card__body'>
     <div class="link-card__img-container" [ngStyle]="{'background-image': 'url(' + cardLink.img + ')'}">
       <img [src]="cardLink.img" [alt]="cardLink.title" class="link-card__img">

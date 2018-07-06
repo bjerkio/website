@@ -20,6 +20,12 @@ import { ContentMarcetingService } from './servicies/content-marketing/content-m
 import { FooterComponent } from './ui-elements/footer/footer.component';
 import { PageContractComponent } from './page-contract/page-contract.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PageTeamComponent } from './page-team/page-team.component';
+import { EmployeCardComponent } from './ui-elements/employe-card/employe-card.component';
+import { PageBlogComponent } from './page-blog/page-blog.component';
+import { PrinciplesPageComponent } from './principles-page/principles-page.component';
+import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
+import { HeroComponent } from './ui-elements/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     LinkCardComponent,
     PersonAvatarComponent,
     FooterComponent,
-    PageContractComponent
+    PageContractComponent,
+    PageBlogComponent,
+    PrinciplesPageComponent,
+    PageCompetenciesComponent,
+    HeroComponent,
+    PageTeamComponent,
+    EmployeCardComponent,
+    PageBlogComponent
   ],
   imports: [
     BrowserModule,

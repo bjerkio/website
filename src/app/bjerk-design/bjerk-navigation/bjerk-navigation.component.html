@@ -4,12 +4,17 @@
 <ul ngClass.xs="mobile-nav" [fxHide]="!showMobile" fxShow.gt-xs>
   <li><a href="#about">About</a></li>
   <li><a href="#events">Events</a></li>
-  <li><a href="#Principles">Principles</a></li>
-  <li><a href="#Competencies">Competencies</a></li>
+  <li><a [routerLink]="['/principles']">Principles</a></li>
+  <li><a [routerLink]="['/competencies']">Competencies</a></li>
   <li><a [routerLink]="['/contract']">Contract</a></li>
 </ul>
 
-<button fxHide fxShow.xs mat-fab class="mobile-nav-fab" (click)="showMobileNav()">
+<button fxHide
+        fxShow.xs
+        mat-fab class="mobile-nav-fab"
+        (click)="showMobileNav()"
+        [attr.aria-label]="showMobile?'hide menu':'show menu'"
+>
   <mat-icon *ngIf="!showMobile" svgIcon="bjerk-menu"></mat-icon>
   <mat-icon *ngIf="showMobile">close</mat-icon>
 </button>

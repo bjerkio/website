@@ -15,7 +15,7 @@
 //                      tp (portrait = 768)
 //             df (desctop-first)
 //                  d - desctop:
-//                      dmd (medium = 1280px)
+//                      dmd (medium = 1280px) dlg(large = 1700)
 //                  t - tablet:
 //                      tp(portrait = 768) tl (landscape=1024)
 
@@ -48,6 +48,13 @@
         @content;
     }
 }
+
+@mixin media-df-tl {
+    @media (max-width: 1025px) {
+        @content;
+    }
+}
+
 @mixin media-df-tp {
     @media (max-width: 768px) {
         @content;
@@ -56,6 +63,12 @@
 
 @mixin media-df-dsm {
     @media (max-width: 1020px) {
+        @content;
+    }
+}
+
+@mixin media-df-dlg {
+    @media (max-width: 1700px) {
         @content;
     }
 }
