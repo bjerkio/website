@@ -1,3 +1,4 @@
+@import '../styles-lib/variables';
 .page-wrapper{
     position: relative;
     padding-top: 3.75rem;
@@ -45,7 +46,17 @@
             left: 0;
             height: 2px;
             width: calc(100% - 4.5rem);
-            background-color: #232931;
+            background-color: $dark;
+        }
+        &_invalid{
+            &::after{
+                background-color: $veryRed;
+            }
+        }
+        &_valid{
+            &::after{
+                background-color: $primary;
+            }
         }
     }
     &__title{
@@ -75,6 +86,12 @@
             width: 100%;
             height: 100%;
             font-size: 4rem;
+        }
+        &_invalid{
+            color: $veryRed;
+        }
+        &_valid{
+            color: $primary;
         }
     }
 
