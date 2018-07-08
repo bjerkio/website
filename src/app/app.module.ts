@@ -24,6 +24,7 @@ import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 import { HeroComponent } from './ui-elements/hero/hero.component';
+import { BigBComponent } from './svg-images/big-b/big-b.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HeroComponent } from './ui-elements/hero/hero.component';
     HeroComponent,
     PageTeamComponent,
     EmployeCardComponent,
-    PageBlogComponent
+    PageBlogComponent,
+    BigBComponent
   ],
   imports: [
     BrowserModule,

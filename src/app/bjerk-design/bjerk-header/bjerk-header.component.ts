@@ -1,5 +1,9 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import {  TimelineMax } from 'gsap/TweenMax';
+import { BehaviorSubject } from 'rxjs/index';
+
+
+
 
 
 
@@ -9,7 +13,7 @@ import {  TimelineMax } from 'gsap/TweenMax';
   styleUrls: ['./bjerk-header.component.scss']
 })
 export class BjerkHeaderComponent implements OnInit {
-
+  static animationLogger = new BehaviorSubject(null);
   constructor(private el: ElementRef) { }
 
   ngOnInit() {
@@ -18,6 +22,7 @@ export class BjerkHeaderComponent implements OnInit {
 
   animate() {
     if (sessionStorage.headerLoaded && sessionStorage.headerLoaded.length || window.innerWidth < 600) {
+      BjerkHeaderComponent.animationLogger.next(true);
       return;
     }
     const el: HTMLElement = this.el.nativeElement;
@@ -30,6 +35,7 @@ export class BjerkHeaderComponent implements OnInit {
   /* prevent repeating of header animation */
   cacheAnimation() {
     sessionStorage.setItem('headerLoaded', 'loaded');
+    BjerkHeaderComponent.animationLogger.next(true);
   }
 
 }

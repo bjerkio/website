@@ -5,6 +5,8 @@ import { ContentMarketingInterface } from '../interfaces/content-marketing.inter
 import { ContentMarcetingService } from '../servicies/content-marketing/content-marketing.service';
 import { Utils } from '../helpers/utils';
 import {  TimelineMax } from 'gsap/TweenMax';
+import { Subscription } from 'rxjs';
+import { BjerkHeaderComponent } from '../bjerk-design/bjerk-header/bjerk-header.component';
 
 
 @Component({
@@ -14,6 +16,7 @@ import {  TimelineMax } from 'gsap/TweenMax';
 })
 export class PageHomeComponent implements OnInit {
   cardLinks: ContentMarketingInterface[] = [];
+  animationSubscription: Subscription;
 
   constructor(apollo: Apollo, private cardLinkService: ContentMarcetingService, private el: ElementRef) {
     apollo
@@ -30,8 +33,12 @@ export class PageHomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    BjerkHeaderComponent.animationLogger.subscribe(headerLoaded => {
+      if (headerLoaded) {
+        this.animate();
+      }
+    });
     this.getCardLinks();
-    this.animate();
   }
 
   private getCardLinks(): void {
@@ -40,9 +47,13 @@ export class PageHomeComponent implements OnInit {
 
   animate() {
     const slogan: HTMLElement = this.el.nativeElement.querySelector('.slogan');
+    const svg = this.el.nativeElement.querySelector('svg');
     const {wrappedText, originalText} = Utils.wrappText(slogan);
     slogan.innerHTML = wrappedText;
     const queue = new TimelineMax()
+      .to(svg, 0, {opacity: 1})
+      .fromTo(svg.querySelector('path.cls-1'), 1, { opacity: 0, scaleX: .1}, {opacity: 1, scaleX: 1})
+      .to(slogan, 0, {opacity: 1})
       .staggerFromTo(slogan.querySelectorAll('.wrapped'), .05, {
         x: -20,
         y: -40,

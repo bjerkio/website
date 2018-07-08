@@ -1,13 +1,14 @@
 @import '../bjerk-design/bjerk-design.config.scss';
 @import '../styles-lib/variables';
 .big-b {
-  background-image: url('/assets/bjerk-big-b.svg');
-  height: 50rem;
+  //height: 50rem;
   background-size: cover;
   position: relative;
+  background-color: $dark;
   .slogan {
     color: $dry;
     font-size: 2.5rem;
+    opacity: 0;
     position: absolute;
     top: 50%;
     right: 10%;
