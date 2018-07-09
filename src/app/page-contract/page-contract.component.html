@@ -1,7 +1,7 @@
 <div class="page-wrapper">
   <div class="contract-bg">
-    <img src="assets/bjerk-logo.svg" class="contract-bg__img contract-bg__img_top" alt="" [attr.aria-hedden]='true'>
-    <img src="assets/bjerk-logo.svg" class="contract-bg__img contract-bg__img_bottom" alt="" [attr.aria-hedden]='true'>
+    <app-bjerky-bjerk [className]="'contract-bg__img contract-bg__img_top'"></app-bjerky-bjerk>
+    <app-bjerky-bjerk [className]="'contract-bg__img contract-bg__img_bottom'" [bottomImage]='true'></app-bjerky-bjerk>
   </div>
   <form [formGroup]="contractForm" class="container form-contract" (submit)='onSubmit($event)'>
     <h1 class='form-contract__title'>Let’s get to know each other.</h1>

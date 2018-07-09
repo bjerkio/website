@@ -28,6 +28,7 @@ import { PageCompetenciesComponent } from './page-competencies/page-competencies
 import { HeroComponent } from './ui-elements/hero/hero.component';
 import { BigBComponent } from './svg-images/big-b/big-b.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+import { BjerkyBjerkComponent } from './svg-images/bjerky-bjerk/bjerky-bjerk.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
     PageTeamComponent,
     EmployeCardComponent,
     PageBlogComponent,
-    BigBComponent
+    BigBComponent,
+    BjerkyBjerkComponent
   ],
   imports: [
     BrowserModule,

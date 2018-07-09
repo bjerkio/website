@@ -5,7 +5,7 @@
     padding-bottom: 7.35rem;
     overflow: hidden;
 }
-.contract-bg{
+.contract-bg, /deep/ .contract-bg{
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -17,14 +17,13 @@
         max-width: 40vw;
         position: absolute;
         &_top{
-            right: -5vw;
-            top: -5vw;
-            transform: rotate(-7deg);
+            right: 0;
+            top: 0;
         }
         &_bottom{
-            left: -6vw;
-            bottom: -5vw;
-            transform: rotate(7deg);
+           bottom: -10%;
+           left: -5%;
+           max-width: 30vw;
         }
     }
 }
