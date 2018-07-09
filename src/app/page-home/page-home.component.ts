@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
 import { ContentMarketingInterface } from '../interfaces/content-marketing.interface';
@@ -8,18 +8,19 @@ import {  TimelineMax } from 'gsap/TweenMax';
 import { Subscription } from 'rxjs';
 import { BjerkHeaderComponent } from '../bjerk-design/bjerk-header/bjerk-header.component';
 
-
 @Component({
   selector: 'app-page-home',
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.scss']
 })
-export class PageHomeComponent implements OnInit {
+export class PageHomeComponent implements OnInit, OnDestroy {
   cardLinks: ContentMarketingInterface[] = [];
   animationSubscription: Subscription;
+  appoloSubscriber: Subscription;
+  cardLinkSubscriber: Subscription;
 
   constructor(apollo: Apollo, private cardLinkService: ContentMarcetingService, private el: ElementRef) {
-    apollo
+    this.appoloSubscriber = apollo
       .query({
         query: gql`
           {
@@ -39,6 +40,15 @@ export class PageHomeComponent implements OnInit {
       }
     });
     this.getCardLinks();
+  }
+
+  ngOnDestroy() {
+    if (this.appoloSubscriber) {
+      this.appoloSubscriber.unsubscribe();
+    }
+    if (this.cardLinkSubscriber) {
+      this.cardLinkSubscriber.unsubscribe();
+    }
   }
 
   private getCardLinks(): void {

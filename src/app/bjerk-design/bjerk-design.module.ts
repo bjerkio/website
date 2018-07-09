@@ -5,12 +5,14 @@ import { BjerkHeaderComponent } from './bjerk-header/bjerk-header.component';
 import { BjerkLogoComponent } from './bjerk-logo/bjerk-logo.component';
 import { BjerkNavigationComponent } from './bjerk-navigation/bjerk-navigation.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialDesignModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyLoadImagesModule
   ],
   declarations: [
     BjerkHeaderComponent,

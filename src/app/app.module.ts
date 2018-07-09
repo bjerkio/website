@@ -25,6 +25,7 @@ import { PrinciplesPageComponent } from './principles-page/principles-page.compo
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 import { HeroComponent } from './ui-elements/hero/hero.component';
 import { BigBComponent } from './svg-images/big-b/big-b.component';
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BigBComponent } from './svg-images/big-b/big-b.component';
   ],
   imports: [
     BrowserModule,
+    LazyLoadImagesModule,
     BjerkDesignModule,
     BrowserAnimationsModule,
     AppRoutingModule,
