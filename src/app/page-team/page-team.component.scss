@@ -1,5 +1,5 @@
 @import '../styles-lib/variables';
-.team{
+.team,{
     &__title{
         color: $primary;
         font-weight: 400;
@@ -23,12 +23,17 @@
     &__slogan{
         @include media-mf-dmd{
             display: flex;
+            align-items: center;
         }
-
-
     }
     &__dog{
         flex-basis: 40%;
+        app-bjerk-dog{
+            display: block;
+        }
+        svg{
+            max-width: 100%;
+        }
         @include media-df-dmd{
             max-width: 50%;
         }
@@ -93,6 +98,8 @@
         display: block;
         margin: auto;
         margin-top: 4.28rem;
+        transform: scale(.3);
+        opacity: 0;
     }
     @include media-df-dmd{
         text-align: left;
