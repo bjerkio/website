@@ -4,6 +4,12 @@
     padding-top: 3.75rem;
     padding-bottom: 7.35rem;
     overflow: hidden;
+    // @include media-df-tl {
+    //     padding: {
+    //         top: 30px;
+    //         bottom: 20px;
+    //     };
+    // }
 }
 .contract-bg, /deep/ .contract-bg{
     position: absolute;
@@ -25,19 +31,23 @@
            left: -5%;
            max-width: 30vw;
         }
+        @include media-df-tl {
+            display: none;
+        }
     }
 }
 .form-contract{
     background-color: #fff;
-    padding-top: 8vw;
-    padding-bottom: 15.5vw;
+    padding: 8vw 15px 15.5vw;
     text-align: center;
     position: relative;
+    box-shadow: 0 0.187rem 0.937rem rgba(0, 0, 0, 0.06);
     z-index: 1;
     &__field{
         text-align: center;
         position: relative;
         display: inline-block;
+        max-width: 100%;
         &::after{
             position: absolute;
             content: '';
@@ -46,6 +56,17 @@
             height: 2px;
             width: calc(100% - 4.5rem);
             background-color: $dark;
+            transition: all .3s;
+        }
+        &_collapsed{
+            &::after{
+                width: 0;
+            }
+            @include media-df-tl{
+                &::after{
+                    width: 100%;
+                }
+            }
         }
         &_invalid{
             &::after{
@@ -71,6 +92,10 @@
         align-items: center;
         vertical-align: top;
         transform: translateY(-4%);
+        max-width: calc(100% - 4.5rem);
+        @include media-df-tl{
+            font-size: 2rem;
+        }
     }
     &__button{
         background-color: transparent;

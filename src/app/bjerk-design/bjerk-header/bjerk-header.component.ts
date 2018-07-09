@@ -3,10 +3,6 @@ import {  TimelineMax } from 'gsap/TweenMax';
 import { BehaviorSubject } from 'rxjs/index';
 
 
-
-
-
-
 @Component({
   selector: 'app-bjerk-header',
   templateUrl: './bjerk-header.component.html',
