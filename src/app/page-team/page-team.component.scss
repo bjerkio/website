@@ -98,6 +98,8 @@
         display: block;
         margin: auto;
         margin-top: 4.28rem;
+        transform: scale(.3);
+        opacity: 0;
     }
     @include media-df-dmd{
         text-align: left;
