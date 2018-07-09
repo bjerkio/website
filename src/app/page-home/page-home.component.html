@@ -1,9 +1,6 @@
-<div class="big-b" fxHide.lt-md>
+<div class="big-b">
   <div class="slogan">
     Let’s create something<br />awesome together.<br /><br />
-    <button class="dark" mat-button>
-      Dette er en lengre knapp <mat-icon>arrow_right_alt</mat-icon>
-    </button>
   </div>
 </div>
 <div class="call-block container" fxLayout="row">
@@ -14,10 +11,10 @@
     </a>
   </div>
 </div>
-<article class="offer-showcase container" fxLayout.gt-md="row-reverse" fxLayout="column" fxLayoutAlign="start center">
+<article class="offer-showcase container">
   <header fxFlexAlign="start">
-    <h2>
-      Management <span>for Hire</span>
+    <h2 class="offer-showcase__title">
+      Management <br [attr.aria-hidden]="true"/> <span>for Hire</span>
     </h2>
   </header>
   <section class="article-preview">
@@ -33,9 +30,9 @@
       in mind. We have educated CEOs, CTOs and CMOs – ready at your fingertips, ready
       for the next move.
     </p>
-    <button mat-button>
+    <a mat-button [routerLink]="['/structure']">
       Read more about how <mat-icon>arrow_right_alt</mat-icon>
-    </button>
+    </a>
   </section>
 </article>
 

@@ -1,0 +1,61 @@
+<div class="container">
+  <section class="structure">
+    <h2 class="structure__title">Company Structure</h2>
+    <div class="structure__schema schema">
+      <div class="schema__row schema__row_c">
+        <div class="schema__cell schema__cell_line">
+          <article class="schema__item schema-item">
+            <h3 class="schema-item__title">Bjerk AS</h3>
+            <p class="schema-item__text">Bjerk AS is owned by Stjernevegen 10 AS (70%), Blackdot AS (20%) and Jor Danger AS (10%). </p>
+          </article>
+        </div>
+      </div>
+      <div class="schema__row schema__row_r  schema__row_line schema__row_line_r">
+        <div class="schema__cell schema__cell_line">
+          <article class="schema__item schema-item">
+            <h3 class="schema-item__title">AYR AS</h3>
+            <p class="schema-item__text">AYR AS is owned 100% by Bjerk AS</p>
+          </article>
+        </div>
+        <div class="schema__cell">
+          <article class="schema__item schema-item" lazy-load-images>
+              <img [attr.data-src]="'assets/images/ayr.svg'" class="schema-item__img" alt="">
+              <p class="schema-item__text schema-item__text_l">AYR is a Google Partner. Our goal is to become the largest and most successfull Google Partner, all things Google in Norway. AYR also does some hosting services, such as AWS and Domains.</p>
+              <a href="javascript:void(0)" class="schema-item__link" mat-button>Check it out <mat-icon>arrow_right_alt</mat-icon></a>
+          </article>
+        </div>
+      </div>
+      <div class="schema__row schema__row_l schema__row_line schema__row_line_l">
+        <div class="schema__cell">
+          <article class="schema__item schema-item">
+              <p class="schema-item__text schema-item__text_r">RAY is a sales and customer support company. Our goal is to lead forward a new generation of sales – soley focused on inbound.</p>
+            </article>
+        </div>
+        <div class="schema__cell">
+          <article class="schema__item schema-item">
+            <h3 class="schema-item__title">RAY AS</h3>
+            <p class="schema-item__text">RAY is a sales and customer support company. Our goal is to lead forward a new generation of sales – soley focused on inbound.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="partners">
+    <h2 class="partners__title">Strategic Partnerships</h2>
+    <p class="partners__text">We have many friends (many call them partners, suppliers or vendors). We utilize our
+        friends to help with fund, supply, deliver. prospect projects and much more.</p>
+    <ul class="partners-list partners__list" *ngIf='partnersList.length'>
+      <li class="partners-list__item" *ngFor='let partner of partnersListShort'>
+        <a [href]="partner.link" class="partners-list__link" target='blank'>
+          {{partner.name}}
+          <mat-icon class="partners-list__arrow">arrow_right_alt</mat-icon>
+        </a>
+      </li>
+    </ul>
+    <ul class="pagination" *ngIf='paginationDotsQuantity.length > 1' role="navigation" [attr.aria-label]="'Pagination of partners'">
+      <li *ngFor="let dot of paginationDotsQuantity; let i = index" class="pagination__item">
+        <button class="pagination__button" (click)="sliceList(i)" [attr.aria-label]="'pagination: show other partners'"></button>
+      </li>
+    </ul>
+  </section>
+</div>

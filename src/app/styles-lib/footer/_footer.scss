@@ -37,20 +37,15 @@
             }
         }
         &_decorated{
-            &::after{
-                content: '';
-                width: 90%;
-                height: 2px;
-                display: block;
-                position: absolute;
-                background-color: currentColor;
-                bottom: -10px;
-                left: 0;
-            }
+            text-decoration: underline;
         }
     }
     @include media-df-dsm{
         font-size: .6rem;
         padding-bottom: 100px;
+        &__text,
+        &__link_row{
+            font-size: 16px;
+        }
     }
 }
