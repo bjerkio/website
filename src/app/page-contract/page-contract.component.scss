@@ -4,14 +4,8 @@
     padding-top: 3.75rem;
     padding-bottom: 7.35rem;
     overflow: hidden;
-    // @include media-df-tl {
-    //     padding: {
-    //         top: 30px;
-    //         bottom: 20px;
-    //     };
-    // }
 }
-.contract-bg, /deep/ .contract-bg{
+/deep/ .contract-bg{
     position: absolute;
     overflow: hidden;
     top: 0;

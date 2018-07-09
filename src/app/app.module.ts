@@ -32,6 +32,7 @@ import { PageStructureComponent } from './page-structure/page-structure.componen
 import { PartnersService } from './servicies/partners/partners.service';
 import { BjerkyBjerkComponent } from './svg-images/bjerky-bjerk/bjerky-bjerk.component';
 import { BjerkDogComponent } from './svg-images/bjerk-dog/bjerk-dog.component';
+import { GraphComponent } from './svg-images/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -51,10 +52,11 @@ import { BjerkDogComponent } from './svg-images/bjerk-dog/bjerk-dog.component';
     PageStructureComponent,
     BigBComponent,
     BjerkyBjerkComponent,
-    BjerkDogComponent
+    BjerkDogComponent,
+    GraphComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     LazyLoadImagesModule,
     BjerkDesignModule,
     BrowserAnimationsModule,

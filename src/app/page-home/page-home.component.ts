@@ -73,7 +73,9 @@ export class PageHomeComponent implements OnInit, OnDestroy {
         x: 0,
         y: 0,
         opacity: 1
-      }, .05);
+      }, .05).call( () => {
+        slogan.innerHTML = originalText;
+      });
   }
 
 }
