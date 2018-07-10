@@ -33,6 +33,7 @@ import { PartnersService } from './servicies/partners/partners.service';
 import { BjerkyBjerkComponent } from './svg-images/bjerky-bjerk/bjerky-bjerk.component';
 import { BjerkDogComponent } from './svg-images/bjerk-dog/bjerk-dog.component';
 import { GraphComponent } from './svg-images/graph/graph.component';
+import { BirchComponent } from './svg-images/birch/birch.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { GraphComponent } from './svg-images/graph/graph.component';
     BigBComponent,
     BjerkyBjerkComponent,
     BjerkDogComponent,
-    GraphComponent
+    GraphComponent,
+    BirchComponent
   ],
   imports: [
   BrowserModule,
