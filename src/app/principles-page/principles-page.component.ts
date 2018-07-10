@@ -35,7 +35,7 @@ export class PrinciplesPageComponent implements OnInit {
       if (!e.progress || e.progress === 1 || window.innerWidth < 1200) {
         return;
       }
-      const translateBGValue = (e.progress.toFixed(3) * 100 + 20).toString().replace(/\,/, ',');
+      const translateBGValue = (e.progress.toFixed(3) * 100 + 20).toString();
       birchBg.setAttribute('transform', defaultBgTranslate.replace(/\d/, translateBGValue));
       const x: number = this.parseTransform(treeTransform).x;
       const y = this.parseTransform(treeTransform).y;
