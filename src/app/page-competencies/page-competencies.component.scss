@@ -1,1 +1,10 @@
-
+.formated-text{
+    &__column_small{
+        perspective: 10000;
+        transform-style: preserve-3d;
+    }
+    &__we-got{
+        transform-origin: center bottom;
+        opacity: 0;
+    }
+  }

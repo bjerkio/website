@@ -63,6 +63,7 @@
         }
         &_large{
             font-size: 6.4rem;
+            opacity: 0;
             @include media-df-dlg{
                 font-size: 5rem;
             }

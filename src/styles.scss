@@ -20,3 +20,11 @@ body {
 *{
   box-sizing: border-box;
 }
+.access-helper{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  size: 0;
+  color: transparent;
+}

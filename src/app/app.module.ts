@@ -18,15 +18,22 @@ import { PersonAvatarComponent } from './ui-elements/person-avatar/person-avatar
 import { UserService } from './servicies/user/user.service';
 import { ContentMarcetingService } from './servicies/content-marketing/content-marketing.service';
 import { FooterComponent } from './ui-elements/footer/footer.component';
+import { PageContractComponent } from './page-contract/page-contract.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { PageTeamComponent } from './page-team/page-team.component';
 import { EmployeCardComponent } from './ui-elements/employe-card/employe-card.component';
 import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 import { HeroComponent } from './ui-elements/hero/hero.component';
+import { BigBComponent } from './svg-images/big-b/big-b.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 import { PageStructureComponent } from './page-structure/page-structure.component';
 import { PartnersService } from './servicies/partners/partners.service';
+import { BjerkyBjerkComponent } from './svg-images/bjerky-bjerk/bjerky-bjerk.component';
+import { BjerkDogComponent } from './svg-images/bjerk-dog/bjerk-dog.component';
+import { GraphComponent } from './svg-images/graph/graph.component';
+import { BirchComponent } from './svg-images/birch/birch.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +42,7 @@ import { PartnersService } from './servicies/partners/partners.service';
     LinkCardComponent,
     PersonAvatarComponent,
     FooterComponent,
+    PageContractComponent,
     PageBlogComponent,
     PrinciplesPageComponent,
     PageCompetenciesComponent,
@@ -42,13 +50,19 @@ import { PartnersService } from './servicies/partners/partners.service';
     PageTeamComponent,
     EmployeCardComponent,
     PageBlogComponent,
-    PageStructureComponent
+    PageStructureComponent,
+    BigBComponent,
+    BjerkyBjerkComponent,
+    BjerkDogComponent,
+    GraphComponent,
+    BirchComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     LazyLoadImagesModule,
     BjerkDesignModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     ApolloModule,
