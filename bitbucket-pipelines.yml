@@ -5,10 +5,10 @@ pipelines:
           name: Build staging environment
           image: teracy/angular-cli
           caches:
-            - node
+            - yarncustom
             - globalnode
           script:
-            - npm install
+            - yarn
             - ng lint
             - ng build --aot --prod
             - npm install -g aerobatic-cli
@@ -16,3 +16,4 @@ pipelines:
 definitions:
   caches:
     globalnode: /usr/local/lib/node_modules
+    yarncustom: /usr/local/share/.cache/yarn/v1
