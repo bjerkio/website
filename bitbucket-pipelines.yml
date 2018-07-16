@@ -1,12 +1,12 @@
 pipelines:
   branches:
-    master:
+    '*':
       - step:
           name: Build staging environment
           image: teracy/angular-cli
-          caches:
-            - yarncustom
-            - globalnode
+          # caches:
+          #   - yarncustom
+          #   - globalnode
           script:
             - yarn
             - ng lint
