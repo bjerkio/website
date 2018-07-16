@@ -16,7 +16,7 @@ pipelines:
             - ng lint
             - ng build --aot --prod
             - npm install -g aerobatic-cli
-            - aero deploy
+            # - aero deploy
 # definitions:
 #   caches:
 #     globalnode: /usr/local/lib/node_modules
