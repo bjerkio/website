@@ -1,10 +1,9 @@
 pipelines:
-  default:
+  branches:
+    '*':
       - step:
           script:
             - node -v
-  branches:
-    '*':
       - step:
           name: Build staging environment
           image: teracy/angular-cli
