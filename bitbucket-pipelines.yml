@@ -13,7 +13,7 @@ pipelines:
           #   - globalnode
           script:
             - yarn
-            - ls node_modules
+            - ls pwd
             - ng lint
             - ng build --aot --prod
             - npm install -g aerobatic-cli
