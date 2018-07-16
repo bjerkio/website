@@ -13,7 +13,7 @@ pipelines:
             - ng build --aot --prod
             - npm install -g aerobatic-cli
             - aero deploy
-definitions:
-  caches:
-    globalnode: /usr/local/lib/node_modules
-    yarncustom: /usr/local/share/.cache/yarn/v1
+# definitions:
+#   caches:
+#     globalnode: /usr/local/lib/node_modules
+#     yarncustom: /usr/local/share/.cache/yarn/v1
