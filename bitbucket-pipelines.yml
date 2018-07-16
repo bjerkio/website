@@ -1,4 +1,8 @@
 pipelines:
+  default:
+      - step:
+          script:
+            - node -v
   branches:
     '*':
       - step:
