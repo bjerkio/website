@@ -32,7 +32,6 @@
               "node_modules/gsap/src/uncompressed/TweenMax.js",
               "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
               "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addindicators.js"
             ]
           },
           "configurations": {
@@ -89,8 +88,7 @@
             "scripts": [
               "node_modules/gsap/src/uncompressed/TweenMax.js",
               "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addindicators.js"
+              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"
             ],
             "assets": [
               "src/favicon.ico",
