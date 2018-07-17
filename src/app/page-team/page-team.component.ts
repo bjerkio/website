@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UserInterface } from '../interfaces/user.interface';
 import { UserService } from '../servicies/user/user.service';
+import { TweenMax } from 'gsap/TweenMax';
 import { Subscription } from 'rxjs';
 import { BjerkHeaderComponent } from '../bjerk-design/bjerk-header/bjerk-header.component';
 declare let ScrollMagic: any;
-declare let TweenMax: any;
 declare let Bounce: any;
 
 @Component({
