@@ -28,12 +28,7 @@
               "src/app/bjerk-design/bjerk-design.theme.scss",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/gsap/src/uncompressed/TweenMax.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addindicators.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -86,12 +81,7 @@
               },
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/gsap/src/uncompressed/TweenMax.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
-              "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addindicators.js"
-            ],
+            "scripts": [],
             "assets": [
               "src/favicon.ico",
               "src/assets",

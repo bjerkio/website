@@ -1,7 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 declare let ScrollMagic: any;
-declare let TweenMax: any;
-declare let Bounce: any;
 
 @Component({
   selector: 'app-principles-page',

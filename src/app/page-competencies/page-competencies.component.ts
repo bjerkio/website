@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
-import { TimelineMax } from 'gsap/TweenMax';
+import { TimelineMax, TweenMax } from 'gsap/TweenMax';
 import { Subscription } from 'rxjs';
 import { BjerkHeaderComponent } from '../bjerk-design/bjerk-header/bjerk-header.component';
 import { Utils } from '../helpers/utils';
 import { BehaviorSubject } from 'rxjs/index';
 declare let ScrollMagic: any;
-declare let TweenMax: any;
 declare let Bounce: any;
 
 @Component({
