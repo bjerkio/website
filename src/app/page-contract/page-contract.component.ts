@@ -3,7 +3,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {  TimelineMax } from 'gsap/TweenMax';
 import { BjerkHeaderComponent } from '../bjerk-design/bjerk-header/bjerk-header.component';
 import { Subscription } from 'rxjs';
-import { stagger } from '../../../node_modules/@angular/animations';
 
 
 @Component({
