@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class PageContractComponent implements OnInit, OnDestroy, AfterViewInit {
   contractForm: FormGroup;
   emailPattern = /^\w{1,}@\w{1,5}\.\w{1,3}/;
+  submited: boolean;
   headerAnimSubscription: Subscription;
   constructor(private el: ElementRef) { }
 
@@ -37,6 +38,12 @@ export class PageContractComponent implements OnInit, OnDestroy, AfterViewInit {
   onSubmit(e: Event) {
     e.preventDefault();
     console.log(this.contractForm.value.email);
+    const _hsq = window['_hsq'] = window['_hsq'] || [];
+    // _hsq.push(['trackEvent', {
+    //   id: 'new contact',
+    //   value: this.contractForm.value.email
+    // }]);
+    this.submited = true;
   }
 
   animateBg() {
