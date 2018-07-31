@@ -62,16 +62,12 @@ export class PageHomeComponent implements OnInit, OnDestroy {
     slogan.innerHTML = wrappedText;
     const queue = new TimelineMax()
       .to(svg, 0, {opacity: 1})
-      .fromTo(svg.querySelector('path.cls-1'), 1, { opacity: 0, scaleX: .1}, {opacity: 1, scaleX: 1})
+      .fromTo(svg.querySelector('path.cls-1'), 1, { opacity: 0}, {opacity: 1})
       .to(slogan, 0, {opacity: 1})
-      .staggerFromTo(slogan.querySelectorAll('.wrapped'), .05, {
-        x: -20,
-        y: -40,
+      .fromTo(slogan.querySelectorAll('.wrapped'), 1, {
         display: 'inline-block',
         opacity: 0
       }, {
-        x: 0,
-        y: 0,
         opacity: 1
       }, .05).call( () => {
         slogan.innerHTML = originalText;
