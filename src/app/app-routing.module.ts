@@ -8,6 +8,7 @@ import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PrinciplesPageComponent } from './principles-page/principles-page.component';
 import { PageCompetenciesComponent } from './page-competencies/page-competencies.component';
 import { PageStructureComponent } from './page-structure/page-structure.component';
+import { PageRecruitComponent } from './page-recruit/page-recruit.component';
 
 export const routes: Routes = [
   {path: '', component: PageHomeComponent, children:
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'team',
     component: PageTeamComponent
+  },
+  {
+    path: 'recruit',
+    component: PageRecruitComponent
   },
   {
     path: 'blog/:id',

@@ -4,12 +4,12 @@ export const PartnersMock: PartnerInterFace[] = [
     {
         id: 0,
         name: 'Crayon',
-        link: 'javascript:void(0)'
+        link: 'https://crayon.com/'
     },
     {
         id: 1,
         name: 'Objekt Venture',
-        link: 'javascript:void(0)'
+        link: 'https://obj.no/'
     },
     {
         id: 2,

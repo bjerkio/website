@@ -78,9 +78,13 @@
         margin-top: 0;
     }
     &__footer{
-        margin-left: 1.25rem;
+        margin-top: 1.25rem;
         @include media-df-tp{
             margin-left: 0;
+        }
+
+        .link {
+          margin-left: -15px;
         }
     }
     &__message{
