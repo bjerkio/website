@@ -44,7 +44,7 @@
                 }
             }
         }
-        
+
     }
     &__emoji{
         width: 2.2rem;
@@ -62,7 +62,7 @@
             color: $yelloooo;
         }
         &_large{
-            font-size: 6.4rem;
+            font-size: 6rem;
             opacity: 0;
             @include media-df-dlg{
                 font-size: 5rem;
