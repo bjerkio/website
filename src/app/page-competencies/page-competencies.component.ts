@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs/index';
 declare let ScrollMagic: any;
 declare let Bounce: any;
 declare let TweenMax: any;
+declare let SimplybookWidget: any;
 
 @Component({
   selector: 'app-page-competencies',
@@ -26,6 +27,33 @@ export class PageCompetenciesComponent implements OnInit, OnDestroy {
         this.animate();
       }
     });
+
+    // var widget = new SimplybookWidget({
+    //     "widget_type": "contact-button",
+    //     "url":"https:\/\/bjerk.simplybook.it",
+    //     "theme":"space",
+    //     "theme_settings":{
+    //       "sb_base_color":"#d42853",
+    //       "timeline_show_end_time":"0",
+    //       "dark_font_color":"#474747",
+    //       "light_font_color":"#ffffff",
+    //       "hide_img_mode":"0",
+    //       "sb_busy":"#dad2ce",
+    //       "sb_available":"#d3e0f1"
+    //     },
+    //     "timeline":"flexible",
+    //     "datepicker":"top_calendar",
+    //     "is_rtl":false,
+    //     "app_config":{
+    //       "predefined":[]
+    //     },
+    //     "button_title":"Contact Us",
+    //     "button_background_color":"#d42853",
+    //     "button_text_color":"#ffffff",
+    //     "button_position":"right",
+    //     "button_position_offset":"55%"
+    //   });
+
   }
   ngOnDestroy() {
     if (this.headerSubscription) {
