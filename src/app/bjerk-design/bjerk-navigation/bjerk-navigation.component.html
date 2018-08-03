@@ -2,8 +2,8 @@
 </div>
 
 <ul ngClass.xs="mobile-nav" [fxHide]="!showMobile" fxShow.gt-xs>
-  <li><a href="#about">About</a></li>
-  <li><a href="#events">Events</a></li>
+  <li><a [routerLink]="['/team']">About</a></li>
+  <!--<li><a href="#events">Events</a></li>-->
   <li><a [routerLink]="['/principles']">Principles</a></li>
   <li><a [routerLink]="['/competencies']">Competencies</a></li>
   <li><a [routerLink]="['/contract']">Contract</a></li>

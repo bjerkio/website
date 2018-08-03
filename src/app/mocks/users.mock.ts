@@ -13,7 +13,7 @@ export const UsersMock: UserInterface[] = [
         ],
         info: userInfo,
         email: 'bns@bjerk.io',
-        phone: '+47 90 90 90 90'
+        phone: '+47 90 58 66 16'
     },
     {
         id: 1,
@@ -26,7 +26,7 @@ export const UsersMock: UserInterface[] = [
         ],
         info: userInfo,
         email: 'so@bjerk.io',
-        phone: '+47 90 90 90 90'
+        phone: '+47 95 30 80 87'
     },
     {
         id: 2,
@@ -39,28 +39,28 @@ export const UsersMock: UserInterface[] = [
         ],
         info: userInfo,
         email: 'aj@bjerk.io',
-        phone: '+47 90 90 90 90'
+        phone: '+47 41 36 74 07‬'
     },
     {
         id: 3,
-        img: 'assets/images/Hansen.jpg',
+        img: 'https://api.adorable.io/avatars/500/blue-kenneth-l-hansen.png',
         name: 'Kenneth Lisborg Hansen',
         role: [
             'Business Advisor Trainee'
         ],
         info: userInfo,
         email: 'kh@bjerk.io',
-        phone: '+47 90 90 90 90'
+        phone: '+47 93 87 81 09'
     },
     {
         id: 4,
-        img: 'assets/images/Schrøder.jpg',
+        img: 'https://api.adorable.io/avatars/500/cbs.png',
         name: 'Christopher Buaas Schrøder',
         role: [
             'Developer Trainee'
         ],
         info: userInfo,
         email: 'cbs@bjerk.io',
-        phone: '+47 90 90 90 90'
+        phone: '+47 99 79 11 43'
     },
 ];
