@@ -34,7 +34,6 @@ import { BjerkyBjerkComponent } from './svg-images/bjerky-bjerk/bjerky-bjerk.com
 import { BjerkDogComponent } from './svg-images/bjerk-dog/bjerk-dog.component';
 import { GraphComponent } from './svg-images/graph/graph.component';
 import { BirchComponent } from './svg-images/birch/birch.component';
-import { PageRecruitComponent } from './page-recruit/page-recruit.component';
 
 @NgModule({
   declarations: [
