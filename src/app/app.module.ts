@@ -55,8 +55,7 @@ import { BirchComponent } from './svg-images/birch/birch.component';
     BjerkyBjerkComponent,
     BjerkDogComponent,
     GraphComponent,
-    BirchComponent,
-    PageRecruitComponent
+    BirchComponent
   ],
   imports: [
   BrowserModule,
