@@ -1,13 +1,11 @@
 image: node:8
 pipelines:
   branches:
-    master:
-      - step:
-          script:
-            - node -v
+    staging:
       - step:
           name: Build staging environment
           image: teracy/angular-cli
+          deployment: staging
           caches:
             - yarncustom
             - globalnode
@@ -16,7 +14,39 @@ pipelines:
             - ng lint
             - ng build --aot --prod
             - npm install -g aerobatic-cli
-            - aero deploy
+            - aero deploy -s staging
+    master:
+      - step:
+          script:
+            - node -v
+      - step:
+          name: Build staging environment
+          image: teracy/angular-cli
+          deployment: test
+          caches:
+            - yarncustom
+            - globalnode
+          script:
+            - yarn
+            - ng lint
+            - ng build --aot --prod
+            - npm install -g aerobatic-cli
+            - aero deploy -s test
+    tags:
+      v*:
+        - step:
+            name: Build staging environment
+            image: teracy/angular-cli
+            deployment: production
+            caches:
+              - yarncustom
+              - globalnode
+            script:
+              - yarn
+              - ng lint
+              - ng build --aot --prod
+              - npm install -g aerobatic-cli
+              - aero deploy
 definitions:
   caches:
     globalnode: /usr/local/lib/node_modules
