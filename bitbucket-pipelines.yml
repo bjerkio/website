@@ -2,7 +2,7 @@ pipelines:
   branches:
     master:
       - step:
-          name: Build staging environment
+          name: Build and deploy to production
           image: node:8
           caches:
             - node
@@ -12,7 +12,7 @@ pipelines:
             - yarn deploy
     develop:
       - step:
-          name: Build staging environment
+          name: Build and deploy to development
           image: node:8
           caches:
             - node
