@@ -3,8 +3,8 @@ import HomeBannerSVG from './home-banner.svg';
 import './home-banner.css';
 
 const HomeBanner = () => (
-  <div class="home-banner">
-    <img class="home-banner--image" src={HomeBannerSVG} />
+  <div className="home-banner">
+    <img className="home-banner--image" alt="Digitalization" src={HomeBannerSVG} />
   </div>
 )
 

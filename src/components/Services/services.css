@@ -1,0 +1,19 @@
+.service {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    color: var(--dark-color);
+    align-items: center;
+    text-decoration: none;
+    height: 5rem;
+}
+
+.service div {
+    flex-grow: 1;
+}
+
+.service .service__icon {
+    margin: 0;
+}

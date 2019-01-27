@@ -5611,6 +5611,13 @@ gatsby-node-helpers@^0.3.0:
     lodash "^4.17.4"
     p-is-promise "^1.1.0"
 
+gatsby-plugin-intercom@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-intercom/-/gatsby-plugin-intercom-0.1.4.tgz#5942ba9f8588fcb736a2e31bf91618500973b40a"
+  integrity sha1-WUK6n4WI/Lc2ouMb+RYYUAlztAo=
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-manifest@^2.0.9:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.12.tgz#7e25f8997ea690969eeaa010a2d111209282f2ce"

@@ -2,45 +2,44 @@ import React from 'react'
 import hamburger from './hamburger.svg'
 import { Link } from 'gatsby'
 import './navigation.css'
-
-
-const links = [{
-        title: 'Vår historie',
-        link: '#'
-    },
-    {
-        title: 'Tjenester',
-        link: '#'
-    },
-    {
-        title: 'Ansikter',
-        link: '#'
-    },
-    {
-        title: 'Kontakt oss',
-        link: '#'
-    }
-];
+import { StaticQuery, graphql } from 'gatsby'
 
 const Navigation = () => (
-  <nav class="navigation">
-    <div class="navigation__container">
-        <div class="close-button"></div>
-        <ul>
-            {links.map((link) => {
-                return (
-                    <li>
-                        <Link
-                        to={link.link}>
-                            {link.title}
-                        </Link>
-                    </li>
-                ) 
+  <StaticQuery
+    query={graphql`
+      query Links {
+        allPrismicLink {
+          edges {
+            node {
+              data {
+                title
+                link {
+                  uid
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <nav className="navigation">
+        <div className="navigation__container">
+          <div className="close-button" />
+          <ul>
+            {data.allPrismicLink.edges.map(link => {
+              return <li key={link.node.data.link.uid}>
+                  <Link to={link.node.data.link.uid}>
+                    {link.node.data.title}
+                  </Link>
+                </li>
             })}
-        </ul>
-    </div>
-    <img class="hamburger-icon" src={hamburger} />
-  </nav>
+          </ul>
+        </div>
+        <img className="hamburger-icon" alt="menu" src={hamburger} />
+      </nav>
+    )}
+  />
 )
 
 export default Navigation

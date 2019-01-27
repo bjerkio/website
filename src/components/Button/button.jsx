@@ -7,7 +7,7 @@ const Button = ({
     link,
     title
 }) => (
-    <Link class="button" to={link}>
+    <Link className="button" to={link}>
         {title}
     </Link>
 )

@@ -247,10 +247,10 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: "TTCommons-Bold", Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: "TTCommons-Light", Helvetica Neue, sans-serif;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.23rem;
   line-height: 1.1;
 }
 h3 {

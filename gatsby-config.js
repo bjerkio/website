@@ -31,16 +31,22 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-source-prismic`,
-    //   options: {
-    //     repositoryName: `bjerk`,
-    //     accessToken: `${process.env.API_KEY}`,
-    //     linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `bjerk`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-intercom`,
+      options: {
+        appId: 'r5p2vtxa',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
   ],
 }

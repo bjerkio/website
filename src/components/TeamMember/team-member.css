@@ -1,0 +1,11 @@
+.team-member {
+    padding: 2rem;
+    text-align: center;
+    width: 25vw;
+}
+.team-member__portrait {
+    max-height: 10rem;
+}
+.team-member__name {
+    margin-bottom: 0rem;
+}
