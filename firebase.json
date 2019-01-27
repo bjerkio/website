@@ -11,7 +11,7 @@
     },
     {
       "target": "prod",
-      "public": "build",
+      "public": "public",
       "ignore": [
         "firebase.json",
         "**/.*",
