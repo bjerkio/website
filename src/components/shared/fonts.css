@@ -3,6 +3,7 @@
 
 @font-face {
     font-family: 'TTCommons-Regular';
+    font-display: auto;
     src: url('webfonts/388D74_0_0.eot');
     src: url('webfonts/388D74_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/388D74_0_0.woff2') format('woff2'), url('webfonts/388D74_0_0.woff') format('woff'), url('webfonts/388D74_0_0.ttf') format('truetype');
 }
@@ -10,6 +11,7 @@
 
 @font-face {
     font-family: 'TTCommons-Light';
+    font-display: auto;
     src: url('webfonts/388D74_1_0.eot');
     src: url('webfonts/388D74_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/388D74_1_0.woff2') format('woff2'), url('webfonts/388D74_1_0.woff') format('woff'), url('webfonts/388D74_1_0.ttf') format('truetype');
 }
@@ -17,6 +19,7 @@
 
 @font-face {
     font-family: 'TTCommons-Italic';
+    font-display: auto;
     src: url('webfonts/388D74_2_0.eot');
     src: url('webfonts/388D74_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/388D74_2_0.woff2') format('woff2'), url('webfonts/388D74_2_0.woff') format('woff'), url('webfonts/388D74_2_0.ttf') format('truetype');
 }
@@ -24,6 +27,7 @@
 
 @font-face {
     font-family: 'TTCommons-Bold';
+    font-display: auto;
     src: url('webfonts/388D74_3_0.eot');
     src: url('webfonts/388D74_3_0.eot?#iefix') format('embedded-opentype'), url('webfonts/388D74_3_0.woff2') format('woff2'), url('webfonts/388D74_3_0.woff') format('woff'), url('webfonts/388D74_3_0.ttf') format('truetype');
 }
