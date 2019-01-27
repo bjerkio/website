@@ -1,4 +1,9 @@
 .home-banner {
-    transform: translate(0rem, 0rem) scale(1.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 8rem;
+}
+.home-banner--image {
+    transform: translate(0rem, 0rem) scale(1.3);
 }

@@ -1,10 +1,8 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
-import logo from './logo.svg';
-import Navigation from './Navigation/navigation';
+import logo from './logo.svg'
 
-const Header = ({ siteTitle }) => (
+const Footer = () => (
   <div
     style={{
       marginBottom: `1.45rem`,
@@ -25,22 +23,25 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-        <img src={logo} style={{
-          width: `6rem`
-        }} alt="Logo" />
+          <img
+            src={logo}
+            style={{
+              width: `3rem`,
+            }}
+            alt="Logo"
+          />
         </Link>
       </h1>
-      <Navigation />
+      <p>998 732 867 MVA</p>
+      <p>
+        Dronningens gate 8B
+        <br />
+        NO-0151 Oslo
+        <br />
+        Norway
+      </p>
     </div>
   </div>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Footer
