@@ -20,6 +20,10 @@
 
 .hamburger-icon {
     display: none;
+    background: url('./hamburger.svg') no-repeat;
+    background-size: cover;
+    height: 1.2rem;
+    width: 1.4rem;
 }
 
 .navigation__container ul li {
@@ -41,11 +45,15 @@
 }
 
 /* Navigation Mobile */
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1490px) {
     .hamburger-icon {
         display: block;
+        position: absolute;
+        top: 2rem;
+        right: 5rem;
     }
     .navigation__container {
+        display: none;
         top: 0;
         width: 100vw;
         padding: 5rem;

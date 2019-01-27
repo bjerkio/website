@@ -12,7 +12,7 @@ const Footer = () => (
       style={{
         margin: `0 auto`,
         maxWidth: `70vw`,
-        padding: `1.45rem 1.0875rem`,
+        paddingTop: `1.45rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
