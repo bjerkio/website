@@ -1,0 +1,123 @@
+@import '../styles-lib/variables';
+.team,{
+    &__title{
+        color: $primary;
+        font-weight: 400;
+        font-size: 12rem;
+        line-height: 0.98em;
+        flex-basis: 40%;
+        margin-right: 10%;
+        margin-top: 11.5vw;
+        margin-bottom: 8vw;
+        @include media-df-dmd{
+            font-size: 9rem;
+        }
+        @include media-df-tp{
+            font-size: 4rem;
+            margin-right: 0;
+        }
+        @media (max-width: 600px) {
+            margin-top: 0;
+        }
+    }
+    &__slogan{
+        @include media-mf-dmd{
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__dog{
+        flex-basis: 40%;
+        app-bjerk-dog{
+            display: block;
+        }
+        svg{
+            max-width: 100%;
+        }
+        @include media-df-dmd{
+            max-width: 50%;
+        }
+    }
+    &__text-content{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        @include media-df-dmd{
+            display: block;
+            margin-top: 8vw;
+        }
+    }
+    &__article{
+        flex-basis: 50%;
+    }
+    &__link{
+        align-items: center;
+        position: relative;
+        font-size: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+    }
+
+}
+.team-article{
+    &__title{
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+        line-height: 1.2em;
+        margin-bottom: 2.5em;
+    }
+    &__columns{
+        column-count: 2;
+        column-gap: 3.125rem;
+        @include media-df-tp{
+            column-count: 1;
+        }
+    }
+    &__text{
+        margin-top: 0;
+    }
+    &__footer{
+        margin-top: 1.25rem;
+        @include media-df-tp{
+            margin-left: 0;
+        }
+
+        .link {
+          margin-left: -15px;
+        }
+    }
+    &__message{
+        font-size: .9rem;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+}
+.team-logo{
+    flex-basis: 50%;
+    text-align: center;
+    &__img{
+        width: 350px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+        margin-top: 4.28rem;
+        transform: scale(.3);
+        opacity: 0;
+    }
+    @include media-df-dmd{
+        text-align: left;
+        &__img{
+            display: none;
+        }
+    }
+}
+.employees{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item{
+        margin: 8.5vw 0;
+        display: block;
+    }
+}

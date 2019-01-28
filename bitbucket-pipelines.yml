@@ -1,5 +1,20 @@
+image: node:8
 pipelines:
   branches:
+    staging:
+      - step:
+          name: Build staging environment
+          image: teracy/angular-cli
+          deployment: staging
+          caches:
+            - yarncustom
+            - globalnode
+          script:
+            - yarn
+            - ng lint
+            - ng build --aot --prod
+            - npm install -g aerobatic-cli
+            - aero deploy -s staging
     master:
       - step:
           name: Build and deploy to production

@@ -1,0 +1,20 @@
+<div class="page-wrapper">
+  <div class="contract-bg">
+    <app-bjerky-bjerk [className]="'contract-bg__img contract-bg__img_top'"></app-bjerky-bjerk>
+    <app-bjerky-bjerk [className]="'contract-bg__img contract-bg__img_bottom'" [bottomImage]='true'></app-bjerky-bjerk>
+  </div>
+  <form [formGroup]="contractForm" class="container form-contract" (submit)='onSubmit($event)'>
+    <h1 class='form-contract__title'>Let’s get to know each other.</h1>
+    <label for="email" class='access-helper'>your email</label>
+    <div class="form-contract__field form-contract__field_collapsed" [ngClass]="{'form-contract__field_invalid': contractForm.invalid && contractForm.value.email.length,'form-contract__field_valid': contractForm.valid}">
+        <input type="email" formControlName='email' id="email" placeholder="your email" class='form-contract__input'>
+        <button [attr.aria-label]="'submit form'" class='form-contract__button'
+        [disabled]="contractForm.invalid && contractForm.value.email.length"
+        [ngClass]="{'form-contract__button_invalid': contractForm.invalid && contractForm.value.email.length,'form-contract__button_valid': contractForm.valid}"
+        >
+          <mat-icon>arrow_right_alt</mat-icon>
+        </button>
+        <h2 class='form-contract__title' *ngIf="submited">Thank you, we will contact you</h2>
+    </div>
+  </form>
+</div>

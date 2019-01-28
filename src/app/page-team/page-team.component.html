@@ -1,0 +1,36 @@
+<div class="team container">
+  <div class="team__slogan">
+    <h1 class="team__title">We are people.</h1>
+    <div class="team__dog">
+        <app-bjerk-dog></app-bjerk-dog>
+    </div>
+
+    <!-- <img class="team__dog dog" src="assets/bjerk-dog.svg" alt=""> -->
+  </div>
+  <div class='team__text-content'>
+      <article class='team__article team-article'>
+        <h2 class='team-article__title'>Bjerk is a multi-dispilinary business agency. We are founders, crafters, designers, specialists, marketers and most of all – People.</h2>
+        <div class='team-article__columns'>
+          <p class='team-article__text'>We are experienced and playful people, who love what we do. Our motivation is the things we create, and the results it gives. </p>
+          <p class='team-article__text'>We combine creativity, design, new thoughts and ideas to help companies reimagine the way they do business, ultimately to find new revenue streams. We help identify and build the future digital business concepts, taking steps towards the fourth industrial revolution.</p>
+          <p class='team-article__text'>Our team is combined with people who are not only passionate but experienced and professional individuals. We thrive for equality for everyone at Bjerk, we want our family to have the ability for greatness. We value diversity and difference, and we all pave the way for each other.</p>
+          <p class='team-article__text'><b>We hope to you'll have fun with us!</b></p>
+        </div>
+        <!--<footer class="team-article__footer">
+          <a class="team__link link" href="javascript:void(0)"><span class="link__text">Wanna join us?</span></a>
+          <p class="team-article__message">We might be <span [attr.aria-hedden]='true'>👀</span> for you!</p>
+        </footer>-->
+      </article>
+      <div class="team-logo">
+        <a [routerLink]="['/principles']" class='team__link link'>
+          <span class="link__text">Learn more about how we’re setup</span>   <mat-icon>arrow_right_alt</mat-icon></a>
+        <img src="assets/bjerk-prototype.svg" alt="" class="team-logo__img">
+      </div>
+  </div>
+  <ul class='employees'>
+    <li class="employees__item" *ngFor='let user of userList'>
+      <app-employe-card [user]='user'>
+      </app-employe-card>
+    </li>
+  </ul>
+</div>

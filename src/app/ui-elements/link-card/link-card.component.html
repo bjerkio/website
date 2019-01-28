@@ -1,0 +1,17 @@
+<a [routerLink]="['/blog', cardLink.id]" class="link-card">
+  <article class='link-card__body' lazy-load-images>
+    <div class="link-card__img-container" [attr.data-background-src]="cardLink.img">
+      <img [attr.data-src]="cardLink.img" [alt]="cardLink.title" class="link-card__img">
+      <app-person-avatar *ngIf='userData' [imagePath]="userData.img"
+      [alt]='userData.name'
+      [className]="'link-card__person'"
+      [size]="'sm'"
+      ></app-person-avatar>
+    </div>
+    <footer class='link-card__foter'>
+      <h3 class="link-card__title">{{cardLink.title}}</h3>
+      <p class="link-card__text">{{cardLink.shortDescription}}</p>
+      <mat-icon class='link-card__arrow'>arrow_right_alt</mat-icon>
+    </footer>
+  </article>
+</a>
