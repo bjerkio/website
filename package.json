@@ -33,7 +33,7 @@
     "predeploy": "yarn build",
     "predeploy-prod": "yarn build",
     "deploy": "firebase deploy --only hosting:dev",
-    "deploy-prod": "firebase deploy --only hosting:dev --token \"$FIREBASE_TOKEN\""
+    "deploy-prod": "firebase deploy --only hosting:prod --token \"$FIREBASE_TOKEN\""
   },
   "devDependencies": {
     "dotenv": "^6.2.0",
