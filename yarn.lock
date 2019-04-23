@@ -5611,6 +5611,13 @@ gatsby-node-helpers@^0.3.0:
     lodash "^4.17.4"
     p-is-promise "^1.1.0"
 
+gatsby-plugin-google-tagmanager@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.13.tgz#c2a0e4cb02c8a96c591d022c50bdda4f8fa2a861"
+  integrity sha512-QVw4vsRBNHSeO7iOyirki2LQk4JIH3TXvSB9Labd95rhLu3uTr+b7bt93dQEL88qlkM1/VacYUEh/+Uw+t0ZoA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-intercom@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-intercom/-/gatsby-plugin-intercom-0.1.4.tgz#5942ba9f8588fcb736a2e31bf91618500973b40a"
