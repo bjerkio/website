@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -7,9 +7,16 @@ module.exports = {
     title: `Bjerk AS – Business Studio, Oslo`,
     description: `Bjerk er blitt et konsulent-hus med hovedfokus på tre fagområder; applikasjonsutvikling, markedsføring og forretningsstrategi.`,
     author: `@bjerkio`,
-  },
+  }, //
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: 'GTM-5CJTPG2',
+        includeInDevelopment: false,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
