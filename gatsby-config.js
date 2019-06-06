@@ -56,7 +56,7 @@ module.exports = {
       options: {
         repositoryName: `bjerk`,
         accessToken: `${process.env.API_KEY}`,
-        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+        linkResolver: () => post => `/${post.uid}`,
       },
     },
     {

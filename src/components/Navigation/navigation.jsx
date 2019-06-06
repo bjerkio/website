@@ -44,6 +44,7 @@ class Navigation extends React.Component {
               <div className="close-button" onClick={this.handleClick} />
               <ul>
                 {data.allPrismicLink.edges.map(link => {
+                  console.log("debug", link)
                   return <li key={link.node.data.link.uid}>
                       <Link to={link.node.data.link.uid}>
                         {link.node.data.title}
