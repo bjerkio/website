@@ -59,7 +59,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+
   margin: 0.67em 0;
 }
 mark {
@@ -210,6 +210,7 @@ body {
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -221,7 +222,20 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
+@media screen and (min-width: 1501px){
+  img {
+    max-width: 70%
+  }
+}
+@media screen and (min-width: 1538px){
+  img {
+    max-width: 50%
+  }
+}
+
 h1 {
+  font-size: 2rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -234,8 +248,18 @@ h1 {
   font-family: "TTCommons-Bold", Helvetica Neue, sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 3.46rem;
   line-height: 1.1;
+}
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: calc(30px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 100px;
+  }
 }
 h2 {
   margin-left: 0;
@@ -576,7 +600,7 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
-th:first-child,
+th:first-child
 td:first-child {
   padding-left: 0;
 }
@@ -627,6 +651,7 @@ html {
     font-size: 26px;
   }
 }
+
 
 /* @media only screen and (max-width: 480px) {
   html {

@@ -45,7 +45,7 @@
 }
 
 /* Navigation Mobile */
-@media screen and (max-width: 1490px) {
+@media screen and (max-width: 1500px) {
     .hamburger-icon {
         display: block;
         position: absolute;

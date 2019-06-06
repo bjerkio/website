@@ -4,17 +4,17 @@
 //      naming abbriviations
 //      any media mixin name based on the template prefix-type-screen_size_breakpoint template
 //      prefixe used to identify mixin as a media query for convinient understanding
-//      type: can be mf-(mobile-first) in this case query based on min-width, or df (desctop-first) based on max-width
+//      type: can be mf-(mobile-first) in this case query based on min-width, or df (desktop-first) based on max-width
 //      screen_size_breakpoint:
-//          first letter - device type (d - desctop t - tablet m - mobile)
+//          first letter - device type (d - desktop t - tablet m - mobile)
 //              mf (mobile-first):
-//                  d - desctop:
+//                  d - desktop:
 //                      dxlg (extra-large = 1920px);  dlg (large = 1540px) dmd (medium = 1280px)
 //                      dsm (small = 1024px)
 //                  t - tablet:
 //                      tp (portrait = 768)
-//             df (desctop-first)
-//                  d - desctop:
+//             df (desktop-first)
+//                  d - desktop:
 //                      dmd (medium = 1280px) dlg(large = 1700)
 //                  t - tablet:
 //                      tp(portrait = 768) tl (landscape=1024)
@@ -72,3 +72,8 @@
         @content;
     }
 }
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
