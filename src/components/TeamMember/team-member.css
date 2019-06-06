@@ -1,11 +1,15 @@
 .team-member {
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
     width: 15rem;
 }
 .team-member__portrait {
     max-height: 10rem;
 }
+.team-member img{
+    max-width: 100%;
+ }
+
 .team-member__name {
     margin-bottom: 0rem;
 }
