@@ -71,7 +71,7 @@ export const pageQuery = graphql`
       link {
         uid
       }
-      title1 {  
+      title1 {
         text
       }
     }
