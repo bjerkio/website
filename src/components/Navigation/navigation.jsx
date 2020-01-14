@@ -46,10 +46,10 @@ class Navigation extends React.Component {
               <ul>
                 {data.allPrismicLink.edges.map(link => {
                   return <li key={link.node.data.link.uid}>
-                      <Link to={link.node.data.link.uid}>
+                          <Link to={link.node.data.link.uid}>
                         {link.node.data.title}
                       </Link>
-                    </li>
+                        </li>
                 })}
               </ul>
             </div>

@@ -11,6 +11,11 @@
     right: 2rem;
     top: 3rem;
 }
+@media screen and (min-width: 1490px){ 
+    .close-button {
+        display: none;
+    }
+}
 
 .navigation__container {
     position: absolute;
