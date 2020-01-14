@@ -1,8 +1,0 @@
-id: 8e4208eb-3852-4e51-b8d8-71c071529496
-deploy:
-  ignore: []
-  directory: ./dist/bjerk-io
-plugins:
-  - name: webpage
-    options:
-      pushState: true
