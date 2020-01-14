@@ -11,7 +11,7 @@
     right: 2rem;
     top: 3rem;
 }
-@media screen and (min-width: 1490px){ 
+@media screen and (min-width: 1961px){ 
     .close-button {
         display: none;
     }
@@ -50,7 +50,7 @@
 }
 
 /* Navigation Mobile */
-@media screen and (max-width: 1490px) {
+@media screen and (max-width: 1960px) {
     .hamburger-icon {
         display: block;
         position: absolute;
@@ -72,6 +72,7 @@
     }
     .navigation__container ul {
         transform: skewY(-20deg);
+        margin: 5rem 0;
     }
     .navigation__container ul li {
         background-image: url('../../images/icon-line.svg');
