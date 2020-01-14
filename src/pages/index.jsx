@@ -47,10 +47,10 @@ const IndexPage = () => (
               padding: `2rem`,
             }}
           >
-            <a
+            <button
               className='button'
               href={data.prismicHome.data.link.url}
-            >{data.prismicHome.data.linktext}</a>
+            >{data.prismicHome.data.linktext}</button>
           </div>
         </div>
       )}

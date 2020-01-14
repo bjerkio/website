@@ -5,4 +5,5 @@
     padding: 1rem;
     color: var(--dark-color);
     text-decoration: none;
-}  
+    background-color: transparent;
+}
