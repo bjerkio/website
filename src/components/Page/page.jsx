@@ -38,8 +38,6 @@ background-color: #eee;
 
 const Page = ({ data: { prismicPage } }) => {
   const { data } = prismicPage
-  console.log('data', data)
-
   return (
     <Layout>
       <React.Fragment>
@@ -152,13 +150,3 @@ export const pageQuery = graphql`
     slice_type
   }
 `
-
-/* 
-       <form key={1} className="contactForm" data-netlify="true">
-                    <InputArea>
-                      <Box><Label>
-                      Navn: <Input name="name" placeholder="Ditt navn…" />
-                      </Label></Box>
-                    </InputArea>
-                  </form>
-*/
