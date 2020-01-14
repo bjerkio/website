@@ -1,8 +1,12 @@
 @import '../shared/colors.css';
 .button {
-    border-radius: .38rem;
-    border: .07rem solid var(--bjerkgreen-color);
+
     padding: 1rem;
     color: var(--dark-color);
     text-decoration: none;
-}  
+} 
+
+.buttonBox {
+    border-radius: .38rem;
+    border: .07rem solid var(--bjerkgreen-color);
+}

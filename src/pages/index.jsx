@@ -3,9 +3,14 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeBanner from '../components/HomeBanner/home-banner';
-import Button from '../components/Button/button';
 import { StaticQuery } from 'gatsby';
+import styled from 'styled-components'
 import '../components/Button/button.css';
+
+
+const Text = styled.p`
+margin: 0;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -41,16 +46,20 @@ const IndexPage = () => (
               __html: data.prismicHome.data.introductory.html,
             }}
           />
-          <div
+          <div 
             style={{
+              border: `#4ECCA3 solid`,
               textAlign: `center`,
-              padding: `2rem`,
+              borderRadius: `5px`,
+              maxWidth: `14rem` 
             }}
           >
             <a
               className='button'
               href={data.prismicHome.data.link.url}
-            >{data.prismicHome.data.linktext}</a>
+            ><Text>
+              {data.prismicHome.data.linktext}
+            </Text></a>
           </div>
         </div>
       )}
