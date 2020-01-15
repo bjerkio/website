@@ -1,9 +1,0 @@
-@import '../styles-lib/variables';
-.emoji{
-    font-size: .3em;
-}
-.formated-text__column_small{
-    @include media-df-dmd{
-        flex-basis: 100%;
-    }
-}
