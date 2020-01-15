@@ -1,23 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
+
 import Layout from '../layout'
 import TeamMember from '../TeamMember/team-member'
 import Services from '../Services/services'
 import './page.css'
-import styled from 'styled-components'
+import ButtonLink from '../Button/button'
 
 const Label = styled.label`
 padding-bottom: 10px;
 `
-const Button = styled.button`
-border-radius: 5px;
-border: #4FCCA3 solid 2px;
-background-color: #eee;
-`
 const Input = styled.input`
 border-radius: 5px;
 border: white solid 3px;
-background-color: #eee;
+background-color: transparent;
 `
 const Box = styled.div`
 display: flex;
@@ -32,7 +29,7 @@ border-radius: 5px;
 width: 100%;
 height: 200px;
 border: white solid 3px;
-background-color: #eee;
+background-color: transparent;
 `
 
 
@@ -88,7 +85,7 @@ const Page = ({ data: { prismicPage } }) => {
                   <Label>Message</Label>
                   <TextArea name="message"></TextArea>
                   </Box>
-                  <Button type="submit">Send</Button>
+                  <ButtonLink as="button" type="submit">Send</ButtonLink>
                   </ContactFormWrap>
                 </form>
                 )

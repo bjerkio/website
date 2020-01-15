@@ -1,20 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby';
-import './button.css';
+import styled from 'styled-components'
 
-const Button = ({
-    link,
-    title
-}) => (
-    <Link className="button" to={link}>
-        {title}
-    </Link>
-)
-
-Button.propTypes = {
-    link: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+export default styled.div`
+border: #4ECCA3 solid;
+border-radius: 5px;
+text-align: ${props => props.textCenter ? 'center' : 'left'} ;
+display: inline-block;
+padding: 0.58rem;
+background-color: transparent;
+a {
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 0.8);
 }
-
-export default Button
+`

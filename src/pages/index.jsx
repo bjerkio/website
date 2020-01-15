@@ -4,13 +4,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeBanner from '../components/HomeBanner/home-banner';
 import { StaticQuery } from 'gatsby';
-import styled from 'styled-components'
-import '../components/Button/button.css';
+import ButtonLink from '../components/Button/button'
 
-
-const Text = styled.p`
-margin: 0;
-`
 
 const IndexPage = () => (
   <Layout>
@@ -46,21 +41,13 @@ const IndexPage = () => (
               __html: data.prismicHome.data.introductory.html,
             }}
           />
-          <div 
-            style={{
-              border: `#4ECCA3 solid`,
-              textAlign: `center`,
-              borderRadius: `5px`,
-              maxWidth: `14rem` 
-            }}
-          >
+          <ButtonLink textCenter>
             <a
-              className='button'
               href={data.prismicHome.data.link.url}
-            ><Text>
+            >
               {data.prismicHome.data.linktext}
-            </Text></a>
-          </div>
+            </a>
+          </ButtonLink>
         </div>
       )}
     />
