@@ -818,6 +818,11 @@
     fs-extra "^6.0.1"
     promise-props-recursive "^1.0.0"
 
+"@sanity/cli@^1.149.4":
+  version "1.149.4"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-1.149.4.tgz#5bf3db53d77d4f23a8de1d3909c3ac8e838ade1a"
+  integrity sha512-GljFapNEjYcwmOh9C84f1uiJnF6LeSRDj7Kg6BZFyVuMye+HuP9aQFG45bMbKzh5UuJWZpNcrQti/2haI8p5kw==
+
 "@sanity/client@1.149.2":
   version "1.149.2"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-1.149.2.tgz#fc47fe08e39d79b1099d1a9712d7e7bec12288ec"
