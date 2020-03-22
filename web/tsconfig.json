@@ -3,7 +3,9 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
+        "esModuleInterop": true,
         "module": "commonjs",
+        "allowJs": true,
         "target": "esnext",
         "jsx": "react",
         "lib": ["dom", "es2015", "es2017"]

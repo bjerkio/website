@@ -1,11 +1,6 @@
 {
-  "name": "bjerkio",
+  "name": "bjerk-studio",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Simen A. W. Olsen <so@bjerk.io>",
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",

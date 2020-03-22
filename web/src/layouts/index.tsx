@@ -1,70 +1,32 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-
-import './index.css'
-
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
-
-interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  location: {
-    pathname: string
-  }
-  children: any
+import { ThemeProvider } from 'styled-components'
+import theme from '../theme/theme'
+import Header from './components/Header'
+import GlobalStyles from '../theme/globalStyles'
+import { Box, Text } from 'rebass/styled-components'
+import Footer from './components/Footer'
+import Logo from './components/Logo'
+import Link from '../components/Link'
+import DronningensLogo from './components/DronningensLogo'
+import Container from '../components/Container'
+const Layout: React.FC = ({ children }: any) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {/* <Helmet
+        title="Gatsby Default Starter"
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      /> */}
+      {/* <Container> */}
+      <Header />
+      <Box pt="110px">{children}</Box>
+      {/* </Container> */}
+      <Footer />
+    </ThemeProvider>
+  )
 }
 
-class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
-  public render() {
-    return (
-      <div>
-        <Helmet
-          title="Gatsby Default Starter"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children()}
-        </div>
-      </div>
-    )
-  }
-}
-
-export default DefaultLayout
+export default Layout
