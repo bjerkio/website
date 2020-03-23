@@ -9,7 +9,9 @@ const contact = () => {
     <Layout>
       <Container pt={5} width={2 / 4}>
         <Heading>Kontaktskjema</Heading>
-        <form name="contact" method="POST" data-netlify="true">
+        {/* @ts-ignore */}
+        <form name="contact" method="post" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <Box mt={3}>
             <Label mb={1}>Ditt navn</Label>
             <Input
