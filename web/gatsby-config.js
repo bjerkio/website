@@ -17,7 +17,7 @@ module.exports = {
         username: `bjerk`,
       },
     },
-    // `gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {
