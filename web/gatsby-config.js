@@ -4,7 +4,8 @@ require('dotenv').config({
 })
 
 const isProd = process.env.NODE_ENV === 'production'
-const token = process.env.SANITY_READ_TOKEN
+const token =
+  process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN
 
 module.exports = {
   siteMetadata: {
