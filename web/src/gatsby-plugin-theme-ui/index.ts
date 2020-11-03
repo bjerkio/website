@@ -1,6 +1,3 @@
-import merge from 'deepmerge'
-import { base } from '@theme-ui/presets'
-
 const theme = {
   fonts: {
     body: 'TTCommons, "Lucida Grande", Tahoma, system-ui, sans-serif',

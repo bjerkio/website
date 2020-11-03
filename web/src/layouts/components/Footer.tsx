@@ -3,7 +3,6 @@ import { Box, Text } from 'theme-ui'
 import Container from '../../components/Container'
 import Logo from './Logo'
 import Link from '../../components/Link'
-import DronningensLogo from './DronningensLogo'
 import ALink from '../../components/ALink'
 
 const Footer: React.FC = props => (

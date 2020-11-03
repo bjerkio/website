@@ -1,5 +1,4 @@
 import React from 'react'
-import { color, layout, typography, flexbox } from 'styled-system'
 import { Box, Container } from 'theme-ui'
 
 const Hero: React.FC = ({ children }) => (
