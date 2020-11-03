@@ -27,6 +27,7 @@ module.exports = {
     // 'gatsby-theme-style-guide',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
