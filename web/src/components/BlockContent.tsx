@@ -3,10 +3,8 @@ import React from 'react'
 import clientConfig from '../../client-config'
 import Img from 'gatsby-image';
 import { getFluidGatsbyImage } from 'gatsby-source-sanity'
-import serializers from '../lib/serializers'
-import { Box } from 'rebass/styled-components'
+import { Box } from 'theme-ui'
 import Ingress from './Ingress'
-import styled from 'styled-components'
 
 const BlockRenderer: React.FC<any> = props => {
   const {style = 'normal'} = props.node;

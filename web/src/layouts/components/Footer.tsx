@@ -1,20 +1,13 @@
 import React from 'react'
-import { Box, Text, Link as RebassLink } from 'rebass/styled-components'
-import styled from 'styled-components'
+import { Box, Text } from 'theme-ui'
 import Container from '../../components/Container'
 import Logo from './Logo'
 import Link from '../../components/Link'
 import DronningensLogo from './DronningensLogo'
-import { flexbox } from 'styled-system'
 import ALink from '../../components/ALink'
 
-const FooterContainer = styled(Box)`
-  background-color: ${props => props.theme.colors.dark};
-  color: ${props => props.theme.colors.dry};
-`
-
 const Footer: React.FC = props => (
-  <FooterContainer mt={6} p={5} pt={6} pb={6} bg="dark" {...props}>
+  <Box sx={{ p: 5, mt: 6, pt: 6, bg: 'dark', color: 'white' }} {...props}>
     <Container
       sx={{
         display: 'grid',
@@ -25,27 +18,22 @@ const Footer: React.FC = props => (
     >
       <Box>
         <Logo textColor="white" width="70px" />
-        <Text fontSize="4" mt={4} mb={4}>
+        <Text sx={{ fontSize: 4, my: 4 }}>
           Vi vil gjerne jobbe
           <br />
           med deg!
         </Text>
         <Link to="#">Ta kontakt</Link>
       </Box>
-      <Box fontSize="4">
+      <Box sx={{ fontSize: 4 }}>
         <strong>+47 22 12 05 12</strong>
         <br />
         kontoret@bjerk.io
       </Box>
-      <Box fontSize="3">
+      <Box sx={{ fontSize: 3 }}>
         Dronningens gate 8B, 0151 Oslo
         <br />
-        <Box fontSize="1" mt="2">
-          <a href="https://dronningens.no" target="_blank">
-            En del av <DronningensLogo height="10px" textColor="white" />
-          </a>
-        </Box>
-        <Box fontSize="2" pt="4">
+        <Box sx={{ fontSize: 2, pt: 4 }}>
           Sjekk oss ut på{' '}
           <ALink target="_blank" href="http://github.com/bjerkio">
             Github
@@ -53,7 +41,7 @@ const Footer: React.FC = props => (
         </Box>
       </Box>
     </Container>
-  </FooterContainer>
+  </Box>
 )
 
 export default Footer

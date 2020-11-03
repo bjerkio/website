@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'theme-ui'
 import theme from '../theme/theme'
 import Header from './components/Header'
 import GlobalStyles from '../theme/globalStyles'
@@ -11,7 +11,7 @@ import DronningensLogo from './components/DronningensLogo'
 import Container from '../components/Container'
 const Layout: React.FC = ({ children }: any) => {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <GlobalStyles />
       {/* <Helmet
         title="Gatsby Default Starter"
@@ -25,7 +25,7 @@ const Layout: React.FC = ({ children }: any) => {
       <Box pt="110px">{children}</Box>
       {/* </Container> */}
       <Footer />
-    </ThemeProvider>
+    </>
   )
 }
 

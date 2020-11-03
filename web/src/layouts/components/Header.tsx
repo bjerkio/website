@@ -1,52 +1,41 @@
+/** @jsx */
 import React from 'react'
 import Logo from './Logo'
-import { Box, Flex, Link } from 'rebass/styled-components'
-import styled from 'styled-components'
-import { typography, flexbox, FlexboxProps, color } from 'styled-system'
-import Container from '../../components/Container'
-
-const Navigation = styled.div.attrs<FlexboxProps>({
-  flexGrow: 1,
-  textAlign: 'right',
-  fontSize: 3,
-  // fontWeight: 'bold',
-  color: 'iron',
-  display: 'flex',
-})`
-  ${flexbox}
-  ${typography}
-  ${color}
-  a {
-    color: inherit;
-    text-decoration: none;
-    padding: ${props => props.theme.space[3]}px;
-    &:last-child {
-      padding-right: 0px;
-    }
-    &:hover {
-      color: ${props => props.theme.colors.secondary};
-      transition: color 0.2s;
-    }
-  }
-`
+import { jsx, Box, Flex, Link } from 'theme-ui'
 
 const Header = () => (
-  <Box width="100%" style={{ position: 'fixed', zIndex: 2 }} bg="primary">
+  <Box sx={{ width: '100%', position: 'fixed', zIndex: 2, bg: 'primary' }}>
     <Flex
-      alignItems="center"
-      p={4}
-      style={{
+      sx={{
+        alignItems: 'center',
+        p: 4,
         width: '100%',
         maxWidth: '1440px',
         margin: '0 auto',
+        py: 4,
       }}
-      pb={4}
-      pt={4}
     >
       <Link href="/">
         <Logo height="40px" dotColor="white" />
       </Link>
-      <Navigation>
+      <Flex
+        sx={{
+          flexGrow: 1,
+          fontSize: 3,
+          color: 'iron',
+          justifyContent: 'flex-end',
+          '>a': {
+            p: 2,
+            '&:last-child': {
+              pr: 0,
+            },
+            '&:hover': {
+              color: 'secondary',
+              transition: 'color 0.2s',
+            },
+          },
+        }}
+      >
         <Link variant="nav" href="/om-oss">
           Om oss
         </Link>
@@ -59,7 +48,7 @@ const Header = () => (
         <Link variant="nav" href="/contact">
           Kontakt oss
         </Link>
-      </Navigation>
+      </Flex>
     </Flex>
   </Box>
 )
