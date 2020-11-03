@@ -24,7 +24,7 @@ module.exports = {
         preset: '@theme-ui/preset-base',
       },
     },
-    'gatsby-theme-style-guide',
+    // 'gatsby-theme-style-guide',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {

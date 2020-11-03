@@ -1,7 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import MdSettings from 'react-icons/lib/md/settings'
-import MdHome from 'react-icons/lib/md/home'
-import MdLayers from 'react-icons/lib/md/layers'
+import { MdSettings, MdHome, MdLayers } from 'react-icons/md'
 
 const hiddenDocTypes = listItem =>
   !['homepage', 'siteSettings', 'page'].includes(listItem.getId())
