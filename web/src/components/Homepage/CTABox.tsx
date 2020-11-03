@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading } from 'rebass/styled-components'
+import { Box, Heading } from 'theme-ui'
 import Link from '../Link'
 
 export interface CTABoxProps {
@@ -16,7 +16,7 @@ const CTABox: React.FC<CTABoxProps> = ({
 }) => {
   return (
     <Box p={5}>
-      <Heading mb={3} fontWeight="normal">
+      <Heading sx={{ mb: 3, fontWeight: 'normal' }}>
         {title}
       </Heading>
       <Box>{children}</Box>

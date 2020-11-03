@@ -1,6 +1,6 @@
 import React from 'react'
 import GatsbyLink, { GatsbyLinkProps } from 'gatsby-link'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { space, SpaceProps } from 'styled-system'
 
 interface LinkProps extends SpaceProps {
@@ -17,7 +17,7 @@ const GatsbyLinkStyled = styled(GatsbyLink)`
     content: '→';
     font-size: 1.1em;
     font-weight: bold;
-    color: ${props => props.theme.colors.primary};
+    color: 'primary';
     padding-left: 4px;
     padding-right: 10px;
     -webkit-transition: all 0.15s cubic-bezier(0.8, 0, 0.3, 1) 0s;

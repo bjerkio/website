@@ -1,4 +1,4 @@
-const clientConfig = require('./client-config');
+const clientConfig = require('./client-config')
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
@@ -18,9 +18,24 @@ module.exports = {
         username: `bjerk`,
       },
     },
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+      options: {
+        preset: '@theme-ui/preset-base',
+      },
+    },
+    // 'gatsby-theme-style-guide',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['TTCommons', 'TTCommons-Italic'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

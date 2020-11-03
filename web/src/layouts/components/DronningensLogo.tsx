@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { layout, LayoutProps } from 'styled-system'
 
 interface LogoAttrs {
@@ -10,7 +10,7 @@ type LogoProps = LogoAttrs & LayoutProps
 
 const LogoSvg = styled.svg<any>`
   .text {
-    fill: ${props => props.textColor || props.theme.colors.dark};
+    fill: white;
   }
   ${layout}
 `

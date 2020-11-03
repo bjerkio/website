@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import moment from 'moment'
 import {
   background,
@@ -65,7 +65,8 @@ const ArticleInfo = styled.div<SpaceProps>`
   left: 0!important;
   right: 40%!important;
   bottom: 0!important;
-  color: ${props => props.theme.colors.dry};
+  color: white;
+  /* color: 'dry'; */
   ${space}
 `
 

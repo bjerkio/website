@@ -5,7 +5,6 @@ import Layout from '../layouts'
 import MediumArticle, {
   MediumArticleNode,
 } from '../components/Homepage/MediumArticle'
-import { Box, Card, Heading } from 'rebass/styled-components'
 import CTABox from '../components/Homepage/CTABox'
 import Container from '../components/Container'
 import BlockContent from '../components/BlockContent'

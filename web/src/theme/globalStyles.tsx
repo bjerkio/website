@@ -1,24 +1,31 @@
-import { createGlobalStyle } from 'styled-components'
-import './fonts/fonts.css'
+import React from 'react';
+// import './fonts/fonts.css';
+import { Global } from '@emotion/core'
 
-export default createGlobalStyle`
-  * {
-    outline: none;
-  }
-  html, body {
-    background-color: ${({ theme: { colors } }) => colors.dry};
-    font-family: ${props => props.theme.fonts.body};
-    font-size: 18px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    margin: 0px;
-    padding: 0px;
-  }
-  ::selection {
-    background-color: ${props => props.theme.colors.primary};
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-`
+const GlobalStyles: React.FC = () => (
+  <Global
+    styles={theme => ({
+      '*': {
+        outline: 'none',
+      },
+      'html, body': {
+        fontFamily: theme.fonts.body,
+        // backgroundColor: theme.colors.dry,
+        // fontSize: '18px',
+        textRendering: 'optimizeLegibility',
+        '-webkit-font-smoothing': 'antialiased',
+        margin: '0px',
+        padding: '0px',
+      },
+      '::selection': {
+        bg: 'primary',
+      },
+      a: {
+        color: 'inherit',
+        textDecoration: 'none',
+      },
+    })}
+  />
+)
+
+export default GlobalStyles
