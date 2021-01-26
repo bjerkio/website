@@ -4,7 +4,7 @@ import Logo from './Logo'
 import { Box, Flex, Link } from '@theme-ui/components'
 
 const Header = () => {
-  const pathname = location.pathname ? location.pathname : '';
+  const pathname = location.pathname ? location.pathname : '/';
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -25,6 +25,19 @@ const Header = () => {
     },
     '.navbar.active': {
       bg: 'background'
+    },
+    '.link': {
+      color: 'background',
+      textDecoration: 'underline'
+    },
+    '.link:hover': {
+      color: 'background'
+    },
+    '.link.active': {
+      color: 'primary'
+    },
+    '.link.dark': {
+      color: 'black'
     }
   }}>
       <Box className={navbar && pathname === '/' ? 'navbar active' : 'navbar'}>
@@ -61,13 +74,16 @@ const Header = () => {
               },
             }}
           >
-            <Link variant="nav" href="/services">
+            <Link variant='nav' className={pathname === '/services' ? 'link active' :
+              pathname === '/' && !navbar ? 'link' : 'link dark'} href="/services">
               Tjenester
             </Link>
-            <Link variant="nav" href="/about">
+            <Link variant='nav' className={pathname === '/about' ? 'link active' : 
+              pathname === '/' && !navbar ? 'link' : 'link dark'} href="/about">
               Om oss
             </Link>
-            <Link variant="nav" href="/contact">
+            <Link variant='nav' className={pathname === '/contact' ? 'link active' :
+              pathname === '/' && !navbar ? 'link' : 'link dark'} href="/contact">
               Kontakt oss
             </Link>
           </Flex>
