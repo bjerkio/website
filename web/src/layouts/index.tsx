@@ -9,7 +9,7 @@ const Layout: React.FC = ({ children }: any) => {
     <>
       <GlobalStyles />
       <Header />
-      <Box sx={{ pt: '110px' }}>{children}</Box>
+      <Box>{children}</Box>
       <Footer />
     </>
   )
