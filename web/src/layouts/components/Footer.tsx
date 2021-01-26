@@ -1,20 +1,25 @@
 import React from 'react'
-import { Box, Flex, Link, Text } from 'theme-ui'
+import { Box, Button, Flex, Link, Text } from 'theme-ui'
 import Container from '../../components/Container'
 import Logo from './Logo'
+import SocialGithubSvg from '../../assets/Social-Github.svg'
+import SocialLinkedinSvg from '../../assets/Social-Linkedin.svg'
+import SocialFacebookSvg from '../../assets/Social-Facebook.svg'
 
 const Footer: React.FC = props => (
   <Box sx={{ p: 5, mt: 6, pt: 6, bg: 'dark', color: 'white' }} {...props}>
+    <Box sx={{px: 3}}>
+      <Logo textColor="white" width="70px"/>
+    </Box>
     <Container
       sx={{
         display: 'grid',
-        gridGap: 3, // theme.space[3]
+        gridGap: 3,
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
-        alignItems: 'center',
+        alignItems: 'start',
       }}
     >
       <Box>
-        <Logo textColor="white" width="70px" />
         <strong>
           <Text sx={{ fontSize: 4, my: 4, lineHeight: '22px' }}>
             Vi vil gjerne jobbe
@@ -22,7 +27,7 @@ const Footer: React.FC = props => (
             med deg!
           </Text>
         </strong>
-        <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
+        <Text sx={{ fontSize: 2}}>© 2019 Bjerk. Alle rettigheter.</Text>
       </Box>
       <Box sx={{lineHeight: '20px'}}>
         <Link href="#">+47 22 12 05 12</Link>
@@ -47,6 +52,23 @@ const Footer: React.FC = props => (
           <br />
           Personvern
         </Text>
+        <Flex sx={{justifyContent: 'flex-end', mt: 5}}>
+          <Box sx={{
+            width: '21px', 
+            ml: 2, 
+            cursor: 'pointer'
+          }}><SocialGithubSvg /></Box>
+          <Box sx={{
+            width: '21px', 
+            ml: 2, 
+            cursor: 'pointer'
+          }}><SocialLinkedinSvg /></Box>
+          <Box sx={{
+            width: '21px', 
+            ml: 2, 
+            cursor: 'pointer'
+          }}><SocialFacebookSvg /></Box>
+        </Flex>
       </Box>
     </Container>
   </Box>
