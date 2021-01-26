@@ -87,6 +87,11 @@ const theme = {
       textAlign: 'left',
       borderBottomStyle: 'solid',
     },
+    a: {
+      color: 'background',
+      textDecoration: 'underline',
+      fontSize: 3
+    }
   },
 }
 
