@@ -13,7 +13,7 @@ export default {
       title: 'Top content',
       description: 'Content of the intro box',
       name: 'introContent',
-      type: 'richText'
+      type: 'intro'
     },
     {
       title: 'Call to Action boxes',

@@ -5,10 +5,13 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Object types
-import CTABox from './objects/CTABox'
+import CTABox from './objects/homepage/CTABox'
+import intro from './objects/homepage/intro'
+
 import richText from './objects/richText'
 import pageContent from './objects/pageContent'
 import contentEditor from './objects/contentEditor'
+import link from './objects/link'
 
 // Document types
 import homepage from './documents/homepage'
@@ -25,8 +28,11 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Objects */
     CTABox,
+    intro,
+    
     richText,
     pageContent,
+    link,
     // columnLayout,
     contentEditor,
     /* Documents */
