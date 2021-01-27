@@ -3,18 +3,22 @@ import React, { useState } from 'react'
 import Logo from './Logo'
 import { Box, Flex, Link } from '@theme-ui/components'
 
-const Header = () => {
-  const pathname = location.pathname ? location.pathname : '/';
+const Header = (props: any) => {
+  const {location} = props;
+  const pathname = location && location.pathname ? location.pathname : '/';
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if(window.scrollY >= 80) {
+    if(typeof window !== 'undefined' && window.scrollY >= 80) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
   }
-  window.addEventListener('scroll', changeBackground);
+  
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeBackground);
+  }
   
   return <Box sx={{
     '.navbar': {
