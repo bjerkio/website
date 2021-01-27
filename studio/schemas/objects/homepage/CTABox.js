@@ -5,6 +5,16 @@ export default {
   type: 'object',
   fields: [
     {
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+    },
+    {
+      name: 'hoverImage',
+      type: 'image',
+      title: 'Hover Image',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',

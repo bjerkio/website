@@ -18,9 +18,8 @@ export default {
     {
       title: 'Call to Action boxes',
       description: 'Three boxes beneath top slider',
-      name: 'ctaBoxes',
-      type: 'array',
-      of: [{ type: 'CTABox', title: 'Call to Action' }],
+      name: 'helpBox',
+      type: 'helpBox'
     },
   ],
   preview: {
