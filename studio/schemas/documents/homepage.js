@@ -6,15 +6,14 @@ export default {
   __experimental_actions: [
     'create',
     'update',
-    // 'delete',
     'publish',
   ],
   fields: [
     {
-      title: 'Hero content',
-      description: 'Content of the hero box (big green field)',
-      name: 'heroContent',
-      type: 'heroText'
+      title: 'Top content',
+      description: 'Content of the intro box',
+      name: 'introContent',
+      type: 'richText'
     },
     {
       title: 'Call to Action boxes',
@@ -31,14 +30,5 @@ export default {
         title: 'Homepage Settings',
       }
     },
-    // prepare({title = 'No title', publishedAt, slug = {}, media}) {
-    //   const dateSegment = format(publishedAt, 'YYYY/MM')
-    //   const path = `/${dateSegment}/${slug.current}/`
-    //   return {
-    //     title,
-    //     media,
-    //     subtitle: publishedAt ? path : 'Missing publishing date'
-    //   }
-    // }
   },
 }

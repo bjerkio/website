@@ -6,13 +6,15 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Object types
 import CTABox from './objects/CTABox'
-import heroText from './objects/heroText'
+import richText from './objects/richText'
 import pageContent from './objects/pageContent'
 import contentEditor from './objects/contentEditor'
 
 // Document types
 import homepage from './documents/homepage'
-import page from './documents/page'
+import servicesPage from './documents/services-page'
+import aboutCompanyPage from './documents/about-company-page'
+import contactsPage from './documents/contacts-page'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,12 +25,14 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Objects */
     CTABox,
-    heroText,
+    richText,
     pageContent,
     // columnLayout,
     contentEditor,
     /* Documents */
     homepage,
-    page
+    servicesPage,
+    aboutCompanyPage,
+    contactsPage
   ]),
 })
