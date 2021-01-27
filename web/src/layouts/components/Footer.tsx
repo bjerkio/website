@@ -27,7 +27,6 @@ const Footer: React.FC = props => (
             med deg!
           </Text>
         </strong>
-        <Text sx={{ fontSize: 2}}>© 2019 Bjerk. Alle rettigheter.</Text>
       </Box>
       <Box sx={{lineHeight: '20px'}}>
         <Link href="#">+47 22 12 05 12</Link>
@@ -52,23 +51,59 @@ const Footer: React.FC = props => (
           <br />
           Personvern
         </Text>
-        <Flex sx={{justifyContent: 'flex-end', mt: 5}}>
-          <Box sx={{
-            width: '21px', 
-            ml: 2, 
-            cursor: 'pointer'
-          }}><SocialGithubSvg /></Box>
-          <Box sx={{
-            width: '21px', 
-            ml: 2, 
-            cursor: 'pointer'
-          }}><SocialLinkedinSvg /></Box>
-          <Box sx={{
-            width: '21px', 
-            ml: 2, 
-            cursor: 'pointer'
-          }}><SocialFacebookSvg /></Box>
-        </Flex>
+      </Box>
+    </Container>
+    <Container
+      sx={{
+        display: 'grid',
+        gridGap: 3,
+        alignItems: 'start',
+        gridTemplateColumns: ['1fr 1fr'],
+        mt: '63px'
+      }}
+    >
+      <Box>
+        <Text sx={{ fontSize: 2}}>© 2019 Bjerk. Alle rettigheter.</Text>
+      </Box>
+      <Box>
+        <Flex sx={{justifyContent: 'flex-end'}}>
+            <Link 
+              href='https://github.com/bjerkio'
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: '21px', 
+                ml: 2, 
+                cursor: 'pointer'
+              }}
+            >
+              <SocialGithubSvg />
+            </Link>
+            <Link 
+              href='https://www.linkedin.com/company/bjerk/'
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: '21px', 
+                ml: 2, 
+                cursor: 'pointer'
+              }}
+            >
+              <SocialLinkedinSvg />
+            </Link>
+            <Link 
+              href='https://www.facebook.com/WeAreDigitalization'
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: '21px', 
+                ml: 2, 
+                cursor: 'pointer'
+              }}
+            >
+              <SocialFacebookSvg />
+            </Link>
+          </Flex>
       </Box>
     </Container>
   </Box>
