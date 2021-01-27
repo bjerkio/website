@@ -89,8 +89,7 @@ const theme = {
     },
     a: {
       color: 'background',
-      textDecoration: 'underline',
-      fontSize: 3
+      textDecoration: 'underline'
     }
   },
 }

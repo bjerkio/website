@@ -66,9 +66,14 @@ const Footer: React.FC = props => (
         <Text sx={{ fontSize: 2}}>© 2019 Bjerk. Alle rettigheter.</Text>
       </Box>
       <Box>
-        <Flex sx={{justifyContent: 'flex-end'}}>
+      <Flex sx={{justifyContent: 'flex-end'}}>
+        {[
+          { href: 'https://github.com/bjerkio', icon: <SocialGithubSvg /> },
+          { href: 'https://www.linkedin.com/company/bjerk/', icon: <SocialLinkedinSvg /> },
+          { href: 'https://www.facebook.com/WeAreDigitalization', icon: <SocialFacebookSvg /> },
+			  ].map(({href, icon}) => (
             <Link 
-              href='https://github.com/bjerkio'
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
               sx={{
@@ -77,32 +82,8 @@ const Footer: React.FC = props => (
                 cursor: 'pointer'
               }}
             >
-              <SocialGithubSvg />
-            </Link>
-            <Link 
-              href='https://www.linkedin.com/company/bjerk/'
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                width: '21px', 
-                ml: 2, 
-                cursor: 'pointer'
-              }}
-            >
-              <SocialLinkedinSvg />
-            </Link>
-            <Link 
-              href='https://www.facebook.com/WeAreDigitalization'
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                width: '21px', 
-                ml: 2, 
-                cursor: 'pointer'
-              }}
-            >
-              <SocialFacebookSvg />
-            </Link>
+              {icon}
+            </Link>))}
           </Flex>
       </Box>
     </Container>
