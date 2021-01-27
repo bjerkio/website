@@ -8,7 +8,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import CTABox from './objects/CTABox'
 import heroText from './objects/heroText'
 import pageContent from './objects/pageContent'
-import columnLayout from './objects/columnLayout'
 import contentEditor from './objects/contentEditor'
 
 // Document types
