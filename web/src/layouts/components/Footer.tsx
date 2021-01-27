@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Link, Text } from 'theme-ui'
+import { Box, Flex, Link, Text } from 'theme-ui'
 import Container from '../../components/Container'
 import Logo from './Logo'
 import SocialGithubSvg from '../../assets/Social-Github.svg'
