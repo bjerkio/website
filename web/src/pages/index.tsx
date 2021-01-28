@@ -8,6 +8,7 @@ import MediumArticle, {
 import CTABox from '../components/Homepage/CTABox'
 import Container from '../components/Container'
 import BlockContent from '../components/BlockContent'
+import { Box, Grid, Heading } from '@theme-ui/components'
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -54,11 +55,17 @@ return (
         <BlockContent blocks={data.sanityHomepage.introContent._rawTitle} />
       )}
     </Hero>
-    <Container
-      pt={6}
+    <Container sx={{pt: 6}}>
+    <Heading as='h1' sx={{ mb: 3, fontWeight: 'normal' }}>
+      <BlockContent blocks={data.sanityHomepage.helpBox._rawTitle} />
+    </Heading>
+    <Box sx={{width: '60%'}}>
+      <BlockContent blocks={data.sanityHomepage.helpBox._rawDescription} />
+    </Box>
+    <Grid
+      pt={5}
       sx={{
-        display: 'grid',
-        gridGap: 3, // theme.space[3]
+        gap: 3, // theme.space[3]
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
       }}
     >
@@ -68,6 +75,7 @@ return (
             {ctabox.content}
           </CTABox>
         ))}
+    </Grid>
     </Container>
   </Layout>
 )}
