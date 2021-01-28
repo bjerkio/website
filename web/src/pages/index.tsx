@@ -56,25 +56,25 @@ return (
       )}
     </Hero>
     <Container sx={{pt: 6}}>
-    <Heading as='h1' sx={{ mb: 3, fontWeight: 'normal' }}>
-      <BlockContent blocks={data.sanityHomepage.helpBox._rawTitle} />
-    </Heading>
-    <Box sx={{width: '60%'}}>
-      <BlockContent blocks={data.sanityHomepage.helpBox._rawDescription} />
-    </Box>
-    <Grid
-      pt={5}
-      sx={{
-        gap: 3, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
-      }}
-    >
-      {data.sanityHomepage && data.sanityHomepage.helpBox.ctaBoxes &&
-        data.sanityHomepage.helpBox.ctaBoxes.map(ctabox => (
-          <CTABox data={ctabox}>
-            {ctabox.content}
-          </CTABox>
-        ))}
+      <Heading as='h1' sx={{ mb: 3, fontWeight: 'normal' }}>
+        <BlockContent blocks={data.sanityHomepage.helpBox._rawTitle} />
+      </Heading>
+      <Box sx={{width: '60%'}}>
+        <BlockContent blocks={data.sanityHomepage.helpBox._rawDescription} />
+      </Box>
+      <Grid
+        pt={5}
+        sx={{
+          gap: 3, // theme.space[3]
+          gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+        }}
+      >
+        {data.sanityHomepage && data.sanityHomepage.helpBox.ctaBoxes &&
+          data.sanityHomepage.helpBox.ctaBoxes.map(ctabox => (
+            <CTABox data={ctabox}>
+              {ctabox.content}
+            </CTABox>
+          ))}
     </Grid>
     </Container>
   </Layout>
