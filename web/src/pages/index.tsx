@@ -47,7 +47,6 @@ interface IndexPageProps {
 }
 
 export default ({ data }: IndexPageProps) => {
-  debugger
 return (
   <Layout>
     <Hero>
@@ -65,11 +64,7 @@ return (
     >
       {data.sanityHomepage && data.sanityHomepage.helpBox.ctaBoxes &&
         data.sanityHomepage.helpBox.ctaBoxes.map(ctabox => (
-          <CTABox
-            title={ctabox.title}
-            linkTo={ctabox.linkTo}
-            linkText={ctabox.linkText}
-          >
+          <CTABox data={ctabox}>
             {ctabox.content}
           </CTABox>
         ))}
@@ -102,14 +97,14 @@ export const pageQuery = graphql`
         ctaBoxes {
           image {
             asset {
-              fluid(maxWidth: 700) {
+              fluid {
                 ...GatsbySanityImageFluid
               }
             }
           }
           hoverImage {
             asset {
-              fluid(maxWidth: 700) {
+              fluid {
                 ...GatsbySanityImageFluid
               }
             }
