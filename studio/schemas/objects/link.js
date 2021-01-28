@@ -7,15 +7,15 @@ export default {
           name: 'navigationLink',
           type: 'url',
           title: 'Link',
+          validation: Rule => Rule.uri({
+            scheme: ['http', 'https']
+          })
         },
         {
           name: 'linkText',
           type: 'string',
           title: 'Link Text',
         },
-    ],
-    validation: Rule => Rule.uri({
-        scheme: ['http', 'https']
-    })
+    ]
   }
   

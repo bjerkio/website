@@ -15,8 +15,8 @@ export default {
         title: 'Description',
       },
       {
-        title: 'Call to Action boxes',
-        description: 'Three boxes beneath top slider',
+        title: 'Services block',
+        description: 'Text beneath top slider',
         name: 'ctaBoxes',
         type: 'array',
         of: [{ type: 'CTABox', title: 'Call to Action' }],

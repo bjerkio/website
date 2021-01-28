@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Heading } from 'theme-ui'
-import Link from '../Link'
+import { Box, Heading, Link } from 'theme-ui'
 
 export interface CTABoxProps {
   title: string
@@ -16,12 +15,12 @@ const CTABox: React.FC<CTABoxProps> = ({
 }) => {
   return (
     <Box p={5}>
-      <Heading sx={{ mb: 3, fontWeight: 'normal' }}>
+      <Heading sx={{ mb: 3, fontWeight: 'bold' }}>
         {title}
       </Heading>
       <Box>{children}</Box>
       {linkTo && (
-        <Link to={linkTo} mt={3}>
+        <Link href={linkTo} mt={3}>
           {linkText}
         </Link>
       )}

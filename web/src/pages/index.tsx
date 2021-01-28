@@ -19,29 +19,40 @@ interface IndexPageProps {
       }
     }
     sanityHomepage: {
-      ctaBoxes: {
-        linkTo: string
-        title: string
-        linkText: string
-        content: string
-      }[]
-      _rawHeroContent: any
-    }
-    allMediumPost: {
-      edges: [
-        {
-          node: MediumArticleNode
+      introContent: {
+        _rawTitle: any;
+        navigationButtonLink: {
+          navigationLink: string;
+          linkText: string;
         }
-      ]
+        backgroundVideo: {
+          navigationLink: string;
+          linkText: string;
+        }
+      }
+      helpBox: {
+        _rawTitle: any;
+        _rawDescription: any;
+        ctaBoxes: [{
+          image: any;
+          hoverImage: any;
+          title: string;
+          content: string;
+          linkTo: string;
+          linkText: string;
+        }]
+      }
     }
   }
 }
 
-export default ({ data }: IndexPageProps) => (
+export default ({ data }: IndexPageProps) => {
+  debugger
+return (
   <Layout>
     <Hero>
-      {data.sanityHomepage && data.sanityHomepage._rawHeroContent && (
-        <BlockContent blocks={data.sanityHomepage._rawHeroContent} />
+      {data.sanityHomepage && data.sanityHomepage.introContent._rawTitle && (
+        <BlockContent blocks={data.sanityHomepage.introContent._rawTitle} />
       )}
     </Hero>
     <Container
@@ -52,8 +63,8 @@ export default ({ data }: IndexPageProps) => (
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
       }}
     >
-      {data.sanityHomepage && data.sanityHomepage.ctaBoxes &&
-        data.sanityHomepage.ctaBoxes.map(ctabox => (
+      {data.sanityHomepage && data.sanityHomepage.helpBox.ctaBoxes &&
+        data.sanityHomepage.helpBox.ctaBoxes.map(ctabox => (
           <CTABox
             title={ctabox.title}
             linkTo={ctabox.linkTo}
@@ -63,21 +74,8 @@ export default ({ data }: IndexPageProps) => (
           </CTABox>
         ))}
     </Container>
-    <Container
-      pt={6}
-      sx={{
-        display: 'grid',
-        gridGap: 5, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr 1fr'],
-      }}
-    >
-      {data.allMediumPost &&
-        data.allMediumPost.edges.map(({ node }) => (
-          <MediumArticle key={node.id} {...node} />
-        ))}
-    </Container>
   </Layout>
-)
+)}
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -87,32 +85,39 @@ export const pageQuery = graphql`
       }
     }
     sanityHomepage(_id: { eq: "homepage" }) {
-      ctaBoxes {
-        linkTo
-        title
-        linkText
-        content
+      introContent {
+        _rawTitle
+        navigationButtonLink {
+          navigationLink
+          linkText
+        }
+        backgroundVideo {
+          navigationLink
+          linkText
+        }
       }
-      _rawHeroContent
-    }
-    allMediumPost(limit: 2) {
-      edges {
-        node {
-          id
-          latestPublishedAt
-          uniqueSlug
-          title
-          content {
-            subtitle
-          }
-          virtuals {
-            previewImage {
-              imageId
+      helpBox {
+        _rawTitle
+        _rawDescription
+        ctaBoxes {
+          image {
+            asset {
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
-          author {
-            name
+          hoverImage {
+            asset {
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
+            }
           }
+          title
+          content
+          linkTo
+          linkText
         }
       }
     }
