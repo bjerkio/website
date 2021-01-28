@@ -1,5 +1,5 @@
 import React from 'react'
-import GatsbyLink, { GatsbyLinkProps } from 'gatsby-link'
+import GatsbyLink from 'gatsby-link'
 import styled from '@emotion/styled'
 import { space, SpaceProps } from 'styled-system'
 

@@ -1,14 +1,15 @@
+import { Box, BoxProps } from '@theme-ui/components'
 import React from 'react'
-import { Box, BoxProps } from 'rebass/styled-components'
 
-const Container: React.FC<BoxProps> = props => (
+const Container: React.FC<BoxProps> = (props) => (
   <Box
     {...props}
     sx={{
       maxWidth: '1440px',
       mx: 'auto',
-      px: 3,
-      ...props.sx
+      px: '188px',
+      pt: '110px',
+      ...props.sx,
     }}
   />
 )
