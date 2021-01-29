@@ -1,43 +1,90 @@
 import React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box, Flex, Link, Text } from 'theme-ui'
 import Container from '../../components/Container'
 import Logo from './Logo'
-import Link from '../../components/Link'
-import ALink from '../../components/ALink'
+import SocialGithubSvg from '../../assets/Social-Github.svg'
+import SocialLinkedinSvg from '../../assets/Social-Linkedin.svg'
+import SocialFacebookSvg from '../../assets/Social-Facebook.svg'
 
 const Footer: React.FC = props => (
   <Box sx={{ p: 5, mt: 6, pt: 6, bg: 'dark', color: 'white' }} {...props}>
+    <Box sx={{px: 3}}>
+      <Logo textColor="white" width="70px"/>
+    </Box>
     <Container
       sx={{
         display: 'grid',
-        gridGap: 3, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr 2fr 1fr'],
-        alignItems: 'center',
+        gridGap: 3,
+        gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
+        alignItems: 'start',
       }}
     >
       <Box>
-        <Logo textColor="white" width="70px" />
-        <Text sx={{ fontSize: 4, my: 4 }}>
-          Vi vil gjerne jobbe
+        <strong>
+          <Text sx={{ fontSize: 4, my: 4, lineHeight: '22px' }}>
+            Vi vil gjerne jobbe
+            <br />
+            med deg!
+          </Text>
+        </strong>
+      </Box>
+      <Box sx={{lineHeight: '20px'}}>
+        <Link href="#">+47 22 12 05 12</Link>
+        <br />
+        <Link href="#">kontoret@bjerk.io</Link>
+      </Box>
+      <Box>
+        <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
+          Dronningens gate 8B
           <br />
-          med deg!
+          0151 Oslo
         </Text>
-        <Link to="#">Ta kontakt</Link>
       </Box>
-      <Box sx={{ fontSize: 4 }}>
-        <strong>+47 22 12 05 12</strong>
-        <br />
-        kontoret@bjerk.io
+      <Box sx={{ fontSize: 3, textAlign: 'end' }}>
+        <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
+          Vi er alltid på utkikk etter 
+          <br />
+          nye talenter – si hei!
+        </Text>
+        <Text sx={{ fontSize: 2, color: 'primary', mt: 3, lineHeight: '22px' }}>
+          Se ledige stillinger
+          <br />
+          Personvern
+        </Text>
       </Box>
-      <Box sx={{ fontSize: 3 }}>
-        Dronningens gate 8B, 0151 Oslo
-        <br />
-        <Box sx={{ fontSize: 2, pt: 4 }}>
-          Sjekk oss ut på{' '}
-          <ALink target="_blank" href="http://github.com/bjerkio">
-            Github
-          </ALink>
-        </Box>
+    </Container>
+    <Container
+      sx={{
+        display: 'grid',
+        gridGap: 3,
+        alignItems: 'start',
+        gridTemplateColumns: ['1fr 1fr'],
+        mt: '63px'
+      }}
+    >
+      <Box>
+        <Text sx={{ fontSize: 2}}>© 2019 Bjerk. Alle rettigheter.</Text>
+      </Box>
+      <Box>
+      <Flex sx={{justifyContent: 'flex-end'}}>
+        {[
+          { href: 'https://github.com/bjerkio', icon: <SocialGithubSvg /> },
+          { href: 'https://www.linkedin.com/company/bjerk/', icon: <SocialLinkedinSvg /> },
+          { href: 'https://www.facebook.com/WeAreDigitalization', icon: <SocialFacebookSvg /> },
+			  ].map(({href, icon}) => (
+            <Link 
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: '21px', 
+                ml: 2, 
+                cursor: 'pointer'
+              }}
+            >
+              {icon}
+            </Link>))}
+          </Flex>
       </Box>
     </Container>
   </Box>
