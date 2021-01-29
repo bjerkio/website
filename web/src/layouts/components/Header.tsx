@@ -23,7 +23,7 @@ const Header = () => {
     '.navbar': {
       width: '100%',
       position: 'fixed',
-      zIndex: 2,
+      zIndex: 3,
       bg: 'transparent'
     },
     '.navbar.active': {

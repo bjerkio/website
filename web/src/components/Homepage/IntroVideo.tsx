@@ -8,24 +8,43 @@ interface IntroVideo {
 
 const IntroVideo: React.FC<{data: IntroVideo}> = ({ children, data }) => (
   <Fragment>
-    <Container sx={{
+    <Box sx={{
       position: 'absolute',
-      width: '100%',
-      height: '800px'
+      top: 0,
+      bottom: 0,
+      right: 0,
+      left: 0,
+      zIndex: -99,
+      '&::after': {
+        display: 'block',
+        content: '',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '800px',
+        zIndex: 1
+      }
     }}>
-      <iframe 
-        width="100%" 
-        height="100%" 
-        src={data.videoUrl + `?autoplay=1&loop=1&rel=0&controls=0&playlist=${/[^/]*$/.exec(data.videoUrl)}`} 
-        title={data.videoTitle}
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowFullScreen
-      />
-    </Container>
+      <Container sx={{
+        position: 'absolute',
+        width: '100%',
+        height: '800px'
+      }}>
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src={data.videoUrl + `?autoplay=1&modestbranding=1&loop=1&rel=0&controls=0&playlist=${/[^/]*$/.exec(data.videoUrl)}&mute=1`} 
+          title={data.videoTitle}
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+          css={{pointerEvents: 'none'}}
+        />
+      </Container>
+    </Box>
     <Container
       sx={{
-        bg: 'primary',
         minHeight: '3rem',
         fontSize: 5,
         justifyContent: 'flex-start',
@@ -40,7 +59,7 @@ const IntroVideo: React.FC<{data: IntroVideo}> = ({ children, data }) => (
         px: '188px',
       }}
     >
-      <Box sx={{ my: '32%', width: '60%', zIndex: 3 }}>{children}</Box>
+      <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>
     </Container>
   </Fragment>
 )
