@@ -10,7 +10,6 @@ interface LinkProps extends SpaceProps {
 const GatsbyLinkStyled = styled(GatsbyLink)`
   text-decoration: none;
   color: inherit;
-  font-weight: bold;
   display: inline-block;
   ${space}
   &&:after {

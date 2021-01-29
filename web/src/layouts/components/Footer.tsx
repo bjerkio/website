@@ -8,7 +8,7 @@ import SocialFacebookSvg from '../../assets/Social-Facebook.svg'
 
 const Footer: React.FC = props => (
   <Box sx={{ p: 5, mt: 6, pt: 6, bg: 'dark', color: 'white' }} {...props}>
-    <Box sx={{px: 3}}>
+    <Box sx={{px: 6}}>
       <Logo textColor="white" width="70px"/>
     </Box>
     <Container
@@ -17,6 +17,7 @@ const Footer: React.FC = props => (
         gridGap: 3,
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
         alignItems: 'start',
+        pt: 0
       }}
     >
       <Box>
@@ -59,7 +60,7 @@ const Footer: React.FC = props => (
         gridGap: 3,
         alignItems: 'start',
         gridTemplateColumns: ['1fr 1fr'],
-        mt: '63px'
+        pt: '63px'
       }}
     >
       <Box>

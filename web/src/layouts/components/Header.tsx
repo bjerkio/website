@@ -9,7 +9,7 @@ const Header = (props: any) => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if(typeof window !== 'undefined' && window.scrollY >= 80) {
+    if(typeof window !== 'undefined' && window.scrollY >= 70) {
       setNavbar(true);
     } else {
       setNavbar(false);
