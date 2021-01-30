@@ -1,0 +1,28 @@
+on:
+  pull_request:
+    
+jobs:
+  pull_request:
+    runs-on: ubuntu-20.04
+    name: Build, Test and Lint
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get yarn cache location
+        id: yarn-cache-location
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Cache yarn packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-location.outputs.dir }}
+          key: yarn-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            yarn-cache-
+
+      - name: Install yarn packages
+        run: yarn install
+      - run: yarn lint
+      - run: yarn build
+      - run: yarn test

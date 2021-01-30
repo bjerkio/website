@@ -1,9 +1,9 @@
-import React from 'react'
-import Layout from '../layouts'
-import Container from '../components/Container'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import React from 'react';
+import { Container } from '../components/block-content/container';
+import { Layout } from '../layouts';
 
-const contact = () => {
+const Contact: React.FC = () => {
   return (
     <Layout>
       <Container>
@@ -12,7 +12,7 @@ const contact = () => {
         <Link to="/">Go back to the homepage</Link>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default contact
+export default Contact;

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
-import Layout from '../layouts'
-import Container from '../components/Container'
+import Link from 'gatsby-link';
+import React from 'react';
+import { Container } from '../components/block-content/container';
+import { Layout } from '../layouts';
 
 const ServicesPage = () => (
   <Layout>
@@ -11,6 +11,6 @@ const ServicesPage = () => (
       <Link to="/">Go back to the homepage</Link>
     </Container>
   </Layout>
-)
+);
 
-export default ServicesPage
+export default ServicesPage;
