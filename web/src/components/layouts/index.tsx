@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'theme-ui';
-import { GlobalStyles } from '../theme/global-styles';
+import { GlobalStyles } from '../../theme/global-styles';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
 

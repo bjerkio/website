@@ -1,10 +1,10 @@
 /** @jsx */
 import React from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
-import SocialFacebookSvg from '../../assets/Social-Facebook.svg';
-import SocialGithubSvg from '../../assets/Social-Github.svg';
-import SocialLinkedinSvg from '../../assets/Social-Linkedin.svg';
-import { Container } from '../../components/container';
+import SocialFacebookSvg from '../../../assets/Social-Facebook.svg';
+import SocialGithubSvg from '../../../assets/Social-Github.svg';
+import SocialLinkedinSvg from '../../../assets/Social-Linkedin.svg';
+import { Container } from '../../container';
 import { Logo } from './logo';
 
 export const Footer: React.FC = (props) => (

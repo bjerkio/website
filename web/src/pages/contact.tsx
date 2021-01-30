@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Container } from '../components/block-content/container';
-import { Layout } from '../layouts';
+import { Container } from '../components/container';
+import { Layout } from '../components/layouts';
 
 const Contact: React.FC = () => {
   return (

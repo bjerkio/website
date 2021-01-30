@@ -29,7 +29,7 @@ async function createPages(graphql, actions, reporter) {
 
     createPage({
       path,
-      component: require.resolve('./src/components/page.tsx'),
+      component: require.resolve('./src/components/layouts/page.tsx'),
       context: edge.node,
     });
   });

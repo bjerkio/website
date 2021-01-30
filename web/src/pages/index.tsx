@@ -2,12 +2,12 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { BlockContent } from '../components/block-content/block-content';
-import { Container } from '../components/block-content/container';
+import { Container } from '../components/container';
 import { CallToActionBox } from '../components/home-page/call-to-action-box';
 import { Hero } from '../components/home-page/hero';
 import { MediumArticle } from '../components/home-page/medium-article';
+import { Layout } from '../components/layouts';
 import { IndexQueryQuery } from '../generated/graphql-types';
-import { Layout } from '../layouts';
 
 export const pageQuery = graphql`
   query IndexQuery {

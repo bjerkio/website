@@ -2,8 +2,8 @@
 import React from 'react';
 import { Heading } from 'theme-ui';
 import { BlockContent } from '../block-content/block-content';
-import { Container } from '../block-content/container';
-import { Layout } from '../layouts';
+import { Container } from '../container';
+import { Layout } from './';
 
 interface PageProps {
   pageContext: {
