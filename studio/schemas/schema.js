@@ -15,7 +15,7 @@ import contentEditor from './objects/contentEditor'
 import link from './objects/link'
 
 // Document types
-import homepage from './documents/homePage'
+import homepage from './documents/homepage'
 import servicesPage from './documents/servicesPage'
 import aboutCompanyPage from './documents/aboutCompanyPage'
 import contactsPage from './documents/contactsPage'
