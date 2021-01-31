@@ -30,14 +30,15 @@ const ServiceListItem: React.FC<{data: ServiceListItemProps}> = ({data}) => (
           </Link>
         </Button>
       </Box>
-      <Box>
+      <Box sx={{gridRow: data.textAlign === 'left' ? 1 : 2}}>
+        {/* TODO: improve showing images by design */}
         <Img 
           fluid={data.textAlign === 'left' ? data.personPhoto : data.serviceImage} 
           durationFadeIn={0} 
           fadeIn={false}
           draggable={false}
         />
-        <Img 
+        <Img
           fluid={data.textAlign === 'left' ? data.serviceImage : data.personPhoto} 
           durationFadeIn={0} 
           fadeIn={false}
