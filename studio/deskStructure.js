@@ -24,30 +24,30 @@ export default () =>
         .icon(MdHome),
       S.listItem()
         .title('Services Page')
-        .schemaType('servicesPage')
+        .schemaType('service')
         .child(
           S.editor()
-          .id('servicesPage')
-          .schemaType('servicesPage')
-          .documentId('servicesPage'))
+          .id('service')
+          .schemaType('service')
+          .documentId('service'))
         .icon(MdAssignment),
       S.listItem()
         .title('About Page')
-        .schemaType('aboutCompanyPage')
+        .schemaType('about')
         .child(
           S.editor()
-          .id('aboutCompanyPage')
-          .schemaType('aboutCompanyPage')
-          .documentId('aboutCompanyPage'))
+          .id('about')
+          .schemaType('about')
+          .documentId('about'))
         .icon(MdErrorOutline),
       S.listItem()
         .title('Contacts Page')
-        .schemaType('contactsPage')
+        .schemaType('contact')
         .child(
           S.editor()
-          .id('contactsPage')
-          .schemaType('contactsPage')
-          .documentId('contactsPage'))
+          .id('contact')
+          .schemaType('contact')
+          .documentId('contact'))
         .icon(MdContactMail),
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
