@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Box, Container, SystemStyleObject } from 'theme-ui'
 import Video from '../Video'
 
