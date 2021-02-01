@@ -1,14 +1,22 @@
-import Link from 'gatsby-link';
-import React from 'react';
+import * as React from 'react';
+import { Heading } from 'theme-ui';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
+import { ServiceList } from '../components/services-page/service-list';
 
 const ServicesPage = () => (
   <Layout>
     <Container>
-      <h1>Services</h1>
-      <p>Welcome to services</p>
-      <Link to="/">Go back to the homepage</Link>
+      <Heading
+        as="h1"
+        sx={{
+          fontWeight: 'normal',
+          width: '60%',
+        }}
+      >
+        Bjerk hjelper bedriften din med å ta det neste steget inn i fremtiden.
+      </Heading>
+      <ServiceList data={[]} />
     </Container>
   </Layout>
 );
