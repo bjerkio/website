@@ -6562,7 +6562,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.6.1
     "@typescript-eslint/parser": ^4.6.1
     eslint: ^7.4.0
-    eslint-config-prettier: ^6.9.0
+    eslint-config-prettier: ^6.9.0 
     eslint-plugin-eslint-comments: ^3.1.2
     eslint-plugin-graphql: ^4.0.0
     eslint-plugin-import: ^2.14.0
