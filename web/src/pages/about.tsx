@@ -1,9 +1,9 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
-import Layout from '../layouts'
-import Container from '../components/Container'
+import Link from 'gatsby-link';
+import React from 'react';
+import { Container } from '../components/container';
+import { Layout } from '../components/layouts';
 
-const AboutPage = () => (
+const AboutPage: React.FC = () => (
   <Layout>
     <Container>
       <h1>About</h1>
@@ -11,6 +11,6 @@ const AboutPage = () => (
       <Link to="/">Go back to the homepage</Link>
     </Container>
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;

@@ -1,11 +1,5 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 async function createPages(graphql, actions, reporter) {
-  const { createPage } = actions
+  const { createPage } = actions;
   const result = await graphql(`
     {
       allSanityPage(filter: { slug: { current: { ne: null } } }) {
@@ -21,27 +15,26 @@ async function createPages(graphql, actions, reporter) {
         }
       }
     }
-  `)
+  `);
 
-  if (result.errors) throw result.errors
+  if (result.errors) throw result.errors;
 
-  const edges = (result.data.allSanityPage || {}).edges || []
+  const edges = (result.data.allSanityPage || {}).edges || [];
 
-  edges
-    .forEach(edge => {
-      const slug = edge.node.slug.current
-      const path = `/${slug}/`
+  edges.forEach((edge) => {
+    const slug = edge.node.slug.current;
+    const path = `/${slug}/`;
 
-      reporter.info(`Creating page: ${path}`)
+    reporter.info(`Creating page: ${path}`);
 
-      createPage({
-        path,
-        component: require.resolve('./src/components/Page.tsx'),
-        context: edge.node,
-      })
-    })
+    createPage({
+      path,
+      component: require.resolve('./src/components/layouts/page.tsx'),
+      context: edge.node,
+    });
+  });
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  await createPages(graphql, actions, reporter)
-}
+  await createPages(graphql, actions, reporter);
+};

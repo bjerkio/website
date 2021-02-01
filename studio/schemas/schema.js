@@ -1,34 +1,20 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
-
-// Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
-
-// Object types
-import CTABox from './objects/CTABox'
-import heroText from './objects/heroText'
-import pageContent from './objects/pageContent'
-import contentEditor from './objects/contentEditor'
-
-// Document types
-import homepage from './documents/homepage'
-import page from './documents/page'
-
-// Then we give our schema to the builder and provide the result to Sanity
+import schemaTypes from 'all:part:@sanity/base/schema-type';
+import createSchema from 'part:@sanity/base/schema-creator';
+import homepage from './documents/home-page';
+import page from './documents/page';
+import callToActionsBox from './objects/call-to-action-box';
+import contentEditor from './objects/content-editor';
+import heroText from './objects/hero-text';
+import pageContent from './objects/page-content';
 export default createSchema({
-  // We name our schema
   name: 'default',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    /* Objects */
-    CTABox,
+    callToActionsBox,
     heroText,
     pageContent,
-    // columnLayout,
     contentEditor,
-    /* Documents */
     homepage,
-    page
+    page,
   ]),
-})
+});

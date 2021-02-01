@@ -1,4 +1,3 @@
-
 export default {
   name: 'page',
   type: 'document',
@@ -22,4 +21,4 @@ export default {
       type: 'pageContent',
     },
   ],
-}
+};

@@ -12,7 +12,7 @@ const theme = {
     dry: '#EEEEEE',
     lighter: '#53D9AD',
     background: '#fff',
-    text: '#232931'
+    text: '#232931',
   },
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -89,9 +89,11 @@ const theme = {
     },
     a: {
       color: 'background',
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    },
   },
-}
+};
 
-export default theme
+export type Theme = typeof theme;
+
+export default theme;

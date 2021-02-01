@@ -1,21 +1,27 @@
-const clientConfig = require('./client-config')
+const clientConfig = require('./client-config');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
-})
+});
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production';
 const token =
-  process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN
+  process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN;
 
 module.exports = {
   siteMetadata: {
-    title: `Bjerk.io`,
+    title: 'Bjerk.io',
   },
   plugins: [
     {
-      resolve: `gatsby-source-medium`,
+      resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        username: `bjerk`,
+        fileName: './src/generated/graphql-types.ts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-medium',
+      options: {
+        username: 'bjerk',
       },
     },
     {
@@ -25,9 +31,9 @@ module.exports = {
       },
     },
     // 'gatsby-theme-style-guide',
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -55,4 +61,4 @@ module.exports = {
       },
     },
   ],
-}
+};
