@@ -5,13 +5,16 @@
     "plugin:eslint-comments/recommended",
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended"
   ],
   "ignorePatterns": [
     "web/generated",
     "web/.cache",
     "web/public",
-    "studio/dist"
+    "studio/dist",
+    "web/node_modules",
+    "web/src/generated"
   ],
   "overrides": [
     {
@@ -77,7 +80,7 @@
     "@typescript-eslint/prefer-ts-expect-error": "error",
     "eqeqeq": ["error", "smart"],
     "eslint-comments/no-unused-disable": "error",
-    "import/no-default-export": "error",
+    "import/no-default-export": "warn",
     "import/no-duplicates": "error",
     "import/no-extraneous-dependencies": "warn",
     "import/no-unassigned-import": "error",
@@ -131,6 +134,7 @@
       {
         "case": "kebabCase"
       }
-    ]
+    ],
+    "react/prop-types": "off"
   }
 }

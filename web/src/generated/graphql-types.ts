@@ -732,10 +732,16 @@ export type MediumCollectionAmpLogoFilterInput = {
 };
 
 export type MediumCollectionColorPalette = {
-  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrum>;
-  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrum>;
+  defaultBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteDefaultBackgroundSpectrum
+  >;
+  tintBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteTintBackgroundSpectrum
+  >;
   highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrum>;
-  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrum>;
+  darkBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteDarkBackgroundSpectrum
+  >;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrum = {
@@ -756,11 +762,15 @@ export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput>;
+  elemMatch?: Maybe<
+    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput
+  >;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput>;
+  colorPoints?: Maybe<
+    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput
+  >;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -784,19 +794,31 @@ export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilt
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput>;
+  elemMatch?: Maybe<
+    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput
+  >;
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput>;
+  colorPoints?: Maybe<
+    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput
+  >;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteFilterInput = {
-  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput>;
-  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput>;
-  highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrumFilterInput>;
-  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput>;
+  defaultBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput
+  >;
+  tintBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput
+  >;
+  highlightSpectrum?: Maybe<
+    MediumCollectionColorPaletteHighlightSpectrumFilterInput
+  >;
+  darkBackgroundSpectrum?: Maybe<
+    MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput
+  >;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrum = {
@@ -817,11 +839,15 @@ export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput 
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput>;
+  elemMatch?: Maybe<
+    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput
+  >;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumFilterInput = {
-  colorPoints?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput>;
+  colorPoints?: Maybe<
+    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput
+  >;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -843,11 +869,15 @@ export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput>;
+  elemMatch?: Maybe<
+    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput
+  >;
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput>;
+  colorPoints?: Maybe<
+    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput
+  >;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1328,14 +1358,18 @@ export type MediumCollectionPolarisCoverImageFilterInput = {
 
 export type MediumCollectionSections = {
   type?: Maybe<Scalars['Int']>;
-  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadata>;
+  collectionHeaderMetadata?: Maybe<
+    MediumCollectionSectionsCollectionHeaderMetadata
+  >;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadata>;
 };
 
 export type MediumCollectionSectionsCollectionHeaderMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage>;
+  backgroundImage?: Maybe<
+    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage
+  >;
   logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImage>;
   alignment?: Maybe<Scalars['Int']>;
   layout?: Maybe<Scalars['Int']>;
@@ -1360,8 +1394,12 @@ export type MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilte
 export type MediumCollectionSectionsCollectionHeaderMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
-  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput>;
-  logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput>;
+  backgroundImage?: Maybe<
+    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput
+  >;
+  logoImage?: Maybe<
+    MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
+  >;
   alignment?: Maybe<IntQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
 };
@@ -1382,7 +1420,9 @@ export type MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
 
 export type MediumCollectionSectionsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
-  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataFilterInput>;
+  collectionHeaderMetadata?: Maybe<
+    MediumCollectionSectionsCollectionHeaderMetadataFilterInput
+  >;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadataFilterInput>;
 };
 
@@ -2203,7 +2243,9 @@ export type MediumPostPreviewContent2BodyModel = {
 };
 
 export type MediumPostPreviewContent2BodyModelFilterInput = {
-  paragraphs?: Maybe<MediumPostPreviewContent2BodyModelParagraphsFilterListInput>;
+  paragraphs?: Maybe<
+    MediumPostPreviewContent2BodyModelParagraphsFilterListInput
+  >;
   sections?: Maybe<MediumPostPreviewContent2BodyModelSectionsFilterListInput>;
 };
 
@@ -2223,9 +2265,13 @@ export type MediumPostPreviewContent2BodyModelParagraphsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
-  markups?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput>;
+  markups?: Maybe<
+    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput
+  >;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput>;
+  metadata?: Maybe<
+    MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput
+  >;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -2256,7 +2302,9 @@ export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput>;
+  elemMatch?: Maybe<
+    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput
+  >;
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMetadata = {
@@ -2301,7 +2349,9 @@ export type MediumPostPreviewContentBodyModel = {
 };
 
 export type MediumPostPreviewContentBodyModelFilterInput = {
-  paragraphs?: Maybe<MediumPostPreviewContentBodyModelParagraphsFilterListInput>;
+  paragraphs?: Maybe<
+    MediumPostPreviewContentBodyModelParagraphsFilterListInput
+  >;
   sections?: Maybe<MediumPostPreviewContentBodyModelSectionsFilterListInput>;
 };
 
@@ -2323,8 +2373,12 @@ export type MediumPostPreviewContentBodyModelParagraphsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput>;
-  markups?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput>;
+  metadata?: Maybe<
+    MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput
+  >;
+  markups?: Maybe<
+    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput
+  >;
   alignment?: Maybe<IntQueryOperatorInput>;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
@@ -2346,7 +2400,9 @@ export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput>;
+  elemMatch?: Maybe<
+    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput
+  >;
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMetadata = {
@@ -3242,6 +3298,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -4974,6 +5032,8 @@ export type SanitySpanFilterListInput = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -5169,6 +5229,8 @@ export type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata___title'
   | 'siteMetadata___description'
+  | 'port'
+  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -5261,6 +5323,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -5534,7 +5598,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___projectId'
   | 'pluginCreator___pluginOptions___dataset'
   | 'pluginCreator___pluginOptions___watchMode'
-  | 'pluginCreator___pluginOptions___overlayDrafts'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
@@ -5736,7 +5799,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___projectId'
   | 'pluginOptions___dataset'
   | 'pluginOptions___watchMode'
-  | 'pluginOptions___overlayDrafts'
   | 'pluginOptions___path'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
@@ -5835,7 +5897,9 @@ export type SitePluginPackageJsonFilterInput = {
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
-  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>;
+  peerDependencies?: Maybe<
+    SitePluginPackageJsonPeerDependenciesFilterListInput
+  >;
   keywords?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -5864,7 +5928,6 @@ export type SitePluginPluginOptions = {
   projectId?: Maybe<Scalars['String']>;
   dataset?: Maybe<Scalars['String']>;
   watchMode?: Maybe<Scalars['Boolean']>;
-  overlayDrafts?: Maybe<Scalars['Boolean']>;
   path?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
@@ -5890,7 +5953,6 @@ export type SitePluginPluginOptionsFilterInput = {
   projectId?: Maybe<StringQueryOperatorInput>;
   dataset?: Maybe<StringQueryOperatorInput>;
   watchMode?: Maybe<BooleanQueryOperatorInput>;
-  overlayDrafts?: Maybe<BooleanQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
@@ -6236,8 +6298,12 @@ export type SitePluginPluginOptionsPresetDefaultFilterInput = {
   space?: Maybe<IntQueryOperatorInput>;
   fonts?: Maybe<SitePluginPluginOptionsPresetDefaultFontsFilterInput>;
   fontSizes?: Maybe<IntQueryOperatorInput>;
-  fontWeights?: Maybe<SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput>;
-  lineHeights?: Maybe<SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput>;
+  fontWeights?: Maybe<
+    SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput
+  >;
+  lineHeights?: Maybe<
+    SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput
+  >;
   colors?: Maybe<SitePluginPluginOptionsPresetDefaultColorsFilterInput>;
   styles?: Maybe<SitePluginPluginOptionsPresetDefaultStylesFilterInput>;
 };

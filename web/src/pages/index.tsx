@@ -53,7 +53,7 @@ interface IndexPageProps {
   data: IndexQueryQuery;
 }
 
-export default ({ data }: IndexPageProps) => (
+const Homepage = ({ data }: IndexPageProps) => (
   <Layout>
     <Hero>
       {data?.sanityHomepage?._rawHeroContent && (
@@ -68,8 +68,9 @@ export default ({ data }: IndexPageProps) => (
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
       }}
     >
-      {data?.sanityHomepage?.ctaBoxes.map((ctaBoxes) => (
+      {data?.sanityHomepage?.ctaBoxes.map((ctaBoxes, index) => (
         <CallToActionBox
+          key={index}
           title={ctaBoxes.title}
           linkTo={ctaBoxes.linkTo}
           linkText={ctaBoxes.linkText}
@@ -92,3 +93,5 @@ export default ({ data }: IndexPageProps) => (
     </Container>
   </Layout>
 );
+
+export default Homepage;
