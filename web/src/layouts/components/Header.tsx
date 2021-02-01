@@ -2,10 +2,35 @@
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { Box, Flex, Link } from '@theme-ui/components'
+import { SystemStyleObject } from 'theme-ui';
 
-const Header = (props: any) => {
-  const {location} = props;
-  const pathname = location && location.pathname ? location.pathname : '/';
+const styles: SystemStyleObject = {
+  '.navbar': {
+    width: '100%',
+    position: 'fixed',
+    zIndex: 3,
+    bg: 'transparent'
+  },
+  '.navbar.active': {
+    bg: 'background'
+  },
+  '.link': {
+    color: 'background',
+    textDecoration: 'underline'
+  },
+  '.link:hover': {
+    color: 'background'
+  },
+  '.link.active': {
+    color: 'primary'
+  },
+  '.link.dark': {
+    color: 'black'
+  }
+};
+
+const Header = () => {
+  const pathname = '/' + /[^/]*$/.exec(typeof window !== 'undefined' ? window.location.href : '')[0];
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -20,31 +45,8 @@ const Header = (props: any) => {
     window.addEventListener('scroll', changeBackground);
   }
   
-  return <Box sx={{
-    '.navbar': {
-      width: '100%',
-      position: 'fixed',
-      zIndex: 2,
-      bg: 'transparent'
-    },
-    '.navbar.active': {
-      bg: 'background'
-    },
-    '.link': {
-      color: 'background',
-      textDecoration: 'underline'
-    },
-    '.link:hover': {
-      color: 'background'
-    },
-    '.link.active': {
-      color: 'primary'
-    },
-    '.link.dark': {
-      color: 'black'
-    }
-  }}>
-      <Box className={navbar && pathname === '/' ? 'navbar active' : 'navbar'}>
+  return <Box sx={styles}>
+      <Box className={navbar ? 'navbar active' : 'navbar'}>
         <Flex
           sx={{
             alignItems: 'center',
@@ -78,15 +80,23 @@ const Header = (props: any) => {
               },
             }}
           >
-            <Link variant='nav' className={pathname === '/services' ? 'link active' :
+            <Link
+              variant='nav'
+              className={pathname === '/services' ? 'link active' :
               pathname === '/' && !navbar ? 'link' : 'link dark'} href="/services">
               Tjenester
             </Link>
-            <Link variant='nav' className={pathname === '/about' ? 'link active' : 
+            <Link 
+              sx={{ml: 5}}
+              variant='nav'
+              className={pathname === '/about' ? 'link active' : 
               pathname === '/' && !navbar ? 'link' : 'link dark'} href="/about">
               Om oss
             </Link>
-            <Link variant='nav' className={pathname === '/contact' ? 'link active' :
+            <Link
+              sx={{ml: 5}}
+              variant='nav'
+              className={pathname === '/contact' ? 'link active' :
               pathname === '/' && !navbar ? 'link' : 'link dark'} href="/contact">
               Kontakt oss
             </Link>
