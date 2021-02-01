@@ -6820,34 +6820,60 @@ export type ThemeUiConfigSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type IndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>;
 
+export type Unnamed_1_Query = {
+  themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>>;
+};
 
-export type IndexQueryQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, sanityHomepage?: Maybe<(
-    Pick<SanityHomepage, '_rawHeroContent'>
-    & { ctaBoxes?: Maybe<Array<Maybe<Pick<SanityCtaBox, 'linkTo' | 'title' | 'linkText' | 'content'>>>> }
-  )>, allMediumPost: { edges: Array<{ node: (
-        Pick<MediumPost, 'id' | 'latestPublishedAt' | 'uniqueSlug' | 'title'>
-        & { content?: Maybe<Pick<MediumPostContent, 'subtitle'>>, virtuals?: Maybe<{ previewImage?: Maybe<Pick<MediumPostVirtualsPreviewImage, 'imageId'>> }>, author?: Maybe<Pick<MediumUser, 'name'>> }
-      ) }> } };
+export type GatsbySanityImageFixedFragment = Pick<
+  SanityImageFixed,
+  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
+>;
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+export type GatsbySanityImageFixed_NoBase64Fragment = Pick<
+  SanityImageFixed,
+  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
+>;
 
+export type GatsbySanityImageFixed_WithWebpFragment = Pick<
+  SanityImageFixed,
+  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
+>;
 
-export type Unnamed_1_Query = { themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>> };
+export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<
+  SanityImageFixed,
+  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
+>;
 
-export type GatsbySanityImageFixedFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+export type GatsbySanityImageFluidFragment = Pick<
+  SanityImageFluid,
+  | 'base64'
+  | 'aspectRatio'
+  | 'src'
+  | 'srcSet'
+  | 'srcWebp'
+  | 'srcSetWebp'
+  | 'sizes'
+>;
 
-export type GatsbySanityImageFixed_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+export type GatsbySanityImageFluid_NoBase64Fragment = Pick<
+  SanityImageFluid,
+  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
+>;
 
-export type GatsbySanityImageFixed_WithWebpFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+export type GatsbySanityImageFluid_WithWebpFragment = Pick<
+  SanityImageFluid,
+  | 'base64'
+  | 'aspectRatio'
+  | 'src'
+  | 'srcSet'
+  | 'srcWebp'
+  | 'srcSetWebp'
+  | 'sizes'
+>;
 
-export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
-
-export type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-export type GatsbySanityImageFluid_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-export type GatsbySanityImageFluid_WithWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<
+  SanityImageFluid,
+  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
+>;
