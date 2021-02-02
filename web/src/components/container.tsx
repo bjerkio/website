@@ -9,6 +9,9 @@ export const Container: React.FC<BoxProps> = (props) => (
       mx: 'auto',
       px: 6,
       pt: '110px',
+      ['@media screen and (max-width: 960px)']: {
+        px: '64px',
+      },
       ...props.sx,
     }}
   />
