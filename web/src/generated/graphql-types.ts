@@ -5595,11 +5595,11 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___allExtensions'
   | 'pluginCreator___pluginOptions___custom___families'
   | 'pluginCreator___pluginOptions___custom___urls'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___pluginOptions___projectId'
   | 'pluginCreator___pluginOptions___dataset'
   | 'pluginCreator___pluginOptions___watchMode'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
   | 'pluginCreator___ssrAPIs'
@@ -5796,11 +5796,11 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___allExtensions'
   | 'pluginOptions___custom___families'
   | 'pluginOptions___custom___urls'
+  | 'pluginOptions___path'
+  | 'pluginOptions___pathCheck'
   | 'pluginOptions___projectId'
   | 'pluginOptions___dataset'
   | 'pluginOptions___watchMode'
-  | 'pluginOptions___path'
-  | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
   | 'ssrAPIs'
@@ -5925,11 +5925,11 @@ export type SitePluginPluginOptions = {
   jsxPragma?: Maybe<Scalars['String']>;
   allExtensions?: Maybe<Scalars['Boolean']>;
   custom?: Maybe<SitePluginPluginOptionsCustom>;
+  path?: Maybe<Scalars['String']>;
+  pathCheck?: Maybe<Scalars['Boolean']>;
   projectId?: Maybe<Scalars['String']>;
   dataset?: Maybe<Scalars['String']>;
   watchMode?: Maybe<Scalars['Boolean']>;
-  path?: Maybe<Scalars['String']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePluginPluginOptionsCustom = {
@@ -5950,11 +5950,11 @@ export type SitePluginPluginOptionsFilterInput = {
   jsxPragma?: Maybe<StringQueryOperatorInput>;
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
   custom?: Maybe<SitePluginPluginOptionsCustomFilterInput>;
+  path?: Maybe<StringQueryOperatorInput>;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
   projectId?: Maybe<StringQueryOperatorInput>;
   dataset?: Maybe<StringQueryOperatorInput>;
   watchMode?: Maybe<BooleanQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPreset = {

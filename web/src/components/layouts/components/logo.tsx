@@ -18,7 +18,7 @@ export const Logo: React.FC<LogoProps> = ({
     {...props}
   >
     <path
-      sx={{ fill: (theme) => theme.colors.primary || dotColor }}
+      sx={{ fill: dotColor ? dotColor : (theme) => theme.colors.primary }}
       d="M93.1 24.8a4 4 0 0 1 2.9-1.1 4 4 0 0 1 2.9 1.1 4 4 0 0 1 1.1 2.9 4 4 0 0 1-1.1 2.9 4 4 0 0 1-2.9 1.1 4 4 0 0 1-2.9-1.1 4 4 0 0 1-1.1-2.9c0-1.2.3-2.2 1.1-2.9z"
     />
     <g sx={{ fill: 'currentColor' }}>

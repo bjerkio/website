@@ -6641,6 +6641,7 @@ __metadata:
     react-burger-menu: ^2.9.0
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
+    react-icons: ^4.1.0
     react-is: ^17.0.1
     theme-ui: ^0.4.0-alpha.3
   languageName: unknown
@@ -20876,6 +20877,15 @@ fsevents@^1.2.7:
   peerDependencies:
     react: "*"
   checksum: b629e024d4002b0d951e03256b30d20f9546add9bf30ad0721fba33a4cf8811b730e44f63341d7148eaad9785dfdb02cac2efa3b263dd703e95b8e535af140e9
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "react-icons@npm:4.1.0"
+  peerDependencies:
+    react: "*"
+  checksum: 08d768e9c20a061a11de6c0050f0b199451b83592ef2fdb1add9f1f14ff6f356e1950621c3fd257f18383bb917e04577d03740b9be0754046bc435e7897141f9
   languageName: node
   linkType: hard
 
