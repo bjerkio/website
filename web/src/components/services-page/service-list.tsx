@@ -1,6 +1,5 @@
 import React from 'react';
-import List from '../List';
-import ListItem from '../ListItem';
+import { List, ListItem } from '../list';
 import { ServiceListItem, ServiceListItemProps } from './service-list-item';
 
 export const ServiceList: React.FC<{ data: ServiceListItemProps[] }> = ({

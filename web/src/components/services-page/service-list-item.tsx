@@ -17,6 +17,7 @@ export interface ServiceListItemProps {
   dividedPhoto?: FluidObject;
 }
 
+// TODO: fix image showing when Sanity will be done
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
   data,
 }) => (
