@@ -2,7 +2,7 @@
 import { Box, Flex, Link } from '@theme-ui/components';
 import React, { useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
-import { Logo } from './logo';
+import { Logo } from '../logo';
 
 const styles: SystemStyleObject = {
   '.navbar': {
