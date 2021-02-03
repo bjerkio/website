@@ -30,7 +30,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
           <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
         </Button>
       </Box>
-      <Box sx={{ gridRow: data.textAlign === 'left' ? 1 : 2 }}>
+      <Box sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}>
         <Flex>
           <Img
             fluid={
