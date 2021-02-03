@@ -6568,6 +6568,7 @@ __metadata:
     eslint-plugin-import: ^2.14.0
     eslint-plugin-jest: ^24.0.0
     eslint-plugin-prettier: ^3.0.1
+    eslint-plugin-react: 7.22.0
     eslint-plugin-unicorn: ^23.0.0
     graphql: ^15.4.0
     husky: ^4.3.0
@@ -10544,7 +10545,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.20.6":
+"eslint-plugin-react@npm:7.22.0, eslint-plugin-react@npm:^7.20.6":
   version: 7.22.0
   resolution: "eslint-plugin-react@npm:7.22.0"
   dependencies:

@@ -1,11 +1,38 @@
 /** @jsx */
 import { Box, Flex, Link } from '@theme-ui/components';
-import { PageProps } from 'gatsby';
 import React, { useState } from 'react';
+import { SystemStyleObject } from 'theme-ui';
 import { Logo } from './logo';
 
-export const Header: React.FC<PageProps> = ({ location }) => {
-  const pathname = location?.pathname ? location.pathname : '/';
+const styles: SystemStyleObject = {
+  '.navbar': {
+    width: '100%',
+    position: 'fixed',
+    zIndex: 3,
+    bg: 'transparent',
+  },
+  '.navbar.active': {
+    bg: 'background',
+  },
+  '.link': {
+    color: 'background',
+    textDecoration: 'underline',
+  },
+  '.link:hover': {
+    color: 'background',
+  },
+  '.link.active': {
+    color: 'primary',
+  },
+  '.link.dark': {
+    color: 'black',
+  },
+};
+
+const Header: React.FC = () => {
+  const pathname = `/${
+    /[^/]*$/.exec(typeof window !== 'undefined' ? window.location.href : '')[0]
+  }`;
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -21,33 +48,8 @@ export const Header: React.FC<PageProps> = ({ location }) => {
   }
 
   return (
-    <Box
-      sx={{
-        '.navbar': {
-          width: '100%',
-          position: 'fixed',
-          zIndex: 2,
-          bg: 'transparent',
-        },
-        '.navbar.active': {
-          bg: 'background',
-        },
-        '.link': {
-          color: 'background',
-          textDecoration: 'underline',
-        },
-        '.link:hover': {
-          color: 'background',
-        },
-        '.link.active': {
-          color: 'primary',
-        },
-        '.link.dark': {
-          color: 'black',
-        },
-      }}
-    >
-      <Box className={navbar && pathname === '/' ? 'navbar active' : 'navbar'}>
+    <Box sx={styles}>
+      <Box className={navbar ? 'navbar active' : 'navbar'}>
         <Flex
           sx={{
             alignItems: 'center',
@@ -60,9 +62,9 @@ export const Header: React.FC<PageProps> = ({ location }) => {
         >
           <Link href="/">
             {!navbar && pathname === '/' ? (
-              <Logo sx={{ color: 'white' }} width="70px" />
+              <Logo sx={{ width: '70px', color: 'white' }} />
             ) : (
-              <Logo dotColor="#0FCFA2" width="70px" />
+              <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '70px' }} />
             )}
           </Link>
           <Flex
@@ -97,6 +99,7 @@ export const Header: React.FC<PageProps> = ({ location }) => {
               Tjenester
             </Link>
             <Link
+              sx={{ ml: 5 }}
               variant="nav"
               className={
                 pathname === '/about'
@@ -110,6 +113,7 @@ export const Header: React.FC<PageProps> = ({ location }) => {
               Om oss
             </Link>
             <Link
+              sx={{ ml: 5 }}
               variant="nav"
               className={
                 pathname === '/contact'
@@ -128,3 +132,5 @@ export const Header: React.FC<PageProps> = ({ location }) => {
     </Box>
   );
 };
+
+export default Header;

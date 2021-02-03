@@ -43,7 +43,8 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "lint": "eslint . --cache",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "format": "prettier --write ./src"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.19.4",
