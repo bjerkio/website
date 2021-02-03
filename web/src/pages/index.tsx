@@ -1,6 +1,7 @@
 /** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
-import React, { Fragment } from 'react';
+import React from 'react';
+import { SystemStyleObject } from 'theme-ui';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
@@ -33,41 +34,54 @@ const actionBoxMockup: CallToActionBoxProps[] = [
   },
 ];
 
+const style: SystemStyleObject = {
+  '.intro': {
+    fontSize: 'clamp(16px, 8vw, 38px)',
+    button: {
+      fontSize: 'clamp(8px, 6vw, 16px)',
+    },
+  },
+};
+
 export default () => (
   <Layout>
-    <IntroVideo
-      data={{
-        videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
-        videoTitle: null,
-      }}
-    >
-      <Fragment>
-        <Label sx={{ fontWeight: 'normal', fontSize: '38px' }}>
-          Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
-        </Label>
-        <Button href="/contact">Start ditt prosjekt</Button>
-      </Fragment>
-    </IntroVideo>
-    <Container sx={{ pt: 6 }}>
-      <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
-        Hvordan kan vi hjelpe deg?
-      </Heading>
-      <Box sx={{ width: '60%' }}>
-        Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
-        opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
-        medium er teknologi, og lidenskapen er å skape.
-      </Box>
-      <Grid
-        pt={5}
-        sx={{
-          gap: 3,
-          gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+    <Box sx={style}>
+      <IntroVideo
+        data={{
+          videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
+          videoTitle: null,
         }}
       >
-        {actionBoxMockup.map((ctabox) => (
-          <CallToActionBox data={ctabox}>{ctabox.description}</CallToActionBox>
-        ))}
-      </Grid>
-    </Container>
+        <Box className="intro">
+          <Label sx={{ fontWeight: 'normal' }}>
+            Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
+          </Label>
+          <Button href="/contact">Start ditt prosjekt</Button>
+        </Box>
+      </IntroVideo>
+      <Container sx={{ pt: 6 }}>
+        <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+          Hvordan kan vi hjelpe deg?
+        </Heading>
+        <Box sx={{ width: '60%' }}>
+          Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
+          opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
+          medium er teknologi, og lidenskapen er å skape.
+        </Box>
+        <Grid
+          pt={5}
+          sx={{
+            gap: 3,
+            gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+          }}
+        >
+          {actionBoxMockup.map((ctabox) => (
+            <CallToActionBox data={ctabox}>
+              {ctabox.description}
+            </CallToActionBox>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   </Layout>
 );

@@ -23,7 +23,6 @@ const styles: SystemStyleObject = {
   },
   button: {
     color: 'black',
-    fontSize: 2,
     fontWeight: 'normal',
     cursor: 'pointer',
   },
