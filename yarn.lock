@@ -10543,7 +10543,7 @@ __metadata:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
   checksum: 99dc3276cd8f20428e0ec4d9b15433ce22b87ef9f1c82279369a98b7c663f9092ff63f63683a948f207ab75cceedd808cac2ca870011b733a89b0fc753eb0f91
   languageName: node
-  linkType: hard
+  linkType: hard 
 
 "eslint-plugin-react@npm:7.22.0, eslint-plugin-react@npm:^7.20.6":
   version: 7.22.0
