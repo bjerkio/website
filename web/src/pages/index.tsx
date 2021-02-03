@@ -43,7 +43,7 @@ const style: SystemStyleObject = {
   },
 };
 
-export default () => (
+const Homepage: React.FC = () => (
   <Layout>
     <Box sx={style}>
       <IntroVideo
@@ -75,8 +75,8 @@ export default () => (
             gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
           }}
         >
-          {actionBoxMockup.map((ctabox) => (
-            <CallToActionBox data={ctabox}>
+          {actionBoxMockup.map((ctabox, index) => (
+            <CallToActionBox data={ctabox} key={index}>
               {ctabox.description}
             </CallToActionBox>
           ))}
@@ -85,3 +85,5 @@ export default () => (
     </Box>
   </Layout>
 );
+
+export default Homepage;
