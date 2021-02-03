@@ -1,6 +1,6 @@
 import React from 'react';
+import ReactPlayer from 'react-player/lazy';
 import { Box, Container, SystemStyleObject } from 'theme-ui';
-import YouTubeVideo from './youtube-video';
 
 interface IntroVideoProps {
   videoUrl?: string;
@@ -22,7 +22,7 @@ const style: SystemStyleObject = {
       top: 0,
       left: 0,
       width: '100%',
-      height: '800px',
+      height: '100%',
       zIndex: 1,
     },
   },
@@ -38,7 +38,12 @@ const style: SystemStyleObject = {
     textAlign: 'start',
     verticalAlign: 'center',
     color: 'background',
-    px: '188px',
+    px: 6,
+  },
+  ['@media screen and (max-width: 960px)']: {
+    '.data-container': {
+      px: '64px',
+    },
   },
 };
 
@@ -48,16 +53,18 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
 }) => (
   <Container sx={style}>
     <Box className="video-container">
-      <YouTubeVideo
-        data={{
-          width: '100%',
-          height: '800px',
-          videoUrl: `${
-            data.videoUrl
-          }?autoplay=1&modestbranding=1&loop=1&rel=0&controls=0&playlist=${/[^/]*$/.exec(
-            data.videoUrl,
-          )}&mute=1`,
-          videoTitle: data.videoTitle,
+      <ReactPlayer
+        url={data.videoUrl}
+        playing={true}
+        loop={true}
+        controls={false}
+        volume={0}
+        width="100%"
+        height="100%"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
         }}
       />
     </Box>
