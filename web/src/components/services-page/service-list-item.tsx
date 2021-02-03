@@ -3,6 +3,9 @@ import React from 'react';
 import { Box, Button, Container, Flex, Grid, Heading, Label } from 'theme-ui';
 import { Link } from '../custom-link';
 
+// TODO: Replace with automatically generated types when available from Sanity.
+// TODO: fix image showing when Sanity will be done
+
 export interface ServiceListItemProps {
   name: string;
   title: string;
@@ -17,11 +20,10 @@ export interface ServiceListItemProps {
   dividedPhoto?: FluidObject;
 }
 
-// TODO: fix image showing when Sanity will be done
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
   data,
 }) => (
-  <Container id={data.name} sx={{ mt: '10%' }}>
+  <Container id={data.name} sx={{ mt: 4 }}>
     <Grid gap={2} columns={[1, 1, 2]} px={5}>
       <Box>
         <Heading pb={3}>{data.title}</Heading>
