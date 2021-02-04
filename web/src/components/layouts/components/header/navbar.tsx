@@ -123,7 +123,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               className={
                 pathname === '/contact'
                   ? 'link active'
-                  : pathname === '' && !navbar
+                  : pathname === '/' && !navbar
                   ? 'link'
                   : 'link dark'
               }

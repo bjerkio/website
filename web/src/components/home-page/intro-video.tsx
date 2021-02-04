@@ -17,13 +17,15 @@ const style: SystemStyleObject = {
     zIndex: -99,
     '&::after': {
       display: 'block',
-      content: '',
+      content: '"" !important',
       position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
       height: '100%',
       zIndex: 1,
+      backgroundColor: 'dark',
+      opacity: 0.5,
     },
   },
   '.data-container': {
@@ -32,18 +34,13 @@ const style: SystemStyleObject = {
     justifyContent: 'flex-start',
     alignContent: 'center',
     alignItems: 'center',
-    height: '800px',
+    height: '50rem',
     fontWeight: 'bold',
     display: 'flex',
     textAlign: 'start',
     verticalAlign: 'center',
     color: 'background',
-    px: 6,
-  },
-  ['@media screen and (max-width: 960px)']: {
-    '.data-container': {
-      px: '64px',
-    },
+    px: [5, 5, 6],
   },
 };
 

@@ -1,7 +1,6 @@
 /** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import React from 'react';
-import { SystemStyleObject } from 'theme-ui';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
@@ -34,25 +33,16 @@ const actionBoxMockup: CallToActionBoxProps[] = [
   },
 ];
 
-const style: SystemStyleObject = {
-  '.intro': {
-    fontSize: 'clamp(16px, 8vw, 38px)',
-    button: {
-      fontSize: 'clamp(8px, 6vw, 16px)',
-    },
-  },
-};
-
 const Homepage: React.FC = () => (
   <Layout>
-    <Box sx={style}>
+    <Box>
       <IntroVideo
         data={{
           videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
           videoTitle: null,
         }}
       >
-        <Box className="intro">
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
           <Label sx={{ fontWeight: 'normal' }}>
             Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
           </Label>
