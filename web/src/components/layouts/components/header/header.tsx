@@ -7,15 +7,10 @@ import NavbarMobile from './navbar-mobile';
 
 const styles: SystemStyleObject = {
   '.navbarMobile': {
-    display: 'none',
+    display: ['block', 'block', 'none'],
   },
-  ['@media screen and (max-width: 960px)']: {
-    '.navbarMobile': {
-      display: 'block',
-    },
-    '.navbar': {
-      display: 'none',
-    },
+  '.navbar': {
+    display: ['none', 'none', 'block'],
   },
 };
 

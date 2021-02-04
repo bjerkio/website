@@ -11,7 +11,7 @@ const styles: SystemStyleObject = {
   bg: 'transparent',
   '.logo': {
     position: 'absolute',
-    margin: '36px',
+    margin: 4,
   },
   '.menuButton': {
     display: 'flex',
@@ -20,12 +20,11 @@ const styles: SystemStyleObject = {
     borderRadius: '50%',
     position: 'fixed',
     zIndex: 3,
-    width: '50px',
-    height: '50px',
+    width: '4em',
+    height: '4em',
     color: 'black',
-    margin: '36px',
+    margin: 4,
     right: 0,
-    padding: '10px',
   },
   '.menuButton.open': {
     background: 'white',
@@ -49,9 +48,12 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
       <Box className="logo">
         <Link href="/">
           {pathname === '' ? (
-            <Logo sx={{ width: '70px', color: 'white' }} />
+            <Logo sx={{ width: ['4em', '5em', '6em'], color: 'white' }} />
           ) : (
-            <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '70px' }} />
+            <Logo
+              dotColor="#0FCFA2"
+              sx={{ color: 'black', width: ['4em', '5em', '6em'] }}
+            />
           )}
         </Link>
       </Box>
@@ -60,9 +62,9 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
         onClick={() => setMenu(!menu)}
       >
         {menu ? (
-          <IoCloseSharp fontSize={'30px'} />
+          <IoCloseSharp fontSize={'3em'} />
         ) : (
-          <GiHamburgerMenu fontSize={'30px'} />
+          <GiHamburgerMenu fontSize={'3em'} />
         )}
       </Button>
       {menu && <MobileMenu />}

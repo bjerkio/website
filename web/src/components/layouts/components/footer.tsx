@@ -8,9 +8,12 @@ import { Container } from '../../container';
 import { Logo } from './logo';
 
 export const Footer: React.FC = (props) => (
-  <Box sx={{ p: 5, mt: 6, pt: 6, bg: 'dark', color: 'white' }} {...props}>
-    <Box sx={{ px: 6 }}>
-      <Logo sx={{ color: 'white', width: '70px' }} />
+  <Box
+    sx={{ p: [4, 4, 5], mt: 6, pt: [4, 5, 6], bg: 'dark', color: 'white' }}
+    {...props}
+  >
+    <Box sx={{ px: [5, 5, 6] }}>
+      <Logo sx={{ color: 'white', width: ['4em', '5em', '6em'] }} />
     </Box>
     <Container
       sx={{
@@ -61,7 +64,7 @@ export const Footer: React.FC = (props) => (
         gridGap: 3,
         alignItems: 'start',
         gridTemplateColumns: ['1fr 1fr'],
-        pt: '63px',
+        pt: 6,
       }}
     >
       <Box>
@@ -86,7 +89,7 @@ export const Footer: React.FC = (props) => (
               target="_blank"
               rel="noopener noreferrer"
               sx={{
-                width: '21px',
+                width: 5,
                 ml: 2,
                 cursor: 'pointer',
               }}

@@ -11,13 +11,13 @@ const styles: SystemStyleObject = {
   justifyContent: 'flex-start',
   alignItems: 'flex-end',
   backgroundColor: 'primary',
-  pb: '20px',
+  pb: 4,
   a: {
     color: 'black',
     ml: 5,
-    mb: '20px',
+    mb: 4,
     borderBottom: '3px solid',
-    fontSize: '27px',
+    fontSize: 4,
   },
 };
 
@@ -26,7 +26,7 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
     <Flex sx={{ flexDirection: 'column' }}>
       <Logo
         dotColor="white"
-        sx={{ color: 'black', width: '70px', mb: '30px', ml: 5 }}
+        sx={{ color: 'black', width: ['4em', '5em', '6em'], mb: 5, ml: 5 }}
       />
       <Link variant="nav" href="/services">
         Tjenester

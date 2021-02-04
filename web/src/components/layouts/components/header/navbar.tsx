@@ -15,7 +15,7 @@ const styles: SystemStyleObject = {
     maxWidth: '1440px',
     margin: '0 auto',
     py: 4,
-    px: '188px',
+    px: [5, 5, 6],
   },
   '.navbar.active': {
     bg: 'background',
@@ -81,9 +81,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
         <Flex className="container">
           <Link href="/">
             {!navbar && pathname === '' ? (
-              <Logo sx={{ width: '70px', color: 'white' }} />
+              <Logo sx={{ width: ['4em', '5em', '6em'], color: 'white' }} />
             ) : (
-              <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '70px' }} />
+              <Logo
+                dotColor="#0FCFA2"
+                sx={{ color: 'black', width: ['4em', '5em', '6em'] }}
+              />
             )}
           </Link>
           <Flex className="linksContainer">
