@@ -1,11 +1,7 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: unknown }> = {
-  [K in keyof T]: T[K];
-};
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -22,12 +18,23 @@ export type Scalars = {
   JSON: any;
 };
 
+
+
+
+
+
+
+
+
+
+
 export type BooleanQueryOperatorInput = {
   eq?: Maybe<Scalars['Boolean']>;
   ne?: Maybe<Scalars['Boolean']>;
   in?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
   nin?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
 };
+
 
 export type DateQueryOperatorInput = {
   eq?: Maybe<Scalars['Date']>;
@@ -80,12 +87,14 @@ export type Directory = Node & {
   internal: Internal;
 };
 
+
 export type DirectoryModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -94,12 +103,14 @@ export type DirectoryAccessTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -108,6 +119,7 @@ export type DirectoryBirthTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -115,12 +127,14 @@ export type DirectoryAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -138,9 +152,11 @@ export type DirectoryConnection = {
   group: Array<DirectoryGroupConnection>;
 };
 
+
 export type DirectoryConnectionDistinctArgs = {
   field: DirectoryFieldsEnum;
 };
+
 
 export type DirectoryConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -365,12 +381,14 @@ export type File = Node & {
   internal: Internal;
 };
 
+
 export type FileModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -379,12 +397,14 @@ export type FileAccessTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -393,6 +413,7 @@ export type FileBirthTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -400,12 +421,14 @@ export type FileAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -423,9 +446,11 @@ export type FileConnection = {
   group: Array<FileGroupConnection>;
 };
 
+
 export type FileConnectionDistinctArgs = {
   field: FileFieldsEnum;
 };
+
 
 export type FileConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -654,6 +679,7 @@ export type IntQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
+
 export type JsonQueryOperatorInput = {
   eq?: Maybe<Scalars['JSON']>;
   ne?: Maybe<Scalars['JSON']>;
@@ -702,6 +728,7 @@ export type MediumCollection = Node & {
   internal: Internal;
 };
 
+
 export type MediumCollectionPaidForDomainAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -732,22 +759,14 @@ export type MediumCollectionAmpLogoFilterInput = {
 };
 
 export type MediumCollectionColorPalette = {
-  defaultBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrum
-  >;
-  tintBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrum
-  >;
+  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrum>;
+  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrum>;
   highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrum>;
-  darkBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrum
-  >;
+  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrum>;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -762,24 +781,16 @@ export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<
-      Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPoints>
-    >
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -794,37 +805,23 @@ export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilt
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteFilterInput = {
-  defaultBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput
-  >;
-  tintBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput
-  >;
-  highlightSpectrum?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumFilterInput
-  >;
-  darkBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput
-  >;
+  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput>;
+  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput>;
+  highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrumFilterInput>;
+  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput>;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -839,22 +836,16 @@ export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput 
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -869,15 +860,11 @@ export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -890,9 +877,11 @@ export type MediumCollectionConnection = {
   group: Array<MediumCollectionGroupConnection>;
 };
 
+
 export type MediumCollectionConnectionDistinctArgs = {
   field: MediumCollectionFieldsEnum;
 };
+
 
 export type MediumCollectionConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -1302,6 +1291,7 @@ export type MediumCollectionMetadata = {
   activeAt?: Maybe<Scalars['Date']>;
 };
 
+
 export type MediumCollectionMetadataActiveAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -1358,18 +1348,14 @@ export type MediumCollectionPolarisCoverImageFilterInput = {
 
 export type MediumCollectionSections = {
   type?: Maybe<Scalars['Int']>;
-  collectionHeaderMetadata?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadata
-  >;
+  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadata>;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadata>;
 };
 
 export type MediumCollectionSectionsCollectionHeaderMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  backgroundImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage
-  >;
+  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage>;
   logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImage>;
   alignment?: Maybe<Scalars['Int']>;
   layout?: Maybe<Scalars['Int']>;
@@ -1394,12 +1380,8 @@ export type MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilte
 export type MediumCollectionSectionsCollectionHeaderMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
-  backgroundImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput
-  >;
-  logoImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
-  >;
+  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput>;
+  logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput>;
   alignment?: Maybe<IntQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
 };
@@ -1420,9 +1402,7 @@ export type MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
 
 export type MediumCollectionSectionsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
-  collectionHeaderMetadata?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataFilterInput
-  >;
+  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataFilterInput>;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadataFilterInput>;
 };
 
@@ -1602,12 +1582,14 @@ export type MediumPost = Node & {
   internal: Internal;
 };
 
+
 export type MediumPostCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type MediumPostUpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -1616,6 +1598,7 @@ export type MediumPostUpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type MediumPostFirstPublishedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -1623,12 +1606,14 @@ export type MediumPostFirstPublishedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type MediumPostLatestPublishedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type MediumPostSeriesLastAppendedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -1646,9 +1631,11 @@ export type MediumPostConnection = {
   group: Array<MediumPostGroupConnection>;
 };
 
+
 export type MediumPostConnectionDistinctArgs = {
   field: MediumPostFieldsEnum;
 };
+
 
 export type MediumPostConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2236,16 +2223,12 @@ export type MediumPostPreviewContent2 = {
 };
 
 export type MediumPostPreviewContent2BodyModel = {
-  paragraphs?: Maybe<
-    Array<Maybe<MediumPostPreviewContent2BodyModelParagraphs>>
-  >;
+  paragraphs?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelParagraphs>>>;
   sections?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelSections>>>;
 };
 
 export type MediumPostPreviewContent2BodyModelFilterInput = {
-  paragraphs?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsFilterListInput
-  >;
+  paragraphs?: Maybe<MediumPostPreviewContent2BodyModelParagraphsFilterListInput>;
   sections?: Maybe<MediumPostPreviewContent2BodyModelSectionsFilterListInput>;
 };
 
@@ -2253,9 +2236,7 @@ export type MediumPostPreviewContent2BodyModelParagraphs = {
   name?: Maybe<Scalars['String']>;
   type?: Maybe<Scalars['Int']>;
   text?: Maybe<Scalars['String']>;
-  markups?: Maybe<
-    Array<Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkups>>
-  >;
+  markups?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkups>>>;
   layout?: Maybe<Scalars['Int']>;
   metadata?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMetadata>;
   hasDropCap?: Maybe<Scalars['Boolean']>;
@@ -2265,13 +2246,9 @@ export type MediumPostPreviewContent2BodyModelParagraphsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
-  markups?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput
-  >;
+  markups?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput>;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput
-  >;
+  metadata?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput>;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -2302,9 +2279,7 @@ export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput
-  >;
+  elemMatch?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput>;
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMetadata = {
@@ -2349,9 +2324,7 @@ export type MediumPostPreviewContentBodyModel = {
 };
 
 export type MediumPostPreviewContentBodyModelFilterInput = {
-  paragraphs?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsFilterListInput
-  >;
+  paragraphs?: Maybe<MediumPostPreviewContentBodyModelParagraphsFilterListInput>;
   sections?: Maybe<MediumPostPreviewContentBodyModelSectionsFilterListInput>;
 };
 
@@ -2361,9 +2334,7 @@ export type MediumPostPreviewContentBodyModelParagraphs = {
   text?: Maybe<Scalars['String']>;
   layout?: Maybe<Scalars['Int']>;
   metadata?: Maybe<MediumPostPreviewContentBodyModelParagraphsMetadata>;
-  markups?: Maybe<
-    Array<Maybe<MediumPostPreviewContentBodyModelParagraphsMarkups>>
-  >;
+  markups?: Maybe<Array<Maybe<MediumPostPreviewContentBodyModelParagraphsMarkups>>>;
   alignment?: Maybe<Scalars['Int']>;
   hasDropCap?: Maybe<Scalars['Boolean']>;
 };
@@ -2373,12 +2344,8 @@ export type MediumPostPreviewContentBodyModelParagraphsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput
-  >;
-  markups?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput
-  >;
+  metadata?: Maybe<MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput>;
+  markups?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput>;
   alignment?: Maybe<IntQueryOperatorInput>;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
@@ -2400,9 +2367,7 @@ export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput
-  >;
+  elemMatch?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput>;
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMetadata = {
@@ -2499,6 +2464,7 @@ export type MediumPostVirtualsLinks = {
   version?: Maybe<Scalars['String']>;
   generatedAt?: Maybe<Scalars['Date']>;
 };
+
 
 export type MediumPostVirtualsLinksGeneratedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -2637,6 +2603,7 @@ export type MediumPostVirtualsTopics = {
   type?: Maybe<Scalars['String']>;
 };
 
+
 export type MediumPostVirtualsTopicsCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -2697,6 +2664,7 @@ export type MediumUser = Node & {
   internal: Internal;
 };
 
+
 export type MediumUserCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -2713,9 +2681,11 @@ export type MediumUserConnection = {
   group: Array<MediumUserGroupConnection>;
 };
 
+
 export type MediumUserConnectionDistinctArgs = {
   field: MediumUserFieldsEnum;
 };
+
 
 export type MediumUserConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -3217,6 +3187,7 @@ export type Query = {
   allSitePlugin: SitePluginConnection;
 };
 
+
 export type QueryFileArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
   absolutePath?: Maybe<StringQueryOperatorInput>;
@@ -3255,12 +3226,14 @@ export type QueryFileArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllFileArgs = {
   filter?: Maybe<FileFilterInput>;
   sort?: Maybe<FileSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryDirectoryArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -3300,12 +3273,14 @@ export type QueryDirectoryArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllDirectoryArgs = {
   filter?: Maybe<DirectoryFilterInput>;
   sort?: Maybe<DirectorySortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
@@ -3320,12 +3295,14 @@ export type QuerySiteArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSiteArgs = {
   filter?: Maybe<SiteFilterInput>;
   sort?: Maybe<SiteSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySitePageArgs = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -3344,12 +3321,14 @@ export type QuerySitePageArgs = {
   componentPath?: Maybe<StringQueryOperatorInput>;
 };
 
+
 export type QueryAllSitePageArgs = {
   filter?: Maybe<SitePageFilterInput>;
   sort?: Maybe<SitePageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumCollectionArgs = {
   name?: Maybe<StringQueryOperatorInput>;
@@ -3390,12 +3369,14 @@ export type QueryMediumCollectionArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMediumCollectionArgs = {
   filter?: Maybe<MediumCollectionFilterInput>;
   sort?: Maybe<MediumCollectionSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumUserArgs = {
   userId?: Maybe<StringQueryOperatorInput>;
@@ -3422,12 +3403,14 @@ export type QueryMediumUserArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMediumUserArgs = {
   filter?: Maybe<MediumUserFilterInput>;
   sort?: Maybe<MediumUserSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumPostArgs = {
   versionId?: Maybe<StringQueryOperatorInput>;
@@ -3520,12 +3503,14 @@ export type QueryMediumPostArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMediumPostArgs = {
   filter?: Maybe<MediumPostFilterInput>;
   sort?: Maybe<MediumPostSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryThemeUiConfigArgs = {
   preset?: Maybe<JsonQueryOperatorInput>;
@@ -3536,12 +3521,14 @@ export type QueryThemeUiConfigArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllThemeUiConfigArgs = {
   filter?: Maybe<ThemeUiConfigFilterInput>;
   sort?: Maybe<ThemeUiConfigSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityHomepageArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3560,12 +3547,14 @@ export type QuerySanityHomepageArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityHomepageArgs = {
   filter?: Maybe<SanityHomepageFilterInput>;
   sort?: Maybe<SanityHomepageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityPageArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3585,12 +3574,14 @@ export type QuerySanityPageArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityPageArgs = {
   filter?: Maybe<SanityPageFilterInput>;
   sort?: Maybe<SanityPageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityFileAssetArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3618,12 +3609,14 @@ export type QuerySanityFileAssetArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityFileAssetArgs = {
   filter?: Maybe<SanityFileAssetFilterInput>;
   sort?: Maybe<SanityFileAssetSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityImageAssetArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3655,12 +3648,14 @@ export type QuerySanityImageAssetArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityImageAssetArgs = {
   filter?: Maybe<SanityImageAssetFilterInput>;
   sort?: Maybe<SanityImageAssetSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySiteBuildMetadataArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -3670,12 +3665,14 @@ export type QuerySiteBuildMetadataArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
 };
 
+
 export type QueryAllSiteBuildMetadataArgs = {
   filter?: Maybe<SiteBuildMetadataFilterInput>;
   sort?: Maybe<SiteBuildMetadataSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySitePluginArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -3692,6 +3689,7 @@ export type QuerySitePluginArgs = {
   pluginFilepath?: Maybe<StringQueryOperatorInput>;
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
 };
+
 
 export type QueryAllSitePluginArgs = {
   filter?: Maybe<SitePluginFilterInput>;
@@ -3725,6 +3723,7 @@ export type SanityBlock = {
   _rawChildren?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityBlock_RawChildrenArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
@@ -3750,6 +3749,7 @@ export type SanityContentEditor = {
   content?: Maybe<Array<Maybe<SanityBlock>>>;
   _rawContent?: Maybe<Scalars['JSON']>;
 };
+
 
 export type SanityContentEditor_RawContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -3793,36 +3793,37 @@ export type SanityFile = {
   _rawAsset?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityFile_RawAssetArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityFileAsset = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    originalFilename?: Maybe<Scalars['String']>;
-    label?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    description?: Maybe<Scalars['String']>;
-    sha1hash?: Maybe<Scalars['String']>;
-    extension?: Maybe<Scalars['String']>;
-    mimeType?: Maybe<Scalars['String']>;
-    size?: Maybe<Scalars['Float']>;
-    assetId?: Maybe<Scalars['String']>;
-    path?: Maybe<Scalars['String']>;
-    url?: Maybe<Scalars['String']>;
-    source?: Maybe<SanityAssetSourceData>;
-    _rawSource?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityFileAsset = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  originalFilename?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  sha1hash?: Maybe<Scalars['String']>;
+  extension?: Maybe<Scalars['String']>;
+  mimeType?: Maybe<Scalars['String']>;
+  size?: Maybe<Scalars['Float']>;
+  assetId?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  source?: Maybe<SanityAssetSourceData>;
+  _rawSource?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityFileAsset_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -3831,12 +3832,14 @@ export type SanityFileAsset_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityFileAsset_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type SanityFileAsset_RawSourceArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -3851,9 +3854,11 @@ export type SanityFileAssetConnection = {
   group: Array<SanityFileAssetGroupConnection>;
 };
 
+
 export type SanityFileAssetConnectionDistinctArgs = {
   field: SanityFileAssetFieldsEnum;
 };
+
 
 export type SanityFileAssetConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4034,23 +4039,23 @@ export type SanityGeopointFilterInput = {
   alt?: Maybe<FloatQueryOperatorInput>;
 };
 
-export type SanityHomepage = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    ctaBoxes?: Maybe<Array<Maybe<SanityCtaBox>>>;
-    heroContent?: Maybe<Array<Maybe<SanityBlock>>>;
-    _rawHeroContent?: Maybe<Scalars['JSON']>;
-    _rawCtaBoxes?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityHomepage = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  ctaBoxes?: Maybe<Array<Maybe<SanityCtaBox>>>;
+  heroContent?: Maybe<Array<Maybe<SanityBlock>>>;
+  _rawHeroContent?: Maybe<Scalars['JSON']>;
+  _rawCtaBoxes?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityHomepage_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4059,6 +4064,7 @@ export type SanityHomepage_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityHomepage_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4066,9 +4072,11 @@ export type SanityHomepage_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityHomepage_RawHeroContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityHomepage_RawCtaBoxesArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4083,9 +4091,11 @@ export type SanityHomepageConnection = {
   group: Array<SanityHomepageGroupConnection>;
 };
 
+
 export type SanityHomepageConnectionDistinctArgs = {
   field: SanityHomepageFieldsEnum;
 };
+
 
 export type SanityHomepageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4255,48 +4265,51 @@ export type SanityImage = {
   _rawCrop?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImage_RawAssetArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImage_RawHotspotArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImage_RawCropArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityImageAsset = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    originalFilename?: Maybe<Scalars['String']>;
-    label?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    description?: Maybe<Scalars['String']>;
-    sha1hash?: Maybe<Scalars['String']>;
-    extension?: Maybe<Scalars['String']>;
-    mimeType?: Maybe<Scalars['String']>;
-    size?: Maybe<Scalars['Float']>;
-    assetId?: Maybe<Scalars['String']>;
-    path?: Maybe<Scalars['String']>;
-    url?: Maybe<Scalars['String']>;
-    metadata?: Maybe<SanityImageMetadata>;
-    source?: Maybe<SanityAssetSourceData>;
-    _rawMetadata?: Maybe<Scalars['JSON']>;
-    _rawSource?: Maybe<Scalars['JSON']>;
-    fixed?: Maybe<SanityImageFixed>;
-    fluid?: Maybe<SanityImageFluid>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityImageAsset = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  originalFilename?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  sha1hash?: Maybe<Scalars['String']>;
+  extension?: Maybe<Scalars['String']>;
+  mimeType?: Maybe<Scalars['String']>;
+  size?: Maybe<Scalars['Float']>;
+  assetId?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  metadata?: Maybe<SanityImageMetadata>;
+  source?: Maybe<SanityAssetSourceData>;
+  _rawMetadata?: Maybe<Scalars['JSON']>;
+  _rawSource?: Maybe<Scalars['JSON']>;
+  fixed?: Maybe<SanityImageFixed>;
+  fluid?: Maybe<SanityImageFluid>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityImageAsset_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4305,6 +4318,7 @@ export type SanityImageAsset_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityImageAsset_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4312,19 +4326,23 @@ export type SanityImageAsset_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityImageAsset_RawMetadataArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImageAsset_RawSourceArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImageAssetFixedArgs = {
   width?: Maybe<Scalars['Int']>;
   height?: Maybe<Scalars['Int']>;
   toFormat?: Maybe<SanityImageFormat>;
 };
+
 
 export type SanityImageAssetFluidArgs = {
   maxWidth?: Maybe<Scalars['Int']>;
@@ -4342,9 +4360,11 @@ export type SanityImageAssetConnection = {
   group: Array<SanityImageAssetGroupConnection>;
 };
 
+
 export type SanityImageAssetConnectionDistinctArgs = {
   field: SanityImageAssetFieldsEnum;
 };
+
 
 export type SanityImageAssetConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4662,7 +4682,11 @@ export type SanityImageFluidFilterInput = {
   srcSetWebp?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SanityImageFormat = 'NO_CHANGE' | 'JPG' | 'PNG' | 'WEBP';
+export type SanityImageFormat =
+  | 'NO_CHANGE'
+  | 'JPG'
+  | 'PNG'
+  | 'WEBP';
 
 export type SanityImageHotspot = {
   _key?: Maybe<Scalars['String']>;
@@ -4687,13 +4711,16 @@ export type SanityImageMetadata = {
   _rawPalette?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImageMetadata_RawLocationArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImageMetadata_RawDimensionsArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImageMetadata_RawPaletteArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4732,29 +4759,36 @@ export type SanityImagePalette = {
   _rawMuted?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImagePalette_RawDarkMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawLightVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawDarkVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawDominantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawLightMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4797,24 +4831,24 @@ export type SanityImagePaletteSwatchFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SanityPage = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    slug?: Maybe<SanitySlug>;
-    content?: Maybe<Array<Maybe<SanityBlock>>>;
-    _rawSlug?: Maybe<Scalars['JSON']>;
-    _rawContent?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityPage = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<SanitySlug>;
+  content?: Maybe<Array<Maybe<SanityBlock>>>;
+  _rawSlug?: Maybe<Scalars['JSON']>;
+  _rawContent?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityPage_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4823,6 +4857,7 @@ export type SanityPage_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityPage_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4830,9 +4865,11 @@ export type SanityPage_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityPage_RawSlugArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityPage_RawContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4847,9 +4884,11 @@ export type SanityPageConnection = {
   group: Array<SanityPageGroupConnection>;
 };
 
+
 export type SanityPageConnectionDistinctArgs = {
   field: SanityPageFieldsEnum;
 };
+
 
 export type SanityPageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5054,6 +5093,7 @@ export type Site = Node & {
   internal: Internal;
 };
 
+
 export type SiteBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -5068,6 +5108,7 @@ export type SiteBuildMetadata = Node & {
   internal: Internal;
   buildTime?: Maybe<Scalars['Date']>;
 };
+
 
 export type SiteBuildMetadataBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -5085,9 +5126,11 @@ export type SiteBuildMetadataConnection = {
   group: Array<SiteBuildMetadataGroupConnection>;
 };
 
+
 export type SiteBuildMetadataConnectionDistinctArgs = {
   field: SiteBuildMetadataFieldsEnum;
 };
+
 
 export type SiteBuildMetadataConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5221,9 +5264,11 @@ export type SiteConnection = {
   group: Array<SiteGroupConnection>;
 };
 
+
 export type SiteConnectionDistinctArgs = {
   field: SiteFieldsEnum;
 };
+
 
 export type SiteConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5380,9 +5425,11 @@ export type SitePageConnection = {
   group: Array<SitePageGroupConnection>;
 };
 
+
 export type SitePageConnectionDistinctArgs = {
   field: SitePageFieldsEnum;
 };
+
 
 export type SitePageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5691,9 +5738,11 @@ export type SitePluginConnection = {
   group: Array<SitePluginGroupConnection>;
 };
 
+
 export type SitePluginConnectionDistinctArgs = {
   field: SitePluginFieldsEnum;
 };
+
 
 export type SitePluginConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5909,9 +5958,7 @@ export type SitePluginPackageJsonFilterInput = {
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
-  peerDependencies?: Maybe<
-    SitePluginPackageJsonPeerDependenciesFilterListInput
-  >;
+  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>;
   keywords?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -6310,12 +6357,8 @@ export type SitePluginPluginOptionsPresetDefaultFilterInput = {
   space?: Maybe<IntQueryOperatorInput>;
   fonts?: Maybe<SitePluginPluginOptionsPresetDefaultFontsFilterInput>;
   fontSizes?: Maybe<IntQueryOperatorInput>;
-  fontWeights?: Maybe<
-    SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput
-  >;
-  lineHeights?: Maybe<
-    SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput
-  >;
+  fontWeights?: Maybe<SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput>;
+  lineHeights?: Maybe<SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput>;
   colors?: Maybe<SitePluginPluginOptionsPresetDefaultColorsFilterInput>;
   styles?: Maybe<SitePluginPluginOptionsPresetDefaultStylesFilterInput>;
 };
@@ -6615,7 +6658,9 @@ export type SiteSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type SortOrderEnum = 'ASC' | 'DESC';
+export type SortOrderEnum =
+  | 'ASC'
+  | 'DESC';
 
 export type StringQueryOperatorInput = {
   eq?: Maybe<Scalars['String']>;
@@ -6644,9 +6689,11 @@ export type ThemeUiConfigConnection = {
   group: Array<ThemeUiConfigGroupConnection>;
 };
 
+
 export type ThemeUiConfigConnectionDistinctArgs = {
   field: ThemeUiConfigFieldsEnum;
 };
+
 
 export type ThemeUiConfigConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -6773,60 +6820,23 @@ export type ThemeUiConfigSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
-export type Unnamed_1_Query = {
-  themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>>;
-};
 
-export type GatsbySanityImageFixedFragment = Pick<
-  SanityImageFixed,
-  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type Unnamed_1_Query = { themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>> };
 
-export type GatsbySanityImageFixed_NoBase64Fragment = Pick<
-  SanityImageFixed,
-  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type GatsbySanityImageFixedFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-export type GatsbySanityImageFixed_WithWebpFragment = Pick<
-  SanityImageFixed,
-  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type GatsbySanityImageFixed_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<
-  SanityImageFixed,
-  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type GatsbySanityImageFixed_WithWebpFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-export type GatsbySanityImageFluidFragment = Pick<
-  SanityImageFluid,
-  | 'base64'
-  | 'aspectRatio'
-  | 'src'
-  | 'srcSet'
-  | 'srcWebp'
-  | 'srcSetWebp'
-  | 'sizes'
->;
+export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-export type GatsbySanityImageFluid_NoBase64Fragment = Pick<
-  SanityImageFluid,
-  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
->;
+export type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type GatsbySanityImageFluid_WithWebpFragment = Pick<
-  SanityImageFluid,
-  | 'base64'
-  | 'aspectRatio'
-  | 'src'
-  | 'srcSet'
-  | 'srcWebp'
-  | 'srcSetWebp'
-  | 'sizes'
->;
+export type GatsbySanityImageFluid_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<
-  SanityImageFluid,
-  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
->;
+export type GatsbySanityImageFluid_WithWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;

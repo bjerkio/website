@@ -45,7 +45,7 @@ export const Footer: React.FC = (props) => (
           0151 Oslo
         </Text>
       </Box>
-      <Box sx={{ fontSize: 3, textAlign: 'end' }}>
+      <Box sx={{ fontSize: 3, textAlign: ['start', 'start', 'end'] }}>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
           Vi er alltid på utkikk etter
           <br />
@@ -63,15 +63,15 @@ export const Footer: React.FC = (props) => (
         display: 'grid',
         gridGap: 3,
         alignItems: 'start',
-        gridTemplateColumns: ['1fr 1fr'],
-        pt: 6,
+        gridTemplateColumns: ['1fr', '1fr 1fr'],
+        pt: '63px',
       }}
     >
       <Box>
         <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
       </Box>
       <Box>
-        <Flex sx={{ justifyContent: 'flex-end' }}>
+        <Flex sx={{ justifyContent: ['flex-start', 'flex-start', 'flex-end'] }}>
           {[
             { href: 'https://github.com/bjerkio', icon: <SocialGithubSvg /> },
             {
@@ -90,7 +90,7 @@ export const Footer: React.FC = (props) => (
               rel="noopener noreferrer"
               sx={{
                 width: 5,
-                ml: 2,
+                ml: [2, 3, 4],
                 cursor: 'pointer',
               }}
             >

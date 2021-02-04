@@ -39,6 +39,7 @@ const styles: SystemStyleObject = {
     color: 'black',
   },
   '.animation-arrow': {
+    minWidth: '35px',
     width: '3em',
     ml: 2,
     '&::after': {

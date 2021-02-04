@@ -33,6 +33,11 @@ const theme = {
       fontWeight: 'heading',
     },
   },
+  buttons: {
+    primary: {
+      fontFamily: 'body',
+    },
+  },
   styles: {
     root: {
       fontFamily: 'body',

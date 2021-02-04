@@ -23,6 +23,7 @@ const style: SystemStyleObject = {
       left: 0,
       width: '100%',
       height: '100%',
+      maxHeight: '800px',
       zIndex: 1,
       backgroundColor: 'dark',
       opacity: 0.5,
@@ -62,6 +63,7 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
           position: 'absolute',
           top: 0,
           left: 0,
+          maxHeight: '800px',
         }}
       />
     </Box>
