@@ -2563,8 +2563,12 @@ export type MediumPostVirtualsTagsMetadataCoverImage = {
   isFeatured?: Maybe<Scalars['Boolean']>;
   unsplashPhotoId?: Maybe<Scalars['String']>;
   alt?: Maybe<Scalars['String']>;
+  backgroundSize?: Maybe<Scalars['String']>;
+  filter?: Maybe<Scalars['String']>;
+  externalSrc?: Maybe<Scalars['String']>;
   focusPercentX?: Maybe<Scalars['Int']>;
   focusPercentY?: Maybe<Scalars['Int']>;
+  repairedAt?: Maybe<Scalars['Int']>;
 };
 
 export type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
@@ -2574,8 +2578,12 @@ export type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   isFeatured?: Maybe<BooleanQueryOperatorInput>;
   unsplashPhotoId?: Maybe<StringQueryOperatorInput>;
   alt?: Maybe<StringQueryOperatorInput>;
+  backgroundSize?: Maybe<StringQueryOperatorInput>;
+  filter?: Maybe<StringQueryOperatorInput>;
+  externalSrc?: Maybe<StringQueryOperatorInput>;
   focusPercentX?: Maybe<IntQueryOperatorInput>;
   focusPercentY?: Maybe<IntQueryOperatorInput>;
+  repairedAt?: Maybe<IntQueryOperatorInput>;
 };
 
 export type MediumPostVirtualsTagsMetadataFilterInput = {

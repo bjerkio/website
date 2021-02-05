@@ -22,6 +22,8 @@ const styles: SystemStyleObject = {
     zIndex: 3,
     width: '4em',
     height: '4em',
+    maxWidth: '50px',
+    maxHeight: '50px',
     color: 'black',
     margin: 4,
     right: 0,

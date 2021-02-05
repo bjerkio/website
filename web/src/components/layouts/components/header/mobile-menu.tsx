@@ -16,7 +16,7 @@ const styles: SystemStyleObject = {
     color: 'black',
     ml: 5,
     mb: 4,
-    borderBottom: '3px solid',
+    borderBottom: '0.19rem solid',
     fontSize: 4,
   },
 };
