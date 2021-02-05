@@ -13,12 +13,14 @@ export interface EmployeeListItemProps {
 export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
   data,
 }) => (
-  <Container mb="50px">
+  <Container mb={[4, 5, 6]}>
     <Box
       sx={{
-        width: '343px',
-        height: '346px',
-        my: '27px',
+        width: '12rem',
+        height: '12rem',
+        maxWidth: '343px',
+        maxHeight: '346px',
+        my: [3, 4, 5],
       }}
     >
       <Img
@@ -30,7 +32,7 @@ export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
     </Box>
     <Text sx={{ fontWeight: 'bold' }}>{data.name}</Text>
     <Text>{data.position}</Text>
-    <Flex mt="15px" sx={{ flexDirection: 'column' }}>
+    <Flex mt={4} sx={{ flexDirection: 'column' }}>
       <Link color="black">{data.email}</Link>
       <Link color="black">{data.phoneNumber}</Link>
     </Flex>

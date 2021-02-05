@@ -8,25 +8,18 @@ import { Layout } from '../components/layouts';
 
 const styles: SystemStyleObject = {
   '.image': {
-    width: '396px',
-    height: '328px',
-    right: '180px',
+    width: '20rem',
+    height: '20rem',
+    maxWidth: '396px',
+    maxHeight: '328px',
+    right: '15rem',
     position: 'absolute',
-    top: '200px',
+    top: '15rem',
+    display: ['none', 'none', 'block'],
   },
   '.mobileImage': {
-    width: '40%',
-    position: 'absolute',
-    display: 'none',
-    right: '-13%',
-  },
-  ['@media screen and (max-width: 960px)']: {
-    '.image': {
-      display: 'none',
-    },
-    '.mobileImage': {
-      display: 'block',
-    },
+    width: '20rem',
+    display: ['block', 'block', 'none'],
   },
 };
 
@@ -43,7 +36,7 @@ const Contact: React.FC = () => {
                 sx={{
                   fontWeight: 'normal',
                   width: '60%',
-                  my: '78px',
+                  my: 5,
                 }}
               >
                 Ta kontakt med en av oss for en hyggelig og uforpliktende prat
@@ -51,7 +44,7 @@ const Contact: React.FC = () => {
               <Flex>
                 <Box
                   sx={{
-                    fontSize: '25px',
+                    fontSize: [2, 3, 3],
                   }}
                 >
                   <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
