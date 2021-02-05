@@ -18,7 +18,7 @@ const styles: SystemStyleObject = {
   'button:hover': {
     '.animation-arrow': {
       '&:after': {
-        right: '0.8em',
+        right: '0.9em',
       },
       '&:before': {
         width: '1.7em',
