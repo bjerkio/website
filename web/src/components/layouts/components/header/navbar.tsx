@@ -31,7 +31,6 @@ const styles: SystemStyleObject = {
         pr: 0,
       },
       '&:hover': {
-        color: 'secondary',
         transition: 'color 0.2s',
       },
     },
@@ -40,11 +39,8 @@ const styles: SystemStyleObject = {
     color: 'background',
     textDecoration: 'underline',
   },
-  '.link:hover': {
-    color: 'background',
-  },
   '.link.active': {
-    color: 'primary',
+    color: 'lightGreen',
   },
   '.link.dark': {
     color: 'black',
@@ -81,12 +77,9 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
         <Flex className="container">
           <Link href="/">
             {!navbar && pathname === '' ? (
-              <Logo sx={{ width: ['4em', '5em', '6em'], color: 'white' }} />
+              <Logo sx={{ width: '4em', color: 'white' }} />
             ) : (
-              <Logo
-                dotColor="#0FCFA2"
-                sx={{ color: 'black', width: ['4em', '5em', '6em'] }}
-              />
+              <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '4em' }} />
             )}
           </Link>
           <Flex className="linksContainer">
@@ -123,7 +116,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               className={
                 pathname === '/contact'
                   ? 'link active'
-                  : pathname === '/' && !navbar
+                  : pathname === '' && !navbar
                   ? 'link'
                   : 'link dark'
               }

@@ -1,21 +1,19 @@
 /** @jsx */
 import React from 'react';
-import { Box, Flex, Link, Text } from 'theme-ui';
-import SocialFacebookSvg from '../../../assets/Social-Facebook.svg';
-import SocialGithubSvg from '../../../assets/Social-Github.svg';
-import SocialLinkedinSvg from '../../../assets/Social-Linkedin.svg';
-import { Container } from '../../container';
-import { Logo } from './logo';
+import { Box, Link, Text } from 'theme-ui';
+import { Container } from '../../../container';
+import { Logo } from '../logo';
+import { NetworskLinks } from './networks-links';
 
 export const Footer: React.FC = (props) => (
-  <Box
-    sx={{ p: [4, 4, 5], mt: 6, pt: [4, 5, 6], bg: 'dark', color: 'white' }}
+  <Container
+    sx={{ mt: 6, pt: [5, 6, 6], bg: 'dark', color: 'white' }}
     {...props}
   >
-    <Box sx={{ px: [5, 5, 6] }}>
-      <Logo sx={{ color: 'white', width: ['4em', '5em', '6em'] }} />
+    <Box>
+      <Logo sx={{ color: 'white', width: '4em' }} />
     </Box>
-    <Container
+    <Box
       sx={{
         display: 'grid',
         gridGap: 3,
@@ -45,6 +43,9 @@ export const Footer: React.FC = (props) => (
           0151 Oslo
         </Text>
       </Box>
+      <NetworskLinks
+        sx={{ display: ['block', 'block', 'none'], mt: 3, mb: 5 }}
+      />
       <Box sx={{ fontSize: 3, textAlign: ['start', 'start', 'end'] }}>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
           Vi er alltid på utkikk etter
@@ -57,48 +58,21 @@ export const Footer: React.FC = (props) => (
           Personvern
         </Text>
       </Box>
-    </Container>
-    <Container
+    </Box>
+    <Box
       sx={{
         display: 'grid',
         gridGap: 3,
         alignItems: 'start',
         gridTemplateColumns: ['1fr', '1fr 1fr'],
-        pt: '63px',
+        pt: '4rem',
+        pb: '4rem',
       }}
     >
       <Box>
         <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
       </Box>
-      <Box>
-        <Flex sx={{ justifyContent: ['flex-start', 'flex-start', 'flex-end'] }}>
-          {[
-            { href: 'https://github.com/bjerkio', icon: <SocialGithubSvg /> },
-            {
-              href: 'https://www.linkedin.com/company/bjerk/',
-              icon: <SocialLinkedinSvg />,
-            },
-            {
-              href: 'https://www.facebook.com/WeAreDigitalization',
-              icon: <SocialFacebookSvg />,
-            },
-          ].map(({ href, icon }, index) => (
-            <Link
-              key={index}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                width: 5,
-                ml: [2, 3, 4],
-                cursor: 'pointer',
-              }}
-            >
-              {icon}
-            </Link>
-          ))}
-        </Flex>
-      </Box>
-    </Container>
-  </Box>
+      <NetworskLinks sx={{ display: ['none', 'none', 'block'] }} />
+    </Box>
+  </Container>
 );
