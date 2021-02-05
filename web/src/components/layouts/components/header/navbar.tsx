@@ -1,18 +1,40 @@
-/** @jsx */
-import { Box, Flex, Link } from '@theme-ui/components';
+import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
 import React, { useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
-import { Logo } from './logo';
+import { Logo } from '../logo';
 
 const styles: SystemStyleObject = {
+  position: 'fixed',
+  width: '100%',
+  zIndex: 3,
   '.navbar': {
-    width: '100%',
-    position: 'fixed',
-    zIndex: 3,
     bg: 'transparent',
+  },
+  '.container': {
+    alignItems: 'center',
+    maxWidth: '1440px',
+    margin: '0 auto',
+    py: 4,
+    px: [5, 5, 6],
   },
   '.navbar.active': {
     bg: 'background',
+  },
+  '.linksContainer': {
+    flexGrow: 1,
+    fontSize: 3,
+    color: 'iron',
+    justifyContent: 'flex-end',
+    '>a': {
+      p: 2,
+      '&:last-child': {
+        pr: 0,
+      },
+      '&:hover': {
+        color: 'secondary',
+        transition: 'color 0.2s',
+      },
+    },
   },
   '.link': {
     color: 'background',
@@ -29,10 +51,16 @@ const styles: SystemStyleObject = {
   },
 };
 
-const Header: React.FC = () => {
-  const pathname = `/${
-    /[^/]*$/.exec(typeof window !== 'undefined' ? window.location.href : '')[0]
-  }`;
+const Navbar: React.FC<BoxProps> = ({ ...props }) => {
+  let pathname = '';
+
+  if (typeof window !== 'undefined') {
+    pathname =
+      window.location.pathname[window.location.pathname.length - 1] === '/'
+        ? window.location.pathname.slice(0, -1)
+        : window.location.pathname;
+  }
+
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -48,49 +76,26 @@ const Header: React.FC = () => {
   }
 
   return (
-    <Box sx={styles}>
+    <Box sx={styles} {...props}>
       <Box className={navbar ? 'navbar active' : 'navbar'}>
-        <Flex
-          sx={{
-            alignItems: 'center',
-            p: 4,
-            maxWidth: '1440px',
-            margin: '0 auto',
-            py: 4,
-            px: '188px',
-          }}
-        >
+        <Flex className="container">
           <Link href="/">
-            {!navbar && pathname === '/' ? (
-              <Logo sx={{ width: '70px', color: 'white' }} />
+            {!navbar && pathname === '' ? (
+              <Logo sx={{ width: ['4em', '5em', '6em'], color: 'white' }} />
             ) : (
-              <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '70px' }} />
+              <Logo
+                dotColor="#0FCFA2"
+                sx={{ color: 'black', width: ['4em', '5em', '6em'] }}
+              />
             )}
           </Link>
-          <Flex
-            sx={{
-              flexGrow: 1,
-              fontSize: 3,
-              color: 'iron',
-              justifyContent: 'flex-end',
-              '>a': {
-                p: 2,
-                '&:last-child': {
-                  pr: 0,
-                },
-                '&:hover': {
-                  color: 'secondary',
-                  transition: 'color 0.2s',
-                },
-              },
-            }}
-          >
+          <Flex className="linksContainer">
             <Link
               variant="nav"
               className={
                 pathname === '/services'
                   ? 'link active'
-                  : pathname === '/' && !navbar
+                  : pathname === '' && !navbar
                   ? 'link'
                   : 'link dark'
               }
@@ -104,7 +109,7 @@ const Header: React.FC = () => {
               className={
                 pathname === '/about'
                   ? 'link active'
-                  : pathname === '/' && !navbar
+                  : pathname === '' && !navbar
                   ? 'link'
                   : 'link dark'
               }
@@ -118,7 +123,7 @@ const Header: React.FC = () => {
               className={
                 pathname === '/contact'
                   ? 'link active'
-                  : pathname === '/' && !navbar
+                  : pathname === '' && !navbar
                   ? 'link'
                   : 'link dark'
               }
@@ -133,4 +138,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Navbar;
