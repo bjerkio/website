@@ -17,7 +17,13 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
 }) => (
   <Box>
     <Container sx={{ mt: 6 }}>
-      <Grid gap={2} columns={[1, 1, 2]} px={5}>
+      <Grid
+        gap={2}
+        columns={
+          data.textAlign === 'right' ? [1, 1, '1fr 2fr'] : [1, 1, '2fr 1fr']
+        }
+        px={5}
+      >
         <Box>
           <Heading pb={3}>{data.title}</Heading>
           <Label>{data.description}</Label>

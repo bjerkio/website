@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
                 as="h1"
                 sx={{
                   fontWeight: 'normal',
-                  width: '60%',
+                  width: ['100%', '60%'],
                   my: 5,
                 }}
               >

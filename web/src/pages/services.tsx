@@ -11,7 +11,8 @@ const ServicesPage = () => (
         as="h1"
         sx={{
           fontWeight: 'normal',
-          width: '60%',
+          width: ['100%', '60%'],
+          my: 5,
         }}
       >
         Bjerk hjelper bedriften din med å ta det neste steget inn i fremtiden.

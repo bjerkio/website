@@ -1,4 +1,6 @@
-import { Heading } from '@theme-ui/components';
+import { Box, Button, Grid, Heading, Label } from '@theme-ui/components';
+import { navigate } from 'gatsby';
+import Img from 'gatsby-image';
 import React from 'react';
 import { AboutList } from '../components/about-page/about-list';
 import { Container } from '../components/container';
@@ -13,7 +15,8 @@ const AboutPage: React.FC = () => (
         as="h1"
         sx={{
           fontWeight: 'normal',
-          width: '60%',
+          width: ['100%', '60%'],
+          my: 5,
         }}
       >
         Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
@@ -40,6 +43,36 @@ const AboutPage: React.FC = () => (
           },
         ]}
       />
+      <Box sx={{ width: '100%', height: 'auto' }}>
+        <Img fluid={null} durationFadeIn={0} fadeIn={false} draggable={false} />
+      </Box>
+      <Grid gap={5} columns={[1, 1, 2]} px={5} pt={6}>
+        <Box>
+          <Img
+            fluid={null}
+            durationFadeIn={0}
+            fadeIn={false}
+            draggable={false}
+          />
+          <Img
+            fluid={null}
+            durationFadeIn={0}
+            fadeIn={false}
+            draggable={false}
+          />
+        </Box>
+        <Box>
+          <Label sx={{ fontSize: '1.4rem' }}>
+            Bjerk sine røtter går tilbake til 2009, da Simen begynte å jobbe for
+            seg selv. På sin reise traff han Bjørn Niklas og sammen har de
+            startet Bjerk. Et lite privat konsulenthus med lidenskap for service
+            og kvalitet.
+          </Label>
+          <Button variant="empty" onClick={() => navigate('/services')} my={3}>
+            Sjekk hva vi kan gjøre for deg
+          </Button>
+        </Box>
+      </Grid>
     </Container>
   </Layout>
 );
