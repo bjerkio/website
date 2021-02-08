@@ -1,96 +1,78 @@
 /** @jsx */
-import { graphql } from 'gatsby';
+import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import React from 'react';
-import { BlockContent } from '../components/block-content/block-content';
+import Button from '../components/button';
 import { Container } from '../components/container';
-import { CallToActionBox } from '../components/home-page/call-to-action-box';
-import { Hero } from '../components/home-page/hero';
-import { MediumArticle } from '../components/home-page/medium-article';
+import CallToActionBox, {
+  CallToActionBoxProps,
+} from '../components/home-page/call-to-action-box';
+import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
-import { IndexQueryQuery } from '../generated/graphql-types';
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    sanityHomepage(_id: { eq: "homepage" }) {
-      ctaBoxes {
-        linkTo
-        title
-        linkText
-        content
-      }
-      _rawHeroContent
-    }
-    allMediumPost(limit: 2) {
-      edges {
-        node {
-          id
-          latestPublishedAt
-          uniqueSlug
-          title
-          content {
-            subtitle
-          }
-          virtuals {
-            previewImage {
-              imageId
-            }
-          }
-          author {
-            name
-          }
-        }
-      }
-    }
-  }
-`;
+const actionBoxMockup: CallToActionBoxProps[] = [
+  {
+    title: 'Programvareutvikling',
+    description:
+      'Bjerk driver med utvikling av desktop- og mobilapplikasjoner. Vi leverer digitale løsninger basert på moderne teknologi og metoder.',
+    linkText: 'Les mer',
+    linkTo: '/services',
+  },
+  {
+    title: 'Strategisk rådgivning',
+    description:
+      'Skal bedriften din gjennom en digitaliserings-prosess? Bjerk bistår deg og dine ansatte med alt fra digitale løsninger til endringsledelse.',
+    linkText: 'Les mer',
+    linkTo: '/services',
+  },
+  {
+    title: 'Prosjektledelse',
+    description:
+      'Våre ansatte har mange års erfaring med både utvikling og leveranse av programvare, og ledelse. Vi bruker Lean-metodikk i våre prosjekter.',
+    linkText: 'Les mer',
+    linkTo: '/services',
+  },
+];
 
-interface IndexPageProps {
-  data: IndexQueryQuery;
-}
-
-const Homepage = ({ data }: IndexPageProps) => (
+const Homepage: React.FC = () => (
   <Layout>
-    <Hero>
-      {data?.sanityHomepage?._rawHeroContent && (
-        <BlockContent blocks={data.sanityHomepage._rawHeroContent} />
-      )}
-    </Hero>
-    <Container
-      pt={6}
-      sx={{
-        display: 'grid',
-        gridGap: 3, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
-      }}
-    >
-      {data?.sanityHomepage?.ctaBoxes.map((ctaBoxes, index) => (
-        <CallToActionBox
-          key={index}
-          title={ctaBoxes.title}
-          linkTo={ctaBoxes.linkTo}
-          linkText={ctaBoxes.linkText}
+    <Box>
+      <IntroVideo
+        data={{
+          videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
+          videoTitle: null,
+        }}
+      >
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+          <Label sx={{ fontWeight: 'normal' }}>
+            Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
+          </Label>
+          <Button href="/contact">Start ditt prosjekt</Button>
+        </Box>
+      </IntroVideo>
+      <Container sx={{ pt: 6 }}>
+        <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+          Hvordan kan vi hjelpe deg?
+        </Heading>
+        <Box sx={{ width: '60%' }}>
+          Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
+          opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
+          medium er teknologi, og lidenskapen er å skape.
+        </Box>
+        <Grid
+          pt={5}
+          sx={{
+            gap: 3,
+            gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+          }}
         >
-          {ctaBoxes.content}
-        </CallToActionBox>
-      ))}
-    </Container>
-    <Container
-      sx={{
-        pt: 6,
-        display: 'grid',
-        gridGap: 5, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr 1fr'],
-      }}
-    >
-      {data?.allMediumPost?.edges.map(({ node }) => (
-        <MediumArticle key={node.id} {...node} />
-      ))}
-    </Container>
+          {actionBoxMockup.map((ctabox, index) => (
+            <CallToActionBox data={ctabox} key={index}>
+              {ctabox.description}
+            </CallToActionBox>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   </Layout>
 );
 

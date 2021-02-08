@@ -13,6 +13,7 @@ const theme = {
     lighter: '#53D9AD',
     background: '#fff',
     text: '#232931',
+    lightGreen: '#4ECCA3',
   },
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -31,6 +32,11 @@ const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
+    },
+  },
+  buttons: {
+    primary: {
+      fontFamily: 'body',
     },
   },
   styles: {

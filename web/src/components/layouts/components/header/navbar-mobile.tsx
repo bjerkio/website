@@ -50,12 +50,9 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
       <Box className="logo">
         <Link href="/">
           {pathname === '' ? (
-            <Logo sx={{ width: ['4em', '5em', '6em'], color: 'white' }} />
+            <Logo sx={{ width: '4em', color: 'white' }} />
           ) : (
-            <Logo
-              dotColor="#0FCFA2"
-              sx={{ color: 'black', width: ['4em', '5em', '6em'] }}
-            />
+            <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '4em' }} />
           )}
         </Link>
       </Box>

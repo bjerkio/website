@@ -6643,6 +6643,7 @@ __metadata:
     react-helmet: ^6.1.0
     react-icons: ^4.1.0
     react-is: ^17.0.1
+    react-player: ^2.8.2
     theme-ui: ^0.4.0-alpha.3
   languageName: unknown
   linkType: soft
@@ -9240,7 +9241,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:4.2.2, deepmerge@npm:^4.2.2":
+"deepmerge@npm:4.2.2, deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
   version: 4.2.2
   resolution: "deepmerge@npm:4.2.2"
   checksum: 85abf8e0045ee280996e7d2396979c877ef0741e413b716e42441110e0a83ac08098b2a49cea035510060bf667c0eae3189b2a52349f5fa4b000c211041637b1
@@ -16455,6 +16456,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"load-script@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "load-script@npm:1.0.0"
+  checksum: 9f907ee20dfe8068af210be73a072dd61a287566a23b5666b9c6b9957e66eb33cc7c6a790308cf307c373d7ff75265ab1dde779c3fff90d65535fb3a1c0a167a
+  languageName: node
+  linkType: hard
+
 "loader-fs-cache@npm:^1.0.0":
   version: 1.0.3
   resolution: "loader-fs-cache@npm:1.0.3"
@@ -17186,6 +17194,13 @@ fsevents@^1.2.7:
   version: 3.1.1
   resolution: "memoize-one@npm:3.1.1"
   checksum: 104eaeb53f15a6340558a31a9676bf215c0cd0d0a30c1cc06d012b402a65d93e508f78b972ce8ee6f343642dff8ecef42bd93b9933487de9cca68c4e05ef86a6
+  languageName: node
+  linkType: hard
+
+"memoize-one@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "memoize-one@npm:5.1.1"
+  checksum: e7c4a9cceca71334bf09c38818c375a280dc6e8ec03a92701c16199763269ce756b7b0b370f4b464c071045349fb7b3e4a3cc7460a3f46a277f394d8634a6eb5
   languageName: node
   linkType: hard
 
@@ -20963,6 +20978,21 @@ fsevents@^1.2.7:
     react: ^15.5.x || ^16.x || ^17.x
     react-dom: ^15.5.x || ^16.x || ^17.x
   checksum: 60bab209a6c32321adc339ce34f3a61e954b9f4a26892ce605ab7192577567fcc2a21506bb10fbca02c7fd7416eeef869b22c2ebacacdcec65e346d96375685f
+  languageName: node
+  linkType: hard
+
+"react-player@npm:^2.8.2":
+  version: 2.8.2
+  resolution: "react-player@npm:2.8.2"
+  dependencies:
+    deepmerge: ^4.0.0
+    load-script: ^1.0.0
+    memoize-one: ^5.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.0.1
+  peerDependencies:
+    react: ">=16.6.0"
+  checksum: 53349133172875aa7e0cd8dab99d58dbe32d51027cc4e0a0b1610d213be7279c24cde2f500786c49bdc1218dff56dee03b78a2e984ec69507daf5bc86f162415
   languageName: node
   linkType: hard
 

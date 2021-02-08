@@ -26,7 +26,7 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
     <Flex sx={{ flexDirection: 'column' }}>
       <Logo
         dotColor="white"
-        sx={{ color: 'black', width: ['4em', '5em', '6em'], mb: 5, ml: 5 }}
+        sx={{ color: 'black', width: '4em', mb: 5, ml: 5 }}
       />
       <Link variant="nav" href="/services">
         Tjenester
