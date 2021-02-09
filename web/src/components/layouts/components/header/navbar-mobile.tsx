@@ -19,7 +19,7 @@ const styles: SystemStyleObject = {
     background: 'primary',
     borderRadius: '50%',
     position: 'fixed',
-    zIndex: 3,
+    zIndex: 5,
     width: '4em',
     height: '4em',
     maxWidth: '50px',

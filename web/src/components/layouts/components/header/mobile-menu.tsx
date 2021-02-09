@@ -12,6 +12,7 @@ const styles: SystemStyleObject = {
   alignItems: 'flex-end',
   backgroundColor: 'primary',
   pb: 4,
+  zIndex: 4,
   a: {
     color: 'black',
     ml: 5,
