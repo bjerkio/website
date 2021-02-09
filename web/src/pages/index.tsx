@@ -7,6 +7,7 @@ import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
 import IntroVideo from '../components/home-page/intro-video';
+import { ProjectList } from '../components/home-page/project-list';
 import { Layout } from '../components/layouts';
 
 const actionBoxMockup: CallToActionBoxProps[] = [
@@ -71,6 +72,7 @@ const Homepage: React.FC = () => (
             </CallToActionBox>
           ))}
         </Grid>
+        <ProjectList data={[]} />
       </Container>
     </Box>
   </Layout>
