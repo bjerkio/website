@@ -19,6 +19,7 @@ export const ProjectListItem: React.FC<{ data: ProjectListItemProps }> = ({
         mt: [3, 4, 5],
         '&:hover': {
           opacity: '0.5',
+          transition: '.5s',
         },
       }}
     >
