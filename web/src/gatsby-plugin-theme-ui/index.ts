@@ -38,6 +38,18 @@ const theme = {
     primary: {
       fontFamily: 'body',
     },
+    empty: {
+      color: 'black',
+      backgroundColor: 'background',
+      border: '1px solid',
+      borderColor: 'primary',
+      borderRadius: '10px',
+      display: 'flex',
+      alignItems: 'center',
+      maxWidth: '250px',
+      maxHeight: '50px',
+      cursor: 'pointer',
+    },
   },
   styles: {
     root: {
