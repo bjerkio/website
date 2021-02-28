@@ -1,5 +1,5 @@
 /** @jsx */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
@@ -9,10 +9,15 @@ import { Link } from "gatsby-plugin-intl"
 
 const footerLocalizedText = localizedText.footer
 
-const loc = 'no';
+  
+export const Footer: React.FC = (props) => {
+  
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
 
-export const Footer: React.FC = (props) => (
-  <Container
+  return (<Container
     sx={{ mt: 0, pt: [5, 6, 6], bg: 'dark', color: 'white' }}
     {...props}
   >
@@ -88,5 +93,5 @@ export const Footer: React.FC = (props) => (
       </Box>
       <NetworskLinks sx={{ display: ['none', 'none', 'block'] }} />
     </Box>
-  </Container>
-);
+  </Container>)
+};

@@ -1,10 +1,9 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { Heading } from 'theme-ui';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 import { ServiceList } from '../components/services-page/service-list';
-const loc = 'no';
 
 export const query = graphql`
 query services {
@@ -64,8 +63,13 @@ query services {
 `
 
 export default ({ data }) => {
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const item = data.allSanityServicesPage.nodes[data.allSanityServicesPage.nodes.length - 1]
-  if(data && data.allSanityServicesPage && item) {
+  if(data && data.allSanityServicesPage && item && loc) {
     item.boxes[0].dividedImage = item.firstImage.asset.fluid
     item.boxes[1].dividedImage = item.secondImage.asset.fluid
     return (<Layout>

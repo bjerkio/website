@@ -1,11 +1,10 @@
 /** @jsx */
 import { Box, Heading, Label } from '@theme-ui/components';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import { Container } from '../../components/container';
 import { Layout } from '../../components/layouts';
-const loc = 'no';
 
 export const query = graphql`
 query lentQuery {
@@ -43,8 +42,14 @@ query lentQuery {
 `
 
 export default ({ data }) => {
+  
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const item = data.allSanityLentPage.nodes[data.allSanityLentPage.nodes.length - 1]
-  if(data && data.allSanityLentPage && item)
+  if(data && data.allSanityLentPage && item && loc)
     return (
       <Layout>
         <Box>

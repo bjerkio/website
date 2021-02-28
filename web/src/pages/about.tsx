@@ -1,17 +1,15 @@
 import { Box, Button, Grid, Heading, Label } from '@theme-ui/components';
 import { navigate, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AboutList } from '../components/about-page/about-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
-const loc = 'no';
-
 // TODO: fix image showing when Sanity will be done
 
 export const query = graphql`
-query MyQuery {
+query aboutQuery {
   allSanityAboutPage {
     nodes {
       title {
@@ -81,9 +79,15 @@ query MyQuery {
 }
 `
 
+
 export default ({ data }) => {
+  const [loc, setLoc] = useState(null)
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const item = data.allSanityAboutPage.nodes[0]
-  if(data && data.allSanityAboutPage && item)
+  if(data && data.allSanityAboutPage && item && loc)
     return (
       <Layout>
         <Container>

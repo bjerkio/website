@@ -1,6 +1,6 @@
 /** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../components/button';
 import { graphql } from 'gatsby';
 import { Container } from '../components/container';
@@ -8,7 +8,6 @@ import CallToActionBox from '../components/home-page/call-to-action-box';
 import CallToActionImage from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
-const loc = 'no';
 
 export const query = graphql`
 query homePageQuery {
@@ -117,8 +116,14 @@ query homePageQuery {
 `
 
 export default ({ data }) => {
+  
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const item = data.allSanityHomepage.nodes[data.allSanityHomepage.nodes.length - 1]
-  if(data && data.allSanityHomepage && item)
+  if(data && data.allSanityHomepage && item && loc)
     return (
       <Layout>
         <Box>

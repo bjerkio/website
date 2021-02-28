@@ -1,11 +1,10 @@
 import { Box, Flex, Heading, Label, Link } from '@theme-ui/components';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import Img from 'gatsby-image';
 import { EmployeeList } from '../components/contact/employee-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
-const loc = 'no';
 
 const styles: SystemStyleObject = {
   '.image': {
@@ -85,8 +84,14 @@ query contactQuery {
 
 // TODO: replace image with gatsby-image when sanity will done
 export default ({ data }) => {
+  
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const item = data.allSanityContactPage.nodes[data.allSanityContactPage.nodes.length - 1]
-  if(data && data.allSanityContactPage && item)
+  if(data && data.allSanityContactPage && item && loc)
     return (
       <Layout>
         <Container>

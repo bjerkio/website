@@ -1,10 +1,10 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import localizedText from '../../../../config/localized-text'
-const loc = 'no';
 import { Link } from "gatsby-plugin-intl"
+import Language from './language';
 
 const navbarLocalized = localizedText.navbar;
 
@@ -31,7 +31,7 @@ const styles: SystemStyleObject = {
     color: 'iron',
     justifyContent: 'flex-end',
     '>a': {
-      p: 2,
+      p: 4,
       '&:last-child': {
         pr: 0,
       },
@@ -64,6 +64,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
 
   const [navbar, setNavbar] = useState(false);
 
+  
+  const [loc, setLoc] = useState('no')
+  useEffect(() => {
+    setLoc(window.location.href.split('/')[3])
+  }, []);
+
   const changeBackground = () => {
     if (typeof window !== 'undefined' && window.scrollY >= 70) {
       setNavbar(true);
@@ -87,6 +93,13 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '4em' }} />
             )}
           </Link>
+          <Language
+            className={
+              pathname === '' && !navbar
+                ? 'link'
+                : 'link dark'
+            }
+          />
           <Flex className="linksContainer">
             <Link
               className={
