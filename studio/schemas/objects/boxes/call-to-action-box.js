@@ -5,14 +5,26 @@ export default {
   type: 'object',
   fields: [
     {
+      name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'title',
-      type: 'string',
+      type: 'localeString',
       title: 'Title',
     },
     {
-      name: 'content',
-      type: 'text',
-      title: 'Content',
+      name: 'description',
+      type: 'pageText',
+      title: 'Description',
+    },
+    {
+      name: 'bottomText',
+      type: 'localeString',
+      title: 'Bottom text',
     },
     {
       name: 'linkTo',
@@ -21,7 +33,7 @@ export default {
     },
     {
       name: 'linkText',
-      type: 'string',
+      type: 'localeString',
       title: 'Link Text',
     },
   ],

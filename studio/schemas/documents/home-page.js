@@ -10,10 +10,30 @@ export default {
   ],
   fields: [
     {
-      title: 'Hero content',
-      description: 'Content of the hero box (big green field)',
-      name: 'heroContent',
-      type: 'heroText',
+      title: 'Header text',
+      name: 'headerText',
+      type: 'pageText',
+    },
+    {
+      title: 'Header button text',
+      name: 'headerButtonText',
+      type: 'localeString',
+    },
+    {
+      title: 'Header button link',
+      name: 'headerButtonLink',
+      type: 'url',
+    },
+    {
+      title: 'Header video url',
+      name: 'headerVideoUrl',
+      type: 'url',
+    },
+    {
+      title: 'Top title',
+      description: 'First title and description',
+      name: 'homePageTopTitle',
+      type: 'pageText',
     },
     {
       title: 'Call to Action boxes',
@@ -21,6 +41,19 @@ export default {
       name: 'ctaBoxes',
       type: 'array',
       of: [{ type: 'CTABox', title: 'Call to Action' }],
+    },
+    {
+      title: 'Middle title',
+      description: 'Second title (under CTA boxes)',
+      name: 'homePageMiddleTitle',
+      type: 'pageText',
+    },
+    {
+      title: 'Call to Action images',
+      description: 'Four images beneath second title',
+      name: 'ctaImages',
+      type: 'array',
+      of: [{ type: 'CTAImage', title: 'Call to Action' }],
     },
   ],
   preview: {

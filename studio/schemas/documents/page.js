@@ -11,14 +11,29 @@ export default {
     {
       name: 'slug',
       type: 'slug',
+      title: 'Slug',
       required: true,
       options: {
-        source: (doc, options) => options.parent.title,
+        source: 'title',
       },
     },
     {
       name: 'content',
-      type: 'pageContent',
+      type: 'pageText',
     },
   ],
+  preview: {
+    select: {
+      slug: 'slug',
+      template: 'template',
+      message: 'message',
+    },
+    prepare(selection) {
+      const { slug, template, message } = selection;
+      return {
+        title: `${slug.current} [${template}]`,
+        subtitle: message,
+      };
+    },
+  },
 };
