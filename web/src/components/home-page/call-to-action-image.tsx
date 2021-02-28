@@ -24,7 +24,7 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
             borderBottom: '2px solid',
           },
           '.ctaImage': {
-              opacity: '.5',
+              opacity: '.7',
               transition: '.5s'
           }
         },
