@@ -4,7 +4,6 @@ import { Box, Heading, Link } from 'theme-ui';
 
 export interface CallToActionBoxProps {
   title: string;
-  description: string;
   linkTo?: string;
   linkText?: string;
   image?: any;
@@ -23,7 +22,8 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
       onMouseOut={() => setHover(false)}
       sx={{
         ':hover': {
-          '.link': {
+          cursor: 'pointer',
+          '.linkText': {
             borderBottom: '2px solid',
           },
         },
@@ -32,28 +32,29 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
           textDecoration: 'none',
         },
       }}
+      pr={5}
     >
-      <Box sx={{ width: 100, height: 30, mb: 4 }}>
-        {data.image && data.hoverImage && (
-          <Img
-            fluid={
-              !hover ? data.image.asset.fluid : data.hoverImage.asset.fluid
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-        )}
-      </Box>
-      <Heading sx={{ mb: 3 }}>{data.title}</Heading>
-      <Box>{children}</Box>
-      <Box mt={4}>
-        {data.linkTo && (
-          <Link className="link" href={data.linkTo}>
+      <Link className="link" href={data.linkTo}>
+        <Box sx={{ width: 100, height: 30, mb: 4 }}>
+          {data.image && data.hoverImage && (
+            <Img
+              fluid={
+                !hover ? data.image.asset.fluid : data.hoverImage.asset.fluid
+              }
+              durationFadeIn={0}
+              fadeIn={false}
+              draggable={false}
+            />
+          )}
+        </Box>
+        <Heading sx={{ mb: 3 }}>{data.title}</Heading>
+        <Box>{children}</Box>
+        <Box mt={4}>
+          <span className="linkText">
             {data.linkText}
-          </Link>
-        )}
-      </Box>
+          </span>
+        </Box>
+      </Link>
     </Box>
   );
 };
