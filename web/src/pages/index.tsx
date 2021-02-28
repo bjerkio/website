@@ -2,78 +2,193 @@
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import React from 'react';
 import Button from '../components/button';
+import { graphql } from 'gatsby';
 import { Container } from '../components/container';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
+import CallToActionImage, {
+  CallToActionImageProps,
+} from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
+const loc = 'no';
 
-const actionBoxMockup: CallToActionBoxProps[] = [
-  {
-    title: 'Programvareutvikling',
-    description:
-      'Bjerk driver med utvikling av desktop- og mobilapplikasjoner. Vi leverer digitale løsninger basert på moderne teknologi og metoder.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-  },
-  {
-    title: 'Strategisk rådgivning',
-    description:
-      'Skal bedriften din gjennom en digitaliserings-prosess? Bjerk bistår deg og dine ansatte med alt fra digitale løsninger til endringsledelse.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-  },
-  {
-    title: 'Prosjektledelse',
-    description:
-      'Våre ansatte har mange års erfaring med både utvikling og leveranse av programvare, og ledelse. Vi bruker Lean-metodikk i våre prosjekter.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-  },
-];
+export const query = graphql`
+query homePageQuery {
+  allSanityHomepage {
+    nodes {
+      headerButtonLink
+      headerVideoUrl
+      headerButtonText {
+        en
+        no
+      }
+      headerText {
+        enText {
+          children {
+            text
+          }
+        }
+        noText {
+          children {
+            text
+          }
+        }
+      }
+      ctaBoxes {
+        image {
+          asset {
+            fluid {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        linkTo
+        title {
+          en
+          no
+        }
+        hoverImage {
+          asset {
+            fluid {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        description {
+          enText {
+            children {
+              text
+            }
+          }
+          noText {
+            children {
+              text
+            }
+          }
+        }
+        bottomText {
+          en
+          no
+        }
+      }
+      homePageTopTitle {
+        en
+        no
+      }
+      homePageTopDescription {
+        noText {
+          children {
+            text
+          }
+        }
+        enText {
+          children {
+            text
+          }
+        }
+      }
+      homePageMiddleTitle {
+        enText {
+          children {
+            text
+          }
+        }
+        noText {
+          children {
+            text
+          }
+        }
+      }
+      ctaImages {
+        image {
+          asset {
+            fluid {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        linkText {
+          en
+          no
+        }
+        linkTo
+      }
+    }
+  }
+}
+`
 
-const Homepage: React.FC = () => (
-  <Layout>
-    <Box>
-      <IntroVideo
-        data={{
-          videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
-          videoTitle: null,
-        }}
-      >
-        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
-          <Label sx={{ fontWeight: 'normal' }}>
-            Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
-          </Label>
-          <Button href="/contact">Start ditt prosjekt</Button>
+export default ({ data }) => {
+  const item = data.allSanityHomepage.nodes[data.allSanityHomepage.nodes.length - 1]
+  if(data && data.allSanityHomepage && item)
+    return (
+      <Layout>
+        <Box>
+          <IntroVideo
+            data={{
+              videoUrl: item.headerVideoUrl,
+              videoTitle: null,
+            }}
+          >
+            <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+              <Label sx={{ fontWeight: 'normal' }}>
+                {item.headerText[`${loc}Text`].map(par => par.children[0].text).join('\n')}
+              </Label>
+              <Button href={'/'+item.headerButtonLink.split(/\/(.+)/)[1]}>
+                {item.headerButtonText[loc]}
+              </Button>
+            </Box>
+          </IntroVideo>
+          <Container sx={{ pt: 6 }}>
+            <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+              {item.homePageTopTitle[loc]}
+            </Heading>
+            <Box sx={{ width: '60%' }}>
+              {item.homePageTopDescription[`${loc}Text`].map(par => par.children[0].text).join('\n')}
+            </Box>
+            <Grid
+              pt={5}
+              sx={{
+                gap: 3,
+                gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+              }}
+            >
+              {item.ctaBoxes.map((ctabox, index) => (
+                <CallToActionBox 
+                  key={index}
+                  data={{
+                    title: ctabox.title[loc],
+                    linkTo: '/' + ctabox.linkTo.split(/\/(.+)/)[1],
+                    linkText: ctabox.bottomText[loc],
+                    image: ctabox.image,
+                    hoverImage: ctabox.hoverImage
+                  }} 
+                >
+                  {ctabox.description[`${loc}Text`].map(par => par.children[0].text).join('\n')}
+                </CallToActionBox>
+              ))}
+            </Grid>
+          </Container>
+          <Container>
+            <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+              <Label sx={{ fontWeight: 'normal' }}>
+                {item.homePageMiddleTitle[`${loc}Text`].map(par => par.children[0].text).join('\n')}
+              </Label>
+            </Box>
+            {item.ctaImages.map((ctaimage, index) => (
+              <CallToActionImage
+                key={index}
+                data={{
+                  linkTo: '/' + ctaimage.linkTo.split(/\/(.+)/)[1],
+                  linkText: ctaimage.linkText[loc],
+                  image: ctaimage.image
+                }}
+              />
+            ))}
+          </Container>
         </Box>
-      </IntroVideo>
-      <Container sx={{ pt: 6 }}>
-        <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
-          Hvordan kan vi hjelpe deg?
-        </Heading>
-        <Box sx={{ width: '60%' }}>
-          Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
-          opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
-          medium er teknologi, og lidenskapen er å skape.
-        </Box>
-        <Grid
-          pt={5}
-          sx={{
-            gap: 3,
-            gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
-          }}
-        >
-          {actionBoxMockup.map((ctabox, index) => (
-            <CallToActionBox data={ctabox} key={index}>
-              {ctabox.description}
-            </CallToActionBox>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
-  </Layout>
-);
-
-export default Homepage;
+      </Layout>)
+  return ''
+};
