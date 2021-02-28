@@ -4,10 +4,15 @@ import { Box, Link, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
 import { NetworskLinks } from './networks-links';
+import localizedText from '../../../../config/localizedText';
+
+const footerLocalizedText = localizedText.footer
+
+const loc = 'no';
 
 export const Footer: React.FC = (props) => (
   <Container
-    sx={{ mt: 6, pt: [5, 6, 6], bg: 'dark', color: 'white' }}
+    sx={{ mt: 0, pt: [5, 6, 6], bg: 'dark', color: 'white' }}
     {...props}
   >
     <Box>
@@ -25,22 +30,28 @@ export const Footer: React.FC = (props) => (
       <Box>
         <strong>
           <Text sx={{ fontSize: 4, my: 4, lineHeight: '22px' }}>
-            Vi vil gjerne jobbe
-            <br />
-            med deg!
+            {footerLocalizedText.left[loc].map(text =>
+              <React.Fragment>
+                {text}
+                <br />
+              </React.Fragment>)}
           </Text>
         </strong>
       </Box>
       <Box sx={{ lineHeight: '20px' }}>
-        <Link href="#">+47 22 12 05 12</Link>
-        <br />
-        <Link href="#">kontoret@bjerk.io</Link>
+        {footerLocalizedText.contacts[loc].map(text =>
+          <React.Fragment>
+            <Link href="#">{text}</Link>
+            <br />
+          </React.Fragment>)}
       </Box>
       <Box>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
-          Dronningens gate 8B
-          <br />
-          0151 Oslo
+          {footerLocalizedText.address[loc].map(text =>
+            <React.Fragment>
+              {text}
+              <br />
+            </React.Fragment>)}
         </Text>
       </Box>
       <NetworskLinks
@@ -48,14 +59,14 @@ export const Footer: React.FC = (props) => (
       />
       <Box sx={{ fontSize: 3, textAlign: ['start', 'start', 'end'] }}>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
-          Vi er alltid på utkikk etter
+          {footerLocalizedText.right[loc][0]}
           <br />
-          nye talenter – si hei!
+          {footerLocalizedText.right[loc][1]}
         </Text>
         <Text sx={{ fontSize: 2, color: 'primary', mt: 3, lineHeight: '22px' }}>
-          Se ledige stillinger
+          {footerLocalizedText.right[loc][2]}
           <br />
-          Personvern
+          {footerLocalizedText.right[loc][3]}
         </Text>
       </Box>
     </Box>
@@ -70,7 +81,9 @@ export const Footer: React.FC = (props) => (
       }}
     >
       <Box>
-        <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
+        <Text sx={{ fontSize: 2 }}>
+          {footerLocalizedText.copyright[loc]}
+        </Text>
       </Box>
       <NetworskLinks sx={{ display: ['none', 'none', 'block'] }} />
     </Box>

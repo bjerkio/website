@@ -2,6 +2,10 @@ import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
 import React, { useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
+import localizedText from '../../../../config/localized-text'
+const loc = 'no';
+
+const navbarLocalized = localizedText.navbar;
 
 const styles: SystemStyleObject = {
   position: 'fixed',
@@ -12,7 +16,7 @@ const styles: SystemStyleObject = {
   },
   '.container': {
     alignItems: 'center',
-    maxWidth: '1440px',
+    maxWidth: '1920px',
     margin: '0 auto',
     py: 4,
     px: [5, 5, 6],
@@ -94,7 +98,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               }
               href="/services"
             >
-              Tjenester
+              {navbarLocalized.services[loc]}
             </Link>
             <Link
               sx={{ ml: 5 }}
@@ -108,7 +112,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               }
               href="/about"
             >
-              Om oss
+              {navbarLocalized.aboutUs[loc]}
             </Link>
             <Link
               sx={{ ml: 5 }}
@@ -122,7 +126,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
               }
               href="/contact"
             >
-              Kontakt oss
+              {navbarLocalized.contact[loc]}
             </Link>
           </Flex>
         </Flex>
