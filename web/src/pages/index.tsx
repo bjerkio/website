@@ -4,12 +4,8 @@ import React from 'react';
 import Button from '../components/button';
 import { graphql } from 'gatsby';
 import { Container } from '../components/container';
-import CallToActionBox, {
-  CallToActionBoxProps,
-} from '../components/home-page/call-to-action-box';
-import CallToActionImage, {
-  CallToActionImageProps,
-} from '../components/home-page/call-to-action-image';
+import CallToActionBox from '../components/home-page/call-to-action-box';
+import CallToActionImage from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 const loc = 'no';
