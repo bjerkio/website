@@ -25,7 +25,7 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
         px={5}
       >
         {data.textAlign === 'right' && <>
-          <Box px={4} /*sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}*/>
+          <Box px={4}>
             <Img
               imgStyle={{objectFit: 'contain'}}
               fluid={data.image}
@@ -46,7 +46,7 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
             {data.descriptionArray.map(descriptionLine => 
               <Label mt={3}>{descriptionLine}</Label>)}
           </Box>
-          <Box px={4} /*sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}*/>
+          <Box px={4}>
             <Img
               imgStyle={{objectFit: 'contain'}}
               fluid={data.image}
