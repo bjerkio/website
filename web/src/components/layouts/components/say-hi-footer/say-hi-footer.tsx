@@ -9,7 +9,7 @@ const sayHiText = localizedText.sayHiFooter;
 export default () => {
     const [loc, setLoc] = useState('no')
     useEffect(() => {
-        setLoc(window.location.href.split('/').filter(i=>i).pop())
+        setLoc(window.location.href.split('/')[3])
     }, []);
     return (
         <Box sx={{ mb: 0 }}>
