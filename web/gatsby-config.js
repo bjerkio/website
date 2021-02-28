@@ -60,5 +60,14 @@ module.exports = {
         overlayDrafts: !isProd && token,
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`no`,`en`],
+        defaultLanguage: `no`,
+        redirect: true,
+      },
+    },
   ],
 };

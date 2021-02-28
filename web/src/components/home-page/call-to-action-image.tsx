@@ -1,6 +1,7 @@
 import Img from 'gatsby-image';
 import React, { useState } from 'react';
-import { Box, Link } from 'theme-ui';
+import { Box } from 'theme-ui';
+import { Link } from "gatsby-plugin-intl"
 
 export interface CallToActionImageProps {
   linkTo: string;
@@ -37,7 +38,7 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
         }
       }}
     >
-      <Link className="link" href={data.linkTo}>
+      <Link className="link" to={data.linkTo}>
         <Box sx={{ mt: 4 }}>
             <Img
                 className='ctaImage'

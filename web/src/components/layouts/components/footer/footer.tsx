@@ -1,10 +1,11 @@
 /** @jsx */
 import React from 'react';
-import { Box, Link, Text } from 'theme-ui';
+import { Box, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
 import { NetworskLinks } from './networks-links';
-import localizedText from '../../../../config/localizedText';
+import localizedText from '../../../../config/localized-text';
+import { Link } from "gatsby-plugin-intl"
 
 const footerLocalizedText = localizedText.footer
 
@@ -41,7 +42,7 @@ export const Footer: React.FC = (props) => (
       <Box sx={{ lineHeight: '20px' }}>
         {footerLocalizedText.contacts[loc].map(text =>
           <React.Fragment>
-            <Link href="#">{text}</Link>
+            <Link to="#">{text}</Link>
             <br />
           </React.Fragment>)}
       </Box>

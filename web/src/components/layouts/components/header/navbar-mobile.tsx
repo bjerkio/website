@@ -1,10 +1,11 @@
-import { Box, BoxProps, Button, Link } from '@theme-ui/components';
+import { Box, BoxProps, Button } from '@theme-ui/components';
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import MobileMenu from './mobile-menu';
+import { Link } from "gatsby-plugin-intl"
 
 const styles: SystemStyleObject = {
   width: '100%',
@@ -48,7 +49,7 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
   return (
     <Box {...props} sx={styles}>
       <Box className="logo">
-        <Link href="/">
+        <Link to="/">
           {pathname === '' ? (
             <Logo sx={{ width: '4em', color: 'white' }} />
           ) : (

@@ -1,6 +1,7 @@
 import Img from 'gatsby-image';
 import React, { useState } from 'react';
-import { Box, Heading, Link } from 'theme-ui';
+import { Box, Heading } from 'theme-ui';
+import { Link } from "gatsby-plugin-intl"
 
 export interface CallToActionBoxProps {
   title: string;
@@ -34,7 +35,7 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
       }}
       pr={5}
     >
-      <Link className="link" href={data.linkTo}>
+      <Link className="link" to={data.linkTo}>
         <Box sx={{ width: 100, height: 30, mb: 4 }}>
           {data.image && data.hoverImage && (
             <Img

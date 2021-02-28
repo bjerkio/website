@@ -1,9 +1,10 @@
-import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
+import { Box, BoxProps, Flex } from '@theme-ui/components';
 import React, { useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import localizedText from '../../../../config/localized-text'
 const loc = 'no';
+import { Link } from "gatsby-plugin-intl"
 
 const navbarLocalized = localizedText.navbar;
 
@@ -79,7 +80,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
     <Box sx={styles} {...props}>
       <Box className={navbar ? 'navbar active' : 'navbar'}>
         <Flex className="container">
-          <Link href="/">
+          <Link to="/">
             {!navbar && pathname === '' ? (
               <Logo sx={{ width: '4em', color: 'white' }} />
             ) : (
@@ -88,7 +89,6 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
           </Link>
           <Flex className="linksContainer">
             <Link
-              variant="nav"
               className={
                 pathname === '/services'
                   ? 'link active'
@@ -96,13 +96,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
                   ? 'link'
                   : 'link dark'
               }
-              href="/services"
+              to="/services"
             >
               {navbarLocalized.services[loc]}
             </Link>
             <Link
               sx={{ ml: 5 }}
-              variant="nav"
               className={
                 pathname === '/about'
                   ? 'link active'
@@ -110,13 +109,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
                   ? 'link'
                   : 'link dark'
               }
-              href="/about"
+              to="/about"
             >
               {navbarLocalized.aboutUs[loc]}
             </Link>
             <Link
               sx={{ ml: 5 }}
-              variant="nav"
               className={
                 pathname === '/contact'
                   ? 'link active'
@@ -124,7 +122,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
                   ? 'link'
                   : 'link dark'
               }
-              href="/contact"
+              to="/contact"
             >
               {navbarLocalized.contact[loc]}
             </Link>
