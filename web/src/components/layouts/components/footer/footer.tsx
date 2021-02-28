@@ -36,8 +36,8 @@ export const Footer: React.FC = (props) => {
       <Box>
         <strong>
           <Text sx={{ fontSize: 4, my: 4, lineHeight: '22px' }}>
-            {footerLocalizedText.left[loc].map(text =>
-              <React.Fragment>
+            {footerLocalizedText.left[loc].map((text, index) =>
+              <React.Fragment key={index}>
                 {text}
                 <br />
               </React.Fragment>)}
@@ -45,16 +45,16 @@ export const Footer: React.FC = (props) => {
         </strong>
       </Box>
       <Box sx={{ lineHeight: '20px' }}>
-        {footerLocalizedText.contacts[loc].map(text =>
-          <React.Fragment>
+        {footerLocalizedText.contacts[loc].map((text, index) =>
+          <React.Fragment key={index}>
             <Link to="#">{text}</Link>
             <br />
           </React.Fragment>)}
       </Box>
       <Box>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
-          {footerLocalizedText.address[loc].map(text =>
-            <React.Fragment>
+          {footerLocalizedText.address[loc].map((text, index) =>
+            <React.Fragment key={index}>
               {text}
               <br />
             </React.Fragment>)}
