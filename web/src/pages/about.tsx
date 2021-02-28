@@ -120,7 +120,7 @@ export default ({ data }) => {
               <Label sx={{ fontSize: '1.4rem' }}>
                 {item.bottomBox.description[`${loc}Text`].map(par => par.children[0].text).join('\n')}
               </Label>
-              <Button variant="empty" onClick={() => navigate(`/${item.bottomBox.linkTo.split('/')[1]}`)} my={3}>
+              <Button variant="empty" onClick={() => navigate(`/${item.bottomBox.linkTo.split(/\/(.+)/)[1]}`)} my={3}>
                 {item.bottomBox.buttonText[loc]}
               </Button>
             </Box>
