@@ -14,6 +14,7 @@ const styles: SystemStyleObject = {
     maxWidth: '396px',
     maxHeight: '328px',
     right: '20rem',
+    // position: 'absolute',
     marginTop: '4rem',
     display: ['none', 'none', 'block'],
   },

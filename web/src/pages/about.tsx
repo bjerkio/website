@@ -5,6 +5,7 @@ import React from 'react';
 import { AboutList } from '../components/about-page/about-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
+
 const loc = 'no';
 
 // TODO: fix image showing when Sanity will be done
@@ -81,7 +82,7 @@ query MyQuery {
 `
 
 export default ({ data }) => {
-  const item = data.allSanityAboutPage.nodes[data.allSanityAboutPage.nodes.length - 1]
+  const item = data.allSanityAboutPage.nodes[0]
   if(data && data.allSanityAboutPage && item)
     return (
       <Layout>
