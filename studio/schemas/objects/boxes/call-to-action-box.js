@@ -5,7 +5,16 @@ export default {
   type: 'object',
   fields: [
     {
+      title: 'Image',
       name: 'image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      title: 'Hover Image',
+      name: 'hoverImage',
       type: 'image',
       options: {
         hotspot: true,
@@ -30,11 +39,6 @@ export default {
       name: 'linkTo',
       type: 'url',
       title: 'Link',
-    },
-    {
-      name: 'linkText',
-      type: 'localeString',
-      title: 'Link Text',
     },
   ],
 };

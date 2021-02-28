@@ -31,8 +31,14 @@ export default {
     },
     {
       title: 'Top title',
-      description: 'First title and description',
+      description: 'Top page title',
       name: 'homePageTopTitle',
+      type: 'localeString',
+    },
+    {
+      title: 'Top description',
+      description: 'Top page description',
+      name: 'homePageTopDescription',
       type: 'pageText',
     },
     {
