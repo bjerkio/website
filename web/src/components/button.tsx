@@ -4,7 +4,7 @@ import {
   Button as ThemeUIButton,
   ButtonProps as ThemeUIButtonProps,
 } from '@theme-ui/components';
-import { Link } from "gatsby-plugin-intl"
+import { Link } from 'gatsby-plugin-intl';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 

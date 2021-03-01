@@ -15,13 +15,13 @@ export default {
     en: 'English version',
     englishVersion: {
       no: 'Engelsk versjon',
-      en: 'English version'
+      en: 'English version',
     },
     no: 'Norsk versjon',
     norwegianVersion: {
       no: 'Norsk versjon',
-      en: 'Norwegian version'
-    }
+      en: 'Norwegian version',
+    },
   },
   sayHiFooter: {
     title: {

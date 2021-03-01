@@ -1,8 +1,8 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
+import { Link } from 'gatsby-plugin-intl';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
-import { Link } from "gatsby-plugin-intl"
 
 const styles: SystemStyleObject = {
   width: '100%',
@@ -29,15 +29,9 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
         dotColor="white"
         sx={{ color: 'black', width: '4em', mb: 5, ml: 5 }}
       />
-      <Link to="/services">
-        Tjenester
-      </Link>
-      <Link to="/about">
-        Om oss
-      </Link>
-      <Link to="/contact">
-        Kontakt oss
-      </Link>
+      <Link to="/services">Tjenester</Link>
+      <Link to="/about">Om oss</Link>
+      <Link to="/contact">Kontakt oss</Link>
     </Flex>
   </Box>
 );

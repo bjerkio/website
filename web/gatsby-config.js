@@ -61,11 +61,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: 'gatsby-plugin-intl',
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`no`,`en`],
-        defaultLanguage: `no`,
+        languages: ['no', 'en'],
+        defaultLanguage: 'no',
         redirect: true,
       },
     },

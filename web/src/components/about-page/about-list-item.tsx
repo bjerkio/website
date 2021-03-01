@@ -24,38 +24,48 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
         }
         px={5}
       >
-        {data.textAlign === 'right' && <>
-          <Box px={4}>
-            <Img
-              imgStyle={{objectFit: 'contain'}}
-              fluid={data.image}
-              durationFadeIn={0}
-              fadeIn={false}
-              draggable={false}
-            />
-          </Box>
-          <Box>
-            <Heading>{data.title}</Heading>
-            {data.descriptionArray.map(descriptionLine => 
-              <Label mt={3}>{descriptionLine}</Label>)}
-          </Box>
-        </>}
-        {data.textAlign === 'left' && <>
-          <Box>
-            <Heading>{data.title}</Heading>
-            {data.descriptionArray.map(descriptionLine => 
-              <Label mt={3}>{descriptionLine}</Label>)}
-          </Box>
-          <Box px={4}>
-            <Img
-              imgStyle={{objectFit: 'contain'}}
-              fluid={data.image}
-              durationFadeIn={0}
-              fadeIn={false}
-              draggable={false}
-            />
-          </Box>
-        </>}
+        {data.textAlign === 'right' && (
+          <>
+            <Box px={4}>
+              <Img
+                imgStyle={{ objectFit: 'contain' }}
+                fluid={data.image}
+                durationFadeIn={0}
+                fadeIn={false}
+                draggable={false}
+              />
+            </Box>
+            <Box>
+              <Heading>{data.title}</Heading>
+              {data.descriptionArray.map((descriptionLine, index) => (
+                <Label key={index} mt={3}>
+                  {descriptionLine}
+                </Label>
+              ))}
+            </Box>
+          </>
+        )}
+        {data.textAlign === 'left' && (
+          <>
+            <Box>
+              <Heading>{data.title}</Heading>
+              {data.descriptionArray.map((descriptionLine, index) => (
+                <Label key={index} mt={3}>
+                  {descriptionLine}
+                </Label>
+              ))}
+            </Box>
+            <Box px={4}>
+              <Img
+                imgStyle={{ objectFit: 'contain' }}
+                fluid={data.image}
+                durationFadeIn={0}
+                fadeIn={false}
+                draggable={false}
+              />
+            </Box>
+          </>
+        )}
       </Grid>
     </Container>
   </Box>

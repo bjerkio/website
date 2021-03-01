@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Label, Link } from '@theme-ui/components';
+import Img from 'gatsby-image';
 import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
-import Img from 'gatsby-image';
 import { EmployeeList } from '../components/contact/employee-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
@@ -24,74 +24,73 @@ const styles: SystemStyleObject = {
 };
 
 export const query = graphql`
-query contactQuery {
-  allSanityContactPage {
-    nodes {
-      mainBox {
-        title {
-          en
-          no
-        }
-        description {
-          enText {
-            children {
-              text
+  query contactQuery {
+    allSanityContactPage {
+      nodes {
+        mainBox {
+          title {
+            en
+            no
+          }
+          description {
+            enText {
+              children {
+                text
+              }
+            }
+            noText {
+              children {
+                text
+                marks
+              }
             }
           }
-          noText {
-            children {
-              text
-              marks
-            }
-          }
-        }
-        image {
-          asset {
-            fluid {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
-      boxes {
-        description {
-          enText {
-            children {
-              text
-              marks
-            }
-          }
-          noText {
-            children {
-              text
-              marks
+          image {
+            asset {
+              fluid {
+                ...GatsbySanityImageFluid
+              }
             }
           }
         }
-        image {
-          asset {
-            fluid {
-              ...GatsbySanityImageFluid
+        boxes {
+          description {
+            enText {
+              children {
+                text
+                marks
+              }
+            }
+            noText {
+              children {
+                text
+                marks
+              }
+            }
+          }
+          image {
+            asset {
+              fluid {
+                ...GatsbySanityImageFluid
+              }
             }
           }
         }
       }
     }
   }
-}
-
-`
+`;
 
 // TODO: replace image with gatsby-image when sanity will done
-export default ({ data }) => {
-  
-  const [loc, setLoc] = useState('no')
+export default ({ data: { allSanityContactPage } }) => {
+  const [loc, setLoc] = useState('no');
   useEffect(() => {
-    setLoc(window.location.href.split('/')[3])
+    setLoc(window.location.href.split('/')[3]);
   }, []);
 
-  const item = data.allSanityContactPage.nodes[data.allSanityContactPage.nodes.length - 1]
-  if(data && data.allSanityContactPage && item && loc)
+  const item =
+    allSanityContactPage.nodes[allSanityContactPage.nodes.length - 1];
+  if (item && loc)
     return (
       <Layout>
         <Container>
@@ -114,11 +113,18 @@ export default ({ data }) => {
                       fontSize: [2, 3, 3],
                     }}
                   >
-                    {item.mainBox.description[`${loc}Text`].map(par => par.children[0]).map(({ text, marks }) =>
-                      marks && marks.length > 0 && marks[0] && marks[0] === 'underline'   // TODO: create parser for marks property
-                        ? <Link sx={{ color: 'black' }}>{text}</Link>
-                        : <Label>{text}</Label>
-                    )}
+                    {item.mainBox.description[`${loc}Text`]
+                      .map((par) => par.children[0])
+                      .map(({ text, marks }) =>
+                        marks &&
+                        marks.length > 0 &&
+                        marks[0] &&
+                        marks[0] === 'underline' ? ( // TODO: create parser for marks property
+                          <Link sx={{ color: 'black' }}>{text}</Link>
+                        ) : (
+                          <Label>{text}</Label>
+                        ),
+                      )}
                   </Box>
                   <Box className="mobileImage">
                     <Img
@@ -140,17 +146,26 @@ export default ({ data }) => {
               </Box>
             </Flex>
             <EmployeeList
-              data={item.boxes.map(box => ({    // TODO: create parser for these types
-                name: box.description[`${loc}Text`].map(par => par.children[0].text)[0],
-                position: box.description[`${loc}Text`].map(par => par.children[0].text)[1],
-                email: box.description[`${loc}Text`].map(par => par.children[0].text)[2],
-                phoneNumber: box.description[`${loc}Text`].map(par => par.children[0].text)[3],
-                photo: box.image.asset.fluid
+              data={item.boxes.map((box) => ({
+                // TODO: create parser for these types
+                name: box.description[`${loc}Text`].map(
+                  (par) => par.children[0].text,
+                )[0],
+                position: box.description[`${loc}Text`].map(
+                  (par) => par.children[0].text,
+                )[1],
+                email: box.description[`${loc}Text`].map(
+                  (par) => par.children[0].text,
+                )[2],
+                phoneNumber: box.description[`${loc}Text`].map(
+                  (par) => par.children[0].text,
+                )[3],
+                photo: box.image.asset.fluid,
               }))}
             />
           </Box>
         </Container>
       </Layout>
     );
-  return ''
+  return '';
 };

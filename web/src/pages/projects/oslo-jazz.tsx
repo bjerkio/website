@@ -1,13 +1,13 @@
 /** @jsx */
-import { Box, Heading, Label } from '@theme-ui/components';
-import React, { useEffect, useState } from 'react';
-import Img from 'gatsby-image';
+import { Box, Heading } from '@theme-ui/components';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import React, { useEffect, useState } from 'react';
 import { Container } from '../../components/container';
 import { Layout } from '../../components/layouts';
 
 export const query = graphql`
-query osloJazzQuery {
+  query osloJazzQuery {
     allSanityOsloJazzPage {
       nodes {
         osloJazzInfo {
@@ -38,18 +38,17 @@ query osloJazzQuery {
       }
     }
   }
-  
-`
+`;
 
-export default ({ data }) => {
-  
-  const [loc, setLoc] = useState('no')
+export default ({ data: { allSanityOsloJazzPage } }) => {
+  const [loc, setLoc] = useState('no');
   useEffect(() => {
-    setLoc(window.location.href.split('/')[3])
+    setLoc(window.location.href.split('/')[3]);
   }, []);
 
-  const item = data.allSanityOsloJazzPage.nodes[data.allSanityOsloJazzPage.nodes.length - 1]
-  if(data && data.allSanityOsloJazzPage && item && loc)
+  const item =
+    allSanityOsloJazzPage.nodes[allSanityOsloJazzPage.nodes.length - 1];
+  if (item && loc)
     return (
       <Layout>
         <Box>
@@ -58,19 +57,31 @@ export default ({ data }) => {
               {item.osloJazzInfo.title[loc]}
             </Heading>
             <Box sx={{ mt: 4 }}>
-                <Img
-                    fluid={item.osloJazzInfo.image.asset.fluid}
-                    durationFadeIn={0}
-                    fadeIn={false}
-                    draggable={false}
-                />
+              <Img
+                fluid={item.osloJazzInfo.image.asset.fluid}
+                durationFadeIn={0}
+                fadeIn={false}
+                draggable={false}
+              />
             </Box>
-            {item.osloJazzInfo.description[`${loc}Text`].map(par => 
-            <Heading as="h2" sx={{ mt: 5, mb: 3, fontWeight: 'normal', marginLeft: '25%', marginRight: '25%' }}>
-                {par.children[0].text}  
-            </Heading>)}
+            {item.osloJazzInfo.description[`${loc}Text`].map((par, index) => (
+              <Heading
+                key={index}
+                as="h2"
+                sx={{
+                  mt: 5,
+                  mb: 3,
+                  fontWeight: 'normal',
+                  marginLeft: '25%',
+                  marginRight: '25%',
+                }}
+              >
+                {par.children[0].text}
+              </Heading>
+            ))}
           </Container>
         </Box>
-      </Layout>)
-  return ''
+      </Layout>
+    );
+  return '';
 };
