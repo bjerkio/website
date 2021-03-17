@@ -6,6 +6,7 @@ import { Container } from '../components/container';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
+import CallToActionImage from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
@@ -32,6 +33,8 @@ const actionBoxMockup: CallToActionBoxProps[] = [
     linkTo: '/services',
   },
 ];
+
+const imagesActionBoxMockup = [];
 
 const Homepage: React.FC = () => (
   <Layout>
@@ -71,6 +74,16 @@ const Homepage: React.FC = () => (
             </CallToActionBox>
           ))}
         </Grid>
+      </Container>
+      <Container>
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+          <Label sx={{ fontWeight: 'normal' }}>
+            Sjekk ut noe av det vi har gjort
+          </Label>
+        </Box>
+        {imagesActionBoxMockup.map((ctaimage, index) => (
+          <CallToActionImage key={index} data={ctaimage} />
+        ))}
       </Container>
     </Box>
   </Layout>
