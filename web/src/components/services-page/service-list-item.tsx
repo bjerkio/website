@@ -1,7 +1,6 @@
 import Img, { FluidObject } from 'gatsby-image';
-import { Link } from 'gatsby-plugin-intl';
 import React from 'react';
-import { Box, Button, Container, Grid, Heading, Label } from 'theme-ui';
+import { Box, Button, Container, Grid, Heading, Label, Link } from 'theme-ui';
 
 // TODO: Replace with automatically generated types when available from Sanity.
 // TODO: fix image showing when Sanity will be done
@@ -36,7 +35,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             <Heading pb={3}>{data.title}</Heading>
             <Label>{data.description}</Label>
             <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
-              <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
+              <Link href={data.url.navigationLink}>{data.url.linkText}</Link>
             </Button>
           </Box>
           <Box px={4}>
@@ -63,7 +62,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             <Heading pb={3}>{data.title}</Heading>
             <Label>{data.description}</Label>
             <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
-              <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
+              <Link href={data.url.navigationLink}>{data.url.linkText}</Link>
             </Button>
           </Box>
         </>

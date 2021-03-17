@@ -1,7 +1,6 @@
 import Img from 'gatsby-image';
-import { Link } from 'gatsby-plugin-intl';
 import React from 'react';
-import { Box } from 'theme-ui';
+import { Box, Link } from 'theme-ui';
 
 export interface CallToActionImageProps {
   linkTo: string;

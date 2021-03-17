@@ -1,7 +1,6 @@
 import Img from 'gatsby-image';
-import { Link } from 'gatsby-plugin-intl';
 import React, { useState } from 'react';
-import { Box, Heading } from 'theme-ui';
+import { Box, Heading, Link } from 'theme-ui';
 
 export interface CallToActionBoxProps {
   title: string;
