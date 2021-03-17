@@ -1,7 +1,7 @@
 import Img, { FluidObject } from 'gatsby-image';
+import { Link } from 'gatsby-plugin-intl';
 import React from 'react';
-import { Box, Button, Container, Flex, Grid, Heading, Label } from 'theme-ui';
-import { Link } from '../custom-link';
+import { Box, Button, Container, Grid, Heading, Label } from 'theme-ui';
 
 // TODO: Replace with automatically generated types when available from Sanity.
 // TODO: fix image showing when Sanity will be done
@@ -14,49 +14,65 @@ export interface ServiceListItemProps {
     navigationLink: string;
     linkText: string;
   };
-  serviceImage?: FluidObject;
-  personPhoto?: FluidObject;
+  image?: FluidObject;
   textAlign: 'left' | 'right';
-  dividedPhoto?: FluidObject;
+  dividedImage?: FluidObject;
 }
 
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
   data,
 }) => (
-  <Container id={data.name} sx={{ mt: 4 }}>
-    <Grid gap={2} columns={[1, 1, 2]} px={5}>
-      <Box>
-        <Heading pb={3}>{data.title}</Heading>
-        <Label>{data.description}</Label>
-        <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
-          <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
-        </Button>
-      </Box>
-      <Box sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}>
-        <Flex>
-          <Img
-            fluid={
-              data.textAlign === 'left' ? data.personPhoto : data.serviceImage
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-          <Img
-            fluid={
-              data.textAlign === 'left' ? data.serviceImage : data.personPhoto
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-        </Flex>
-      </Box>
+  <Container id={data.name} sx={{ mt: 6 }}>
+    <Grid
+      gap={0}
+      columns={
+        data.textAlign === 'right' ? [1, 1, '2fr 3fr'] : [1, 1, '3fr 2fr']
+      }
+      px={5}
+    >
+      {data.textAlign === 'left' && (
+        <>
+          <Box>
+            <Heading pb={3}>{data.title}</Heading>
+            <Label>{data.description}</Label>
+            <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
+              <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
+            </Button>
+          </Box>
+          <Box px={4}>
+            <Img
+              fluid={data.image}
+              durationFadeIn={0}
+              fadeIn={false}
+              draggable={false}
+            />
+          </Box>
+        </>
+      )}
+      {data.textAlign === 'right' && (
+        <>
+          <Box px={4}>
+            <Img
+              fluid={data.image}
+              durationFadeIn={0}
+              fadeIn={false}
+              draggable={false}
+            />
+          </Box>
+          <Box>
+            <Heading pb={3}>{data.title}</Heading>
+            <Label>{data.description}</Label>
+            <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
+              <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
+            </Button>
+          </Box>
+        </>
+      )}
     </Grid>
-    {data.dividedPhoto && (
-      <Box sx={{ width: '100%', height: 'auto' }}>
+    {data.dividedImage && (
+      <Box sx={{ width: '100%', height: 'auto', mt: 6 }}>
         <Img
-          fluid={data.dividedPhoto}
+          fluid={data.dividedImage}
           durationFadeIn={0}
           fadeIn={false}
           draggable={false}
