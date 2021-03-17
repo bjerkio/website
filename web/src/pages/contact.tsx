@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Label, Link } from '@theme-ui/components';
+import Img from 'gatsby-image';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import MapSvg from '../assets/map.svg';
@@ -12,9 +13,9 @@ const styles: SystemStyleObject = {
     height: '20rem',
     maxWidth: '396px',
     maxHeight: '328px',
-    right: '15rem',
+    right: '17rem',
     position: 'absolute',
-    top: '15rem',
+    marginTop: '4rem',
     display: ['none', 'none', 'block'],
   },
   '.mobileImage': {
@@ -28,7 +29,7 @@ const Contact: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <Box sx={styles}>
+        <Box px={0} sx={styles}>
           <Flex>
             <Box>
               <Heading
@@ -58,7 +59,12 @@ const Contact: React.FC = () => {
               </Flex>
             </Box>
             <Box className="image">
-              <MapSvg />
+              <Img
+                fluid={null}
+                durationFadeIn={0}
+                fadeIn={false}
+                draggable={false}
+              />
             </Box>
           </Flex>
           <EmployeeList
