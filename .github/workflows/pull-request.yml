@@ -2,7 +2,7 @@ on:
   pull_request:
     
 jobs:
-  pull_request:
+  build-test-lint:
     runs-on: ubuntu-20.04
     name: Build, Test and Lint
 
@@ -26,3 +26,21 @@ jobs:
       - run: yarn lint
       - run: yarn build
       - run: yarn test
+  audit:
+    runs-on: ubuntu-20.04
+    name: Lighthouse Audit
+
+    steps:
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: 'bjerk-website-dev'
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+          # ${{ steps.netlify.outputs.url }}/products/ <-- IMPROVE THIS!
+          # budgetPath: ./budget.json
+          # uploadArtifacts: true
