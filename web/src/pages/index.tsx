@@ -1,6 +1,7 @@
 /** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import React from 'react';
+import BjerkVideo from '../assets/Bjerk.mp4';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
@@ -38,18 +39,18 @@ const Homepage: React.FC = () => (
     <Box>
       <IntroVideo
         data={{
-          videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
+          videoUrl: BjerkVideo,
           videoTitle: null,
         }}
       >
         <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
-          <Label sx={{ fontWeight: 'normal' }}>
+          <Label sx={{ fontWeight: 'normal', overflowWrap: 'normal' }}>
             Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
           </Label>
           <Button href="/contact">Start ditt prosjekt</Button>
         </Box>
       </IntroVideo>
-      <Container sx={{ pt: 6 }}>
+      <Container sx={{ marginTop: '230px' }}>
         <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
           Hvordan kan vi hjelpe deg?
         </Heading>
