@@ -1,3 +1,4 @@
+name: PR
 on:
   pull_request:
     
@@ -43,4 +44,4 @@ jobs:
             ${{ steps.netlify.outputs.url }}
           # ${{ steps.netlify.outputs.url }}/products/ <-- IMPROVE THIS!
           # budgetPath: ./budget.json
-          # uploadArtifacts: true
+          uploadArtifacts: true
