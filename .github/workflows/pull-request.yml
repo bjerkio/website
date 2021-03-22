@@ -45,3 +45,4 @@ jobs:
           # ${{ steps.netlify.outputs.url }}/products/ <-- IMPROVE THIS!
           # budgetPath: ./budget.json
           uploadArtifacts: true
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
