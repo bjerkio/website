@@ -6,10 +6,7 @@ import { Logo } from '../logo';
 import { NetworskLinks } from './networks-links';
 
 export const Footer: React.FC = (props) => (
-  <Container
-    sx={{ mt: 6, pt: [5, 6, 6], bg: 'dark', color: 'white' }}
-    {...props}
-  >
+  <Container sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white' }} {...props}>
     <Box>
       <Logo sx={{ color: 'white', width: '4em' }} />
     </Box>
