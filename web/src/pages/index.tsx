@@ -6,6 +6,9 @@ import { Container } from '../components/container';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
+import CallToActionImage, {
+  CallToActionImageProps,
+} from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
@@ -30,6 +33,29 @@ const actionBoxMockup: CallToActionBoxProps[] = [
       'Våre ansatte har mange års erfaring med både utvikling og leveranse av programvare, og ledelse. Vi bruker Lean-metodikk i våre prosjekter.',
     linkText: 'Les mer',
     linkTo: '/services',
+  },
+];
+
+const projectsBoxesData: CallToActionImageProps[] = [
+  {
+    image: 'tabetalt.png',
+    linkText: 'Tabetalt – En nettbutikkleverandør',
+    linkTo: '/projects/tabetalt',
+  },
+  {
+    image: 'oslojazz.png',
+    linkText: 'Oslo Jazz',
+    linkTo: '/projects/oslojazz',
+  },
+  {
+    image: 'lent.png',
+    linkText: 'Lent – Læringsapplikasjon',
+    linkTo: '/projects/lent',
+  },
+  {
+    image: 'indiv.png',
+    linkText: 'Indiv',
+    linkTo: '/projects/indiv',
   },
 ];
 
@@ -71,6 +97,16 @@ const Homepage: React.FC = () => (
             </CallToActionBox>
           ))}
         </Grid>
+      </Container>
+      <Container>
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+          <Label sx={{ fontWeight: 'normal' }}>
+            Sjekk ut noe av det vi har gjort
+          </Label>
+        </Box>
+        {projectsBoxesData.map((item, index) => (
+          <CallToActionImage key={index} data={item} />
+        ))}
       </Container>
     </Box>
   </Layout>
