@@ -4,6 +4,7 @@ import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface LogoProps extends BoxProps {
   dotColor?: string;
+  color?: string;
 }
 
 export const Logo: React.FC<LogoProps> = ({
