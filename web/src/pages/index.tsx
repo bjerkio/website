@@ -1,7 +1,7 @@
 /** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import React from 'react';
-import BjerkVideo from '../assets/Bjerk.mp4';
+import BjerkVideo from '../assets/Bjerk.webm';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
