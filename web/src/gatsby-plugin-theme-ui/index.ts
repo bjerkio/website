@@ -37,13 +37,14 @@ const theme = {
   buttons: {
     primary: {
       fontFamily: 'body',
+      borderRadius: '8px',
     },
     empty: {
       color: 'black',
       backgroundColor: 'background',
       border: '1px solid',
       borderColor: 'primary',
-      borderRadius: '10px',
+      borderRadius: '15px',
       display: 'flex',
       alignItems: 'center',
       maxWidth: '250px',
