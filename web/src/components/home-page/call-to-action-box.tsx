@@ -1,4 +1,3 @@
-import Img from 'gatsby-image';
 import React, { useState } from 'react';
 import { Box, Heading, Link } from 'theme-ui';
 
@@ -23,6 +22,7 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
       onMouseOut={() => setHover(false)}
       sx={{
         ':hover': {
+          cursor: 'pointer',
           '.link': {
             borderBottom: '2px solid',
           },
@@ -31,18 +31,14 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
           color: 'text',
           textDecoration: 'none',
         },
+        '.img': {
+          height: '50px',
+        },
       }}
     >
-      <Box sx={{ width: 100, height: 30, mb: 4 }}>
+      <Box sx={{ width: 100, height: 30, marginBottom: 40 }}>
         {data.image && data.hoverImage && (
-          <Img
-            fluid={
-              !hover ? data.image.asset.fluid : data.hoverImage.asset.fluid
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
+          <img className="img" src={hover ? data.hoverImage : data.image} />
         )}
       </Box>
       <Heading sx={{ mb: 3 }}>{data.title}</Heading>

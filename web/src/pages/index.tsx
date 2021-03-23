@@ -19,6 +19,8 @@ const actionBoxMockup: CallToActionBoxProps[] = [
       'Bjerk driver med utvikling av desktop- og mobilapplikasjoner. Vi leverer digitale løsninger basert på moderne teknologi og metoder.',
     linkText: 'Les mer',
     linkTo: '/services',
+    image: 'Code.svg',
+    hoverImage: 'Code_hover.svg',
   },
   {
     title: 'Strategisk rådgivning',
@@ -26,6 +28,8 @@ const actionBoxMockup: CallToActionBoxProps[] = [
       'Skal bedriften din gjennom en digitaliserings-prosess? Bjerk bistår deg og dine ansatte med alt fra digitale løsninger til endringsledelse.',
     linkText: 'Les mer',
     linkTo: '/services',
+    image: 'Strategic_advice.svg',
+    hoverImage: 'Strategic_advice_hover.svg',
   },
   {
     title: 'Prosjektledelse',
@@ -33,6 +37,8 @@ const actionBoxMockup: CallToActionBoxProps[] = [
       'Våre ansatte har mange års erfaring med både utvikling og leveranse av programvare, og ledelse. Vi bruker Lean-metodikk i våre prosjekter.',
     linkText: 'Les mer',
     linkTo: '/services',
+    image: 'ProjectManagement.svg',
+    hoverImage: 'ProjectManagement_hover.svg',
   },
 ];
 
@@ -87,7 +93,7 @@ const Homepage: React.FC = () => (
         <Grid
           pt={5}
           sx={{
-            gap: 3,
+            gap: 5,
             gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
           }}
         >

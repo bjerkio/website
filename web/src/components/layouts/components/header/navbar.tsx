@@ -42,12 +42,6 @@ const styles: SystemStyleObject = {
     color: 'background',
     textDecoration: 'underline',
   },
-  '.link.active': {
-    color: 'lightGreen',
-  },
-  '.link.dark': {
-    color: 'black',
-  },
 };
 
 const Navbar: React.FC<BoxProps> = ({ ...props }) => {
@@ -70,30 +64,32 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
     }
   };
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && pathname === '') {
     window.addEventListener('scroll', changeBackground);
   }
-
   return (
     <Box sx={styles} {...props}>
       <Box className={navbar ? 'navbar active' : 'navbar'}>
         <Flex className="container">
           <Link href="/" className="logo-link">
             {!navbar && pathname === '' ? (
-              <Logo sx={{ color: 'white', width: '6em' }} />
+              <Logo color="white" sx={{ width: '6em', color: 'white' }} />
             ) : (
-              <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '6em' }} />
+              <Logo
+                dotColor="#0FCFA2"
+                color="black"
+                sx={{ width: '6em', color: 'black' }}
+              />
             )}
           </Link>
           <Flex className="linksContainer">
             <Link
-              variant="nav"
-              className={
+              color={
                 pathname === '/services'
-                  ? 'link active'
+                  ? 'lightGreen'
                   : pathname === '' && !navbar
-                  ? 'link'
-                  : 'link dark'
+                  ? 'background'
+                  : 'black'
               }
               href="/services"
             >
@@ -101,13 +97,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
             </Link>
             <Link
               sx={{ ml: 5 }}
-              variant="nav"
-              className={
+              color={
                 pathname === '/about'
-                  ? 'link active'
+                  ? 'lightGreen'
                   : pathname === '' && !navbar
-                  ? 'link'
-                  : 'link dark'
+                  ? 'background'
+                  : 'black'
               }
               href="/about"
             >
@@ -115,13 +110,12 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
             </Link>
             <Link
               sx={{ ml: 5 }}
-              variant="nav"
-              className={
+              color={
                 pathname === '/contact'
-                  ? 'link active'
+                  ? 'lightGreen'
                   : pathname === '' && !navbar
-                  ? 'link'
-                  : 'link dark'
+                  ? 'background'
+                  : 'black'
               }
               href="/contact"
             >
