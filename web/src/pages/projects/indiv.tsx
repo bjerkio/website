@@ -1,4 +1,3 @@
-/** @jsx */
 import { Box, Heading } from '@theme-ui/components';
 import React from 'react';
 import { Container } from '../../components/container';
