@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Heading, Link } from 'theme-ui';
+import { Box, Heading, Link, ThemeUIStyleObject } from 'theme-ui';
 
 export interface CallToActionBoxProps {
   title: string;
@@ -8,11 +8,12 @@ export interface CallToActionBoxProps {
   linkText?: string;
   image?: any;
   hoverImage?: any;
+  imageStyle?: ThemeUIStyleObject;
 }
 
 const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
   children,
-  data,
+  data: { title, linkTo, linkText, image, hoverImage, imageStyle },
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -33,20 +34,21 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
         },
         '.img': {
           height: '50px',
+          ...imageStyle,
         },
       }}
     >
       <Box sx={{ width: 100, height: 30, marginBottom: 40 }}>
-        {data.image && data.hoverImage && (
-          <img className="img" src={hover ? data.hoverImage : data.image} />
+        {image && hoverImage && (
+          <img className="img" src={hover ? hoverImage : image} />
         )}
       </Box>
-      <Heading sx={{ mb: 3 }}>{data.title}</Heading>
+      <Heading sx={{ mb: 3 }}>{title}</Heading>
       <Box>{children}</Box>
       <Box mt={4}>
-        {data.linkTo && (
-          <Link className="link" href={data.linkTo}>
-            {data.linkText}
+        {linkTo && (
+          <Link className="link" href={linkTo}>
+            {linkText}
           </Link>
         )}
       </Box>
