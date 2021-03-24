@@ -5,11 +5,13 @@ import Button from '../../../button';
 
 const styles: ThemeUIStyleObject = {
   mb: 0,
+  px: [5, 5, 6],
+  maxWidth: '1920px',
+  backgroundColor: '#393E46',
   '.container': {
     mt: 5,
-    backgroundColor: '#393E46',
-    px: 6,
     py: '12%',
+    px: 0,
     height: '100%',
     '.header': {
       color: 'white',
@@ -41,7 +43,7 @@ const ContactFooter: React.FC = () => {
     <Box sx={styles}>
       <Container className="container">
         <Grid gap={0} columns={[1, 1, '4fr 5fr']}>
-          <Box px={5}>
+          <Box>
             <Heading className="header">Si hei!</Heading>
             <Label className="label">
               Snakk med oss om ditt prosjekt, så hjelper vi deg fra start til
