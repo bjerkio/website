@@ -60,5 +60,13 @@ module.exports = {
         overlayDrafts: !isProd && token,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-plugin-mdx',
   ],
 };
