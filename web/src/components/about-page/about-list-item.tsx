@@ -1,41 +1,53 @@
-import Img, { FluidObject } from 'gatsby-image';
 import React from 'react';
 import { Box, Container, Grid, Heading, Label } from 'theme-ui';
 
-// TODO: Replace with automatically generated types when available from Sanity.
-// TODO: replace image with gatsby-image when Sanity will be done
-
 export interface AboutListItemProps {
   title: string;
-  description: string;
-  image?: FluidObject;
+  descriptionArray: string[];
+  image?: any;
   textAlign: 'left' | 'right';
 }
 
 export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
-  data,
+  data: { title, descriptionArray, image, textAlign },
 }) => (
   <Box>
     <Container sx={{ mt: 6 }}>
       <Grid
-        gap={2}
-        columns={
-          data.textAlign === 'right' ? [1, 1, '1fr 2fr'] : [1, 1, '2fr 1fr']
-        }
+        gap={0}
+        columns={textAlign === 'right' ? [1, 1, '4fr 7fr'] : [1, 1, '7fr 4fr']}
         px={5}
       >
-        <Box>
-          <Heading pb={3}>{data.title}</Heading>
-          <Label>{data.description}</Label>
-        </Box>
-        <Box sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}>
-          <Img
-            fluid={data.image}
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-        </Box>
+        {textAlign === 'right' && (
+          <>
+            <Box px={4}>
+              <img src={`../${image}`} style={{ width: '90%' }} />
+            </Box>
+            <Box>
+              <Heading>{title}</Heading>
+              {descriptionArray.map((descriptionLine, index) => (
+                <Label key={index} mt={3}>
+                  {descriptionLine}
+                </Label>
+              ))}
+            </Box>
+          </>
+        )}
+        {textAlign === 'left' && (
+          <>
+            <Box>
+              <Heading>{title}</Heading>
+              {descriptionArray.map((descriptionLine, index) => (
+                <Label key={index} mt={3}>
+                  {descriptionLine}
+                </Label>
+              ))}
+            </Box>
+            <Box px={4}>
+              <img src={`../${image}`} style={{ width: '90%' }} />
+            </Box>
+          </>
+        )}
       </Grid>
     </Container>
   </Box>
