@@ -32,8 +32,6 @@ const styles: ThemeUIStyleObject = {
     },
     '.button': {
       mt: 4,
-      px: 4,
-      py: 3,
     },
   },
 };
