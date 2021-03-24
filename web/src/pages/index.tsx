@@ -52,7 +52,7 @@ const Homepage: React.FC = () => (
         }}
       >
         <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
-          <Label sx={{ fontWeight: 'normal' }}>
+          <Label sx={{ fontWeight: '600' }}>
             Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
           </Label>
           <Button href="/contact">Start ditt prosjekt</Button>
@@ -60,15 +60,15 @@ const Homepage: React.FC = () => (
       </IntroVideo>
       <Container sx={{ pt: 6 }}>
         <Heading
-          sx={{ mb: 3, fontWeight: '600', fontSize: 'clamp(16px, 8vw, 50px)' }}
+          sx={{ mb: 3, fontWeight: '600', fontSize: 'clamp(16px, 8vw, 48px)' }}
         >
           Hvordan kan vi hjelpe deg?
         </Heading>
         <Box
           sx={{
-            width: '60%',
+            width: '65%',
             fontWeight: 'normal',
-            fontSize: 'clamp(10px, 5vw, 24px)',
+            fontSize: 'clamp(8px, 4vw, 22px)',
           }}
         >
           Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
