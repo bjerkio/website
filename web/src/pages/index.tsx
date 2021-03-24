@@ -18,6 +18,9 @@ const actionBoxMockup: CallToActionBoxProps[] = [
     linkTo: '/services',
     image: 'Code.svg',
     hoverImage: 'Code_hover.svg',
+    imageStyle: {
+      ml: '-5%',
+    },
   },
   {
     title: 'Strategisk rådgivning',
