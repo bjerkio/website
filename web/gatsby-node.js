@@ -1,40 +1,35 @@
-async function createPages(graphql, actions, reporter) {
+const path = require('path');
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
+
   const result = await graphql(`
-    {
-      allSanityPage(filter: { slug: { current: { ne: null } } }) {
+    query {
+      allMdx {
         edges {
           node {
             id
-            slug {
-              current
+            frontmatter {
+              slug
             }
-            title
-            _rawContent
           }
         }
       }
     }
   `);
 
-  if (result.errors) throw result.errors;
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
+  }
+  const projects = result.data.allMdx.edges;
 
-  const edges = (result.data.allSanityPage || {}).edges || [];
-
-  edges.forEach((edge) => {
-    const slug = edge.node.slug.current;
-    const path = `/${slug}/`;
-
-    reporter.info(`Creating page: ${path}`);
-
-    createPage({
-      path,
-      component: require.resolve('./src/components/layouts/page.tsx'),
-      context: edge.node,
+  projects
+    .filter(({ node }) => node.slug)
+    .forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.slug,
+        component: path.resolve('./src/templates/project.js'),
+        context: { id: node.id },
+      });
     });
-  });
-}
-
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  await createPages(graphql, actions, reporter);
 };
