@@ -20,6 +20,9 @@ const styles: SystemStyleObject = {
   '.navbar.active': {
     bg: 'background',
   },
+  '.navbar.white': {
+    bg: 'white',
+  },
   '.linksContainer': {
     flexGrow: 1,
     fontSize: 3,
@@ -69,7 +72,11 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
   }
   return (
     <Box sx={styles} {...props}>
-      <Box className={navbar || pathname !== '' ? 'navbar active' : 'navbar'}>
+      <Box
+        className={
+          pathname !== '' ? 'navbar white' : navbar ? 'navbar active' : 'navbar'
+        }
+      >
         <Flex className="container">
           <Link href="/" className="logo-link">
             {!navbar && pathname === '' ? (
