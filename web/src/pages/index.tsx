@@ -51,18 +51,26 @@ const Homepage: React.FC = () => (
           videoTitle: null,
         }}
       >
-        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
-          <Label sx={{ fontWeight: 'normal' }}>
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
+          <Label sx={{ fontWeight: '600' }}>
             Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
           </Label>
           <Button href="/contact">Start ditt prosjekt</Button>
         </Box>
       </IntroVideo>
       <Container sx={{ pt: 6 }}>
-        <Heading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+        <Heading
+          sx={{ mb: 3, fontWeight: '600', fontSize: 'clamp(16px, 8vw, 48px)' }}
+        >
           Hvordan kan vi hjelpe deg?
         </Heading>
-        <Box sx={{ width: '60%' }}>
+        <Box
+          sx={{
+            width: '65%',
+            fontWeight: 'normal',
+            fontSize: 'clamp(8px, 4vw, 22px)',
+          }}
+        >
           Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
           opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
           medium er teknologi, og lidenskapen er å skape.
