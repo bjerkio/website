@@ -1,10 +1,11 @@
 import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 
 const styles: SystemStyleObject = {
-  position: 'fixed',
+  display: ['none', 'none', 'block'],
+  // position: 'fixed',
   width: '100%',
   zIndex: 3,
   '.navbar': {
@@ -20,7 +21,7 @@ const styles: SystemStyleObject = {
   '.navbar.active': {
     bg: 'background',
   },
-  '.navbar.white': {
+  '.navbarWhite': {
     bg: 'white',
   },
   '.linksContainer': {
@@ -47,34 +48,33 @@ const styles: SystemStyleObject = {
   },
 };
 
-const Navbar: React.FC<BoxProps> = ({ ...props }) => {
+const Navbar: React.FC<BoxProps> = () => {
   let pathname = '';
-
-  if (typeof window !== 'undefined') {
-    pathname =
-      window.location.pathname[window.location.pathname.length - 1] === '/'
-        ? window.location.pathname.slice(0, -1)
-        : window.location.pathname;
-  }
 
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
     if (typeof window !== 'undefined' && window.scrollY >= 70) {
       setNavbar(true);
-    } else {
+    } else if (pathname === '') {
       setNavbar(false);
     }
   };
 
-  if (typeof window !== 'undefined' && pathname === '') {
-    window.addEventListener('scroll', changeBackground);
-  }
+  useEffect(() => {
+    pathname =
+      window.location.pathname[window.location.pathname.length - 1] === '/'
+        ? window.location.pathname.slice(0, -1)
+        : window.location.pathname;
+    if (pathname !== '') setNavbar(true);
+    else window.addEventListener('scroll', changeBackground);
+  }, []);
+
   return (
-    <Box sx={styles} {...props}>
+    <Box sx={styles}>
       <Box
         className={
-          pathname !== '' ? 'navbar white' : navbar ? 'navbar active' : 'navbar'
+          pathname !== '' ? 'navbarWhite' : navbar ? 'navbar active' : 'navbar'
         }
       >
         <Flex className="container">
