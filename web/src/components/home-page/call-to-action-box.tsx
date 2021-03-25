@@ -6,8 +6,8 @@ export interface CallToActionBoxProps {
   description: string;
   linkTo?: string;
   linkText?: string;
-  image?: any;
-  hoverImage?: any;
+  image?: string;
+  hoverImage?: string;
   imageStyle?: ThemeUIStyleObject;
 }
 
