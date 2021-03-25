@@ -69,7 +69,7 @@ const Navbar: React.FC<BoxProps> = ({ ...props }) => {
   }
   return (
     <Box sx={styles} {...props}>
-      <Box className={navbar ? 'navbar active' : 'navbar'}>
+      <Box className={navbar || pathname !== '' ? 'navbar active' : 'navbar'}>
         <Flex className="container">
           <Link href="/" className="logo-link">
             {!navbar && pathname === '' ? (
