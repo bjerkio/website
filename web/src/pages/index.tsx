@@ -1,46 +1,49 @@
-/** @jsx */
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
+import CallToActionImage, {
+  CallToActionImageProps,
+} from '../components/home-page/call-to-action-image';
 import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
-const actionBoxMockup: CallToActionBoxProps[] = [
-  {
-    title: 'Programvareutvikling',
-    description:
-      'Bjerk driver med utvikling av desktop- og mobilapplikasjoner. Vi leverer digitale løsninger basert på moderne teknologi og metoder.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-    image: 'Code.svg',
-    hoverImage: 'Code_hover.svg',
-    imageStyle: {
-      ml: '-5%',
-    },
-  },
-  {
-    title: 'Strategisk rådgivning',
-    description:
-      'Skal bedriften din gjennom en digitaliserings-prosess? Bjerk bistår deg og dine ansatte med alt fra digitale løsninger til endringsledelse.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-    image: 'Strategic_advice.svg',
-    hoverImage: 'Strategic_advice_hover.svg',
-  },
-  {
-    title: 'Prosjektledelse',
-    description:
-      'Våre ansatte har mange års erfaring med både utvikling og leveranse av programvare, og ledelse. Vi bruker Lean-metodikk i våre prosjekter.',
-    linkText: 'Les mer',
-    linkTo: '/services',
-    image: 'ProjectManagement.svg',
-    hoverImage: 'ProjectManagement_hover.svg',
-  },
-];
+const data = useStaticQuery(graphql`
+  query AllQuery {
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            type
+            homePage {
+              title
+              linkTo
+              linkText
+              image
+              hoverImage
+              description
+              imageStyle {
+                ml
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`);
+const filterType = (obj, type) => {
+  return obj.allMdx.edges
+    .filter((edge) => edge.node?.frontmatter)
+    .filter((edge) => edge.node.frontmatter.type === type)
+    .map((edge) => edge.node.frontmatter.homePage);
+};
+const actionBox: CallToActionBoxProps[] = filterType(data, 'services-articles');
+const projectsBox: CallToActionImageProps[] = filterType(data, 'projects');
 
 const Homepage: React.FC = () => (
   <Layout>
@@ -82,12 +85,22 @@ const Homepage: React.FC = () => (
             gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
           }}
         >
-          {actionBoxMockup.map((ctabox, index) => (
+          {actionBox.map((ctabox, index) => (
             <CallToActionBox data={ctabox} key={index}>
               {ctabox.description}
             </CallToActionBox>
           ))}
         </Grid>
+      </Container>
+      <Container>
+        <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
+          <Label sx={{ fontWeight: 'normal' }}>
+            Sjekk ut noe av det vi har gjort
+          </Label>
+        </Box>
+        {projectsBox.map((item, index) => (
+          <CallToActionImage key={index} data={item} />
+        ))}
       </Container>
     </Box>
   </Layout>
