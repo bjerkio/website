@@ -1,24 +1,27 @@
 import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 
 const styles: SystemStyleObject = {
-  position: 'fixed',
+  display: ['none', 'none', 'block'],
   width: '100%',
-  zIndex: 3,
+  zIndex: 100,
   '.navbar': {
     bg: 'transparent',
   },
   '.container': {
     alignItems: 'center',
-    maxWidth: '1440px',
+    maxWidth: '1920px',
     margin: '0 auto',
     py: '25px',
     px: [5, 5, 6],
   },
   '.navbar.active': {
     bg: 'background',
+  },
+  '.navbarWhite': {
+    bg: 'white',
   },
   '.linksContainer': {
     flexGrow: 1,
@@ -44,32 +47,35 @@ const styles: SystemStyleObject = {
   },
 };
 
-const Navbar: React.FC<BoxProps> = ({ ...props }) => {
-  let pathname = '';
-
-  if (typeof window !== 'undefined') {
-    pathname =
-      window.location.pathname[window.location.pathname.length - 1] === '/'
-        ? window.location.pathname.slice(0, -1)
-        : window.location.pathname;
-  }
-
+const Navbar: React.FC<BoxProps> = () => {
   const [navbar, setNavbar] = useState(false);
+  const [pathname, setPathname] = useState('');
 
   const changeBackground = () => {
     if (typeof window !== 'undefined' && window.scrollY >= 70) {
       setNavbar(true);
-    } else {
+    } else if (pathname === '') {
       setNavbar(false);
     }
   };
 
-  if (typeof window !== 'undefined' && pathname === '') {
-    window.addEventListener('scroll', changeBackground);
-  }
+  useEffect(() => {
+    setPathname(
+      window.location.pathname[window.location.pathname.length - 1] === '/'
+        ? window.location.pathname.slice(0, -1)
+        : window.location.pathname,
+    );
+    if (pathname !== '') setNavbar(true);
+    else window.addEventListener('scroll', changeBackground);
+  }, []);
+
   return (
-    <Box sx={styles} {...props}>
-      <Box className={navbar ? 'navbar active' : 'navbar'}>
+    <Box sx={styles}>
+      <Box
+        className={
+          pathname !== '' ? 'navbarWhite' : navbar ? 'navbar active' : 'navbar'
+        }
+      >
         <Flex className="container">
           <Link href="/" className="logo-link">
             {!navbar && pathname === '' ? (

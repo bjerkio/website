@@ -8,25 +8,32 @@ interface IntroVideoProps {
 }
 
 const style: SystemStyleObject = {
-  '.video-container': {
+  '.main-video-container': {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    zIndex: -99,
-    '&::after': {
-      display: 'block',
-      content: '"" !important',
-      position: 'absolute',
+    width: '100%',
+    height: '100%',
+    maxHeight: '1000px',
+    '.video-container': {
+      position: 'relative',
       top: 0,
+      bottom: 0,
+      right: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
-      maxHeight: '800px',
-      zIndex: 1,
-      backgroundColor: 'dark',
-      opacity: 0.5,
+      zIndex: -99,
+      paddingTop: '56.25%' /* Player ratio: 100 / (1280 / 720) */,
+      '&::after': {
+        display: 'block',
+        content: '"" !important',
+        position: 'relative',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        maxHeight: '800px',
+        zIndex: 1,
+        backgroundColor: 'dark',
+        opacity: 0.5,
+      },
     },
   },
   '.data-container': {
@@ -42,6 +49,7 @@ const style: SystemStyleObject = {
     verticalAlign: 'center',
     color: 'background',
     px: [5, 5, 6],
+    paddingTop: '10%',
   },
 };
 
@@ -50,22 +58,25 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
   data,
 }) => (
   <Container sx={style}>
-    <Box className="video-container">
-      <ReactPlayer
-        url={data.videoUrl}
-        playing={true}
-        loop={true}
-        controls={false}
-        volume={0}
-        width="100%"
-        height="100%"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          maxHeight: '800px',
-        }}
-      />
+    <Box className="main-video-container">
+      <Box className="video-container">
+        <ReactPlayer
+          url={data.videoUrl}
+          playing={true}
+          loop={true}
+          controls={false}
+          volume={0}
+          width="100%"
+          height="100%"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      </Box>
     </Box>
     <Container className="data-container">
       <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>

@@ -32,9 +32,9 @@ const styles: SystemStyleObject = {
   },
   button: {
     transition: '.5s',
-    fontSize: 'clamp(8px, 6vw, 16px)',
+    fontSize: 'clamp(8px, 6vw, 17px)',
     color: 'black',
-    fontWeight: 'normal',
+    fontWeight: 'medium',
     cursor: 'pointer',
   },
   a: {
