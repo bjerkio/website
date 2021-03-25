@@ -23,11 +23,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
   const projects = result.data.allMdx.edges;
 
-  projects.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: path.resolve('./src/templates/project.js'),
-      context: { id: node.id },
+  projects
+    .filter(({ node }) => node.slug)
+    .forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.slug,
+        component: path.resolve('./src/templates/project.js'),
+        context: { id: node.id },
+      });
     });
-  });
 };

@@ -7,6 +7,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const token =
   process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN;
 
+const locality = 'no';
+
 module.exports = {
   siteMetadata: {
     title: 'Bjerk.io',
@@ -63,8 +65,29 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/markdown-pages`,
-        name: 'markdown-pages',
+        path: `${__dirname}/src/content/${locality}/projects`,
+        name: 'projects',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/${locality}/about-articles`,
+        name: 'about-articles',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/${locality}/services-articles`,
+        name: 'services-articles',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/${locality}/employees`,
+        name: 'employees',
       },
     },
     'gatsby-plugin-mdx',
