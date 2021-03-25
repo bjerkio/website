@@ -20,11 +20,11 @@ const theme = {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
-    heading: 700,
+    heading: 600,
     bold: 700,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.3,
     heading: 1.125,
   },
   text: {
@@ -37,13 +37,14 @@ const theme = {
   buttons: {
     primary: {
       fontFamily: 'body',
+      borderRadius: '8px',
     },
     empty: {
       color: 'black',
       backgroundColor: 'background',
       border: '1px solid',
       borderColor: 'primary',
-      borderRadius: '10px',
+      borderRadius: '15px',
       display: 'flex',
       alignItems: 'center',
       maxWidth: '250px',
