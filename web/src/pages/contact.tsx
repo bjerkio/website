@@ -1,35 +1,13 @@
 import { Box, Flex, Heading, Label, Link } from '@theme-ui/components';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { EmployeeList } from '../components/contact/exployee-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
-const empoyeeList = [
-  {
-    name: 'Simen A. W. Olsen',
-    position: 'Daglig leder / løsningsarkitekt',
-    email: 'so@bjerk.io',
-    phoneNumber: '+47 953 08 087',
-    photo: 'SimenPhoto.png',
-  },
-  {
-    name: 'Bjørn Niklas Sjøstrøm',
-    position: 'Strategirådgiver',
-    email: 'bns@bjerk.io',
-    phoneNumber: '+47 905 86 616',
-    photo: 'NiklasPhoto.png',
-  },
-  {
-    name: 'Anna Edvardsen',
-    position: 'Prosjektleder',
-    email: 'anna@bjerk.io',
-    phoneNumber: '+47 900 00 000',
-    photo: 'AnnaPhoto.jpeg',
-  },
-];
-
 const styles: SystemStyleObject = {
+  mt: 5,
   '.image': {
     width: '20rem',
     height: '20rem',
@@ -46,11 +24,36 @@ const styles: SystemStyleObject = {
   },
 };
 
-const Contact: React.FC = () => {
+const ContactPage: React.FC = () => {
+  const {
+    allMdx: { edges },
+  } = useStaticQuery(graphql`
+    query ContactQuery {
+      allMdx(
+        filter: { frontmatter: { type: { eq: "employee" } } }
+        sort: { fields: [frontmatter___id], order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              name
+              position
+              email
+              phoneNumber
+              photo
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const empoyeeList = edges.map((edge) => edge.node.frontmatter);
+
   return (
     <Layout>
       <Container>
-        <Box px={0} sx={styles}>
+        <Box sx={styles}>
           <Flex sx={{ mb: 6 }}>
             <Box>
               <Heading
@@ -90,4 +93,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
