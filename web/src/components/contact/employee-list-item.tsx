@@ -2,7 +2,7 @@ import { Box, Container, Flex, Link, Text } from '@theme-ui/components';
 import React from 'react';
 
 export interface EmployeeListItemProps {
-  photo?: any;
+  photo?: string;
   name: string;
   position: string;
   email: string;
