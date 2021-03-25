@@ -68,7 +68,7 @@ const Homepage: React.FC = () => {
             <Button href="/contact">Start ditt prosjekt</Button>
           </Box>
         </IntroVideo>
-        <Container sx={{ pt: 6 }}>
+        <Container sx={{ pt: 7 }}>
           <Heading
             sx={{
               mb: 3,
