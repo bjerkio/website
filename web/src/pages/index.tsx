@@ -1,6 +1,7 @@
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import BjerkVideo from '../assets/Bjerk.webm';
 import Button from '../components/button';
 import { Container } from '../components/container';
 import CallToActionBox, {
@@ -50,7 +51,7 @@ const Homepage: React.FC = () => (
     <Box>
       <IntroVideo
         data={{
-          videoUrl: 'https://www.youtube.com/embed/J1FJaWuPvbQ',
+          videoUrl: BjerkVideo,
           videoTitle: null,
         }}
       >
