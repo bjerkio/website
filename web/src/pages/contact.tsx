@@ -23,7 +23,6 @@ const styles: SystemStyleObject = {
   },
 };
 
-// TODO: replace image with gatsby-image when sanity will done
 const Contact: React.FC = () => {
   return (
     <Layout>

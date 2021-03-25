@@ -3,9 +3,6 @@ import React from 'react';
 import { Box, Button, Container, Flex, Grid, Heading, Label } from 'theme-ui';
 import { Link } from '../custom-link';
 
-// TODO: Replace with automatically generated types when available from Sanity.
-// TODO: fix image showing when Sanity will be done
-
 export interface ServiceListItemProps {
   name: string;
   title: string;
