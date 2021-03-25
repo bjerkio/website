@@ -10,10 +10,10 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <div style={{ height: '60px' }} />
-      <Header sx={{ position: 'sticky', top: 0 }} />
+      <Box sx={{ height: [0, 0, '60px'] }} />
+      <Header sx={{ position: 'sticky', top: 0, zIndex: 100 }} />
       <MobileHeader />
-      <Box>{children}</Box>
+      <Box sx={{ marginTop: [0, 0, '-160px'] }}>{children}</Box>
       <ContactFooter />
       <Footer />
     </>

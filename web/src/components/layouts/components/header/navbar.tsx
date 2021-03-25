@@ -5,9 +5,8 @@ import { Logo } from '../logo';
 
 const styles: SystemStyleObject = {
   display: ['none', 'none', 'block'],
-  // position: 'fixed',
   width: '100%',
-  zIndex: 3,
+  zIndex: 100,
   '.navbar': {
     bg: 'transparent',
   },
@@ -49,9 +48,8 @@ const styles: SystemStyleObject = {
 };
 
 const Navbar: React.FC<BoxProps> = () => {
-  let pathname = '';
-
   const [navbar, setNavbar] = useState(false);
+  const [pathname, setPathname] = useState('');
 
   const changeBackground = () => {
     if (typeof window !== 'undefined' && window.scrollY >= 70) {
@@ -62,10 +60,11 @@ const Navbar: React.FC<BoxProps> = () => {
   };
 
   useEffect(() => {
-    pathname =
+    setPathname(
       window.location.pathname[window.location.pathname.length - 1] === '/'
         ? window.location.pathname.slice(0, -1)
-        : window.location.pathname;
+        : window.location.pathname,
+    );
     if (pathname !== '') setNavbar(true);
     else window.addEventListener('scroll', changeBackground);
   }, []);
