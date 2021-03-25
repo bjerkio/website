@@ -15,7 +15,7 @@ import { Layout } from '../components/layouts';
 
 const data = useStaticQuery(graphql`
   query AllQuery {
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___id], order: ASC }) {
       edges {
         node {
           frontmatter {
