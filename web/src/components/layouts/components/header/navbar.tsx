@@ -12,7 +12,7 @@ const styles: SystemStyleObject = {
   },
   '.container': {
     alignItems: 'center',
-    maxWidth: '1440px',
+    maxWidth: '1920px',
     margin: '0 auto',
     py: '25px',
     px: [5, 5, 6],
