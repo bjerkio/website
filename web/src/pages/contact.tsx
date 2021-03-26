@@ -49,7 +49,6 @@ const ContactPage: React.FC = () => {
   `);
 
   const empoyeeList = edges.map((edge) => edge.node.frontmatter);
-
   return (
     <Layout>
       <Container>
