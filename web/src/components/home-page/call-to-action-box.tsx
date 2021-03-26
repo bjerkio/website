@@ -6,8 +6,8 @@ export interface CallToActionBoxProps {
   description: string;
   linkTo?: string;
   linkText?: string;
-  image?: any;
-  hoverImage?: any;
+  image?: string;
+  hoverImage?: string;
   imageStyle?: ThemeUIStyleObject;
 }
 
@@ -43,11 +43,19 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
           <img className="img" src={hover ? hoverImage : image} />
         )}
       </Box>
-      <Heading sx={{ mb: 3 }}>{title}</Heading>
-      <Box>{children}</Box>
+      <Heading
+        sx={{ mb: 3, fontWeight: '700', fontSize: 'clamp(11px, 5vw, 30px)' }}
+      >
+        {title}
+      </Heading>
+      <Box sx={{ fontSize: 'clamp(8px, 4vw, 22px)' }}>{children}</Box>
       <Box mt={4}>
         {linkTo && (
-          <Link className="link" href={linkTo}>
+          <Link
+            className="link"
+            href={linkTo}
+            sx={{ fontSize: 'clamp(8px, 4vw, 20px)' }}
+          >
             {linkText}
           </Link>
         )}

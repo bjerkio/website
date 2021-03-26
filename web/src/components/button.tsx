@@ -34,7 +34,7 @@ const styles: SystemStyleObject = {
     transition: '.4s',
     fontSize: 'clamp(8px, 6vw, 16px)',
     color: 'black',
-    fontWeight: 'normal',
+    fontWeight: 'medium',
     cursor: 'pointer',
     borderRadius: '8px',
     paddingTop: '15px',
