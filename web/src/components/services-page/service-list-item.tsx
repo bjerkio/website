@@ -1,18 +1,22 @@
 import React from 'react';
 import { Box, Container, Grid, Heading, Label } from 'theme-ui';
 import Button from '../button';
+import { ServiceTileImage } from './service-tile-image';
 
 export interface ServiceListItemProps {
-  name: string;
+  name: 'programming' | 'strategy' | 'project-management';
   title: string;
   description: string;
   url: {
     navigationLink: string;
     linkText: string;
   };
-  image?: any;
+  photo: string;
+  icon: string;
+  initials: string;
+  position: string;
   textAlign: 'left' | 'right';
-  dividedImage?: any;
+  dividedImage?: string;
 }
 
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
@@ -21,7 +25,10 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
     title,
     description,
     url: { navigationLink, linkText },
-    image,
+    photo,
+    icon,
+    initials,
+    position,
     textAlign,
     dividedImage,
   },
@@ -45,14 +52,30 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             </Button>
           </Box>
           <Box px={4}>
-            <img src={`../${image}`} style={{ width: '90%' }} />
+            <ServiceTileImage
+              data={{
+                name,
+                photo,
+                icon,
+                initials,
+                position,
+              }}
+            />
           </Box>
         </>
       )}
       {textAlign === 'right' && (
         <>
-          <Box px={4}>
-            <img src={`../${image}`} style={{ width: '90%' }} />
+          <Box px={4} sx={{ marginRight: '100px' }}>
+            <ServiceTileImage
+              data={{
+                name,
+                photo,
+                icon,
+                initials,
+                position,
+              }}
+            />
           </Box>
           <Box>
             <Heading pb={3}>{title}</Heading>
