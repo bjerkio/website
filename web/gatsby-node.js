@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const projects = result.data.allMdx.edges;
 
   projects
-    .filter(({ node }) => node.slug)
+    .filter(({ node }) => node.frontmatter.slug)
     .forEach(({ node }) => {
       createPage({
         path: node.frontmatter.slug,
