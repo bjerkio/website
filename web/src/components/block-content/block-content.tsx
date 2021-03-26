@@ -41,7 +41,7 @@ const Image: React.FC<any> = ({ node }) => {
   return <Img fluid={fluidProps} alt={node.alt} />;
 };
 
-export const BlockContent: React.FC<{ blocks: any }> = ({
+export const BlockContent: React.FC<{ blocks: string }> = ({
   blocks,
   ...props
 }) => (

@@ -4,7 +4,7 @@ import { Box, Container, Grid, Heading, Label } from 'theme-ui';
 export interface AboutListItemProps {
   title: string;
   descriptionArray: string[];
-  image?: any;
+  image?: string;
   textAlign: 'left' | 'right';
 }
 

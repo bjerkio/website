@@ -4,7 +4,7 @@ import { Box, Link, ThemeUIStyleObject } from 'theme-ui';
 export interface CallToActionImageProps {
   linkTo: string;
   linkText: string;
-  image: any;
+  image: string;
 }
 
 const styles: ThemeUIStyleObject = {
