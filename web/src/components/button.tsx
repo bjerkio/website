@@ -16,26 +16,31 @@ const styles: SystemStyleObject = {
   width: 'auto',
   displayContent: 'center',
   'button:hover': {
-    transition: '.5s',
-    paddingRight: '0.75rem',
+    transition: '.4s',
+    paddingRight: '0em',
     '.animation-arrow-container': {
-      paddingLeft: '0.25em',
+      paddingLeft: '0.3em',
       '.animation-arrow': {
         '&:after': {
-          right: '0.85em',
+          right: '1em',
         },
         '&:before': {
-          width: '1.9em',
+          width: '1.8em',
         },
       },
     },
   },
   button: {
-    transition: '.5s',
+    transition: '.4s',
     fontSize: 'clamp(8px, 6vw, 16px)',
     color: 'black',
-    fontWeight: 'normal',
+    fontWeight: 'medium',
     cursor: 'pointer',
+    borderRadius: '8px',
+    paddingTop: '15px',
+    paddingBottom: '15px',
+    paddingLeft: '20px',
+    paddingRight: '0.3em',
   },
   a: {
     display: 'flex',
@@ -45,9 +50,9 @@ const styles: SystemStyleObject = {
     color: 'black',
   },
   '.animation-arrow-container': {
-    transition: '.5s',
+    transition: '.4s',
     '.animation-arrow': {
-      minWidth: '35px',
+      minWidth: '30px',
       width: '3em',
       ml: 2,
       '&::after': {
@@ -57,17 +62,17 @@ const styles: SystemStyleObject = {
         height: '0.7em',
         boxShadow: '-3px 3px 0 black',
         transform: 'rotate(-135deg)',
-        transition: '.5s',
+        transition: '.4s',
         verticalAlign: 'middle',
         right: '1em',
         position: 'relative',
       },
       '&::before': {
-        width: '1.4em',
+        width: '1.2em',
         height: '3px',
         background: 'black',
         content: '"" !important',
-        transition: '.5s',
+        transition: '.4s',
         display: 'inline-block',
         verticalAlign: 'middle',
       },

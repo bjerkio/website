@@ -1,11 +1,7 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: unknown }> = {
-  [K in keyof T]: T[K];
-};
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -22,12 +18,23 @@ export type Scalars = {
   JSON: any;
 };
 
+
+
+
+
+
+
+
+
+
+
 export type BooleanQueryOperatorInput = {
   eq?: Maybe<Scalars['Boolean']>;
   ne?: Maybe<Scalars['Boolean']>;
   in?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
   nin?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
 };
+
 
 export type DateQueryOperatorInput = {
   eq?: Maybe<Scalars['Date']>;
@@ -74,11 +81,14 @@ export type Directory = Node & {
   birthtime?: Maybe<Scalars['Date']>;
   /** @deprecated Use `birthTime` instead */
   birthtimeMs?: Maybe<Scalars['Float']>;
+  blksize?: Maybe<Scalars['Int']>;
+  blocks?: Maybe<Scalars['Int']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
 };
+
 
 export type DirectoryModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -87,12 +97,14 @@ export type DirectoryModifiedTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -101,12 +113,14 @@ export type DirectoryChangeTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -115,12 +129,14 @@ export type DirectoryAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -138,9 +154,11 @@ export type DirectoryConnection = {
   group: Array<DirectoryGroupConnection>;
 };
 
+
 export type DirectoryConnectionDistinctArgs = {
   field: DirectoryFieldsEnum;
 };
+
 
 export type DirectoryConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -186,6 +204,8 @@ export type DirectoryFieldsEnum =
   | 'ctime'
   | 'birthtime'
   | 'birthtimeMs'
+  | 'blksize'
+  | 'blocks'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -305,6 +325,8 @@ export type DirectoryFilterInput = {
   ctime?: Maybe<DateQueryOperatorInput>;
   birthtime?: Maybe<DateQueryOperatorInput>;
   birthtimeMs?: Maybe<FloatQueryOperatorInput>;
+  blksize?: Maybe<IntQueryOperatorInput>;
+  blocks?: Maybe<IntQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -359,11 +381,20 @@ export type File = Node & {
   birthtime?: Maybe<Scalars['Date']>;
   /** @deprecated Use `birthTime` instead */
   birthtimeMs?: Maybe<Scalars['Float']>;
+  blksize?: Maybe<Scalars['Int']>;
+  blocks?: Maybe<Scalars['Int']>;
+  /** Copy file to static directory and return public url to it */
+  publicURL?: Maybe<Scalars['String']>;
+  /** Returns all children nodes filtered by type Mdx */
+  childrenMdx?: Maybe<Array<Maybe<Mdx>>>;
+  /** Returns the first child node of type Mdx or null if there are no children of given type on this node */
+  childMdx?: Maybe<Mdx>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
 };
+
 
 export type FileModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -372,12 +403,14 @@ export type FileModifiedTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -386,12 +419,14 @@ export type FileChangeTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -400,12 +435,14 @@ export type FileAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -423,9 +460,11 @@ export type FileConnection = {
   group: Array<FileGroupConnection>;
 };
 
+
 export type FileConnectionDistinctArgs = {
   field: FileFieldsEnum;
 };
+
 
 export type FileConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -471,6 +510,162 @@ export type FileFieldsEnum =
   | 'ctime'
   | 'birthtime'
   | 'birthtimeMs'
+  | 'blksize'
+  | 'blocks'
+  | 'publicURL'
+  | 'childrenMdx'
+  | 'childrenMdx___rawBody'
+  | 'childrenMdx___fileAbsolutePath'
+  | 'childrenMdx___frontmatter___title'
+  | 'childrenMdx___frontmatter___type'
+  | 'childrenMdx___frontmatter___id'
+  | 'childrenMdx___frontmatter___slug'
+  | 'childrenMdx___frontmatter___image'
+  | 'childrenMdx___frontmatter___homePage___image'
+  | 'childrenMdx___frontmatter___homePage___linkTo'
+  | 'childrenMdx___frontmatter___homePage___linkText'
+  | 'childrenMdx___frontmatter___homePage___id'
+  | 'childrenMdx___frontmatter___homePage___title'
+  | 'childrenMdx___frontmatter___homePage___hoverImage'
+  | 'childrenMdx___frontmatter___homePage___description'
+  | 'childrenMdx___frontmatter___name'
+  | 'childrenMdx___frontmatter___descriptionArray'
+  | 'childrenMdx___frontmatter___servicesPage___id'
+  | 'childrenMdx___frontmatter___servicesPage___title'
+  | 'childrenMdx___frontmatter___servicesPage___linkTo'
+  | 'childrenMdx___frontmatter___servicesPage___linkText'
+  | 'childrenMdx___frontmatter___servicesPage___image'
+  | 'childrenMdx___frontmatter___servicesPage___description'
+  | 'childrenMdx___frontmatter___position'
+  | 'childrenMdx___frontmatter___email'
+  | 'childrenMdx___frontmatter___phone_number'
+  | 'childrenMdx___slug'
+  | 'childrenMdx___body'
+  | 'childrenMdx___excerpt'
+  | 'childrenMdx___headings'
+  | 'childrenMdx___headings___value'
+  | 'childrenMdx___headings___depth'
+  | 'childrenMdx___html'
+  | 'childrenMdx___mdxAST'
+  | 'childrenMdx___tableOfContents'
+  | 'childrenMdx___timeToRead'
+  | 'childrenMdx___wordCount___paragraphs'
+  | 'childrenMdx___wordCount___sentences'
+  | 'childrenMdx___wordCount___words'
+  | 'childrenMdx___id'
+  | 'childrenMdx___parent___id'
+  | 'childrenMdx___parent___parent___id'
+  | 'childrenMdx___parent___parent___children'
+  | 'childrenMdx___parent___children'
+  | 'childrenMdx___parent___children___id'
+  | 'childrenMdx___parent___children___children'
+  | 'childrenMdx___parent___internal___content'
+  | 'childrenMdx___parent___internal___contentDigest'
+  | 'childrenMdx___parent___internal___description'
+  | 'childrenMdx___parent___internal___fieldOwners'
+  | 'childrenMdx___parent___internal___ignoreType'
+  | 'childrenMdx___parent___internal___mediaType'
+  | 'childrenMdx___parent___internal___owner'
+  | 'childrenMdx___parent___internal___type'
+  | 'childrenMdx___children'
+  | 'childrenMdx___children___id'
+  | 'childrenMdx___children___parent___id'
+  | 'childrenMdx___children___parent___children'
+  | 'childrenMdx___children___children'
+  | 'childrenMdx___children___children___id'
+  | 'childrenMdx___children___children___children'
+  | 'childrenMdx___children___internal___content'
+  | 'childrenMdx___children___internal___contentDigest'
+  | 'childrenMdx___children___internal___description'
+  | 'childrenMdx___children___internal___fieldOwners'
+  | 'childrenMdx___children___internal___ignoreType'
+  | 'childrenMdx___children___internal___mediaType'
+  | 'childrenMdx___children___internal___owner'
+  | 'childrenMdx___children___internal___type'
+  | 'childrenMdx___internal___content'
+  | 'childrenMdx___internal___contentDigest'
+  | 'childrenMdx___internal___description'
+  | 'childrenMdx___internal___fieldOwners'
+  | 'childrenMdx___internal___ignoreType'
+  | 'childrenMdx___internal___mediaType'
+  | 'childrenMdx___internal___owner'
+  | 'childrenMdx___internal___type'
+  | 'childMdx___rawBody'
+  | 'childMdx___fileAbsolutePath'
+  | 'childMdx___frontmatter___title'
+  | 'childMdx___frontmatter___type'
+  | 'childMdx___frontmatter___id'
+  | 'childMdx___frontmatter___slug'
+  | 'childMdx___frontmatter___image'
+  | 'childMdx___frontmatter___homePage___image'
+  | 'childMdx___frontmatter___homePage___linkTo'
+  | 'childMdx___frontmatter___homePage___linkText'
+  | 'childMdx___frontmatter___homePage___id'
+  | 'childMdx___frontmatter___homePage___title'
+  | 'childMdx___frontmatter___homePage___hoverImage'
+  | 'childMdx___frontmatter___homePage___description'
+  | 'childMdx___frontmatter___name'
+  | 'childMdx___frontmatter___descriptionArray'
+  | 'childMdx___frontmatter___servicesPage___id'
+  | 'childMdx___frontmatter___servicesPage___title'
+  | 'childMdx___frontmatter___servicesPage___linkTo'
+  | 'childMdx___frontmatter___servicesPage___linkText'
+  | 'childMdx___frontmatter___servicesPage___image'
+  | 'childMdx___frontmatter___servicesPage___description'
+  | 'childMdx___frontmatter___position'
+  | 'childMdx___frontmatter___email'
+  | 'childMdx___frontmatter___phone_number'
+  | 'childMdx___slug'
+  | 'childMdx___body'
+  | 'childMdx___excerpt'
+  | 'childMdx___headings'
+  | 'childMdx___headings___value'
+  | 'childMdx___headings___depth'
+  | 'childMdx___html'
+  | 'childMdx___mdxAST'
+  | 'childMdx___tableOfContents'
+  | 'childMdx___timeToRead'
+  | 'childMdx___wordCount___paragraphs'
+  | 'childMdx___wordCount___sentences'
+  | 'childMdx___wordCount___words'
+  | 'childMdx___id'
+  | 'childMdx___parent___id'
+  | 'childMdx___parent___parent___id'
+  | 'childMdx___parent___parent___children'
+  | 'childMdx___parent___children'
+  | 'childMdx___parent___children___id'
+  | 'childMdx___parent___children___children'
+  | 'childMdx___parent___internal___content'
+  | 'childMdx___parent___internal___contentDigest'
+  | 'childMdx___parent___internal___description'
+  | 'childMdx___parent___internal___fieldOwners'
+  | 'childMdx___parent___internal___ignoreType'
+  | 'childMdx___parent___internal___mediaType'
+  | 'childMdx___parent___internal___owner'
+  | 'childMdx___parent___internal___type'
+  | 'childMdx___children'
+  | 'childMdx___children___id'
+  | 'childMdx___children___parent___id'
+  | 'childMdx___children___parent___children'
+  | 'childMdx___children___children'
+  | 'childMdx___children___children___id'
+  | 'childMdx___children___children___children'
+  | 'childMdx___children___internal___content'
+  | 'childMdx___children___internal___contentDigest'
+  | 'childMdx___children___internal___description'
+  | 'childMdx___children___internal___fieldOwners'
+  | 'childMdx___children___internal___ignoreType'
+  | 'childMdx___children___internal___mediaType'
+  | 'childMdx___children___internal___owner'
+  | 'childMdx___children___internal___type'
+  | 'childMdx___internal___content'
+  | 'childMdx___internal___contentDigest'
+  | 'childMdx___internal___description'
+  | 'childMdx___internal___fieldOwners'
+  | 'childMdx___internal___ignoreType'
+  | 'childMdx___internal___mediaType'
+  | 'childMdx___internal___owner'
+  | 'childMdx___internal___type'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -590,6 +785,11 @@ export type FileFilterInput = {
   ctime?: Maybe<DateQueryOperatorInput>;
   birthtime?: Maybe<DateQueryOperatorInput>;
   birthtimeMs?: Maybe<FloatQueryOperatorInput>;
+  blksize?: Maybe<IntQueryOperatorInput>;
+  blocks?: Maybe<IntQueryOperatorInput>;
+  publicURL?: Maybe<StringQueryOperatorInput>;
+  childrenMdx?: Maybe<MdxFilterListInput>;
+  childMdx?: Maybe<MdxFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -620,6 +820,14 @@ export type FloatQueryOperatorInput = {
   in?: Maybe<Array<Maybe<Scalars['Float']>>>;
   nin?: Maybe<Array<Maybe<Scalars['Float']>>>;
 };
+
+export type HeadingsMdx =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6';
 
 export type Internal = {
   content?: Maybe<Scalars['String']>;
@@ -654,6 +862,7 @@ export type IntQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
+
 export type JsonQueryOperatorInput = {
   eq?: Maybe<Scalars['JSON']>;
   ne?: Maybe<Scalars['JSON']>;
@@ -661,6 +870,336 @@ export type JsonQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['JSON']>>>;
   regex?: Maybe<Scalars['JSON']>;
   glob?: Maybe<Scalars['JSON']>;
+};
+
+export type Mdx = Node & {
+  rawBody: Scalars['String'];
+  fileAbsolutePath: Scalars['String'];
+  frontmatter?: Maybe<MdxFrontmatter>;
+  slug?: Maybe<Scalars['String']>;
+  body: Scalars['String'];
+  excerpt: Scalars['String'];
+  headings?: Maybe<Array<Maybe<MdxHeadingMdx>>>;
+  html?: Maybe<Scalars['String']>;
+  mdxAST?: Maybe<Scalars['JSON']>;
+  tableOfContents?: Maybe<Scalars['JSON']>;
+  timeToRead?: Maybe<Scalars['Int']>;
+  wordCount?: Maybe<MdxWordCount>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+
+export type MdxExcerptArgs = {
+  pruneLength?: Maybe<Scalars['Int']>;
+  truncate?: Maybe<Scalars['Boolean']>;
+};
+
+
+export type MdxHeadingsArgs = {
+  depth?: Maybe<HeadingsMdx>;
+};
+
+
+export type MdxTableOfContentsArgs = {
+  maxDepth?: Maybe<Scalars['Int']>;
+};
+
+export type MdxConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<MdxEdge>;
+  nodes: Array<Mdx>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<MdxGroupConnection>;
+};
+
+
+export type MdxConnectionDistinctArgs = {
+  field: MdxFieldsEnum;
+};
+
+
+export type MdxConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: MdxFieldsEnum;
+};
+
+export type MdxEdge = {
+  next?: Maybe<Mdx>;
+  node: Mdx;
+  previous?: Maybe<Mdx>;
+};
+
+export type MdxFieldsEnum =
+  | 'rawBody'
+  | 'fileAbsolutePath'
+  | 'frontmatter___title'
+  | 'frontmatter___type'
+  | 'frontmatter___id'
+  | 'frontmatter___slug'
+  | 'frontmatter___image'
+  | 'frontmatter___homePage___image'
+  | 'frontmatter___homePage___linkTo'
+  | 'frontmatter___homePage___linkText'
+  | 'frontmatter___homePage___id'
+  | 'frontmatter___homePage___title'
+  | 'frontmatter___homePage___hoverImage'
+  | 'frontmatter___homePage___imageStyle___ml'
+  | 'frontmatter___homePage___description'
+  | 'frontmatter___name'
+  | 'frontmatter___descriptionArray'
+  | 'frontmatter___servicesPage___id'
+  | 'frontmatter___servicesPage___title'
+  | 'frontmatter___servicesPage___linkTo'
+  | 'frontmatter___servicesPage___linkText'
+  | 'frontmatter___servicesPage___image'
+  | 'frontmatter___servicesPage___description'
+  | 'frontmatter___position'
+  | 'frontmatter___email'
+  | 'frontmatter___phone_number'
+  | 'slug'
+  | 'body'
+  | 'excerpt'
+  | 'headings'
+  | 'headings___value'
+  | 'headings___depth'
+  | 'html'
+  | 'mdxAST'
+  | 'tableOfContents'
+  | 'timeToRead'
+  | 'wordCount___paragraphs'
+  | 'wordCount___sentences'
+  | 'wordCount___words'
+  | 'id'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type';
+
+export type MdxFilterInput = {
+  rawBody?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+  frontmatter?: Maybe<MdxFrontmatterFilterInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  body?: Maybe<StringQueryOperatorInput>;
+  excerpt?: Maybe<StringQueryOperatorInput>;
+  headings?: Maybe<MdxHeadingMdxFilterListInput>;
+  html?: Maybe<StringQueryOperatorInput>;
+  mdxAST?: Maybe<JsonQueryOperatorInput>;
+  tableOfContents?: Maybe<JsonQueryOperatorInput>;
+  timeToRead?: Maybe<IntQueryOperatorInput>;
+  wordCount?: Maybe<MdxWordCountFilterInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type MdxFilterListInput = {
+  elemMatch?: Maybe<MdxFilterInput>;
+};
+
+export type MdxFrontmatter = {
+  title: Scalars['String'];
+  type?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+  slug?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
+  homePage?: Maybe<MdxFrontmatterHomePage>;
+  name?: Maybe<Scalars['String']>;
+  descriptionArray?: Maybe<Array<Maybe<Scalars['String']>>>;
+  servicesPage?: Maybe<MdxFrontmatterServicesPage>;
+  position?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  phone_number?: Maybe<Scalars['String']>;
+};
+
+export type MdxFrontmatterFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  type?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<IntQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<StringQueryOperatorInput>;
+  homePage?: Maybe<MdxFrontmatterHomePageFilterInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  descriptionArray?: Maybe<StringQueryOperatorInput>;
+  servicesPage?: Maybe<MdxFrontmatterServicesPageFilterInput>;
+  position?: Maybe<StringQueryOperatorInput>;
+  email?: Maybe<StringQueryOperatorInput>;
+  phone_number?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxFrontmatterHomePage = {
+  image?: Maybe<Scalars['String']>;
+  linkTo?: Maybe<Scalars['String']>;
+  linkText?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+  title?: Maybe<Scalars['String']>;
+  hoverImage?: Maybe<Scalars['String']>;
+  imageStyle?: Maybe<MdxFrontmatterHomePageImageStyle>;
+  description?: Maybe<Scalars['String']>;
+};
+
+export type MdxFrontmatterHomePageFilterInput = {
+  image?: Maybe<StringQueryOperatorInput>;
+  linkTo?: Maybe<StringQueryOperatorInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<IntQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  hoverImage?: Maybe<StringQueryOperatorInput>;
+  imageStyle?: Maybe<MdxFrontmatterHomePageImageStyleFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxFrontmatterHomePageImageStyle = {
+  ml?: Maybe<Scalars['String']>;
+};
+
+export type MdxFrontmatterHomePageImageStyleFilterInput = {
+  ml?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxFrontmatterServicesPage = {
+  id?: Maybe<Scalars['Int']>;
+  title?: Maybe<Scalars['String']>;
+  linkTo?: Maybe<Scalars['String']>;
+  linkText?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+};
+
+export type MdxFrontmatterServicesPageFilterInput = {
+  id?: Maybe<IntQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  linkTo?: Maybe<StringQueryOperatorInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<MdxEdge>;
+  nodes: Array<Mdx>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type MdxHeadingMdx = {
+  value?: Maybe<Scalars['String']>;
+  depth?: Maybe<Scalars['Int']>;
+};
+
+export type MdxHeadingMdxFilterInput = {
+  value?: Maybe<StringQueryOperatorInput>;
+  depth?: Maybe<IntQueryOperatorInput>;
+};
+
+export type MdxHeadingMdxFilterListInput = {
+  elemMatch?: Maybe<MdxHeadingMdxFilterInput>;
+};
+
+export type MdxSortInput = {
+  fields?: Maybe<Array<Maybe<MdxFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type MdxWordCount = {
+  paragraphs?: Maybe<Scalars['Int']>;
+  sentences?: Maybe<Scalars['Int']>;
+  words?: Maybe<Scalars['Int']>;
+};
+
+export type MdxWordCountFilterInput = {
+  paragraphs?: Maybe<IntQueryOperatorInput>;
+  sentences?: Maybe<IntQueryOperatorInput>;
+  words?: Maybe<IntQueryOperatorInput>;
 };
 
 export type MediumCollection = Node & {
@@ -702,6 +1241,7 @@ export type MediumCollection = Node & {
   internal: Internal;
 };
 
+
 export type MediumCollectionPaidForDomainAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -732,22 +1272,14 @@ export type MediumCollectionAmpLogoFilterInput = {
 };
 
 export type MediumCollectionColorPalette = {
-  defaultBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrum
-  >;
-  tintBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrum
-  >;
+  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrum>;
+  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrum>;
   highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrum>;
-  darkBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrum
-  >;
+  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrum>;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -762,24 +1294,16 @@ export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<
-      Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPoints>
-    >
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -794,37 +1318,23 @@ export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilt
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteFilterInput = {
-  defaultBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput
-  >;
-  tintBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput
-  >;
-  highlightSpectrum?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumFilterInput
-  >;
-  darkBackgroundSpectrum?: Maybe<
-    MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput
-  >;
+  defaultBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDefaultBackgroundSpectrumFilterInput>;
+  tintBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput>;
+  highlightSpectrum?: Maybe<MediumCollectionColorPaletteHighlightSpectrumFilterInput>;
+  darkBackgroundSpectrum?: Maybe<MediumCollectionColorPaletteDarkBackgroundSpectrumFilterInput>;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -839,22 +1349,16 @@ export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput 
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteHighlightSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteHighlightSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrum = {
-  colorPoints?: Maybe<
-    Array<Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPoints>>
-  >;
+  colorPoints?: Maybe<Array<Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPoints>>>;
   backgroundColor?: Maybe<Scalars['String']>;
 };
 
@@ -869,15 +1373,11 @@ export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterI
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput
-  >;
+  elemMatch?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterInput>;
 };
 
 export type MediumCollectionColorPaletteTintBackgroundSpectrumFilterInput = {
-  colorPoints?: Maybe<
-    MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput
-  >;
+  colorPoints?: Maybe<MediumCollectionColorPaletteTintBackgroundSpectrumColorPointsFilterListInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -890,9 +1390,11 @@ export type MediumCollectionConnection = {
   group: Array<MediumCollectionGroupConnection>;
 };
 
+
 export type MediumCollectionConnectionDistinctArgs = {
   field: MediumCollectionFieldsEnum;
 };
+
 
 export type MediumCollectionConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -1302,6 +1804,7 @@ export type MediumCollectionMetadata = {
   activeAt?: Maybe<Scalars['Date']>;
 };
 
+
 export type MediumCollectionMetadataActiveAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -1358,18 +1861,14 @@ export type MediumCollectionPolarisCoverImageFilterInput = {
 
 export type MediumCollectionSections = {
   type?: Maybe<Scalars['Int']>;
-  collectionHeaderMetadata?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadata
-  >;
+  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadata>;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadata>;
 };
 
 export type MediumCollectionSectionsCollectionHeaderMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  backgroundImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage
-  >;
+  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImage>;
   logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImage>;
   alignment?: Maybe<Scalars['Int']>;
   layout?: Maybe<Scalars['Int']>;
@@ -1394,12 +1893,8 @@ export type MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilte
 export type MediumCollectionSectionsCollectionHeaderMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
-  backgroundImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput
-  >;
-  logoImage?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
-  >;
+  backgroundImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataBackgroundImageFilterInput>;
+  logoImage?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput>;
   alignment?: Maybe<IntQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
 };
@@ -1420,9 +1915,7 @@ export type MediumCollectionSectionsCollectionHeaderMetadataLogoImageFilterInput
 
 export type MediumCollectionSectionsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
-  collectionHeaderMetadata?: Maybe<
-    MediumCollectionSectionsCollectionHeaderMetadataFilterInput
-  >;
+  collectionHeaderMetadata?: Maybe<MediumCollectionSectionsCollectionHeaderMetadataFilterInput>;
   postListMetadata?: Maybe<MediumCollectionSectionsPostListMetadataFilterInput>;
 };
 
@@ -1596,11 +2089,13 @@ export type MediumPost = Node & {
   isLockedResponse?: Maybe<Scalars['Boolean']>;
   isPublishToEmail?: Maybe<Scalars['Boolean']>;
   responseDistribution?: Maybe<Scalars['Int']>;
+  isMarkedPaywallOnly?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
 };
+
 
 export type MediumPostCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -1609,12 +2104,14 @@ export type MediumPostCreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type MediumPostUpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type MediumPostFirstPublishedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -1623,12 +2120,14 @@ export type MediumPostFirstPublishedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type MediumPostLatestPublishedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type MediumPostSeriesLastAppendedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -1646,9 +2145,11 @@ export type MediumPostConnection = {
   group: Array<MediumPostGroupConnection>;
 };
 
+
 export type MediumPostConnectionDistinctArgs = {
   field: MediumPostFieldsEnum;
 };
+
 
 export type MediumPostConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -1971,6 +2472,7 @@ export type MediumPostFieldsEnum =
   | 'author___posts___isLockedResponse'
   | 'author___posts___isPublishToEmail'
   | 'author___posts___responseDistribution'
+  | 'author___posts___isMarkedPaywallOnly'
   | 'author___posts___id'
   | 'author___posts___parent___id'
   | 'author___posts___parent___children'
@@ -2032,6 +2534,7 @@ export type MediumPostFieldsEnum =
   | 'isLockedResponse'
   | 'isPublishToEmail'
   | 'responseDistribution'
+  | 'isMarkedPaywallOnly'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2204,6 +2707,7 @@ export type MediumPostFilterInput = {
   isLockedResponse?: Maybe<BooleanQueryOperatorInput>;
   isPublishToEmail?: Maybe<BooleanQueryOperatorInput>;
   responseDistribution?: Maybe<IntQueryOperatorInput>;
+  isMarkedPaywallOnly?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2236,16 +2740,12 @@ export type MediumPostPreviewContent2 = {
 };
 
 export type MediumPostPreviewContent2BodyModel = {
-  paragraphs?: Maybe<
-    Array<Maybe<MediumPostPreviewContent2BodyModelParagraphs>>
-  >;
+  paragraphs?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelParagraphs>>>;
   sections?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelSections>>>;
 };
 
 export type MediumPostPreviewContent2BodyModelFilterInput = {
-  paragraphs?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsFilterListInput
-  >;
+  paragraphs?: Maybe<MediumPostPreviewContent2BodyModelParagraphsFilterListInput>;
   sections?: Maybe<MediumPostPreviewContent2BodyModelSectionsFilterListInput>;
 };
 
@@ -2253,9 +2753,7 @@ export type MediumPostPreviewContent2BodyModelParagraphs = {
   name?: Maybe<Scalars['String']>;
   type?: Maybe<Scalars['Int']>;
   text?: Maybe<Scalars['String']>;
-  markups?: Maybe<
-    Array<Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkups>>
-  >;
+  markups?: Maybe<Array<Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkups>>>;
   layout?: Maybe<Scalars['Int']>;
   metadata?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMetadata>;
   hasDropCap?: Maybe<Scalars['Boolean']>;
@@ -2265,13 +2763,9 @@ export type MediumPostPreviewContent2BodyModelParagraphsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
-  markups?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput
-  >;
+  markups?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput>;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput
-  >;
+  metadata?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMetadataFilterInput>;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -2302,9 +2796,7 @@ export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput
-  >;
+  elemMatch?: Maybe<MediumPostPreviewContent2BodyModelParagraphsMarkupsFilterInput>;
 };
 
 export type MediumPostPreviewContent2BodyModelParagraphsMetadata = {
@@ -2349,9 +2841,7 @@ export type MediumPostPreviewContentBodyModel = {
 };
 
 export type MediumPostPreviewContentBodyModelFilterInput = {
-  paragraphs?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsFilterListInput
-  >;
+  paragraphs?: Maybe<MediumPostPreviewContentBodyModelParagraphsFilterListInput>;
   sections?: Maybe<MediumPostPreviewContentBodyModelSectionsFilterListInput>;
 };
 
@@ -2361,9 +2851,7 @@ export type MediumPostPreviewContentBodyModelParagraphs = {
   text?: Maybe<Scalars['String']>;
   layout?: Maybe<Scalars['Int']>;
   metadata?: Maybe<MediumPostPreviewContentBodyModelParagraphsMetadata>;
-  markups?: Maybe<
-    Array<Maybe<MediumPostPreviewContentBodyModelParagraphsMarkups>>
-  >;
+  markups?: Maybe<Array<Maybe<MediumPostPreviewContentBodyModelParagraphsMarkups>>>;
   alignment?: Maybe<Scalars['Int']>;
   hasDropCap?: Maybe<Scalars['Boolean']>;
 };
@@ -2373,12 +2861,8 @@ export type MediumPostPreviewContentBodyModelParagraphsFilterInput = {
   type?: Maybe<IntQueryOperatorInput>;
   text?: Maybe<StringQueryOperatorInput>;
   layout?: Maybe<IntQueryOperatorInput>;
-  metadata?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput
-  >;
-  markups?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput
-  >;
+  metadata?: Maybe<MediumPostPreviewContentBodyModelParagraphsMetadataFilterInput>;
+  markups?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput>;
   alignment?: Maybe<IntQueryOperatorInput>;
   hasDropCap?: Maybe<BooleanQueryOperatorInput>;
 };
@@ -2400,9 +2884,7 @@ export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput = {
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMarkupsFilterListInput = {
-  elemMatch?: Maybe<
-    MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput
-  >;
+  elemMatch?: Maybe<MediumPostPreviewContentBodyModelParagraphsMarkupsFilterInput>;
 };
 
 export type MediumPostPreviewContentBodyModelParagraphsMetadata = {
@@ -2499,6 +2981,7 @@ export type MediumPostVirtualsLinks = {
   version?: Maybe<Scalars['String']>;
   generatedAt?: Maybe<Scalars['Date']>;
 };
+
 
 export type MediumPostVirtualsLinksGeneratedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -2597,8 +3080,6 @@ export type MediumPostVirtualsTagsMetadataCoverImage = {
   isFeatured?: Maybe<Scalars['Boolean']>;
   unsplashPhotoId?: Maybe<Scalars['String']>;
   alt?: Maybe<Scalars['String']>;
-  focusPercentX?: Maybe<Scalars['Int']>;
-  focusPercentY?: Maybe<Scalars['Int']>;
 };
 
 export type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
@@ -2608,8 +3089,6 @@ export type MediumPostVirtualsTagsMetadataCoverImageFilterInput = {
   isFeatured?: Maybe<BooleanQueryOperatorInput>;
   unsplashPhotoId?: Maybe<StringQueryOperatorInput>;
   alt?: Maybe<StringQueryOperatorInput>;
-  focusPercentX?: Maybe<IntQueryOperatorInput>;
-  focusPercentY?: Maybe<IntQueryOperatorInput>;
 };
 
 export type MediumPostVirtualsTagsMetadataFilterInput = {
@@ -2628,6 +3107,7 @@ export type MediumPostVirtualsTopics = {
   visibility?: Maybe<Scalars['Int']>;
   type?: Maybe<Scalars['String']>;
 };
+
 
 export type MediumPostVirtualsTopicsCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -2689,6 +3169,7 @@ export type MediumUser = Node & {
   internal: Internal;
 };
 
+
 export type MediumUserCreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -2705,9 +3186,11 @@ export type MediumUserConnection = {
   group: Array<MediumUserGroupConnection>;
 };
 
+
 export type MediumUserConnectionDistinctArgs = {
   field: MediumUserFieldsEnum;
 };
+
 
 export type MediumUserConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2957,6 +3440,7 @@ export type MediumUserFieldsEnum =
   | 'posts___author___posts___isLockedResponse'
   | 'posts___author___posts___isPublishToEmail'
   | 'posts___author___posts___responseDistribution'
+  | 'posts___author___posts___isMarkedPaywallOnly'
   | 'posts___author___posts___id'
   | 'posts___author___posts___children'
   | 'posts___author___optInToIceland'
@@ -2982,6 +3466,7 @@ export type MediumUserFieldsEnum =
   | 'posts___isLockedResponse'
   | 'posts___isPublishToEmail'
   | 'posts___responseDistribution'
+  | 'posts___isMarkedPaywallOnly'
   | 'posts___id'
   | 'posts___parent___id'
   | 'posts___parent___parent___id'
@@ -3203,11 +3688,14 @@ export type Query = {
   allSanityFileAsset: SanityFileAssetConnection;
   sanityImageAsset?: Maybe<SanityImageAsset>;
   allSanityImageAsset: SanityImageAssetConnection;
+  mdx?: Maybe<Mdx>;
+  allMdx: MdxConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
   allSiteBuildMetadata: SiteBuildMetadataConnection;
   sitePlugin?: Maybe<SitePlugin>;
   allSitePlugin: SitePluginConnection;
 };
+
 
 export type QueryFileArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -3241,11 +3729,17 @@ export type QueryFileArgs = {
   ctime?: Maybe<DateQueryOperatorInput>;
   birthtime?: Maybe<DateQueryOperatorInput>;
   birthtimeMs?: Maybe<FloatQueryOperatorInput>;
+  blksize?: Maybe<IntQueryOperatorInput>;
+  blocks?: Maybe<IntQueryOperatorInput>;
+  publicURL?: Maybe<StringQueryOperatorInput>;
+  childrenMdx?: Maybe<MdxFilterListInput>;
+  childMdx?: Maybe<MdxFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
 };
+
 
 export type QueryAllFileArgs = {
   filter?: Maybe<FileFilterInput>;
@@ -3253,6 +3747,7 @@ export type QueryAllFileArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryDirectoryArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -3286,11 +3781,14 @@ export type QueryDirectoryArgs = {
   ctime?: Maybe<DateQueryOperatorInput>;
   birthtime?: Maybe<DateQueryOperatorInput>;
   birthtimeMs?: Maybe<FloatQueryOperatorInput>;
+  blksize?: Maybe<IntQueryOperatorInput>;
+  blocks?: Maybe<IntQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
 };
+
 
 export type QueryAllDirectoryArgs = {
   filter?: Maybe<DirectoryFilterInput>;
@@ -3298,6 +3796,7 @@ export type QueryAllDirectoryArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
@@ -3312,6 +3811,7 @@ export type QuerySiteArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSiteArgs = {
   filter?: Maybe<SiteFilterInput>;
   sort?: Maybe<SiteSortInput>;
@@ -3319,22 +3819,23 @@ export type QueryAllSiteArgs = {
   limit?: Maybe<Scalars['Int']>;
 };
 
+
 export type QuerySitePageArgs = {
   path?: Maybe<StringQueryOperatorInput>;
   component?: Maybe<StringQueryOperatorInput>;
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  componentPath?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  context?: Maybe<SitePageContextFilterInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
-  componentPath?: Maybe<StringQueryOperatorInput>;
 };
+
 
 export type QueryAllSitePageArgs = {
   filter?: Maybe<SitePageFilterInput>;
@@ -3342,6 +3843,7 @@ export type QueryAllSitePageArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumCollectionArgs = {
   name?: Maybe<StringQueryOperatorInput>;
@@ -3382,12 +3884,14 @@ export type QueryMediumCollectionArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMediumCollectionArgs = {
   filter?: Maybe<MediumCollectionFilterInput>;
   sort?: Maybe<MediumCollectionSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumUserArgs = {
   userId?: Maybe<StringQueryOperatorInput>;
@@ -3414,12 +3918,14 @@ export type QueryMediumUserArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMediumUserArgs = {
   filter?: Maybe<MediumUserFilterInput>;
   sort?: Maybe<MediumUserSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMediumPostArgs = {
   versionId?: Maybe<StringQueryOperatorInput>;
@@ -3506,11 +4012,13 @@ export type QueryMediumPostArgs = {
   isLockedResponse?: Maybe<BooleanQueryOperatorInput>;
   isPublishToEmail?: Maybe<BooleanQueryOperatorInput>;
   responseDistribution?: Maybe<IntQueryOperatorInput>;
+  isMarkedPaywallOnly?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
 };
+
 
 export type QueryAllMediumPostArgs = {
   filter?: Maybe<MediumPostFilterInput>;
@@ -3518,6 +4026,7 @@ export type QueryAllMediumPostArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryThemeUiConfigArgs = {
   preset?: Maybe<JsonQueryOperatorInput>;
@@ -3528,12 +4037,14 @@ export type QueryThemeUiConfigArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllThemeUiConfigArgs = {
   filter?: Maybe<ThemeUiConfigFilterInput>;
   sort?: Maybe<ThemeUiConfigSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityHomepageArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3552,12 +4063,14 @@ export type QuerySanityHomepageArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityHomepageArgs = {
   filter?: Maybe<SanityHomepageFilterInput>;
   sort?: Maybe<SanityHomepageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityPageArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3577,12 +4090,14 @@ export type QuerySanityPageArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityPageArgs = {
   filter?: Maybe<SanityPageFilterInput>;
   sort?: Maybe<SanityPageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityFileAssetArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3610,12 +4125,14 @@ export type QuerySanityFileAssetArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityFileAssetArgs = {
   filter?: Maybe<SanityFileAssetFilterInput>;
   sort?: Maybe<SanityFileAssetSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySanityImageAssetArgs = {
   _id?: Maybe<StringQueryOperatorInput>;
@@ -3647,12 +4164,42 @@ export type QuerySanityImageAssetArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSanityImageAssetArgs = {
   filter?: Maybe<SanityImageAssetFilterInput>;
   sort?: Maybe<SanityImageAssetSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
+
+export type QueryMdxArgs = {
+  rawBody?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+  frontmatter?: Maybe<MdxFrontmatterFilterInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  body?: Maybe<StringQueryOperatorInput>;
+  excerpt?: Maybe<StringQueryOperatorInput>;
+  headings?: Maybe<MdxHeadingMdxFilterListInput>;
+  html?: Maybe<StringQueryOperatorInput>;
+  mdxAST?: Maybe<JsonQueryOperatorInput>;
+  tableOfContents?: Maybe<JsonQueryOperatorInput>;
+  timeToRead?: Maybe<IntQueryOperatorInput>;
+  wordCount?: Maybe<MdxWordCountFilterInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllMdxArgs = {
+  filter?: Maybe<MdxFilterInput>;
+  sort?: Maybe<MdxSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
 
 export type QuerySiteBuildMetadataArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -3662,12 +4209,14 @@ export type QuerySiteBuildMetadataArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
 };
 
+
 export type QueryAllSiteBuildMetadataArgs = {
   filter?: Maybe<SiteBuildMetadataFilterInput>;
   sort?: Maybe<SiteBuildMetadataSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySitePluginArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -3684,6 +4233,7 @@ export type QuerySitePluginArgs = {
   pluginFilepath?: Maybe<StringQueryOperatorInput>;
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
 };
+
 
 export type QueryAllSitePluginArgs = {
   filter?: Maybe<SitePluginFilterInput>;
@@ -3717,6 +4267,7 @@ export type SanityBlock = {
   _rawChildren?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityBlock_RawChildrenArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
@@ -3742,6 +4293,7 @@ export type SanityContentEditor = {
   content?: Maybe<Array<Maybe<SanityBlock>>>;
   _rawContent?: Maybe<Scalars['JSON']>;
 };
+
 
 export type SanityContentEditor_RawContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -3785,36 +4337,37 @@ export type SanityFile = {
   _rawAsset?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityFile_RawAssetArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityFileAsset = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    originalFilename?: Maybe<Scalars['String']>;
-    label?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    description?: Maybe<Scalars['String']>;
-    sha1hash?: Maybe<Scalars['String']>;
-    extension?: Maybe<Scalars['String']>;
-    mimeType?: Maybe<Scalars['String']>;
-    size?: Maybe<Scalars['Float']>;
-    assetId?: Maybe<Scalars['String']>;
-    path?: Maybe<Scalars['String']>;
-    url?: Maybe<Scalars['String']>;
-    source?: Maybe<SanityAssetSourceData>;
-    _rawSource?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityFileAsset = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  originalFilename?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  sha1hash?: Maybe<Scalars['String']>;
+  extension?: Maybe<Scalars['String']>;
+  mimeType?: Maybe<Scalars['String']>;
+  size?: Maybe<Scalars['Float']>;
+  assetId?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  source?: Maybe<SanityAssetSourceData>;
+  _rawSource?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityFileAsset_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -3823,12 +4376,14 @@ export type SanityFileAsset_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityFileAsset_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type SanityFileAsset_RawSourceArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -3843,9 +4398,11 @@ export type SanityFileAssetConnection = {
   group: Array<SanityFileAssetGroupConnection>;
 };
 
+
 export type SanityFileAssetConnectionDistinctArgs = {
   field: SanityFileAssetFieldsEnum;
 };
+
 
 export type SanityFileAssetConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4026,23 +4583,23 @@ export type SanityGeopointFilterInput = {
   alt?: Maybe<FloatQueryOperatorInput>;
 };
 
-export type SanityHomepage = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    ctaBoxes?: Maybe<Array<Maybe<SanityCtaBox>>>;
-    heroContent?: Maybe<Array<Maybe<SanityBlock>>>;
-    _rawHeroContent?: Maybe<Scalars['JSON']>;
-    _rawCtaBoxes?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityHomepage = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  ctaBoxes?: Maybe<Array<Maybe<SanityCtaBox>>>;
+  heroContent?: Maybe<Array<Maybe<SanityBlock>>>;
+  _rawHeroContent?: Maybe<Scalars['JSON']>;
+  _rawCtaBoxes?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityHomepage_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4051,6 +4608,7 @@ export type SanityHomepage_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityHomepage_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4058,9 +4616,11 @@ export type SanityHomepage_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityHomepage_RawHeroContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityHomepage_RawCtaBoxesArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4075,9 +4635,11 @@ export type SanityHomepageConnection = {
   group: Array<SanityHomepageGroupConnection>;
 };
 
+
 export type SanityHomepageConnectionDistinctArgs = {
   field: SanityHomepageFieldsEnum;
 };
+
 
 export type SanityHomepageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4247,48 +4809,51 @@ export type SanityImage = {
   _rawCrop?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImage_RawAssetArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImage_RawHotspotArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImage_RawCropArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
-export type SanityImageAsset = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    originalFilename?: Maybe<Scalars['String']>;
-    label?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    description?: Maybe<Scalars['String']>;
-    sha1hash?: Maybe<Scalars['String']>;
-    extension?: Maybe<Scalars['String']>;
-    mimeType?: Maybe<Scalars['String']>;
-    size?: Maybe<Scalars['Float']>;
-    assetId?: Maybe<Scalars['String']>;
-    path?: Maybe<Scalars['String']>;
-    url?: Maybe<Scalars['String']>;
-    metadata?: Maybe<SanityImageMetadata>;
-    source?: Maybe<SanityAssetSourceData>;
-    _rawMetadata?: Maybe<Scalars['JSON']>;
-    _rawSource?: Maybe<Scalars['JSON']>;
-    fixed?: Maybe<SanityImageFixed>;
-    fluid?: Maybe<SanityImageFluid>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityImageAsset = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  originalFilename?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  sha1hash?: Maybe<Scalars['String']>;
+  extension?: Maybe<Scalars['String']>;
+  mimeType?: Maybe<Scalars['String']>;
+  size?: Maybe<Scalars['Float']>;
+  assetId?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  metadata?: Maybe<SanityImageMetadata>;
+  source?: Maybe<SanityAssetSourceData>;
+  _rawMetadata?: Maybe<Scalars['JSON']>;
+  _rawSource?: Maybe<Scalars['JSON']>;
+  fixed?: Maybe<SanityImageFixed>;
+  fluid?: Maybe<SanityImageFluid>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityImageAsset_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4297,6 +4862,7 @@ export type SanityImageAsset_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityImageAsset_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4304,19 +4870,23 @@ export type SanityImageAsset_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityImageAsset_RawMetadataArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImageAsset_RawSourceArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImageAssetFixedArgs = {
   width?: Maybe<Scalars['Int']>;
   height?: Maybe<Scalars['Int']>;
   toFormat?: Maybe<SanityImageFormat>;
 };
+
 
 export type SanityImageAssetFluidArgs = {
   maxWidth?: Maybe<Scalars['Int']>;
@@ -4334,9 +4904,11 @@ export type SanityImageAssetConnection = {
   group: Array<SanityImageAssetGroupConnection>;
 };
 
+
 export type SanityImageAssetConnectionDistinctArgs = {
   field: SanityImageAssetFieldsEnum;
 };
+
 
 export type SanityImageAssetConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -4654,7 +5226,11 @@ export type SanityImageFluidFilterInput = {
   srcSetWebp?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SanityImageFormat = 'NO_CHANGE' | 'JPG' | 'PNG' | 'WEBP';
+export type SanityImageFormat =
+  | 'NO_CHANGE'
+  | 'JPG'
+  | 'PNG'
+  | 'WEBP';
 
 export type SanityImageHotspot = {
   _key?: Maybe<Scalars['String']>;
@@ -4679,13 +5255,16 @@ export type SanityImageMetadata = {
   _rawPalette?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImageMetadata_RawLocationArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImageMetadata_RawDimensionsArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImageMetadata_RawPaletteArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4724,29 +5303,36 @@ export type SanityImagePalette = {
   _rawMuted?: Maybe<Scalars['JSON']>;
 };
 
+
 export type SanityImagePalette_RawDarkMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawLightVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawDarkVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawVibrantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawDominantArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
 
+
 export type SanityImagePalette_RawLightMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityImagePalette_RawMutedArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4789,24 +5375,24 @@ export type SanityImagePaletteSwatchFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SanityPage = SanityDocument &
-  Node & {
-    _id?: Maybe<Scalars['String']>;
-    _type?: Maybe<Scalars['String']>;
-    _createdAt?: Maybe<Scalars['Date']>;
-    _updatedAt?: Maybe<Scalars['Date']>;
-    _rev?: Maybe<Scalars['String']>;
-    _key?: Maybe<Scalars['String']>;
-    title?: Maybe<Scalars['String']>;
-    slug?: Maybe<SanitySlug>;
-    content?: Maybe<Array<Maybe<SanityBlock>>>;
-    _rawSlug?: Maybe<Scalars['JSON']>;
-    _rawContent?: Maybe<Scalars['JSON']>;
-    id: Scalars['ID'];
-    parent?: Maybe<Node>;
-    children: Array<Node>;
-    internal: Internal;
-  };
+export type SanityPage = SanityDocument & Node & {
+  _id?: Maybe<Scalars['String']>;
+  _type?: Maybe<Scalars['String']>;
+  _createdAt?: Maybe<Scalars['Date']>;
+  _updatedAt?: Maybe<Scalars['Date']>;
+  _rev?: Maybe<Scalars['String']>;
+  _key?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<SanitySlug>;
+  content?: Maybe<Array<Maybe<SanityBlock>>>;
+  _rawSlug?: Maybe<Scalars['JSON']>;
+  _rawContent?: Maybe<Scalars['JSON']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
 
 export type SanityPage_CreatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -4815,6 +5401,7 @@ export type SanityPage_CreatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityPage_UpdatedAtArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -4822,9 +5409,11 @@ export type SanityPage_UpdatedAtArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type SanityPage_RawSlugArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
 };
+
 
 export type SanityPage_RawContentArgs = {
   resolveReferences?: Maybe<SanityResolveReferencesConfiguration>;
@@ -4839,9 +5428,11 @@ export type SanityPageConnection = {
   group: Array<SanityPageGroupConnection>;
 };
 
+
 export type SanityPageConnectionDistinctArgs = {
   field: SanityPageFieldsEnum;
 };
+
 
 export type SanityPageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5046,6 +5637,7 @@ export type Site = Node & {
   internal: Internal;
 };
 
+
 export type SiteBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -5060,6 +5652,7 @@ export type SiteBuildMetadata = Node & {
   internal: Internal;
   buildTime?: Maybe<Scalars['Date']>;
 };
+
 
 export type SiteBuildMetadataBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -5077,9 +5670,11 @@ export type SiteBuildMetadataConnection = {
   group: Array<SiteBuildMetadataGroupConnection>;
 };
 
+
 export type SiteBuildMetadataConnectionDistinctArgs = {
   field: SiteBuildMetadataFieldsEnum;
 };
+
 
 export type SiteBuildMetadataConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5213,9 +5808,11 @@ export type SiteConnection = {
   group: Array<SiteGroupConnection>;
 };
 
+
 export type SiteConnectionDistinctArgs = {
   field: SiteFieldsEnum;
 };
+
 
 export type SiteConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5352,15 +5949,14 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
+  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
+  pluginCreator?: Maybe<SitePlugin>;
+  pluginCreatorId?: Maybe<Scalars['String']>;
+  componentPath?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
-  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
-  context?: Maybe<SitePageContext>;
-  pluginCreator?: Maybe<SitePlugin>;
-  pluginCreatorId?: Maybe<Scalars['String']>;
-  componentPath?: Maybe<Scalars['String']>;
 };
 
 export type SitePageConnection = {
@@ -5372,72 +5968,16 @@ export type SitePageConnection = {
   group: Array<SitePageGroupConnection>;
 };
 
+
 export type SitePageConnectionDistinctArgs = {
   field: SitePageFieldsEnum;
 };
+
 
 export type SitePageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
-};
-
-export type SitePageContext = {
-  id?: Maybe<Scalars['String']>;
-  slug?: Maybe<SitePageContextSlug>;
-  title?: Maybe<Scalars['String']>;
-  _rawContent?: Maybe<Array<Maybe<SitePageContext_RawContent>>>;
-};
-
-export type SitePageContext_RawContent = {
-  _key?: Maybe<Scalars['String']>;
-  _type?: Maybe<Scalars['String']>;
-  children?: Maybe<Array<Maybe<SitePageContext_RawContentChildren>>>;
-  style?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContext_RawContentChildren = {
-  _key?: Maybe<Scalars['String']>;
-  _type?: Maybe<Scalars['String']>;
-  marks?: Maybe<Array<Maybe<Scalars['String']>>>;
-  text?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContext_RawContentChildrenFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  marks?: Maybe<StringQueryOperatorInput>;
-  text?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContext_RawContentChildrenFilterListInput = {
-  elemMatch?: Maybe<SitePageContext_RawContentChildrenFilterInput>;
-};
-
-export type SitePageContext_RawContentFilterInput = {
-  _key?: Maybe<StringQueryOperatorInput>;
-  _type?: Maybe<StringQueryOperatorInput>;
-  children?: Maybe<SitePageContext_RawContentChildrenFilterListInput>;
-  style?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContext_RawContentFilterListInput = {
-  elemMatch?: Maybe<SitePageContext_RawContentFilterInput>;
-};
-
-export type SitePageContextFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<SitePageContextSlugFilterInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  _rawContent?: Maybe<SitePageContext_RawContentFilterListInput>;
-};
-
-export type SitePageContextSlug = {
-  current?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextSlugFilterInput = {
-  current?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -5452,6 +5992,87 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
+  | 'isCreatedByStatefulCreatePages'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___username'
+  | 'pluginCreator___pluginOptions___isTSX'
+  | 'pluginCreator___pluginOptions___jsxPragma'
+  | 'pluginCreator___pluginOptions___allExtensions'
+  | 'pluginCreator___pluginOptions___custom___families'
+  | 'pluginCreator___pluginOptions___custom___urls'
+  | 'pluginCreator___pluginOptions___projectId'
+  | 'pluginCreator___pluginOptions___dataset'
+  | 'pluginCreator___pluginOptions___watchMode'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___extensions'
+  | 'pluginCreator___pluginOptions___lessBabel'
+  | 'pluginCreator___pluginOptions___mediaTypes'
+  | 'pluginCreator___pluginOptions___root'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___packageJson___name'
+  | 'pluginCreator___packageJson___description'
+  | 'pluginCreator___packageJson___version'
+  | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___author'
+  | 'pluginCreator___packageJson___license'
+  | 'pluginCreator___packageJson___dependencies'
+  | 'pluginCreator___packageJson___dependencies___name'
+  | 'pluginCreator___packageJson___dependencies___version'
+  | 'pluginCreator___packageJson___devDependencies'
+  | 'pluginCreator___packageJson___devDependencies___name'
+  | 'pluginCreator___packageJson___devDependencies___version'
+  | 'pluginCreator___packageJson___peerDependencies'
+  | 'pluginCreator___packageJson___peerDependencies___name'
+  | 'pluginCreator___packageJson___peerDependencies___version'
+  | 'pluginCreator___packageJson___keywords'
+  | 'pluginCreatorId'
+  | 'componentPath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -5537,95 +6158,7 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type'
-  | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
-  | 'context___slug___current'
-  | 'context___title'
-  | 'context____rawContent'
-  | 'context____rawContent____key'
-  | 'context____rawContent____type'
-  | 'context____rawContent___children'
-  | 'context____rawContent___children____key'
-  | 'context____rawContent___children____type'
-  | 'context____rawContent___children___marks'
-  | 'context____rawContent___children___text'
-  | 'context____rawContent___style'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___username'
-  | 'pluginCreator___pluginOptions___isTSX'
-  | 'pluginCreator___pluginOptions___jsxPragma'
-  | 'pluginCreator___pluginOptions___allExtensions'
-  | 'pluginCreator___pluginOptions___custom___families'
-  | 'pluginCreator___pluginOptions___custom___urls'
-  | 'pluginCreator___pluginOptions___projectId'
-  | 'pluginCreator___pluginOptions___dataset'
-  | 'pluginCreator___pluginOptions___watchMode'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___author'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreatorId'
-  | 'componentPath';
+  | 'internal___type';
 
 export type SitePageFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -5633,15 +6166,14 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  componentPath?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  context?: Maybe<SitePageContextFilterInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
-  componentPath?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -5683,9 +6215,11 @@ export type SitePluginConnection = {
   group: Array<SitePluginGroupConnection>;
 };
 
+
 export type SitePluginConnectionDistinctArgs = {
   field: SitePluginFieldsEnum;
 };
+
 
 export type SitePluginConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -5804,6 +6338,11 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___dataset'
   | 'pluginOptions___watchMode'
   | 'pluginOptions___path'
+  | 'pluginOptions___name'
+  | 'pluginOptions___extensions'
+  | 'pluginOptions___lessBabel'
+  | 'pluginOptions___mediaTypes'
+  | 'pluginOptions___root'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -5901,9 +6440,7 @@ export type SitePluginPackageJsonFilterInput = {
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
-  peerDependencies?: Maybe<
-    SitePluginPackageJsonPeerDependenciesFilterListInput
-  >;
+  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>;
   keywords?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -5933,6 +6470,11 @@ export type SitePluginPluginOptions = {
   dataset?: Maybe<Scalars['String']>;
   watchMode?: Maybe<Scalars['Boolean']>;
   path?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
+  lessBabel?: Maybe<Scalars['Boolean']>;
+  mediaTypes?: Maybe<Array<Maybe<Scalars['String']>>>;
+  root?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -5958,6 +6500,11 @@ export type SitePluginPluginOptionsFilterInput = {
   dataset?: Maybe<StringQueryOperatorInput>;
   watchMode?: Maybe<BooleanQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  extensions?: Maybe<StringQueryOperatorInput>;
+  lessBabel?: Maybe<BooleanQueryOperatorInput>;
+  mediaTypes?: Maybe<StringQueryOperatorInput>;
+  root?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -6302,12 +6849,8 @@ export type SitePluginPluginOptionsPresetDefaultFilterInput = {
   space?: Maybe<IntQueryOperatorInput>;
   fonts?: Maybe<SitePluginPluginOptionsPresetDefaultFontsFilterInput>;
   fontSizes?: Maybe<IntQueryOperatorInput>;
-  fontWeights?: Maybe<
-    SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput
-  >;
-  lineHeights?: Maybe<
-    SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput
-  >;
+  fontWeights?: Maybe<SitePluginPluginOptionsPresetDefaultFontWeightsFilterInput>;
+  lineHeights?: Maybe<SitePluginPluginOptionsPresetDefaultLineHeightsFilterInput>;
   colors?: Maybe<SitePluginPluginOptionsPresetDefaultColorsFilterInput>;
   styles?: Maybe<SitePluginPluginOptionsPresetDefaultStylesFilterInput>;
 };
@@ -6607,7 +7150,9 @@ export type SiteSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type SortOrderEnum = 'ASC' | 'DESC';
+export type SortOrderEnum =
+  | 'ASC'
+  | 'DESC';
 
 export type StringQueryOperatorInput = {
   eq?: Maybe<Scalars['String']>;
@@ -6636,9 +7181,11 @@ export type ThemeUiConfigConnection = {
   group: Array<ThemeUiConfigGroupConnection>;
 };
 
+
 export type ThemeUiConfigConnectionDistinctArgs = {
   field: ThemeUiConfigFieldsEnum;
 };
+
 
 export type ThemeUiConfigConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -6765,60 +7312,39 @@ export type ThemeUiConfigSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>;
+export type AboutQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
-export type Unnamed_1_Query = {
-  themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>>;
-};
 
-export type GatsbySanityImageFixedFragment = Pick<
-  SanityImageFixed,
-  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type AboutQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'descriptionArray' | 'image' | 'title'>> } }> } };
 
-export type GatsbySanityImageFixed_NoBase64Fragment = Pick<
-  SanityImageFixed,
-  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type AllQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
-export type GatsbySanityImageFixed_WithWebpFragment = Pick<
-  SanityImageFixed,
-  'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
 
-export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<
-  SanityImageFixed,
-  'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'
->;
+export type AllQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<(
+          Pick<MdxFrontmatter, 'type'>
+          & { homePage?: Maybe<(
+            Pick<MdxFrontmatterHomePage, 'title' | 'linkTo' | 'linkText' | 'image' | 'hoverImage' | 'description'>
+            & { imageStyle?: Maybe<Pick<MdxFrontmatterHomePageImageStyle, 'ml'>> }
+          )> }
+        )> } }> } };
 
-export type GatsbySanityImageFluidFragment = Pick<
-  SanityImageFluid,
-  | 'base64'
-  | 'aspectRatio'
-  | 'src'
-  | 'srcSet'
-  | 'srcWebp'
-  | 'srcSetWebp'
-  | 'sizes'
->;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
-export type GatsbySanityImageFluid_NoBase64Fragment = Pick<
-  SanityImageFluid,
-  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
->;
 
-export type GatsbySanityImageFluid_WithWebpFragment = Pick<
-  SanityImageFluid,
-  | 'base64'
-  | 'aspectRatio'
-  | 'src'
-  | 'srcSet'
-  | 'srcWebp'
-  | 'srcSetWebp'
-  | 'sizes'
->;
+export type Unnamed_1_Query = { themeUiConfig?: Maybe<Pick<ThemeUiConfig, 'preset' | 'prismPreset'>> };
 
-export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<
-  SanityImageFluid,
-  'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'
->;
+export type GatsbySanityImageFixedFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+export type GatsbySanityImageFixed_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+export type GatsbySanityImageFixed_WithWebpFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+export type GatsbySanityImageFixed_WithWebp_NoBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
+
+export type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type GatsbySanityImageFluid_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type GatsbySanityImageFluid_WithWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type GatsbySanityImageFluid_WithWebp_NoBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
