@@ -50,7 +50,7 @@ const theme = {
       maxWidth: '250px',
       maxHeight: '60px',
       cursor: 'pointer',
-      py: 3
+      py: 3,
     },
   },
   styles: {
