@@ -1,37 +1,24 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
-import { Box, Container, SystemStyleObject } from 'theme-ui';
+import { Box, Container, ThemeUICSSObject } from 'theme-ui';
 
 interface IntroVideoProps {
   videoUrl?: string;
   videoTitle?: string;
 }
 
-const style: SystemStyleObject = {
+const style: ThemeUICSSObject = {
   '.main-video-container': {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    maxHeight: '1000px',
     '.video-container': {
       position: 'relative',
-      top: 0,
-      bottom: 0,
-      right: 0,
-      left: 0,
-      zIndex: -99,
-      paddingTop: '56.25%' /* Player ratio: 100 / (1280 / 720) */,
+      height: '100vh',
+      width: 'auto',
+      textAlign: 'center',
+      overflow: 'hidden',
       '&::after': {
-        display: 'block',
-        content: '"" !important',
-        position: 'relative',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        maxHeight: '800px',
-        zIndex: 1,
-        backgroundColor: 'dark',
         opacity: 0.5,
       },
     },
@@ -62,18 +49,16 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
       <Box className="video-container">
         <ReactPlayer
           url={data.videoUrl}
+          width="auto"
+          height="100vh"
           playing={true}
           loop={true}
           controls={false}
           volume={0}
-          width="100%"
-          height="100%"
           style={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
+            inset: '-100%',
+            margin: 'auto',
           }}
         />
       </Box>
