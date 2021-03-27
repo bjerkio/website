@@ -18,9 +18,8 @@ const style: ThemeUICSSObject = {
       width: 'auto',
       textAlign: 'center',
       overflow: 'hidden',
-      '&::after': {
-        opacity: 0.5,
-      },
+      zIndex: -99,
+      opacity: 0.5,
     },
   },
   '.data-container': {
