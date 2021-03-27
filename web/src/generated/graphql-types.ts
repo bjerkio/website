@@ -517,8 +517,8 @@ export type FileFieldsEnum =
   | 'childrenMdx___rawBody'
   | 'childrenMdx___fileAbsolutePath'
   | 'childrenMdx___frontmatter___title'
-  | 'childrenMdx___frontmatter___type'
   | 'childrenMdx___frontmatter___id'
+  | 'childrenMdx___frontmatter___type'
   | 'childrenMdx___frontmatter___slug'
   | 'childrenMdx___frontmatter___image'
   | 'childrenMdx___frontmatter___homePage___image'
@@ -531,14 +531,17 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___name'
   | 'childrenMdx___frontmatter___descriptionArray'
   | 'childrenMdx___frontmatter___servicesPage___id'
+  | 'childrenMdx___frontmatter___servicesPage___name'
   | 'childrenMdx___frontmatter___servicesPage___title'
-  | 'childrenMdx___frontmatter___servicesPage___linkTo'
-  | 'childrenMdx___frontmatter___servicesPage___linkText'
-  | 'childrenMdx___frontmatter___servicesPage___image'
+  | 'childrenMdx___frontmatter___servicesPage___photo'
+  | 'childrenMdx___frontmatter___servicesPage___icon'
+  | 'childrenMdx___frontmatter___servicesPage___initials'
+  | 'childrenMdx___frontmatter___servicesPage___position'
   | 'childrenMdx___frontmatter___servicesPage___description'
   | 'childrenMdx___frontmatter___position'
   | 'childrenMdx___frontmatter___email'
-  | 'childrenMdx___frontmatter___phone_number'
+  | 'childrenMdx___frontmatter___phoneNumber'
+  | 'childrenMdx___frontmatter___photo'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -593,8 +596,8 @@ export type FileFieldsEnum =
   | 'childMdx___rawBody'
   | 'childMdx___fileAbsolutePath'
   | 'childMdx___frontmatter___title'
-  | 'childMdx___frontmatter___type'
   | 'childMdx___frontmatter___id'
+  | 'childMdx___frontmatter___type'
   | 'childMdx___frontmatter___slug'
   | 'childMdx___frontmatter___image'
   | 'childMdx___frontmatter___homePage___image'
@@ -607,14 +610,17 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___name'
   | 'childMdx___frontmatter___descriptionArray'
   | 'childMdx___frontmatter___servicesPage___id'
+  | 'childMdx___frontmatter___servicesPage___name'
   | 'childMdx___frontmatter___servicesPage___title'
-  | 'childMdx___frontmatter___servicesPage___linkTo'
-  | 'childMdx___frontmatter___servicesPage___linkText'
-  | 'childMdx___frontmatter___servicesPage___image'
+  | 'childMdx___frontmatter___servicesPage___photo'
+  | 'childMdx___frontmatter___servicesPage___icon'
+  | 'childMdx___frontmatter___servicesPage___initials'
+  | 'childMdx___frontmatter___servicesPage___position'
   | 'childMdx___frontmatter___servicesPage___description'
   | 'childMdx___frontmatter___position'
   | 'childMdx___frontmatter___email'
-  | 'childMdx___frontmatter___phone_number'
+  | 'childMdx___frontmatter___phoneNumber'
+  | 'childMdx___frontmatter___photo'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -938,8 +944,8 @@ export type MdxFieldsEnum =
   | 'rawBody'
   | 'fileAbsolutePath'
   | 'frontmatter___title'
-  | 'frontmatter___type'
   | 'frontmatter___id'
+  | 'frontmatter___type'
   | 'frontmatter___slug'
   | 'frontmatter___image'
   | 'frontmatter___homePage___image'
@@ -953,14 +959,19 @@ export type MdxFieldsEnum =
   | 'frontmatter___name'
   | 'frontmatter___descriptionArray'
   | 'frontmatter___servicesPage___id'
+  | 'frontmatter___servicesPage___name'
   | 'frontmatter___servicesPage___title'
-  | 'frontmatter___servicesPage___linkTo'
-  | 'frontmatter___servicesPage___linkText'
-  | 'frontmatter___servicesPage___image'
+  | 'frontmatter___servicesPage___url___navigationLink'
+  | 'frontmatter___servicesPage___url___linkText'
+  | 'frontmatter___servicesPage___photo'
+  | 'frontmatter___servicesPage___icon'
+  | 'frontmatter___servicesPage___initials'
+  | 'frontmatter___servicesPage___position'
   | 'frontmatter___servicesPage___description'
   | 'frontmatter___position'
   | 'frontmatter___email'
-  | 'frontmatter___phone_number'
+  | 'frontmatter___phoneNumber'
+  | 'frontmatter___photo'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -1086,8 +1097,8 @@ export type MdxFilterListInput = {
 
 export type MdxFrontmatter = {
   title: Scalars['String'];
-  type?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['Int']>;
+  type?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
   homePage?: Maybe<MdxFrontmatterHomePage>;
@@ -1096,13 +1107,14 @@ export type MdxFrontmatter = {
   servicesPage?: Maybe<MdxFrontmatterServicesPage>;
   position?: Maybe<Scalars['String']>;
   email?: Maybe<Scalars['String']>;
-  phone_number?: Maybe<Scalars['String']>;
+  phoneNumber?: Maybe<Scalars['String']>;
+  photo?: Maybe<Scalars['String']>;
 };
 
 export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
-  type?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<IntQueryOperatorInput>;
+  type?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
   homePage?: Maybe<MdxFrontmatterHomePageFilterInput>;
@@ -1111,7 +1123,8 @@ export type MdxFrontmatterFilterInput = {
   servicesPage?: Maybe<MdxFrontmatterServicesPageFilterInput>;
   position?: Maybe<StringQueryOperatorInput>;
   email?: Maybe<StringQueryOperatorInput>;
-  phone_number?: Maybe<StringQueryOperatorInput>;
+  phoneNumber?: Maybe<StringQueryOperatorInput>;
+  photo?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxFrontmatterHomePage = {
@@ -1146,20 +1159,36 @@ export type MdxFrontmatterHomePageImageStyleFilterInput = {
 
 export type MdxFrontmatterServicesPage = {
   id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
-  linkTo?: Maybe<Scalars['String']>;
-  linkText?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
+  url?: Maybe<MdxFrontmatterServicesPageUrl>;
+  photo?: Maybe<Scalars['String']>;
+  icon?: Maybe<Scalars['String']>;
+  initials?: Maybe<Scalars['String']>;
+  position?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
 };
 
 export type MdxFrontmatterServicesPageFilterInput = {
   id?: Maybe<IntQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
-  linkTo?: Maybe<StringQueryOperatorInput>;
-  linkText?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<StringQueryOperatorInput>;
+  url?: Maybe<MdxFrontmatterServicesPageUrlFilterInput>;
+  photo?: Maybe<StringQueryOperatorInput>;
+  icon?: Maybe<StringQueryOperatorInput>;
+  initials?: Maybe<StringQueryOperatorInput>;
+  position?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxFrontmatterServicesPageUrl = {
+  navigationLink?: Maybe<Scalars['String']>;
+  linkText?: Maybe<Scalars['String']>;
+};
+
+export type MdxFrontmatterServicesPageUrlFilterInput = {
+  navigationLink?: Maybe<StringQueryOperatorInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -3826,14 +3855,15 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
-  componentPath?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  componentPath?: Maybe<StringQueryOperatorInput>;
 };
 
 
@@ -5949,14 +5979,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
-  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
-  pluginCreator?: Maybe<SitePlugin>;
-  pluginCreatorId?: Maybe<Scalars['String']>;
-  componentPath?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
+  context?: Maybe<SitePageContext>;
+  pluginCreator?: Maybe<SitePlugin>;
+  pluginCreatorId?: Maybe<Scalars['String']>;
+  componentPath?: Maybe<Scalars['String']>;
 };
 
 export type SitePageConnection = {
@@ -5980,6 +6011,14 @@ export type SitePageConnectionGroupArgs = {
   field: SitePageFieldsEnum;
 };
 
+export type SitePageContext = {
+  id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+};
+
 export type SitePageEdge = {
   next?: Maybe<SitePage>;
   node: SitePage;
@@ -5992,87 +6031,6 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
-  | 'isCreatedByStatefulCreatePages'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___username'
-  | 'pluginCreator___pluginOptions___isTSX'
-  | 'pluginCreator___pluginOptions___jsxPragma'
-  | 'pluginCreator___pluginOptions___allExtensions'
-  | 'pluginCreator___pluginOptions___custom___families'
-  | 'pluginCreator___pluginOptions___custom___urls'
-  | 'pluginCreator___pluginOptions___projectId'
-  | 'pluginCreator___pluginOptions___dataset'
-  | 'pluginCreator___pluginOptions___watchMode'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___name'
-  | 'pluginCreator___pluginOptions___extensions'
-  | 'pluginCreator___pluginOptions___lessBabel'
-  | 'pluginCreator___pluginOptions___mediaTypes'
-  | 'pluginCreator___pluginOptions___root'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___author'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreatorId'
-  | 'componentPath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -6158,7 +6116,89 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type';
+  | 'internal___type'
+  | 'isCreatedByStatefulCreatePages'
+  | 'context___id'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___username'
+  | 'pluginCreator___pluginOptions___isTSX'
+  | 'pluginCreator___pluginOptions___jsxPragma'
+  | 'pluginCreator___pluginOptions___allExtensions'
+  | 'pluginCreator___pluginOptions___custom___families'
+  | 'pluginCreator___pluginOptions___custom___urls'
+  | 'pluginCreator___pluginOptions___projectId'
+  | 'pluginCreator___pluginOptions___dataset'
+  | 'pluginCreator___pluginOptions___watchMode'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___extensions'
+  | 'pluginCreator___pluginOptions___lessBabel'
+  | 'pluginCreator___pluginOptions___mediaTypes'
+  | 'pluginCreator___pluginOptions___root'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___packageJson___name'
+  | 'pluginCreator___packageJson___description'
+  | 'pluginCreator___packageJson___version'
+  | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___author'
+  | 'pluginCreator___packageJson___license'
+  | 'pluginCreator___packageJson___dependencies'
+  | 'pluginCreator___packageJson___dependencies___name'
+  | 'pluginCreator___packageJson___dependencies___version'
+  | 'pluginCreator___packageJson___devDependencies'
+  | 'pluginCreator___packageJson___devDependencies___name'
+  | 'pluginCreator___packageJson___devDependencies___version'
+  | 'pluginCreator___packageJson___peerDependencies'
+  | 'pluginCreator___packageJson___peerDependencies___name'
+  | 'pluginCreator___packageJson___peerDependencies___version'
+  | 'pluginCreator___packageJson___keywords'
+  | 'pluginCreatorId'
+  | 'componentPath';
 
 export type SitePageFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -6166,14 +6206,15 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
-  pluginCreator?: Maybe<SitePluginFilterInput>;
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
-  componentPath?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
+  pluginCreator?: Maybe<SitePluginFilterInput>;
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>;
+  componentPath?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -7317,6 +7358,11 @@ export type AboutQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type AboutQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'descriptionArray' | 'image' | 'title'>> } }> } };
 
+export type ContactQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ContactQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'name' | 'position' | 'email' | 'phoneNumber' | 'photo'>> } }> } };
+
 export type AllQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -7327,6 +7373,14 @@ export type AllQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: May
             & { imageStyle?: Maybe<Pick<MdxFrontmatterHomePageImageStyle, 'ml'>> }
           )> }
         )> } }> } };
+
+export type ServicesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type ServicesQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<{ servicesPage?: Maybe<(
+            Pick<MdxFrontmatterServicesPage, 'name' | 'title' | 'description' | 'photo' | 'icon' | 'initials' | 'position'>
+            & { url?: Maybe<Pick<MdxFrontmatterServicesPageUrl, 'navigationLink' | 'linkText'>> }
+          )> }> } }> } };
 
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 

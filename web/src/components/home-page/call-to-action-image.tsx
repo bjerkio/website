@@ -8,6 +8,7 @@ export interface CallToActionImageProps {
 }
 
 const styles: ThemeUIStyleObject = {
+  mb: 5,
   ':hover': {
     cursor: 'pointer',
     '.linkText': {
@@ -24,7 +25,8 @@ const styles: ThemeUIStyleObject = {
   },
   '.img': {
     transition: '.4s',
-    width: '100%',
+    width: [ '100vw', '100vw', '100%' ],
+    ml: [ -4, -4, 0 ]
   },
 };
 

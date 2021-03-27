@@ -19,7 +19,11 @@ const style: ThemeUICSSObject = {
       textAlign: 'center',
       overflow: 'hidden',
       zIndex: -99,
+      bg: 'dark',
       opacity: 0.5,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
   },
   '.data-container': {
@@ -34,8 +38,12 @@ const style: ThemeUICSSObject = {
     textAlign: 'start',
     verticalAlign: 'center',
     color: 'background',
-    px: [5, 5, 6],
-    paddingTop: '10%',
+    px: [4, 4, 6],
+    pt: '10%',
+    '.data-box': {
+      my: '32%', 
+      width: ['100%', '60%', '60%'],
+    }
   },
 };
 
@@ -54,16 +62,14 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
           loop={true}
           controls={false}
           volume={0}
-          style={{
-            position: 'absolute',
-            inset: '-100%',
-            margin: 'auto',
+          sx={{
+            position: 'absolute'
           }}
         />
       </Box>
     </Box>
     <Container className="data-container">
-      <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>
+      <Box className='data-box'>{children}</Box>
     </Container>
   </Container>
 );

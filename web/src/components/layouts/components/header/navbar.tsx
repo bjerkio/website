@@ -15,7 +15,7 @@ const styles: SystemStyleObject = {
     maxWidth: '1920px',
     margin: '0 auto',
     py: '25px',
-    px: [5, 5, 6],
+    px: [4, 4, 6],
   },
   '.navbar.active': {
     bg: 'background',

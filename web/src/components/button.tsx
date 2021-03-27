@@ -51,6 +51,7 @@ const styles: SystemStyleObject = {
   },
   '.animation-arrow-container': {
     transition: '.4s',
+    zIndex: 0,
     '.animation-arrow': {
       minWidth: '30px',
       width: '3em',

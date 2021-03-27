@@ -1,5 +1,5 @@
 import { Box, BoxProps, Button, Link } from '@theme-ui/components';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { SystemStyleObject } from 'theme-ui';
@@ -12,6 +12,7 @@ const styles: SystemStyleObject = {
   '.logo': {
     position: 'absolute',
     margin: 4,
+    marginTop: '45px',
   },
   '.menuButton': {
     display: 'flex',
@@ -19,7 +20,7 @@ const styles: SystemStyleObject = {
     background: 'primary',
     borderRadius: '50%',
     position: 'fixed',
-    zIndex: 3,
+    zIndex: 2,
     width: '4em',
     height: '4em',
     maxWidth: '50px',
@@ -34,25 +35,25 @@ const styles: SystemStyleObject = {
 };
 
 const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
-  let pathname = '';
+  const [pathname, setPathname] = useState('');
+  const [menu, setMenu] = useState<boolean>(false);
 
-  if (typeof window !== 'undefined') {
-    pathname =
+  useEffect(() => {
+    setPathname(
       window.location.pathname[window.location.pathname.length - 1] === '/'
         ? window.location.pathname.slice(0, -1)
-        : window.location.pathname;
-  }
-
-  const [menu, setMenu] = useState<boolean>(false);
+        : window.location.pathname,
+    );
+  }, []);
 
   return (
     <Box {...props} sx={styles}>
       <Box className="logo">
         <Link href="/">
           {pathname === '' ? (
-            <Logo sx={{ width: '4em', color: 'white' }} />
+            <Logo color="white" sx={{ width: '5em', color: 'white' }} />
           ) : (
-            <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '4em' }} />
+            <Logo color="black" dotColor="#0FCFA2" sx={{ color: 'black', width: '5em' }} />
           )}
         </Link>
       </Box>
@@ -61,9 +62,9 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
         onClick={() => setMenu(!menu)}
       >
         {menu ? (
-          <IoCloseSharp fontSize={'3em'} />
+          <IoCloseSharp />
         ) : (
-          <GiHamburgerMenu fontSize={'3em'} />
+          <GiHamburgerMenu />
         )}
       </Button>
       {menu && <MobileMenu />}

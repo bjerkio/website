@@ -68,7 +68,7 @@ const Homepage: React.FC = () => {
             <Button href="/contact">Start ditt prosjekt</Button>
           </Box>
         </IntroVideo>
-        <Container sx={{ pt: 7 }}>
+        <Container sx={{ pt: 7, mb: 5 }}>
           <Heading
             sx={{
               mb: 3,
@@ -80,7 +80,7 @@ const Homepage: React.FC = () => {
           </Heading>
           <Box
             sx={{
-              width: '65%',
+              width: ['100%', '100%', '65%'],
               fontWeight: 'normal',
               fontSize: 'clamp(8px, 4vw, 22px)',
             }}

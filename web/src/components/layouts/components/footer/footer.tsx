@@ -8,7 +8,7 @@ import { NetworskLinks } from './networks-links';
 export const Footer: React.FC = (props) => (
   <Container sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white' }} {...props}>
     <Box>
-      <Logo sx={{ color: 'white', width: '4em' }} />
+      <Logo color='white' sx={{ color: 'white', width: '4em' }} />
     </Box>
     <Box
       sx={{
