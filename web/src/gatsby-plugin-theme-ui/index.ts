@@ -44,12 +44,13 @@ const theme = {
       backgroundColor: 'background',
       border: '1px solid',
       borderColor: 'primary',
-      borderRadius: '15px',
+      borderRadius: '10px',
       display: 'flex',
       alignItems: 'center',
       maxWidth: '250px',
-      maxHeight: '50px',
+      maxHeight: '60px',
       cursor: 'pointer',
+      py: 3
     },
   },
   styles: {
