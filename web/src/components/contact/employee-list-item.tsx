@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, Text } from '@theme-ui/components';
+import { Box, Container, Flex, Link, Text, Image } from '@theme-ui/components';
 import React from 'react';
 
 export interface EmployeeListItemProps {
@@ -12,23 +12,19 @@ export interface EmployeeListItemProps {
 export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
   data: { photo, name, position, email, phoneNumber },
 }) => (
-  <Container mb={[3, 4, 5]}>
+  <Container mb={5}>
     <Box
       sx={{
-        width: '25rem',
-        height: '23rem',
-        maxWidth: '370px',
-        maxHeight: '346px',
-        my: [2, 3, 4],
+        mr: [ 4, 4, 3 ]
       }}
     >
-      <img src={`../${photo}`} style={{ width: '100%' }} />
+      <Image src={`../${photo}`} sx={{ width: '100%', mb: [ 3, 3, 1   ] }} />
+      <Text sx={{ fontWeight: 'bold' }}>{name}</Text>
+      <Text>{position}</Text>
+      <Flex mt={2} sx={{ flexDirection: 'column' }}>
+        <Link color="black">{email}</Link>
+        <Link color="black">{phoneNumber}</Link>
+      </Flex>
     </Box>
-    <Text sx={{ fontWeight: 'bold' }}>{name}</Text>
-    <Text>{position}</Text>
-    <Flex mt={2} sx={{ flexDirection: 'column' }}>
-      <Link color="black">{email}</Link>
-      <Link color="black">{phoneNumber}</Link>
-    </Flex>
   </Container>
 );
