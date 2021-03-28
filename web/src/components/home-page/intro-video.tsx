@@ -60,6 +60,7 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
           loop={true}
           controls={false}
           volume={0}
+          playsinline={true}
           sx={{
             position: 'absolute',
           }}
