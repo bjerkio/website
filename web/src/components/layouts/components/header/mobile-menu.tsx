@@ -20,7 +20,7 @@ const styles: SystemStyleObject = {
     width: 'auto',
     fontSize: 4,
     lineHeight: 1,
-    textDecorationThickness: '3px'
+    textDecorationThickness: '3px',
   },
 };
 
@@ -31,15 +31,9 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
         dotColor="white"
         sx={{ color: 'black', width: '5em', mb: 4, ml: 5 }}
       />
-      <Link href="/services">
-        Tjenester
-      </Link>
-      <Link href="/about">
-        Om oss
-      </Link>
-      <Link href="/contact">
-        Kontakt
-      </Link>
+      <Link href="/services">Tjenester</Link>
+      <Link href="/about">Om oss</Link>
+      <Link href="/contact">Kontakt</Link>
     </Flex>
   </Box>
 );

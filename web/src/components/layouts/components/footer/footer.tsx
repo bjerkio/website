@@ -8,12 +8,12 @@ import { NetworksLinks } from './networks-links';
 export const Footer: React.FC = (props) => (
   <Container sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white' }} {...props}>
     <Box>
-      <Logo color='white' sx={{ color: 'white', width: '5em' }} />
+      <Logo color="white" sx={{ color: 'white', width: '5em' }} />
     </Box>
     <Box
       sx={{
         display: 'grid',
-        gridGap: [1,1,6],
+        gridGap: [1, 1, 6],
         gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
         alignItems: 'start',
         pt: 0,
@@ -65,7 +65,9 @@ export const Footer: React.FC = (props) => (
       }}
     >
       <Box>
-        <Text sx={{ fontSize: 20, whiteSpace: 'pre' }}>© 2019 Bjerk. Alle rettigheter.     998 732 867 MVA</Text>
+        <Text sx={{ fontSize: 20, whiteSpace: 'pre' }}>
+          © 2019 Bjerk. Alle rettigheter. 998 732 867 MVA
+        </Text>
       </Box>
       <NetworksLinks sx={{ display: ['none', 'none', 'block'] }} />
     </Box>

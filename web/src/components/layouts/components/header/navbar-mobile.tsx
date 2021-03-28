@@ -53,7 +53,11 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
           {pathname === '' ? (
             <Logo color="white" sx={{ width: '5em', color: 'white' }} />
           ) : (
-            <Logo color="black" dotColor="#0FCFA2" sx={{ color: 'black', width: '5em' }} />
+            <Logo
+              color="black"
+              dotColor="#0FCFA2"
+              sx={{ color: 'black', width: '5em' }}
+            />
           )}
         </Link>
       </Box>
@@ -61,11 +65,7 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
         className={menu ? 'menuButton open' : 'menuButton'}
         onClick={() => setMenu(!menu)}
       >
-        {menu ? (
-          <IoCloseSharp />
-        ) : (
-          <GiHamburgerMenu />
-        )}
+        {menu ? <IoCloseSharp /> : <GiHamburgerMenu />}
       </Button>
       {menu && <MobileMenu />}
     </Box>

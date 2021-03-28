@@ -25,8 +25,8 @@ const styles: ThemeUIStyleObject = {
   },
   '.img': {
     transition: '.4s',
-    width: [ '100vw', '100vw', '100%' ],
-    ml: [ -4, -4, 0 ]
+    width: ['100vw', '100vw', '100%'],
+    ml: [-4, -4, 0],
   },
 };
 

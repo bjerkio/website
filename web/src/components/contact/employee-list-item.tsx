@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, Text, Image } from '@theme-ui/components';
+import { Box, Container, Flex, Image, Link, Text } from '@theme-ui/components';
 import React from 'react';
 
 export interface EmployeeListItemProps {
@@ -15,10 +15,10 @@ export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
   <Container mb={5}>
     <Box
       sx={{
-        mr: [ 4, 4, 3 ]
+        mr: [4, 4, 3],
       }}
     >
-      <Image src={`../${photo}`} sx={{ width: '100%', mb: [ 3, 3, 1   ] }} />
+      <Image src={`../${photo}`} sx={{ width: '100%', mb: [3, 3, 1] }} />
       <Text sx={{ fontWeight: 'bold', fontSize: 22 }}>{name}</Text>
       <Text sx={{ fontSize: 22 }}>{position}</Text>
       <Flex mt={2} sx={{ flexDirection: 'column', fontSize: 22 }}>

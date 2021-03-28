@@ -83,8 +83,16 @@ export default function ProjectTemplate({ data: { mdx } }) {
   return (
     <Layout>
       <Box>
-        <Container sx={{ alignItems: 'center'}}>
-          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: '600', mt: 6, fontSize: 'clamp(36px, 3.5vw, 50px)', }}>
+        <Container sx={{ alignItems: 'center' }}>
+          <BaseHeading
+            as="h1"
+            sx={{
+              mb: 3,
+              fontWeight: '600',
+              mt: 6,
+              fontSize: 'clamp(36px, 3.5vw, 50px)',
+            }}
+          >
             {mdx.frontmatter.title}
           </BaseHeading>
           <Box sx={{ mt: 4 }}>

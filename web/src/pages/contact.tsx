@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Label, Link, Image } from '@theme-ui/components';
+import { Box, Heading, Image, Label, Link } from '@theme-ui/components';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
@@ -13,7 +13,7 @@ const styles: SystemStyleObject = {
   '.mobileImage': {
     width: '50%',
     display: ['block', 'block', 'none'],
-    marginLeft: '50%'
+    marginLeft: '50%',
   },
 };
 
@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
   const employeeList = edges.map((edge) => edge.node.frontmatter);
   return (
     <Layout>
-      <Container sx={{ pr: [ 0, 0, 6 ] }}>
+      <Container sx={{ pr: [0, 0, 6] }}>
         <Box sx={styles}>
           <Box sx={{ display: 'flex', flexDirection: 'row', mb: 6 }}>
             <Box sx={{ flex: 3 }}>
@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
                   fontWeight: 'normal',
                   width: ['100%', '60%'],
                   my: 5,
-                  pr: [ 4, 4, 0 ],
+                  pr: [4, 4, 0],
                   fontSize: 'clamp(36px, 3.5vw, 50px)',
                 }}
               >
@@ -72,23 +72,23 @@ const ContactPage: React.FC = () => {
               </Box>
             </Box>
             <Box sx={{ flex: 1 }}>
-              <Image 
-                src="../map.svg" 
-                sx={{ 
-                  width: '100%' ,
+              <Image
+                src="../map.svg"
+                sx={{
+                  width: '100%',
                   display: ['none', 'none', 'block'],
                 }}
               />
             </Box>
           </Box>
-          <Image 
-            src="../map.svg" 
+          <Image
+            src="../map.svg"
             sx={{
-                width: '50%',
-                display: ['block', 'block', 'none'],
-                marginLeft: '60%',
-                mb: 5
-              }} 
+              width: '50%',
+              display: ['block', 'block', 'none'],
+              marginLeft: '60%',
+              mb: 5,
+            }}
           />
           <EmployeeList data={employeeList} />
         </Box>

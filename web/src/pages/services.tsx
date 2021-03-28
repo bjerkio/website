@@ -51,8 +51,8 @@ const ServicesPage: React.FC = () => {
             fontSize: 'clamp(36px, 3.5vw, 50px)',
             width: ['100%', '60%'],
             my: 6,
-            pr: [ 4, 4, 0 ],
-            pl: [ 4, 4, 0 ]
+            pr: [4, 4, 0],
+            pl: [4, 4, 0],
           }}
         >
           Bjerk hjelper bedriften din med å ta det neste steget inn i fremtiden.

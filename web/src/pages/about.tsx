@@ -39,8 +39,8 @@ const AboutPage: React.FC = () => {
             width: ['100%', '60%'],
             fontSize: 'clamp(36px, 3.5vw, 50px)',
             my: 6,
-            pr: [ 4, 4, 0 ],
-            pl: [ 4, 4, 0 ]
+            pr: [4, 4, 0],
+            pl: [4, 4, 0],
           }}
         >
           Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
         <Box pt={6} sx={{ width: '100%', height: 'auto' }}>
           <img src="../AboutSplit.png" style={{ width: '100%' }} />
         </Box>
-        <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [ 4, 4, 5 ], pt: [ 4, 4, 6 ] }}>
+        <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [4, 4, 5], pt: [4, 4, 6] }}>
           <Box>
             <img src="../SimenBjorn.png" style={{ width: '100%' }} />
           </Box>

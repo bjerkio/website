@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, ThemeUIStyleObject, Image } from 'theme-ui';
+import { Image, Label, ThemeUIStyleObject } from 'theme-ui';
 
 export interface ServiceTileImageProps {
   photo: string;
@@ -33,14 +33,14 @@ const styles: ThemeUIStyleObject = {
       marginTop: '12%',
       marginLeft: '4%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
     '.position': {
       position: 'absolute',
       marginTop: '13%',
       marginLeft: '4%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
   },
   '.strategy': {
@@ -66,14 +66,14 @@ const styles: ThemeUIStyleObject = {
       marginTop: '11.7%',
       marginLeft: '7.5%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
     '.position': {
       position: 'absolute',
       marginTop: '12.7%',
       marginLeft: '7.5%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
   },
   '.project-management': {
@@ -99,14 +99,14 @@ const styles: ThemeUIStyleObject = {
       marginTop: '12%',
       marginLeft: '0.5%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
     '.position': {
       position: 'absolute',
       marginTop: '13%',
       marginLeft: '0.5%',
       display: ['none', 'none', 'block'],
-      fontSize: 20
+      fontSize: 20,
     },
   },
 };

@@ -32,11 +32,11 @@ const styles: ThemeUIStyleObject = {
       border: 'none',
       px: 4,
       py: 3,
-      borderRadius: '10px'
+      borderRadius: '10px',
     },
     '.button': {
       mt: 4,
-      py: '15px'
+      py: '15px',
     },
   },
 };

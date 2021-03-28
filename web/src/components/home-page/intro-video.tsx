@@ -21,7 +21,7 @@ const style: ThemeUICSSObject = {
       zIndex: -99,
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
   },
   '.data-container': {
@@ -39,9 +39,9 @@ const style: ThemeUICSSObject = {
     px: [4, 4, 6],
     pt: '10%',
     '.data-box': {
-      my: '32%', 
+      my: '32%',
       width: ['100%', '60%', '60%'],
-    }
+    },
   },
 };
 
@@ -61,13 +61,13 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
           controls={false}
           volume={0}
           sx={{
-            position: 'absolute'
+            position: 'absolute',
           }}
         />
       </Box>
     </Box>
     <Container className="data-container">
-      <Box className='data-box'>{children}</Box>
+      <Box className="data-box">{children}</Box>
     </Container>
   </Container>
 );
