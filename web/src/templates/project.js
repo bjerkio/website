@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
-import { Heading as BaseHeading, Box } from '@theme-ui/components';
+import { Heading as BaseHeading, Box, Image } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
@@ -8,16 +8,16 @@ import { Layout } from '../components/layouts';
 
 const TwoCenteredImages = ({ firstSrc, secondSrc }) => (
   <div style={{ textAlign: 'center' }}>
-    <img
-      src={firstSrc}
-      style={{
+    <Image
+      src={`../${firstSrc}`}
+      sx={{
         width: '45%',
         marginRight: '0.5%',
       }}
     />
-    <img
-      src={secondSrc}
-      style={{
+    <Image
+      src={`../${secondSrc}`}
+      sx={{
         width: '45%',
         marginLeft: '0.5%',
       }}
@@ -80,15 +80,15 @@ const components = {
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <Box sx={{ mt: 6 }}>
-        <Container sx={{ pt: 6, alignItems: 'center' }}>
-          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+      <Box>
+        <Container sx={{ alignItems: 'center'}}>
+          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: 'normal', mt: 6 }}>
             {mdx.frontmatter.title}
           </BaseHeading>
           <Box sx={{ mt: 4 }}>
-            <img
-              src={`../${mdx.frontmatter.image}`}
-              style={{ width: '100%' }}
+            <Image
+              src={`../../${mdx.frontmatter.image}`}
+              sx={{ width: '100%' }}
             />
           </Box>
           <MDXProvider components={components}>
