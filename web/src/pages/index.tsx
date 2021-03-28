@@ -65,10 +65,15 @@ const Homepage: React.FC = () => {
             <Label sx={{ fontWeight: '600' }}>
               Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
             </Label>
-            <Button href="/contact" sx={{ paddingTop: '15px', paddingBottom: '15px' }} >Start ditt prosjekt</Button>
+            <Button
+              href="/contact"
+              sx={{ paddingTop: '15px', paddingBottom: '15px' }}
+            >
+              Start ditt prosjekt
+            </Button>
           </Box>
         </IntroVideo>
-        <Container sx={{ pt: [ 6, 6, 7 ], mb: 5 }}>
+        <Container sx={{ pt: [6, 6, 7], mb: 5 }}>
           <Heading
             sx={{
               mb: 3,

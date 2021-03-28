@@ -27,7 +27,9 @@ export const Footer: React.FC = (props) => (
         </Text>
       </Box>
       <Box sx={{ fontSize: 28, my: 4 }}>
-        <Link href="#" sx={{ whiteSpace: 'nowrap' }}>+47 22 12 05 12</Link>
+        <Link href="#" sx={{ whiteSpace: 'nowrap' }}>
+          +47 22 12 05 12
+        </Link>
         <br />
         <Link href="#">kontoret@bjerk.io</Link>
       </Box>
@@ -64,17 +66,15 @@ export const Footer: React.FC = (props) => (
         pb: '4rem',
       }}
     >
-      <Box sx={{ display: [ 'block', 'block', 'none' ] }}>
+      <Box sx={{ display: ['block', 'block', 'none'] }}>
         <Text sx={{ flex: 1, fontSize: 20 }}>
           © 2019 Bjerk. Alle rettigheter.
         </Text>
-        <Text sx={{ flex: 1, fontSize: 20 }}>
-          998 732 867 MVA
-        </Text>
+        <Text sx={{ flex: 1, fontSize: 20 }}>998 732 867 MVA</Text>
       </Box>
-      <Box sx={{ display: [ 'none', 'none', 'block' ] }}>
+      <Box sx={{ display: ['none', 'none', 'block'] }}>
         <Text sx={{ flex: 1, fontSize: 20, whiteSpace: 'pre' }}>
-          © 2019 Bjerk. Alle rettigheter.    998 732 867 MVA
+          © 2019 Bjerk. Alle rettigheter. 998 732 867 MVA
         </Text>
       </Box>
       <NetworksLinks sx={{ display: ['none', 'none', 'block'] }} />

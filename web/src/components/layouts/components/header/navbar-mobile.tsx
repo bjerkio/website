@@ -21,8 +21,6 @@ const styles: SystemStyleObject = {
     zIndex: 2,
     width: '42px',
     height: '42px',
-    // maxWidth: '100px',
-    // maxHeight: '100px',
     color: 'black',
     margin: 4,
     right: 0,
@@ -40,8 +38,8 @@ const styles: SystemStyleObject = {
         transition: '.4s',
         '&.animate': {
           '-webkit-transform': 'rotate(-45deg) translate(-1px, 3px)',
-          transform: 'rotate(-45deg) translate(-5px, 4px)'
-        }
+          transform: 'rotate(-45deg) translate(-5px, 4px)',
+        },
       },
       '.bar2': {
         width: '24px',
@@ -50,8 +48,8 @@ const styles: SystemStyleObject = {
         margin: '3px 0',
         transition: '.4s',
         '&.animate': {
-          opacity: 0
-        }
+          opacity: 0,
+        },
       },
       '.bar3': {
         width: '24px',
@@ -61,10 +59,10 @@ const styles: SystemStyleObject = {
         transition: '.4s',
         '&.animate': {
           '-webkit-transform': 'rotate(45deg) translate(-6px, -7px)',
-          transform: 'rotate(45deg) translate(-4px, -4px);'
-        }
-      }
-    }    
+          transform: 'rotate(45deg) translate(-4px, -4px);',
+        },
+      },
+    },
   },
   '.menuButton.open': {
     background: 'white',
