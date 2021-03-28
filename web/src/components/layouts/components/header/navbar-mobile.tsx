@@ -1,7 +1,5 @@
 import { Box, BoxProps, Button, Link } from '@theme-ui/components';
 import React, { useEffect, useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { IoCloseSharp } from 'react-icons/io5';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import MobileMenu from './mobile-menu';
@@ -21,13 +19,52 @@ const styles: SystemStyleObject = {
     borderRadius: '50%',
     position: 'fixed',
     zIndex: 2,
-    width: '4em',
-    height: '4em',
-    maxWidth: '50px',
-    maxHeight: '50px',
+    width: '42px',
+    height: '42px',
+    // maxWidth: '100px',
+    // maxHeight: '100px',
     color: 'black',
     margin: 4,
     right: 0,
+    fontSize: '100px',
+    padding: 0,
+    '.container': {
+      display: 'inline-block',
+      cursor: 'pointer',
+      marginLeft: '9px',
+      '.bar1': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          '-webkit-transform': 'rotate(-45deg) translate(-1px, 3px)',
+          transform: 'rotate(-45deg) translate(-5px, 4px)'
+        }
+      },
+      '.bar2': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          opacity: 0
+        }
+      },
+      '.bar3': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          '-webkit-transform': 'rotate(45deg) translate(-6px, -7px)',
+          transform: 'rotate(45deg) translate(-4px, -4px);'
+        }
+      }
+    }    
   },
   '.menuButton.open': {
     background: 'white',
@@ -65,7 +102,11 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
         className={menu ? 'menuButton open' : 'menuButton'}
         onClick={() => setMenu(!menu)}
       >
-        {menu ? <IoCloseSharp /> : <GiHamburgerMenu />}
+        <div className="container">
+          <div className={menu ? 'bar1 animate' : 'bar1'}></div>
+          <div className={menu ? 'bar2 animate' : 'bar2'}></div>
+          <div className={menu ? 'bar3 animate' : 'bar3'}></div>
+        </div>
       </Button>
       {menu && <MobileMenu />}
     </Box>

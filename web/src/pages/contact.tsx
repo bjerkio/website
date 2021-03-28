@@ -46,15 +46,16 @@ const ContactPage: React.FC = () => {
     <Layout>
       <Container sx={{ pr: [0, 0, 6] }}>
         <Box sx={styles}>
-          <Box sx={{ display: 'flex', flexDirection: 'row', mb: 6 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', mb: [ 0, 0, 6 ] }}>
             <Box sx={{ flex: 3 }}>
               <Heading
                 as="h1"
                 sx={{
-                  fontWeight: 'normal',
-                  width: ['100%', '60%'],
-                  my: 5,
-                  pr: [4, 4, 0],
+                  fontWeight: '600',
+                  width: ['100%', '100%', '60%'],
+                  mb: 5,
+                  mt: [ 0, 0, 5 ],
+                  pr: [ 4, 4, 0 ],
                   fontSize: 'clamp(36px, 3.5vw, 50px)',
                 }}
               >
@@ -63,19 +64,20 @@ const ContactPage: React.FC = () => {
               <Box
                 sx={{
                   fontSize: 'clamp(20px, 2.3vw, 35px)',
+                  mb: [ -6, -6, 0 ]
                 }}
               >
                 <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
-                <Label>+47 22 12 05 12</Label>
-                <Label>Dronningens gate 8B,</Label>
+              <Label>+47 22 12 05 12</Label>
+                <Label mt={3}>Dronningens gate 8B,</Label>
                 <Label>0151 Oslo</Label>
               </Box>
             </Box>
-            <Box sx={{ flex: 1 }}>
+            <Box sx={{ flex: [ 0, 0, 1 ] }}>
               <Image
                 src="../map.svg"
                 sx={{
-                  width: '100%',
+                  width: [ 0, 0, '100%' ],
                   display: ['none', 'none', 'block'],
                 }}
               />

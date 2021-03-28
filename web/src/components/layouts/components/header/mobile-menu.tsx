@@ -8,6 +8,7 @@ const styles: SystemStyleObject = {
   height: '100%',
   position: 'fixed',
   display: 'flex',
+  zIndex: 1,
   justifyContent: 'flex-start',
   alignItems: 'flex-end',
   backgroundColor: 'primary',

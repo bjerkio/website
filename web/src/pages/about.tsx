@@ -38,7 +38,8 @@ const AboutPage: React.FC = () => {
             fontWeight: '600',
             width: ['100%', '60%'],
             fontSize: 'clamp(36px, 3.5vw, 50px)',
-            my: 6,
+            mt: 6,
+            mb: [ 0, 0, 6 ],
             pr: [4, 4, 0],
             pl: [4, 4, 0],
           }}
