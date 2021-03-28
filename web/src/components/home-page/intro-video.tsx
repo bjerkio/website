@@ -19,8 +19,6 @@ const style: ThemeUICSSObject = {
       textAlign: 'center',
       overflow: 'hidden',
       zIndex: -99,
-      bg: 'dark',
-      opacity: 0.5,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'

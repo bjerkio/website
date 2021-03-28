@@ -51,8 +51,8 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
       {textAlign === 'left' && (
         <>
           <Box>            
-            <Heading sx={{ pb: 3 }}>{title}</Heading>
-            <Label>{description}</Label>
+            <Heading sx={{ pb: 3, fontWeight: 700, fontSize: 'clamp(30px, 2vw, 40px)' }}>{title}</Heading>
+            <Label sx={{ fontSize: 'clamp(16px, 1.5vw, 24px)' }}>{description}</Label>
             <Box sx={{ mt: 5 }}>
               <Label 
                 sx={{ 
@@ -74,7 +74,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             </Box>
             <Button
               href={navigationLink}
-              sx={{ color: 'black', fontSize: 1, mt: 4, px: [ 4, 4, 0 ] }}
+              sx={{ color: 'black', fontSize: 1, mt: [ 4, 4, 0 ], px: [ 4, 4, 0 ] }}
             >
               {linkText}
             </Button>
@@ -106,8 +106,8 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             />
           </Box>
           <Box>
-            <Heading pb={3}>{title}</Heading>
-            <Label>{description}</Label>
+            <Heading pb={3} sx={{ fontWeight: 600, fontSize: 'clamp(30px, 2vw, 40px)' }}>{title}</Heading>
+            <Label sx={{ fontSize: 'clamp(16px, 1.5vw, 24px)' }}>{description}</Label>
             <Box sx={{ mt: 5 }}>
               <Label 
                 sx={{ 
@@ -129,7 +129,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
             </Box>
             <Button
               href={navigationLink}
-              sx={{ color: 'black', fontSize: 1, mt: 4, px: [ 4, 4, 0 ]  }}
+              sx={{ color: 'black', fontSize: 1, mt: [ 4, 4, 0 ], px: [ 4, 4, 0 ]  }}
             >
               {linkText}
             </Button>

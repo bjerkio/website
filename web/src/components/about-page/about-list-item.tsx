@@ -33,9 +33,9 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
               <Image src={`../${image}`} sx={{ width: '90%', display: [ 'none', 'none', 'block' ] }} />
             </Box>
             <Box>
-              <Heading>{title}</Heading>
+              <Heading sx={{ fontWeight: 700, fontSize: 'clamp(30px, 2vw, 40px)' }}>{title}</Heading>
               {descriptionArray.map((descriptionLine, index) => (
-                <Label key={index} mt={3}>
+                <Label key={index} mt={3} sx={{ fontSize: 'clamp(16px, 1.5vw, 24px)' }}>
                   {descriptionLine}
                 </Label>
               ))}
@@ -45,9 +45,9 @@ export const AboutListItem: React.FC<{ data: AboutListItemProps }> = ({
         {textAlign === 'left' && (
           <>
             <Box>
-              <Heading>{title}</Heading>
+              <Heading sx={{ fontWeight: 600, fontSize: 'clamp(30px, 2vw, 40px)' }}>{title}</Heading>
               {descriptionArray.map((descriptionLine, index) => (
-                <Label key={index} mt={3}>
+                <Label key={index} mt={3} sx={{ fontSize: 'clamp(16px, 1.5vw, 24px)' }}>
                   {descriptionLine}
                 </Label>
               ))}

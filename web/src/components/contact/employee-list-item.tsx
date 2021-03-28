@@ -19,9 +19,9 @@ export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
       }}
     >
       <Image src={`../${photo}`} sx={{ width: '100%', mb: [ 3, 3, 1   ] }} />
-      <Text sx={{ fontWeight: 'bold' }}>{name}</Text>
-      <Text>{position}</Text>
-      <Flex mt={2} sx={{ flexDirection: 'column' }}>
+      <Text sx={{ fontWeight: 'bold', fontSize: 22 }}>{name}</Text>
+      <Text sx={{ fontSize: 22 }}>{position}</Text>
+      <Flex mt={2} sx={{ flexDirection: 'column', fontSize: 22 }}>
         <Link color="black">{email}</Link>
         <Link color="black">{phoneNumber}</Link>
       </Flex>

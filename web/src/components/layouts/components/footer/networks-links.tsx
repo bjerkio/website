@@ -5,7 +5,7 @@ import SocialFacebookSvg from '../../../../assets/Social-Facebook.svg';
 import SocialGithubSvg from '../../../../assets/Social-Github.svg';
 import SocialLinkedinSvg from '../../../../assets/Social-Linkedin.svg';
 
-export const NetworskLinks: React.FC = (props) => (
+export const NetworksLinks: React.FC = (props) => (
   <Box {...props}>
     <Flex sx={{ justifyContent: ['flex-start', 'flex-start', 'flex-end'] }}>
       {[

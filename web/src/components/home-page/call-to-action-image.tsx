@@ -39,7 +39,7 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
         <Box sx={{ mt: 4 }}>
           <img src={image} className="img" />
         </Box>
-        <Box mt={1}>
+        <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600' }}>
           <span className="linkText">{linkText}</span>
         </Box>
       </Link>

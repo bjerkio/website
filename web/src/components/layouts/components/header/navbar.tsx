@@ -25,7 +25,8 @@ const styles: SystemStyleObject = {
   },
   '.linksContainer': {
     flexGrow: 1,
-    fontSize: 3,
+    fontSize: 23,
+    fontWeight: 600,
     color: 'iron',
     justifyContent: 'flex-end',
     '>a': {

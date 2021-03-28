@@ -47,7 +47,8 @@ const ServicesPage: React.FC = () => {
         <Heading
           as="h1"
           sx={{
-            fontWeight: 'normal',
+            fontWeight: '600',
+            fontSize: 'clamp(36px, 3.5vw, 50px)',
             width: ['100%', '60%'],
             my: 6,
             pr: [ 4, 4, 0 ],

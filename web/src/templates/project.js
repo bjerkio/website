@@ -31,6 +31,7 @@ const Heading2 = ({ children, withQuotes, ...props }) => (
     sx={{
       mt: 4,
       mb: 5,
+      fontSize: 'clamp(20px, 2.5vw, 35px)',
       fontWeight: 'normal',
       marginLeft: '15%',
       marginRight: '15%',
@@ -41,11 +42,11 @@ const Heading2 = ({ children, withQuotes, ...props }) => (
       <a
         style={{
           position: 'absolute',
-          left: '18.5%',
-          marginTop: '-10px',
+          left: 'calc(23vw - 50px)',
+          marginTop: '-20px',
           height: 'auto',
           textDecoration: 'none',
-          font: 'normal normal 600 70px/80px TT Commons',
+          fontSize: 'clamp(70px, 7vw, 100px)',
           color: '#4ecca3',
         }}
       >
@@ -65,6 +66,7 @@ const Text = ({ children }) => (
       fontWeight: 'normal',
       marginLeft: '15%',
       marginRight: '15%',
+      fontSize: 'clamp(20px, 2.5vw, 35px)',
     }}
   >
     {children}
@@ -82,7 +84,7 @@ export default function ProjectTemplate({ data: { mdx } }) {
     <Layout>
       <Box>
         <Container sx={{ alignItems: 'center'}}>
-          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: 'normal', mt: 6 }}>
+          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: '600', mt: 6, fontSize: 'clamp(36px, 3.5vw, 50px)', }}>
             {mdx.frontmatter.title}
           </BaseHeading>
           <Box sx={{ mt: 4 }}>

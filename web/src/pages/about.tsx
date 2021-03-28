@@ -35,8 +35,9 @@ const AboutPage: React.FC = () => {
         <Heading
           as="h1"
           sx={{
-            fontWeight: 'normal',
+            fontWeight: '600',
             width: ['100%', '60%'],
+            fontSize: 'clamp(36px, 3.5vw, 50px)',
             my: 6,
             pr: [ 4, 4, 0 ],
             pl: [ 4, 4, 0 ]
@@ -58,7 +59,7 @@ const AboutPage: React.FC = () => {
             <img src="../SimenBjorn.png" style={{ width: '100%' }} />
           </Box>
           <Box>
-            <Label sx={{ fontSize: '1.4rem' }}>
+            <Label sx={{ fontSize: 'clamp(16px, 2vw, 25px)' }}>
               Bjerk sine røtter går tilbake til 2009, da Simen begynte å jobbe
               for seg selv. På sin reise traff han Bjørn Niklas og sammen har de
               startet Bjerk. Et lite privat konsulenthus med lidenskap for

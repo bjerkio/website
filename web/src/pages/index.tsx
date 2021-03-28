@@ -104,8 +104,8 @@ const Homepage: React.FC = () => {
           </Grid>
         </Container>
         <Container>
-          <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
-            <Label sx={{ fontWeight: 'normal' }}>
+          <Box>
+            <Label sx={{ fontWeight: '600', fontSize: '50px' }}>
               Sjekk ut noe av det vi har gjort
             </Label>
           </Box>

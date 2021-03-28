@@ -54,14 +54,15 @@ const ContactPage: React.FC = () => {
                   fontWeight: 'normal',
                   width: ['100%', '60%'],
                   my: 5,
-                  pr: [ 4, 4, 0 ]
+                  pr: [ 4, 4, 0 ],
+                  fontSize: 'clamp(36px, 3.5vw, 50px)',
                 }}
               >
                 Ta kontakt med en av oss for en hyggelig og uforpliktende prat
               </Heading>
               <Box
                 sx={{
-                  fontSize: [2, 3, 3],
+                  fontSize: 'clamp(20px, 2.3vw, 35px)',
                 }}
               >
                 <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
