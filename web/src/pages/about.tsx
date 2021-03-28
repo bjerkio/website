@@ -31,13 +31,15 @@ const AboutPage: React.FC = () => {
 
   return (
     <Layout>
-      <Container>
+      <Container sx={{ pr: [0, 0, 6], pl: [0, 0, 6] }}>
         <Heading
           as="h1"
           sx={{
             fontWeight: 'normal',
             width: ['100%', '60%'],
-            my: 5,
+            my: 6,
+            pr: [ 4, 4, 0 ],
+            pl: [ 4, 4, 0 ]
           }}
         >
           Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
@@ -51,7 +53,7 @@ const AboutPage: React.FC = () => {
         <Box pt={6} sx={{ width: '100%', height: 'auto' }}>
           <img src="../AboutSplit.png" style={{ width: '100%' }} />
         </Box>
-        <Grid gap={5} columns={[1, 1, 2]} px={5} pt={6}>
+        <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [ 4, 4, 5 ], pt: [ 4, 4, 6 ] }}>
           <Box>
             <img src="../SimenBjorn.png" style={{ width: '100%' }} />
           </Box>
