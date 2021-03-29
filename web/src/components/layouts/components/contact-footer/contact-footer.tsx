@@ -1,9 +1,9 @@
 import { Container } from '@theme-ui/components';
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
-import { Box, Grid, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
-import Button from '../../../button';
+import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Video from '../../../../../static/Bjerk.mp4';
+import Button from '../../../button';
 import { PlayButton } from './play-button';
 
 const styles: ThemeUIStyleObject = {
@@ -43,14 +43,14 @@ const styles: ThemeUIStyleObject = {
     '.video': {
       position: 'relative',
       height: '100%',
-      display: [ 'none', 'none', 'block' ]
+      display: ['none', 'none', 'block'],
     },
     '.mobile-video': {
       position: 'relative',
       width: '100%',
       height: '100%',
-      display: [ 'block', 'block', 'none' ]
-    }
+      display: ['block', 'block', 'none'],
+    },
   },
 };
 
@@ -58,12 +58,12 @@ const ContactFooter: React.FC = () => {
   return (
     <Box sx={styles}>
       <Container className="container">
-        <Box 
+        <Box
           sx={{
             display: 'grid',
             gridGap: 6,
-            gridTemplateColumns: [ 'none', 'none', '4fr 5fr' ],
-            gridTemplateRows: [ '1fr 2fr', '1fr 2fr', 'none' ],
+            gridTemplateColumns: ['none', 'none', '4fr 5fr'],
+            gridTemplateRows: ['1fr 2fr', '1fr 2fr', 'none'],
             alignItems: 'start',
             pt: 0,
           }}
@@ -73,8 +73,8 @@ const ContactFooter: React.FC = () => {
               url={Video}
               playing={true}
               controls={true}
-              playIcon={<PlayButton/>}
-              light='../SimenPhoto.png'
+              playIcon={<PlayButton />}
+              light="../SimenPhoto.png"
               volume={0}
               width="100%"
               height="100%"
@@ -103,8 +103,8 @@ const ContactFooter: React.FC = () => {
               url={Video}
               playing={true}
               controls={true}
-              playIcon={<PlayButton/>}
-              light='../SimenPhoto.png'
+              playIcon={<PlayButton />}
+              light="../SimenPhoto.png"
               volume={0}
               width="100%"
               height="100%"
