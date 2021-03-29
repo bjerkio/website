@@ -1,7 +1,10 @@
 import { Container } from '@theme-ui/components';
 import React from 'react';
+import ReactPlayer from 'react-player/lazy';
 import { Box, Grid, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Button from '../../../button';
+import Video from '../../../../../static/Bjerk.mp4';
+import { PlayButton } from './play-button';
 
 const styles: ThemeUIStyleObject = {
   mb: 0,
@@ -13,28 +16,41 @@ const styles: ThemeUIStyleObject = {
     py: '12%',
     px: 0,
     height: '100%',
-    '.header': {
-      color: 'white',
-      fontSize: 60,
-      fontWeight: '500',
+    '.form': {
+      '.header': {
+        color: 'white',
+        fontSize: 60,
+        fontWeight: '500',
+      },
+      '.label': {
+        mb: 4,
+        mt: 1,
+        color: 'white',
+        fontSize: 24,
+      },
+      '.input': {
+        mb: 3,
+        background: '#232931',
+        color: 'white',
+        border: 'none',
+        px: 4,
+        py: 3,
+      },
+      '.button': {
+        mt: 4,
+      },
     },
-    '.label': {
-      mb: 4,
-      mt: 1,
-      color: 'white',
-      fontSize: 24,
+    '.video': {
+      position: 'relative',
+      height: '100%',
+      display: [ 'none', 'none', 'block' ]
     },
-    '.input': {
-      mb: 3,
-      background: '#232931',
-      color: 'white',
-      border: 'none',
-      px: 4,
-      py: 3,
-    },
-    '.button': {
-      mt: 4,
-    },
+    '.mobile-video': {
+      position: 'relative',
+      width: '100%',
+      height: '100%',
+      display: [ 'block', 'block', 'none' ]
+    }
   },
 };
 
@@ -42,8 +58,33 @@ const ContactFooter: React.FC = () => {
   return (
     <Box sx={styles}>
       <Container className="container">
-        <Grid gap={0} columns={[1, 1, '4fr 5fr']}>
-          <Box>
+        <Box 
+          sx={{
+            display: 'grid',
+            gridGap: 6,
+            gridTemplateColumns: [ 'none', 'none', '4fr 5fr' ],
+            gridTemplateRows: [ '1fr 2fr', '1fr 2fr', 'none' ],
+            alignItems: 'start',
+            pt: 0,
+          }}
+        >
+          <Box className="mobile-video">
+            <ReactPlayer
+              url={Video}
+              playing={true}
+              controls={true}
+              playIcon={<PlayButton/>}
+              light='../SimenPhoto.png'
+              volume={0}
+              width="100%"
+              height="100%"
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </Box>
+          <Box className="form">
             <Heading className="header">Si hei!</Heading>
             <Label className="label">
               Snakk med oss om ditt prosjekt, så hjelper vi deg fra start til
@@ -57,8 +98,23 @@ const ContactFooter: React.FC = () => {
               Start ditt prosjekt
             </Button>
           </Box>
-          <Box className="video">{/* TODO: Contact footer video */}</Box>
-        </Grid>
+          <Box className="video">
+            <ReactPlayer
+              url={Video}
+              playing={true}
+              controls={true}
+              playIcon={<PlayButton/>}
+              light='../SimenPhoto.png'
+              volume={0}
+              width="100%"
+              height="100%"
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );
