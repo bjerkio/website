@@ -126,7 +126,7 @@ const Navbar: React.FC<BoxProps> = () => {
               }
               href="/contact"
             >
-              Kontakt oss
+              Kontakt
             </Link>
           </Flex>
         </Flex>

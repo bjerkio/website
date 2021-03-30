@@ -26,7 +26,7 @@ export const Footer: React.FC = (props) => (
           med deg!
         </Text>
       </Box>
-      <Box sx={{ fontSize: 28, my: 4 }}>
+      <Box sx={{ fontSize: 28, my: 4, marginLeft: [0, '40%', '40%'] }}>
         <Link href="#" sx={{ whiteSpace: 'nowrap' }}>
           +47 22 12 05 12
         </Link>
@@ -49,7 +49,7 @@ export const Footer: React.FC = (props) => (
           <br />
           nye talenter – si hei!
         </Text>
-        <Text sx={{ fontSize: 20, color: 'primary', mt: 3 }}>
+        <Text sx={{ fontSize: 20, color: 'primary', mt: 3, display: 'none' }}>
           Se ledige stillinger
           <br />
           Personvern

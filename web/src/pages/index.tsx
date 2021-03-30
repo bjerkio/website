@@ -67,7 +67,7 @@ const Homepage: React.FC = () => {
             </Label>
             <Button
               href="/contact"
-              sx={{ paddingTop: '15px', paddingBottom: '15px' }}
+              sx={{ paddingTop: '20px', paddingBottom: '15px' }}
             >
               Start ditt prosjekt
             </Button>

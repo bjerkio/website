@@ -69,7 +69,7 @@ const ContactPage: React.FC = () => {
               >
                 <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
                 <Label>+47 22 12 05 12</Label>
-                <Label mt={3}>Dronningens gate 8B,</Label>
+                <Label mt={1}>Dronningens gate 8B,</Label>
                 <Label>0151 Oslo</Label>
               </Box>
             </Box>
