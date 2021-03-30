@@ -5,10 +5,9 @@ import Button from '../../../button';
 
 const styles: ThemeUIStyleObject = {
   mb: 0,
-  px: [4, 4, 6],
-  maxWidth: '1920px',
-  backgroundColor: '#393E46',
   mx: 'auto',
+  px: [5, 5, 6],
+  backgroundColor: '#393E46',
   '.container': {
     mt: 5,
     py: '12%',
