@@ -13,6 +13,7 @@ const styles: ThemeUIStyleObject = {
     py: '12%',
     px: 0,
     height: '100%',
+    maxWidth: '1920px',
     '.header': {
       color: 'white',
       fontSize: 60,
