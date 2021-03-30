@@ -36,6 +36,7 @@ const style: ThemeUICSSObject = {
     color: 'background',
     px: [5, 5, 6],
     paddingTop: '10%',
+    maxWidth: '1920px',
   },
 };
 
