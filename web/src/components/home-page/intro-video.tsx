@@ -38,9 +38,10 @@ const style: ThemeUICSSObject = {
     color: 'background',
     px: [4, 4, 6],
     pt: '10%',
+    width: 'calc(100vh / 9 * 16)',
     '.data-box': {
       my: '32%',
-      width: ['100%', '60%', '60%'],
+      width: '100%',
     },
   },
 };
