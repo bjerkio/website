@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: node.frontmatter.slug,
         component: path.resolve('./src/templates/project.tsx'),
-        context: { id: node.id },
+        // context: { id: node.id },
       });
     });
 };

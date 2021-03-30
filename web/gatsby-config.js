@@ -90,6 +90,15 @@ module.exports = {
         name: 'employees',
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`no`, `en`],
+        defaultLanguage: `no`,
+        redirect: true,
+      },
+    },
     'gatsby-plugin-mdx',
   ],
 };
