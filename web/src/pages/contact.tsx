@@ -74,8 +74,8 @@ const ContactPage: React.FC = () => {
                 >
                   <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
                   <Label>+47 22 12 05 12</Label>
-                  <Label>Dronningens gate 8B,</Label>
-                  <Label>0151 Oslo</Label>
+                  <Label>Frognerveien 1B,</Label>
+                  <Label>0257 OSLO</Label>
                 </Box>
                 <Box className="mobileImage">
                   <img src="../map.svg" style={{ width: '100%' }} />

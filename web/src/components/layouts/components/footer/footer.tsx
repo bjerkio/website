@@ -35,9 +35,9 @@ export const Footer: React.FC = (props) => (
       </Box>
       <Box>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
-          Dronningens gate 8B
+          Frognerveien 1B
           <br />
-          0151 Oslo
+          0257 OSLO
         </Text>
       </Box>
       <NetworskLinks
