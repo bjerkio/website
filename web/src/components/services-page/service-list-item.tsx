@@ -155,7 +155,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
       )}
     </Grid>
     {dividedImage && (
-      <Box sx={{ mt: [6, 6, 6] }}>
+      <Box sx={{ mt: 6 }}>
         <img src={`../${dividedImage}`} style={{ width: '100%' }} />
       </Box>
     )}
