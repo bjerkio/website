@@ -7,7 +7,6 @@ const styles: ThemeUIStyleObject = {
   mb: 0,
   mx: 'auto',
   px: [5, 5, 6],
-  maxWidth: '1920px',
   mx: 'auto',
   backgroundColor: '#393E46',
   '.container': {
