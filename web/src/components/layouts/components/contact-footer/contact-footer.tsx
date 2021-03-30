@@ -1,10 +1,17 @@
 import { Container } from '@theme-ui/components';
 import React from 'react';
-import ReactPlayer from 'react-player/lazy';
-import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
-import Video from '../../../../../static/Bjerk.mp4';
+// import ReactPlayer from 'react-player/lazy';
+import {
+  Box,
+  Heading,
+  Image,
+  Input,
+  Label,
+  ThemeUIStyleObject,
+} from 'theme-ui';
+// import Video from '../../../../../static/Bjerk.mp4';
 import Button from '../../../button';
-import { PlayButton } from './play-button';
+// import { PlayButton } from './play-button';
 
 const styles: ThemeUIStyleObject = {
   mb: 0,
@@ -14,7 +21,8 @@ const styles: ThemeUIStyleObject = {
   mx: 'auto',
   '.container': {
     mt: 5,
-    py: '12%',
+    pt: '12%',
+    pb: ['12%', '12%', 0],
     px: 0,
     height: '100%',
     '.form': {
@@ -42,13 +50,13 @@ const styles: ThemeUIStyleObject = {
       },
     },
     '.video': {
-      position: 'relative',
-      height: '60vh',
-      width: '60vh',
+      // position: 'relative',
+      height: '80%',
+      width: '100%',
+      maxHeight: '700px',
       overflow: 'hidden',
-      alignItems: 'center',
+      alignItems: 'end',
       justifyContent: 'center',
-      textAlign: 'center',
       backgroundColor: 'black',
       display: ['none', 'none', 'block'],
     },
@@ -58,7 +66,7 @@ const styles: ThemeUIStyleObject = {
       width: '83vw',
       overflow: 'hidden',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'end',
       textAlign: 'center',
       backgroundColor: 'black',
       display: ['block', 'block', 'none'],
@@ -88,13 +96,14 @@ const ContactFooter: React.FC = () => {
             display: 'grid',
             gridGap: 6,
             gridTemplateColumns: ['none', 'none', '4fr 5fr'],
-            gridTemplateRows: ['1fr 2fr', '1fr 2fr', 'none'],
+            gridTemplateRows: ['2fr 3fr', '2fr 3fr', 'none'],
             alignItems: 'start',
             pt: 0,
           }}
         >
           <Box className="mobile-video">
-            <ReactPlayer
+            <Image src={'../SimenPhoto.png'} />
+            {/* <ReactPlayer
               url={Video}
               playing={true}
               controls={true}
@@ -108,7 +117,7 @@ const ContactFooter: React.FC = () => {
                 margin: 'auto',
                 zIndex: 2,
               }}
-            />
+            /> */}
           </Box>
           <Box className="form">
             <Heading className="header">Si hei!</Heading>
@@ -125,7 +134,8 @@ const ContactFooter: React.FC = () => {
             </Button>
           </Box>
           <Box className="video">
-            <ReactPlayer
+            <Image src={'../SimenPhoto.png'} />
+            {/* <ReactPlayer
               url={Video}
               playing={true}
               controls={true}
@@ -139,7 +149,7 @@ const ContactFooter: React.FC = () => {
                 margin: 'auto',
                 zIndex: 2,
               }}
-            />
+            /> */}
           </Box>
         </Box>
       </Container>
