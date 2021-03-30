@@ -1,6 +1,6 @@
 import { Container, Flex } from '@theme-ui/components';
 import React from 'react';
-import { Box, Grid, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
+import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Button from '../../../button';
 
 const styles: ThemeUIStyleObject = {
