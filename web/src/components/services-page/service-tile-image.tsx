@@ -82,7 +82,6 @@ const styles: ThemeUIStyleObject = {
       position: 'absolute',
       width: '18%',
       zIndex: 10,
-      // marginTop: '-2%',
       display: ['none', 'none', 'block'],
     },
     '.photo': {
