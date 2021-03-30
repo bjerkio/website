@@ -9,7 +9,6 @@ interface IntroVideoProps {
 
 const style: ThemeUICSSObject = {
   '.main-video-container': {
-    position: 'absolute',
     width: '100%',
     height: '100%',
     '.video-container': {
@@ -19,24 +18,31 @@ const style: ThemeUICSSObject = {
       textAlign: 'center',
       overflow: 'hidden',
       zIndex: -99,
-      opacity: 0.5,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-  },
-  '.data-container': {
-    minHeight: '3rem',
-    fontSize: 5,
-    justifyContent: 'flex-start',
-    alignContent: 'center',
-    alignItems: 'center',
-    height: '50rem',
-    fontWeight: 'bold',
-    display: 'flex',
-    textAlign: 'start',
-    verticalAlign: 'center',
-    color: 'background',
-    px: [5, 5, 6],
-    paddingTop: '10%',
-    maxWidth: '1920px',
+
+    '.data-container': {
+      left: 0,
+      right: 0,
+      position: 'absolute',
+      top: 2,
+      minHeight: '3rem',
+      fontSize: 5,
+      justifyContent: 'flex-start',
+      alignContent: 'center',
+      alignItems: 'center',
+      height: '50rem',
+      fontWeight: 'bold',
+      display: 'flex',
+      textAlign: 'start',
+      verticalAlign: 'center',
+      color: 'background',
+      px: [4, 4, 6],
+      paddingTop: '10%',
+      maxWidth: '1920px',
+    },
   },
 };
 
@@ -55,17 +61,12 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
           loop={true}
           controls={false}
           volume={0}
-          style={{
-            position: 'absolute',
-            inset: '-100%',
-            margin: 'auto',
-          }}
         />
       </Box>
+      <Container className="data-container">
+        <Box sx={{ width: '60%', zIndex: 2 }}>{children}</Box>
+      </Container>
     </Box>
-    <Container className="data-container">
-      <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>
-    </Container>
   </Container>
 );
 
