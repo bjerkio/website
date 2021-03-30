@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
               onClick={() => navigate('/services')}
               my={3}
               sx={{
-                fontFamily: 'TTCommons !important'
+                fontFamily: 'TTCommons !important',
               }}
             >
               Sjekk hva vi kan gjøre for deg
