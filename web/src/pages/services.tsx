@@ -43,13 +43,16 @@ const ServicesPage: React.FC = () => {
 
   return (
     <Layout>
-      <Container>
+      <Container sx={{ pr: [0, 0, 6], pl: [0, 0, 6] }}>
         <Heading
           as="h1"
           sx={{
-            fontWeight: 'normal',
+            fontWeight: '600',
+            fontSize: 'clamp(36px, 3.5vw, 50px)',
             width: ['100%', '60%'],
-            my: 5,
+            my: 6,
+            pr: [4, 4, 0],
+            pl: [4, 4, 0],
           }}
         >
           Bjerk hjelper bedriften din med å ta det neste steget inn i fremtiden.

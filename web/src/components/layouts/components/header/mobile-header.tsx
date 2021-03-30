@@ -4,9 +4,7 @@ import { SystemStyleObject } from 'theme-ui';
 import NavbarMobile from './navbar-mobile';
 
 const styles: SystemStyleObject = {
-  //   '.navbarMobile': {
   display: ['block', 'block', 'none'],
-  //   },
 };
 
 const MobileHeader: React.FC = () => {

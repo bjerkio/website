@@ -1,39 +1,27 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy';
-import { Box, Container, SystemStyleObject } from 'theme-ui';
+import { Box, Container, ThemeUICSSObject } from 'theme-ui';
 
 interface IntroVideoProps {
   videoUrl?: string;
   videoTitle?: string;
 }
 
-const style: SystemStyleObject = {
+const style: ThemeUICSSObject = {
   '.main-video-container': {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    maxHeight: '1000px',
     '.video-container': {
       position: 'relative',
-      top: 0,
-      bottom: 0,
-      right: 0,
-      left: 0,
+      height: '100vh',
+      width: 'auto',
+      textAlign: 'center',
+      overflow: 'hidden',
       zIndex: -99,
-      paddingTop: '56.25%' /* Player ratio: 100 / (1280 / 720) */,
-      '&::after': {
-        display: 'block',
-        content: '"" !important',
-        position: 'relative',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        maxHeight: '800px',
-        zIndex: 1,
-        backgroundColor: 'dark',
-        opacity: 0.5,
-      },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
   '.data-container': {
@@ -48,8 +36,13 @@ const style: SystemStyleObject = {
     textAlign: 'start',
     verticalAlign: 'center',
     color: 'background',
-    px: [5, 5, 6],
-    paddingTop: '10%',
+    px: [4, 4, 6],
+    pt: '10%',
+    width: ['100%', '100%', 'calc(100vh / 9 * 16)'],
+    '.data-box': {
+      my: '32%',
+      width: ['100%', '60%', '60%'],
+    },
   },
 };
 
@@ -62,24 +55,22 @@ const IntroVideo: React.FC<{ data: IntroVideoProps }> = ({
       <Box className="video-container">
         <ReactPlayer
           url={data.videoUrl}
+          width="auto"
+          height="100vh"
           playing={true}
           loop={true}
           controls={false}
           volume={0}
-          width="100%"
-          height="100%"
-          style={{
+          playsinline={true}
+          autoPlay
+          sx={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
           }}
         />
       </Box>
     </Box>
     <Container className="data-container">
-      <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>
+      <Box className="data-box">{children}</Box>
     </Container>
   </Container>
 );

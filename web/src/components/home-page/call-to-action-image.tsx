@@ -8,6 +8,8 @@ export interface CallToActionImageProps {
 }
 
 const styles: ThemeUIStyleObject = {
+  mb: 5,
+  overflow: 'hidden',
   ':hover': {
     cursor: 'pointer',
     '.linkText': {
@@ -22,9 +24,18 @@ const styles: ThemeUIStyleObject = {
     color: 'text',
     textDecoration: 'none',
   },
-  '.img': {
-    transition: '.4s',
-    width: '100%',
+  '.img-container': {
+    mt: 4,
+    height: ['37vh', '100%', '100%'],
+    width: ['140vw', '100%', '100%'],
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    marginLeft: ['-20vw', 0, 0],
+    '.img': {
+      width: '100%',
+      height: '100%',
+      transition: '.4s',
+    },
   },
 };
 
@@ -33,11 +44,11 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
 }) => {
   return (
     <Box sx={styles}>
-      <Link className="link" href={linkTo}>
-        <Box sx={{ mt: 4 }}>
+      <Link className="link" href={linkTo} sx={{ overflow: 'hidden' }}>
+        <Box className="img-container" sx={{}}>
           <img src={image} className="img" />
         </Box>
-        <Box mt={1}>
+        <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', mx: [4, 4, 0] }}>
           <span className="linkText">{linkText}</span>
         </Box>
       </Link>

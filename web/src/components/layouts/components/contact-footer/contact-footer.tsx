@@ -6,7 +6,7 @@ import Button from '../../../button';
 const styles: ThemeUIStyleObject = {
   mb: 0,
   mx: 'auto',
-  px: [5, 5, 6],
+  px: [4, 4, 6],
   backgroundColor: '#393E46',
   '.container': {
     mt: 5,
@@ -31,9 +31,11 @@ const styles: ThemeUIStyleObject = {
       border: 'none',
       px: 4,
       py: 3,
+      borderRadius: '10px',
     },
     '.button': {
       mt: 4,
+      py: '15px',
     },
   },
 };
