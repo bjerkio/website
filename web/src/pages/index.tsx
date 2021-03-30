@@ -108,9 +108,16 @@ const Homepage: React.FC = () => {
             ))}
           </Grid>
         </Container>
-        <Container>
+        <Container sx={{ px: [0, 0, 6] }}>
           <Box>
-            <Label sx={{ fontWeight: '600', fontSize: '50px' }}>
+            <Label
+              sx={{
+                fontWeight: '600',
+                fontSize: '50px',
+                pl: [4, 4, 0],
+                mr: [-4, -4, 0],
+              }}
+            >
               Sjekk ut noe av det vi har gjort
             </Label>
           </Box>
