@@ -80,7 +80,7 @@ const components = {
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <Box>
+      <Box sx={{ mt: 6 }}>
         <Container sx={{ pt: 6, alignItems: 'center' }}>
           <BaseHeading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
             {mdx.frontmatter.title}

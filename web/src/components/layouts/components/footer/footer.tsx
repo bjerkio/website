@@ -6,7 +6,10 @@ import { Logo } from '../logo';
 import { NetworskLinks } from './networks-links';
 
 export const Footer: React.FC = (props) => (
-  <Container sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white' }} {...props}>
+  <Container
+    sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white', maxWidth: 'none' }}
+    {...props}
+  >
     <Box>
       <Logo sx={{ color: 'white', width: '4em' }} />
     </Box>
@@ -35,9 +38,9 @@ export const Footer: React.FC = (props) => (
       </Box>
       <Box>
         <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
-          Dronningens gate 8B
+          Frognerveien 1B
           <br />
-          0151 Oslo
+          0257 OSLO
         </Text>
       </Box>
       <NetworskLinks

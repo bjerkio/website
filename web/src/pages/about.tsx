@@ -66,6 +66,9 @@ const AboutPage: React.FC = () => {
               variant="empty"
               onClick={() => navigate('/services')}
               my={3}
+              sx={{
+                fontFamily: 'TTCommons !important',
+              }}
             >
               Sjekk hva vi kan gjøre for deg
             </Button>
