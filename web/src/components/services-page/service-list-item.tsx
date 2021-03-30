@@ -1,63 +1,98 @@
-import Img, { FluidObject } from 'gatsby-image';
 import React from 'react';
-import { Box, Button, Container, Flex, Grid, Heading, Label } from 'theme-ui';
-import { Link } from '../custom-link';
+import { Box, Container, Grid, Heading, Label } from 'theme-ui';
+import Button from '../button';
+import { ServiceTileImage } from './service-tile-image';
 
 export interface ServiceListItemProps {
-  name: string;
+  name: 'programming' | 'strategy' | 'project-management';
   title: string;
   description: string;
   url: {
     navigationLink: string;
     linkText: string;
   };
-  serviceImage?: FluidObject;
-  personPhoto?: FluidObject;
+  photo: string;
+  icon: string;
+  initials: string;
+  position: string;
   textAlign: 'left' | 'right';
-  dividedPhoto?: FluidObject;
+  dividedImage?: string;
 }
 
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
-  data,
+  data: {
+    name,
+    title,
+    description,
+    url: { navigationLink, linkText },
+    photo,
+    icon,
+    initials,
+    position,
+    textAlign,
+    dividedImage,
+  },
 }) => (
-  <Container id={data.name} sx={{ mt: 4 }}>
-    <Grid gap={2} columns={[1, 1, 2]} px={5}>
-      <Box>
-        <Heading pb={3}>{data.title}</Heading>
-        <Label>{data.description}</Label>
-        <Button sx={{ color: 'black', fontSize: 1, mt: 4 }}>
-          <Link to={data.url.navigationLink}>{data.url.linkText}</Link>
-        </Button>
-      </Box>
-      <Box sx={{ gridRow: data.textAlign === 'right' ? 1 : 2 }}>
-        <Flex>
-          <Img
-            fluid={
-              data.textAlign === 'left' ? data.personPhoto : data.serviceImage
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-          <Img
-            fluid={
-              data.textAlign === 'left' ? data.serviceImage : data.personPhoto
-            }
-            durationFadeIn={0}
-            fadeIn={false}
-            draggable={false}
-          />
-        </Flex>
-      </Box>
+  <Container id={name} sx={{ mt: 6 }}>
+    <Grid
+      gap={0}
+      columns={textAlign === 'right' ? [1, 1, '2fr 3fr'] : [1, 1, '3fr 2fr']}
+      px={6}
+    >
+      {textAlign === 'left' && (
+        <>
+          <Box>
+            <Heading pb={3}>{title}</Heading>
+            <Label>{description}</Label>
+            <Button
+              href={navigationLink}
+              sx={{ color: 'black', fontSize: 1, mt: 4 }}
+            >
+              {linkText}
+            </Button>
+          </Box>
+          <Box px={4}>
+            <ServiceTileImage
+              data={{
+                name,
+                photo,
+                icon,
+                initials,
+                position,
+              }}
+            />
+          </Box>
+        </>
+      )}
+      {textAlign === 'right' && (
+        <>
+          <Box px={4} sx={{ marginRight: '100px' }}>
+            <ServiceTileImage
+              data={{
+                name,
+                photo,
+                icon,
+                initials,
+                position,
+              }}
+            />
+          </Box>
+          <Box>
+            <Heading pb={3}>{title}</Heading>
+            <Label>{description}</Label>
+            <Button
+              href={navigationLink}
+              sx={{ color: 'black', fontSize: 1, mt: 4 }}
+            >
+              {linkText}
+            </Button>
+          </Box>
+        </>
+      )}
     </Grid>
-    {data.dividedPhoto && (
-      <Box sx={{ width: '100%', height: 'auto' }}>
-        <Img
-          fluid={data.dividedPhoto}
-          durationFadeIn={0}
-          fadeIn={false}
-          draggable={false}
-        />
+    {dividedImage && (
+      <Box sx={{ mt: 6 }}>
+        <img src={`../${dividedImage}`} style={{ width: '100%' }} />
       </Box>
     )}
   </Container>
