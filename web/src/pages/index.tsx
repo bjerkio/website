@@ -1,16 +1,16 @@
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import BjerkVideo from '../assets/Bjerk.webm';
 import Button from '../components/button';
+// import BjerkVideo from '../assets/Bjerk.webm';
 import { Container } from '../components/container';
+import Hero from '../components/hero';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
 import CallToActionImage, {
   CallToActionImageProps,
 } from '../components/home-page/call-to-action-image';
-import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
 const filterType = (obj, type) => {
@@ -55,19 +55,14 @@ const Homepage: React.FC = () => {
   return (
     <Layout>
       <Box>
-        <IntroVideo
-          data={{
-            videoUrl: BjerkVideo,
-            videoTitle: null,
-          }}
-        >
+        <Hero>
           <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
-            <Label sx={{ fontWeight: '600' }}>
+            <Label sx={{ fontWeight: '600', color: 'white' }}>
               Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
             </Label>
             <Button href="/contact">Start ditt prosjekt</Button>
           </Box>
-        </IntroVideo>
+        </Hero>
         <Container sx={{ pt: 7 }}>
           <Heading
             sx={{

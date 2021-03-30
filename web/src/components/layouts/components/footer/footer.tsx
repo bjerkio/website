@@ -1,37 +1,25 @@
 /** @jsx */
 import React from 'react';
-import { Box, Link, Text, ThemeUIStyleObject } from 'theme-ui';
+import { Box, Grid, Link, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
 import { NetworskLinks } from './networks-links';
 
-const styles: ThemeUIStyleObject = {
-  bg: 'dark',
-  px: [4, 4, 6],
-  max: 'auto',
-  '.container': {
-    maxWidth: '1920px',
-    pt: [5, 6, 6],
-    color: 'white',
-    px: 0,
-  },
-};
-
 export const Footer: React.FC = (props) => (
-  <Box sx={styles}>
-    <Container className="container" {...props}>
+  <Box sx={{ bg: 'dark' }}>
+    <Container
+      sx={{
+        maxWidth: '1920px',
+        pt: [5, 6, 6],
+        color: 'white',
+        px: [5, 5, 6],
+      }}
+      {...props}
+    >
       <Box>
-        <Logo sx={{ color: 'white', width: '4em' }} />
+        <Logo color="white" sx={{ width: '4em' }} />
       </Box>
-      <Box
-        sx={{
-          display: 'grid',
-          gridGap: 3,
-          gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
-          alignItems: 'start',
-          pt: 0,
-        }}
-      >
+      <Grid gap="3" columns={['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr']}>
         <Box>
           <strong>
             <Text sx={{ fontSize: 4, my: 4, lineHeight: '22px' }}>
@@ -70,8 +58,8 @@ export const Footer: React.FC = (props) => (
             Personvern
           </Text>
         </Box>
-      </Box>
-      <Box
+      </Grid>
+      <Grid
         sx={{
           display: 'grid',
           gridGap: 3,
@@ -85,7 +73,7 @@ export const Footer: React.FC = (props) => (
           <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
         </Box>
         <NetworskLinks sx={{ display: ['none', 'none', 'block'] }} />
-      </Box>
+      </Grid>
     </Container>
   </Box>
 );
