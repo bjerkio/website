@@ -106,7 +106,7 @@ const ContactFooter: React.FC = () => {
               style={{
                 position: 'relative',
                 margin: 'auto',
-                zIndex: 2
+                zIndex: 2,
               }}
             />
           </Box>
@@ -137,7 +137,7 @@ const ContactFooter: React.FC = () => {
               style={{
                 position: 'relative',
                 margin: 'auto',
-                zIndex: 2
+                zIndex: 2,
               }}
             />
           </Box>
