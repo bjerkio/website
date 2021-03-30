@@ -37,7 +37,7 @@ export const Footer: React.FC = (props) => (
         <Link href="#">kontoret@bjerk.io</Link>
       </Box>
       <Box>
-        <Text sx={{ fontSize: 3, lineHeight: '22px' }}>
+        <Text sx={{ fontSize: 28, my: [0, 4, 4], mb: [4, 0, 0] }}>
           Frognerveien 1B
           <br />
           0257 OSLO

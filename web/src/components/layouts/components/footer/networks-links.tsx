@@ -27,7 +27,8 @@ export const NetworksLinks: React.FC = (props) => (
           sx={{
             width: '1.7rem',
             maxWidth: '35px',
-            ml: [2, 3, 3],
+            mr: [2, 0, 0],
+            ml: [0, 3, 3],
             cursor: 'pointer',
           }}
         >
