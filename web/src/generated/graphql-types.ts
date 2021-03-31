@@ -522,10 +522,14 @@ export type FileFieldsEnum =
   | 'blocks'
   | 'publicURL'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childrenMdx'
   | 'childrenMdx___rawBody'
   | 'childrenMdx___fileAbsolutePath'
   | 'childrenMdx___frontmatter___title'
+<<<<<<< HEAD
   | 'childrenMdx___frontmatter___language'
   | 'childrenMdx___frontmatter___type'
   | 'childrenMdx___frontmatter___name'
@@ -536,6 +540,21 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___homePage___image'
   | 'childrenMdx___frontmatter___homePage___hoverImage'
   | 'childrenMdx___frontmatter___homePage___description'
+=======
+  | 'childrenMdx___frontmatter___id'
+  | 'childrenMdx___frontmatter___type'
+  | 'childrenMdx___frontmatter___slug'
+  | 'childrenMdx___frontmatter___image'
+  | 'childrenMdx___frontmatter___homePage___image'
+  | 'childrenMdx___frontmatter___homePage___linkTo'
+  | 'childrenMdx___frontmatter___homePage___linkText'
+  | 'childrenMdx___frontmatter___homePage___id'
+  | 'childrenMdx___frontmatter___homePage___title'
+  | 'childrenMdx___frontmatter___homePage___hoverImage'
+  | 'childrenMdx___frontmatter___homePage___description'
+  | 'childrenMdx___frontmatter___name'
+  | 'childrenMdx___frontmatter___descriptionArray'
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childrenMdx___frontmatter___servicesPage___id'
   | 'childrenMdx___frontmatter___servicesPage___name'
   | 'childrenMdx___frontmatter___servicesPage___title'
@@ -544,14 +563,20 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___servicesPage___initials'
   | 'childrenMdx___frontmatter___servicesPage___position'
   | 'childrenMdx___frontmatter___servicesPage___description'
+<<<<<<< HEAD
   | 'childrenMdx___frontmatter___id'
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childrenMdx___frontmatter___position'
   | 'childrenMdx___frontmatter___email'
   | 'childrenMdx___frontmatter___phoneNumber'
   | 'childrenMdx___frontmatter___photo'
+<<<<<<< HEAD
   | 'childrenMdx___frontmatter___descriptionArray'
   | 'childrenMdx___frontmatter___image'
   | 'childrenMdx___frontmatter___slug'
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -606,6 +631,7 @@ export type FileFieldsEnum =
   | 'childMdx___rawBody'
   | 'childMdx___fileAbsolutePath'
   | 'childMdx___frontmatter___title'
+<<<<<<< HEAD
   | 'childMdx___frontmatter___language'
   | 'childMdx___frontmatter___type'
   | 'childMdx___frontmatter___name'
@@ -616,6 +642,21 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___homePage___image'
   | 'childMdx___frontmatter___homePage___hoverImage'
   | 'childMdx___frontmatter___homePage___description'
+=======
+  | 'childMdx___frontmatter___id'
+  | 'childMdx___frontmatter___type'
+  | 'childMdx___frontmatter___slug'
+  | 'childMdx___frontmatter___image'
+  | 'childMdx___frontmatter___homePage___image'
+  | 'childMdx___frontmatter___homePage___linkTo'
+  | 'childMdx___frontmatter___homePage___linkText'
+  | 'childMdx___frontmatter___homePage___id'
+  | 'childMdx___frontmatter___homePage___title'
+  | 'childMdx___frontmatter___homePage___hoverImage'
+  | 'childMdx___frontmatter___homePage___description'
+  | 'childMdx___frontmatter___name'
+  | 'childMdx___frontmatter___descriptionArray'
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childMdx___frontmatter___servicesPage___id'
   | 'childMdx___frontmatter___servicesPage___name'
   | 'childMdx___frontmatter___servicesPage___title'
@@ -624,14 +665,20 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___servicesPage___initials'
   | 'childMdx___frontmatter___servicesPage___position'
   | 'childMdx___frontmatter___servicesPage___description'
+<<<<<<< HEAD
   | 'childMdx___frontmatter___id'
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childMdx___frontmatter___position'
   | 'childMdx___frontmatter___email'
   | 'childMdx___frontmatter___phoneNumber'
   | 'childMdx___frontmatter___photo'
+<<<<<<< HEAD
   | 'childMdx___frontmatter___descriptionArray'
   | 'childMdx___frontmatter___image'
   | 'childMdx___frontmatter___slug'
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -683,6 +730,7 @@ export type FileFieldsEnum =
   | 'childMdx___internal___mediaType'
   | 'childMdx___internal___owner'
   | 'childMdx___internal___type'
+<<<<<<< HEAD
   | 'childrenLocale'
   | 'childrenLocale___id'
   | 'childrenLocale___parent___id'
@@ -770,6 +818,8 @@ export type FileFieldsEnum =
   | 'childLocale___fileAbsolutePath'
 =======
 >>>>>>> 15d0a892a2d4056b45ea6b6db47a4a285f2f7aa4
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -8044,6 +8094,7 @@ export type ServicesQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?
           )> }> } }> } };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Unnamed_11_QueryVariables = Exact<{
   language?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
@@ -8067,6 +8118,8 @@ export type ProjectQueryQuery = { mdx?: Maybe<(
     & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'image'>> }
   )> };
 
+=======
+>>>>>>> f528cb3b865cb7dbd5a26707a00fe705ebccfcb6
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 >>>>>>> 15d0a892a2d4056b45ea6b6db47a4a285f2f7aa4
 

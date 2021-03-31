@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import Button from '../components/button';
-// import BjerkVideo from '../assets/Bjerk.webm';
 import { Container } from '../components/container';
 import Hero from '../components/hero';
 import CallToActionBox, {
