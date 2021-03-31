@@ -2,7 +2,7 @@
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import { Box, Link, Text } from 'theme-ui';
+import { Box, Grid, Link, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
 import { NetworksLinks } from './networks-links';
@@ -26,20 +26,21 @@ const Footer: React.FC = ({ ...props }) => {
 
   return (
     <Container
-      sx={{ pt: [5, 6, 6], bg: 'dark', color: 'white', maxWidth: 'none' }}
+      sx={{
+        maxWidth: '1920px',
+        pt: [5, 6, 6],
+        color: 'white',
+        px: [5, 5, 6],
+      }}
       {...props}
     >
       <Box>
-        <Logo color="white" sx={{ color: 'white', width: '5em' }} />
+        <Logo color="white" sx={{ width: '4em' }} />
       </Box>
-      <Box
-        sx={{
-          display: 'grid',
-          gridGap: [1, 1, 6],
-          gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr'],
-          alignItems: 'start',
-          pt: 0,
-        }}
+      <Grid
+        gap={[1, 1, 6]}
+        columns={['1fr', '1fr', '1fr', '1fr 0.5fr 1fr 1fr']}
+        pt={0}
       >
         <Box>
           <Text
@@ -79,8 +80,8 @@ const Footer: React.FC = ({ ...props }) => {
             Personvern
           </Text>
         </Box>
-      </Box>
-      <Box
+      </Grid>
+      <Grid
         sx={{
           display: 'grid',
           gridGap: 3,
@@ -102,7 +103,7 @@ const Footer: React.FC = ({ ...props }) => {
           </Text>
         </Box>
         <NetworksLinks sx={{ display: ['none', 'none', 'block'] }} />
-      </Box>
+      </Grid>
     </Container>
   );
 };

@@ -2,16 +2,16 @@ import { Box, Grid, Heading, Label } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import BjerkVideo from '../assets/Bjerk.webm';
 import Button from '../components/button';
+// import BjerkVideo from '../assets/Bjerk.webm';
 import { Container } from '../components/container';
+import Hero from '../components/hero';
 import CallToActionBox, {
   CallToActionBoxProps,
 } from '../components/home-page/call-to-action-box';
 import CallToActionImage, {
   CallToActionImageProps,
 } from '../components/home-page/call-to-action-image';
-import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
 const filterType = (obj, type) => {
@@ -71,14 +71,9 @@ const Homepage = ({ data }) => {
   return (
     <Layout>
       <Box>
-        <IntroVideo
-          data={{
-            videoUrl: BjerkVideo,
-            videoTitle: null,
-          }}
-        >
+        <Hero>
           <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
-            <Label sx={{ fontWeight: '600' }}>
+            <Label sx={{ fontWeight: '600', color: 'white' }}>
               {t('home-page:video-title')}
             </Label>
             <Button
@@ -88,8 +83,8 @@ const Homepage = ({ data }) => {
               {t('home-page:video-button-text')}
             </Button>
           </Box>
-        </IntroVideo>
-        <Container sx={{ pt: [6, 6, 7], mb: 5 }}>
+        </Hero>
+        <Container sx={{ pt: 7 }}>
           <Heading
             sx={{
               mb: 3,

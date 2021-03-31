@@ -121,7 +121,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.13.0":
+"@babel/generator@npm:^7.13.9":
   version: 7.13.9
   resolution: "@babel/generator@npm:7.13.9"
   dependencies:
@@ -448,12 +448,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.12.13, @babel/parser@npm:^7.13.0":
-  version: 7.13.12
-  resolution: "@babel/parser@npm:7.13.12"
+"@babel/parser@npm:^7.12.13, @babel/parser@npm:^7.13.13":
+  version: 7.13.13
+  resolution: "@babel/parser@npm:7.13.13"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: d73d8fa55627697501e3f86b84a6f91edd93695347bb7aa02e7466ddc7e39fc79dc1b43a496c6a253d7a8608f8cfcf420692d2f88ff2ca668f8273742b804430
+  checksum: ae20be2d964cec7c6e8f1c8154b0b6457852a6269f957964b5cc7f39baa5b71dc733b9e88cc3f5b91de171f4c023d272040bf31065bef1573aa0e88dd0f3ee75
   languageName: node
   linkType: hard
 
@@ -1508,19 +1508,18 @@ __metadata:
   linkType: hard
 
 "@babel/traverse@npm:^7.12.9":
-  version: 7.13.0
-  resolution: "@babel/traverse@npm:7.13.0"
+  version: 7.13.13
+  resolution: "@babel/traverse@npm:7.13.13"
   dependencies:
     "@babel/code-frame": ^7.12.13
-    "@babel/generator": ^7.13.0
+    "@babel/generator": ^7.13.9
     "@babel/helper-function-name": ^7.12.13
     "@babel/helper-split-export-declaration": ^7.12.13
-    "@babel/parser": ^7.13.0
-    "@babel/types": ^7.13.0
+    "@babel/parser": ^7.13.13
+    "@babel/types": ^7.13.13
     debug: ^4.1.0
     globals: ^11.1.0
-    lodash: ^4.17.19
-  checksum: e5d1b690157da325b5bea98e472f4df0fff16048242a70880e2da7939b005ccd5b63d2b4527e203cfc71a422da0fa513c0ad84114bff002d583ebd7dbd2c8576
+  checksum: 2669b654730a308747c38c0f89a873fa2452c7e2e23532988e529a4dec6c09a6b862f50a6ea139afc496bd0f85a86c4ff922b262d6c41ab43c1df3886b3bbb1e
   languageName: node
   linkType: hard
 
@@ -1546,14 +1545,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.12.13, @babel/types@npm:^7.13.0":
-  version: 7.13.12
-  resolution: "@babel/types@npm:7.13.12"
+"@babel/types@npm:^7.12.13, @babel/types@npm:^7.13.0, @babel/types@npm:^7.13.13":
+  version: 7.13.14
+  resolution: "@babel/types@npm:7.13.14"
   dependencies:
     "@babel/helper-validator-identifier": ^7.12.11
     lodash: ^4.17.19
     to-fast-properties: ^2.0.0
-  checksum: 154392625ea7b7c550be1ebf624b9cfed394d11bf8b7cb39b0ec874a84313d26dc708cca62b18de9901bce19a9a187f0d4834e8cf365ad2fc9357c96c13923f7
+  checksum: 0dda1e774076c763ad38d77a2292524556be0629f5b7a2078bddb40ae4a2fd059d10197029a988926dc314f7519e17daa8a714656e0faa207f2bb5339b57410c
   languageName: node
   linkType: hard
 
@@ -12561,9 +12560,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "gatsby-core-utils@npm:2.1.0"
+"gatsby-core-utils@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "gatsby-core-utils@npm:2.2.0"
   dependencies:
     ci-info: 2.0.0
     configstore: ^5.0.1
@@ -12573,7 +12572,7 @@ fsevents@^1.2.7:
     proper-lockfile: ^4.1.1
     tmp: ^0.2.1
     xdg-basedir: ^4.0.0
-  checksum: 96a964b080d077b84d23a71a48dd3a6608ce44bfe139124c8b9a7bec4dc7b27826a4e4138a5c58623bed96a24e13e14880459fd987a328e90149d1f12e7e151d
+  checksum: 7c01ae889a731574bc39626297eb424ed28389ac1ceab6a5fcf539144cdedf4016a2608ef459f5fde8ae71260d7973341261d668ed8d5c39e794af4f91e3ff05
   languageName: node
   linkType: hard
 
@@ -12663,8 +12662,8 @@ fsevents@^1.2.7:
   linkType: hard
 
 "gatsby-plugin-mdx@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "gatsby-plugin-mdx@npm:2.1.0"
+  version: 2.2.0
+  resolution: "gatsby-plugin-mdx@npm:2.2.0"
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/generator": ^7.12.5
@@ -12681,7 +12680,7 @@ fsevents@^1.2.7:
     escape-string-regexp: ^1.0.5
     eval: ^0.1.4
     fs-extra: ^8.1.0
-    gatsby-core-utils: ^2.1.0
+    gatsby-core-utils: ^2.2.0
     gray-matter: ^4.0.2
     json5: ^2.1.3
     loader-utils: ^1.4.0
@@ -12707,7 +12706,7 @@ fsevents@^1.2.7:
     "@mdx-js/react": ^1.0.0
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
-  checksum: c7aec9d24e521a05d8ae1bba0e9b0b1b7901e79bed9564df4d1c2a7eb11095e547545b7f4c5e1452e0d6e31bee9cc9c8959d6934e61c0ca6af66eeacac456db1
+  checksum: 14e44923f2a2a9eecabf1a37d5633ebb60dcd1d746fffd4863d0eea6a830a8c551c86abeeb05a4700b8515695ac3cad5dc14ee50a7abbcd18b693038c50bc57d
   languageName: node
   linkType: hard
 
@@ -12900,15 +12899,15 @@ fsevents@^1.2.7:
   linkType: hard
 
 "gatsby-source-filesystem@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "gatsby-source-filesystem@npm:3.1.0"
+  version: 3.2.0
+  resolution: "gatsby-source-filesystem@npm:3.2.0"
   dependencies:
     "@babel/runtime": ^7.12.5
     better-queue: ^3.8.10
     chokidar: ^3.4.3
     file-type: ^16.0.0
     fs-extra: ^8.1.0
-    gatsby-core-utils: ^2.1.0
+    gatsby-core-utils: ^2.2.0
     got: ^9.6.0
     md5-file: ^5.0.0
     mime: ^2.4.6
@@ -12918,7 +12917,7 @@ fsevents@^1.2.7:
     xstate: ^4.14.0
   peerDependencies:
     gatsby: ^3.0.0-next.0
-  checksum: 626e6e95fe304882370c6f315042063cf1e9e7030b85d138a4fb72d91a0dd3b3aa4dbdf92dd5a6cadff454c53d71743a256bcf097305617000e3cf227d8f0397
+  checksum: 1f610b9d4f2bcdda758c1aa1a0c48539967cb18fb0df2d881e11c9322a3f5817218a8e1afa15fde792c86deb09c4b95d1d72f4e2d2309de8afe3f0f47883d478
   languageName: node
   linkType: hard
 
@@ -12991,11 +12990,11 @@ fsevents@^1.2.7:
   linkType: hard
 
 "gatsby-transformer-remark@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "gatsby-transformer-remark@npm:3.1.0"
+  version: 3.2.0
+  resolution: "gatsby-transformer-remark@npm:3.2.0"
   dependencies:
     "@babel/runtime": ^7.12.5
-    gatsby-core-utils: ^2.1.0
+    gatsby-core-utils: ^2.2.0
     gray-matter: ^4.0.2
     hast-util-raw: ^4.0.0
     hast-util-to-html: ^4.0.1
@@ -13016,7 +13015,7 @@ fsevents@^1.2.7:
     unist-util-visit: ^1.4.1
   peerDependencies:
     gatsby: ^3.0.0-next.0
-  checksum: 2fea949822bc68dc242ac45d8cc0ad3ed4cd4f9a65bd9bdad47956ff2f5507b2c0b0d84ecb360be60988767d13b59ac8f92a4c52a8bc495497d075572a21e4da
+  checksum: f264c7133d910293ba91d405aa0c3cbc8711f8c7fd22cf649a499225773c00f4d7f3c5c3f565bd33e275acf179843989141bc6ff09c57be2950fa5f12c35a7cd
   languageName: node
   linkType: hard
 
@@ -18095,6 +18094,115 @@ fsevents@^1.2.7:
   dependencies:
     unist-util-visit: ^2.0.0
   checksum: a6ef899727823416949068e0c9ab1a812d0fbf04ead6b5db7e8be5f2436980a5d405d07205423577cea9da11f7b015b67d60aad9cde60df4466c04480c91dbde
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-hast@npm:10.0.1":
+  version: 10.0.1
+  resolution: "mdast-util-to-hast@npm:10.0.1"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    "@types/unist": ^2.0.0
+    mdast-util-definitions: ^4.0.0
+    mdurl: ^1.0.0
+    unist-builder: ^2.0.0
+    unist-util-generated: ^1.0.0
+    unist-util-position: ^3.0.0
+    unist-util-visit: ^2.0.0
+  checksum: 9e228adcbc788f217a8ee501c45acb4cf77174be954ec2f7ac0b3f4e130f078b78a0900cb8c03c14626097399be100aa843791e8f194f9e1c1f3a81e18e630c8
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-hast@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "mdast-util-to-hast@npm:3.0.4"
+  dependencies:
+    collapse-white-space: ^1.0.0
+    detab: ^2.0.0
+    mdast-util-definitions: ^1.2.0
+    mdurl: ^1.0.1
+    trim: 0.0.1
+    trim-lines: ^1.0.0
+    unist-builder: ^1.0.1
+    unist-util-generated: ^1.1.0
+    unist-util-position: ^3.0.0
+    unist-util-visit: ^1.1.0
+    xtend: ^4.0.1
+  checksum: 2d8e3bcafba3403e03b7429745a2f4d42fc88ea5bd7c2abda83638629291adea12a490fc4dbbbcc765fda8fc26fa2501fb7ec19177499e02ede64a3a1ce12d20
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-nlcst@npm:^3.2.0":
+  version: 3.2.3
+  resolution: "mdast-util-to-nlcst@npm:3.2.3"
+  dependencies:
+    nlcst-to-string: ^2.0.0
+    repeat-string: ^1.5.2
+    unist-util-position: ^3.0.0
+    vfile-location: ^2.0.0
+  checksum: 924353b0310a7a9eeca99fad30ac96916ea5d68284450638dc26dd0a9737000f630601fc4ba28cbe9ff2ae2ce1f8a68a3632ef602efadce9c836bf7bbc8e3800
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-string@npm:^1.0.5, mdast-util-to-string@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "mdast-util-to-string@npm:1.1.0"
+  checksum: 0d5ebe2cb573ac817436a0cb0310f7a46c69a742de2de728451fd6293e4825a7894c2112b2651c4c6dcaccb6f545eade1ea58c0e08dcf4a1ddadb636f2fcd52c
+  languageName: node
+  linkType: hard
+
+"mdast-util-to-string@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "mdast-util-to-string@npm:2.0.0"
+  checksum: cd5d5e3a8421adcbdc90620c74b35c5c037211252807e855f9ca7b953dd94ecdab27a1094c8ac9033b7558f0aec2ab190a43bfa8c25a8cd5e11be89162092e1a
+  languageName: node
+  linkType: hard
+
+"mdast-util-toc@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "mdast-util-toc@npm:3.1.0"
+  dependencies:
+    github-slugger: ^1.2.1
+    mdast-util-to-string: ^1.0.5
+    unist-util-is: ^2.1.2
+    unist-util-visit: ^1.1.0
+  checksum: 02aef7c1972eeee98ad367410a5a293ddc269c628bbd9208d3b6fd79b544afcacba6e92a60bd88c2c76adb4478c56de06d3049fcc741ec758a6fd085b9e86841
+  languageName: node
+  linkType: hard
+
+"mdast-util-toc@npm:^5.0":
+  version: 5.1.0
+  resolution: "mdast-util-toc@npm:5.1.0"
+  dependencies:
+    "@types/mdast": ^3.0.3
+    "@types/unist": ^2.0.3
+    extend: ^3.0.2
+    github-slugger: ^1.2.1
+    mdast-util-to-string: ^2.0.0
+    unist-util-is: ^4.0.0
+    unist-util-visit: ^2.0.0
+  checksum: 08b914321519d442ea707750952ff16174571606819b2d023d98d62b615419609aa750ef33f2bb3fe62f5ad3dff09508f36cdee9ec2e12b45d98b19400daa33e
+  languageName: node
+  linkType: hard
+
+"mdn-data@npm:2.0.14":
+  version: 2.0.14
+  resolution: "mdn-data@npm:2.0.14"
+  checksum: 57a27f585adb0ab978b0229aa2347dfbdb897e340a3cd3547a7de3162680af641bf2cdf185771b3bca29fabf8c46b486a45a4809dd5d9321465c80e6adad98f4
+  languageName: node
+  linkType: hard
+
+"mdn-data@npm:2.0.4":
+  version: 2.0.4
+  resolution: "mdn-data@npm:2.0.4"
+  checksum: bcecf9ae69505ff20a2913fa29849eec8b17fa7ab8c93e4bbec8020003f7fd9329478fc353e010ff0dbbca12fc296ff8cf40b6a5c93294c92df7dc8343880b99
+  languageName: node
+  linkType: hard
+
+"mdurl@npm:^1.0.0, mdurl@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "mdurl@npm:1.0.1"
+  checksum: ed5e81efed218ca1cb61bbb5c41857c98ce456382d630a2f45a1b050087a10119a24107ca1acd4ccef2f1a17b02b8d61fb3c630d3d7c0f22df906dbdd2e5f7b5
   languageName: node
   linkType: hard
 
@@ -27752,9 +27860,9 @@ typescript@^4.0.5:
   linkType: hard
 
 "xstate@npm:^4.14.0":
-  version: 4.17.0
-  resolution: "xstate@npm:4.17.0"
-  checksum: 91905a6762a905ec82513d4700ff19d23f3742b352603af1fe7637fb239e3ddb8c1c0f78cf1064d855761480e6fa4e558a7fe7addf88e4c69a481ce24de10df2
+  version: 4.17.1
+  resolution: "xstate@npm:4.17.1"
+  checksum: f689f9c3cfab11d3238897e41bc9d9489494fc730796a123ac13cace99a2635bc88afb24363dc43571534ed509fbe06b6ddb956b756b3a044a07d88abe709474
   languageName: node
   linkType: hard
 
