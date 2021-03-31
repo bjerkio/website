@@ -1444,6 +1444,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.13.6":
+  version: 7.13.10
+  resolution: "@babel/runtime@npm:7.13.10"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 22014226b96a8c8e8d4e8bcdb011f317d1b32881aef424a669dc6ceaee14993d3609172967853cbf9c25c724c25145d45885b6c9df56ba241c12820776607f1f
+  languageName: node
+  linkType: hard
+
 "@babel/standalone@npm:^7.12.6":
   version: 7.12.12
   resolution: "@babel/standalone@npm:7.12.12"
@@ -6896,6 +6905,7 @@ __metadata:
     gatsby-plugin-mdx: ^2.1.0
     gatsby-plugin-offline: ^3.3.1
     gatsby-plugin-react-helmet: ^3.3.14
+    gatsby-plugin-react-i18next: ^1.1.1
     gatsby-plugin-react-svg: ^3.0.0
     gatsby-plugin-remove-serviceworker: ^1.0.0
     gatsby-plugin-theme-ui: ^0.4.0-alpha.3
@@ -6906,10 +6916,12 @@ __metadata:
     gatsby-source-sanity: ^6.0.4
     gatsby-source-sanity-transform-images: ^0.0.7
     gatsby-transformer-remark: ^3.1.0
+    i18next: ^20.1.0
     react: ^17.0.1
     react-burger-menu: ^2.9.0
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
+    react-i18next: ^11.8.12
     react-icons: ^4.1.0
     react-is: ^17.0.1
     react-player: ^2.8.2
@@ -7089,6 +7101,13 @@ __metadata:
   version: 1.1.0
   resolution: "brorand@npm:1.1.0"
   checksum: 4536dd73f07f6884d89c09c906345b606abff477e87babef64a85656e8cf12b1c5f40d06313b91dac12bf3e031ac190b5d548f2c3bf75f655344c3fcf90cbc8a
+  languageName: node
+  linkType: hard
+
+"browser-lang@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "browser-lang@npm:0.1.0"
+  checksum: 49bc35974f487dc09d9a83b80a16f7d81b5b4dfbbe6855a015d96e016cf98302c8d0b82824ea90a7b8c3a28cb58000bf966eebb34079841ca38cee4ff3d8cf92
   languageName: node
   linkType: hard
 
@@ -12757,6 +12776,27 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-react-i18next@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "gatsby-plugin-react-i18next@npm:1.1.1"
+  dependencies:
+    bluebird: ^3.7.2
+    browser-lang: ^0.1.0
+    outdent: ^0.8.0
+    path-to-regexp: ^6.2.0
+    react-helmet: ^6.1.0
+  peerDependencies:
+    gatsby: ^3.0.0
+    i18next: ^19.4.5
+    react: ^16.x || ^17.x
+    react-i18next: ^11.5.0
+  dependenciesMeta:
+    react-helmet:
+      optional: true
+  checksum: 07fa09f9ca74382079d6ddd89a2e1f6e7fe04258bd73a73215caf4affcb348a243f85dbf1a39c1a09494421cadcb5a89d3b5301971d4d7718d003a9183532200
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-react-svg@npm:^3.0.0":
   version: 3.0.0
   resolution: "gatsby-plugin-react-svg@npm:3.0.0"
@@ -14458,6 +14498,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"html-parse-stringify2@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "html-parse-stringify2@npm:2.0.1"
+  dependencies:
+    void-elements: ^2.0.1
+  checksum: 71159c76d54e7e8c1dad808b7ed3f3410e7846b496e3910f0c14f78ade875477b3f6b320ee1259ba5a7689a7ba61bee0b23f9f50ae1d33189de73bf436fb2a52
+  languageName: node
+  linkType: hard
+
 "html-void-elements@npm:^1.0.0, html-void-elements@npm:^1.0.1":
   version: 1.0.5
   resolution: "html-void-elements@npm:1.0.5"
@@ -14696,6 +14745,15 @@ fsevents@^1.2.7:
     class-list: ~0.1.0
     html-element: ^2.0.0
   checksum: d97fa08a5905a4987678a9e466486aa651e8de9537bd6496fa414124fa705407767d5652369318cbb1233d62e969ecbffedebd3c64bfda077d5d107c8c9c9eae
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^20.1.0":
+  version: 20.1.0
+  resolution: "i18next@npm:20.1.0"
+  dependencies:
+    "@babel/runtime": ^7.12.0
+  checksum: fb95e19026c2d3d9376087ddfb33c65ba98c80d3e1fb62b93edf7f6b178a492cd5a54bf139edd515a774ee65a75b0051774fdfcf7630f577c26f7014cad2bb12
   languageName: node
   linkType: hard
 
@@ -18206,115 +18264,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mdast-util-to-hast@npm:10.0.1":
-  version: 10.0.1
-  resolution: "mdast-util-to-hast@npm:10.0.1"
-  dependencies:
-    "@types/mdast": ^3.0.0
-    "@types/unist": ^2.0.0
-    mdast-util-definitions: ^4.0.0
-    mdurl: ^1.0.0
-    unist-builder: ^2.0.0
-    unist-util-generated: ^1.0.0
-    unist-util-position: ^3.0.0
-    unist-util-visit: ^2.0.0
-  checksum: 9e228adcbc788f217a8ee501c45acb4cf77174be954ec2f7ac0b3f4e130f078b78a0900cb8c03c14626097399be100aa843791e8f194f9e1c1f3a81e18e630c8
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-hast@npm:^3.0.4":
-  version: 3.0.4
-  resolution: "mdast-util-to-hast@npm:3.0.4"
-  dependencies:
-    collapse-white-space: ^1.0.0
-    detab: ^2.0.0
-    mdast-util-definitions: ^1.2.0
-    mdurl: ^1.0.1
-    trim: 0.0.1
-    trim-lines: ^1.0.0
-    unist-builder: ^1.0.1
-    unist-util-generated: ^1.1.0
-    unist-util-position: ^3.0.0
-    unist-util-visit: ^1.1.0
-    xtend: ^4.0.1
-  checksum: 2d8e3bcafba3403e03b7429745a2f4d42fc88ea5bd7c2abda83638629291adea12a490fc4dbbbcc765fda8fc26fa2501fb7ec19177499e02ede64a3a1ce12d20
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-nlcst@npm:^3.2.0":
-  version: 3.2.3
-  resolution: "mdast-util-to-nlcst@npm:3.2.3"
-  dependencies:
-    nlcst-to-string: ^2.0.0
-    repeat-string: ^1.5.2
-    unist-util-position: ^3.0.0
-    vfile-location: ^2.0.0
-  checksum: 924353b0310a7a9eeca99fad30ac96916ea5d68284450638dc26dd0a9737000f630601fc4ba28cbe9ff2ae2ce1f8a68a3632ef602efadce9c836bf7bbc8e3800
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-string@npm:^1.0.5, mdast-util-to-string@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "mdast-util-to-string@npm:1.1.0"
-  checksum: 0d5ebe2cb573ac817436a0cb0310f7a46c69a742de2de728451fd6293e4825a7894c2112b2651c4c6dcaccb6f545eade1ea58c0e08dcf4a1ddadb636f2fcd52c
-  languageName: node
-  linkType: hard
-
-"mdast-util-to-string@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "mdast-util-to-string@npm:2.0.0"
-  checksum: cd5d5e3a8421adcbdc90620c74b35c5c037211252807e855f9ca7b953dd94ecdab27a1094c8ac9033b7558f0aec2ab190a43bfa8c25a8cd5e11be89162092e1a
-  languageName: node
-  linkType: hard
-
-"mdast-util-toc@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "mdast-util-toc@npm:3.1.0"
-  dependencies:
-    github-slugger: ^1.2.1
-    mdast-util-to-string: ^1.0.5
-    unist-util-is: ^2.1.2
-    unist-util-visit: ^1.1.0
-  checksum: 02aef7c1972eeee98ad367410a5a293ddc269c628bbd9208d3b6fd79b544afcacba6e92a60bd88c2c76adb4478c56de06d3049fcc741ec758a6fd085b9e86841
-  languageName: node
-  linkType: hard
-
-"mdast-util-toc@npm:^5.0":
-  version: 5.1.0
-  resolution: "mdast-util-toc@npm:5.1.0"
-  dependencies:
-    "@types/mdast": ^3.0.3
-    "@types/unist": ^2.0.3
-    extend: ^3.0.2
-    github-slugger: ^1.2.1
-    mdast-util-to-string: ^2.0.0
-    unist-util-is: ^4.0.0
-    unist-util-visit: ^2.0.0
-  checksum: 08b914321519d442ea707750952ff16174571606819b2d023d98d62b615419609aa750ef33f2bb3fe62f5ad3dff09508f36cdee9ec2e12b45d98b19400daa33e
-  languageName: node
-  linkType: hard
-
-"mdn-data@npm:2.0.14":
-  version: 2.0.14
-  resolution: "mdn-data@npm:2.0.14"
-  checksum: 57a27f585adb0ab978b0229aa2347dfbdb897e340a3cd3547a7de3162680af641bf2cdf185771b3bca29fabf8c46b486a45a4809dd5d9321465c80e6adad98f4
-  languageName: node
-  linkType: hard
-
-"mdn-data@npm:2.0.4":
-  version: 2.0.4
-  resolution: "mdn-data@npm:2.0.4"
-  checksum: bcecf9ae69505ff20a2913fa29849eec8b17fa7ab8c93e4bbec8020003f7fd9329478fc353e010ff0dbbca12fc296ff8cf40b6a5c93294c92df7dc8343880b99
-  languageName: node
-  linkType: hard
-
-"mdurl@npm:^1.0.0, mdurl@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "mdurl@npm:1.0.1"
-  checksum: ed5e81efed218ca1cb61bbb5c41857c98ce456382d630a2f45a1b050087a10119a24107ca1acd4ccef2f1a17b02b8d61fb3c630d3d7c0f22df906dbdd2e5f7b5
-  languageName: node
-  linkType: hard
-
 "meant@npm:^1.0.1, meant@npm:^1.0.2":
   version: 1.0.3
   resolution: "meant@npm:1.0.3"
@@ -19604,6 +19553,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"outdent@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "outdent@npm:0.8.0"
+  checksum: 5f48c7b6a2ef8cbedf1c15d8b09d4ab14a6a9414d5616f2790c5034a1b1684e42b087033188a0657f8e04b45a1a3dc5545627cf84c479864573665ecb5761152
+  languageName: node
+  linkType: hard
+
 "p-async-cache@npm:^1.0.2":
   version: 1.0.3
   resolution: "p-async-cache@npm:1.0.3"
@@ -20265,6 +20221,13 @@ fsevents@^1.2.7:
   version: 0.1.7
   resolution: "path-to-regexp@npm:0.1.7"
   checksum: 342fdb0ca48415d6eccdbe6d4180fd0fa4786ccc96ab3f74fcdf7acfc99e075af25e6077c8086c341dcfb4f5f84401ecd21e6cd7b24e0c3b556fb7ffb2570da7
+  languageName: node
+  linkType: hard
+
+"path-to-regexp@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "path-to-regexp@npm:6.2.0"
+  checksum: 4116de71f5453163910347f199ab28fdd07f4053ed88093acb42dc044a2e5e7d9e18379e81e8d5d982d1b88291be3666e56be34a0741298673248fd21e3c1c16
   languageName: node
   linkType: hard
 
@@ -22135,6 +22098,19 @@ fsevents@^1.2.7:
     "@types/react":
       optional: true
   checksum: f1df03e93206b379b605f3da983f700d5c8a16e3ebedf25ca1311067f4dc95cf968206af44d0b734a5505619958f2da5efe9df4bf749ed6a4989e1f6ea5d2915
+  languageName: node
+  linkType: hard
+
+"react-i18next@npm:^11.8.12":
+  version: 11.8.12
+  resolution: "react-i18next@npm:11.8.12"
+  dependencies:
+    "@babel/runtime": ^7.13.6
+    html-parse-stringify2: ^2.0.1
+  peerDependencies:
+    i18next: ">= 19.0.0"
+    react: ">= 16.8.0"
+  checksum: dfb947c8ece979b9007b0c49fd5014c442ac3a60230487b71e1a2f438c88ad77f59bc5a2860a741f5f8086bad37289bbee31de4e3f8c482ca12e97f638530b10
   languageName: node
   linkType: hard
 
@@ -26982,6 +26958,13 @@ typescript@^4.0.5:
   version: 1.1.2
   resolution: "vm-browserify@npm:1.1.2"
   checksum: fc571a62d2cf797ae8773ebb3cb0d2bea50ed02059e128dd9087975929fce4c80a6485ce1aaf7d44ef69db99dfdcde50b6be5d5eb73b296660d761c32fb544fe
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "void-elements@npm:2.0.1"
+  checksum: 768d7e08534922455d0e87c66426123920f4d26d88e9c3dc430469e4ce1c11920ca8e2aea7794e52916524d55c3c7820efc20d3f5ce6b749036d989adef1cdd9
   languageName: node
   linkType: hard
 
