@@ -31,7 +31,6 @@ const Footer: React.FC = ({ ...props }) => {
           maxWidth: '1920px',
           pt: [5, 6, 6],
           color: 'white',
-          px: [5, 5, 6],
         }}
         {...props}
       >
