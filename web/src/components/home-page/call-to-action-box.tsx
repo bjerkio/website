@@ -1,5 +1,6 @@
+import { Link } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
-import { Box, Heading, Link, ThemeUIStyleObject } from 'theme-ui';
+import { Box, Heading, ThemeUIStyleObject } from 'theme-ui';
 
 export interface CallToActionBoxProps {
   title: string;
@@ -40,7 +41,10 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
     >
       <Box sx={{ width: 100, height: 30, marginBottom: 40 }}>
         {image && hoverImage && (
-          <img className="img" src={hover ? hoverImage : image} />
+          <img
+            className="img"
+            src={hover ? `../${hoverImage}` : `../${image}`}
+          />
         )}
       </Box>
       <Heading
@@ -53,7 +57,7 @@ const CallToActionBox: React.FC<{ data: CallToActionBoxProps }> = ({
         {linkTo && (
           <Link
             className="link"
-            href={linkTo}
+            to={linkTo}
             sx={{ fontSize: 'clamp(8px, 4vw, 20px)' }}
           >
             {linkText}

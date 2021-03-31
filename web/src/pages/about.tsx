@@ -1,33 +1,52 @@
 import { Box, Button, Grid, Heading, Label } from '@theme-ui/components';
-import { graphql, navigate, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { AboutList } from '../components/about-page/about-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
-const AboutPage: React.FC = () => {
-  const {
-    allMdx: { edges },
-  } = useStaticQuery(graphql`
-    query AboutQuery {
-      allMdx(
-        filter: { frontmatter: { type: { eq: "about-articles" } } }
-        sort: { fields: [frontmatter___id], order: ASC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              descriptionArray
-              image
-              title
-            }
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: {
+          type: { eq: "about-articles" }
+          language: { eq: $language }
+        }
+      }
+      sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            descriptionArray
+            image
+            title
           }
         }
       }
     }
-  `);
+  }
+`;
 
+const AboutPage = ({
+  data: {
+    mdxs: { edges },
+  },
+}) => {
   const boxesData = edges.map((edge) => edge.node.frontmatter);
+  const { t } = useTranslation();
+  const { navigate } = useI18next();
 
   return (
     <Layout>
@@ -44,7 +63,7 @@ const AboutPage: React.FC = () => {
             pl: [4, 4, 0],
           }}
         >
-          Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
+          {t('about-page:title')}
         </Heading>
         <AboutList
           data={boxesData.map((item, index) => ({
@@ -53,18 +72,21 @@ const AboutPage: React.FC = () => {
           }))}
         />
         <Box pt={6} sx={{ width: '100%', height: 'auto' }}>
-          <img src="../AboutSplit.png" style={{ width: '100%' }} />
+          <img
+            src={`../${t('about-page:dividing-image')}`}
+            style={{ width: '100%' }}
+          />
         </Box>
         <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [4, 4, 5], pt: [4, 4, 6] }}>
           <Box>
-            <img src="../SimenBjorn.png" style={{ width: '100%' }} />
+            <img
+              src={`../${t('about-page:simon-niklas-image')}`}
+              style={{ width: '100%' }}
+            />
           </Box>
           <Box>
             <Label sx={{ fontSize: 'clamp(16px, 2vw, 25px)' }}>
-              Bjerk sine røtter går tilbake til 2009, da Simen begynte å jobbe
-              for seg selv. På sin reise traff han Bjørn Niklas og sammen har de
-              startet Bjerk. Et lite privat konsulenthus med lidenskap for
-              service og kvalitet.
+              {t('about-page:bjerk-info-text')}
             </Label>
             <Button
               variant="empty"
@@ -74,7 +96,7 @@ const AboutPage: React.FC = () => {
                 fontFamily: 'TTCommons !important',
               }}
             >
-              Sjekk hva vi kan gjøre for deg
+              {t('about-page:bjerk-info-button-text')}
             </Button>
           </Box>
         </Grid>

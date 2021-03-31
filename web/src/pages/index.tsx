@@ -1,5 +1,6 @@
 import { Box, Grid, Heading, Label } from '@theme-ui/components';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import BjerkVideo from '../assets/Bjerk.webm';
 import Button from '../components/button';
@@ -14,44 +15,59 @@ import IntroVideo from '../components/home-page/intro-video';
 import { Layout } from '../components/layouts';
 
 const filterType = (obj, type) => {
-  return obj.allMdx.edges
+  return obj.edges
     .filter((edge) => edge.node?.frontmatter)
     .filter((edge) => edge.node.frontmatter.type === type)
     .map((edge) => edge.node.frontmatter.homePage);
 };
 
-const Homepage: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query AllQuery {
-      allMdx(sort: { fields: [frontmatter___id], order: ASC }) {
-        edges {
-          node {
-            frontmatter {
-              type
-              homePage {
-                title
-                linkTo
-                linkText
-                image
-                hoverImage
-                description
-                imageStyle {
-                  ml
-                }
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: { frontmatter: { language: { eq: $language } } }
+      sort: { fields: [frontmatter___homePage___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            type
+            homePage {
+              title
+              linkTo
+              linkText
+              image
+              hoverImage
+              description
+              imageStyle {
+                ml
               }
             }
           }
         }
       }
     }
-  `);
+  }
+`;
 
+const Homepage = ({ data }) => {
   const actionBox: CallToActionBoxProps[] = filterType(
-    data,
+    data.mdxs,
     'services-articles',
   );
-  const projectsBox: CallToActionImageProps[] = filterType(data, 'projects');
-
+  const projectsBox: CallToActionImageProps[] = filterType(
+    data.mdxs,
+    'projects',
+  );
+  const { t } = useTranslation();
   return (
     <Layout>
       <Box>
@@ -63,13 +79,13 @@ const Homepage: React.FC = () => {
         >
           <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
             <Label sx={{ fontWeight: '600' }}>
-              Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
+              {t('home-page:video-title')}
             </Label>
             <Button
               href="/contact"
               sx={{ paddingTop: '20px', paddingBottom: '15px' }}
             >
-              Start ditt prosjekt
+              {t('home-page:video-button-text')}
             </Button>
           </Box>
         </IntroVideo>
@@ -81,7 +97,7 @@ const Homepage: React.FC = () => {
               fontSize: 'clamp(16px, 8vw, 48px)',
             }}
           >
-            Hvordan kan vi hjelpe deg?
+            {t('home-page:title')}
           </Heading>
           <Box
             sx={{
@@ -90,9 +106,7 @@ const Homepage: React.FC = () => {
               fontSize: 'clamp(8px, 4vw, 22px)',
             }}
           >
-            Vårt mål er å skape en arbeidsplass hvor folk drives av å skape
-            opplevelser og forbedre hverdagen til folk – av folk, for folk. Vårt
-            medium er teknologi, og lidenskapen er å skape.
+            {t('home-page:description')}
           </Box>
           <Grid
             pt={5}
@@ -118,7 +132,7 @@ const Homepage: React.FC = () => {
                 mr: [-4, -4, 0],
               }}
             >
-              Sjekk ut noe av det vi har gjort
+              {t('home-page:middle-title')}
             </Label>
           </Box>
           {projectsBox.map((item, index) => (

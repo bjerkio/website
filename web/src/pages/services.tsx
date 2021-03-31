@@ -1,45 +1,61 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import * as React from 'react';
 import { Heading } from 'theme-ui';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 import { ServiceList } from '../components/services-page/service-list';
 
-const dividedImage = 'ServicesSplit.png';
-
-const ServicesPage: React.FC = () => {
-  const {
-    allMdx: { edges },
-  } = useStaticQuery(graphql`
-    query ServicesQuery {
-      allMdx(
-        filter: { frontmatter: { type: { eq: "services-articles" } } }
-        sort: { fields: [frontmatter___servicesPage___id], order: ASC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              servicesPage {
-                name
-                title
-                description
-                url {
-                  navigationLink
-                  linkText
-                }
-                photo
-                icon
-                initials
-                position
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: {
+          type: { eq: "services-articles" }
+          language: { eq: $language }
+        }
+      }
+      sort: { fields: [frontmatter___servicesPage___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            servicesPage {
+              name
+              title
+              description
+              url {
+                navigationLink
+                linkText
               }
+              photo
+              icon
+              initials
+              position
             }
           }
         }
       }
     }
-  `);
+  }
+`;
 
+const ServicesPage = ({
+  data: {
+    mdxs: { edges },
+  },
+}) => {
   const boxesData = edges.map((edge) => edge.node.frontmatter.servicesPage);
+  const { t } = useTranslation();
 
   return (
     <Layout>
@@ -55,12 +71,15 @@ const ServicesPage: React.FC = () => {
             pl: [4, 4, 0],
           }}
         >
-          Bjerk hjelper bedriften din med å ta det neste steget inn i fremtiden.
+          {t('services-page:title')}
         </Heading>
         <ServiceList
           data={boxesData.map((item, index) => ({
             ...item,
-            dividedImage: index !== boxesData.length - 1 ? dividedImage : null,
+            dividingImage:
+              index !== boxesData.length - 1
+                ? t('services-page:dividing-image')
+                : null,
             textAlign: index & 1 ? 'right' : 'left',
           }))}
         />

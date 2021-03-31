@@ -79,7 +79,8 @@ const components = {
   TwoCenteredImages,
 };
 
-export default function ProjectTemplate({ data: { mdx } }) {
+export default function ProjectTemplate({ data: { allMdx } }) {
+  const mdx = allMdx.edges[0].node;
   return (
     <Layout>
       <Box>
@@ -113,13 +114,35 @@ export default function ProjectTemplate({ data: { mdx } }) {
 }
 
 export const pageQuery = graphql`
-  query ProjectQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-        image
+  query($language: String, $slug: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    allMdx(
+      filter: {
+        frontmatter: {
+          type: { eq: "projects" }
+          language: { eq: $language }
+          slug: { eq: $slug }
+        }
+      }
+    ) {
+      edges {
+        node {
+          id
+          body
+          frontmatter {
+            image
+            title
+            slug
+          }
+        }
       }
     }
   }

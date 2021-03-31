@@ -1,4 +1,6 @@
 import { Container } from '@theme-ui/components';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Box, Grid, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Button from '../../../button';
@@ -40,23 +42,42 @@ const styles: ThemeUIStyleObject = {
   },
 };
 
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
+
 const ContactFooter: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <Box sx={styles}>
       <Container className="container">
         <Grid gap={0} columns={[1, 1, '4fr 5fr']}>
           <Box>
-            <Heading className="header">Si hei!</Heading>
-            <Label className="label">
-              Snakk med oss om ditt prosjekt, så hjelper vi deg fra start til
-              mål.
-            </Label>
-            <Input className="input" placeholder="Fullt navn" />
-            <Input className="input" placeholder="E-postadresse" />
-            <Input className="input" placeholder="Prosjektbeskrivelse" />
-            <Input className="input" placeholder="Budsjett" />
+            <Heading className="header">{t('contact-footer:title')}</Heading>
+            <Label className="label">{t('contact-footer:description')}</Label>
+            <Input
+              className="input"
+              placeholder={t('contact-footer:fullname')}
+            />
+            <Input className="input" placeholder={t('contact-footer:email')} />
+            <Input
+              className="input"
+              placeholder={t('contact-footer:project-description')}
+            />
+            <Input className="input" placeholder={t('contact-footer:budget')} />
             <Button className="button" href="/contact">
-              Start ditt prosjekt
+              {t('contact-footer:button-text')}
             </Button>
           </Box>
           <Box className="video">{/* TODO: Contact footer video */}</Box>

@@ -1,10 +1,10 @@
 /** @jsx */
 import {
   Box,
-  Link,
   Button as ThemeUIButton,
   ButtonProps as ThemeUIButtonProps,
 } from '@theme-ui/components';
+import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 
@@ -84,7 +84,7 @@ const styles: SystemStyleObject = {
 const Button: React.FC<ButtonProps> = ({ href, children, ...props }) => (
   <Box sx={styles}>
     <ThemeUIButton {...props}>
-      <Link href={href}>
+      <Link to={href}>
         {children}
         <Box className="animation-arrow-container">
           <Box className="animation-arrow"></Box>

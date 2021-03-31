@@ -1,5 +1,6 @@
 import { Box, Heading, Image, Label, Link } from '@theme-ui/components';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { EmployeeList } from '../components/contact/exployee-list';
@@ -17,31 +18,42 @@ const styles: SystemStyleObject = {
   },
 };
 
-const ContactPage: React.FC = () => {
-  const {
-    allMdx: { edges },
-  } = useStaticQuery(graphql`
-    query ContactQuery {
-      allMdx(
-        filter: { frontmatter: { type: { eq: "employee" } } }
-        sort: { fields: [frontmatter___id], order: ASC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              name
-              position
-              email
-              phoneNumber
-              photo
-            }
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "employee" }, language: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            position
+            email
+            phoneNumber
+            photo
           }
         }
       }
     }
-  `);
+  }
+`;
 
-  const employeeList = edges.map((edge) => edge.node.frontmatter);
+const ContactPage = ({ data }) => {
+  const employeeList = data.mdxs.edges.map((edge) => edge.node.frontmatter);
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <Container sx={{ pr: [0, 0, 6] }}>
@@ -59,7 +71,7 @@ const ContactPage: React.FC = () => {
                   fontSize: 'clamp(36px, 3.5vw, 50px)',
                 }}
               >
-                Ta kontakt med en av oss for en hyggelig og uforpliktende prat
+                {t('contact-page:title')}
               </Heading>
               <Box
                 sx={{
@@ -67,15 +79,15 @@ const ContactPage: React.FC = () => {
                   mb: [-6, -6, 0],
                 }}
               >
-                <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
-                <Label>+47 22 12 05 12</Label>
-                <Label mt={1}>Frognerveien 1B,</Label>
-                <Label>0257 OSLO</Label>
+                <Link sx={{ color: 'black' }}>{t('company-info:email')}</Link>
+                <Label>{t('company-info:phone-number')}</Label>
+                <Label mt={1}>{t('company-info:address')},</Label>
+                <Label>{t('company-info:postalcode')}</Label>
               </Box>
             </Box>
             <Box sx={{ flex: [0, 0, 1] }}>
               <Image
-                src="../map.svg"
+                src={`../${t('contact-page:image')}`}
                 sx={{
                   width: [0, 0, '100%'],
                   display: ['none', 'none', 'block'],
@@ -84,7 +96,7 @@ const ContactPage: React.FC = () => {
             </Box>
           </Box>
           <Image
-            src="../map.svg"
+            src={`../${t('contact-page:image')}`}
             sx={{
               width: '50%',
               display: ['block', 'block', 'none'],
