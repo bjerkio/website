@@ -4,15 +4,12 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "studio/",
       "web/"
     ]
   },
   "scripts": {
     "build": "yarn workspaces foreach --parallel run build",
-    "build-studio": "yarn workspace bjerkio-studio build",
     "build-web": "yarn workspace bjerkio-web build",
-    "prebuild-web": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN yarn workspace bjerkio-studio graphql-deploy",
     "dev": "yarn workspaces foreach --parallel run dev",
     "lint": "yarn workspaces foreach --parallel run lint",
     "test": "yarn workspaces foreach --parallel run test"
@@ -23,9 +20,9 @@
     }
   },
   "lint-staged": {
-    "{web,studio}/**/*.{json,css,yaml,yml}": "prettier --write",
-    "{web,studio}/**/*.{js,ts,tsx}": "eslint --cache --fix",
-    "{web,studio}/**/*.graphql": [
+    "{web}/**/*.{json,css,yaml,yml}": "prettier --write",
+    "{web}/**/*.{js,ts,tsx}": "eslint --cache --fix",
+    "{web}/**/*.graphql": [
       "prettier --write",
       "eslint --cache --fix"
     ]

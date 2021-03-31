@@ -1,11 +1,6 @@
-const clientConfig = require('./client-config');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 });
-
-const isProd = process.env.NODE_ENV === 'production';
-const token =
-  process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN;
 
 const locality = 'no';
 
@@ -51,15 +46,6 @@ module.exports = {
         rule: {
           include: /assets/, // See below to configure properly
         },
-      },
-    },
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        ...clientConfig.sanity,
-        token,
-        watchMode: !isProd,
-        overlayDrafts: !isProd && token,
       },
     },
     {
