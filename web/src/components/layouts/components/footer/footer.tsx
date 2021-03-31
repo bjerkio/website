@@ -51,7 +51,7 @@ const Footer: React.FC = ({ ...props }) => {
               {t('footer:left-greeting')[1]}
             </Text>
           </Box>
-          <Box sx={{ fontSize: 28, my: 4, marginLeft: [0, 0, '40%'] }}>
+          <Box sx={{ fontSize: 28, my: 4, marginLeft: [0, '40%', '40%'] }}>
             <Link href="#" sx={{ whiteSpace: 'nowrap' }}>
               {t('company-info:phone-number')}
             </Link>
