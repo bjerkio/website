@@ -16,7 +16,7 @@ export interface ServiceListItemProps {
   initials: string;
   position: string;
   textAlign: 'left' | 'right';
-  dividedImage?: string;
+  dividingImage?: string;
 }
 
 export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
@@ -30,7 +30,7 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
     initials,
     position,
     textAlign,
-    dividedImage,
+    dividingImage,
   },
 }) => (
   <Container id={name} sx={{ mt: [5, 5, 6], overflow: 'hidden' }}>
@@ -154,9 +154,9 @@ export const ServiceListItem: React.FC<{ data: ServiceListItemProps }> = ({
         </>
       )}
     </Grid>
-    {dividedImage && (
+    {dividingImage && (
       <Box sx={{ mt: 6 }}>
-        <img src={`../${dividedImage}`} style={{ width: '100%' }} />
+        <img src={`../${dividingImage}`} style={{ width: '100%' }} />
       </Box>
     )}
   </Container>

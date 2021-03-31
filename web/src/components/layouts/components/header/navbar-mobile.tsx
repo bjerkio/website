@@ -1,4 +1,5 @@
-import { Box, BoxProps, Button, Link } from '@theme-ui/components';
+import { Box, BoxProps, Button } from '@theme-ui/components';
+import { Link } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
@@ -84,7 +85,7 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
   return (
     <Box {...props} sx={styles}>
       <Box className="logo">
-        <Link href="/">
+        <Link to="/">
           {pathname === '' ? (
             <Logo color="white" sx={{ width: '5em', color: 'white' }} />
           ) : (

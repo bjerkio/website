@@ -1,5 +1,6 @@
+import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import { Box, Link, ThemeUIStyleObject } from 'theme-ui';
+import { Box, ThemeUIStyleObject } from 'theme-ui';
 
 export interface CallToActionImageProps {
   linkTo: string;
@@ -44,9 +45,9 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
 }) => {
   return (
     <Box sx={styles}>
-      <Link className="link" href={linkTo} sx={{ overflow: 'hidden' }}>
+      <Link className="link" to={linkTo} sx={{ overflow: 'hidden' }}>
         <Box className="img-container" sx={{}}>
-          <img src={image} className="img" />
+          <img src={`../${image}`} className="img" />
         </Box>
         <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', mx: [4, 4, 0] }}>
           <span className="linkText">{linkText}</span>

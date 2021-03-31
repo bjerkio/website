@@ -3,7 +3,7 @@ import { Box } from 'theme-ui';
 import { GlobalStyles } from '../../theme/global-styles';
 import BottomTree from './components/bottom-tree/bottom-tree';
 import ContactFooter from './components/contact-footer/contact-footer';
-import { Footer } from './components/footer/footer';
+import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import MobileHeader from './components/header/mobile-header';
 
