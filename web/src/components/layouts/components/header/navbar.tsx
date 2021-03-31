@@ -1,8 +1,9 @@
+/** @jsx */
 import { Box, BoxProps, Flex } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useState } from 'react';
-import { SystemStyleObject } from 'theme-ui';
+import { jsx, SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import Language from './language';
 
