@@ -2,11 +2,10 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 });
 
-const locality = 'no';
-
 module.exports = {
   siteMetadata: {
     title: 'Bjerk.io',
+    siteUrl: 'https://bjerk.io',
   },
   plugins: [
     {
@@ -25,6 +24,28 @@ module.exports = {
       resolve: 'gatsby-plugin-theme-ui',
       options: {
         preset: '@theme-ui/preset-base',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'locale',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'no'],
+        defaultLanguage: 'no',
+        siteUrl: 'https://bjerk.io',
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          returnObjects: true,
+        },
       },
     },
     // 'gatsby-theme-style-guide',
@@ -51,29 +72,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/content/${locality}/projects`,
+        path: `${__dirname}/src/content`,
         name: 'projects',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data/${locality}/about-articles`,
-        name: 'about-articles',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/data/${locality}/services-articles`,
-        name: 'services-articles',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/data/${locality}/employees`,
-        name: 'employees',
+        path: `${__dirname}/src/data`,
+        name: 'page-data',
       },
     },
     'gatsby-plugin-mdx',

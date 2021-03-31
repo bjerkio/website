@@ -1,7 +1,6 @@
-import { Box, BoxProps, Button, Link } from '@theme-ui/components';
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { IoCloseSharp } from 'react-icons/io5';
+import { Box, BoxProps, Button } from '@theme-ui/components';
+import { Link } from 'gatsby-plugin-react-i18next';
+import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 import MobileMenu from './mobile-menu';
@@ -12,6 +11,7 @@ const styles: SystemStyleObject = {
   '.logo': {
     position: 'absolute',
     margin: 4,
+    marginTop: '45px',
   },
   '.menuButton': {
     display: 'flex',
@@ -19,14 +19,51 @@ const styles: SystemStyleObject = {
     background: 'primary',
     borderRadius: '50%',
     position: 'fixed',
-    zIndex: 3,
-    width: '4em',
-    height: '4em',
-    maxWidth: '50px',
-    maxHeight: '50px',
+    zIndex: 2,
+    width: '42px',
+    height: '42px',
     color: 'black',
     margin: 4,
     right: 0,
+    fontSize: '100px',
+    padding: 0,
+    '.container': {
+      display: 'inline-block',
+      cursor: 'pointer',
+      marginLeft: '9px',
+      '.bar1': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          '-webkit-transform': 'rotate(-45deg) translate(-1px, 3px)',
+          transform: 'rotate(-45deg) translate(-5px, 4px)',
+        },
+      },
+      '.bar2': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          opacity: 0,
+        },
+      },
+      '.bar3': {
+        width: '24px',
+        height: '3px',
+        backgroundColor: '#232931',
+        margin: '3px 0',
+        transition: '.4s',
+        '&.animate': {
+          '-webkit-transform': 'rotate(45deg) translate(-6px, -7px)',
+          transform: 'rotate(45deg) translate(-4px, -4px);',
+        },
+      },
+    },
   },
   '.menuButton.open': {
     background: 'white',
@@ -34,25 +71,29 @@ const styles: SystemStyleObject = {
 };
 
 const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
-  let pathname = '';
+  const [pathname, setPathname] = useState('');
+  const [menu, setMenu] = useState<boolean>(false);
 
-  if (typeof window !== 'undefined') {
-    pathname =
+  useEffect(() => {
+    setPathname(
       window.location.pathname[window.location.pathname.length - 1] === '/'
         ? window.location.pathname.slice(0, -1)
-        : window.location.pathname;
-  }
-
-  const [menu, setMenu] = useState<boolean>(false);
+        : window.location.pathname,
+    );
+  }, []);
 
   return (
     <Box {...props} sx={styles}>
       <Box className="logo">
-        <Link href="/">
+        <Link to="/">
           {pathname === '' ? (
-            <Logo sx={{ width: '4em', color: 'white' }} />
+            <Logo color="white" sx={{ width: '5em', color: 'white' }} />
           ) : (
-            <Logo dotColor="#0FCFA2" sx={{ color: 'black', width: '4em' }} />
+            <Logo
+              color="black"
+              dotColor="#0FCFA2"
+              sx={{ color: 'black', width: '5em' }}
+            />
           )}
         </Link>
       </Box>
@@ -60,11 +101,11 @@ const NavbarMobile: React.FC<BoxProps> = ({ ...props }) => {
         className={menu ? 'menuButton open' : 'menuButton'}
         onClick={() => setMenu(!menu)}
       >
-        {menu ? (
-          <IoCloseSharp fontSize={'3em'} />
-        ) : (
-          <GiHamburgerMenu fontSize={'3em'} />
-        )}
+        <div className="container">
+          <div className={menu ? 'bar1 animate' : 'bar1'}></div>
+          <div className={menu ? 'bar2 animate' : 'bar2'}></div>
+          <div className={menu ? 'bar3 animate' : 'bar3'}></div>
+        </div>
       </Button>
       {menu && <MobileMenu />}
     </Box>

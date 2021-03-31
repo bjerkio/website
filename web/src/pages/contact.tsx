@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Label, Link } from '@theme-ui/components';
-import { graphql, useStaticQuery } from 'gatsby';
+import { Box, Heading, Image, Label, Link } from '@theme-ui/components';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { EmployeeList } from '../components/contact/exployee-list';
@@ -7,85 +8,103 @@ import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
 const styles: SystemStyleObject = {
-  mt: 5,
-  '.image': {
-    width: '20rem',
-    height: '20rem',
-    maxWidth: '396px',
-    maxHeight: '328px',
-    right: '17rem',
-    position: 'absolute',
-    marginTop: '4rem',
-    display: ['none', 'none', 'block'],
-  },
+  mt: 6,
+  mb: 6,
+  overflow: 'hidden',
   '.mobileImage': {
-    width: '20rem',
+    width: '50%',
     display: ['block', 'block', 'none'],
+    marginLeft: '50%',
   },
 };
 
-const ContactPage: React.FC = () => {
-  const {
-    allMdx: { edges },
-  } = useStaticQuery(graphql`
-    query ContactQuery {
-      allMdx(
-        filter: { frontmatter: { type: { eq: "employee" } } }
-        sort: { fields: [frontmatter___id], order: ASC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              name
-              position
-              email
-              phoneNumber
-              photo
-            }
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "employee" }, language: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            position
+            email
+            phoneNumber
+            photo
           }
         }
       }
     }
-  `);
+  }
+`;
 
-  const empoyeeList = edges.map((edge) => edge.node.frontmatter);
+const ContactPage = ({ data }) => {
+  const employeeList = data.mdxs.edges.map((edge) => edge.node.frontmatter);
+  const { t } = useTranslation();
+
   return (
     <Layout>
-      <Container>
+      <Container sx={{ pr: [0, 0, 6] }}>
         <Box sx={styles}>
-          <Flex sx={{ mb: 6 }}>
-            <Box>
+          <Box sx={{ display: 'flex', flexDirection: 'row', mb: [0, 0, 6] }}>
+            <Box sx={{ flex: 3 }}>
               <Heading
                 as="h1"
                 sx={{
-                  fontWeight: 'normal',
-                  width: ['100%', '60%'],
-                  my: 5,
+                  fontWeight: '600',
+                  width: ['100%', '100%', '60%'],
+                  mb: 5,
+                  mt: [0, 0, 5],
+                  pr: [4, 4, 0],
+                  fontSize: 'clamp(36px, 3.5vw, 50px)',
                 }}
               >
-                Ta kontakt med en av oss for en hyggelig og uforpliktende prat
+                {t('contact-page:title')}
               </Heading>
-              <Flex>
-                <Box
-                  sx={{
-                    fontSize: [2, 3, 3],
-                  }}
-                >
-                  <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
-                  <Label>+47 22 12 05 12</Label>
-                  <Label>Frognerveien 1B,</Label>
-                  <Label>0257 OSLO</Label>
-                </Box>
-                <Box className="mobileImage">
-                  <img src="../map.svg" style={{ width: '100%' }} />
-                </Box>
-              </Flex>
+              <Box
+                sx={{
+                  fontSize: 'clamp(20px, 2.3vw, 35px)',
+                  mb: [-6, -6, 0],
+                }}
+              >
+                <Link sx={{ color: 'black' }}>{t('company-info:email')}</Link>
+                <Label>{t('company-info:phone-number')}</Label>
+                <Label mt={1}>{t('company-info:address')},</Label>
+                <Label>{t('company-info:postalcode')}</Label>
+              </Box>
             </Box>
-            <Box className="image">
-              <img src="../map.svg" style={{ width: '100%' }} />
+            <Box sx={{ flex: [0, 0, 1] }}>
+              <Image
+                src={`../${t('contact-page:image')}`}
+                sx={{
+                  width: [0, 0, '100%'],
+                  display: ['none', 'none', 'block'],
+                }}
+              />
             </Box>
-          </Flex>
-          <EmployeeList data={empoyeeList} />
+          </Box>
+          <Image
+            src={`../${t('contact-page:image')}`}
+            sx={{
+              width: '50%',
+              display: ['block', 'block', 'none'],
+              marginLeft: '60%',
+              mb: 5,
+            }}
+          />
+          <EmployeeList data={employeeList} />
         </Box>
       </Container>
     </Layout>

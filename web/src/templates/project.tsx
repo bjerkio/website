@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react';
-import { Heading as BaseHeading, Box } from '@theme-ui/components';
+import { Heading as BaseHeading, Box, Image } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
@@ -8,16 +8,16 @@ import { Layout } from '../components/layouts';
 
 const TwoCenteredImages = ({ firstSrc, secondSrc }) => (
   <div style={{ textAlign: 'center' }}>
-    <img
-      src={firstSrc}
-      style={{
+    <Image
+      src={`../${firstSrc}`}
+      sx={{
         width: '45%',
         marginRight: '0.5%',
       }}
     />
-    <img
-      src={secondSrc}
-      style={{
+    <Image
+      src={`../${secondSrc}`}
+      sx={{
         width: '45%',
         marginLeft: '0.5%',
       }}
@@ -31,6 +31,7 @@ const Heading2 = ({ children, withQuotes, ...props }) => (
     sx={{
       mt: 4,
       mb: 5,
+      fontSize: 'clamp(20px, 2.5vw, 35px)',
       fontWeight: 'normal',
       marginLeft: '15%',
       marginRight: '15%',
@@ -41,11 +42,11 @@ const Heading2 = ({ children, withQuotes, ...props }) => (
       <a
         style={{
           position: 'absolute',
-          left: '18.5%',
-          marginTop: '-10px',
+          left: 'calc(23vw - 50px)',
+          marginTop: '-20px',
           height: 'auto',
           textDecoration: 'none',
-          font: 'normal normal 600 70px/80px TT Commons',
+          fontSize: 'clamp(70px, 7vw, 100px)',
           color: '#4ecca3',
         }}
       >
@@ -65,6 +66,7 @@ const Text = ({ children }) => (
       fontWeight: 'normal',
       marginLeft: '15%',
       marginRight: '15%',
+      fontSize: 'clamp(20px, 2.5vw, 35px)',
     }}
   >
     {children}
@@ -77,18 +79,27 @@ const components = {
   TwoCenteredImages,
 };
 
-export default function ProjectTemplate({ data: { mdx } }) {
+export default function ProjectTemplate({ data: { allMdx } }) {
+  const mdx = allMdx.edges[0].node;
   return (
     <Layout>
-      <Box sx={{ mt: 6 }}>
-        <Container sx={{ pt: 6, alignItems: 'center' }}>
-          <BaseHeading as="h1" sx={{ mb: 3, fontWeight: 'normal' }}>
+      <Box>
+        <Container sx={{ alignItems: 'center' }}>
+          <BaseHeading
+            as="h1"
+            sx={{
+              mb: 3,
+              fontWeight: '600',
+              mt: 6,
+              fontSize: 'clamp(36px, 3.5vw, 50px)',
+            }}
+          >
             {mdx.frontmatter.title}
           </BaseHeading>
           <Box sx={{ mt: 4 }}>
-            <img
-              src={`../${mdx.frontmatter.image}`}
-              style={{ width: '100%' }}
+            <Image
+              src={`../../${mdx.frontmatter.image}`}
+              sx={{ width: '100%' }}
             />
           </Box>
           <MDXProvider components={components}>
@@ -103,13 +114,35 @@ export default function ProjectTemplate({ data: { mdx } }) {
 }
 
 export const pageQuery = graphql`
-  query ProjectQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-        image
+  query($language: String, $slug: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    allMdx(
+      filter: {
+        frontmatter: {
+          type: { eq: "projects" }
+          language: { eq: $language }
+          slug: { eq: $slug }
+        }
+      }
+    ) {
+      edges {
+        node {
+          id
+          body
+          frontmatter {
+            image
+            title
+            slug
+          }
+        }
       }
     }
   }

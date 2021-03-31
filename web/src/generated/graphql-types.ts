@@ -389,6 +389,10 @@ export type File = Node & {
   childrenMdx?: Maybe<Array<Maybe<Mdx>>>;
   /** Returns the first child node of type Mdx or null if there are no children of given type on this node */
   childMdx?: Maybe<Mdx>;
+  /** Returns all children nodes filtered by type Locale */
+  childrenLocale?: Maybe<Array<Maybe<Locale>>>;
+  /** Returns the first child node of type Locale or null if there are no children of given type on this node */
+  childLocale?: Maybe<Locale>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -517,19 +521,16 @@ export type FileFieldsEnum =
   | 'childrenMdx___rawBody'
   | 'childrenMdx___fileAbsolutePath'
   | 'childrenMdx___frontmatter___title'
+  | 'childrenMdx___frontmatter___language'
   | 'childrenMdx___frontmatter___type'
-  | 'childrenMdx___frontmatter___id'
-  | 'childrenMdx___frontmatter___slug'
-  | 'childrenMdx___frontmatter___image'
-  | 'childrenMdx___frontmatter___homePage___image'
-  | 'childrenMdx___frontmatter___homePage___linkTo'
-  | 'childrenMdx___frontmatter___homePage___linkText'
+  | 'childrenMdx___frontmatter___name'
   | 'childrenMdx___frontmatter___homePage___id'
   | 'childrenMdx___frontmatter___homePage___title'
+  | 'childrenMdx___frontmatter___homePage___linkTo'
+  | 'childrenMdx___frontmatter___homePage___linkText'
+  | 'childrenMdx___frontmatter___homePage___image'
   | 'childrenMdx___frontmatter___homePage___hoverImage'
   | 'childrenMdx___frontmatter___homePage___description'
-  | 'childrenMdx___frontmatter___name'
-  | 'childrenMdx___frontmatter___descriptionArray'
   | 'childrenMdx___frontmatter___servicesPage___id'
   | 'childrenMdx___frontmatter___servicesPage___name'
   | 'childrenMdx___frontmatter___servicesPage___title'
@@ -538,10 +539,14 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___servicesPage___initials'
   | 'childrenMdx___frontmatter___servicesPage___position'
   | 'childrenMdx___frontmatter___servicesPage___description'
+  | 'childrenMdx___frontmatter___id'
   | 'childrenMdx___frontmatter___position'
   | 'childrenMdx___frontmatter___email'
   | 'childrenMdx___frontmatter___phoneNumber'
   | 'childrenMdx___frontmatter___photo'
+  | 'childrenMdx___frontmatter___descriptionArray'
+  | 'childrenMdx___frontmatter___image'
+  | 'childrenMdx___frontmatter___slug'
   | 'childrenMdx___slug'
   | 'childrenMdx___body'
   | 'childrenMdx___excerpt'
@@ -596,19 +601,16 @@ export type FileFieldsEnum =
   | 'childMdx___rawBody'
   | 'childMdx___fileAbsolutePath'
   | 'childMdx___frontmatter___title'
+  | 'childMdx___frontmatter___language'
   | 'childMdx___frontmatter___type'
-  | 'childMdx___frontmatter___id'
-  | 'childMdx___frontmatter___slug'
-  | 'childMdx___frontmatter___image'
-  | 'childMdx___frontmatter___homePage___image'
-  | 'childMdx___frontmatter___homePage___linkTo'
-  | 'childMdx___frontmatter___homePage___linkText'
+  | 'childMdx___frontmatter___name'
   | 'childMdx___frontmatter___homePage___id'
   | 'childMdx___frontmatter___homePage___title'
+  | 'childMdx___frontmatter___homePage___linkTo'
+  | 'childMdx___frontmatter___homePage___linkText'
+  | 'childMdx___frontmatter___homePage___image'
   | 'childMdx___frontmatter___homePage___hoverImage'
   | 'childMdx___frontmatter___homePage___description'
-  | 'childMdx___frontmatter___name'
-  | 'childMdx___frontmatter___descriptionArray'
   | 'childMdx___frontmatter___servicesPage___id'
   | 'childMdx___frontmatter___servicesPage___name'
   | 'childMdx___frontmatter___servicesPage___title'
@@ -617,10 +619,14 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___servicesPage___initials'
   | 'childMdx___frontmatter___servicesPage___position'
   | 'childMdx___frontmatter___servicesPage___description'
+  | 'childMdx___frontmatter___id'
   | 'childMdx___frontmatter___position'
   | 'childMdx___frontmatter___email'
   | 'childMdx___frontmatter___phoneNumber'
   | 'childMdx___frontmatter___photo'
+  | 'childMdx___frontmatter___descriptionArray'
+  | 'childMdx___frontmatter___image'
+  | 'childMdx___frontmatter___slug'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -672,6 +678,91 @@ export type FileFieldsEnum =
   | 'childMdx___internal___mediaType'
   | 'childMdx___internal___owner'
   | 'childMdx___internal___type'
+  | 'childrenLocale'
+  | 'childrenLocale___id'
+  | 'childrenLocale___parent___id'
+  | 'childrenLocale___parent___parent___id'
+  | 'childrenLocale___parent___parent___children'
+  | 'childrenLocale___parent___children'
+  | 'childrenLocale___parent___children___id'
+  | 'childrenLocale___parent___children___children'
+  | 'childrenLocale___parent___internal___content'
+  | 'childrenLocale___parent___internal___contentDigest'
+  | 'childrenLocale___parent___internal___description'
+  | 'childrenLocale___parent___internal___fieldOwners'
+  | 'childrenLocale___parent___internal___ignoreType'
+  | 'childrenLocale___parent___internal___mediaType'
+  | 'childrenLocale___parent___internal___owner'
+  | 'childrenLocale___parent___internal___type'
+  | 'childrenLocale___children'
+  | 'childrenLocale___children___id'
+  | 'childrenLocale___children___parent___id'
+  | 'childrenLocale___children___parent___children'
+  | 'childrenLocale___children___children'
+  | 'childrenLocale___children___children___id'
+  | 'childrenLocale___children___children___children'
+  | 'childrenLocale___children___internal___content'
+  | 'childrenLocale___children___internal___contentDigest'
+  | 'childrenLocale___children___internal___description'
+  | 'childrenLocale___children___internal___fieldOwners'
+  | 'childrenLocale___children___internal___ignoreType'
+  | 'childrenLocale___children___internal___mediaType'
+  | 'childrenLocale___children___internal___owner'
+  | 'childrenLocale___children___internal___type'
+  | 'childrenLocale___internal___content'
+  | 'childrenLocale___internal___contentDigest'
+  | 'childrenLocale___internal___description'
+  | 'childrenLocale___internal___fieldOwners'
+  | 'childrenLocale___internal___ignoreType'
+  | 'childrenLocale___internal___mediaType'
+  | 'childrenLocale___internal___owner'
+  | 'childrenLocale___internal___type'
+  | 'childrenLocale___language'
+  | 'childrenLocale___ns'
+  | 'childrenLocale___data'
+  | 'childrenLocale___fileAbsolutePath'
+  | 'childLocale___id'
+  | 'childLocale___parent___id'
+  | 'childLocale___parent___parent___id'
+  | 'childLocale___parent___parent___children'
+  | 'childLocale___parent___children'
+  | 'childLocale___parent___children___id'
+  | 'childLocale___parent___children___children'
+  | 'childLocale___parent___internal___content'
+  | 'childLocale___parent___internal___contentDigest'
+  | 'childLocale___parent___internal___description'
+  | 'childLocale___parent___internal___fieldOwners'
+  | 'childLocale___parent___internal___ignoreType'
+  | 'childLocale___parent___internal___mediaType'
+  | 'childLocale___parent___internal___owner'
+  | 'childLocale___parent___internal___type'
+  | 'childLocale___children'
+  | 'childLocale___children___id'
+  | 'childLocale___children___parent___id'
+  | 'childLocale___children___parent___children'
+  | 'childLocale___children___children'
+  | 'childLocale___children___children___id'
+  | 'childLocale___children___children___children'
+  | 'childLocale___children___internal___content'
+  | 'childLocale___children___internal___contentDigest'
+  | 'childLocale___children___internal___description'
+  | 'childLocale___children___internal___fieldOwners'
+  | 'childLocale___children___internal___ignoreType'
+  | 'childLocale___children___internal___mediaType'
+  | 'childLocale___children___internal___owner'
+  | 'childLocale___children___internal___type'
+  | 'childLocale___internal___content'
+  | 'childLocale___internal___contentDigest'
+  | 'childLocale___internal___description'
+  | 'childLocale___internal___fieldOwners'
+  | 'childLocale___internal___ignoreType'
+  | 'childLocale___internal___mediaType'
+  | 'childLocale___internal___owner'
+  | 'childLocale___internal___type'
+  | 'childLocale___language'
+  | 'childLocale___ns'
+  | 'childLocale___data'
+  | 'childLocale___fileAbsolutePath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -796,6 +887,8 @@ export type FileFilterInput = {
   publicURL?: Maybe<StringQueryOperatorInput>;
   childrenMdx?: Maybe<MdxFilterListInput>;
   childMdx?: Maybe<MdxFilterInput>;
+  childrenLocale?: Maybe<LocaleFilterListInput>;
+  childLocale?: Maybe<LocaleFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -878,6 +971,165 @@ export type JsonQueryOperatorInput = {
   glob?: Maybe<Scalars['JSON']>;
 };
 
+export type Locale = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  language?: Maybe<Scalars['String']>;
+  ns?: Maybe<Scalars['String']>;
+  data?: Maybe<Scalars['String']>;
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+};
+
+export type LocaleConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<LocaleEdge>;
+  nodes: Array<Locale>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<LocaleGroupConnection>;
+};
+
+
+export type LocaleConnectionDistinctArgs = {
+  field: LocaleFieldsEnum;
+};
+
+
+export type LocaleConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: LocaleFieldsEnum;
+};
+
+export type LocaleEdge = {
+  next?: Maybe<Locale>;
+  node: Locale;
+  previous?: Maybe<Locale>;
+};
+
+export type LocaleFieldsEnum =
+  | 'id'
+  | 'parent___id'
+  | 'parent___parent___id'
+  | 'parent___parent___parent___id'
+  | 'parent___parent___parent___children'
+  | 'parent___parent___children'
+  | 'parent___parent___children___id'
+  | 'parent___parent___children___children'
+  | 'parent___parent___internal___content'
+  | 'parent___parent___internal___contentDigest'
+  | 'parent___parent___internal___description'
+  | 'parent___parent___internal___fieldOwners'
+  | 'parent___parent___internal___ignoreType'
+  | 'parent___parent___internal___mediaType'
+  | 'parent___parent___internal___owner'
+  | 'parent___parent___internal___type'
+  | 'parent___children'
+  | 'parent___children___id'
+  | 'parent___children___parent___id'
+  | 'parent___children___parent___children'
+  | 'parent___children___children'
+  | 'parent___children___children___id'
+  | 'parent___children___children___children'
+  | 'parent___children___internal___content'
+  | 'parent___children___internal___contentDigest'
+  | 'parent___children___internal___description'
+  | 'parent___children___internal___fieldOwners'
+  | 'parent___children___internal___ignoreType'
+  | 'parent___children___internal___mediaType'
+  | 'parent___children___internal___owner'
+  | 'parent___children___internal___type'
+  | 'parent___internal___content'
+  | 'parent___internal___contentDigest'
+  | 'parent___internal___description'
+  | 'parent___internal___fieldOwners'
+  | 'parent___internal___ignoreType'
+  | 'parent___internal___mediaType'
+  | 'parent___internal___owner'
+  | 'parent___internal___type'
+  | 'children'
+  | 'children___id'
+  | 'children___parent___id'
+  | 'children___parent___parent___id'
+  | 'children___parent___parent___children'
+  | 'children___parent___children'
+  | 'children___parent___children___id'
+  | 'children___parent___children___children'
+  | 'children___parent___internal___content'
+  | 'children___parent___internal___contentDigest'
+  | 'children___parent___internal___description'
+  | 'children___parent___internal___fieldOwners'
+  | 'children___parent___internal___ignoreType'
+  | 'children___parent___internal___mediaType'
+  | 'children___parent___internal___owner'
+  | 'children___parent___internal___type'
+  | 'children___children'
+  | 'children___children___id'
+  | 'children___children___parent___id'
+  | 'children___children___parent___children'
+  | 'children___children___children'
+  | 'children___children___children___id'
+  | 'children___children___children___children'
+  | 'children___children___internal___content'
+  | 'children___children___internal___contentDigest'
+  | 'children___children___internal___description'
+  | 'children___children___internal___fieldOwners'
+  | 'children___children___internal___ignoreType'
+  | 'children___children___internal___mediaType'
+  | 'children___children___internal___owner'
+  | 'children___children___internal___type'
+  | 'children___internal___content'
+  | 'children___internal___contentDigest'
+  | 'children___internal___description'
+  | 'children___internal___fieldOwners'
+  | 'children___internal___ignoreType'
+  | 'children___internal___mediaType'
+  | 'children___internal___owner'
+  | 'children___internal___type'
+  | 'internal___content'
+  | 'internal___contentDigest'
+  | 'internal___description'
+  | 'internal___fieldOwners'
+  | 'internal___ignoreType'
+  | 'internal___mediaType'
+  | 'internal___owner'
+  | 'internal___type'
+  | 'language'
+  | 'ns'
+  | 'data'
+  | 'fileAbsolutePath';
+
+export type LocaleFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  ns?: Maybe<StringQueryOperatorInput>;
+  data?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+};
+
+export type LocaleFilterListInput = {
+  elemMatch?: Maybe<LocaleFilterInput>;
+};
+
+export type LocaleGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<LocaleEdge>;
+  nodes: Array<Locale>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type LocaleSortInput = {
+  fields?: Maybe<Array<Maybe<LocaleFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 export type Mdx = Node & {
   rawBody: Scalars['String'];
   fileAbsolutePath: Scalars['String'];
@@ -944,20 +1196,17 @@ export type MdxFieldsEnum =
   | 'rawBody'
   | 'fileAbsolutePath'
   | 'frontmatter___title'
+  | 'frontmatter___language'
   | 'frontmatter___type'
-  | 'frontmatter___id'
-  | 'frontmatter___slug'
-  | 'frontmatter___image'
-  | 'frontmatter___homePage___image'
-  | 'frontmatter___homePage___linkTo'
-  | 'frontmatter___homePage___linkText'
+  | 'frontmatter___name'
   | 'frontmatter___homePage___id'
   | 'frontmatter___homePage___title'
+  | 'frontmatter___homePage___linkTo'
+  | 'frontmatter___homePage___linkText'
+  | 'frontmatter___homePage___image'
   | 'frontmatter___homePage___hoverImage'
   | 'frontmatter___homePage___imageStyle___ml'
   | 'frontmatter___homePage___description'
-  | 'frontmatter___name'
-  | 'frontmatter___descriptionArray'
   | 'frontmatter___servicesPage___id'
   | 'frontmatter___servicesPage___name'
   | 'frontmatter___servicesPage___title'
@@ -968,10 +1217,14 @@ export type MdxFieldsEnum =
   | 'frontmatter___servicesPage___initials'
   | 'frontmatter___servicesPage___position'
   | 'frontmatter___servicesPage___description'
+  | 'frontmatter___id'
   | 'frontmatter___position'
   | 'frontmatter___email'
   | 'frontmatter___phoneNumber'
   | 'frontmatter___photo'
+  | 'frontmatter___descriptionArray'
+  | 'frontmatter___image'
+  | 'frontmatter___slug'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -1097,53 +1350,55 @@ export type MdxFilterListInput = {
 
 export type MdxFrontmatter = {
   title: Scalars['String'];
+  language?: Maybe<Scalars['String']>;
   type?: Maybe<Scalars['String']>;
-  id?: Maybe<Scalars['Int']>;
-  slug?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
-  homePage?: Maybe<MdxFrontmatterHomePage>;
   name?: Maybe<Scalars['String']>;
-  descriptionArray?: Maybe<Array<Maybe<Scalars['String']>>>;
+  homePage?: Maybe<MdxFrontmatterHomePage>;
   servicesPage?: Maybe<MdxFrontmatterServicesPage>;
+  id?: Maybe<Scalars['Int']>;
   position?: Maybe<Scalars['String']>;
   email?: Maybe<Scalars['String']>;
   phoneNumber?: Maybe<Scalars['String']>;
   photo?: Maybe<Scalars['String']>;
+  descriptionArray?: Maybe<Array<Maybe<Scalars['String']>>>;
+  image?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
 };
 
 export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
   type?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<IntQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<StringQueryOperatorInput>;
-  homePage?: Maybe<MdxFrontmatterHomePageFilterInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  descriptionArray?: Maybe<StringQueryOperatorInput>;
+  homePage?: Maybe<MdxFrontmatterHomePageFilterInput>;
   servicesPage?: Maybe<MdxFrontmatterServicesPageFilterInput>;
+  id?: Maybe<IntQueryOperatorInput>;
   position?: Maybe<StringQueryOperatorInput>;
   email?: Maybe<StringQueryOperatorInput>;
   phoneNumber?: Maybe<StringQueryOperatorInput>;
   photo?: Maybe<StringQueryOperatorInput>;
+  descriptionArray?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxFrontmatterHomePage = {
-  image?: Maybe<Scalars['String']>;
-  linkTo?: Maybe<Scalars['String']>;
-  linkText?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['Int']>;
   title?: Maybe<Scalars['String']>;
+  linkTo?: Maybe<Scalars['String']>;
+  linkText?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
   hoverImage?: Maybe<Scalars['String']>;
   imageStyle?: Maybe<MdxFrontmatterHomePageImageStyle>;
   description?: Maybe<Scalars['String']>;
 };
 
 export type MdxFrontmatterHomePageFilterInput = {
-  image?: Maybe<StringQueryOperatorInput>;
-  linkTo?: Maybe<StringQueryOperatorInput>;
-  linkText?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<IntQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  linkTo?: Maybe<StringQueryOperatorInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<StringQueryOperatorInput>;
   hoverImage?: Maybe<StringQueryOperatorInput>;
   imageStyle?: Maybe<MdxFrontmatterHomePageImageStyleFilterInput>;
   description?: Maybe<StringQueryOperatorInput>;
@@ -3711,6 +3966,8 @@ export type Query = {
   allThemeUiConfig: ThemeUiConfigConnection;
   mdx?: Maybe<Mdx>;
   allMdx: MdxConnection;
+  locale?: Maybe<Locale>;
+  allLocale: LocaleConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
   allSiteBuildMetadata: SiteBuildMetadataConnection;
   sitePlugin?: Maybe<SitePlugin>;
@@ -3755,6 +4012,8 @@ export type QueryFileArgs = {
   publicURL?: Maybe<StringQueryOperatorInput>;
   childrenMdx?: Maybe<MdxFilterListInput>;
   childMdx?: Maybe<MdxFilterInput>;
+  childrenLocale?: Maybe<LocaleFilterListInput>;
+  childLocale?: Maybe<LocaleFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -4096,6 +4355,26 @@ export type QueryAllMdxArgs = {
 };
 
 
+export type QueryLocaleArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  ns?: Maybe<StringQueryOperatorInput>;
+  data?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+};
+
+
+export type QueryAllLocaleArgs = {
+  filter?: Maybe<LocaleFilterInput>;
+  sort?: Maybe<LocaleSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
 export type QuerySiteBuildMetadataArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -4343,6 +4622,7 @@ export type SiteFieldsEnum =
   | 'buildTime'
   | 'siteMetadata___title'
   | 'siteMetadata___description'
+  | 'siteMetadata___siteUrl'
   | 'port'
   | 'host'
   | 'polyfill'
@@ -4495,11 +4775,35 @@ export type SitePageConnectionGroupArgs = {
 };
 
 export type SitePageContext = {
-  id?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  language?: Maybe<Scalars['String']>;
+  i18n?: Maybe<SitePageContextI18n>;
 };
 
 export type SitePageContextFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  i18n?: Maybe<SitePageContextI18nFilterInput>;
+};
+
+export type SitePageContextI18n = {
+  language?: Maybe<Scalars['String']>;
+  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
+  defaultLanguage?: Maybe<Scalars['String']>;
+  generateDefaultLanguagePage?: Maybe<Scalars['Boolean']>;
+  routed?: Maybe<Scalars['Boolean']>;
+  originalPath?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextI18nFilterInput = {
+  language?: Maybe<StringQueryOperatorInput>;
+  languages?: Maybe<StringQueryOperatorInput>;
+  defaultLanguage?: Maybe<StringQueryOperatorInput>;
+  generateDefaultLanguagePage?: Maybe<BooleanQueryOperatorInput>;
+  routed?: Maybe<BooleanQueryOperatorInput>;
+  originalPath?: Maybe<StringQueryOperatorInput>;
+  path?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -4601,7 +4905,15 @@ export type SitePageFieldsEnum =
   | 'internal___owner'
   | 'internal___type'
   | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
+  | 'context___slug'
+  | 'context___language'
+  | 'context___i18n___language'
+  | 'context___i18n___languages'
+  | 'context___i18n___defaultLanguage'
+  | 'context___i18n___generateDefaultLanguagePage'
+  | 'context___i18n___routed'
+  | 'context___i18n___originalPath'
+  | 'context___i18n___path'
   | 'pluginCreator___id'
   | 'pluginCreator___parent___id'
   | 'pluginCreator___parent___parent___id'
@@ -4645,13 +4957,18 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___version'
   | 'pluginCreator___pluginOptions___fileName'
   | 'pluginCreator___pluginOptions___username'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___localeJsonSourceName'
+  | 'pluginCreator___pluginOptions___languages'
+  | 'pluginCreator___pluginOptions___defaultLanguage'
+  | 'pluginCreator___pluginOptions___siteUrl'
+  | 'pluginCreator___pluginOptions___i18nextOptions___returnObjects'
   | 'pluginCreator___pluginOptions___isTSX'
   | 'pluginCreator___pluginOptions___jsxPragma'
   | 'pluginCreator___pluginOptions___allExtensions'
   | 'pluginCreator___pluginOptions___custom___families'
   | 'pluginCreator___pluginOptions___custom___urls'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___name'
   | 'pluginCreator___pluginOptions___extensions'
   | 'pluginCreator___pluginOptions___lessBabel'
   | 'pluginCreator___pluginOptions___mediaTypes'
@@ -4850,13 +5167,19 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___preset___base___fontSizes'
   | 'pluginOptions___preset___default___space'
   | 'pluginOptions___preset___default___fontSizes'
+  | 'pluginOptions___path'
+  | 'pluginOptions___name'
+  | 'pluginOptions___localeJsonSourceName'
+  | 'pluginOptions___languages'
+  | 'pluginOptions___defaultLanguage'
+  | 'pluginOptions___siteUrl'
+  | 'pluginOptions___i18nextOptions___interpolation___escapeValue'
+  | 'pluginOptions___i18nextOptions___returnObjects'
   | 'pluginOptions___isTSX'
   | 'pluginOptions___jsxPragma'
   | 'pluginOptions___allExtensions'
   | 'pluginOptions___custom___families'
   | 'pluginOptions___custom___urls'
-  | 'pluginOptions___path'
-  | 'pluginOptions___name'
   | 'pluginOptions___extensions'
   | 'pluginOptions___lessBabel'
   | 'pluginOptions___mediaTypes'
@@ -4980,12 +5303,17 @@ export type SitePluginPluginOptions = {
   fileName?: Maybe<Scalars['String']>;
   username?: Maybe<Scalars['String']>;
   preset?: Maybe<SitePluginPluginOptionsPreset>;
+  path?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  localeJsonSourceName?: Maybe<Scalars['String']>;
+  languages?: Maybe<Array<Maybe<Scalars['String']>>>;
+  defaultLanguage?: Maybe<Scalars['String']>;
+  siteUrl?: Maybe<Scalars['String']>;
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptions>;
   isTSX?: Maybe<Scalars['Boolean']>;
   jsxPragma?: Maybe<Scalars['String']>;
   allExtensions?: Maybe<Scalars['Boolean']>;
   custom?: Maybe<SitePluginPluginOptionsCustom>;
-  path?: Maybe<Scalars['String']>;
-  name?: Maybe<Scalars['String']>;
   extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   lessBabel?: Maybe<Scalars['Boolean']>;
   mediaTypes?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -5007,17 +5335,40 @@ export type SitePluginPluginOptionsFilterInput = {
   fileName?: Maybe<StringQueryOperatorInput>;
   username?: Maybe<StringQueryOperatorInput>;
   preset?: Maybe<SitePluginPluginOptionsPresetFilterInput>;
+  path?: Maybe<StringQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  localeJsonSourceName?: Maybe<StringQueryOperatorInput>;
+  languages?: Maybe<StringQueryOperatorInput>;
+  defaultLanguage?: Maybe<StringQueryOperatorInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
+  i18nextOptions?: Maybe<SitePluginPluginOptionsI18nextOptionsFilterInput>;
   isTSX?: Maybe<BooleanQueryOperatorInput>;
   jsxPragma?: Maybe<StringQueryOperatorInput>;
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
   custom?: Maybe<SitePluginPluginOptionsCustomFilterInput>;
-  path?: Maybe<StringQueryOperatorInput>;
-  name?: Maybe<StringQueryOperatorInput>;
   extensions?: Maybe<StringQueryOperatorInput>;
   lessBabel?: Maybe<BooleanQueryOperatorInput>;
   mediaTypes?: Maybe<StringQueryOperatorInput>;
   root?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsI18nextOptions = {
+  interpolation?: Maybe<SitePluginPluginOptionsI18nextOptionsInterpolation>;
+  returnObjects?: Maybe<Scalars['Boolean']>;
+};
+
+export type SitePluginPluginOptionsI18nextOptionsFilterInput = {
+  interpolation?: Maybe<SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput>;
+  returnObjects?: Maybe<BooleanQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsI18nextOptionsInterpolation = {
+  escapeValue?: Maybe<Scalars['Boolean']>;
+};
+
+export type SitePluginPluginOptionsI18nextOptionsInterpolationFilterInput = {
+  escapeValue?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPreset = {
@@ -5650,11 +6001,13 @@ export type SitePluginSortInput = {
 export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
+  siteUrl?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -5824,20 +6177,68 @@ export type ThemeUiConfigSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type AboutQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_1_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
 
 
-export type AboutQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'descriptionArray' | 'image' | 'title'>> } }> } };
+export type Unnamed_1_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
 
-export type ContactQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type ContactQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'name' | 'position' | 'email' | 'phoneNumber' | 'photo'>> } }> } };
-
-export type AllQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_2_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
 
 
-export type AllQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<(
+export type Unnamed_2_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+
+export type Unnamed_3_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_3_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+
+export type Unnamed_4_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_4_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+
+export type Unnamed_5_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_5_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+
+export type Unnamed_6_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_6_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> } };
+
+export type Unnamed_7_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_7_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, mdxs: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'descriptionArray' | 'image' | 'title'>> } }> } };
+
+export type Unnamed_8_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_8_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, mdxs: { edges: Array<{ node: { frontmatter?: Maybe<Pick<MdxFrontmatter, 'name' | 'position' | 'email' | 'phoneNumber' | 'photo'>> } }> } };
+
+export type Unnamed_9_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
+
+
+export type Unnamed_9_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, mdxs: { edges: Array<{ node: { frontmatter?: Maybe<(
           Pick<MdxFrontmatter, 'type'>
           & { homePage?: Maybe<(
             Pick<MdxFrontmatterHomePage, 'title' | 'linkTo' | 'linkText' | 'image' | 'hoverImage' | 'description'>
@@ -5845,20 +6246,23 @@ export type AllQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: May
           )> }
         )> } }> } };
 
-export type ServicesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_10_QueryVariables = Exact<{
+  language: Scalars['String'];
+}>;
 
 
-export type ServicesQueryQuery = { allMdx: { edges: Array<{ node: { frontmatter?: Maybe<{ servicesPage?: Maybe<(
+export type Unnamed_10_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, mdxs: { edges: Array<{ node: { frontmatter?: Maybe<{ servicesPage?: Maybe<(
             Pick<MdxFrontmatterServicesPage, 'name' | 'title' | 'description' | 'photo' | 'icon' | 'initials' | 'position'>
             & { url?: Maybe<Pick<MdxFrontmatterServicesPageUrl, 'navigationLink' | 'linkText'>> }
           )> }> } }> } };
 
-export type ProjectQueryQueryVariables = Exact<{
-  id?: Maybe<Scalars['String']>;
+export type Unnamed_11_QueryVariables = Exact<{
+  language?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
 }>;
 
 
-export type ProjectQueryQuery = { mdx?: Maybe<(
-    Pick<Mdx, 'id' | 'body'>
-    & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'image'>> }
-  )> };
+export type Unnamed_11_Query = { locales: { edges: Array<{ node: Pick<Locale, 'ns' | 'data' | 'language'> }> }, allMdx: { edges: Array<{ node: (
+        Pick<Mdx, 'id' | 'body'>
+        & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'image' | 'title' | 'slug'>> }
+      ) }> } };

@@ -1,10 +1,10 @@
 /** @jsx */
 import {
   Box,
-  Link,
   Button as ThemeUIButton,
   ButtonProps as ThemeUIButtonProps,
 } from '@theme-ui/components';
+import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 
@@ -34,11 +34,11 @@ const styles: SystemStyleObject = {
     transition: '.4s',
     fontSize: 'clamp(8px, 6vw, 16px)',
     color: 'black',
-    fontWeight: 'medium',
+    fontWeight: '600',
     cursor: 'pointer',
     borderRadius: '8px',
-    paddingTop: '15px',
-    paddingBottom: '15px',
+    paddingTop: ['10px', '10px', '15px'],
+    paddingBottom: ['10px', '10px', '15px'],
     paddingLeft: '20px',
     paddingRight: '0.3em',
   },
@@ -51,6 +51,7 @@ const styles: SystemStyleObject = {
   },
   '.animation-arrow-container': {
     transition: '.4s',
+    zIndex: 0,
     '.animation-arrow': {
       minWidth: '30px',
       width: '3em',
@@ -83,7 +84,7 @@ const styles: SystemStyleObject = {
 const Button: React.FC<ButtonProps> = ({ href, children, ...props }) => (
   <Box sx={styles}>
     <ThemeUIButton {...props}>
-      <Link href={href}>
+      <Link to={href}>
         {children}
         <Box className="animation-arrow-container">
           <Box className="animation-arrow"></Box>

@@ -1,7 +1,10 @@
-import { Box, BoxProps, Flex, Link } from '@theme-ui/components';
+import { Box, BoxProps, Flex } from '@theme-ui/components';
+import { graphql } from 'gatsby';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
+import Language from './language';
 
 const styles: SystemStyleObject = {
   display: ['none', 'none', 'block'],
@@ -15,7 +18,7 @@ const styles: SystemStyleObject = {
     maxWidth: '1920px',
     margin: '0 auto',
     py: '25px',
-    px: [5, 5, 6],
+    px: [4, 4, 6],
   },
   '.navbar.active': {
     bg: 'background',
@@ -25,7 +28,8 @@ const styles: SystemStyleObject = {
   },
   '.linksContainer': {
     flexGrow: 1,
-    fontSize: 3,
+    fontSize: 23,
+    fontWeight: 600,
     color: 'iron',
     justifyContent: 'flex-end',
     '>a': {
@@ -44,17 +48,33 @@ const styles: SystemStyleObject = {
   '.link': {
     color: 'background',
     textDecoration: 'underline',
+    marginLeft: '64px',
   },
 };
 
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
+
 const Navbar: React.FC<BoxProps> = () => {
+  const { t } = useTranslation();
   const [navbar, setNavbar] = useState(false);
   const [pathname, setPathname] = useState('');
 
   const changeBackground = () => {
     if (typeof window !== 'undefined' && window.scrollY >= 70) {
       setNavbar(true);
-    } else if (pathname === '') {
+    } else if (['', '/en'].includes(pathname)) {
       setNavbar(false);
     }
   };
@@ -73,12 +93,16 @@ const Navbar: React.FC<BoxProps> = () => {
     <Box sx={styles}>
       <Box
         className={
-          pathname !== '' ? 'navbarWhite' : navbar ? 'navbar active' : 'navbar'
+          !['', '/en'].includes(pathname)
+            ? 'navbarWhite'
+            : navbar
+            ? 'navbar active'
+            : 'navbar'
         }
       >
         <Flex className="container">
-          <Link href="/" className="logo-link">
-            {!navbar && pathname === '' ? (
+          <Link to="/" className="logo-link">
+            {!navbar && ['', '/en'].includes(pathname) ? (
               <Logo color="white" sx={{ width: '6em', color: 'white' }} />
             ) : (
               <Logo
@@ -88,44 +112,51 @@ const Navbar: React.FC<BoxProps> = () => {
               />
             )}
           </Link>
+          <Language
+            style={{
+              color:
+                ['', '/en'].includes(pathname) && !navbar ? 'white' : 'black',
+            }}
+          />
           <Flex className="linksContainer">
             <Link
-              color={
-                pathname === '/services'
+              className="link"
+              style={{
+                color: pathname.includes('/services')
                   ? 'lightGreen'
-                  : pathname === '' && !navbar
-                  ? 'background'
-                  : 'black'
-              }
-              href="/services"
+                  : ['', '/en'].includes(pathname) && !navbar
+                  ? 'white'
+                  : 'black',
+              }}
+              to="/services"
             >
-              Tjenester
+              {t('header:services')}
             </Link>
             <Link
-              sx={{ ml: 5 }}
-              color={
-                pathname === '/about'
+              className="link"
+              style={{
+                color: pathname.includes('/about')
                   ? 'lightGreen'
-                  : pathname === '' && !navbar
-                  ? 'background'
-                  : 'black'
-              }
-              href="/about"
+                  : ['', '/en'].includes(pathname) && !navbar
+                  ? 'white'
+                  : 'black',
+              }}
+              to="/about"
             >
-              Om oss
+              {t('header:about-us')}
             </Link>
             <Link
-              sx={{ ml: 5 }}
-              color={
-                pathname === '/contact'
+              className="link"
+              style={{
+                color: pathname.includes('/contact')
                   ? 'lightGreen'
-                  : pathname === '' && !navbar
-                  ? 'background'
-                  : 'black'
-              }
-              href="/contact"
+                  : ['', '/en'].includes(pathname) && !navbar
+                  ? 'white'
+                  : 'black',
+              }}
+              to="/contact"
             >
-              Kontakt oss
+              {t('header:contact')}
             </Link>
           </Flex>
         </Flex>
