@@ -121,7 +121,7 @@ const Navbar: React.FC<BoxProps> = () => {
           <Flex className="linksContainer">
             <Link
               className="link"
-              style={{
+              sx={{
                 color: pathname.includes('/services')
                   ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
@@ -134,7 +134,7 @@ const Navbar: React.FC<BoxProps> = () => {
             </Link>
             <Link
               className="link"
-              style={{
+              sx={{
                 color: pathname.includes('/about')
                   ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
@@ -147,7 +147,7 @@ const Navbar: React.FC<BoxProps> = () => {
             </Link>
             <Link
               className="link"
-              style={{
+              sx={{
                 color: pathname.includes('/contact')
                   ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
