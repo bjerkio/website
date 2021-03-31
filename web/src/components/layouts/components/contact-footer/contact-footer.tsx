@@ -8,13 +8,12 @@ import Button from '../../../button';
 const styles: ThemeUIStyleObject = {
   mb: 0,
   mx: 'auto',
-  px: [4, 4, 6],
   backgroundColor: '#393E46',
   '.container': {
     height: '100%',
     margin: '0 auto',
     mt: 5,
-    px: 0,
+    px: [4, 4, 6],
     py: [5, 5, 6],
     maxWidth: '1920px',
     '.header': {
