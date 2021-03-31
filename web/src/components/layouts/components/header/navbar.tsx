@@ -123,7 +123,7 @@ const Navbar: React.FC<BoxProps> = () => {
               className="link"
               style={{
                 color: pathname.includes('/services')
-                  ? 'lightGreen'
+                  ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
                   ? 'white'
                   : 'black',
@@ -136,7 +136,7 @@ const Navbar: React.FC<BoxProps> = () => {
               className="link"
               style={{
                 color: pathname.includes('/about')
-                  ? 'lightGreen'
+                  ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
                   ? 'white'
                   : 'black',
@@ -149,7 +149,7 @@ const Navbar: React.FC<BoxProps> = () => {
               className="link"
               style={{
                 color: pathname.includes('/contact')
-                  ? 'lightGreen'
+                  ? 'primary'
                   : ['', '/en'].includes(pathname) && !navbar
                   ? 'white'
                   : 'black',
