@@ -1,120 +1,141 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import Hero from '../components/Homepage/Hero'
-import Layout from '../layouts'
-import MediumArticle, {
-  MediumArticleNode,
-} from '../components/Homepage/MediumArticle'
-import CTABox from '../components/Homepage/CTABox'
-import Container from '../components/Container'
-import BlockContent from '../components/BlockContent'
+import { Box, Grid, Heading, Label } from '@theme-ui/components';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import React from 'react';
+import Button from '../components/button';
+import { Container } from '../components/container';
+import Hero from '../components/hero';
+import CallToActionBox, {
+  CallToActionBoxProps,
+} from '../components/home-page/call-to-action-box';
+import CallToActionImage, {
+  CallToActionImageProps,
+} from '../components/home-page/call-to-action-image';
+import { Layout } from '../components/layouts';
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-    sanityHomepage: {
-      ctaBoxes: {
-        linkTo: string
-        title: string
-        linkText: string
-        content: string
-      }[]
-      _rawHeroContent: any
-    }
-    allMediumPost: {
-      edges: [
-        {
-          node: MediumArticleNode
-        }
-      ]
-    }
-  }
-}
+const filterType = (obj, type) => {
+  return obj.edges
+    .filter((edge) => edge.node?.frontmatter)
+    .filter((edge) => edge.node.frontmatter.type === type)
+    .map((edge) => edge.node.frontmatter.homePage);
+};
 
-export default ({ data }: IndexPageProps) => (
-  <Layout>
-    <Hero>
-      {data.sanityHomepage && data.sanityHomepage._rawHeroContent && (
-        <BlockContent blocks={data.sanityHomepage._rawHeroContent} />
-      )}
-    </Hero>
-    <Container
-      pt={6}
-      sx={{
-        display: 'grid',
-        gridGap: 3, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
-      }}
-    >
-      {data.sanityHomepage && data.sanityHomepage.ctaBoxes &&
-        data.sanityHomepage.ctaBoxes.map(ctabox => (
-          <CTABox
-            title={ctabox.title}
-            linkTo={ctabox.linkTo}
-            linkText={ctabox.linkText}
-          >
-            {ctabox.content}
-          </CTABox>
-        ))}
-    </Container>
-    <Container
-      pt={6}
-      sx={{
-        display: 'grid',
-        gridGap: 5, // theme.space[3]
-        gridTemplateColumns: ['1fr', '1fr', '1fr 1fr'],
-      }}
-    >
-      {data.allMediumPost &&
-        data.allMediumPost.edges.map(({ node }) => (
-          <MediumArticle key={node.id} {...node} />
-        ))}
-    </Container>
-  </Layout>
-)
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    sanityHomepage(_id: { eq: "homepage" }) {
-      ctaBoxes {
-        linkTo
-        title
-        linkText
-        content
-      }
-      _rawHeroContent
-    }
-    allMediumPost(limit: 2) {
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
-          id
-          latestPublishedAt
-          uniqueSlug
-          title
-          content {
-            subtitle
-          }
-          virtuals {
-            previewImage {
-              imageId
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: { frontmatter: { language: { eq: $language } } }
+      sort: { fields: [frontmatter___homePage___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            type
+            homePage {
+              title
+              linkTo
+              linkText
+              image
+              hoverImage
+              description
+              imageStyle {
+                ml
+              }
             }
-          }
-          author {
-            name
           }
         }
       }
     }
   }
-`
+`;
+
+const Homepage = ({ data }) => {
+  const actionBox: CallToActionBoxProps[] = filterType(
+    data.mdxs,
+    'services-articles',
+  );
+  const projectsBox: CallToActionImageProps[] = filterType(
+    data.mdxs,
+    'projects',
+  );
+  const { t } = useTranslation();
+  return (
+    <Layout>
+      <Box>
+        <Hero>
+          <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>
+            <Label sx={{ fontWeight: '600', color: 'white' }}>
+              {t('home-page:video-title')}
+            </Label>
+            <Button
+              href="/contact"
+              sx={{ paddingTop: '20px', paddingBottom: '15px' }}
+            >
+              {t('home-page:video-button-text')}
+            </Button>
+          </Box>
+        </Hero>
+        <Container sx={{ pt: 7 }}>
+          <Heading
+            sx={{
+              mb: 3,
+              fontWeight: '600',
+              fontSize: 'clamp(16px, 8vw, 48px)',
+            }}
+          >
+            {t('home-page:title')}
+          </Heading>
+          <Box
+            sx={{
+              width: ['100%', '100%', '65%'],
+              fontWeight: 'normal',
+              fontSize: 'clamp(8px, 4vw, 22px)',
+            }}
+          >
+            {t('home-page:description')}
+          </Box>
+          <Grid
+            pt={5}
+            sx={{
+              gap: 5,
+              gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr 1fr 1fr'],
+            }}
+          >
+            {actionBox.map((ctabox, index) => (
+              <CallToActionBox data={ctabox} key={index}>
+                {ctabox.description}
+              </CallToActionBox>
+            ))}
+          </Grid>
+        </Container>
+        <Container sx={{ px: [0, 0, 6] }}>
+          <Box>
+            <Label
+              sx={{
+                fontWeight: '600',
+                fontSize: '50px',
+                pl: [4, 4, 0],
+                mr: [-4, -4, 0],
+              }}
+            >
+              {t('home-page:middle-title')}
+            </Label>
+          </Box>
+          {projectsBox.map((item, index) => (
+            <CallToActionImage key={index} data={item} />
+          ))}
+        </Container>
+      </Box>
+    </Layout>
+  );
+};
+
+export default Homepage;

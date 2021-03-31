@@ -1,0 +1,140 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended"
+  ],
+  "ignorePatterns": [
+    "web/generated",
+    "web/.cache",
+    "web/public",
+    "studio/dist",
+    "web/node_modules",
+    "web/src/generated"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-implicit-any-catch": [
+          "error",
+          {
+            "allowExplicitAny": true
+          }
+        ],
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": ["web/src/generated/graphql-types.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/array-type": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "import/no-duplicates": "off",
+        "import/order": "off",
+        "sort-imports": "off"
+      }
+    },
+    {
+      "files": [
+        "web/src/pages/**/*.tsx",
+        "web/src/gatsby-plugin-theme-ui/index.ts",
+        "studio/**/*.js",
+        "theme.ts"
+      ],
+      "rules": {
+        "import/no-default-export": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": ["web/*.js", "studio/**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off"
+      }
+    }
+  ],
+  "plugins": ["eslint-comments", "graphql", "import", "unicorn"],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "warn",
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "caughtErrors": "all"
+      }
+    ],
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-ts-expect-error": "error",
+    "eqeqeq": ["error", "smart"],
+    "eslint-comments/no-unused-disable": "error",
+    "import/no-default-export": "warn",
+    "import/no-duplicates": "error",
+    "import/no-extraneous-dependencies": "warn",
+    "import/no-unassigned-import": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "never"
+      }
+    ],
+    "jest/expect-expect": "off",
+    "no-console": "error",
+    "no-restricted-globals": [
+      "error",
+      "event",
+      "isNaN",
+      "location",
+      "name",
+      "parseInt"
+    ],
+    "no-return-await": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "prefer-template": "error",
+    "promise/always-return": "off",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": false,
+        "avoidEscape": true
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "unicorn/catch-error-name": "error",
+    "unicorn/expiring-todo-comments": "warn",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "react/prop-types": "off"
+  }
+}

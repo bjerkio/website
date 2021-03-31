@@ -1,48 +1,37 @@
-const { isFuture } = require('date-fns')
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
 
-async function createPages(graphql, actions, reporter) {
-  const { createPage } = actions
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions;
+
   const result = await graphql(`
-    {
-      allSanityPage(filter: { slug: { current: { ne: null } } }) {
+    query {
+      allMdx {
         edges {
           node {
             id
-            slug {
-              current
+            frontmatter {
+              slug
             }
-            title
-            _rawContent
           }
         }
       }
     }
-  `)
+  `);
 
-  if (result.errors) throw result.errors
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
+  }
+  const projects = result.data.allMdx.edges;
 
-  const edges = (result.data.allSanityPage || {}).edges || []
-
-  edges
-    .forEach(edge => {
-      const slug = edge.node.slug.current
-      const path = `/${slug}/`
-
-      reporter.info(`Creating page: ${path}`)
-
+  projects
+    .filter(({ node }) => node.frontmatter.slug)
+    .forEach(({ node }) => {
       createPage({
-        path,
-        component: require.resolve('./src/components/Page.tsx'),
-        context: edge.node,
-      })
-    })
-}
-
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  await createPages(graphql, actions, reporter)
-}
+        path: node.frontmatter.slug,
+        component: path.resolve('./src/templates/project.tsx'),
+        context: {
+          slug: node.frontmatter.slug,
+        },
+      });
+    });
+};

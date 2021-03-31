@@ -1,21 +1,23 @@
-const clientConfig = require('./client-config')
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
-})
-
-const isProd = process.env.NODE_ENV === 'production'
-const token =
-  process.env.SANITY_READ_TOKEN || process.env.SANITY_DEPLOY_STUDIO_TOKEN
+});
 
 module.exports = {
   siteMetadata: {
-    title: `Bjerk.io`,
+    title: 'Bjerk.io',
+    siteUrl: 'https://bjerk.io',
   },
   plugins: [
     {
-      resolve: `gatsby-source-medium`,
+      resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        username: `bjerk`,
+        fileName: './src/generated/graphql-types.ts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-medium',
+      options: {
+        username: 'bjerk',
       },
     },
     {
@@ -24,10 +26,32 @@ module.exports = {
         preset: '@theme-ui/preset-base',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'locale',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        localeJsonSourceName: 'locale',
+        languages: ['en', 'no'],
+        defaultLanguage: 'no',
+        siteUrl: 'https://bjerk.io',
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          returnObjects: true,
+        },
+      },
+    },
     // 'gatsby-theme-style-guide',
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -46,13 +70,19 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        ...clientConfig.sanity,
-        token,
-        watchMode: !isProd,
-        overlayDrafts: !isProd && token,
+        path: `${__dirname}/src/content`,
+        name: 'projects',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data`,
+        name: 'page-data',
+      },
+    },
+    'gatsby-plugin-mdx',
   ],
-}
+};

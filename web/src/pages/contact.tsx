@@ -1,55 +1,114 @@
-import React from 'react'
-import Layout from '../layouts'
-import Container from '../components/Container'
-import { Heading, Box, Button } from 'rebass/styled-components'
-import { Label, Input, Textarea, Switch } from '@rebass/forms/styled-components'
+import { Box, Heading, Image, Label, Link } from '@theme-ui/components';
+import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import React from 'react';
+import { SystemStyleObject } from 'theme-ui';
+import { EmployeeList } from '../components/contact/exployee-list';
+import { Container } from '../components/container';
+import { Layout } from '../components/layouts';
 
-const contact = () => {
+const styles: SystemStyleObject = {
+  mt: 6,
+  mb: 6,
+  overflow: 'hidden',
+  '.mobileImage': {
+    width: '50%',
+    display: ['block', 'block', 'none'],
+    marginLeft: '50%',
+  },
+};
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "employee" }, language: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            position
+            email
+            phoneNumber
+            photo
+          }
+        }
+      }
+    }
+  }
+`;
+
+const ContactPage = ({ data }) => {
+  const employeeList = data.mdxs.edges.map((edge) => edge.node.frontmatter);
+  const { t } = useTranslation();
+
   return (
     <Layout>
-      <Container pt={5} width={2 / 4}>
-        <Heading>Kontaktskjema</Heading>
-        {/* @ts-ignore */}
-        <form name="contact" method="post" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <Box mt={3}>
-            <Label mb={1}>Ditt navn</Label>
-            <Input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Ola Nordmann"
-            />
+      <Container sx={{ pr: [0, 0, 6] }}>
+        <Box sx={styles}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', mb: [0, 0, 6] }}>
+            <Box sx={{ flex: 3 }}>
+              <Heading
+                as="h1"
+                sx={{
+                  fontWeight: '600',
+                  width: ['100%', '100%', '60%'],
+                  mb: 5,
+                  mt: [0, 0, 5],
+                  pr: [4, 4, 0],
+                  fontSize: 'clamp(36px, 3.5vw, 50px)',
+                }}
+              >
+                {t('contact-page:title')}
+              </Heading>
+              <Box
+                sx={{
+                  fontSize: 'clamp(20px, 2.3vw, 35px)',
+                  mb: [-6, -6, 0],
+                }}
+              >
+                <Link sx={{ color: 'black' }}>{t('company-info:email')}</Link>
+                <Label>{t('company-info:phone-number')}</Label>
+                <Label mt={1}>{t('company-info:address')},</Label>
+                <Label>{t('company-info:postalcode')}</Label>
+              </Box>
+            </Box>
+            <Box sx={{ flex: [0, 0, 1] }}>
+              <Image
+                src={`../${t('contact-page:image')}`}
+                sx={{
+                  width: [0, 0, '100%'],
+                  display: ['none', 'none', 'block'],
+                }}
+              />
+            </Box>
           </Box>
-          <Box mt={3}>
-            <Label mb={1}>Din e-postadresse</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="ola@nordmann.no"
-            />
-          </Box>
-          <Box mt={3}>
-            <Label mb={1}>Melding</Label>
-            <Textarea
-              id="message"
-              name="message"
-              height="400px"
-              placeholder="Jeg lurer på …"
-            />
-          </Box>
-          {/* <Box mt={3}>
-            <Label>Ta kontakt med meg per telefon:</Label>
-            <Switch style={{ backgroundColor: 'secondary'}} checked={true} />
-          </Box> */}
-          <Button variant="primary" mt={4}>
-            Send melding
-          </Button>
-        </form>
+          <Image
+            src={`../${t('contact-page:image')}`}
+            sx={{
+              width: '50%',
+              display: ['block', 'block', 'none'],
+              marginLeft: '60%',
+              mb: 5,
+            }}
+          />
+          <EmployeeList data={employeeList} />
+        </Box>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default contact
+export default ContactPage;
