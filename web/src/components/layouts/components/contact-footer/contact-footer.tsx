@@ -14,7 +14,7 @@ const styles: ThemeUIStyleObject = {
     height: '100%',
     margin: '0 auto',
     mt: 5,
-    px: [5, 5, 6],
+    px: 0,
     py: [5, 5, 6],
     maxWidth: '1920px',
     '.header': {
