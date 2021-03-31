@@ -4,7 +4,6 @@ import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
-import Language from './language';
 
 const styles: SystemStyleObject = {
   display: ['none', 'none', 'block'],
@@ -112,12 +111,6 @@ const Navbar: React.FC<BoxProps> = () => {
               />
             )}
           </Link>
-          <Language
-            style={{
-              color:
-                ['', '/en'].includes(pathname) && !navbar ? 'white' : 'black',
-            }}
-          />
           <Flex className="linksContainer">
             <Link
               className="link"
