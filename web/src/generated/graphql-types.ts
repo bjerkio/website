@@ -385,14 +385,11 @@ export type File = Node & {
   blocks?: Maybe<Scalars['Int']>;
   /** Copy file to static directory and return public url to it */
   publicURL?: Maybe<Scalars['String']>;
-  /** Returns all children nodes filtered by type Mdx */
-  childrenMdx?: Maybe<Array<Maybe<Mdx>>>;
-  /** Returns the first child node of type Mdx or null if there are no children of given type on this node */
-  childMdx?: Maybe<Mdx>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
+  childMdx?: Maybe<Mdx>;
 };
 
 
@@ -757,7 +754,86 @@ export type FileFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type';
+  | 'internal___type'
+  | 'childMdx___rawBody'
+  | 'childMdx___fileAbsolutePath'
+  | 'childMdx___frontmatter___title'
+  | 'childMdx___frontmatter___id'
+  | 'childMdx___frontmatter___type'
+  | 'childMdx___frontmatter___slug'
+  | 'childMdx___frontmatter___image'
+  | 'childMdx___frontmatter___homePage___image'
+  | 'childMdx___frontmatter___homePage___linkTo'
+  | 'childMdx___frontmatter___homePage___linkText'
+  | 'childMdx___frontmatter___homePage___id'
+  | 'childMdx___frontmatter___homePage___title'
+  | 'childMdx___frontmatter___homePage___hoverImage'
+  | 'childMdx___frontmatter___homePage___description'
+  | 'childMdx___frontmatter___name'
+  | 'childMdx___frontmatter___descriptionArray'
+  | 'childMdx___frontmatter___servicesPage___id'
+  | 'childMdx___frontmatter___servicesPage___name'
+  | 'childMdx___frontmatter___servicesPage___title'
+  | 'childMdx___frontmatter___servicesPage___photo'
+  | 'childMdx___frontmatter___servicesPage___icon'
+  | 'childMdx___frontmatter___servicesPage___initials'
+  | 'childMdx___frontmatter___servicesPage___position'
+  | 'childMdx___frontmatter___servicesPage___description'
+  | 'childMdx___frontmatter___position'
+  | 'childMdx___frontmatter___email'
+  | 'childMdx___frontmatter___phoneNumber'
+  | 'childMdx___frontmatter___photo'
+  | 'childMdx___slug'
+  | 'childMdx___body'
+  | 'childMdx___excerpt'
+  | 'childMdx___headings'
+  | 'childMdx___headings___value'
+  | 'childMdx___headings___depth'
+  | 'childMdx___html'
+  | 'childMdx___mdxAST'
+  | 'childMdx___tableOfContents'
+  | 'childMdx___timeToRead'
+  | 'childMdx___wordCount___paragraphs'
+  | 'childMdx___wordCount___sentences'
+  | 'childMdx___wordCount___words'
+  | 'childMdx___id'
+  | 'childMdx___parent___id'
+  | 'childMdx___parent___parent___id'
+  | 'childMdx___parent___parent___children'
+  | 'childMdx___parent___children'
+  | 'childMdx___parent___children___id'
+  | 'childMdx___parent___children___children'
+  | 'childMdx___parent___internal___content'
+  | 'childMdx___parent___internal___contentDigest'
+  | 'childMdx___parent___internal___description'
+  | 'childMdx___parent___internal___fieldOwners'
+  | 'childMdx___parent___internal___ignoreType'
+  | 'childMdx___parent___internal___mediaType'
+  | 'childMdx___parent___internal___owner'
+  | 'childMdx___parent___internal___type'
+  | 'childMdx___children'
+  | 'childMdx___children___id'
+  | 'childMdx___children___parent___id'
+  | 'childMdx___children___parent___children'
+  | 'childMdx___children___children'
+  | 'childMdx___children___children___id'
+  | 'childMdx___children___children___children'
+  | 'childMdx___children___internal___content'
+  | 'childMdx___children___internal___contentDigest'
+  | 'childMdx___children___internal___description'
+  | 'childMdx___children___internal___fieldOwners'
+  | 'childMdx___children___internal___ignoreType'
+  | 'childMdx___children___internal___mediaType'
+  | 'childMdx___children___internal___owner'
+  | 'childMdx___children___internal___type'
+  | 'childMdx___internal___content'
+  | 'childMdx___internal___contentDigest'
+  | 'childMdx___internal___description'
+  | 'childMdx___internal___fieldOwners'
+  | 'childMdx___internal___ignoreType'
+  | 'childMdx___internal___mediaType'
+  | 'childMdx___internal___owner'
+  | 'childMdx___internal___type';
 
 export type FileFilterInput = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -794,12 +870,11 @@ export type FileFilterInput = {
   blksize?: Maybe<IntQueryOperatorInput>;
   blocks?: Maybe<IntQueryOperatorInput>;
   publicURL?: Maybe<StringQueryOperatorInput>;
-  childrenMdx?: Maybe<MdxFilterListInput>;
-  childMdx?: Maybe<MdxFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  childMdx?: Maybe<MdxFilterInput>;
 };
 
 export type FileGroupConnection = {
@@ -1089,10 +1164,6 @@ export type MdxFilterInput = {
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-};
-
-export type MdxFilterListInput = {
-  elemMatch?: Maybe<MdxFilterInput>;
 };
 
 export type MdxFrontmatter = {
@@ -3761,12 +3832,11 @@ export type QueryFileArgs = {
   blksize?: Maybe<IntQueryOperatorInput>;
   blocks?: Maybe<IntQueryOperatorInput>;
   publicURL?: Maybe<StringQueryOperatorInput>;
-  childrenMdx?: Maybe<MdxFilterListInput>;
-  childMdx?: Maybe<MdxFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+  childMdx?: Maybe<MdxFilterInput>;
 };
 
 

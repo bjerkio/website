@@ -1,6 +1,6 @@
-import { Container } from '@theme-ui/components';
+import { Container, Flex } from '@theme-ui/components';
 import React from 'react';
-import { Box, Grid, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
+import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Button from '../../../button';
 
 const styles: ThemeUIStyleObject = {
@@ -9,10 +9,12 @@ const styles: ThemeUIStyleObject = {
   px: [4, 4, 6],
   backgroundColor: '#393E46',
   '.container': {
-    mt: 5,
-    py: '12%',
-    px: 0,
     height: '100%',
+    margin: '0 auto',
+    mt: 5,
+    px: [5, 5, 6],
+    py: [5, 5, 6],
+    maxWidth: '1920px',
     '.header': {
       color: 'white',
       fontSize: 60,
@@ -44,7 +46,7 @@ const ContactFooter: React.FC = () => {
   return (
     <Box sx={styles}>
       <Container className="container">
-        <Grid gap={0} columns={[1, 1, '4fr 5fr']}>
+        <Flex>
           <Box>
             <Heading className="header">Si hei!</Heading>
             <Label className="label">
@@ -59,8 +61,8 @@ const ContactFooter: React.FC = () => {
               Start ditt prosjekt
             </Button>
           </Box>
-          <Box className="video">{/* TODO: Contact footer video */}</Box>
-        </Grid>
+          {/* <Box className="video"></Box> */}
+        </Flex>
       </Container>
     </Box>
   );
