@@ -7,7 +7,7 @@ export const Container: React.FC<BoxProps> = (props) => (
     sx={{
       maxWidth: '1920px',
       mx: 'auto',
-      px: [5, 5, 6],
+      px: [4, 4, 6],
       pt: [4, 5, 6],
       ...props.sx,
     }}
