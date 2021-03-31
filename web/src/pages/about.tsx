@@ -80,7 +80,7 @@ const AboutPage = ({
         <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [4, 4, 5], pt: [4, 4, 6] }}>
           <Box>
             <img
-              src={`../${t('about-page:simon-niklas-image')}`}
+              src={`../${t('about-page:simen-niklas-image')}`}
               style={{ width: '100%' }}
             />
           </Box>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Image } from 'theme-ui';
-import Tree from '../../../../../static/Tree.svg';
+import Tree from '../../../../../static/tree.svg';
 
 const BottomTree: React.FC = () => {
   return (
