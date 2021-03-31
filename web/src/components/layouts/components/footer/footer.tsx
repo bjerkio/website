@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Grid, Link, Text } from 'theme-ui';
 import { Container } from '../../../container';
 import { Logo } from '../logo';
-import { NetworskLinks } from './networks-links';
+import { NetworksLinks } from './networks-links';
 
 export const Footer: React.FC = (props) => (
   <Box sx={{ bg: 'dark' }}>
@@ -41,7 +41,7 @@ export const Footer: React.FC = (props) => (
             0257 OSLO
           </Text>
         </Box>
-        <NetworskLinks
+        <NetworksLinks
           sx={{ display: ['block', 'block', 'none'], mt: 3, mb: 5 }}
         />
         <Box sx={{ fontSize: 3, textAlign: ['start', 'start', 'end'] }}>
@@ -72,7 +72,7 @@ export const Footer: React.FC = (props) => (
         <Box>
           <Text sx={{ fontSize: 2 }}>© 2019 Bjerk. Alle rettigheter.</Text>
         </Box>
-        <NetworskLinks sx={{ display: ['none', 'none', 'block'] }} />
+        <NetworksLinks sx={{ display: ['none', 'none', 'block'] }} />
       </Grid>
     </Container>
   </Box>

@@ -31,13 +31,17 @@ const AboutPage: React.FC = () => {
 
   return (
     <Layout>
-      <Container>
+      <Container sx={{ pr: [0, 0, 6], pl: [0, 0, 6] }}>
         <Heading
           as="h1"
           sx={{
-            fontWeight: 'normal',
+            fontWeight: '600',
             width: ['100%', '60%'],
-            my: 5,
+            fontSize: 'clamp(36px, 3.5vw, 50px)',
+            mt: 6,
+            mb: [0, 0, 6],
+            pr: [4, 4, 0],
+            pl: [4, 4, 0],
           }}
         >
           Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
@@ -51,12 +55,12 @@ const AboutPage: React.FC = () => {
         <Box pt={6} sx={{ width: '100%', height: 'auto' }}>
           <img src="../AboutSplit.png" style={{ width: '100%' }} />
         </Box>
-        <Grid gap={5} columns={[1, 1, 2]} px={5} pt={6}>
+        <Grid gap={5} columns={[1, 1, 2]} sx={{ px: [4, 4, 5], pt: [4, 4, 6] }}>
           <Box>
             <img src="../SimenBjorn.png" style={{ width: '100%' }} />
           </Box>
           <Box>
-            <Label sx={{ fontSize: '1.4rem' }}>
+            <Label sx={{ fontSize: 'clamp(16px, 2vw, 25px)' }}>
               Bjerk sine røtter går tilbake til 2009, da Simen begynte å jobbe
               for seg selv. På sin reise traff han Bjørn Niklas og sammen har de
               startet Bjerk. Et lite privat konsulenthus med lidenskap for

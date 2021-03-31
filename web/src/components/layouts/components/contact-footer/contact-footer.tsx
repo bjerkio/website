@@ -4,6 +4,9 @@ import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
 import Button from '../../../button';
 
 const styles: ThemeUIStyleObject = {
+  mb: 0,
+  mx: 'auto',
+  px: [4, 4, 6],
   backgroundColor: '#393E46',
   '.container': {
     height: '100%',
@@ -30,9 +33,11 @@ const styles: ThemeUIStyleObject = {
       border: 'none',
       px: 4,
       py: 3,
+      borderRadius: '10px',
     },
     '.button': {
       mt: 4,
+      py: '15px',
     },
   },
 };

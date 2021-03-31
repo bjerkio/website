@@ -60,7 +60,12 @@ const Homepage: React.FC = () => {
             <Label sx={{ fontWeight: '600', color: 'white' }}>
               Vi er produktutviklere, skapere, strateger og samfunnsaktivister.
             </Label>
-            <Button href="/contact">Start ditt prosjekt</Button>
+            <Button
+              href="/contact"
+              sx={{ paddingTop: '20px', paddingBottom: '15px' }}
+            >
+              Start ditt prosjekt
+            </Button>
           </Box>
         </Hero>
         <Container sx={{ pt: 7 }}>
@@ -75,7 +80,7 @@ const Homepage: React.FC = () => {
           </Heading>
           <Box
             sx={{
-              width: '65%',
+              width: ['100%', '100%', '65%'],
               fontWeight: 'normal',
               fontSize: 'clamp(8px, 4vw, 22px)',
             }}
@@ -98,9 +103,16 @@ const Homepage: React.FC = () => {
             ))}
           </Grid>
         </Container>
-        <Container>
-          <Box sx={{ fontSize: 'clamp(16px, 8vw, 38px)' }}>
-            <Label sx={{ fontWeight: 'normal' }}>
+        <Container sx={{ px: [0, 0, 6] }}>
+          <Box>
+            <Label
+              sx={{
+                fontWeight: '600',
+                fontSize: '50px',
+                pl: [4, 4, 0],
+                mr: [-4, -4, 0],
+              }}
+            >
               Sjekk ut noe av det vi har gjort
             </Label>
           </Box>

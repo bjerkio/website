@@ -15,7 +15,7 @@ const styles: SystemStyleObject = {
     maxWidth: '1920px',
     margin: '0 auto',
     py: '25px',
-    px: [5, 5, 6],
+    px: [4, 4, 6],
   },
   '.navbar.active': {
     bg: 'background',
@@ -25,7 +25,8 @@ const styles: SystemStyleObject = {
   },
   '.linksContainer': {
     flexGrow: 1,
-    fontSize: 3,
+    fontSize: 23,
+    fontWeight: 600,
     color: 'iron',
     justifyContent: 'flex-end',
     '>a': {
@@ -125,7 +126,7 @@ const Navbar: React.FC<BoxProps> = () => {
               }
               href="/contact"
             >
-              Kontakt oss
+              Kontakt
             </Link>
           </Flex>
         </Flex>
