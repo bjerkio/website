@@ -1,4 +1,4 @@
-/** @jsx */
+/** @jsxImportSource theme-ui */
 import { Box, BoxProps, Flex } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
