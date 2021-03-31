@@ -12,7 +12,7 @@ const BottomTree: React.FC = () => {
       }}
     >
       <Image
-        src='../tree.svg'
+        src="../tree.svg"
         sx={{ width: ['115px', '115px', '228px'], mr: '30px' }}
       />
     </Box>
