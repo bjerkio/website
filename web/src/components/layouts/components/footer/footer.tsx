@@ -75,7 +75,9 @@ const Footer: React.FC = ({ ...props }) => {
               <br />
               {t('footer:right-greeting')[1]}
             </Text>
-            <Text sx={{ fontSize: 20, color: 'primary', mt: 3, display: 'none' }}>
+            <Text
+              sx={{ fontSize: 20, color: 'primary', mt: 3, display: 'none' }}
+            >
               Se ledige stillinger
               <br />
               Personvern
