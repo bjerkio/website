@@ -16,7 +16,7 @@ export const Layout: React.FC = ({ children }) => {
       <MobileHeader />
       <Box sx={{ marginTop: [0, 0, '-160px'] }}>{children}</Box>
       <BottomTree />
-      <ContactFooter />
+      {/* <ContactFooter /> */}
       <Footer />
     </>
   );
