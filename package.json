@@ -51,6 +51,7 @@
     "build": "gatsby build",
     "lint": "eslint . --cache",
     "generate": "graphql-codegen --config codegen.yml",
+    "test": "jest --passWithNoTests",
     "format": "prettier --write ./src"
   },
   "lint-staged": {
