@@ -9,12 +9,11 @@
     "plugin:react/recommended"
   ],
   "ignorePatterns": [
-    "web/generated",
-    "web/.cache",
-    "web/public",
-    "studio/dist",
-    "web/node_modules",
-    "web/src/generated"
+    "generated",
+    ".cache",
+    "public",
+    "node_modules",
+    "src/generated"
   ],
   "overrides": [
     {
@@ -30,7 +29,7 @@
       }
     },
     {
-      "files": ["web/src/generated/graphql-types.ts"],
+      "files": ["src/generated/graphql-types.ts"],
       "rules": {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/array-type": "off",
@@ -43,9 +42,8 @@
     },
     {
       "files": [
-        "web/src/pages/**/*.tsx",
-        "web/src/gatsby-plugin-theme-ui/index.ts",
-        "studio/**/*.js",
+        "src/pages/**/*.tsx",
+        "src/gatsby-plugin-theme-ui/index.ts",
         "theme.ts"
       ],
       "rules": {
@@ -54,7 +52,7 @@
       }
     },
     {
-      "files": ["web/*.js", "studio/**/*.js"],
+      "files": ["*.js"],
       "rules": {
         "@typescript-eslint/no-var-requires": "off",
         "no-undef": "off"
