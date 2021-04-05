@@ -44,7 +44,7 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: firebase
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          repoToken: '${{ secrets.BJERKBOT_GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
         env:
