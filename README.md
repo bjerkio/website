@@ -1,10 +1,8 @@
 # Bjerk.io
 
-Visit the [development site](https://bjerk-website-dev.netlify.app/) for updates that are not published to bjerk.io yet.
-
 |Environment|Build Status|URL|
 |----------|----------|----|
-|Official site|[![Netlify Status](https://api.netlify.com/api/v1/badges/05ef7817-e0d4-4ee7-bb01-d858fbe519ae/deploy-status)](https://app.netlify.com/sites/bjerk-website/deploys)|[bjerk.io](https://bjerk.io)|
+|Official site|[![Deploy to bjerk.io](https://github.com/bjerkio/website/actions/workflows/push.yml/badge.svg)](https://github.com/bjerkio/website/actions/workflows/push.yml)|[bjerk.io](https://bjerk.io)|
 
 ## Contribute
 
