@@ -41,10 +41,21 @@ jobs:
       - run: yarn test
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: firebase
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+
+      - name: Audit live URL
+        uses: jakejarvis/lighthouse-action@master
+        with:
+          url: ${{ steps.firebase.outputs.details_url }}
+      - name: Upload results as an artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: report
+          path: './report'
 
