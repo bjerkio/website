@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   build_and_deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -58,3 +59,5 @@ jobs:
           urls: ${{ steps.firebase.outputs.details_url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.BJERKBOT_GITHUB_TOKEN }}
