@@ -1,12 +1,12 @@
-name: Pull Request
+name: Deploy to bjerk.io
 on:
-  pull_request:
-    
+  push:
+    branches:
+      - main
 jobs:
-  pull_request:
-    runs-on: ubuntu-20.04
-    name: Build, Test and Lint
-
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -32,20 +32,23 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
 
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn build
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build website
+        run: yarn build
         env:
-            GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
-            CI: true
-      - run: yarn test
+          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+          CI: true
 
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: firebase
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          firebaseServiceAccount:
+            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          channelId: live
           projectId: bjerk-io
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
@@ -56,3 +59,5 @@ jobs:
           urls: ${{ steps.firebase.outputs.details_url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.BJERKBOT_GITHUB_TOKEN }}
