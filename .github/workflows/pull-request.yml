@@ -22,9 +22,22 @@ jobs:
           restore-keys: |
             yarn-cache-
 
+      - name: Caching Gatsby
+        uses: actions/cache@v2
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+
       - run: yarn install
       - run: yarn lint
       - run: yarn build
+        env:
+            GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+            CI: true
       - run: yarn test
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
