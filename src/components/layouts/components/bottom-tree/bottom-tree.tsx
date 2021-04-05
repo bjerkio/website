@@ -8,7 +8,7 @@ const BottomTree: React.FC = () => {
         width: '100%',
         height: 'auto',
         textAlign: 'right',
-        mb: ['-118px', '-118px', '-168px'],
+        // mb: ['-118px', '-118px', '-168px'],
       }}
     >
       <Image
