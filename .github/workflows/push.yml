@@ -59,5 +59,3 @@ jobs:
           urls: ${{ steps.firebase.outputs.details_url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
-        env:
-          LHCI_GITHUB_TOKEN: ${{ secrets.BJERKBOT_GITHUB_TOKEN }}
