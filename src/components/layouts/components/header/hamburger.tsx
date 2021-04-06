@@ -1,5 +1,5 @@
 import { Box, Button } from '@theme-ui/components';
-import React, { useState } from 'react';
+import React from 'react';
 
 export interface HamburgerProps {
   isOpen: boolean;
@@ -50,5 +50,5 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onClick }) => (
     </Box>
   </Button>
 );
-  
+
 export default Hamburger;

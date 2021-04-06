@@ -1,4 +1,3 @@
-import { Container } from '@theme-ui/components';
 import React from 'react';
 import { GlobalStyles } from '../../theme/global-styles';
 import BottomTree from './components/bottom-tree/bottom-tree';
