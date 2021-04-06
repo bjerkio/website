@@ -83,7 +83,7 @@ const Homepage = ({ data }) => {
             </Button>
           </Box>
         </Hero>
-        <Container sx={{ pt: 7 }}>
+        <Container sx={{ pt: [5, 5, 7] }}>
           <Heading
             sx={{
               mb: 3,

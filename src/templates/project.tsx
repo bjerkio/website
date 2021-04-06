@@ -90,7 +90,7 @@ export default function ProjectTemplate({ data: { allMdx } }) {
             sx={{
               mb: 3,
               fontWeight: '600',
-              mt: 6,
+              mt: [2, 2, 6],
               fontSize: 'clamp(36px, 3.5vw, 50px)',
             }}
           >

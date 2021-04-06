@@ -51,20 +51,6 @@ const AboutPage = ({
   return (
     <Layout>
       <Container sx={{ pr: [0, 0, 6], pl: [0, 0, 6] }}>
-        <Heading
-          as="h1"
-          sx={{
-            fontWeight: '600',
-            width: ['100%', '60%'],
-            fontSize: 'clamp(36px, 3.5vw, 50px)',
-            mt: 6,
-            mb: [0, 0, 6],
-            pr: [4, 4, 0],
-            pl: [4, 4, 0],
-          }}
-        >
-          {t('about-page:title')}
-        </Heading>
         <AboutList
           data={boxesData.map((item, index) => ({
             ...item,

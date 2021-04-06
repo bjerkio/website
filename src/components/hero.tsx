@@ -9,29 +9,22 @@ interface IntroVideoProps {
 }
 
 const Hero: React.FC<IntroVideoProps> = ({ children, bgImageUrl }) => (
-  <Container
+  <Flex
     sx={{
       bg: 'iron',
       backgroundImage: bgImageUrl ? `url('${bgImageUrl}');` : undefined,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: '50% 50%',
+      height: ['auto', '80vh'],
+      py: 5,
+      alignItems: 'center',
     }}
   >
-    <Flex
-      sx={{
-        height: '80vh',
-        alignItems: 'center',
-        maxWidth: '1920px',
-        margin: '0 auto',
-        px: [5, 5, 6],
-      }}
-    >
-      <Container>
-        <Box sx={{ my: '32%', width: '60%', zIndex: 2 }}>{children}</Box>
-      </Container>
-    </Flex>
-  </Container>
+    <Container sx={{ maxWidth: '1520px', margin: '0 auto', px: [3, 3, 3] }}>
+      <Box sx={{ width: ['auto', 'auto', '60%'] }}>{children}</Box>
+    </Container>
+  </Flex>
 );
 
 export default Hero;
