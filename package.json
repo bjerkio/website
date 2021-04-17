@@ -42,8 +42,6 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "clean-cache": "gatsby clean",
-    "predev": "yarn run clean-cache",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "lint": "eslint . --cache",
