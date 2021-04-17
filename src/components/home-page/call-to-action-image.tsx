@@ -47,7 +47,7 @@ const CallToActionImage: React.FC<{ data: CallToActionImageProps }> = ({
     <Box sx={styles}>
       <Link className="link" to={linkTo} sx={{ overflow: 'hidden' }}>
         <Box className="img-container" sx={{}}>
-          <img src={`../${image}`} className="img" />
+          <img src={`../projects/${image}`} className="img" />
         </Box>
         <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', mx: [4, 4, 0] }}>
           <span className="linkText">{linkText}</span>

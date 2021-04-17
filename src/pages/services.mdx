@@ -41,3 +41,17 @@ bedriften din når potensialet sitt. Snakk med Niklas om hvordan du og din
 bedrift kommer seg over den digitale dørstokken.
 
 </FeatureBox>
+
+export const pageQuery = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

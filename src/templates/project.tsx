@@ -6,17 +6,17 @@ import React from 'react';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
-const TwoCenteredImages = ({ firstSrc, secondSrc }) => (
+const TwoCenteredImages = ({ key, firstSrc, secondSrc }) => (
   <div style={{ textAlign: 'center' }}>
     <Image
-      src={`../${firstSrc}`}
+      src={`../projects/${key}/${firstSrc}`}
       sx={{
         width: '45%',
         marginRight: '0.5%',
       }}
     />
     <Image
-      src={`../${secondSrc}`}
+      src={`../projects/${key}/${secondSrc}`}
       sx={{
         width: '45%',
         marginLeft: '0.5%',
