@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Image } from 'theme-ui';
+import Tree from '../../../../illustrations/tree';
 
 const BottomTree: React.FC = () => {
   return (
@@ -11,10 +12,7 @@ const BottomTree: React.FC = () => {
         // mb: ['-118px', '-118px', '-168px'],
       }}
     >
-      <Image
-        src="../tree.svg"
-        sx={{ width: ['115px', '115px', '228px'], mr: '30px' }}
-      />
+      <Tree sx={{ width: ['115px', '115px', '228px'], mr: '30px' }} />
     </Box>
   );
 };
