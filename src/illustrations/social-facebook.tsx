@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, BoxProps } from 'theme-ui';
 
 export interface SocialFacebookProps extends BoxProps {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
 }
 
 const SocialFacebook: React.FC<SocialFacebookProps> = ({

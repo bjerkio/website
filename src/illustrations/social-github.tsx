@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, BoxProps } from 'theme-ui';
 
 export interface SocialGithubProps extends BoxProps {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
 }
 
 const SocialGithub: React.FC<SocialGithubProps> = ({

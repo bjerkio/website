@@ -6,6 +6,7 @@ import { SystemStyleObject } from 'theme-ui';
 import { EmployeeList } from '../components/contact/exployee-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
+import { Map } from '../illustrations';
 
 const styles: SystemStyleObject = {
   mt: 6,
@@ -17,38 +18,6 @@ const styles: SystemStyleObject = {
     marginLeft: '50%',
   },
 };
-
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    mdxs: allMdx(
-      filter: {
-        frontmatter: { type: { eq: "employee" }, language: { eq: $language } }
-      }
-      sort: { fields: [frontmatter___id], order: ASC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            name
-            position
-            email
-            phoneNumber
-            photo
-          }
-        }
-      }
-    }
-  }
-`;
 
 const ContactPage = ({ data }) => {
   const employeeList = data.mdxs.edges.map((edge) => edge.node.frontmatter);
@@ -86,8 +55,7 @@ const ContactPage = ({ data }) => {
               </Box>
             </Box>
             <Box sx={{ flex: [0, 0, 1] }}>
-              <Image
-                src={`../${t('contact-page:image')}`}
+              <Map
                 sx={{
                   width: [0, 0, '100%'],
                   display: ['none', 'none', 'block'],
@@ -112,3 +80,35 @@ const ContactPage = ({ data }) => {
 };
 
 export default ContactPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    mdxs: allMdx(
+      filter: {
+        frontmatter: { type: { eq: "employee" }, language: { eq: $language } }
+      }
+      sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            position
+            email
+            phoneNumber
+            photo
+          }
+        }
+      }
+    }
+  }
+`;

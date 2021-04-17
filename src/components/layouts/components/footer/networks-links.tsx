@@ -9,14 +9,17 @@ export const NetworksLinks: React.FC = (props) => (
   <Box {...props}>
     <Flex sx={{ justifyContent: ['flex-start', 'flex-start', 'flex-end'] }}>
       {[
-        { href: 'https://github.com/bjerkio', icon: <SocialGithub /> },
+        {
+          href: 'https://github.com/bjerkio',
+          icon: <SocialGithub width="100%" height="100%" />,
+        },
         {
           href: 'https://www.linkedin.com/company/bjerk/',
-          icon: <SocialLinkedin />,
+          icon: <SocialLinkedin width="100%" height="100%" />,
         },
         {
           href: 'https://www.facebook.com/WeAreDigitalization',
-          icon: <SocialFacebook />,
+          icon: <SocialFacebook width="100%" height="100%" />,
         },
       ].map(({ href, icon }, index) => (
         <Link

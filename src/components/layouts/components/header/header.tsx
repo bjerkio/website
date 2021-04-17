@@ -53,7 +53,7 @@ const Header: React.FC = () => {
         >
           <Flex as="nav" variant="nav">
             <Link to="/services">{t('header:services')}</Link>
-            <Link to="/about">{t('header:about')}</Link>
+            <Link to="/about">{t('header:about-us')}</Link>
             <Link to="/contact">{t('header:contact')}</Link>
           </Flex>
         </Box>
