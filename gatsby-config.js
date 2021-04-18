@@ -4,8 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Bjerk.io',
+    title: 'Bjerk',
     siteUrl: 'https://bjerk.io',
+    titleTemplate: '%s - Bjerk',
+    description: 'Bjerk is a development agency from Oslo, Norway.',
+    image: 'images/default-seo.jpg'
   },
   plugins: [
     'gatsby-plugin-theme-ui',
