@@ -56,7 +56,7 @@ const Footer: React.FC = ({ ...props }) => {
               {t('company-info:phone-number')}
             </Link>
             <br />
-            <Link href="#">{t('company-info:email')}</Link>
+            <Link href="mailto:kontoret@bjerk.io">{t('company-info:email')}</Link>
           </Box>
           <Box>
             <Text sx={{ fontSize: 28, my: [0, 4, 4], mb: [4, 0, 0] }}>
