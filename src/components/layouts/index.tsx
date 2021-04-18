@@ -11,7 +11,7 @@ export const Layout: React.FC = ({ children }) => {
       <GlobalStyles />
       <Header />
       {children}
-      <BottomTree />
+      {/* <BottomTree /> */}
       {/* <ContactFooter /> */}
       <Footer />
     </>
