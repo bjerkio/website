@@ -56,6 +56,6 @@ jobs:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: ${{ steps.firebase.outputs.details_url }}
+          urls: https://bjerk.io
           uploadArtifacts: true
           temporaryPublicStorage: true
