@@ -1,9 +1,9 @@
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 import React from 'react';
 
 export const GlobalStyles: React.FC = () => (
   <Global
-    styles={(theme) => ({
+    styles={(theme: any) => ({
       '*': {
         outline: 'none',
       },
