@@ -20,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['en', 'no'],
+        languages: ['no'],
         defaultLanguage: 'no',
         siteUrl: 'https://bjerk.io',
         i18nextOptions: {
