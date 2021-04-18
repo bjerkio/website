@@ -56,3 +56,16 @@ jobs:
           urls: ${{ steps.firebase.outputs.details_url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+
+      - name: Get all urls from sitemap.xml
+        id: parse-sitemap
+        uses: cobraz/parse-sitemap@v1
+        with:
+          sitemap-url: https://bjerk.io/sitemap.xml
+
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: ${{ steps.parse-sitemap.outputs.urls }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
