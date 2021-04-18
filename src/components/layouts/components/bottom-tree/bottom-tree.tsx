@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image } from 'theme-ui';
+import { Box } from 'theme-ui';
 import Tree from '../../../../illustrations/tree';
 
 const BottomTree: React.FC = () => {
