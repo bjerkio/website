@@ -50,9 +50,16 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
 
+      - name: Get all urls from sitemap.xml
+        id: parse-sitemap
+        uses: cobraz/parse-sitemap@main
+        with:
+          sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap.xml
+          replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
+
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: ${{ steps.firebase.outputs.details_url }}
+          urls: ${{ steps.parse-sitemap.outputs.urls }}
           uploadArtifacts: true
           temporaryPublicStorage: true

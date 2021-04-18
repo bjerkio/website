@@ -53,9 +53,20 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
 
+      - uses: atymic/sitemap-ping-action@master
+        with:
+          sitemap-url: https://bjerk.io/sitemap.xml
+
+      - name: Get all urls from sitemap.xml
+        id: parse-sitemap
+        uses: cobraz/parse-sitemap@v1
+        with:
+          sitemap-url: https://bjerk.io/sitemap.xml
+
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: https://bjerk.io
+          urls: ${{ steps.parse-sitemap.outputs.urls }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+
