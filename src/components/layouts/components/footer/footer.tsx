@@ -52,7 +52,7 @@ const Footer: React.FC = ({ ...props }) => {
             </Text>
           </Box>
           <Box sx={{ fontSize: 28, my: 4, marginLeft: [0, '40%', '40%'] }}>
-            <Link href="#" sx={{ whiteSpace: 'nowrap' }}>
+            <Link href="tel:+4722120512" sx={{ whiteSpace: 'nowrap' }}>
               {t('company-info:phone-number')}
             </Link>
             <br />
