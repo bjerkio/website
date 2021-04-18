@@ -18,7 +18,10 @@ export const EmployeeListItem: React.FC<{ data: EmployeeListItemProps }> = ({
         mr: [4, 4, 3],
       }}
     >
-      <Image src={`../${photo}`} sx={{ width: '100%', mb: [3, 3, 1] }} />
+      <Image
+        src={`../employees/${photo}`}
+        sx={{ width: '100%', mb: [3, 3, 1] }}
+      />
       <Text sx={{ fontWeight: 'bold', fontSize: [20, 20, 24] }}>{name}</Text>
       <Text sx={{ fontSize: [20, 20, 24] }}>{position}</Text>
       <Flex mt={2} sx={{ flexDirection: 'column', fontSize: [20, 20, 24] }}>

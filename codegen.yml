@@ -1,10 +1,14 @@
 schema: http://localhost:8000/___graphql
-overwrite: true
+documents:
+  - ./src/operations/*.{graphql,ts,tsx}
+  - ./src/**/*.{graphql,ts,tsx}
+  # - ./node_modules/gatsby*/!(node_modules)/**/*.js
+  - ./gatsby-node.js
+  - ./.cache/fragments/*.js
 hooks:
   afterAllFileWrite: prettier --write
-documents: 'src/operations/*.graphql'
 generates:
-  src/generated/graphql-types.ts:
+  ./src/generated/graphql-types.ts:
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
+      - typescript
+      - typescript-operations

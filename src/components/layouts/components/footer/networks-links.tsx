@@ -1,22 +1,25 @@
 /** @jsx */
 import React from 'react';
 import { Box, Flex, Link } from 'theme-ui';
-import SocialFacebookSvg from '../../../../assets/Social-Facebook.svg';
-import SocialGithubSvg from '../../../../assets/Social-Github.svg';
-import SocialLinkedinSvg from '../../../../assets/Social-Linkedin.svg';
+import SocialFacebook from '../../../../illustrations/social-facebook';
+import SocialGithub from '../../../../illustrations/social-github';
+import SocialLinkedin from '../../../../illustrations/social-linkedin';
 
 export const NetworksLinks: React.FC = (props) => (
   <Box {...props}>
     <Flex sx={{ justifyContent: ['flex-start', 'flex-start', 'flex-end'] }}>
       {[
-        { href: 'https://github.com/bjerkio', icon: <SocialGithubSvg /> },
+        {
+          href: 'https://github.com/bjerkio',
+          icon: <SocialGithub width="100%" height="100%" />,
+        },
         {
           href: 'https://www.linkedin.com/company/bjerk/',
-          icon: <SocialLinkedinSvg />,
+          icon: <SocialLinkedin width="100%" height="100%" />,
         },
         {
           href: 'https://www.facebook.com/WeAreDigitalization',
-          icon: <SocialFacebookSvg />,
+          icon: <SocialFacebook width="100%" height="100%" />,
         },
       ].map(({ href, icon }, index) => (
         <Link

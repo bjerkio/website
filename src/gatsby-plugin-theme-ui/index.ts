@@ -33,6 +33,21 @@ const theme = {
       lineHeight: 'heading',
       fontWeight: 'heading',
     },
+    hero: {
+      fontWeight: '600',
+      maxWidth: '700px',
+      fontSize: 'clamp(36px, 3.5vw, 50px)',
+      my: [5, 5, 6],
+    },
+  },
+  nav: {
+    justifySelf: 'flex-end',
+    alignItems: 'flex-end',
+    '>a': {
+      fontSize: 4,
+      mx: 3,
+      textDecoration: 'underline',
+    },
   },
   buttons: {
     primary: {
@@ -53,19 +68,23 @@ const theme = {
       py: 3,
     },
   },
+  layout: {
+    centered: { margin: '0 auto', px: 3, maxWidth: '1520px' },
+  },
   styles: {
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
     },
+
     h1: {
       variant: 'text.heading',
-      fontSize: 5,
+      fontSize: 6,
     },
     h2: {
       variant: 'text.heading',
-      fontSize: 4,
+      fontSize: 5,
     },
     h3: {
       variant: 'text.heading',
@@ -110,6 +129,9 @@ const theme = {
     a: {
       color: 'background',
       textDecoration: 'underline',
+    },
+    container: {
+      background: 'black',
     },
   },
 };

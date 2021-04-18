@@ -4,17 +4,16 @@ import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
-import Language from './language';
 
 const styles: SystemStyleObject = {
   width: '100%',
   height: '100%',
   position: 'fixed',
   display: 'flex',
-  zIndex: 1,
+  zIndex: 1000,
   justifyContent: 'flex-start',
   alignItems: 'flex-end',
-  backgroundColor: 'primary',
+  bg: 'primary',
   pb: 4,
   a: {
     color: 'black',
@@ -52,14 +51,6 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => {
         <Logo
           dotColor="white"
           sx={{ color: 'black', width: '5em', mb: 4, ml: 5 }}
-        />
-        <Language
-          style={{
-            marginTop: '-30px',
-            marginLeft: '60px',
-            fontSize: '15px',
-            textDecorationThickness: '1px',
-          }}
         />
         <Link to="/services">{t('header:services')}</Link>
         <Link to="/about">{t('header:about-us')}</Link>

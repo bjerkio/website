@@ -6,17 +6,17 @@ import React from 'react';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
 
-const TwoCenteredImages = ({ firstSrc, secondSrc }) => (
+const TwoCenteredImages = ({ key, firstSrc, secondSrc }) => (
   <div style={{ textAlign: 'center' }}>
     <Image
-      src={`../${firstSrc}`}
+      src={`../projects/${key}/${firstSrc}`}
       sx={{
         width: '45%',
         marginRight: '0.5%',
       }}
     />
     <Image
-      src={`../${secondSrc}`}
+      src={`../projects/${key}/${secondSrc}`}
       sx={{
         width: '45%',
         marginLeft: '0.5%',
@@ -90,7 +90,7 @@ export default function ProjectTemplate({ data: { allMdx } }) {
             sx={{
               mb: 3,
               fontWeight: '600',
-              mt: 6,
+              mt: [2, 2, 6],
               fontSize: 'clamp(36px, 3.5vw, 50px)',
             }}
           >

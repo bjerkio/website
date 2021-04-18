@@ -8,24 +8,7 @@ module.exports = {
     siteUrl: 'https://bjerk.io',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        fileName: './src/generated/graphql-types.ts',
-      },
-    },
-    {
-      resolve: 'gatsby-source-medium',
-      options: {
-        username: 'bjerk',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-theme-ui',
-      options: {
-        preset: '@theme-ui/preset-base',
-      },
-    },
+    'gatsby-plugin-theme-ui',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -48,7 +31,6 @@ module.exports = {
         },
       },
     },
-    // 'gatsby-theme-style-guide',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-offline',
@@ -58,14 +40,6 @@ module.exports = {
         custom: {
           families: ['TTCommons', 'TTCommons-Italic'],
           urls: ['/fonts/fonts.css'],
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/, // See below to configure properly
         },
       },
     },
@@ -83,6 +57,20 @@ module.exports = {
         name: 'page-data',
       },
     },
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        defaultLayouts: {
+          default: require.resolve('./src/components/layouts/centered.tsx'),
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ],
 };
