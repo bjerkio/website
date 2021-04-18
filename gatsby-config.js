@@ -33,6 +33,17 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Bjerk',
+        short_name: 'Bjerk',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#0fcfa2',
+        display: 'standalone',
+      },
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -70,17 +81,6 @@ module.exports = {
       resolve: 'gatsby-plugin-page-creator',
       options: {
         path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Bjerk',
-        short_name: 'Bjerk',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#0fcfa2',
-        display: 'standalone',
       },
     },
   ],
