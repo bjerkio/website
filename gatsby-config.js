@@ -72,5 +72,16 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Bjerk',
+        short_name: 'Bjerk',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#0fcfa2',
+        display: 'standalone',
+      },
+    },
   ],
 };
