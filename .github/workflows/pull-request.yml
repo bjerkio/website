@@ -52,7 +52,7 @@ jobs:
 
       - name: Get all urls from sitemap.xml
         id: parse-sitemap
-        uses: cobraz/parse-sitemap@v1
+        uses: cobraz/parse-sitemap@master
         with:
           sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap.xml
           replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
