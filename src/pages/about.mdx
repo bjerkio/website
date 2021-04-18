@@ -1,13 +1,19 @@
 import { Heading, Box, Flex } from '@theme-ui/components';
 import { StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
+import SEO from '../components/seo';
 import FeatureBox from '../components/feature-box';
 import OpenSource from '../components/illustrations/open-source';
 import Processes from '../components/illustrations/processes';
 import People from '../components/illustrations/people';
 
+<SEO
+  title="Om oss"
+  description="Slik forvandler vi dine idéer til unike opplevelser"
+/>
+
 <Heading variant="hero">
-  Slik forvandler vi i Bjerk dine gode ideer om til unike opplevelser.
+  Slik forvandler vi dine idéer til unike opplevelser
 </Heading>
 
 <FeatureBox
@@ -77,4 +83,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

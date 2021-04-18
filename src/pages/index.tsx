@@ -12,6 +12,7 @@ import CallToActionImage, {
   CallToActionImageProps,
 } from '../components/home-page/call-to-action-image';
 import { Layout } from '../components/layouts';
+import SEO from '../components/seo';
 
 const filterType = (obj, type) => {
   return obj.edges
@@ -69,6 +70,7 @@ const Homepage = ({ data }) => {
   const { t } = useTranslation();
   return (
     <Layout>
+      <SEO />
       <Box>
         <Hero>
           <Box sx={{ fontSize: 'clamp(16px, 8vw, 50px)' }}>

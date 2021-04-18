@@ -6,6 +6,7 @@ import { SystemStyleObject } from 'theme-ui';
 import { EmployeeList } from '../components/contact/exployee-list';
 import { Container } from '../components/container';
 import { Layout } from '../components/layouts';
+import SEO from '../components/seo';
 import { Map } from '../illustrations';
 
 const styles: SystemStyleObject = {
@@ -25,6 +26,7 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Kontakt oss" />
       <Container sx={{ pr: [0, 0, 6] }}>
         <Box sx={styles}>
           <Box sx={{ display: 'flex', flexDirection: 'row', mb: [0, 0, 6] }}>

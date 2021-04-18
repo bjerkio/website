@@ -4,8 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Bjerk.io',
+    title: 'Bjerk',
     siteUrl: 'https://bjerk.io',
+    titleTemplate: '%s - Bjerk',
+    description: 'Bjerk is a development agency from Oslo, Norway.',
+    image: 'images/default-seo.jpg'
   },
   plugins: [
     'gatsby-plugin-theme-ui',
@@ -20,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['en', 'no'],
+        languages: ['no'],
         defaultLanguage: 'no',
         siteUrl: 'https://bjerk.io',
         i18nextOptions: {
@@ -32,7 +35,21 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Bjerk',
+        short_name: 'Bjerk',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#0fcfa2',
+        display: 'standalone',
+        icon: 'src/assets/favicon.svg',
+      },
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-web-font-loader',
