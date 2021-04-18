@@ -1,7 +1,7 @@
 import { useLocation } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Helmet from 'react-helmet';
 
 export interface SEOProps {
   title?: string;
@@ -73,7 +73,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
         <meta name="twitter:description" content={seo.description} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
-      <script type="application/ld+json">{orgSchema}</script>
+      <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
     </Helmet>
   );
 };
