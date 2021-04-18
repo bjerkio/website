@@ -1,4 +1,4 @@
-import Code from './Code';
+import Code from './code';
 import Code_2 from './code-2';
 import CodeHover from './code-hover';
 import Group_12 from './group-12';
