@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface MapProps extends BoxProps {
   width?: number;
@@ -28,7 +29,7 @@ export const Map: React.FC<MapProps> = ({
         rx={8.574}
         ry={20.814}
         transform="rotate(-45 536.481 -275.406)"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         opacity={0.1}
       />
       <ellipse
@@ -97,7 +98,7 @@ export const Map: React.FC<MapProps> = ({
       <path
         data-name="Path 225"
         d="M391.353 208.092a21.931 21.931 0 0 0 1.716-2.522l-12.095-1.986 13.081.094a22.106 22.106 0 0 0 .429-17.469l-17.546 9.106 16.174-11.9a22.05 22.05 0 1 0-36.417 24.677 21.945 21.945 0 0 0-2.513 4.019l15.7 8.149-16.727-5.618a22.067 22.067 0 0 0 3.556 20.7 22.045 22.045 0 1 0 34.655 0 22.05 22.05 0 0 0 0-27.261z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 226"
@@ -150,12 +151,12 @@ export const Map: React.FC<MapProps> = ({
       <path
         data-name="Path 233"
         d="M251.177 189.573h-43.319v-18.872l40.96-.214 2.573 7.291z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 234"
         d="M229.732 91.784a23.709 23.709 0 0 0-23.709 23.709c0 13.094 23.709 55.637 23.709 55.637s23.709-42.525 23.709-55.637a23.71 23.71 0 0 0-23.709-23.709zm0 33.823a10.431 10.431 0 1 1 10.431-10.431 10.431 10.431 0 0 1-10.431 10.431z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 235"
@@ -165,7 +166,7 @@ export const Map: React.FC<MapProps> = ({
       <path
         data-name="Path 236"
         d="M229.732 95.215a23.709 23.709 0 0 0-23.709 23.709c0 13.094 23.709 55.637 23.709 55.637s23.709-42.525 23.709-55.637a23.71 23.71 0 0 0-23.709-23.709zm0 33.823a10.431 10.431 0 1 1 10.431-10.431 10.431 10.431 0 0 1-10.431 10.431z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <ellipse
         data-name="Ellipse 17"
@@ -174,7 +175,7 @@ export const Map: React.FC<MapProps> = ({
         rx={14.347}
         ry={5.91}
         transform="rotate(-23.3 865.352 -336.933)"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         opacity={0.1}
       />
       <ellipse
@@ -243,7 +244,7 @@ export const Map: React.FC<MapProps> = ({
       <path
         data-name="Path 237"
         d="M207.313 247.037a15.491 15.491 0 0 1-1.184-1.716l8.338-1.372-9.007.069a15.243 15.243 0 0 1-.292-12.039l12.095 6.253-11.151-8.2a15.2 15.2 0 1 1 25.095 17.006 15.247 15.247 0 0 1 1.716 2.771l-10.812 5.623 11.537-3.86a15.2 15.2 0 0 1-2.449 14.269 15.2 15.2 0 1 1-23.885 0 15.2 15.2 0 0 1 0-18.79z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 238"
@@ -257,7 +258,7 @@ export const Map: React.FC<MapProps> = ({
         rx={8.574}
         ry={20.814}
         transform="rotate(-45 349.027 144.931)"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         opacity={0.1}
       />
       <ellipse
@@ -326,7 +327,7 @@ export const Map: React.FC<MapProps> = ({
       <path
         data-name="Path 239"
         d="M39.228 198.656a21.928 21.928 0 0 0 1.716-2.522l-12.095-1.986 13.081.094a22.105 22.105 0 0 0 .429-17.469l-17.546 9.105 16.174-11.9A22.05 22.05 0 1 0 4.57 198.656a21.94 21.94 0 0 0-2.513 4.019l15.7 8.149-16.727-5.618a22.067 22.067 0 0 0 3.556 20.7 22.045 22.045 0 1 0 34.655 0 22.05 22.05 0 0 0 0-27.261z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 240"

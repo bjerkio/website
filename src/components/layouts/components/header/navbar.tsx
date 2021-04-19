@@ -29,7 +29,7 @@ const styles: SystemStyleObject = {
     flexGrow: 1,
     fontSize: 23,
     fontWeight: 600,
-    color: 'iron',
+    color: 'text',
     justifyContent: 'flex-end',
     '>a': {
       p: 2,

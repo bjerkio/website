@@ -20,6 +20,7 @@ export const OpenSource = React.forwardRef<HTMLOrSVGElement, OpenSourceProps>(
         height={String(height)}
         viewBox="0 0 363 265"
         {...props}
+        sx={{ color: 'primary', ...props.sx }}
       >
         <g transform="translate(-79.2 -38.1)">
           <path

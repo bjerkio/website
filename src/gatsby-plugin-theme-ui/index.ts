@@ -4,8 +4,9 @@ const theme = {
     heading: 'TTCommons, "Lucida Grande", Tahoma, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
+  initialColorModeName: 'dark',
   colors: {
-    primary: '#0FCFA2',
+    primary: '#4ecca3',
     secondary: '#1D4C3D',
     dark: '#232931',
     iron: '#393E46',
@@ -14,6 +15,12 @@ const theme = {
     background: '#fff',
     text: '#232931',
     lightGreen: '#4ECCA3',
+    modes: {
+      dark: {
+        background: '#232931',
+        text: '#EEEEEE',
+      },
+    },
   },
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -56,7 +63,7 @@ const theme = {
       borderRadius: '8px',
     },
     empty: {
-      color: 'black',
+      color: 'text',
       backgroundColor: 'background',
       border: '1px solid',
       borderColor: 'primary',
@@ -128,7 +135,7 @@ const theme = {
       borderBottomStyle: 'solid',
     },
     a: {
-      color: 'background',
+      color: 'text',
       textDecoration: 'underline',
     },
     container: {

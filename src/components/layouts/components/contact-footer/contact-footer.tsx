@@ -17,20 +17,17 @@ const styles: ThemeUIStyleObject = {
     py: [5, 5, 6],
     maxWidth: '1920px',
     '.header': {
-      color: 'white',
       fontSize: 60,
       fontWeight: '500',
     },
     '.label': {
       mb: 4,
       mt: 1,
-      color: 'white',
       fontSize: 24,
     },
     '.input': {
       mb: 3,
       background: '#232931',
-      color: 'white',
       border: 'none',
       px: 4,
       py: 3,

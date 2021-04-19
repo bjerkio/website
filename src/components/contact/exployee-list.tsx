@@ -64,8 +64,8 @@ export const EmployeeList: React.FC<{ data: EmployeeListFragment[] }> = ({
               mt={2}
               sx={{ flexDirection: 'column', fontSize: [20, 20, 24] }}
             >
-              <Text color="black">{employee.email}</Text>
-              <Text color="black">{employee.phoneNumber}</Text>
+              <Text>{employee.email}</Text>
+              <Text>{employee.phoneNumber}</Text>
             </Flex>
           </Box>
         );

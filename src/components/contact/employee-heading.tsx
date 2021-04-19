@@ -1,5 +1,7 @@
-import { Box, Flex, Label, Link } from '@theme-ui/components';
+/** @jsx jsx */
+import { Box, Flex, Label } from '@theme-ui/components';
 import React from 'react';
+import { jsx } from 'theme-ui';
 import { Map } from '../illustrations';
 import { Text as FormattedText } from '../text';
 
@@ -26,7 +28,9 @@ export const EmployeeHeading: React.FC = () => (
           mb: [-6, -6, 0],
         }}
       >
-        <Link to="mailto:kontoret@bjerk.io" sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
+        <a sx={{ variant: 'link' }} href="mailto:kontoret@bjerk.io">
+          kontoret@bjerk.io
+        </a>
         <Label>+47 22 12 05 12</Label>
         <Label mt={1}>Frognerveien 1B,</Label>
         <Label>0257</Label>

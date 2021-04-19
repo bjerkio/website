@@ -55,7 +55,7 @@ const Heading2 = ({ children, withQuotes, ...props }) => (
           height: 'auto',
           textDecoration: 'none',
           fontSize: 'clamp(70px, 7vw, 100px)',
-          color: '#4ecca3',
+          color: 'primary',
         }}
       >
         “
