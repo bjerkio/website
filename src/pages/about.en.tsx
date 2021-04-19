@@ -14,25 +14,25 @@ const About = () => {
           description="This is how we turn your ideas into real experiences"
         />
         <Heading variant="hero">
-          Slik forvandler vi dine idéer til unike opplevelser
+          This is how we turn your ideas into real experiences
         </Heading>
         <FeatureBox
           textAlign="left"
           illustration={<illu.OpenSource sx={{ width: '100%' }} />}
         >
-          <Heading as="h2">Åpen kildekode</Heading>
+          <Heading as="h2">Open Source</Heading>
           <Text>
-            Vi i Bjerk mener at åpen kildekode er noe av det viktigste i
-            programmering fordi det er en toveis-transaksjon der vi både er
-            forbruker og bidragsyter. En slik tilnærming sikrer også at vi
-            leverer et produkt av høyeste kvalitet. Bjerk har stor tro på at det
-            ikke bare er viktig å samarbeide om å nå målene, men også for å løse
-            problemer innen teknologi.
+            We at Bjerk believe that open source code is one of the most
+            important things in programming because it is a two-way transaction
+            where we are both a consumer and a contributor. Such an approach
+            also ensures that we deliver a product of the highest quality. Bjerk
+            strongly believes that it is not only important to work together to
+            achieve the goals, but also to solve problems in technology.
           </Text>
           <Text>
-            Åpen kildekode gir dessuten kundene våre stor valg- og
-            bevegelsesfrihet om vedkommende velger å samarbeide med noen andre
-            underveis.
+            Open source code also gives our customers great freedom of choice
+            and movement if they choose to collaborate with someone else along
+            the way.
           </Text>
         </FeatureBox>
 
@@ -40,22 +40,22 @@ const About = () => {
           textAlign="right"
           illustration={<illu.Processes sx={{ width: '100%' }} />}
         >
-          <Heading as="h2">Prosesser</Heading>
+          <Heading as="h2">Processes</Heading>
           <Text>
-            Trenger du hjelp til litt eller mye? Bjerk påtar seg både små og
-            store oppgaver, så du kan være trygg på at vi hjelper deg gjennom
-            hele prosessen uavhengig av prosjektets størrelse.
+            Do you need help with a little or a lot? Bjerk undertakes both small
+            and large tasks, so you can be sure that we help you through the
+            entire process regardless of the size of the project.
           </Text>
           <Text>
-            I begynnelsen av et utviklingsprosjekt kan vi bistå med å planlegge
-            og gjennomføre prosjektering. Deretter vil våre arkitekter sørge for
-            en trygg gjennomføring og utarbeide spesifikasjoner før prosjektet
-            kan tas videre.
+            At the beginning of a development project, we can assist in planning
+            and carrying out planning. Then our architects will ensure a safe
+            implementation and prepare specifications before the project can be
+            taken further.
           </Text>
           <Text>
-            Bjerk legger stor vekt på å forstå kundenes ønsker. Det er en viktig
-            del av våre prosesser der vi bygger menneskelig forståelse mellom
-            oss og kunden.
+            Bjerk places great emphasis on understanding customers wishes. It
+            is an important part of our processes where we build human
+            understanding between us and the customer.
           </Text>
         </FeatureBox>
 
@@ -63,19 +63,20 @@ const About = () => {
           textAlign="left"
           illustration={<illu.People sx={{ width: '100%' }} />}
         >
-          <Heading as="h2">Mennesker</Heading>
+          <Heading as="h2">People</Heading>
           <Text>
-            For å lykkes med en digitaliseringsprosess er det viktig å ivareta
-            menneskene som skal gjennom endringene. I Bjerk har vi lang erfaring
-            med å hjelpe bedrifter gjennom digitaliseringsprosesser. Vi vet at
-            tett dialog og god prosjektledelse er viktige faktorer for at man
-            skal gjøre endringen til en god opplevelse for alle i bedriften.
+            In order to succeed in a digitization process, it is important to
+            take care of the people who are going through the changes. At Bjerk,
+            we have extensive experience of helping companies through
+            digitization processes. We know that close dialogue and good project
+            management are important factors for making the change a good
+            experience for everyone in the company.
           </Text>
           <Text>
-            I Bjerk kan vi hjelpe til med en strategi som ivaretar det
-            menneskelige aspektet og de ansatte i bedriften. Vi kan hjelpe deg
-            fra en ide til et ferdig produkt og ta ansvaret for hele eller deler
-            av prosessen.
+            At Bjerk, we can help with a strategy that takes care of the human
+            aspect and the employees in the company. We can help you from an
+            idea to a finished product and take responsibility for all or part
+            of the process.
           </Text>
         </FeatureBox>
       </Container>
