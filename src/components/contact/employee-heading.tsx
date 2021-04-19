@@ -26,7 +26,7 @@ export const EmployeeHeading: React.FC = () => (
           mb: [-6, -6, 0],
         }}
       >
-        <Link sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
+        <Link to="mailto:kontoret@bjerk.io" sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
         <Label>+47 22 12 05 12</Label>
         <Label mt={1}>Frognerveien 1B,</Label>
         <Label>0257</Label>
