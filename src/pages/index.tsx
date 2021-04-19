@@ -29,13 +29,7 @@ export const query = graphql`
     heroImage: file(
       relativePath: { eq: "heros/pexels-zaksheuskaya-1616403.jpg" }
     ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 2000
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
+      ...Hero
     }
   }
 `;

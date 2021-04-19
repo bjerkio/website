@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { MDXProvider } from '@mdx-js/react';
 import {
-  Heading as BaseHeading,
   Box,
   Container,
+  Heading as BaseHeading,
   Image,
 } from '@theme-ui/components';
 import { graphql } from 'gatsby';
@@ -104,13 +104,15 @@ export const ProjectTemplate: React.FC<{ data: ProjectQuery }> = ({ data }) => {
         >
           {project.frontmatter.title}
         </BaseHeading>
-        <Box sx={{ mt: 4 }}>
-          <GatsbyImage
-            image={img}
-            alt={project.frontmatter.title}
-            sx={{ width: '100%' }}
-          />
-        </Box>
+        {img && (
+          <Box sx={{ mt: 4 }}>
+            <GatsbyImage
+              image={img}
+              alt={project.frontmatter.title}
+              sx={{ width: '100%' }}
+            />
+          </Box>
+        )}
         <MDXProvider components={components}>
           <Box>
             <MDXRenderer>{project.body}</MDXRenderer>

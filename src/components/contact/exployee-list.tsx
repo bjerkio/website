@@ -41,11 +41,13 @@ export const EmployeeList: React.FC<{ data: EmployeeListFragment[] }> = ({
               mr: [4, 4, 3],
             }}
           >
-            <GatsbyImage
-              image={image}
-              alt={employee.name}
-              sx={{ width: '100%', mb: 3 }}
-            />
+            {image && (
+              <GatsbyImage
+                image={image}
+                alt={employee.name}
+                sx={{ width: '100%', mb: 3 }}
+              />
+            )}
             <Text
               sx={{
                 fontWeight: 'bold',

@@ -58,11 +58,13 @@ export const ProjectBox: React.FC<{ data: ProjectBoxFragment }> = ({
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <GatsbyImage
-            image={img}
-            alt={title}
-            sx={{ width: '100%', transition: '.4s' }}
-          />
+          {image && (
+            <GatsbyImage
+              image={img}
+              alt={title}
+              sx={{ width: '100%', transition: '.4s' }}
+            />
+          )}
         </Box>
         <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', mx: [4, 4, 0] }}>
           <span className="linkText">{title}</span>

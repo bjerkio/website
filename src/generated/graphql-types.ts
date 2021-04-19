@@ -4657,6 +4657,12 @@ export type EmployeeListFragment = { __typename?: 'employee' } & Pick<
     >;
   };
 
+export type HeroFragment = { __typename?: 'File' } & {
+  childImageSharp?: Maybe<
+    { __typename?: 'ImageSharp' } & Pick<ImageSharp, 'gatsbyImageData'>
+  >;
+};
+
 export type ProjectBoxFragment = { __typename?: 'MdxFrontmatter' } & Pick<
   MdxFrontmatter,
   'title' | 'slug' | 'language'
@@ -4709,13 +4715,7 @@ export type HomePageQuery = { __typename?: 'Query' } & {
       }
     >;
   };
-  heroImage?: Maybe<
-    { __typename?: 'File' } & {
-      childImageSharp?: Maybe<
-        { __typename?: 'ImageSharp' } & Pick<ImageSharp, 'gatsbyImageData'>
-      >;
-    }
-  >;
+  heroImage?: Maybe<{ __typename?: 'File' } & HeroFragment>;
 };
 
 export type ProjectQueryVariables = Exact<{
