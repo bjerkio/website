@@ -1,0 +1,8 @@
+type: employee
+name: Bjorn Niklas Sjostrom
+position:
+  en: Strategic Advisor
+  nb: Strategirådgiver
+email: bns@bjerk.io
+phoneNumber: +47 905 86 616
+photo: ./images/bjorn-niklas-sjostrom.jpg

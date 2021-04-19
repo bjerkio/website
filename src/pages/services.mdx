@@ -2,7 +2,7 @@ import { Heading } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo';
 import FeatureBox from '../components/feature-box';
-import { ServicesCode, ServicesStrategic } from '../illustrations';
+import { ServicesCode, ServicesStrategic } from '../components/illustrations';
 import { StaticImage } from 'gatsby-plugin-image';
 
 <SEO title="Våre tjenester" />
@@ -27,7 +27,7 @@ din ide.
 
 </FeatureBox>
 
-<img src="services-split.png" width="100%" />
+![](../assets/services-split.png)
 
 <FeatureBox
   textAlign="right"
@@ -45,17 +45,3 @@ bedriften din når potensialet sitt. Snakk med Niklas om hvordan du og din
 bedrift kommer seg over den digitale dørstokken.
 
 </FeatureBox>
-
-export const pageQuery = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`

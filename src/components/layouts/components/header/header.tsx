@@ -1,76 +1,79 @@
 /** @jsx */
-import { Box, Flex } from '@theme-ui/components';
-import { Link } from 'gatsby';
+import { Box, Container, Flex } from '@theme-ui/components';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Link } from '../../../link';
+import { Text } from '../../../text';
 import { Logo } from '../logo';
 import Hamburger from './hamburger';
 import MobileMenu from './mobile-menu';
 
 const Header: React.FC = () => {
-  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <React.Fragment>
-      <Flex
-        sx={{
-          margin: '0 auto',
-          maxWidth: '1520px',
-          py: 4,
-          px: 3,
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <Link to="/">
-          <Logo
-            color="black"
-            dotColor="primary"
-            sx={{
-              alignItems: 'flex-start',
-              color: 'black',
-              width: '5em',
-            }}
-          />
-        </Link>
-
-        <Box
+      <Container variant="centered" sx={{ my: 4 }}>
+        <Flex
           sx={{
-            display: ['block', 'none'],
-            position: ['fixed', 'static'],
-            top: 0,
-            right: 0,
-            zIndex: 1001,
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
-          <Hamburger isOpen={isOpen} onClick={setIsOpen} />
-        </Box>
+          <Link to="/">
+            <Logo
+              color="black"
+              dotColor="primary"
+              sx={{
+                alignItems: 'flex-start',
+                color: 'black',
+                width: '5em',
+              }}
+            />
+          </Link>
 
-        <Box
-          sx={{ display: ['none', 'block'] }}
-          onClick={() => setIsOpen(false)}
-        >
-          <Flex as="nav" variant="nav">
-            <Link to="/services">{t('header:services')}</Link>
-            <Link to="/about">{t('header:about-us')}</Link>
-            <Link to="/contact">{t('header:contact')}</Link>
-          </Flex>
-        </Box>
-
-        {isOpen && (
           <Box
             sx={{
               display: ['block', 'none'],
-              position: 'fixed',
+              position: ['fixed', 'static'],
               top: 0,
-              left: 0,
+              right: 0,
+              zIndex: 1001,
             }}
           >
-            <MobileMenu />
+            <Hamburger isOpen={isOpen} onClick={setIsOpen} />
           </Box>
-        )}
-      </Flex>
+
+          <Box
+            sx={{ display: ['none', 'block'] }}
+            onClick={() => setIsOpen(false)}
+          >
+            <Flex as="nav" variant="nav">
+              <Link to="/services">
+                <Text id="nav-services" defaultMessage="Services" />
+              </Link>
+              <Link to="/about">
+                <Text id="nav-about" defaultMessage="About" />
+              </Link>
+              <Link to="/contact">
+                <Text id="nav-contact" defaultMessage="Contact" />
+              </Link>
+            </Flex>
+          </Box>
+
+          {isOpen && (
+            <Box
+              sx={{
+                display: ['block', 'none'],
+                position: 'fixed',
+                top: 0,
+                left: 0,
+              }}
+            >
+              <MobileMenu />
+            </Box>
+          )}
+        </Flex>
+      </Container>
     </React.Fragment>
   );
 };

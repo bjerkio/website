@@ -8,7 +8,7 @@ export interface ProcessesProps extends BoxProps {
   width?: number;
 }
 
-const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
+export const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
   ({ width = 361, height = 331, ...props }, ref) => {
     return (
       <Box

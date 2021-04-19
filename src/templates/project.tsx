@@ -1,10 +1,18 @@
+/** @jsx jsx */
 import { MDXProvider } from '@mdx-js/react';
-import { Heading as BaseHeading, Box, Image } from '@theme-ui/components';
+import {
+  Heading as BaseHeading,
+  Box,
+  Container,
+  Image,
+} from '@theme-ui/components';
 import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import { Container } from '../components/container';
+import { jsx } from 'theme-ui';
 import { Layout } from '../components/layouts';
+import { ProjectQuery } from '../generated/graphql-types';
 
 const TwoCenteredImages = ({ key, firstSrc, secondSrc }) => (
   <div style={{ textAlign: 'center' }}>
@@ -79,68 +87,63 @@ const components = {
   TwoCenteredImages,
 };
 
-export default function ProjectTemplate({ data: { allMdx } }) {
-  const mdx = allMdx.edges[0].node;
+export const ProjectTemplate: React.FC<{ data: ProjectQuery }> = ({ data }) => {
+  const { project } = data;
+  const img = getImage(project.frontmatter.image as any);
   return (
     <Layout>
-      <Box>
-        <Container sx={{ alignItems: 'center' }}>
-          <BaseHeading
-            as="h1"
-            sx={{
-              mb: 3,
-              fontWeight: '600',
-              mt: [2, 2, 6],
-              fontSize: 'clamp(36px, 3.5vw, 50px)',
-            }}
-          >
-            {mdx.frontmatter.title}
-          </BaseHeading>
+      <Container variant="centered">
+        <BaseHeading
+          as="h1"
+          sx={{
+            mb: 3,
+            fontWeight: '600',
+            mt: [2, 2, 6],
+            fontSize: 'clamp(36px, 3.5vw, 50px)',
+          }}
+        >
+          {project.frontmatter.title}
+        </BaseHeading>
+        {img && (
           <Box sx={{ mt: 4 }}>
-            <Image
-              src={`../../${mdx.frontmatter.image}`}
+            <GatsbyImage
+              image={img}
+              alt={project.frontmatter.title}
               sx={{ width: '100%' }}
             />
           </Box>
-          <MDXProvider components={components}>
-            <Box>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </Box>
-          </MDXProvider>
-        </Container>
-      </Box>
+        )}
+        <MDXProvider components={components}>
+          <Box>
+            <MDXRenderer>{project.body}</MDXRenderer>
+          </Box>
+        </MDXProvider>
+      </Container>
     </Layout>
   );
-}
+};
+
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
-  query($language: String, $slug: String) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    allMdx(
-      filter: {
-        frontmatter: {
-          type: { eq: "projects" }
-          language: { eq: $language }
-          slug: { eq: $slug }
-        }
-      }
+  query Project($slug: String!, $lang: String!) {
+    project: mdx(
+      frontmatter: { slug: { eq: $slug }, language: { eq: $lang } }
     ) {
-      edges {
-        node {
-          id
-          body
-          frontmatter {
-            image
-            title
-            slug
+      id
+      body
+      frontmatter {
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1540
+              height: 800
+              jpgOptions: { quality: 100 }
+              pngOptions: { quality: 100 }
+              transformOptions: { cropFocus: CENTER, fit: COVER }
+              quality: 100
+            )
           }
         }
       }

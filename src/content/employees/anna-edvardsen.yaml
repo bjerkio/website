@@ -1,0 +1,8 @@
+type: employee
+name: Anna Edvardsen
+position:
+  en: Project Manager
+  nb: Prosjektleder
+email: anna@bjerk.io
+phoneNumber: +47 900 00 000
+photo: ./images/anna-edvardsen.jpg

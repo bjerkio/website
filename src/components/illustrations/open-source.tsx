@@ -8,7 +8,7 @@ export interface OpenSourceProps extends BoxProps {
   width?: number;
 }
 
-const OpenSource = React.forwardRef<HTMLOrSVGElement, OpenSourceProps>(
+export const OpenSource = React.forwardRef<HTMLOrSVGElement, OpenSourceProps>(
   ({ width = 363, height = 265, ...props }, ref) => {
     return (
       <Box

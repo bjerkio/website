@@ -2,9 +2,9 @@ import { Box, Grid } from '@theme-ui/components';
 import React from 'react';
 
 export interface FeatureBoxSpec {
-  illustration: React.Component;
+  illustration: any;
   textAlign?: 'right' | 'left';
-  ml: number;
+  ml?: number;
 }
 
 const FeatureBox: React.FC<FeatureBoxSpec> = ({

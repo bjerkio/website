@@ -1,9 +1,8 @@
 import { Container, Flex } from '@theme-ui/components';
-import { graphql } from 'gatsby';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import { Box, Heading, Input, Label, ThemeUIStyleObject } from 'theme-ui';
-import Button from '../../../button';
+// import { useIntl } from 'react-intl';
+import { Box, ThemeUIStyleObject } from 'theme-ui';
+// import Link from '../../../link';
 
 const styles: ThemeUIStyleObject = {
   mb: 0,
@@ -44,29 +43,19 @@ const styles: ThemeUIStyleObject = {
   },
 };
 
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
-
 const ContactFooter: React.FC = () => {
-  const { t } = useTranslation();
+  // const intl = useIntl();
 
   return (
     <Box sx={styles}>
       <Container className="container">
         <Flex>
           <Box>
-            <Heading className="header">{t('contact-footer:title')}</Heading>
+            {/* <Heading className="header">
+              {intl.formatMessage({
+                defaultMessage: ''
+              })}
+            </Heading>
             <Label className="label">{t('contact-footer:description')}</Label>
             <Input
               className="input"
@@ -78,9 +67,9 @@ const ContactFooter: React.FC = () => {
               placeholder={t('contact-footer:project-description')}
             />
             <Input className="input" placeholder={t('contact-footer:budget')} />
-            <Button className="button" href="/contact">
+            <Link to="/contact" className="button">
               {t('contact-footer:button-text')}
-            </Button>
+            </Link> */}
           </Box>
           {/* <Box className="video"></Box> */}
         </Flex>

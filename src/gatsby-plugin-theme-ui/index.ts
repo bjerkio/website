@@ -32,6 +32,7 @@ const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
+      pb: 3,
     },
     hero: {
       fontWeight: '600',
@@ -69,7 +70,7 @@ const theme = {
     },
   },
   layout: {
-    centered: { margin: '0 auto', px: 3, maxWidth: '1520px' },
+    centered: { margin: '0 auto', px: 4, maxWidth: '1520px' },
   },
   styles: {
     root: {
