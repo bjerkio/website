@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface ServicesStrategicProps extends BoxProps {
   width?: number;
@@ -26,7 +27,7 @@ export const ServicesStrategic: React.FC<ServicesStrategicProps> = ({
       <path
         d="M461.888 292.915A67.974 67.974 0 0 0 434.4 281.56a69.816 69.816 0 0 0-30.338 1.424 68.042 68.042 0 0 0-14.162 5.606 82.322 82.322 0 0 0-12.595 8.575c-4 3.2-7.869 6.549-12.045 9.565a71.571 71.571 0 0 1-41.984 13.5q-1.891 0-3.78-.1a.488.488 0 1 1 0-.975 70.849 70.849 0 0 0 43.4-11.983c4.328-2.958 8.28-6.339 12.314-9.615a94.668 94.668 0 0 1 12.365-8.819 70.5 70.5 0 0 1 72.12 1.5c1 .636 1.98 1.3 2.942 1.985.546.388-.213 1.077-.749.692z"
         transform="translate(-131.898 -279.552)"
-        style={{ strokeWidth: 2, stroke: '#0fcfa2', fill: '#4ecca3' }}
+        style={{ strokeWidth: 2, stroke: '#0fcfa2', fill: 'primary' }}
       />
       <ellipse
         className="b"
@@ -63,7 +64,7 @@ export const ServicesStrategic: React.FC<ServicesStrategicProps> = ({
       <path
         d="M775.724 493.3c-10.191-4.366-21.569-.56-31.174 3.465-4.947 2.072-9.841 4.284-14.961 5.921a86.146 86.146 0 0 1-13.191 3.087 94.37 94.37 0 0 1-27.1.164 95.5 95.5 0 0 1-26.149-7.51 88.522 88.522 0 0 1-22.632-14.613q-1.286-1.147-2.522-2.347c-.981-.949.525-2.437 1.506-1.488a85.934 85.934 0 0 0 22.079 15.392 93.319 93.319 0 0 0 25.65 8.138 91.7 91.7 0 0 0 27.03.461 85.978 85.978 0 0 0 13.24-2.84 141.174 141.174 0 0 0 14.607-5.6c9.7-4.112 20.468-8.139 31.121-5.3a26.287 26.287 0 0 1 3.574 1.26c1.251.532.168 2.346-1.078 1.81z"
         transform="translate(-576.776 -319.846)"
-        style={{ strokeWidth: '.5px', stroke: '#0fcfa2', fill: '#4ecca3' }}
+        style={{ strokeWidth: '.5px', stroke: '#0fcfa2', fill: 'primary' }}
       />
       <path
         className="d"

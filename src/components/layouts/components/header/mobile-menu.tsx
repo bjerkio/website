@@ -16,7 +16,7 @@ const styles: SystemStyleObject = {
   bg: 'primary',
   pb: 4,
   a: {
-    color: 'black',
+    color: 'text',
     ml: 5,
     mr: 0,
     mb: 3,
@@ -33,7 +33,7 @@ const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
     <Flex sx={{ flexDirection: 'column' }}>
       <Logo
         dotColor="white"
-        sx={{ color: 'black', width: '5em', mb: 4, ml: 5 }}
+        sx={{ color: 'text', width: '5em', mb: 4, ml: 5 }}
       />
       <Link to="/services">
         <FormattedMessage id="nav-services" defaultMessage="Services" />

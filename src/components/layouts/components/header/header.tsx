@@ -21,11 +21,11 @@ const Header: React.FC = () => {
         >
           <Link to="/">
             <Logo
-              color="black"
+              color="text"
               dotColor="primary"
               sx={{
                 alignItems: 'flex-start',
-                color: 'black',
+                color: 'text',
                 width: '5em',
               }}
             />

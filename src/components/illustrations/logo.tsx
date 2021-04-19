@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface LogoProps extends BoxProps {
   width?: number;
@@ -22,7 +23,7 @@ export const Logo: React.FC<LogoProps> = ({
   >
     <path
       d="M93.1 24.8a4 4 0 0 1 2.9-1.1 4 4 0 0 1 2.9 1.1 4 4 0 0 1 1.1 2.9 4 4 0 0 1-1.1 2.9 4 4 0 0 1-2.9 1.1 4 4 0 0 1-2.9-1.1 4 4 0 0 1-1.1-2.9c0-1.2.3-2.2 1.1-2.9z"
-      style={{ fill: '#4ecca3' }}
+      style={{ fill: 'primary' }}
     />
 
     <g style={{ fill: '#232931' }}>

@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface Code_2Props extends BoxProps {
   width?: number;

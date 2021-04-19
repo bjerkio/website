@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps, jsx } from 'theme-ui';
 
 export interface SourceCodeProps extends BoxProps {
   width?: number;
@@ -52,7 +53,7 @@ export const SourceCode: React.FC<SourceCodeProps> = ({
       <path
         data-name="Path 271"
         d="M116.719 260.047c9.648 5.8 13.364 17.334 13.364 17.334s-11.927 2.118-21.575-3.686-13.364-17.334-13.364-17.334 11.927-2.119 21.575 3.686z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Path 272"
@@ -62,111 +63,111 @@ export const SourceCode: React.FC<SourceCodeProps> = ({
       <path
         data-name="Path 273"
         d="M353.334 154.177H167.563v-.488c0-33.212 12.94-60.575 37.421-79.13 22.61-17.135 53.788-26.195 90.173-26.195h58.177c18.555 0 34.191 4.077 45.219 11.79 12.49 8.736 18.822 21.665 18.822 38.427 0 16.847-6.5 31.056-18.794 41.093-11.454 9.353-27.523 14.503-45.247 14.503zm-184.793-.976h184.793c37.721 0 63.064-21.949 63.064-54.616 0-31.294-22.986-49.241-63.064-49.241h-58.177C234.076 49.343 168.819 76.642 168.54 153.2z"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
       />
       <path
         data-name="Rectangle 99"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M237.298 81.01h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 100"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M345.687 81.01h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 101"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M364.24 81.01h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 102"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M272.939 81.01h62.982v6.347h-62.982z"
       />
       <path
         data-name="Rectangle 103"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M204.098 122.022h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 104"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M312.487 122.022h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 105"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M331.04 122.022h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 106"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M239.739 122.022h62.982v6.347h-62.982z"
       />
       <path
         data-name="Rectangle 107"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M312.975 95.169h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 108"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M348.616 95.169h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 109"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M384.257 95.169h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 110"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M204.098 95.169h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 111"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M222.651 95.169h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 112"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M241.204 95.169h62.982v6.347h-62.982z"
       />
       <path
         data-name="Rectangle 113"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M258.292 108.839h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 114"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M222.651 108.839h26.365v6.347h-26.365z"
       />
       <path
         data-name="Rectangle 115"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M204.098 108.839h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 116"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M384.257 108.839h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 117"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M365.704 108.839h9.276v6.347h-9.276z"
       />
       <path
         data-name="Rectangle 118"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M293.445 108.839h62.982v6.347h-62.982z"
       />
       <path
         data-name="Rectangle 119"
-        fill="#4ecca3"
+        sx={{ fill: 'primary' }}
         d="M153.412 268.981h9.276v7.324h-9.276z"
       />
     </g>

@@ -13,7 +13,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onClick }) => (
       borderRadius: '50%',
       width: '42px',
       height: '42px',
-      color: 'black',
+      color: 'text',
       m: 4,
       fontSize: '100px',
       padding: 0,
