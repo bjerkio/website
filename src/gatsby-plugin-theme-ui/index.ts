@@ -4,7 +4,6 @@ const theme = {
     heading: 'TTCommons, "Lucida Grande", Tahoma, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
-  initialColorModeName: 'dark',
   colors: {
     primary: '#4ecca3',
     secondary: '#1D4C3D',
