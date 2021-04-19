@@ -2,42 +2,45 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 });
 
+const imageMaxWidth = 1540;
+
 module.exports = {
   siteMetadata: {
     title: 'Bjerk',
     siteUrl: 'https://bjerk.io',
     titleTemplate: '%s - Bjerk',
     description: 'Bjerk is a development agency from Oslo, Norway.',
-    image: 'images/default-seo.jpg'
+    image: 'images/default-seo.jpg',
   },
   plugins: [
     'gatsby-plugin-theme-ui',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/data/`,
-        name: 'locale',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-i18next',
-      options: {
-        localeJsonSourceName: 'locale',
-        languages: ['no'],
-        defaultLanguage: 'no',
-        siteUrl: 'https://bjerk.io',
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          returnObjects: true,
-        },
-      },
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
+    'gatsby-background-image',
+    {
+      resolve: 'gatsby-transformer-yaml',
+      options: {
+        typeName: ({ object }) => object.type,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: imageMaxWidth,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -52,6 +55,15 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
@@ -64,20 +76,26 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/content`,
-        name: 'projects',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data`,
-        name: 'page-data',
+        path: `${__dirname}/src/assets`,
+        name: 'assets',
       },
     },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: imageMaxWidth,
+            },
+          },
+        ],
         defaultLayouts: {
           default: require.resolve('./src/components/layouts/centered.tsx'),
         },
@@ -89,5 +107,8 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 };

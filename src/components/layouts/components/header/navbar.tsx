@@ -1,6 +1,6 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
-import { graphql } from 'gatsby';
-import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import { Link, graphql } from 'gatsby';
+import { FormattedMessage } from 'react-intl';
 import React, { useEffect, useState } from 'react';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
@@ -51,22 +51,7 @@ const styles: SystemStyleObject = {
   },
 };
 
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
-
 const Navbar: React.FC<BoxProps> = () => {
-  const { t } = useTranslation();
   const [navbar, setNavbar] = useState(false);
   const [pathname, setPathname] = useState('');
 
@@ -123,7 +108,7 @@ const Navbar: React.FC<BoxProps> = () => {
               }}
               to="/services"
             >
-              {t('header:services')}
+              <FormattedMessage id="nav-services" defaultMessage="Services" />
             </Link>
             <Link
               className="link"
@@ -136,7 +121,7 @@ const Navbar: React.FC<BoxProps> = () => {
               }}
               to="/about"
             >
-              {t('header:about-us')}
+              <FormattedMessage id="nav-about" defaultMessage="About" />
             </Link>
             <Link
               className="link"
@@ -149,7 +134,7 @@ const Navbar: React.FC<BoxProps> = () => {
               }}
               to="/contact"
             >
-              {t('header:contact')}
+              <FormattedMessage id="nav-contact" defaultMessage="Contact" />
             </Link>
           </Flex>
         </Flex>

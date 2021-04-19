@@ -1,7 +1,7 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
-import { graphql } from 'gatsby';
-import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import { Link, graphql } from 'gatsby';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 
@@ -28,36 +28,24 @@ const styles: SystemStyleObject = {
   },
 };
 
-export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
-
-const MobileMenu: React.FC<BoxProps> = ({ ...props }) => {
-  const { t } = useTranslation();
-
-  return (
-    <Box sx={styles} {...props}>
-      <Flex sx={{ flexDirection: 'column' }}>
-        <Logo
-          dotColor="white"
-          sx={{ color: 'black', width: '5em', mb: 4, ml: 5 }}
-        />
-        <Link to="/services">{t('header:services')}</Link>
-        <Link to="/about">{t('header:about-us')}</Link>
-        <Link to="/contact">{t('header:contact')}</Link>
-      </Flex>
-    </Box>
-  );
-};
+const MobileMenu: React.FC<BoxProps> = ({ ...props }) => (
+  <Box sx={styles} {...props}>
+    <Flex sx={{ flexDirection: 'column' }}>
+      <Logo
+        dotColor="white"
+        sx={{ color: 'black', width: '5em', mb: 4, ml: 5 }}
+      />
+      <Link to="/services">
+        <FormattedMessage id="nav-services" defaultMessage="Services" />
+      </Link>
+      <Link to="/about">
+        <FormattedMessage id="nav-about" defaultMessage="About" />
+      </Link>
+      <Link to="/contact">
+        <FormattedMessage id="nav-contact" defaultMessage="Contact" />
+      </Link>
+    </Flex>
+  </Box>
+);
 
 export default MobileMenu;

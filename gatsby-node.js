@@ -4,14 +4,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    query {
+    query ProjectSlugs {
       allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              slug
-            }
+        nodes {
+          frontmatter {
+            language
+            slug
           }
         }
       }
@@ -21,16 +19,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
-  const projects = result.data.allMdx.edges;
+  const projects = result.data.allMdx.nodes;
 
   projects
-    .filter(({ node }) => node.frontmatter.slug)
-    .forEach(({ node }) => {
+    .filter(({ frontmatter }) => frontmatter.slug && frontmatter.language)
+    .forEach(({ frontmatter }) => {
       createPage({
-        path: node.frontmatter.slug,
+        path: `projects/${frontmatter.language}/${frontmatter.slug}`,
         component: path.resolve('./src/templates/project.tsx'),
         context: {
-          slug: node.frontmatter.slug,
+          slug: frontmatter.slug,
+          lang: frontmatter.language,
         },
       });
     });
