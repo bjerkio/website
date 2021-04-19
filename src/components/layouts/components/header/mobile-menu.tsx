@@ -1,5 +1,5 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { SystemStyleObject } from 'theme-ui';

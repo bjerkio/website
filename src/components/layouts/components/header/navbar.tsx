@@ -1,7 +1,7 @@
 import { Box, BoxProps, Flex } from '@theme-ui/components';
-import { Link, graphql } from 'gatsby';
-import { FormattedMessage } from 'react-intl';
+import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { SystemStyleObject } from 'theme-ui';
 import { Logo } from '../logo';
 
