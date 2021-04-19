@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import { convertToBgImage } from 'gbimage-bridge';
 import React from 'react';
 import { Box, Container, Flex } from 'theme-ui';

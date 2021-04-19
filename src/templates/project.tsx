@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { MDXProvider } from '@mdx-js/react';
 import {
+  Heading as BaseHeading,
   Box,
   Container,
-  Heading as BaseHeading,
   Image,
 } from '@theme-ui/components';
 import { graphql } from 'gatsby';
