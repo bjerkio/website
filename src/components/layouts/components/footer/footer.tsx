@@ -42,7 +42,7 @@ const Footer: React.FC = () => (
         <Text sx={{ flex: 1, fontSize: 20, whiteSpace: 'pre' }}>
           <FormattedText
             id="copyright"
-            defaultMessage="2021 Bjerk. All rights reserved."
+            defaultMessage="2021 Bjerk."
           />{' '}
           998 732 867 MVA
         </Text>
