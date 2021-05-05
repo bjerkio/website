@@ -5,7 +5,7 @@ const theme = {
     monospace: 'Menlo, monospace',
   },
   colors: {
-    primary: '#0FCFA2',
+    primary: '#4ECCA3',
     secondary: '#1D4C3D',
     dark: '#232931',
     iron: '#393E46',
