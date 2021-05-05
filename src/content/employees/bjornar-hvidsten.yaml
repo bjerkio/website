@@ -1,0 +1,8 @@
+type: employee
+name: Bjørnar Hvidsten
+position:
+  en: Software Developer
+  nb: Programvareutvikler
+email: b@bjerk.io
+phoneNumber: +47 930 55 604
+photo: ./images/bjornar-hvidsten.png
