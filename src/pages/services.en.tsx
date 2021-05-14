@@ -1,4 +1,4 @@
-import { Container, Heading, Text } from '@theme-ui/components';
+import { Box, Container, Heading, Text } from '@theme-ui/components';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import FeatureBox from '../components/feature-box';
@@ -17,16 +17,17 @@ export const Services: React.FC = () => (
         textAlign="left"
         illustration={<ServicesCode sx={{ width: '100%' }} />}
       >
-        <Heading as="h2">Application and software development</Heading>
-        <Text>
-          Do you have ideas for an application or maybe your company needs
-          softwarer for a smoother everyday life? We at Bjerk can help you with
-          everything from development and integration of software to
-          applications so that your workday is automated and thus more
-          efficient. Our highly skilled solution architect and Head of
-          Developing Team - Simen - can help you find the best solution for your
-          idea.
-        </Text>
+        <Heading as="h2">Application and Software development</Heading>
+        <Box sx={{ fontWeight: 600 }}>
+          Bjerk helps organizations build first-class software. For more than a
+          decade, we have created hundreds of applications, integrations and
+          designs that drive businesses to new paradigms.
+        </Box>
+        <Box sx={{ mt: 3 }}>
+          We are driven by helping real people with real issues. When becoming a
+          Bjerk customer, you'll learn about the way that we tightly work with
+          customers, communities and target groups to solve problems.
+        </Box>
       </FeatureBox>
       <StaticImage src="../assets/services-split.png" alt="services" />
       <FeatureBox
