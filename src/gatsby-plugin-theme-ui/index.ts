@@ -1,7 +1,7 @@
 const theme = {
   fonts: {
-    body: 'TTCommons, "Lucida Grande", Tahoma, system-ui, sans-serif',
-    heading: 'TTCommons, "Lucida Grande", Tahoma, system-ui, sans-serif',
+    body: 'TT Commons, "Lucida Grande", Tahoma, system-ui, sans-serif',
+    heading: 'TT Commons, "Lucida Grande", Tahoma, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
   colors: {
