@@ -25,8 +25,8 @@ export const Services: React.FC = () => (
         </Box>
         <Box sx={{ mt: 3 }}>
           We are driven by helping real people with real issues. When becoming a
-          Bjerk customer, you'll learn about the way that we tightly work with
-          customers, communities and target groups to solve problems.
+          Bjerk customer, you&apos;ll learn about the way that we tightly work
+          with customers, communities and target groups to solve problems.
         </Box>
       </FeatureBox>
       <StaticImage src="../assets/services-split.png" alt="services" />
