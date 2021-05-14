@@ -67,7 +67,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['TTCommons', 'TTCommons-Italic'],
+          families: ['TT Commons'],
           urls: ['/fonts/fonts.css'],
         },
       },
