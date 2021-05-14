@@ -17,7 +17,7 @@ export const EmployeeHeading: React.FC = () => (
           fontSize: 'clamp(36px, 3.5vw, 50px)',
         }}
         id="contact.title"
-        defaultMessage="Get in touch with us for a chat!"
+        defaultMessage="Let's talk!"
       />
 
       <Box
@@ -29,7 +29,7 @@ export const EmployeeHeading: React.FC = () => (
         <Link to="mailto:kontoret@bjerk.io" sx={{ color: 'black' }}>kontoret@bjerk.io</Link>
         <Label>+47 22 12 05 12</Label>
         <Label mt={1}>Frognerveien 1B,</Label>
-        <Label>0257</Label>
+        <Label>0257 Oslo</Label>
       </Box>
     </Box>
     <Box sx={{ flex: [0, 0, 1] }}>
