@@ -56,6 +56,12 @@
         "@typescript-eslint/no-var-requires": "off",
         "no-undef": "off"
       }
+    },
+    {
+      "files": ["src/templates/**/*.ts", "src/templates/**/*.tsx"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
     }
   ],
   "plugins": ["eslint-comments", "graphql", "import", "unicorn"],

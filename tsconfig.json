@@ -8,6 +8,7 @@
     "allowJs": true,
     "target": "esnext",
     "jsx": "react",
+    "resolveJsonModule": true,
     "lib": ["dom", "es2015", "es2017"]
   },
   "include": ["./src/**/*"]

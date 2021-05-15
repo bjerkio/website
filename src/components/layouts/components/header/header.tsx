@@ -1,17 +1,35 @@
-/** @jsx */
-import { Box, Container, Flex } from '@theme-ui/components';
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { useState } from 'react';
+import { Box, Container, Flex } from 'theme-ui';
+import { HeaderQuery } from '../../../../generated/graphql-types';
 import { Link } from '../../../link';
 import { Text } from '../../../text';
 import { Logo } from '../logo';
 import Hamburger from './hamburger';
+import HeaderNote from './header-note';
 import MobileMenu from './mobile-menu';
+
+const query = graphql`
+  query Header {
+    site {
+      siteMetadata {
+        headerNote {
+          ...HeaderNote
+        }
+      }
+    }
+  }
+`;
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { site } = useStaticQuery<HeaderQuery>(query);
 
   return (
     <React.Fragment>
+      {site.siteMetadata.headerNote.show && (
+        <HeaderNote data={site.siteMetadata.headerNote} />
+      )}
       <Container variant="centered" sx={{ my: 4 }}>
         <Flex
           sx={{
