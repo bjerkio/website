@@ -11,7 +11,7 @@ const Blog: React.FC<{ data: BlogQuery }> = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <Container variant="centered" sx={{ mb: 5 }}>
-        <Grid columns="1fr 1fr" gap="2rem">
+        <Grid columns={['1fr', '1fr 1fr']} gap="2rem">
           {data.articles.nodes.map((article, i) => {
             const image = getImage(article.frontmatter.image as any);
             return (

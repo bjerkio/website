@@ -27,6 +27,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-background-image',
+    'gatsby-plugin-amp',
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
