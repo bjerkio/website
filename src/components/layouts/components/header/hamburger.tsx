@@ -18,6 +18,8 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onClick }) => (
       fontSize: '100px',
       padding: 0,
     }}
+    aria-label="Navigation"
+    aria-expanded={isOpen}
     onClick={() => onClick(!isOpen)}
   >
     <Box

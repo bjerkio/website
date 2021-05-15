@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             alignItems: 'center',
           }}
         >
-          <Link to="/">
+          <Link to="/" aria-label="Bjerk Logo">
             <Logo
               color="black"
               dotColor="primary"

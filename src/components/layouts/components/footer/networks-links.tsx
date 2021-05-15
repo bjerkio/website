@@ -11,22 +11,26 @@ export const NetworksLinks: React.FC = (props) => (
       {[
         {
           href: 'https://github.com/bjerkio',
+          label: 'Github Profile',
           icon: <SocialGithub width="100%" height="100%" />,
         },
         {
           href: 'https://www.linkedin.com/company/bjerk/',
+          label: 'LinkedIn Profile',
           icon: <SocialLinkedin width="100%" height="100%" />,
         },
         {
           href: 'https://www.facebook.com/WeAreDigitalization',
+          label: 'Facebook Profile',
           icon: <SocialFacebook width="100%" height="100%" />,
         },
-      ].map(({ href, icon }, index) => (
+      ].map(({ href, icon, label }, index) => (
         <Link
           key={index}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={label}
           sx={{
             width: '1.7rem',
             maxWidth: '35px',

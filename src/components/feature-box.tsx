@@ -11,7 +11,7 @@ const FeatureBox: React.FC<FeatureBoxSpec> = ({
   children,
   illustration,
   textAlign = 'left',
-  ml = 6,
+  ml = 4,
 }) => {
   const leftAlign = ['1fr', '1fr', '4fr 2fr'];
   const rightAlign = ['1fr', '1fr', '2fr 4fr'];
