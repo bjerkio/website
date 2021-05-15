@@ -27,7 +27,7 @@ export const query = graphql`
 
 const Hero: React.FC<IntroVideoProps> = ({ children, image }) => {
   const InnerHero: React.FC = () => (
-    <Container sx={{ maxWidth: '1520px', margin: '0 auto', px: [3, 3, 3] }}>
+    <Container variant="centered" sx={{ px: [3, 3, 3] }}>
       <Box sx={{ width: ['auto', 'auto', '60%'] }}>{children}</Box>
     </Container>
   );

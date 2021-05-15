@@ -45,15 +45,21 @@ const theme = {
     justifySelf: 'flex-end',
     alignItems: 'flex-end',
     '>a': {
-      fontSize: 4,
+      fontSize: '1.3rem',
       mx: 3,
-      textDecoration: 'underline',
+      textDecoration: 'none',
     },
   },
   buttons: {
     primary: {
       fontFamily: 'body',
-      borderRadius: '8px',
+      borderRadius: '5px',
+      fontWeight: 500,
+      py: 2,
+      px: 3,
+      fontSize: '1.125rem',
+      lineHeight: '2rem',
+      color: 'black',
     },
     empty: {
       color: 'black',
@@ -70,7 +76,7 @@ const theme = {
     },
   },
   layout: {
-    centered: { margin: '0 auto', px: 4, maxWidth: '1520px' },
+    centered: { margin: '0 auto', px: 4, maxWidth: '1240px' },
   },
   styles: {
     root: {
