@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       });
       createPage({
-        path: `blog/${slug.replace(/\/$/, '')}/amp`,
+        path: `blog/${slug.replace(/\/$/, '')}/amp/`,
         component: path.resolve('./src/templates/article.amp.tsx'),
         context: {
           slug,

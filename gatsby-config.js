@@ -29,10 +29,6 @@ module.exports = {
     'gatsby-background-image',
     {
       resolve: 'gatsby-plugin-amp',
-      options: {
-        // includedPaths: '/blog/*',
-        pathIdentifier: '/amp',
-      },
     },
     {
       resolve: 'gatsby-transformer-yaml',
