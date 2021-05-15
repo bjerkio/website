@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-amp',
       options: {
-        includedPaths: '/blog/*',
+        // includedPaths: '/blog/*',
         pathIdentifier: '/amp',
       },
     },
