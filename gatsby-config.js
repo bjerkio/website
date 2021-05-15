@@ -27,7 +27,13 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-background-image',
-    'gatsby-plugin-amp',
+    {
+      resolve: 'gatsby-plugin-amp',
+      options: {
+        includedPaths: '/blog/*',
+        pathIdentifier: '/amp',
+      },
+    },
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
