@@ -19,9 +19,11 @@ export const query = graphql`
     photo {
       childImageSharp {
         gatsbyImageData(
-          width: 1000
+          layout: CONSTRAINED
+          width: 435
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
+          quality: 100
           transformOptions: {
             # grayscale: true
             duotone: { highlight: "#4ECCA3", shadow: "#242b33" }

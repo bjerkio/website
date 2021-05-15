@@ -12,6 +12,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import { jsx } from 'theme-ui';
 import { Layout } from '../components/layouts';
+import SEO from '../components/seo';
 import { ProjectQuery } from '../generated/graphql-types';
 
 const TwoCenteredImages = ({ key, firstSrc, secondSrc }) => (
@@ -92,6 +93,7 @@ export const ProjectTemplate: React.FC<{ data: ProjectQuery }> = ({ data }) => {
   const img = getImage(project.frontmatter.image as any);
   return (
     <Layout>
+      <SEO title={project.frontmatter.title} />
       <Container variant="centered">
         <BaseHeading
           as="h1"
