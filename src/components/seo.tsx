@@ -2,6 +2,7 @@ import { useLocation } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
+import { useIntl } from 'react-intl';
 
 export interface SEOProps {
   title?: string;
@@ -26,6 +27,7 @@ const query = graphql`
 
 const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
+  const intl = useIntl();
   const { site } = useStaticQuery(query);
 
   const {
@@ -57,7 +59,13 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang: intl.locale,
+      }}
+    >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
