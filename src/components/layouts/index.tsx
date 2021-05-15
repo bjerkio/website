@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { GlobalStyles } from '../../gatsby-plugin-theme-ui/global-styles';
 // import BottomTree from './components/bottom-tree/bottom-tree';
-// import ContactFooter from './components/contact-footer/contact-footer';
+import { Booking } from '../booking';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 
@@ -13,7 +13,7 @@ export const Layout: React.FC = ({ children }) => {
       <Header />
       {children}
       {/* <BottomTree /> */}
-      {/* <ContactFooter /> */}
+      <Booking />
       <Footer />
     </IntlProvider>
   );
