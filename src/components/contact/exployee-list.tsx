@@ -18,7 +18,15 @@ export const query = graphql`
     phoneNumber
     photo {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(
+          width: 1000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          transformOptions: {
+            # grayscale: true
+            duotone: { highlight: "#4ECCA3", shadow: "#242b33" }
+          }
+        )
       }
     }
   }
