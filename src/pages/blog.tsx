@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Box, Container, Grid, Heading, Text } from 'theme-ui';

@@ -54,8 +54,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     .filter(({ frontmatter }) => frontmatter.date && frontmatter.language)
     .forEach(({ slug, frontmatter, fileAbsolutePath }) => {
       createPage({
-        path: `blog/${slug}`,
+        path: `blog/${slug.replace(/\/$/, '')}`,
         component: path.resolve('./src/templates/article.tsx'),
+        context: {
+          slug,
+          lang: frontmatter.language,
+          date: frontmatter.date,
+          fileAbsolutePath,
+        },
+      });
+      createPage({
+        path: `blog/${slug.replace(/\/$/, '')}/amp`,
+        component: path.resolve('./src/templates/article.amp.tsx'),
         context: {
           slug,
           lang: frontmatter.language,

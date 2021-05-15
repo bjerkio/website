@@ -5235,6 +5235,61 @@ export type HomePageQuery = { __typename?: 'Query' } & {
   heroImage?: Maybe<{ __typename?: 'File' } & HeroFragment>;
 };
 
+export type ArticleAmpQueryVariables = Exact<{
+  slug: Scalars['String'];
+  date: Scalars['Date'];
+  lang: Scalars['String'];
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+}>;
+
+export type ArticleAmpQuery = { __typename?: 'Query' } & {
+  article?: Maybe<
+    { __typename?: 'Mdx' } & Pick<
+      Mdx,
+      'id' | 'body' | 'timeToRead' | 'fileAbsolutePath'
+    > & {
+        wordCount?: Maybe<
+          { __typename?: 'MdxWordCount' } & Pick<MdxWordCount, 'words'>
+        >;
+        frontmatter?: Maybe<
+          { __typename?: 'MdxFrontmatter' } & Pick<
+            MdxFrontmatter,
+            'title' | 'date' | 'tags'
+          > & {
+              meta?: Maybe<
+                { __typename?: 'MdxFrontmatterMeta' } & Pick<
+                  MdxFrontmatterMeta,
+                  'description'
+                > & {
+                    image?: Maybe<
+                      { __typename?: 'File' } & {
+                        childImageSharp?: Maybe<
+                          { __typename?: 'ImageSharp' } & Pick<
+                            ImageSharp,
+                            'gatsbyImageData'
+                          >
+                        >;
+                      }
+                    >;
+                  }
+              >;
+              image?: Maybe<
+                { __typename?: 'File' } & {
+                  childImageSharp?: Maybe<
+                    { __typename?: 'ImageSharp' } & Pick<
+                      ImageSharp,
+                      'gatsbyImageData'
+                    >
+                  >;
+                }
+              >;
+            }
+        >;
+      }
+  >;
+  file?: Maybe<{ __typename?: 'File' } & Pick<File, 'relativePath'>>;
+};
+
 export type ArticleQueryVariables = Exact<{
   slug: Scalars['String'];
   date: Scalars['Date'];
