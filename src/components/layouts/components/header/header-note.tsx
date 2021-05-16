@@ -19,7 +19,7 @@ const HeaderNote: React.FC<{ data: HeaderNoteFragment }> = ({ data }) => {
         }}
       >
         <Text>{data.message}</Text>{' '}
-        <Link sx={{ ml: 3, color: darken('yelloooo', 0.5) }} to={data.link.to}>
+        <Link sx={{ ml: 3, color: darken('yelloooo', 0.6) }} to={data.link.to}>
           {data.link.text}
         </Link>
       </Box>
