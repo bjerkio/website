@@ -1,3 +1,4 @@
+import nightOwl from '@theme-ui/prism/presets/night-owl.json';
 const theme = {
   fonts: {
     body: 'TT Commons, "Lucida Grande", Tahoma, system-ui, sans-serif',
@@ -14,6 +15,7 @@ const theme = {
     background: '#fff',
     text: '#232931',
     lightGreen: '#4ECCA3',
+    yelloooo: '#F1F0B0',
   },
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -83,8 +85,8 @@ const theme = {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
+      fontSize: 3,
     },
-
     h1: {
       variant: 'text.heading',
       fontSize: 6,
@@ -117,8 +119,9 @@ const theme = {
       },
     },
     code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
+      ...nightOwl,
+      p: 4,
+      fontSize: 2,
     },
     table: {
       width: '100%',
@@ -134,7 +137,7 @@ const theme = {
       borderBottomStyle: 'solid',
     },
     a: {
-      color: 'background',
+      color: 'inherit',
       textDecoration: 'underline',
     },
     container: {

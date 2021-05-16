@@ -11,6 +11,14 @@ module.exports = {
     titleTemplate: '%s - Bjerk',
     description: 'Bjerk is a development agency from Oslo, Norway.',
     image: 'images/default-seo.jpg',
+    headerNote: {
+      show: true,
+      message: 'We just launched a blog! 🚀',
+      link: {
+        text: 'Check it out →',
+        to: '/blog',
+      },
+    },
   },
   plugins: [
     'gatsby-plugin-theme-ui',
@@ -19,6 +27,9 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-background-image',
+    {
+      resolve: 'gatsby-plugin-amp',
+    },
     {
       resolve: 'gatsby-transformer-yaml',
       options: {
@@ -81,6 +92,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/assets`,
         name: 'assets',
       },
@@ -95,6 +112,9 @@ module.exports = {
               maxWidth: imageMaxWidth,
             },
           },
+          // {
+          //   resolve: 'gatsby-remark-prismjs',
+          // },
         ],
         defaultLayouts: {
           default: require.resolve('./src/components/layouts/centered.tsx'),

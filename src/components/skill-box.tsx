@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
@@ -9,6 +9,7 @@ export interface SkillBoxProps {
   name: string;
   image: any;
   title: string;
+  linkTo: string;
 }
 
 export const query = graphql`
@@ -26,6 +27,7 @@ export const query = graphql`
 export const SkillBox: React.FC<SkillBoxProps> = ({
   name,
   title,
+  linkTo,
   children,
   image: imageSource,
 }) => {
@@ -42,7 +44,7 @@ export const SkillBox: React.FC<SkillBoxProps> = ({
           <FormattedMessage id={`skill-box-${name}`} defaultMessage={title} />
         </Heading>
         <Box sx={{ fontSize: 4 }}>{children}</Box>
-        <Button sx={{ mt: 3 }}>Start the build →</Button>
+        <Button onClick={() => navigate(linkTo)} sx={{ mt: 3 }}>Read more →</Button>
       </Box>
     </Grid>
   );

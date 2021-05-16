@@ -708,6 +708,9 @@ export enum FileFieldsEnum {
   ChildrenMdxFrontmatterImageChildrenEmployee = 'childrenMdx___frontmatter___image___childrenEmployee',
   ChildrenMdxFrontmatterImageId = 'childrenMdx___frontmatter___image___id',
   ChildrenMdxFrontmatterImageChildren = 'childrenMdx___frontmatter___image___children',
+  ChildrenMdxFrontmatterDate = 'childrenMdx___frontmatter___date',
+  ChildrenMdxFrontmatterMetaDescription = 'childrenMdx___frontmatter___meta___description',
+  ChildrenMdxFrontmatterTags = 'childrenMdx___frontmatter___tags',
   ChildrenMdxSlug = 'childrenMdx___slug',
   ChildrenMdxBody = 'childrenMdx___body',
   ChildrenMdxExcerpt = 'childrenMdx___excerpt',
@@ -805,6 +808,9 @@ export enum FileFieldsEnum {
   ChildMdxFrontmatterImageChildrenEmployee = 'childMdx___frontmatter___image___childrenEmployee',
   ChildMdxFrontmatterImageId = 'childMdx___frontmatter___image___id',
   ChildMdxFrontmatterImageChildren = 'childMdx___frontmatter___image___children',
+  ChildMdxFrontmatterDate = 'childMdx___frontmatter___date',
+  ChildMdxFrontmatterMetaDescription = 'childMdx___frontmatter___meta___description',
+  ChildMdxFrontmatterTags = 'childMdx___frontmatter___tags',
   ChildMdxSlug = 'childMdx___slug',
   ChildMdxBody = 'childMdx___body',
   ChildMdxExcerpt = 'childMdx___excerpt',
@@ -2167,6 +2173,48 @@ export enum MdxFieldsEnum {
   FrontmatterImageInternalMediaType = 'frontmatter___image___internal___mediaType',
   FrontmatterImageInternalOwner = 'frontmatter___image___internal___owner',
   FrontmatterImageInternalType = 'frontmatter___image___internal___type',
+  FrontmatterDate = 'frontmatter___date',
+  FrontmatterMetaDescription = 'frontmatter___meta___description',
+  FrontmatterMetaImageSourceInstanceName = 'frontmatter___meta___image___sourceInstanceName',
+  FrontmatterMetaImageAbsolutePath = 'frontmatter___meta___image___absolutePath',
+  FrontmatterMetaImageRelativePath = 'frontmatter___meta___image___relativePath',
+  FrontmatterMetaImageExtension = 'frontmatter___meta___image___extension',
+  FrontmatterMetaImageSize = 'frontmatter___meta___image___size',
+  FrontmatterMetaImagePrettySize = 'frontmatter___meta___image___prettySize',
+  FrontmatterMetaImageModifiedTime = 'frontmatter___meta___image___modifiedTime',
+  FrontmatterMetaImageAccessTime = 'frontmatter___meta___image___accessTime',
+  FrontmatterMetaImageChangeTime = 'frontmatter___meta___image___changeTime',
+  FrontmatterMetaImageBirthTime = 'frontmatter___meta___image___birthTime',
+  FrontmatterMetaImageRoot = 'frontmatter___meta___image___root',
+  FrontmatterMetaImageDir = 'frontmatter___meta___image___dir',
+  FrontmatterMetaImageBase = 'frontmatter___meta___image___base',
+  FrontmatterMetaImageExt = 'frontmatter___meta___image___ext',
+  FrontmatterMetaImageName = 'frontmatter___meta___image___name',
+  FrontmatterMetaImageRelativeDirectory = 'frontmatter___meta___image___relativeDirectory',
+  FrontmatterMetaImageDev = 'frontmatter___meta___image___dev',
+  FrontmatterMetaImageMode = 'frontmatter___meta___image___mode',
+  FrontmatterMetaImageNlink = 'frontmatter___meta___image___nlink',
+  FrontmatterMetaImageUid = 'frontmatter___meta___image___uid',
+  FrontmatterMetaImageGid = 'frontmatter___meta___image___gid',
+  FrontmatterMetaImageRdev = 'frontmatter___meta___image___rdev',
+  FrontmatterMetaImageIno = 'frontmatter___meta___image___ino',
+  FrontmatterMetaImageAtimeMs = 'frontmatter___meta___image___atimeMs',
+  FrontmatterMetaImageMtimeMs = 'frontmatter___meta___image___mtimeMs',
+  FrontmatterMetaImageCtimeMs = 'frontmatter___meta___image___ctimeMs',
+  FrontmatterMetaImageAtime = 'frontmatter___meta___image___atime',
+  FrontmatterMetaImageMtime = 'frontmatter___meta___image___mtime',
+  FrontmatterMetaImageCtime = 'frontmatter___meta___image___ctime',
+  FrontmatterMetaImageBirthtime = 'frontmatter___meta___image___birthtime',
+  FrontmatterMetaImageBirthtimeMs = 'frontmatter___meta___image___birthtimeMs',
+  FrontmatterMetaImageBlksize = 'frontmatter___meta___image___blksize',
+  FrontmatterMetaImageBlocks = 'frontmatter___meta___image___blocks',
+  FrontmatterMetaImagePublicUrl = 'frontmatter___meta___image___publicURL',
+  FrontmatterMetaImageChildrenImageSharp = 'frontmatter___meta___image___childrenImageSharp',
+  FrontmatterMetaImageChildrenMdx = 'frontmatter___meta___image___childrenMdx',
+  FrontmatterMetaImageChildrenEmployee = 'frontmatter___meta___image___childrenEmployee',
+  FrontmatterMetaImageId = 'frontmatter___meta___image___id',
+  FrontmatterMetaImageChildren = 'frontmatter___meta___image___children',
+  FrontmatterTags = 'frontmatter___tags',
   Slug = 'slug',
   Body = 'body',
   Excerpt = 'excerpt',
@@ -2299,6 +2347,16 @@ export type MdxFrontmatter = {
   type?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
   image?: Maybe<File>;
+  date?: Maybe<Scalars['Date']>;
+  meta?: Maybe<MdxFrontmatterMeta>;
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+export type MdxFrontmatterDateArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
 };
 
 export type MdxFrontmatterFilterInput = {
@@ -2307,6 +2365,20 @@ export type MdxFrontmatterFilterInput = {
   id?: Maybe<IntQueryOperatorInput>;
   type?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
+  date?: Maybe<DateQueryOperatorInput>;
+  meta?: Maybe<MdxFrontmatterMetaFilterInput>;
+  tags?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MdxFrontmatterMeta = {
+  __typename?: 'MdxFrontmatterMeta';
+  description?: Maybe<Scalars['String']>;
+  image?: Maybe<File>;
+};
+
+export type MdxFrontmatterMetaFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<FileFilterInput>;
 };
 
@@ -2543,8 +2615,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2775,8 +2845,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -2980,10 +3048,12 @@ export enum SiteFieldsEnum {
   SiteMetadataSiteUrl = 'siteMetadata___siteUrl',
   SiteMetadataTitleTemplate = 'siteMetadata___titleTemplate',
   SiteMetadataImage = 'siteMetadata___image',
+  SiteMetadataHeaderNoteShow = 'siteMetadata___headerNote___show',
+  SiteMetadataHeaderNoteMessage = 'siteMetadata___headerNote___message',
+  SiteMetadataHeaderNoteLinkText = 'siteMetadata___headerNote___link___text',
+  SiteMetadataHeaderNoteLinkTo = 'siteMetadata___headerNote___link___to',
   Port = 'port',
   Host = 'host',
-  Polyfill = 'polyfill',
-  PathPrefix = 'pathPrefix',
   Id = 'id',
   ParentId = 'parent___id',
   ParentParentId = 'parent___parent___id',
@@ -3077,8 +3147,6 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -3136,14 +3204,18 @@ export type SitePageConnectionGroupArgs = {
 export type SitePageContext = {
   __typename?: 'SitePageContext';
   slug?: Maybe<Scalars['String']>;
-  lang?: Maybe<Scalars['String']>;
   langKey?: Maybe<Scalars['String']>;
+  lang?: Maybe<Scalars['String']>;
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['Date']>;
 };
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
-  lang?: Maybe<StringQueryOperatorInput>;
   langKey?: Maybe<StringQueryOperatorInput>;
+  lang?: Maybe<StringQueryOperatorInput>;
+  fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
+  date?: Maybe<DateQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -3367,8 +3439,10 @@ export enum SitePageFieldsEnum {
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
   ContextSlug = 'context___slug',
-  ContextLang = 'context___lang',
   ContextLangKey = 'context___langKey',
+  ContextLang = 'context___lang',
+  ContextFileAbsolutePath = 'context___fileAbsolutePath',
+  ContextDate = 'context___date',
 }
 
 export type SitePageFilterInput = {
@@ -3946,6 +4020,7 @@ export type SiteSiteMetadata = {
   siteUrl?: Maybe<Scalars['String']>;
   titleTemplate?: Maybe<Scalars['String']>;
   image?: Maybe<Scalars['String']>;
+  headerNote?: Maybe<SiteSiteMetadataHeaderNote>;
 };
 
 export type SiteSiteMetadataFilterInput = {
@@ -3954,6 +4029,31 @@ export type SiteSiteMetadataFilterInput = {
   siteUrl?: Maybe<StringQueryOperatorInput>;
   titleTemplate?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
+  headerNote?: Maybe<SiteSiteMetadataHeaderNoteFilterInput>;
+};
+
+export type SiteSiteMetadataHeaderNote = {
+  __typename?: 'SiteSiteMetadataHeaderNote';
+  show?: Maybe<Scalars['Boolean']>;
+  message?: Maybe<Scalars['String']>;
+  link?: Maybe<SiteSiteMetadataHeaderNoteLink>;
+};
+
+export type SiteSiteMetadataHeaderNoteFilterInput = {
+  show?: Maybe<BooleanQueryOperatorInput>;
+  message?: Maybe<StringQueryOperatorInput>;
+  link?: Maybe<SiteSiteMetadataHeaderNoteLinkFilterInput>;
+};
+
+export type SiteSiteMetadataHeaderNoteLink = {
+  __typename?: 'SiteSiteMetadataHeaderNoteLink';
+  text?: Maybe<Scalars['String']>;
+  to?: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataHeaderNoteLinkFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  to?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -4707,6 +4807,8 @@ export enum EmployeeFieldsEnum {
   PhotoChildrenMdxFrontmatterId = 'photo___childrenMdx___frontmatter___id',
   PhotoChildrenMdxFrontmatterType = 'photo___childrenMdx___frontmatter___type',
   PhotoChildrenMdxFrontmatterSlug = 'photo___childrenMdx___frontmatter___slug',
+  PhotoChildrenMdxFrontmatterDate = 'photo___childrenMdx___frontmatter___date',
+  PhotoChildrenMdxFrontmatterTags = 'photo___childrenMdx___frontmatter___tags',
   PhotoChildrenMdxSlug = 'photo___childrenMdx___slug',
   PhotoChildrenMdxBody = 'photo___childrenMdx___body',
   PhotoChildrenMdxExcerpt = 'photo___childrenMdx___excerpt',
@@ -4741,6 +4843,8 @@ export enum EmployeeFieldsEnum {
   PhotoChildMdxFrontmatterId = 'photo___childMdx___frontmatter___id',
   PhotoChildMdxFrontmatterType = 'photo___childMdx___frontmatter___type',
   PhotoChildMdxFrontmatterSlug = 'photo___childMdx___frontmatter___slug',
+  PhotoChildMdxFrontmatterDate = 'photo___childMdx___frontmatter___date',
+  PhotoChildMdxFrontmatterTags = 'photo___childMdx___frontmatter___tags',
   PhotoChildMdxSlug = 'photo___childMdx___slug',
   PhotoChildMdxBody = 'photo___childMdx___body',
   PhotoChildMdxExcerpt = 'photo___childMdx___excerpt',
@@ -4970,19 +5074,31 @@ export type EmployeeSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type ProjectSlugsQueryVariables = Exact<{ [key: string]: never }>;
+export type SlugsQueryVariables = Exact<{ [key: string]: never }>;
 
-export type ProjectSlugsQuery = { __typename?: 'Query' } & {
-  allMdx: { __typename?: 'MdxConnection' } & {
+export type SlugsQuery = { __typename?: 'Query' } & {
+  projects: { __typename?: 'MdxConnection' } & {
     nodes: Array<
-      { __typename?: 'Mdx' } & {
-        frontmatter?: Maybe<
-          { __typename?: 'MdxFrontmatter' } & Pick<
-            MdxFrontmatter,
-            'language' | 'slug'
-          >
-        >;
-      }
+      { __typename?: 'Mdx' } & Pick<Mdx, 'fileAbsolutePath'> & {
+          frontmatter?: Maybe<
+            { __typename?: 'MdxFrontmatter' } & Pick<
+              MdxFrontmatter,
+              'language' | 'slug'
+            >
+          >;
+        }
+    >;
+  };
+  articles: { __typename?: 'MdxConnection' } & {
+    nodes: Array<
+      { __typename?: 'Mdx' } & Pick<Mdx, 'slug' | 'fileAbsolutePath'> & {
+          frontmatter?: Maybe<
+            { __typename?: 'MdxFrontmatter' } & Pick<
+              MdxFrontmatter,
+              'date' | 'language'
+            >
+          >;
+        }
     >;
   };
 };
@@ -5022,6 +5138,33 @@ export type ProjectBoxFragment = { __typename?: 'MdxFrontmatter' } & Pick<
     >;
   };
 
+export type HeaderNoteFragment = {
+  __typename?: 'SiteSiteMetadataHeaderNote';
+} & Pick<SiteSiteMetadataHeaderNote, 'message' | 'show'> & {
+    link?: Maybe<
+      { __typename?: 'SiteSiteMetadataHeaderNoteLink' } & Pick<
+        SiteSiteMetadataHeaderNoteLink,
+        'text' | 'to'
+      >
+    >;
+  };
+
+export type HeaderQueryVariables = Exact<{ [key: string]: never }>;
+
+export type HeaderQuery = { __typename?: 'Query' } & {
+  site?: Maybe<
+    { __typename?: 'Site' } & {
+      siteMetadata?: Maybe<
+        { __typename?: 'SiteSiteMetadata' } & {
+          headerNote?: Maybe<
+            { __typename?: 'SiteSiteMetadataHeaderNote' } & HeaderNoteFragment
+          >;
+        }
+      >;
+    }
+  >;
+};
+
 export type SeoQueryVariables = Exact<{ [key: string]: never }>;
 
 export type SeoQuery = { __typename?: 'Query' } & {
@@ -5039,6 +5182,40 @@ export type SeoQuery = { __typename?: 'Query' } & {
       >;
     }
   >;
+};
+
+export type SkillImageFragment = { __typename?: 'File' } & {
+  childImageSharp?: Maybe<
+    { __typename?: 'ImageSharp' } & Pick<ImageSharp, 'gatsbyImageData'>
+  >;
+};
+
+export type BlogQueryVariables = Exact<{ [key: string]: never }>;
+
+export type BlogQuery = { __typename?: 'Query' } & {
+  articles: { __typename?: 'MdxConnection' } & {
+    nodes: Array<
+      { __typename?: 'Mdx' } & Pick<Mdx, 'slug' | 'excerpt'> & {
+          frontmatter?: Maybe<
+            { __typename?: 'MdxFrontmatter' } & Pick<
+              MdxFrontmatter,
+              'title' | 'date'
+            > & {
+                image?: Maybe<
+                  { __typename?: 'File' } & {
+                    childImageSharp?: Maybe<
+                      { __typename?: 'ImageSharp' } & Pick<
+                        ImageSharp,
+                        'gatsbyImageData'
+                      >
+                    >;
+                  }
+                >;
+              }
+          >;
+        }
+    >;
+  };
 };
 
 export type ContactPageQueryVariables = Exact<{ [key: string]: never }>;
@@ -5061,7 +5238,117 @@ export type HomePageQuery = { __typename?: 'Query' } & {
       }
     >;
   };
-  skillImage?: Maybe<{ __typename?: 'File' } & HeroFragment>;
+  skillImage?: Maybe<{ __typename?: 'File' } & SkillImageFragment>;
+};
+
+export type ArticleAmpQueryVariables = Exact<{
+  slug: Scalars['String'];
+  date: Scalars['Date'];
+  lang: Scalars['String'];
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+}>;
+
+export type ArticleAmpQuery = { __typename?: 'Query' } & {
+  article?: Maybe<
+    { __typename?: 'Mdx' } & Pick<
+      Mdx,
+      'id' | 'body' | 'timeToRead' | 'fileAbsolutePath'
+    > & {
+        wordCount?: Maybe<
+          { __typename?: 'MdxWordCount' } & Pick<MdxWordCount, 'words'>
+        >;
+        frontmatter?: Maybe<
+          { __typename?: 'MdxFrontmatter' } & Pick<
+            MdxFrontmatter,
+            'title' | 'date' | 'tags'
+          > & {
+              meta?: Maybe<
+                { __typename?: 'MdxFrontmatterMeta' } & Pick<
+                  MdxFrontmatterMeta,
+                  'description'
+                > & {
+                    image?: Maybe<
+                      { __typename?: 'File' } & {
+                        childImageSharp?: Maybe<
+                          { __typename?: 'ImageSharp' } & Pick<
+                            ImageSharp,
+                            'gatsbyImageData'
+                          >
+                        >;
+                      }
+                    >;
+                  }
+              >;
+              image?: Maybe<
+                { __typename?: 'File' } & {
+                  childImageSharp?: Maybe<
+                    { __typename?: 'ImageSharp' } & Pick<
+                      ImageSharp,
+                      'gatsbyImageData'
+                    >
+                  >;
+                }
+              >;
+            }
+        >;
+      }
+  >;
+  file?: Maybe<{ __typename?: 'File' } & Pick<File, 'relativePath'>>;
+};
+
+export type ArticleQueryVariables = Exact<{
+  slug: Scalars['String'];
+  date: Scalars['Date'];
+  lang: Scalars['String'];
+  fileAbsolutePath?: Maybe<Scalars['String']>;
+}>;
+
+export type ArticleQuery = { __typename?: 'Query' } & {
+  article?: Maybe<
+    { __typename?: 'Mdx' } & Pick<
+      Mdx,
+      'id' | 'body' | 'timeToRead' | 'fileAbsolutePath'
+    > & {
+        wordCount?: Maybe<
+          { __typename?: 'MdxWordCount' } & Pick<MdxWordCount, 'words'>
+        >;
+        frontmatter?: Maybe<
+          { __typename?: 'MdxFrontmatter' } & Pick<
+            MdxFrontmatter,
+            'title' | 'date' | 'tags'
+          > & {
+              meta?: Maybe<
+                { __typename?: 'MdxFrontmatterMeta' } & Pick<
+                  MdxFrontmatterMeta,
+                  'description'
+                > & {
+                    image?: Maybe<
+                      { __typename?: 'File' } & {
+                        childImageSharp?: Maybe<
+                          { __typename?: 'ImageSharp' } & Pick<
+                            ImageSharp,
+                            'gatsbyImageData'
+                          >
+                        >;
+                      }
+                    >;
+                  }
+              >;
+              image?: Maybe<
+                { __typename?: 'File' } & {
+                  childImageSharp?: Maybe<
+                    { __typename?: 'ImageSharp' } & Pick<
+                      ImageSharp,
+                      'gatsbyImageData'
+                    >
+                  >;
+                }
+              >;
+            }
+        >;
+      }
+  >;
+  file?: Maybe<{ __typename?: 'File' } & Pick<File, 'relativePath'>>;
 };
 
 export type ProjectQueryVariables = Exact<{

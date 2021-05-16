@@ -12,7 +12,10 @@ export const query = graphql`
   query HomePage {
     allMdx(
       sort: { fields: [frontmatter___id] }
-      filter: { frontmatter: { language: { eq: "en" } } }
+      filter: {
+        frontmatter: { language: { eq: "en" } }
+        fileAbsolutePath: { glob: "**/content/projects/**/*" }
+      }
     ) {
       nodes {
         frontmatter {
@@ -59,9 +62,10 @@ const Homepage: React.FC<{ data: HomePageQuery }> = ({ data }) => {
           />
         </Heading>
         <SkillBox
-          image={data.skillImage}
+          image={data.skillImage.childImageSharp}
           name="software-development"
           title="Experts in Software Development"
+          linkTo="/services"
         >
           <FormattedMessage
             id="software-skill-box"

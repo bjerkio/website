@@ -8,7 +8,7 @@ export interface SEOProps {
   title?: string;
   description?: string;
   image?: string;
-  article?: boolean;
+  schema?: unknown;
 }
 
 const query = graphql`
@@ -25,7 +25,7 @@ const query = graphql`
   }
 `;
 
-const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
+const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
   const { pathname } = useLocation();
   const intl = useIntl();
   const { site } = useStaticQuery(query);
@@ -41,11 +41,11 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: `${siteUrl}/${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
 
-  const orgSchema = {
+  const orgSchema = schema || {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     url: 'https://bjerk.io',
@@ -69,7 +69,6 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
