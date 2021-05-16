@@ -42,7 +42,7 @@ const Homepage: React.FC<{ data: HomePageQuery }> = ({ data }) => {
             fontSize: [6, 8],
             fontWeight: 700,
             lineHeight: ['', '5rem'],
-            py: 6,
+            my: [5, 7],
             mb: 5,
           }}
         >
@@ -76,7 +76,7 @@ const Homepage: React.FC<{ data: HomePageQuery }> = ({ data }) => {
             ].join(' ')}
           />
         </SkillBox>
-        <Box sx={{ mt: 6 }}>
+        <Box sx={{ mt: [2, 6] }}>
           {data.allMdx.nodes.map((item, index) => (
             <ProjectBox key={index} data={item.frontmatter} />
           ))}

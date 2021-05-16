@@ -13,11 +13,9 @@ export const query = graphql`
     image {
       childImageSharp {
         gatsbyImageData(
-          width: 1540
+          layout: FULL_WIDTH
           height: 700
-          jpgOptions: { quality: 100 }
-          pngOptions: { quality: 100 }
-          transformOptions: { cropFocus: CENTER, fit: COVER }
+          placeholder: DOMINANT_COLOR
           quality: 100
         )
       }
@@ -32,7 +30,7 @@ export const ProjectBox: React.FC<{ data: ProjectBoxFragment }> = ({
   return (
     <Box
       sx={{
-        mb: 5,
+        mb: [3, 5],
         overflow: 'hidden',
         ':hover': {
           cursor: 'pointer',
@@ -48,25 +46,14 @@ export const ProjectBox: React.FC<{ data: ProjectBoxFragment }> = ({
         to={`projects/${language}/${slug}`}
         sx={{ color: 'text', textDecoration: 'none', overflow: 'hidden' }}
       >
-        <Box
-          sx={{
-            mt: 4,
-            ml: ['-20vw', 0, 0],
-            height: ['37vh', '100%', '100%'],
-            width: ['140vw', '100%', '100%'],
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          {image && (
-            <GatsbyImage
-              image={img}
-              alt={title}
-              sx={{ width: '100%', transition: '.4s' }}
-            />
-          )}
-        </Box>
-        <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', mx: [4, 4, 0] }}>
+        {image && (
+          <GatsbyImage
+            image={img}
+            alt={title}
+            sx={{ transition: '.4s', borderRadius: '0.3125rem' }}
+          />
+        )}
+        <Box sx={{ mt: 1, fontSize: '22px', fontWeight: '600', my: 3 }}>
           <span className="linkText">{title}</span>
         </Box>
       </Link>

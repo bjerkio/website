@@ -17,7 +17,7 @@ export const People: React.FC<PeopleProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     width={String(width)}
     height={String(height)}
-    viewBox=""
+    viewBox="0 0 460.291 328.448"
     {...props}
   >
     <defs>

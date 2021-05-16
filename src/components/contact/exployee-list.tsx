@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Flex, Grid, Text } from '@theme-ui/components';
+import { Box, Flex, Grid, Link, Text } from '@theme-ui/components';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
@@ -47,7 +47,7 @@ export const EmployeeList: React.FC<{ data: EmployeeListFragment[] }> = ({
           <Box
             key={index}
             sx={{
-              mb: 5,
+              mb: [4, 5],
               mr: [4, 4, 3],
             }}
           >
@@ -74,8 +74,14 @@ export const EmployeeList: React.FC<{ data: EmployeeListFragment[] }> = ({
               mt={2}
               sx={{ flexDirection: 'column', fontSize: [20, 20, 24] }}
             >
-              <Text color="black">{employee.email}</Text>
-              <Text color="black">{employee.phoneNumber}</Text>
+              <Text color="black">
+                <Link href={`mailto:${employee.email}`}>{employee.email}</Link>
+              </Text>
+              <Text color="black">
+                <Link href={`tlf:${employee.phoneNumber.replace(' ', '')}`}>
+                  {employee.phoneNumber}
+                </Link>
+              </Text>
             </Flex>
           </Box>
         );

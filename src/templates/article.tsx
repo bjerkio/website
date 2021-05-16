@@ -45,7 +45,7 @@ const Article: React.FC<{ data: ArticleQuery }> = ({ data }) => {
         </Box>
       </Container>
       <Container variant="centered" sx={{ maxWidth: '940px', mb: 5 }}>
-        <Heading as="h1" sx={{ fontSize: 7, mb: 4, mt: 5 }}>
+        <Heading as="h1" sx={{ fontSize: [5, 7], mb: [3, 4], mt: [4, 5] }}>
           {data.article.frontmatter.title}
         </Heading>
         <Box>
@@ -62,9 +62,12 @@ const Article: React.FC<{ data: ArticleQuery }> = ({ data }) => {
             the source code for this website on Github
           </Link>{' '}
           or{' '}
-          <Link href={`https://github.com/bjerkio/website/blob/main/src/blog/${data.file.relativePath}`}>
+          <Link
+            href={`https://github.com/bjerkio/website/blob/main/src/blog/${data.file.relativePath}`}
+          >
             edit this article
-          </Link>.
+          </Link>
+          .
         </Box>
       </Container>
     </Layout>
