@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  pull_request:
+
 jobs:
   preload-font:
     name: Preload Fonts
@@ -45,6 +47,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: font-preload-cache.json
-          commit_message: 'chore(dist): Update dist [automated commit]'
+          commit_message: 'chore(dist): Update font preload [automated commit]'
           commit_user_name: Bjerk Bot
           commit_user_email: bjerk-bot@users.noreply.github.com
