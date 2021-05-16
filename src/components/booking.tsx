@@ -11,7 +11,9 @@ export const Booking: React.FC = () => {
         variant="centered"
         sx={{ textAlign: 'center', py: 6, maxWidth: '660px' }}
       >
-        <Box sx={{ fontSize: 8, fontWeight: 600, lineHeight: '5rem', mb: 4 }}>
+        <Box
+          sx={{ fontSize: [5, 8], fontWeight: 600, lineHeight: '5rem', mb: 4 }}
+        >
           Let’s find some time and meet!
         </Box>
         <Button sx={{ color: 'iron' }} onClick={onClick}>
@@ -20,4 +22,4 @@ export const Booking: React.FC = () => {
       </Container>
     </Box>
   );
-      }
+};
