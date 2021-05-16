@@ -26,6 +26,7 @@
     "gatsby-plugin-mdx": "^2.3.0",
     "gatsby-plugin-offline": "^4.3.0",
     "gatsby-plugin-page-creator": "^3.3.0",
+    "gatsby-plugin-preload-fonts": "^2.5.0",
     "gatsby-plugin-react-helmet": "^4.3.0",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "^3.3.0",
@@ -61,7 +62,8 @@
     "lint": "eslint . --cache",
     "generate": "graphql-codegen --config codegen.yml",
     "test": "jest --passWithNoTests",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "lint-staged": {
     "{web}/**/*.{json,css,yaml,yml}": "prettier --write",
@@ -100,7 +102,8 @@
     "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
     "ts-jest": "^26.5.5",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "wait-on": "^5.3.0"
   },
   "volta": {
     "node": "14.15.0",

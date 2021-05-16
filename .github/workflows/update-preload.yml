@@ -1,0 +1,53 @@
+name: Update preloaded fonts
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  preload-font:
+    name: Preload Fonts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Caching NPM packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Caching Gatsby
+        uses: actions/cache@v2
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Preload font
+        run: |
+          yarn dev && yarn wait-on http://localhost:8000 && yarn preload-fonts
+
+      - name: Run preload font
+        run: yarn preload-fonts
+        env:
+          CI: true
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: font-preload-cache.json
+          commit_message: 'chore(dist): Update dist [automated commit]'
+          commit_user_name: Bjerk Bot
+          commit_user_email: bjerk-bot@users.noreply.github.com
