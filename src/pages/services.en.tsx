@@ -31,7 +31,7 @@ export const Services: React.FC = () => (
           with customers, communities and target groups to solve problems.
         </Box>
       </FeatureBox>
-      <StaticImage src="../assets/services-split.png" sx={{ height: '200px', my: 1 }} alt="services" />
+      <StaticImage src="../assets/services-split.png" sx={{ my: 1 }} alt="services" />
       <FeatureBox
         textAlign="right"
         illustration={<ServicesStrategic sx={{ width: '100%' }} />}
