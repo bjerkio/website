@@ -69,4 +69,12 @@ jobs:
           urls: ${{ steps.parse-sitemap.outputs.urls }}
           uploadArtifacts: true
           temporaryPublicStorage: true
+      
+      - name: Run axe
+        run: |
+          npx @axe-core/cli https://bjerk.io --exit
+      
+      - name: Run pa11y
+        run: |
+          npx pa11y http://localhost:8000
 

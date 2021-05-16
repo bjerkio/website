@@ -38,10 +38,7 @@ jobs:
 
       - name: Preload font
         run: |
-          yarn dev && yarn wait-on http://localhost:8000 && yarn preload-fonts
-
-      - name: Run preload font
-        run: yarn preload-fonts
+          yarn dev & yarn wait-on http://localhost:8000 && yarn preload-fonts
         env:
           CI: true
 
