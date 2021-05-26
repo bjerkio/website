@@ -70,3 +70,12 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
 
+      # TODO: Add axe and pa11y back in after fixing      
+      # - name: Run axe
+      #   run: |
+      #     npx @axe-core/cli https://bjerk.io --exit
+      
+      # - name: Run pa11y
+      #   run: |
+      #     npx pa11y https://bjerk.io
+
