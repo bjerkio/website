@@ -22,7 +22,7 @@ export const Booking: React.FC = () => {
         >
           <Text
             id="time-to-connect"
-            defaultMessage="Let’s find some time to connect!"
+            defaultMessage="Let’s connect!"
           />
         </Box>
         <Button sx={{ color: 'iron' }} onClick={onClick}>
