@@ -85,6 +85,7 @@ const Header: React.FC = () => {
                 position: 'fixed',
                 top: 0,
                 left: 0,
+                zIndex: 10,
               }}
             >
               <MobileMenu />

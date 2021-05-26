@@ -16,6 +16,7 @@ const HeaderNote: React.FC<{ data: HeaderNoteFragment }> = ({ data }) => {
           lineHeight: '2rem',
           display: 'inline-block',
           fontWeight: 500,
+          mr: [5, 0]
         }}
       >
         <Text>{data.message}</Text>{' '}

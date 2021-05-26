@@ -24,7 +24,7 @@ const FeatureBox: React.FC<FeatureBoxSpec> = ({
       sx={{
         ml: [0, 0, ml],
         py: 3,
-        my: 6,
+        my: [4, 6],
         fontSize: 4,
       }}
       gap="2"
@@ -43,6 +43,7 @@ const FeatureBox: React.FC<FeatureBoxSpec> = ({
           sx={{
             flex: 2,
             order: secondElement,
+            mb: [3, 0],
           }}
         >
           {illustration}

@@ -39,12 +39,14 @@ export const SkillBox: React.FC<SkillBoxProps> = ({
         image={image}
         alt={title}
       />
-      <Box sx={{ ml: 4, my: 5 }}>
+      <Box sx={{ ml: [0, 4], my: [4, 5] }}>
         <Heading sx={{ fontSize: 6, fontWeight: 600, lineHeight: '3rem' }}>
           <FormattedMessage id={`skill-box-${name}`} defaultMessage={title} />
         </Heading>
         <Box sx={{ fontSize: 4 }}>{children}</Box>
-        <Button onClick={() => navigate(linkTo)} sx={{ mt: 3 }}>Read more →</Button>
+        <Button onClick={() => navigate(linkTo)} sx={{ mt: 3 }}>
+          Read more →
+        </Button>
       </Box>
     </Grid>
   );

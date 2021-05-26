@@ -1,6 +1,8 @@
+/** @jsx jsx */
 import { Box, Container, Heading, Text } from '@theme-ui/components';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { jsx } from 'theme-ui';
 import FeatureBox from '../components/feature-box';
 import { ServicesCode, ServicesStrategic } from '../components/illustrations';
 import Layout from '../components/layouts';
@@ -29,7 +31,7 @@ export const Services: React.FC = () => (
           with customers, communities and target groups to solve problems.
         </Box>
       </FeatureBox>
-      <StaticImage src="../assets/services-split.png" alt="services" />
+      <StaticImage src="../assets/services-split.png" sx={{ my: 1 }} alt="services" />
       <FeatureBox
         textAlign="right"
         illustration={<ServicesStrategic sx={{ width: '100%' }} />}
