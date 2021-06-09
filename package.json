@@ -14,7 +14,7 @@
     "@theme-ui/presets": "^0.7.0",
     "@theme-ui/prism": "^0.8.4",
     "@theme-ui/theme-provider": "^0.7.0",
-    "date-fns": "^2.21.1",
+    "date-fns": "^2.22.1",
     "formik": "^2.2.1",
     "gatsby": "^3.3.0",
     "gatsby-background-image": "^1.5.1",
