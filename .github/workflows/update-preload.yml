@@ -21,9 +21,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ secrets.CACHE_KEY }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-${{ secrets.CACHE_KEY }}-yarn-
 
       - name: Caching Gatsby
         uses: actions/cache@v2
@@ -31,9 +31,9 @@ jobs:
           path: |
             public
             .cache
-          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
+          key: ${{ runner.os }}-${{ secrets.CACHE_KEY }}-gatsby-build-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            ${{ runner.os }}-${{ secrets.CACHE_KEY }}-gatsby-build-
 
       - name: Install dependencies
         run: yarn install
