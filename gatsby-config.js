@@ -22,12 +22,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-theme-ui',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-robots-txt',
-    'gatsby-plugin-sitemap',
+    // 'gatsby-plugin-react-helmet',
+    // 'gatsby-plugin-robots-txt',
+    // 'gatsby-plugin-sitemap',
     'gatsby-plugin-typescript',
     'gatsby-background-image',
-    'gatsby-plugin-preload-fonts',
+    // 'gatsby-plugin-preload-fonts',
     // {
     //   resolve: 'gatsby-plugin-amp',
     // },
@@ -76,15 +76,15 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['TT Commons'],
-          urls: ['/fonts/fonts.css'],
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     custom: {
+    //       families: ['TT Commons'],
+    //       urls: ['/fonts/fonts.css'],
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
