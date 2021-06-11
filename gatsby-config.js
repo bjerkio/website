@@ -65,7 +65,8 @@ module.exports = {
         icon: 'src/assets/favicon.svg',
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
+    // 'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
