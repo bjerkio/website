@@ -19,7 +19,6 @@
     "gatsby": "^3.7.1",
     "gatsby-background-image": "^1.5.3",
     "gatsby-link": "^3.7.1",
-    "gatsby-plugin-amp": "^0.2.2",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-manifest": "^3.7.1",

@@ -63,15 +63,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fileAbsolutePath,
         },
       });
-      createPage({
-        path: `blog/${slug.replace(/\/$/, '')}/amp/`,
-        component: path.resolve('./src/templates/article.amp.tsx'),
-        context: {
-          slug,
-          lang: frontmatter.language,
-          date: frontmatter.date,
-          fileAbsolutePath,
-        },
-      });
+      // createPage({
+      //   path: `blog/${slug.replace(/\/$/, '')}/amp/`,
+      //   component: path.resolve('./src/templates/article.amp.tsx'),
+      //   context: {
+      //     slug,
+      //     lang: frontmatter.language,
+      //     date: frontmatter.date,
+      //     fileAbsolutePath,
+      //   },
+      // });
     });
 };
