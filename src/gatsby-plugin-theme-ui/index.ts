@@ -86,6 +86,20 @@ const theme = {
       lineHeight: 'body',
       fontWeight: 'body',
       fontSize: 3,
+      '*': { outline: 'none' },
+      'html, body': {
+        textRendering: 'optimizeLegibility',
+        '-webkit-font-smoothing': 'antialiased',
+        margin: '0px',
+        padding: '0px',
+      },
+      '::selection': {
+        bg: 'primary',
+      },
+      a: {
+        color: 'inherit',
+        textDecoration: 'none',
+      },
     },
     h1: {
       variant: 'text.heading',
