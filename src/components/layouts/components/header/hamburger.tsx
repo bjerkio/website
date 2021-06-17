@@ -34,14 +34,14 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onClick }) => (
           transition: '.4s',
         },
         '.bar1.animate': {
-          '-webkit-transform': 'rotate(-45deg) translate(-1px, 3px)',
+          WebkitTransform: 'rotate(-45deg) translate(-1px, 3px)',
           transform: 'rotate(-45deg) translate(-5px, 4px)',
         },
         '.bar2.animate': {
           opacity: 0,
         },
         '.bar3.animate': {
-          '-webkit-transform': 'rotate(45deg) translate(-6px, -7px)',
+          WebkitTransform: 'rotate(45deg) translate(-6px, -7px)',
           transform: 'rotate(45deg) translate(-4px, -4px);',
         },
       }}

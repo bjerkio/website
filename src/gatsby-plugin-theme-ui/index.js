@@ -89,7 +89,7 @@ const theme = {
       '*': { outline: 'none' },
       'html, body': {
         textRendering: 'optimizeLegibility',
-        '-webkit-font-smoothing': 'antialiased',
+        WebkitFontSmoothing: 'antialiased',
         margin: '0px',
         padding: '0px',
       },
