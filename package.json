@@ -15,7 +15,7 @@
     "@theme-ui/theme-provider": "^0.9.1",
     "date-fns": "^2.22.1",
     "formik": "^2.2.9",
-    "gatsby": "^3.7.1",
+    "gatsby": "^3.7.2",
     "gatsby-background-image": "^1.5.3",
     "gatsby-link": "^3.7.1",
     "gatsby-plugin-i18n": "^1.0.1",
