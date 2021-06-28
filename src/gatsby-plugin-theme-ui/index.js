@@ -100,6 +100,7 @@ const theme = {
         color: 'inherit',
         textDecoration: 'none',
       },
+      'button:hover': { cursor: 'pointer' },
     },
     h1: {
       variant: 'text.heading',
