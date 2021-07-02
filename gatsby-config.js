@@ -12,7 +12,7 @@ module.exports = {
     description: 'Bjerk is a development agency from Oslo, Norway.',
     image: 'images/default-seo.jpg',
     headerNote: {
-      show: true,
+      show: false,
       message: 'We just launched a blog! 🚀',
       link: {
         text: 'Check it out →',
