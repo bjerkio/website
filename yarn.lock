@@ -3028,10 +3028,15 @@
     "@emotion/react" "^11.1.1"
     "@theme-ui/css" "0.9.1"
 
-"@theme-ui/preset-base@0.9.1", "@theme-ui/preset-base@^0.9.1":
+"@theme-ui/preset-base@0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.9.1.tgz#a24f3c60fed90085183b8de1261529a45008aafe"
   integrity sha512-ysWHqmf7C9ve8DyzlTTrDs5VbHNuv5trPNV/l1SpNwXYW/i6N7yzrA7kdCYh3wSrZD+z+MHWKNLBgBnD+eOX8w==
+
+"@theme-ui/preset-base@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.10.1.tgz#940aa29e6e237fe72d7f9cb3fbd161a2700d9c0b"
+  integrity sha512-ZuHNC0JNrAa2LcR2z3PGFWy1oh4KlhQWeBM94TNRvok06K249XhlKU4v7pXjLjP2jMgAas3waL1TNRMMCyBiGw==
 
 "@theme-ui/preset-bootstrap@0.9.1":
   version "0.9.1"
