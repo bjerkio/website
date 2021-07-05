@@ -27,7 +27,7 @@
     "gatsby-plugin-preload-fonts": "^2.7.1",
     "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-robots-txt": "^1.6.2",
+    "gatsby-plugin-robots-txt": "^1.6.8",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-plugin-sitemap": "^4.3.1",
     "gatsby-plugin-theme-ui": "^0.9.1",
