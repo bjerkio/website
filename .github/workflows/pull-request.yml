@@ -45,7 +45,8 @@ jobs:
         id: firebase
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          firebaseServiceAccount:
+            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
