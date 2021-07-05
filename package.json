@@ -12,7 +12,7 @@
     "@theme-ui/preset-base": "^0.10.1",
     "@theme-ui/presets": "^0.9.1",
     "@theme-ui/prism": "^0.9.1",
-    "@theme-ui/theme-provider": "^0.9.1",
+    "@theme-ui/theme-provider": "^0.10.0",
     "date-fns": "^2.22.1",
     "formik": "^2.2.9",
     "gatsby": "^3.8.0",
