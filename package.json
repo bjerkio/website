@@ -48,7 +48,7 @@
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.0",
     "react-icons": "^4.1.0",
-    "react-intl": "^5.20.2",
+    "react-intl": "^5.20.4",
     "react-is": "^17.0.1",
     "react-player": "^2.8.2",
     "theme-ui": "^0.9.1"
