@@ -2960,7 +2960,7 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@theme-ui/color-modes@0.9.1", "@theme-ui/color-modes@^0.9.1":
+"@theme-ui/color-modes@0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/color-modes/-/color-modes-0.9.1.tgz#429e8f5911a6ae4876013d0ed897a6bab138edec"
   integrity sha512-70QgmXZye9OPx11Xh10elzvOx4R6djnJu+bgW0gUzsFD1JD4G2TgTVotNi+SHsppcQDRrzgcOkAzbbleWeNkAQ==
@@ -2968,6 +2968,16 @@
     "@emotion/react" "^11.1.1"
     "@theme-ui/core" "0.9.1"
     "@theme-ui/css" "0.9.1"
+    deepmerge "^4.2.2"
+
+"@theme-ui/color-modes@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/color-modes/-/color-modes-0.10.0.tgz#85071f16d7d4458f3dab5a7af8b9ea459da4dcd0"
+  integrity sha512-6sZaagCFK48p2YjecLljFwPkiB3/R9dMNKUQC3+fnaH3N9FcsflNWpjKAYhtQ5QLKvYacFdqczT4YaMtGwKb/Q==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    "@theme-ui/core" "0.10.0"
+    "@theme-ui/css" "0.10.0"
     deepmerge "^4.2.2"
 
 "@theme-ui/color@^0.9.1":
@@ -2991,6 +3001,16 @@
     "@theme-ui/css" "0.9.1"
     "@types/styled-system" "^5.1.10"
 
+"@theme-ui/core@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.10.0.tgz#2373d53368da5fa561915414ade070a9de0e9678"
+  integrity sha512-3DeTHGqyqIi05JCsJ+G+fqW6YsX/oGJiaAvMgLfd86tGdJOnDseEBQG41oDFHSWtQSJDpBcoFgAWMGITmYdH+g==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    "@theme-ui/css" "0.10.0"
+    "@theme-ui/parse-props" "0.10.0"
+    deepmerge "^4.2.2"
+
 "@theme-ui/core@0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.9.1.tgz#bc155bdf7f488072935b65cdb6ed7541f9ca623c"
@@ -3000,6 +3020,14 @@
     "@theme-ui/css" "0.9.1"
     "@theme-ui/parse-props" "0.9.1"
     deepmerge "^4.2.2"
+
+"@theme-ui/css@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.10.0.tgz#871f63334fb138491406c32f8347d53b19846a9b"
+  integrity sha512-Up3HqXoy2ERn/9gVxApCSl2n9vwtHBwPrYlMyEjX0YPs/rxmo+Aqe3kAxO+SG9idMw08mtdaDfMIFaPsBE5ovA==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    csstype "^3.0.5"
 
 "@theme-ui/css@0.9.1":
   version "0.9.1"
@@ -3019,6 +3047,14 @@
     "@mdx-js/react" "^1.6.22"
     "@theme-ui/core" "0.9.1"
     "@theme-ui/css" "0.9.1"
+
+"@theme-ui/parse-props@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/parse-props/-/parse-props-0.10.0.tgz#8d2f4f3b3edafd925c3872ddd559e2b62006f43f"
+  integrity sha512-UfcLyThXYsB9azc8qbsZVgbF7xf+GLF2Hhy+suyjwQ3XSVOx97B5ZsuzCNUGbggtBw4dXayJgRmMz0FHyp0L8Q==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    "@theme-ui/css" "0.10.0"
 
 "@theme-ui/parse-props@0.9.1":
   version "0.9.1"
