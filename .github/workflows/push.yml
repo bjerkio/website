@@ -55,13 +55,13 @@ jobs:
 
       - uses: atymic/sitemap-ping-action@master
         with:
-          sitemap-url: https://bjerk.io/sitemap.xml
+          sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
 
       - name: Get all urls from sitemap.xml
         id: parse-sitemap
         uses: cobraz/parse-sitemap@v1
         with:
-          sitemap-url: https://bjerk.io/sitemap.xml
+          sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
 
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
