@@ -30,7 +30,7 @@
     "gatsby-plugin-robots-txt": "^1.6.8",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-plugin-sitemap": "^4.3.1",
-    "gatsby-plugin-theme-ui": "^0.9.1",
+    "gatsby-plugin-theme-ui": "^0.10.1",
     "gatsby-plugin-typescript": "^3.7.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^5.4.1",
