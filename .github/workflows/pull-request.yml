@@ -54,7 +54,7 @@ jobs:
         id: parse-sitemap
         uses: cobraz/parse-sitemap@main
         with:
-          sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap.xml
+          sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap/sitemap-index.xml
           replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
 
       - name: Run Lighthouse
