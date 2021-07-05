@@ -22,7 +22,7 @@
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-plugin-mdx": "^2.7.1",
-    "gatsby-plugin-offline": "^4.7.1",
+    "gatsby-plugin-offline": "^4.8.0",
     "gatsby-plugin-page-creator": "^3.7.1",
     "gatsby-plugin-preload-fonts": "^2.7.1",
     "gatsby-plugin-react-helmet": "^4.7.1",
