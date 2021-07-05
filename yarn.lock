@@ -8536,14 +8536,14 @@ gatsby-plugin-image@^1.8.0:
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.7.1.tgz#c3c721d951390800c58dff69e05eb4566e403140"
-  integrity sha512-STYtL7QZlKmGcXza+qxtIr8A5HS+0TzBy+qRDlOCFIYnxVTWKgg4m45/G7rQrUc1Ws4C5Km+J0zZFrGlpN5b7Q==
+gatsby-plugin-manifest@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.8.0.tgz#11d3ff6532b8edf58d18acfd7121a5fe097a0c80"
+  integrity sha512-Wg8FuhAYdXofrAC8ZlaGGvM3evwpq88kgW3Xe2MuMXSQgdFvhw6SxoS6jzyEdPaCIi45x6C2+P3r1uXNdLECQw==
   dependencies:
     "@babel/runtime" "^7.14.0"
-    gatsby-core-utils "^2.7.1"
-    gatsby-plugin-utils "^1.7.1"
+    gatsby-core-utils "^2.8.0"
+    gatsby-plugin-utils "^1.8.0"
     semver "^7.3.5"
     sharp "^0.28.1"
 
@@ -8704,7 +8704,7 @@ gatsby-plugin-typescript@^3.7.1, gatsby-plugin-typescript@^3.8.0:
     "@babel/runtime" "^7.14.0"
     babel-plugin-remove-graphql-queries "^3.8.0"
 
-gatsby-plugin-utils@^1.7.1, gatsby-plugin-utils@^1.8.0:
+gatsby-plugin-utils@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.8.0.tgz#1e16c0df3cc96a67005a803b11abb887a3f1fad9"
   integrity sha512-K/EiYx2kKd5BOuwWg86mrvrMh8u9hW40abFLZYH4zRAkthL+vYp/WeckVL/TibZ3jPUhhay9JGjXKR+Ot6BYDQ==
@@ -8816,17 +8816,17 @@ gatsby-remark-prismjs@^5.4.1:
     parse-numeric-range "^1.2.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.7.1.tgz#11b22ea0ae699163a4372bf95604412a49b4fcc1"
-  integrity sha512-JLMFJxvGnmVFW0UDr6r3XlqCp9GJ5Eqz4baWe9cVSdn61rz6YuV+BrtZIRBkqaWbnhv14+z7J+59OxpLG/kXHg==
+gatsby-source-filesystem@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.8.0.tgz#d434e3dc4c297851313d56135e1208d00aa3feac"
+  integrity sha512-EyyqiIOhDeZ2EzykLRy3lR9WlpDrBCeHwn5wohvvjGBmWDnA54LloScIf1r/0PxSHSn/vFtXkBuh2Slzln5eag==
   dependencies:
     "@babel/runtime" "^7.14.0"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.7.1"
+    gatsby-core-utils "^2.8.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
@@ -13238,11 +13238,6 @@ node-abi@^2.21.0:
   dependencies:
     semver "^5.4.1"
 
-node-addon-api@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.1.0.tgz#98b21931557466c6729e51cb77cd39c965f42239"
-  integrity sha512-flmrDNB06LIl5lywUz7YlNGZH/5p0M7W28k8hzd9Lshtdh1wshD2Y+U4h9LD6KObOy1f+fEVdgprPrEymjM5uw==
-
 node-addon-api@^3.2.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
@@ -13300,11 +13295,6 @@ noms@0.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "~1.0.31"
-
-noop-logger@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/noop-logger/-/noop-logger-0.1.1.tgz#94a2b1633c4f1317553007d8966fd0e841b6a4c2"
-  integrity sha1-lKKxYzxPExdVMAfYlm/Q6EG2pMI=
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
   version "2.5.0"
@@ -14652,26 +14642,6 @@ potrace@^2.1.8:
   integrity sha512-V9hI7UMJyEhNZjM8CbZaP/804ZRLgzWkCS9OOYnEZkszzj3zKR/erRdj0uFMcN3pp6x4B+AIZebmkQgGRinG/g==
   dependencies:
     jimp "^0.14.0"
-
-prebuild-install@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-6.1.1.tgz#6754fa6c0d55eced7f9e14408ff9e4cba6f097b4"
-  integrity sha512-M+cKwofFlHa5VpTWub7GLg5RLcunYIcLqtY5pKcls/u7xaAb8FrXZ520qY8rkpYy5xw90tYCyMO0MP5ggzR3Sw==
-  dependencies:
-    detect-libc "^1.0.3"
-    expand-template "^2.0.3"
-    github-from-package "0.0.0"
-    minimist "^1.2.3"
-    mkdirp-classic "^0.5.3"
-    napi-build-utils "^1.0.1"
-    node-abi "^2.21.0"
-    noop-logger "^0.1.1"
-    npmlog "^4.0.1"
-    pump "^3.0.0"
-    rc "^1.2.7"
-    simple-get "^3.0.3"
-    tar-fs "^2.0.0"
-    tunnel-agent "^0.6.0"
 
 prebuild-install@^6.1.2:
   version "6.1.3"
@@ -16197,21 +16167,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-sharp@^0.28.0:
-  version "0.28.1"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.28.1.tgz#9d7bbce1ca95b2c27482243cd4839c62ef40b0b7"
-  integrity sha512-4mCGMEN4ntaVuFGwHx7FvkJQkIgbI+S+F9a3bI7ugdvKjPr4sF7/ibvlRKhJyzhoQi+ODM+XYY1de8xs7MHbfA==
-  dependencies:
-    color "^3.1.3"
-    detect-libc "^1.0.3"
-    node-addon-api "^3.1.0"
-    prebuild-install "^6.1.1"
-    semver "^7.3.5"
-    simple-get "^3.1.0"
-    tar-fs "^2.1.1"
-    tunnel-agent "^0.6.0"
-
-sharp@^0.28.1:
+sharp@^0.28.0, sharp@^0.28.1:
   version "0.28.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.28.3.tgz#ecd74cefd020bee4891bb137c9850ee2ce277a8b"
   integrity sha512-21GEP45Rmr7q2qcmdnjDkNP04Ooh5v0laGS5FDpojOO84D1DJwUijLiSq8XNNM6e8aGXYtoYRh3sVNdm8NodMA==
