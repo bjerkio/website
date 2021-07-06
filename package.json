@@ -33,7 +33,7 @@
     "gatsby-plugin-theme-ui": "^0.10.1",
     "gatsby-plugin-typescript": "^3.7.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-remark-images": "^5.4.1",
+    "gatsby-remark-images": "^5.5.0",
     "gatsby-remark-prismjs": "^5.4.1",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-transformer-remark": "^4.4.1",
