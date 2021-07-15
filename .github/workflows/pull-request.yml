@@ -1,6 +1,9 @@
 name: Pull Request
 on:
-  pull_request:
+  workflow_run:
+    workflows: ["Split Workflow"]
+    types: 
+      - completed
     
 jobs:
   pull_request:

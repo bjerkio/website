@@ -1,0 +1,12 @@
+### Used to split workflow because of potential dependabot vulnerability
+### See https://github.com/dependabot/dependabot-core/issues/3253#issuecomment-852541544
+
+name: Split Workflow
+on:
+  pull_request
+
+jobs:
+  split-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Split Workflow"
