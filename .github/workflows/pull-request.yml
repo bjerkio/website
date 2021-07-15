@@ -42,6 +42,7 @@ jobs:
 
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
+        if: ${{ github.actor != 'dependabot[bot]' }}
         id: firebase
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -53,6 +54,7 @@ jobs:
 
       - name: Get all urls from sitemap.xml
         id: parse-sitemap
+        if: ${{ github.actor != 'dependabot[bot]' }}
         uses: cobraz/parse-sitemap@main
         with:
           sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap/sitemap-index.xml
@@ -60,6 +62,7 @@ jobs:
 
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
+        if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           urls: ${{ steps.parse-sitemap.outputs.urls }}
           uploadArtifacts: true
