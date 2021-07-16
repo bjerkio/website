@@ -3157,10 +3157,10 @@
     "@theme-ui/preset-tailwind" "0.10.0"
     "@theme-ui/preset-tosh" "0.10.0"
 
-"@theme-ui/prism@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.9.1.tgz#4e3f3747890253ad28c51103669a1d0fcb933a6d"
-  integrity sha512-MBQ2OKOyNkoCLQJpURwZ7ldqZ6QIVEdjqRYdHFWabuFvOJAKrGhrsYBJ3upCssq3Tfo9RQOccQ/JA7g76WQeRA==
+"@theme-ui/prism@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.10.0.tgz#3be950bc1d55b0765abd2a4266fca3398f689fee"
+  integrity sha512-ru/G9ipG9eUEgO1CENAC8kTp0xtOsY4UOPwFmYFts0/DTVNXssWrwH8XE9OC7HpbbDOJ2RFAns3XqOs8gzNSBw==
   dependencies:
     prism-react-renderer "^1.1.1"
 
@@ -8758,10 +8758,10 @@ gatsby-transformer-sharp@^3.7.1:
     semver "^7.3.4"
     sharp "^0.28.0"
 
-gatsby-transformer-yaml@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-3.7.1.tgz#d20923071e4a6db252b85322072492ade1bed2a4"
-  integrity sha512-LwuoTLUvc8vIlqxQzcK6lE/9ShC2hJp9e1BXqgGhvljTmxT5EUp3qEE/Vnb+gZ37SH20cgDsMfrRfil6AgGdaA==
+gatsby-transformer-yaml@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-3.9.0.tgz#313819d185ab31c20465068297d94b5f403327c3"
+  integrity sha512-m0+rB8jF8nAmSGWhO8CGyI0fjqaQikgwpY6TZ2GvWX7m5hhs45vyx6fTyJsbiJfAJ5FA3I03T6a2r4JM6PJvcg==
   dependencies:
     "@babel/runtime" "^7.14.0"
     js-yaml "^3.14.1"
