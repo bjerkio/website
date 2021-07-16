@@ -51,7 +51,7 @@
     "react-intl": "^5.20.4",
     "react-is": "^17.0.1",
     "react-player": "^2.8.2",
-    "theme-ui": "^0.9.1"
+    "theme-ui": "^0.10.0"
   },
   "license": "MIT",
   "main": "n/a",
