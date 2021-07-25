@@ -3120,10 +3120,10 @@
     "@theme-ui/preset-tailwind" "0.10.0"
     "@theme-ui/preset-tosh" "0.10.0"
 
-"@theme-ui/prism@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.9.1.tgz#4e3f3747890253ad28c51103669a1d0fcb933a6d"
-  integrity sha512-MBQ2OKOyNkoCLQJpURwZ7ldqZ6QIVEdjqRYdHFWabuFvOJAKrGhrsYBJ3upCssq3Tfo9RQOccQ/JA7g76WQeRA==
+"@theme-ui/prism@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.10.0.tgz#3be950bc1d55b0765abd2a4266fca3398f689fee"
+  integrity sha512-ru/G9ipG9eUEgO1CENAC8kTp0xtOsY4UOPwFmYFts0/DTVNXssWrwH8XE9OC7HpbbDOJ2RFAns3XqOs8gzNSBw==
   dependencies:
     prism-react-renderer "^1.1.1"
 
@@ -8640,17 +8640,17 @@ gatsby-remark-prismjs@^5.4.1:
     parse-numeric-range "^1.2.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.8.0.tgz#d434e3dc4c297851313d56135e1208d00aa3feac"
-  integrity sha512-EyyqiIOhDeZ2EzykLRy3lR9WlpDrBCeHwn5wohvvjGBmWDnA54LloScIf1r/0PxSHSn/vFtXkBuh2Slzln5eag==
+gatsby-source-filesystem@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.9.0.tgz#3ed00f8139f14eff9e56568731aa7e8b77891c8a"
+  integrity sha512-Zgdscq4bMJy9KfZAN9daAxKytJBoxqvU3wckPR/74BgqZ89FNsy0bo0ABqbfz02NgdMxcn2XyPLUQ4eFJwHRvg==
   dependencies:
     "@babel/runtime" "^7.14.0"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.8.0"
+    gatsby-core-utils "^2.9.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
