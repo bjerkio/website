@@ -61,7 +61,7 @@ jobs:
           replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
 
       - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
+        uses: treosh/lighthouse-ci-action@8.0.0
         if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           urls: ${{ steps.parse-sitemap.outputs.urls }}
