@@ -2,6 +2,26 @@
   "name": "@bjerk/web",
   "version": "1.0.0",
   "private": true,
+  "repository": "github:bjerkio/website",
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "lint": "eslint . --cache",
+    "generate": "graphql-codegen --config codegen.yml",
+    "test": "jest --passWithNoTests",
+    "format": "prettier --write ./src",
+    "preload-fonts": "gatsby-preload-fonts"
+  },
+  "lint-staged": {
+    "{web}/**/*.{json,css,yaml,yml}": "prettier --write",
+    "{web}/**/*.{js,ts,tsx}": "eslint --cache --fix",
+    "{web}/**/*.graphql": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -52,25 +72,6 @@
     "react-is": "^17.0.1",
     "react-player": "^2.8.2",
     "theme-ui": "^0.10.0"
-  },
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
-    "lint": "eslint . --cache",
-    "generate": "graphql-codegen --config codegen.yml",
-    "test": "jest --passWithNoTests",
-    "format": "prettier --write ./src",
-    "preload-fonts": "gatsby-preload-fonts"
-  },
-  "lint-staged": {
-    "{web}/**/*.{json,css,yaml,yml}": "prettier --write",
-    "{web}/**/*.{js,ts,tsx}": "eslint --cache --fix",
-    "{web}/**/*.graphql": [
-      "prettier --write",
-      "eslint --cache --fix"
-    ]
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.21.6",
