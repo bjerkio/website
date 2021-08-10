@@ -57,7 +57,7 @@
     "gatsby-remark-prismjs": "^5.4.1",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-remark": "^4.4.1",
-    "gatsby-transformer-sharp": "^3.7.1",
+    "gatsby-transformer-sharp": "^3.11.0",
     "gatsby-transformer-yaml": "^3.9.0",
     "gbimage-bridge": "^0.1.4",
     "i18next": "^20.4.0",
