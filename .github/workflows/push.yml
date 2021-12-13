@@ -64,7 +64,7 @@ jobs:
           sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
 
       - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
+        uses: treosh/lighthouse-ci-action@8.2.0
         with:
           urls: ${{ steps.parse-sitemap.outputs.urls }}
           uploadArtifacts: true
