@@ -1,0 +1,68 @@
+name: Deploy to bjerk.io
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: yarn
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build website
+        run: yarn build
+
+      - name: Upload website
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        id: firebase
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount:
+            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          channelId: live
+          projectId: bjerk-io
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
+
+      # - uses: atymic/sitemap-ping-action@master
+      #   with:
+      #     sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
+
+      # - name: Get all urls from sitemap.xml
+      #   id: parse-sitemap
+      #   uses: cobraz/parse-sitemap@v1
+      #   with:
+      #     sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
+
+      # - name: Run Lighthouse
+      #   uses: treosh/lighthouse-ci-action@v7
+      #   with:
+      #     urls: ${{ steps.parse-sitemap.outputs.urls }}
+      #     uploadArtifacts: true
+      #     temporaryPublicStorage: true
+
+      # TODO: Add axe and pa11y back in after fixing      
+      # - name: Run axe
+      #   run: |
+      #     npx @axe-core/cli https://bjerk.io --exit
+      
+      # - name: Run pa11y
+      #   run: |
+      #     npx pa11y https://bjerk.io
+
