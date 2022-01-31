@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import React from 'react';
-import { Box, BoxProps, jsx } from 'theme-ui';
+import React from "react";
+import { Box, BoxProps, jsx } from "theme-ui";
 
 export interface LogoProps extends BoxProps {
   dotColor?: string;

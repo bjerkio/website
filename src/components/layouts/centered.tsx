@@ -1,11 +1,11 @@
-import { MDXProvider } from '@mdx-js/react';
-import { Container } from '@theme-ui/components';
-import { Link } from 'gatsby';
-import React from 'react';
-import FeatureBox from '../feature-box';
-import * as illu from '../illustrations';
-import SEO from '../seo';
-import Layout from '.';
+import { MDXProvider } from "@mdx-js/react";
+import { Container } from "@theme-ui/components";
+import { Link } from "gatsby";
+import React from "react";
+import FeatureBox from "../feature-box";
+import * as illu from "../illustrations";
+import SEO from "../seo";
+import Layout from "./layout";
 
 const shortcodes = { Link, FeatureBox, SEO, ...illu };
 

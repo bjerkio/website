@@ -1,8 +1,0 @@
-type: employee
-name: Simen A. W. Olsen
-position:
-  en: General manager / Solution architect
-  nb: Daglig leder / Løsningsarkitekt
-email: so@bjerk.io
-phoneNumber: +47 953 08 087
-photo: ./images/simen-olsen.png

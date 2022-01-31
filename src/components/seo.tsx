@@ -1,9 +1,7 @@
-import { useLocation } from '@reach/router';
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-import Helmet from 'react-helmet';
-import { useIntl } from 'react-intl';
-
+import React from "react";
+import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
+import Head from "next/head";
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -11,61 +9,35 @@ export interface SEOProps {
   schema?: unknown;
 }
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl
-        defaultImage: image
-      }
-    }
-  }
-`;
-
 const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
-  const { pathname } = useLocation();
+  const { basePath, pathname } = useRouter();
   const intl = useIntl();
-  const { site } = useStaticQuery(query);
 
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
-
+  // TODO: add good defaults for title, description and image
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}/${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    title: title || "Bjerk",
+    description: description || "Bjerk sin nettside",
+    image: `${basePath}/${image || ""}`,
+    url: `${basePath}${pathname}`,
   };
 
   const orgSchema = schema || {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    url: 'https://bjerk.io',
-    name: 'Bjerk',
-    logo: 'https://bjerk.io/images/logo.svg',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://bjerk.io",
+    name: "Bjerk",
+    logo: "https://bjerk.io/images/logo.svg",
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+4722120512',
-      contactType: 'Main phone number',
+      "@type": "ContactPoint",
+      telephone: "+4722120512",
+      contactType: "Main phone number",
     },
   };
 
   return (
-    <Helmet
-      title={seo.title}
-      titleTemplate={titleTemplate}
-      htmlAttributes={{
-        lang: intl.locale,
-      }}
-    >
+    <Head>
+      <title>{seo.title}</title>
+      <link rel="icon" href="/favicon.ico" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -81,7 +53,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
-    </Helmet>
+    </Head>
   );
 };
 
