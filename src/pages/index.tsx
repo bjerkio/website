@@ -1,12 +1,10 @@
-import { Box, Container, Divider, Heading, Text } from "@theme-ui/components";
+import { Container, Divider, Heading, Text } from "@theme-ui/components";
 import type { NextPage } from "next";
-import { FormattedMessage } from "react-intl";
-import { Layout } from "../components/layouts/layout";
 import SEO from "../components/seo";
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <Container variant="centered">
         <Heading
@@ -19,10 +17,9 @@ const Home: NextPage = () => {
             mb: 5,
           }}
         >
-          <FormattedMessage
-            id="heading"
-            defaultMessage="We’re developers, creators, strategists and activists"
-          />
+          <Heading>
+            We’re developers, creators, strategists and activists
+          </Heading>
           <Text sx={{ color: "primary" }}>.</Text>
           <Divider
             sx={{
@@ -35,7 +32,7 @@ const Home: NextPage = () => {
           />
         </Heading>
       </Container>
-    </Layout>
+    </>
   );
 };
 

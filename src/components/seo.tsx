@@ -1,5 +1,4 @@
 import React from "react";
-import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import Head from "next/head";
 export interface SEOProps {
@@ -11,7 +10,6 @@ export interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
   const { basePath, pathname } = useRouter();
-  const intl = useIntl();
 
   // TODO: add good defaults for title, description and image
   const seo = {

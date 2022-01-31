@@ -1,4 +1,4 @@
-name: Deploy to bjerk.io
+name: Deploy to dev.bjerk.io
 on:
   push:
     branches:
