@@ -2,7 +2,7 @@ name: Deploy to bjerk.io
 on:
   push:
     branches:
-      - main
+      - next
 jobs:
   build_and_deploy:
     name: Build and Deploy
@@ -36,34 +36,7 @@ jobs:
           firebaseServiceAccount:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           channelId: live
-          target: prod
+          target: dev
           projectId: bjerk-io
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-
-      # - uses: atymic/sitemap-ping-action@master
-      #   with:
-      #     sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
-
-      # - name: Get all urls from sitemap.xml
-      #   id: parse-sitemap
-      #   uses: cobraz/parse-sitemap@v1
-      #   with:
-      #     sitemap-url: https://bjerk.io/sitemap/sitemap-index.xml
-
-      # - name: Run Lighthouse
-      #   uses: treosh/lighthouse-ci-action@v7
-      #   with:
-      #     urls: ${{ steps.parse-sitemap.outputs.urls }}
-      #     uploadArtifacts: true
-      #     temporaryPublicStorage: true
-
-      # TODO: Add axe and pa11y back in after fixing      
-      # - name: Run axe
-      #   run: |
-      #     npx @axe-core/cli https://bjerk.io --exit
-      
-      # - name: Run pa11y
-      #   run: |
-      #     npx pa11y https://bjerk.io
-
