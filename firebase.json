@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "dev",
-      "public": "public",
+      "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {
@@ -13,29 +13,7 @@
     },
     {
       "target": "prod",
-      "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "headers": [
-        {
-          "source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=31536000"
-            }
-          ]
-        }
-      ]
-    }
-    {
-      "target": "prod",
-      "public": "public",
+      "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {
