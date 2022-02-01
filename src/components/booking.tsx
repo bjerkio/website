@@ -1,4 +1,4 @@
-import { Box, Text, Button, Container } from '@theme-ui/components';
+import { Box, Button, Container, Text } from '@theme-ui/components';
 import React from 'react';
 import { openPopupWidget } from 'react-calendly';
 

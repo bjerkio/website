@@ -6,14 +6,14 @@ import {
   Card,
   Grid,
   Heading,
+  Image,
   Link,
   Paragraph,
   Text,
-  Image,
 } from 'theme-ui';
 // import { Image } from 'next-theme-ui';
-import Logo from '../components/logo';
-import SEO from '../components/seo';
+import { Logo } from '../components/logo';
+import { SEO } from '../components/seo';
 
 const customers = [
   'avfall-norge',
@@ -58,7 +58,11 @@ const Home: NextPage = () => {
             </Paragraph>
             <Link sx={{ color: 'black100' }}>Les om våre prinsipper</Link>
           </Card>
-          <Grid columns={['repeat(3, 1fr)']} gap={4} sx={{ justifyItems: 'center' }}>
+          <Grid
+            columns={['repeat(3, 1fr)']}
+            gap={4}
+            sx={{ justifyItems: 'center' }}
+          >
             {customers.map(customer => (
               <Image
                 key={customer}
@@ -73,4 +77,5 @@ const Home: NextPage = () => {
   );
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Home;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, BoxProps } from 'theme-ui';
 
-const Logo = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
+export const Logo = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
   <Box
     ref={ref}
     as="svg"
-    // @ts-expect-error
+    // @ts-expect-error xml formatting
     xmlns="http://www.w3.org/2000/svg"
     __css={{ fill: 'none' }}
     viewBox="0 0 100 40"
@@ -25,5 +25,3 @@ const Logo = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
     />
   </Box>
 ));
-
-export default Logo;
