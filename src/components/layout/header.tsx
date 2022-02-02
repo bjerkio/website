@@ -1,6 +1,5 @@
-import { Flex } from '@theme-ui/components';
-import { Container } from 'theme-ui';
-import Logo from '../logo';
+import { Container, Flex } from 'theme-ui';
+import { Logo } from '../logo';
 
 export const Header: React.FC = () => (
   <Container variant="readable">

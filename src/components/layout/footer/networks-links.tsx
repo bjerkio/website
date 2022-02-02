@@ -1,9 +1,9 @@
-import { theme } from '@bjerk/brand';
 import React, { useMemo } from 'react';
 import { Box, Flex, Link } from 'theme-ui';
-import SocialFacebook from '../../illustrations/social-facebook';
-import SocialGithub from '../../illustrations/social-github';
-import SocialLinkedin from '../../illustrations/social-linkedin';
+import { SocialFacebook } from '../../illustrations/social-facebook';
+import { SocialGithub } from '../../illustrations/social-github';
+import { SocialLinkedin } from '../../illustrations/social-linkedin';
+
 export interface NetworksLinksProps {
   githubUrl?: string;
   linkedInUrl?: string;

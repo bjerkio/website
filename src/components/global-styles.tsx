@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react';
 
-const GlobalStyles: React.FC = () => (
+export const GlobalStyles: React.FC = () => (
   <Global
     styles={(theme: any) => ({
       html: { fontSize: '18px' },
@@ -11,5 +11,3 @@ const GlobalStyles: React.FC = () => (
     })}
   />
 );
-
-export default GlobalStyles;
