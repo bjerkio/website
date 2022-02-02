@@ -1,20 +1,20 @@
-import { Container } from '@theme-ui/components';
 import type { NextPage } from 'next';
 import {
   Box,
   Button,
   Card,
+  Container,
   Grid,
   Heading,
+  Image,
   Link,
   Paragraph,
   Text,
-  Image,
 } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
 // import { Image } from 'next-theme-ui';
-import Logo from '../components/logo';
-import SEO from '../components/seo';
+import { Logo } from '../components/logo';
+import { SEO } from '../components/seo';
 
 const customers = [
   'avfall-norge',
@@ -72,4 +72,5 @@ const Home: NextPage = () => {
   );
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Home;
