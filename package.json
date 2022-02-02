@@ -6,7 +6,8 @@
     "build": "next build",
     "postbuild": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@bjerk/brand": "^1.0.1",

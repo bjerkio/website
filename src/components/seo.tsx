@@ -1,6 +1,6 @@
-import React from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React from 'react';
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -8,7 +8,12 @@ export interface SEOProps {
   schema?: unknown;
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  image,
+  schema,
+}) => {
   const { basePath, pathname } = useRouter();
 
   // TODO: add good defaults for title, description and image
@@ -61,5 +66,3 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
     </Head>
   );
 };
-
-export default SEO;

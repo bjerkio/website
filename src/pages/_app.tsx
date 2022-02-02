@@ -1,8 +1,8 @@
 import { ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
-import { theme } from '../theme';
 import { Themed } from 'theme-ui';
-import GlobalStyles from '../components/global-styles';
+import { GlobalStyles } from '../components/global-styles';
+import { theme } from '../theme';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,4 +15,5 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default App;
