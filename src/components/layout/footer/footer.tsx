@@ -1,16 +1,5 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Grid,
-  Link,
-  Text,
-} from '@theme-ui/components';
-import SocialFacebook from '../../illustrations/social-facebook';
-import SocialGithub from '../../illustrations/social-github';
-import SocialLinkedin from '../../illustrations/social-linkedin';
-import Logo from '../../logo';
+import { Box, Container, Flex, Grid, Link, Text } from 'theme-ui';
+import { Logo } from '../../logo';
 import { NetworksLinks } from './networks-links';
 
 export const Footer: React.FC = () => (

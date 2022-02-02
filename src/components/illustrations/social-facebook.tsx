@@ -13,7 +13,7 @@ export const SocialFacebook: React.FC<SocialFacebookProps> = ({
 }) => (
   <Box
     as="svg"
-    // @ts-expect-error
+    // @ts-expect-error svg encoding
     xmlns="http://www.w3.org/2000/svg"
     width={String(width)}
     height={String(height)}
@@ -29,5 +29,3 @@ export const SocialFacebook: React.FC<SocialFacebookProps> = ({
 );
 
 SocialFacebook.displayName = 'SocialFacebook';
-
-export default SocialFacebook;

@@ -13,7 +13,7 @@ export const SocialLinkedin: React.FC<SocialLinkedinProps> = ({
 }) => (
   <Box
     as="svg"
-    // @ts-expect-error
+    // @ts-expect-error svg encoding
     xmlns="http://www.w3.org/2000/svg"
     width={String(width)}
     height={String(height)}
@@ -29,5 +29,3 @@ export const SocialLinkedin: React.FC<SocialLinkedinProps> = ({
 );
 
 SocialLinkedin.displayName = 'SocialLinkedin';
-
-export default SocialLinkedin;
