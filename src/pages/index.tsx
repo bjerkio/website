@@ -1,9 +1,9 @@
-import { Container } from '@theme-ui/components';
 import type { NextPage } from 'next';
 import {
   Box,
   Button,
   Card,
+  Container,
   Grid,
   Heading,
   Image,
