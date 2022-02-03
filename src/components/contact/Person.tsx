@@ -1,9 +1,7 @@
 import { theme } from '@bjerk/brand';
 import Image from 'next/image';
 import { Flex, Text } from 'theme-ui';
-import SocialGithub from '../illustrations/social-github';
-import SocialLinkedin from '../illustrations/social-linkedin';
-import { NetworksLinks } from '../layout/footer/networks-links';
+import { NetworksLinks } from '../illustrations/networks-links';
 
 export interface PersonProps {
   name: string;

@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Grid, Link, Text } from 'theme-ui';
+import { NetworksLinks } from '../../illustrations/networks-links';
 import { Logo } from '../../logo';
-import { NetworksLinks } from './networks-links';
 
 export const Footer: React.FC = () => (
   <Box sx={{ minHeight: '5vh', background: 'black80' }}>
