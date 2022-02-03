@@ -13,10 +13,10 @@ import {
 import { Layout } from '../components/layout/layout';
 
 const customers = [
-  'avfall-norge',
+  'grid-branding',
   'folio',
   'digdir',
-  'grid-branding',
+  'avfall-norge',
   'layer',
   'dnb',
 ];
