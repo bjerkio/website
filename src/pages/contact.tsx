@@ -1,26 +1,26 @@
 import { Grid } from 'theme-ui';
-import { Person } from '../components/contact/person';
+import { ContactPerson } from '../components/contact/contact-person';
 import { Layout } from '../components/layout/layout';
 
 const Contact: React.FC = () => {
   return (
     <Layout>
       <Grid columns={['1fr', 'repeat(3, 1fr)']}>
-        <Person
+        <ContactPerson
           name={'Brage Sekse Aarset'}
           photoPath={'/persons/brage-sekse-aarset.png'}
           email={'brage@bjerk.io'}
           github={'https://github.com/braaar'}
           linkedIn={'https://www.linkedin.com/in/braaar/'}
         />
-        <Person
+        <ContactPerson
           name={'Simen A. W. Olsen'}
           photoPath={'/persons/simen-olsen.png'}
           email={'so@bjerk.io'}
           github={'https://github.com/cobraz'}
           linkedIn={'https://www.linkedin.com/in/cobraz/'}
         />
-        <Person
+        <ContactPerson
           name={'Bjørn Niklas Sjøstrøm'}
           photoPath={'/persons/bjorn-niklas-sjostrom.jpg'}
           email={'bns@bjerk.io'}

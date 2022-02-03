@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Flex, Text } from 'theme-ui';
 import { NetworksLinks } from '../illustrations/networks-links';
 
-export interface PersonProps {
+export interface ContactPersonProps {
   name: string;
   photoPath: string;
   phone?: string;
@@ -12,7 +12,7 @@ export interface PersonProps {
   linkedIn?: string;
 }
 
-export const Person: React.FC<PersonProps> = ({
+export const ContactPerson: React.FC<ContactPersonProps> = ({
   name,
   photoPath,
   phone,
