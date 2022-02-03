@@ -1,4 +1,4 @@
-import { Grid, Text } from 'theme-ui';
+import { Grid } from 'theme-ui';
 import { Person } from '../components/contact/person';
 import { Layout } from '../components/layout/layout';
 
