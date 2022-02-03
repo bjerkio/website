@@ -1,7 +1,7 @@
 import { theme } from '@bjerk/brand';
-import Image from 'next/image';
 import { Flex, Text } from 'theme-ui';
 import { NetworksLinks } from '../illustrations/networks-links';
+import { Image } from '../image';
 
 export interface ContactPersonProps {
   name: string;
