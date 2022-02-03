@@ -6,6 +6,7 @@ import { NetworksLinks } from '../illustrations/networks-links';
 export interface ContactPersonProps {
   name: string;
   photoPath: string;
+  title: string;
   phone?: string;
   email: string;
   github?: string;
@@ -15,6 +16,7 @@ export interface ContactPersonProps {
 export const ContactPerson: React.FC<ContactPersonProps> = ({
   name,
   photoPath,
+  title,
   phone,
   email,
   github,
@@ -24,6 +26,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
     <Flex sx={{ flexDirection: 'column' }}>
       <Image src={photoPath} width={240} height={240} />
       <Text sx={{ fontSize: 3, fontWeight: 'bold' }}>{name}</Text>
+      <Text>{title}</Text>
       {phone && <Text>{phone}</Text>}
       <Text>{email}</Text>
       <NetworksLinks

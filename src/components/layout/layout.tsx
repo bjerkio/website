@@ -5,12 +5,13 @@ import { Footer } from './footer/footer';
 import { Header } from './header';
 
 export const Layout: React.FC = ({ children }) => (
-  <Box sx={{ minHeight: '100vh' }}>
+  <Box>
     <Flex
       sx={{
         flexDirection: 'column',
         gap: 7,
         pb: 0,
+        minHeight: '100vh',
       }}
     >
       <SEO />
