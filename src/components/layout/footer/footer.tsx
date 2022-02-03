@@ -1,16 +1,21 @@
 import { Box, Container, Flex, Grid, Link, Text } from 'theme-ui';
+import { Booking } from '../../booking';
 import { Logo } from '../../logo';
 import { NetworksLinks } from './networks-links';
 
 export const Footer: React.FC = () => (
-  <Box sx={{ minHeight: '5vh', background: 'black80' }}>
+  <Box sx={{ minHeight: '5vh', background: 'black80', mt: 'auto' }}>
     <Container variant="readable">
       <Flex
         sx={{ flexDirection: 'column', py: 5, gap: 5, color: 'background' }}
       >
         <Logo sx={{ height: '30px', mr: 'auto', color: 'white' }} />
         <Grid columns={[2, '3fr 2fr 2fr']}>
-          <Text sx={{ fontSize: 3 }}>Vi vil gjerne jobbe med deg!</Text>
+          <Flex sx={{ flexDirection: 'column', gap: 3 }}>
+            <Text sx={{ fontSize: 3 }}>Vi vil gjerne jobbe med deg!</Text>
+            <Booking />
+          </Flex>
+
           <Flex sx={{ flexDirection: 'column', gap: 3 }}>
             <Link
               href={'tel:+4722120512'}
