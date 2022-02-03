@@ -21,7 +21,7 @@ export const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
       >
         <g transform="translate(-249.6 91.3)">
           <circle
-            sx={{ fill: 'dry' }}
+            sx={{ fill: 'black60' }}
             cx="103.6"
             cy="103.6"
             r="103.6"
@@ -39,21 +39,21 @@ export const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
             cx="13.7"
             cy="13.7"
             r="13.7"
-            sx={{ fill: 'iron' }}
+            sx={{ fill: 'black80' }}
             transform="translate(459.6)"
           />
           <circle
             cx="8.9"
             cy="8.9"
             r="8.9"
-            sx={{ fill: 'lightGreen' }}
+            sx={{ fill: 'primary' }}
             transform="translate(370.3 99.7)"
           />
           <circle
             cx="20.2"
             cy="20.2"
             r="20.2"
-            sx={{ fill: 'lightGreen' }}
+            sx={{ fill: 'primary' }}
             transform="translate(570.2 88.5)"
           />
           <path
@@ -62,7 +62,7 @@ export const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
           />
           <path
             d="M272.5-91.3a3.3 3.3 0 000 6.7h14.6a3.3 3.3 0 00.2-6.7h-14.8z"
-            sx={{ fill: 'lightGreen' }}
+            sx={{ fill: 'primary' }}
           />
           <path
             d="M272.5-52a3.3 3.3 0 000 6.6h14.6a3.3 3.3 0 00.2-6.7h-14.8z"
@@ -70,7 +70,7 @@ export const Processes = React.forwardRef<HTMLOrSVGElement, ProcessesProps>(
           />
           <path
             d="M272.5-14a3.3 3.3 0 000 6.7h14.6a3.3 3.3 0 00.2-6.7h-14.8z"
-            sx={{ fill: 'lightGreen' }}
+            sx={{ fill: 'primary' }}
           />
           <path
             sx={{ fill: 'dry' }}
