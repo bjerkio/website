@@ -15,16 +15,12 @@ export const Header: React.FC = () => {
         </Link>
 
         <Flex sx={{ gap: 3, mt: 'auto', ml: 'auto', alignItems: 'flex-end' }}>
-          <Link
-            href={'/contact'}
-            sx={{
-              textDecoration: 'none',
-            }}
-          >
+          <Link href={'/contact'}>
             <Text
               sx={{
                 color: pathname.includes('contact') ? 'green80' : 'text',
                 cursor: 'pointer',
+                fontWeight: 'bold',
               }}
             >
               Kontakt
