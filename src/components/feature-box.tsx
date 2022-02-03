@@ -1,5 +1,5 @@
-import { Box, Flex } from 'theme-ui';
 import React from 'react';
+import { Box, Flex } from 'theme-ui';
 
 export interface FeatureBoxSpec {
   illustration: any;
