@@ -39,7 +39,7 @@ export const theme = merge(webTheme, {
    */
   radii: [0, 4, 8, 100],
   /**
-   * These layouts are still being tested/played with
+   * These layouts ar00,00e still being tested/played with
    * in the current design.
    *
    * Read more: https://github.com/bjerkio/brand/issues/8
@@ -96,9 +96,17 @@ export const theme = merge(webTheme, {
        */
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
+      h1: { fontWeight: '300' },
+      h2: { fontWeight: '400' },
+      h3: { fontWeight: 'bold' },
+      h4: { fontWeight: 'bold' },
+      h5: { fontWeight: 'bold' },
     },
     a: {
       textDecoration: 'underline',
+    },
+    h1: {
+      fontSize: 20,
     },
   },
 });
