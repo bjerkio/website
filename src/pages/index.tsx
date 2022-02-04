@@ -1,17 +1,16 @@
 import type { NextPage } from 'next';
+import { Image } from 'next-theme-ui';
 import {
   Box,
   Button,
   Card,
   Grid,
   Heading,
-  Image,
   Link,
   Paragraph,
   Text,
 } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
-
 const customers = [
   'grid-branding',
   'folio',

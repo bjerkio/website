@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
-import { Link } from 'next-theme-ui';
-import { Box, Card, Flex, Heading, Image, Text } from 'theme-ui';
+import { Image, Link } from 'next-theme-ui';
+import { Box, Card, Flex, Heading, Text } from 'theme-ui';
 import { PostFields } from '../../lib/api';
 
 export interface BlogPostPreviewProps {
