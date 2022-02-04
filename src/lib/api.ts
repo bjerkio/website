@@ -28,7 +28,7 @@ export const getPostBySlug = (
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const items: PostFields = {};
+  const items: PostFields = { date: data['date'], slug: realSlug };
 
   // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
@@ -42,7 +42,6 @@ export const getPostBySlug = (
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field];
     }
-    items['date'] = data['date'];
   });
 
   return items;
