@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Image } from 'next-theme-ui';
+import Image from 'next/image';
 import {
   Box,
   Button,
@@ -11,6 +11,7 @@ import {
   Text,
 } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
+import { imageLoader } from '../lib/image-loader';
 const customers = [
   'grid-branding',
   'folio',
@@ -56,11 +57,27 @@ const Home: NextPage = () => {
         sx={{ justifyItems: 'center' }}
       >
         {customers.map(customer => (
-          <Image
-            key={customer}
-            src={`/customers/${customer}.svg`}
-            height="43"
-          />
+          <Box
+            sx={{
+              width: '100%',
+              '& > img': { position: 'unset' },
+              height: '2.1rem',
+            }}
+          >
+            <Box
+              sx={{
+                position: 'relative',
+                height: '100%',
+              }}
+            >
+              <Image
+                key={customer}
+                src={`/customers/${customer}.svg`}
+                layout="fill"
+                loader={imageLoader}
+              />
+            </Box>
+          </Box>
         ))}
       </Grid>
     </Layout>
