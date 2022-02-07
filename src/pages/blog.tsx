@@ -15,7 +15,7 @@ const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
         <Heading>Blogginnlegg</Heading>
         <Flex sx={{ flexDirection: 'column', gap: 3 }}>
           {allPosts.map(post => (
-            <BlogPostPreview post={post} />
+            <BlogPostPreview post={post} key={post.slug} />
           ))}
         </Flex>
       </Flex>

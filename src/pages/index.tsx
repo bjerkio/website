@@ -10,6 +10,7 @@ import {
   Paragraph,
   Text,
 } from 'theme-ui';
+import { ImageWrapper } from '../components/image-wrapper';
 import { Layout } from '../components/layout/layout';
 import { imageLoader } from '../lib/image-loader';
 const customers = [
@@ -57,27 +58,14 @@ const Home: NextPage = () => {
         sx={{ justifyItems: 'center' }}
       >
         {customers.map(customer => (
-          <Box
-            sx={{
-              width: '100%',
-              '& > img': { position: 'unset' },
-              height: '2.1rem',
-            }}
-          >
-            <Box
-              sx={{
-                position: 'relative',
-                height: '100%',
-              }}
-            >
-              <Image
-                key={customer}
-                src={`/customers/${customer}.svg`}
-                layout="fill"
-                loader={imageLoader}
-              />
-            </Box>
-          </Box>
+          <ImageWrapper>
+            <Image
+              key={customer}
+              src={`/customers/${customer}.svg`}
+              layout="fill"
+              loader={imageLoader}
+            />
+          </ImageWrapper>
         ))}
       </Grid>
     </Layout>

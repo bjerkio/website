@@ -1,7 +1,10 @@
 import { format } from 'date-fns';
-import { Image, Link } from 'next-theme-ui';
+import { Link } from 'next-theme-ui';
+import Image from 'next/image';
 import { Box, Card, Flex, Heading, Text } from 'theme-ui';
 import { PostFields } from '../../lib/api';
+import { imageLoader } from '../../lib/image-loader';
+import { ImageWrapper } from '../image-wrapper';
 
 export interface BlogPostPreviewProps {
   post: Pick<
@@ -24,10 +27,16 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
                 flex: 1,
               }}
             >
-              <Image
-                src={post.coverImage}
-                sx={{ height: '100%', width: '100%' }}
-              />
+              <ImageWrapper height={'100%'}>
+                <Image
+                  src={post.coverImage}
+                  layout="fill"
+                  loader={imageLoader}
+                  unoptimized
+                  height={2}
+                  width={3}
+                />
+              </ImageWrapper>
             </Box>
           )}
           <Flex
