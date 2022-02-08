@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Flex } from 'theme-ui';
+import { Container, Flex } from 'theme-ui';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header';
