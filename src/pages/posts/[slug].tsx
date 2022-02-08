@@ -3,12 +3,10 @@ import { NextPage } from 'next';
 import { Params } from 'next/dist/server/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Flex, Heading, Text } from 'theme-ui';
+import { Flex, Heading, Image, Text } from 'theme-ui';
 import { Layout } from '../../components/layout/layout';
 import { PostFields, getAllPosts, getPostBySlug } from '../../lib/api';
-import { imageLoader } from '../../lib/image-loader';
 import { markdownToHtml } from '../../lib/markdown-to-html';
 
 interface PostProps {
@@ -33,14 +31,7 @@ const Post: NextPage<PostProps> = ({ post }) => {
       </Head>
       <Layout>
         <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-          {post?.coverImage && (
-            <Image
-              src={post?.coverImage}
-              layout="fill"
-              loader={imageLoader}
-              unoptimized
-            />
-          )}
+          {post?.coverImage && <Image src={post?.coverImage} />}
           <Heading>{post.title}</Heading>
           <Text>{format(new Date(post.date), 'dd.MM.yyyy')}</Text>
           <Text>{`Author: ${post?.author?.name}`}</Text>
