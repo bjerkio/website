@@ -72,6 +72,7 @@ export const theme = merge(webTheme, {
     primary: {
       backgroundColor: 'black100',
       p: 3,
+      fontSize: 2,
     },
   },
   /**

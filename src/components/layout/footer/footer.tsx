@@ -11,7 +11,9 @@ export const Footer: React.FC = () => (
       >
         <Logo sx={{ height: '30px', mr: 'auto', color: 'white' }} />
         <Grid columns={[1, '3fr 2fr 2fr']}>
-          <Booking />
+          <Box>
+            <Booking />
+          </Box>
 
           <Flex sx={{ flexDirection: 'column', gap: 1 }}>
             <Link

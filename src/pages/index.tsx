@@ -31,8 +31,8 @@ const Home: NextPage = () => {
             <br /> er å skape
           </Heading>
           <Paragraph>
-            Ved å gjøre informasjon mer tilgjengelig og tørre å bryte med det
-            etablerte tror vi mennesker kan oppnå sitt potensiale.
+            Vi er til for å forbedre og forenkle måten mennesker lærer, tenker,
+            jobber, og kommuniserer på.
           </Paragraph>
           <Box>
             <Button>Les mer om oss</Button>
