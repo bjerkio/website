@@ -37,7 +37,7 @@ const About: React.FC = () => {
           lærer og kommuniserer, må vi akseptere at veien er ikke gått opp før
           vi begynner. Den blir til mens vi går.
         </Paragraph>
-        <Paragraph variant="headline">
+        <Paragraph sx={{ fontWeight: 'bold' }}>
           Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.{' '}
         </Paragraph>
       </Grid>
