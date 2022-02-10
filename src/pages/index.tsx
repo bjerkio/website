@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
-import { Image } from 'next-theme-ui';
 import {
   Box,
   Button,
   Card,
   Grid,
   Heading,
+  Image,
   Link,
   Paragraph,
   Text,

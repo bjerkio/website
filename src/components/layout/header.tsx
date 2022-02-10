@@ -7,7 +7,14 @@ export const Header: React.FC = () => {
     <Container variant="readable">
       <Flex sx={{ pt: 2 }}>
         <Link href={'/'}>
-          <Logo sx={{ maxWidth: '100px', cursor: 'pointer' }} />
+          <Logo
+            sx={{
+              maxWidth: '100px',
+              cursor: 'pointer',
+              height: '40px',
+              color: 'text',
+            }}
+          />
         </Link>
         <Flex sx={{ gap: 3, mt: 'auto', ml: 'auto', alignItems: 'flex-end' }}>
           {/** Navigation links go here */}
