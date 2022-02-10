@@ -53,6 +53,7 @@ export const theme = merge(webTheme, {
     readable: {
       variant: 'centered',
       maxWidth: 770,
+      px: [5, 0],
     },
   },
   cards: {
@@ -81,9 +82,14 @@ export const theme = merge(webTheme, {
       lineHeight: 0.9,
       fontWeight: 800,
     },
+    heading: { fontWeight: 800 },
     subtitle: {
       color: 'green120',
       fontWeight: 'medium',
+    },
+    headline: {
+      fontWeight: 'bold',
+      fontSize: 3,
     },
   },
 
