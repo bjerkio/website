@@ -1,5 +1,5 @@
 import { Link } from 'next-theme-ui';
-import { Grid, Heading, Link as ThemeUILink, Paragraph, Text } from 'theme-ui';
+import { Grid, Heading, Paragraph, Text, Link as ThemeUILink } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
 
 const About: React.FC = () => {
