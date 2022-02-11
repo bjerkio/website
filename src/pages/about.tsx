@@ -1,5 +1,13 @@
 import { Link } from 'next-theme-ui';
-import { Grid, Heading, Paragraph, Text, Link as ThemeUILink } from 'theme-ui';
+import {
+  Flex,
+  Grid,
+  Heading,
+  Paragraph,
+  Text,
+  Link as ThemeUILink,
+} from 'theme-ui';
+import { ContactPerson } from '../components/about/contact-person';
 import { Layout } from '../components/layout/layout';
 
 const About: React.FC = () => {
@@ -35,7 +43,9 @@ const About: React.FC = () => {
             For deg som kunde betyr det at du indirekte bidrar til å skape et
             bedre samfunn, men også betydelig bedre programvare.
           </Paragraph>
-          <Link href={''}>Sjekk vår Github-profil →</Link>
+          <ThemeUILink href={'https://github.com/bjerkio'}>
+            Sjekk vår Github-profil →
+          </ThemeUILink>
         </Grid>
 
         <Grid sx={{ gap: 3 }}>
@@ -56,6 +66,39 @@ const About: React.FC = () => {
             </ThemeUILink>
           </Grid>
         </Grid>
+
+        <Flex
+          sx={{ flexDirection: ['column', 'row'], flexWrap: 'wrap', gap: 2 }}
+        >
+          <ContactPerson
+            name={'Brage Sekse Aarset'}
+            photoPath={'/persons/brage.jpg'}
+            phone={'+47 464 65 823'}
+            email={'brage@bjerk.io'}
+            title={'Programvareutvikler'}
+            github={'https://github.com/braaar'}
+            linkedIn={'https://www.linkedin.com/in/braaar/'}
+          />
+          <ContactPerson
+            name={'Simen A. W. Olsen'}
+            photoPath={'/persons/simen.jpg'}
+            phone={'+47 953 08 087'}
+            email={'so@bjerk.io'}
+            title={'Daglig leder / Programvareutvikler'}
+            github={'https://github.com/cobraz'}
+            linkedIn={'https://www.linkedin.com/in/cobraz/'}
+          />
+          <ContactPerson
+            name={'Bjørn Niklas Sjøstrøm'}
+            photoPath={'/persons/bns.jpg'}
+            phone={'+47 905 86 616'}
+            email={'bns@bjerk.io'}
+            title={'Rådgiver'}
+            linkedIn={
+              'https://www.linkedin.com/in/bj%C3%B8rn-niklas-sj%C3%B8str%C3%B8m-8043277/'
+            }
+          />
+        </Flex>
       </Grid>
     </Layout>
   );
