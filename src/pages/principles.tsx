@@ -1,7 +1,7 @@
 import { Grid, Heading, Link, Paragraph } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
 
-const About: React.FC = () => {
+const Principles: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ gap: 5 }}>
@@ -70,4 +70,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Principles;
