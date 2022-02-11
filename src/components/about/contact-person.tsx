@@ -1,4 +1,4 @@
-import { Flex, Image, Link, Text } from 'theme-ui';
+import { AspectRatio, Box, Flex, Image, Link, Text } from 'theme-ui';
 import { SocialGithub } from '../illustrations/social-github';
 import { SocialLinkedin } from '../illustrations/social-linkedin';
 
@@ -23,7 +23,19 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
 }) => {
   return (
     <Flex sx={{ flexDirection: 'column' }}>
-      <Image src={photoPath} width={308} height={440} />
+      <Box sx={{ width: '15rem' }}>
+        <AspectRatio ratio={308 / 440}>
+          <Image
+            src={photoPath}
+            sx={{
+              minWidth: '100%',
+              minHeight: '100%',
+              width: 'auto',
+              height: 'auto',
+            }}
+          />
+        </AspectRatio>
+      </Box>
       <Text sx={{ fontSize: 3, fontWeight: 'bold' }}>{name}</Text>
       <Text>{title}</Text>
       <Link href={`tel:${phone}`}> {phone}</Link>
