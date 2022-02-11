@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { Link } from 'next-theme-ui';
 import {
   Box,
   Button,
@@ -6,7 +7,6 @@ import {
   Grid,
   Heading,
   Image,
-  Link,
   Paragraph,
   Text,
 } from 'theme-ui';
