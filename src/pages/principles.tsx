@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <Grid sx={{ gap: 5 }}>
         <Grid sx={{ gap: 3 }}>
           <Heading variant="title">Våre prinsipper</Heading>
-          <Paragraph variant="lead">
+          <Paragraph variant="excerpt">
             Kompetanse og teknologi, kombinert med et brukervennlig design, er
             viktig for å lykkes
           </Paragraph>

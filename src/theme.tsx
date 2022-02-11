@@ -88,7 +88,7 @@ export const theme = merge(webTheme, {
       color: 'green120',
       fontWeight: 'medium',
     },
-    lead: {
+    excerpt: {
       fontWeight: 'bold',
       fontSize: 3,
     },
