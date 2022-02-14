@@ -23,7 +23,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
 }) => {
   return (
     <Flex sx={{ flexDirection: 'column' }}>
-      <Box sx={{ width: '15rem' }}>
+      <Box sx={{ width: ['100%', '15rem'] }}>
         <AspectRatio ratio={308 / 440}>
           <Image
             src={photoPath}

@@ -68,7 +68,11 @@ const About: React.FC = () => {
         </Grid>
 
         <Flex
-          sx={{ flexDirection: ['column', 'row'], flexWrap: 'wrap', gap: 2 }}
+          sx={{
+            flexDirection: ['column', 'row'],
+            flexWrap: ['nowrap', 'wrap'],
+            gap: 2,
+          }}
         >
           <ContactPerson
             name={'Brage Sekse Aarset'}
