@@ -32,6 +32,8 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
               minHeight: '100%',
               width: 'auto',
               height: 'auto',
+              objectFit: 'cover',
+              borderRadius: 6,
             }}
           />
         </AspectRatio>
