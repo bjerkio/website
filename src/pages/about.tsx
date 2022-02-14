@@ -43,7 +43,7 @@ const About: React.FC = () => {
             For deg som kunde betyr det at du indirekte bidrar til å skape et
             bedre samfunn, men også betydelig bedre programvare.
           </Paragraph>
-          <ThemeUILink href={'https://github.com/bjerkio'}>
+          <ThemeUILink href={'https://github.com/bjerkio'} target={'_blank'}>
             Sjekk vår Github-profil →
           </ThemeUILink>
         </Grid>
