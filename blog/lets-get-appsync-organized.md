@@ -16,7 +16,7 @@ tags:
 
 **Bjerk is a proud member of the Open Source community. We love and invest in
 Open Source. We build open-source products, sharing our experience and
-contributing back to engineers alike. **
+contributing back to engineers alike.**
 
 About a year ago, we released the first version of Pulumi AppSync Modules
 (PASM). We've released this tool under the Apache 2.0 license (Open
