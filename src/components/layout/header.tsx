@@ -32,6 +32,17 @@ export const Header: React.FC = () => {
             Blogg
           </Link>
           <Link
+            href={'/about'}
+            sx={{
+              textDecoration: 'none',
+              color: pathname.includes('about') ? 'green80' : 'text',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            Om oss
+          </Link>
+          <Link
             href={'/principles'}
             sx={{
               textDecoration: 'none',

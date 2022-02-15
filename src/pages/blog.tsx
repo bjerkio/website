@@ -12,7 +12,7 @@ const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
   return (
     <Layout>
       <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-        <Heading>Blogginnlegg</Heading>
+        <Heading variant="title">Blogginnlegg</Heading>
         <Flex sx={{ flexDirection: 'column', gap: 3 }}>
           {allPosts.map(post => (
             <BlogPostPreview post={post} key={post.slug} />

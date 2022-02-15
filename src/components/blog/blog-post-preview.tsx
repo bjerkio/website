@@ -21,7 +21,10 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
                 flex: 1,
               }}
             >
-              <Image src={post.image} />
+              <Image
+                src={post.image}
+                sx={{ borderRadius: 6, height: '100%' }}
+              />
             </Box>
           )}
           <Flex

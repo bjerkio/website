@@ -34,7 +34,7 @@ const Post: NextPage<PostProps> = ({ post }) => {
       </Head>
       <Layout>
         <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-          {post?.image && <Image src={post?.image} />}
+          {post?.image && <Image src={post?.image} sx={{ borderRadius: 6 }} />}
           <Heading>{post.title}</Heading>
           <Text>{format(new Date(post.date), 'dd.MM.yyyy')}</Text>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />

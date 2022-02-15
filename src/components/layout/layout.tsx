@@ -10,6 +10,7 @@ export const Layout: React.FC = ({ children }) => (
       flexDirection: 'column',
       gap: 2,
       pb: 0,
+      minHeight: '100vh',
     }}
   >
     <SEO />
