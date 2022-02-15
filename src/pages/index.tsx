@@ -11,7 +11,6 @@ import {
   Text,
 } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
-
 const customers = [
   'grid-branding',
   'folio',
@@ -35,7 +34,9 @@ const Home: NextPage = () => {
             jobber, og kommuniserer på.
           </Paragraph>
           <Box>
-            <Button>Les mer om oss</Button>
+            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
+              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            </Link>
           </Box>
         </Grid>
         <Card>
