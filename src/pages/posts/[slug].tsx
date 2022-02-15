@@ -18,7 +18,7 @@ interface PostProps {
   };
 }
 
-const Post: NextPage<PostProps> = ({ post }) => {
+const BlogPost: NextPage<PostProps> = ({ post }) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -44,7 +44,7 @@ const Post: NextPage<PostProps> = ({ post }) => {
   );
 };
 
-export default Post;
+export default BlogPost;
 
 export const getStaticProps = async ({ params }: Params) => {
   const post = getPostBySlug(params.slug, [
