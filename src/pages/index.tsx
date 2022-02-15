@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { Link } from 'next-theme-ui';
 import {
   Box,
   Button,
@@ -6,7 +7,6 @@ import {
   Grid,
   Heading,
   Image,
-  Link,
   Paragraph,
   Text,
 } from 'theme-ui';
@@ -23,45 +23,52 @@ const customers = [
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Grid sx={{ gap: 4 }}>
-        <Heading variant="title">
-          Vår lidenskap
-          <br /> er å skape
-        </Heading>
-        <Paragraph>
-          Ved å gjøre informasjon mer tilgjengelig og tørre å bryte med det
-          etablerte tror vi mennesker kan oppnå sitt potensiale.
-        </Paragraph>
-        <Box>
-          <Button>Les mer om oss</Button>
-        </Box>
-      </Grid>
-      <Card>
-        <Grid gap={1}>
-          <Text variant="subtitle">Våre prinsipper og metoder</Text>
-          <Heading>
-            Kompetanse og teknologi, kombinert med et brukervennlig design
+      <Grid sx={{ gap: 5 }}>
+        <Grid sx={{ gap: 4 }}>
+          <Heading variant="title">
+            Vår lidenskap
+            <br /> er å skape
           </Heading>
+          <Paragraph>
+            Vi er til for å forbedre og forenkle måten mennesker lærer, tenker,
+            jobber, og kommuniserer på.
+          </Paragraph>
+          <Box>
+            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
+              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            </Link>
+          </Box>
         </Grid>
-        <Paragraph>
-          Samarbeid, samspill, programvare som virker, iterativ utvikling,
-          kontinuitet, gode insentiver og Super Mario-effekten er noe av det vi
-          mener kreves for å lykkes.
-        </Paragraph>
-        <Link sx={{ color: 'black100' }}>Les om våre prinsipper</Link>
-      </Card>
-      <Grid
-        columns={['repeat(3, 1fr)']}
-        gap={4}
-        sx={{ justifyItems: 'center' }}
-      >
-        {customers.map(customer => (
-          <Image key={customer} src={`/customers/${customer}.svg`} />
-        ))}
+        <Card>
+          <Grid gap={1}>
+            <Text variant="subtitle">Våre prinsipper og metoder</Text>
+            <Heading>
+              Kompetanse og teknologi, kombinert med et brukervennlig design
+            </Heading>
+          </Grid>
+          <Paragraph>
+            Samarbeid, samspill, programvare som virker, iterativ utvikling,
+            kontinuitet, gode insentiver og Super Mario-effekten er noe av det
+            vi mener kreves for å lykkes.
+          </Paragraph>
+          <Link href={'/principles'}>Les om våre prinsipper</Link>
+        </Card>
+        <Grid
+          columns={['repeat(3, 1fr)']}
+          gap={4}
+          sx={{ justifyItems: 'center' }}
+        >
+          {customers.map(customer => (
+            <Image
+              key={customer}
+              src={`/customers/${customer}.svg`}
+              height="43"
+            />
+          ))}
+        </Grid>
       </Grid>
     </Layout>
   );
 };
 
-// eslint-disable-next-line import/no-default-export
 export default Home;

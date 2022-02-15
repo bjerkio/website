@@ -39,7 +39,7 @@ export const theme = merge(webTheme, {
    */
   radii: [0, 4, 8, 100],
   /**
-   * These layouts ar00,00e still being tested/played with
+   * These layouts are still being tested/played with
    * in the current design.
    *
    * Read more: https://github.com/bjerkio/brand/issues/8
@@ -53,6 +53,7 @@ export const theme = merge(webTheme, {
     readable: {
       variant: 'centered',
       maxWidth: 770,
+      p: 4,
     },
   },
   cards: {
@@ -71,6 +72,7 @@ export const theme = merge(webTheme, {
     primary: {
       backgroundColor: 'black100',
       p: 3,
+      fontSize: 2,
     },
   },
   /**
@@ -81,9 +83,14 @@ export const theme = merge(webTheme, {
       lineHeight: 0.9,
       fontWeight: 800,
     },
+    heading: { fontWeight: 800 },
     subtitle: {
       color: 'green120',
       fontWeight: 'medium',
+    },
+    excerpt: {
+      fontWeight: 'bold',
+      fontSize: 3,
     },
   },
 
