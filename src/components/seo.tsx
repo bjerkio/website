@@ -56,13 +56,6 @@ export const SEO: React.FC<SEOProps> = ({
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
-
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;800&display=swap"
-        rel="stylesheet"
-      />
     </Head>
   );
 };
