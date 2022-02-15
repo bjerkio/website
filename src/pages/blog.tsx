@@ -23,7 +23,6 @@ const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
   );
 };
 
-// eslint-disable-next-line import/no-default-export
 export default Blog;
 
 export const getStaticProps = async (): Promise<{ props: BlogProps }> => {

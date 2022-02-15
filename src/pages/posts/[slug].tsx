@@ -42,7 +42,6 @@ const Post: NextPage<PostProps> = ({ post }) => {
   );
 };
 
-// eslint-disable-next-line import/no-default-export
 export default Post;
 
 export const getStaticProps = async ({ params }: Params) => {
