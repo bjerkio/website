@@ -12,7 +12,7 @@ export const Footer: React.FC = () => (
         <Logo sx={{ height: '30px', mr: 'auto', color: 'white' }} />
         <Grid columns={[1, '3fr 2fr 2fr']}>
           <Box>
-            <Booking />
+            <Booking label={'Book et møte →'} />
           </Box>
 
           <Flex sx={{ flexDirection: 'column', gap: 1 }}>

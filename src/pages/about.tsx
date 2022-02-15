@@ -8,6 +8,7 @@ import {
   Link as ThemeUILink,
 } from 'theme-ui';
 import { ContactPerson } from '../components/about/contact-person';
+import { Booking } from '../components/booking';
 import { Layout } from '../components/layout/layout';
 
 const About: React.FC = () => {
@@ -66,7 +67,7 @@ const About: React.FC = () => {
             </ThemeUILink>
           </Grid>
         </Grid>
-
+        <Booking label={'Sett opp et møte med oss'} />
         <Flex
           sx={{
             flexDirection: ['column', 'row'],
