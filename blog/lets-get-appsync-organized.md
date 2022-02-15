@@ -1,11 +1,11 @@
 ---
 title: Let's get AWS AppSync organized!
-date: 2021-05-15
+date: '2021-05-15'
 language: en
 meta:
   description: Organizing AWS AppSync in modules
-  image: ./banner.png
-image: ./banner.png
+  image: /images/lets-get-appsync-organized.png
+image: /images/lets-get-appsync-organized.png
 tags:
   - Amazon Web Services
   - AWS

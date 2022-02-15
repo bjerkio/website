@@ -2,18 +2,24 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 
-export interface PostFields {
-  title?: string;
-  excerpt?: string;
-  date: string;
+export interface Post {
+  /** The slug as defined in the file name of the .md file */
   slug: string;
-  author?: { name: string; picture: string };
+  /** The markdown content of the post */
   content?: string;
-  ogImage?: { url: string };
-  coverImage?: string;
+  /** Title of the psot */
+  title?: string;
+  /** Date of the post */
+  date: string;
+  /** Metadata for the post preview/SEO */
+  meta?: { description?: string; image?: string };
+  /** Banner image to show at top of article */
+  image?: string;
+  /** Array of string tags */
+  tags?: string[];
 }
 
-const postsDirectory = join(process.cwd(), 'src/_posts');
+const postsDirectory = join(process.cwd(), '/blog');
 
 export const getPostSlugs = (): string[] => {
   return fs.readdirSync(postsDirectory);
@@ -21,14 +27,14 @@ export const getPostSlugs = (): string[] => {
 
 export const getPostBySlug = (
   slug: string,
-  fields: (keyof PostFields)[] = [],
-): PostFields => {
+  fields: (keyof Post)[] = [],
+): Post => {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const items: PostFields = { date: data['date'], slug: realSlug };
+  const items: Post = { date: data['date'], slug: realSlug };
 
   // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
@@ -47,9 +53,7 @@ export const getPostBySlug = (
   return items;
 };
 
-export const getAllPosts = (
-  fields: (keyof PostFields)[] = [],
-): PostFields[] => {
+export const getAllPosts = (fields: (keyof Post)[] = []): Post[] => {
   const slugs = getPostSlugs();
   const posts = slugs
     .map(slug => getPostBySlug(slug, fields))

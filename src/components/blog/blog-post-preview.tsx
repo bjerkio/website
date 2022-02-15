@@ -1,13 +1,10 @@
 import { format } from 'date-fns';
 import { Link } from 'next-theme-ui';
 import { Box, Card, Flex, Heading, Image, Text } from 'theme-ui';
-import { PostFields } from '../../lib/api';
+import { Post } from '../../lib/api';
 
 export interface BlogPostPreviewProps {
-  post: Pick<
-    PostFields,
-    'title' | 'slug' | 'date' | 'excerpt' | 'author' | 'coverImage'
-  >;
+  post: Pick<Post, 'title' | 'slug' | 'date' | 'meta' | 'image'>;
 }
 
 export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
@@ -18,13 +15,13 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
     >
       <Card>
         <Flex sx={{ gap: 3 }}>
-          {post.coverImage && (
+          {post.image && (
             <Box
               sx={{
                 flex: 1,
               }}
             >
-              <Image src={post.coverImage} />
+              <Image src={post.image} />
             </Box>
           )}
           <Flex
@@ -34,13 +31,10 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
               flex: 1,
             }}
           >
+            <Text>{format(new Date(post.date), 'dd.MM.yyyy')}</Text>
             <Heading>{post.title}</Heading>
 
-            <Text>{`${format(new Date(post.date), 'dd.MM.yyyy')} – ${
-              post.author?.name
-            }`}</Text>
-
-            <Text>{post.excerpt}</Text>
+            <Text>{post.meta?.description}</Text>
           </Flex>
         </Flex>
       </Card>

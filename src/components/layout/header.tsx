@@ -21,15 +21,15 @@ export const Header: React.FC = () => {
         <Flex sx={{ gap: 3, mt: 'auto', ml: 'auto', alignItems: 'flex-end' }}>
           {/** Navigation links go here */}
           <Link
-            href={'/about'}
+            href={'/blog'}
             sx={{
               textDecoration: 'none',
-              color: pathname.includes('about') ? 'green80' : 'text',
+              color: pathname.includes('blog') ? 'green80' : 'text',
               cursor: 'pointer',
               fontWeight: 'bold',
             }}
           >
-            Om oss
+            Blogg
           </Link>
           <Link
             href={'/principles'}

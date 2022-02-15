@@ -6,11 +6,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Flex, Heading, Image, Text } from 'theme-ui';
 import { Layout } from '../../components/layout/layout';
-import { PostFields, getAllPosts, getPostBySlug } from '../../lib/api';
+import { Post, getAllPosts, getPostBySlug } from '../../lib/api';
 import { markdownToHtml } from '../../lib/markdown-to-html';
 
 interface PostProps {
-  post: PostFields & { content: string };
+  post: Post & { content: string };
   paths: {
     params: {
       slug: string;
@@ -27,17 +27,19 @@ const Post: NextPage<PostProps> = ({ post }) => {
     <>
       <Head>
         <title>{post.title} | Bjerk</title>
-        <meta property="og:image" content={post.coverImage} />
+        <meta
+          property="og:image"
+          content={post?.meta?.image ? post.meta?.image : post.image}
+        />
       </Head>
       <Layout>
         <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-          {post?.coverImage && <Image src={post?.coverImage} />}
+          {post?.image && <Image src={post?.image} />}
           <Heading>{post.title}</Heading>
           <Text>{format(new Date(post.date), 'dd.MM.yyyy')}</Text>
-          <Text>{`Author: ${post?.author?.name}`}</Text>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </Flex>
-      </Layout>{' '}
+      </Layout>
     </>
   );
 };
@@ -49,10 +51,9 @@ export const getStaticProps = async ({ params }: Params) => {
     'title',
     'date',
     'slug',
-    'author',
+    'meta',
     'content',
-    'ogImage',
-    'coverImage',
+    'image',
   ]);
   const content = await markdownToHtml(post.content || '');
 

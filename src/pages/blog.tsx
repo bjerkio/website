@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import { Flex, Heading } from 'theme-ui';
 import { BlogPostPreview } from '../components/blog/blog-post-preview';
 import { Layout } from '../components/layout/layout';
-import { PostFields, getAllPosts } from '../lib/api';
+import { Post, getAllPosts } from '../lib/api';
 
 interface BlogProps {
-  allPosts: PostFields[];
+  allPosts: Post[];
 }
 
 const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
@@ -26,15 +26,7 @@ const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
 export default Blog;
 
 export const getStaticProps = async (): Promise<{ props: BlogProps }> => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-    'ogImage',
-  ]);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'image', 'meta']);
 
   return {
     props: { allPosts },
