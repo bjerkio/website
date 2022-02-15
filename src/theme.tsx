@@ -83,9 +83,14 @@ export const theme = merge(webTheme, {
       lineHeight: 0.9,
       fontWeight: 800,
     },
+    heading: { fontWeight: 800 },
     subtitle: {
       color: 'green120',
       fontWeight: 'medium',
+    },
+    excerpt: {
+      fontWeight: 'bold',
+      fontSize: 3,
     },
   },
 

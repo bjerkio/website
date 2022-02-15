@@ -51,9 +51,7 @@ const Home: NextPage = () => {
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes.
           </Paragraph>
-          <Link href={'/principles'} sx={{ color: 'black100' }}>
-            Les om våre prinsipper
-          </Link>
+          <Link href={'/principles'}>Les om våre prinsipper</Link>
         </Card>
         <Grid
           columns={['repeat(3, 1fr)']}

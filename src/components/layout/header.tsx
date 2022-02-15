@@ -31,6 +31,17 @@ export const Header: React.FC = () => {
           >
             Om oss
           </Link>
+          <Link
+            href={'/principles'}
+            sx={{
+              textDecoration: 'none',
+              color: pathname.includes('principles') ? 'green80' : 'text',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            Prinsipper
+          </Link>
         </Flex>
       </Flex>
     </Container>
