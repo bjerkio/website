@@ -1,5 +1,5 @@
-import { merge } from 'theme-ui';
 import { webTheme } from '@bjerk/brand';
+import { merge } from 'theme-ui';
 
 /**
  * Once values stabilize, they should be
