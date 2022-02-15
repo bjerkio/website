@@ -1,9 +1,6 @@
-import { useLocation } from '@reach/router';
-import { graphql, useStaticQuery } from 'gatsby';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React from 'react';
-import Helmet from 'react-helmet';
-import { useIntl } from 'react-intl';
-
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -11,38 +8,20 @@ export interface SEOProps {
   schema?: unknown;
 }
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl
-        defaultImage: image
-      }
-    }
-  }
-`;
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  image,
+  schema,
+}) => {
+  const { basePath, pathname } = useRouter();
 
-const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
-  const { pathname } = useLocation();
-  const intl = useIntl();
-  const { site } = useStaticQuery(query);
-
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
-
+  // TODO: add good defaults for title, description and image
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}/${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    title: title || 'Bjerk',
+    description: description || 'Bjerk sin nettside',
+    image: `${basePath}/${image || ''}`,
+    url: `${basePath}${pathname}`,
   };
 
   const orgSchema = schema || {
@@ -59,13 +38,9 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
   };
 
   return (
-    <Helmet
-      title={seo.title}
-      titleTemplate={titleTemplate}
-      htmlAttributes={{
-        lang: intl.locale,
-      }}
-    >
+    <Head>
+      <title>{seo.title}</title>
+      <link rel="icon" href="/favicon.ico" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -81,8 +56,13 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, schema }) => {
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
-    </Helmet>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;800&display=swap"
+        rel="stylesheet"
+      />
+    </Head>
   );
 };
-
-export default SEO;

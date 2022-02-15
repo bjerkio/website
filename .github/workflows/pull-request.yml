@@ -1,7 +1,7 @@
 name: Pull Request
 on:
   pull_request:
-    
+
 jobs:
   pull_request:
     runs-on: ubuntu-20.04
@@ -10,34 +10,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Caching NPM packages
-        uses: actions/cache@v2
+      - uses: actions/setup-node@v2
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-${{ secrets.CACHE_KEY }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ secrets.CACHE_KEY }}-yarn-
+          node-version: 16
+          cache: yarn
 
-      - name: Caching Gatsby
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
         with:
-          path: |
-            public
-            .cache
-          key: ${{ runner.os }}-${{ secrets.CACHE_KEY }}-gatsby-build-${{ github.run_id }}
+          path: ${{ github.workspace }}/.next/cache
+          key:
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{
+            hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-${{ secrets.CACHE_KEY }}-gatsby-build-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
 
       - run: yarn install
       - run: yarn lint
       - run: yarn build
-        env:
-            GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
-            CI: true
       - run: yarn test
 
       - name: Upload website
@@ -52,18 +41,18 @@ jobs:
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
 
-      - name: Get all urls from sitemap.xml
-        id: parse-sitemap
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        uses: cobraz/parse-sitemap@main
-        with:
-          sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap/sitemap-index.xml
-          replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
+      # - name: Get all urls from sitemap.xml
+      #   id: parse-sitemap
+      #   if: ${{ github.actor != 'dependabot[bot]' }}
+      #   uses: cobraz/parse-sitemap@main
+      #   with:
+      #     sitemap-url: ${{ steps.firebase.outputs.details_url }}/sitemap/sitemap-index.xml
+      #     replace-domain: https://bjerk.io|${{ steps.firebase.outputs.details_url }}
 
-      - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
-        if: ${{ github.actor != 'dependabot[bot]' }}
-        with:
-          urls: ${{ steps.parse-sitemap.outputs.urls }}
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+      # - name: Run Lighthouse
+      #   uses: treosh/lighthouse-ci-action@v7
+      #   if: ${{ github.actor != 'dependabot[bot]' }}
+      #   with:
+      #     urls: ${{ steps.parse-sitemap.outputs.urls }}
+      #     uploadArtifacts: true
+      #     temporaryPublicStorage: true

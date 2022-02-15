@@ -1,0 +1,11 @@
+{
+  "extends": ["@bjerk/eslint-config", "plugin:@next/next/recommended"],
+  "overrides": [
+    {
+      "files": "src/pages/**/*.tsx",
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

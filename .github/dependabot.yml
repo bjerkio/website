@@ -1,22 +1,22 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     labels:
-      - "impact/no-changelog-required"
-      - "dependencies/github_actions"
-      - "kind/dependencies"
-  - package-ecosystem: "npm"
-    directory: "/"
+      - 'impact/no-changelog-required'
+      - 'dependencies/github_actions'
+      - 'kind/dependencies'
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     ignore:
-      - dependency-name: "typescript*"
-      - dependency-name: "@types/node"
-        versions: ["15.x"]
+      - dependency-name: 'typescript*'
+      - dependency-name: '@types/node'
+        versions: ['15.x']
     labels:
-      - "impact/no-changelog-required"
-      - "dependencies/javascript"
-      - "kind/dependencies"
+      - 'impact/no-changelog-required'
+      - 'dependencies/javascript'
+      - 'kind/dependencies'
