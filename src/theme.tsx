@@ -19,7 +19,6 @@ export const theme = merge(webTheme, {
   colors: {
     muted: '#95E0C8',
     green120: '#2E896C',
-    text: '#000000',
   },
   /**
    * We should add a few notable sizes here,
