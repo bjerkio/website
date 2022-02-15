@@ -89,7 +89,7 @@ export const theme = merge(webTheme, {
       fontWeight: 'medium',
     },
     excerpt: {
-      fontWeight: 'bold',
+      fontWeight: 500,
       fontSize: 3,
     },
   },
