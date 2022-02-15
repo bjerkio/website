@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <br /> er å skape
           </Heading>
           <Paragraph>
-            De siste 12 årene har vi forbedret og forenkle måten mennesker
+            De siste 12 årene har vi forbedret og forenklet måten mennesker
             lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
             tilpasse programvare.
           </Paragraph>
