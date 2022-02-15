@@ -75,6 +75,15 @@ export const theme = merge(webTheme, {
       fontSize: 2,
     },
   },
+  links: {
+    buttonLike: {
+      borderRadius: 1,
+      backgroundColor: 'black100',
+      p: 3,
+      fontSize: 2,
+      color: 'white',
+    },
+  },
   /**
    * Read more: https://github.com/bjerkio/brand/issues/7
    */

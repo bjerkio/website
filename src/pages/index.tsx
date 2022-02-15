@@ -34,8 +34,11 @@ const Home: NextPage = () => {
             jobber, og kommuniserer på.
           </Paragraph>
           <Box>
-            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
-              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            <Link
+              href={'/about'}
+              sx={{ textDecoration: 'none', variant: 'links.buttonLike' }}
+            >
+              Les mer om oss
             </Link>
           </Box>
         </Grid>
