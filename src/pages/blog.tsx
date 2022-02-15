@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Flex, Heading } from 'theme-ui';
+import { Flex, Grid, Heading } from 'theme-ui';
 import { BlogPostPreview } from '../components/blog/blog-post-preview';
 import { Layout } from '../components/layout/layout';
 import { Post, getAllPosts } from '../lib/api';
@@ -11,14 +11,14 @@ interface BlogProps {
 const Blog: NextPage<BlogProps> = ({ allPosts }: BlogProps) => {
   return (
     <Layout>
-      <Flex sx={{ flexDirection: 'column', gap: 3 }}>
+      <Grid sx={{ gap: 3 }}>
         <Heading variant="title">Blogginnlegg</Heading>
         <Flex sx={{ flexDirection: 'column', gap: 3 }}>
           {allPosts.map(post => (
             <BlogPostPreview post={post} key={post.slug} />
           ))}
         </Flex>
-      </Flex>
+      </Grid>
     </Layout>
   );
 };
