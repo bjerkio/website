@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { Link } from 'next-theme-ui';
 import {
   Box,
   Button,
@@ -6,12 +7,10 @@ import {
   Grid,
   Heading,
   Image,
-  Link,
   Paragraph,
   Text,
 } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
-
 const customers = [
   'grid-branding',
   'folio',
@@ -35,7 +34,9 @@ const Home: NextPage = () => {
             jobber, og kommuniserer på.
           </Paragraph>
           <Box>
-            <Button>Les mer om oss</Button>
+            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
+              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            </Link>
           </Box>
         </Grid>
         <Card>
@@ -50,7 +51,9 @@ const Home: NextPage = () => {
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes.
           </Paragraph>
-          <Link sx={{ color: 'black100' }}>Les om våre prinsipper</Link>
+          <Link href={'/principles'} sx={{ color: 'black100' }}>
+            Les om våre prinsipper
+          </Link>
         </Card>
         <Grid
           columns={['repeat(3, 1fr)']}

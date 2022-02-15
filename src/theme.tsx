@@ -101,6 +101,7 @@ export const theme = merge(webTheme, {
     },
     a: {
       textDecoration: 'underline',
+      color: 'text',
     },
   },
 });
