@@ -1,10 +1,8 @@
 import { Link } from 'next-theme-ui';
-import { useRouter } from 'next/router';
 import { Container, Flex } from 'theme-ui';
 import { Logo } from '../logo';
 
 export const Header: React.FC = () => {
-  const { pathname } = useRouter();
   return (
     <Container variant="readable">
       <Flex sx={{ pt: 2 }}>
