@@ -11,17 +11,17 @@ export const NetworksLinks: React.FC = props => (
         {
           href: 'https://github.com/bjerkio',
           label: 'Github Profile',
-          icon: <SocialGithub width="100%" height="100%" />,
+          icon: <SocialGithub width="100%" height="100%" color="primary" />,
         },
         {
           href: 'https://www.linkedin.com/company/bjerk/',
           label: 'LinkedIn Profile',
-          icon: <SocialLinkedin width="100%" height="100%" />,
+          icon: <SocialLinkedin width="100%" height="100%" color="primary" />,
         },
         {
           href: 'https://www.facebook.com/WeAreDigitalization',
           label: 'Facebook Profile',
-          icon: <SocialFacebook width="100%" height="100%" />,
+          icon: <SocialFacebook width="100%" height="100%" color="primary" />,
         },
       ].map(({ href, icon, label }, index) => (
         <Link
