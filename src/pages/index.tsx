@@ -1,15 +1,6 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import {
-  Box,
-  Button,
-  Card,
-  Grid,
-  Heading,
-  Image,
-  Paragraph,
-  Text,
-} from 'theme-ui';
+import { Box, Card, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
 const customers = [
   'grid-branding',
@@ -39,8 +30,11 @@ const Home: NextPage = () => {
             deg om å lage produkter og tekniske løsninger.
           </Paragraph>
           <Box>
-            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
-              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            <Link
+              href={'/about'}
+              sx={{ textDecoration: 'none', variant: 'links.buttonLink' }}
+            >
+              Les mer om oss
             </Link>
           </Box>
         </Grid>
