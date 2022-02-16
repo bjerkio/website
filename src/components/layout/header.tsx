@@ -42,7 +42,6 @@ export const Header: React.FC = () => {
         >
           Om oss
         </NavLink>
-        </Flex>
       </Flex>
     </Container>
   );
