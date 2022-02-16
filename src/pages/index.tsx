@@ -30,8 +30,13 @@ const Home: NextPage = () => {
             <br /> er å skape
           </Heading>
           <Paragraph>
-            Vi er til for å forbedre og forenkle måten mennesker lærer, tenker,
-            jobber, og kommuniserer på.
+            De siste 12 årene har vi forbedret og forenklet måten mennesker
+            lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
+            tilpasse programvare.
+          </Paragraph>
+          <Paragraph variant="excerpt">
+            Vi utvikler, integrerer, kobler sammen, rådgir og samarbeider med
+            deg om å lage produkter og tekniske løsninger.
           </Paragraph>
           <Box>
             <Link href={'/about'} sx={{ textDecoration: 'none' }}>
