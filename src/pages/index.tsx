@@ -1,15 +1,6 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import {
-  Box,
-  Button,
-  Card,
-  Grid,
-  Heading,
-  Image,
-  Paragraph,
-  Text,
-} from 'theme-ui';
+import { Box, Card, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
 import { Layout } from '../components/layout/layout';
 const customers = [
   'grid-branding',
@@ -30,12 +21,20 @@ const Home: NextPage = () => {
             <br /> er å skape
           </Heading>
           <Paragraph>
-            Vi er til for å forbedre og forenkle måten mennesker lærer, tenker,
-            jobber, og kommuniserer på.
+            De siste 12 årene har vi forbedret og forenklet måten mennesker
+            lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
+            tilpasse programvare.
+          </Paragraph>
+          <Paragraph variant="excerpt">
+            Vi utvikler, integrerer, kobler sammen, rådgir og samarbeider med
+            deg om å lage produkter og tekniske løsninger.
           </Paragraph>
           <Box>
-            <Link href={'/about'} sx={{ textDecoration: 'none' }}>
-              <Button sx={{ cursor: 'pointer' }}>Les mer om oss</Button>
+            <Link
+              href={'/about'}
+              sx={{ textDecoration: 'none', variant: 'links.buttonLink' }}
+            >
+              Les mer om oss
             </Link>
           </Box>
         </Grid>

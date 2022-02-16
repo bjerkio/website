@@ -1,4 +1,4 @@
-import { Link } from 'next-theme-ui';
+import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
 import { Container, Flex } from 'theme-ui';
 import { Logo } from '../logo';
@@ -7,7 +7,9 @@ export const Header: React.FC = () => {
   const { pathname } = useRouter();
   return (
     <Container variant="readable">
-      <Flex sx={{ pt: 2 }}>
+      <Flex
+        sx={{ pt: 2, justifyContent: 'space-between', alignItems: 'center' }}
+      >
         <Link href={'/'}>
           <Logo
             sx={{
@@ -18,41 +20,28 @@ export const Header: React.FC = () => {
             }}
           />
         </Link>
-        <Flex sx={{ gap: 3, mt: 'auto', ml: 'auto', alignItems: 'flex-end' }}>
-          {/** Navigation links go here */}
-          <Link
-            href={'/blog'}
-            sx={{
-              textDecoration: 'none',
-              color: pathname.includes('blog') ? 'green80' : 'text',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-            }}
-          >
-            Blogg
-          </Link>
-          <Link
-            href={'/about'}
-            sx={{
-              textDecoration: 'none',
-              color: pathname.includes('about') ? 'green80' : 'text',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-            }}
-          >
-            Om oss
-          </Link>
-          <Link
-            href={'/principles'}
-            sx={{
-              textDecoration: 'none',
-              color: pathname.includes('principles') ? 'green80' : 'text',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-            }}
-          >
-            Prinsipper
-          </Link>
+        <NavLink
+          href={'/blog'}
+          sx={{
+            textDecoration: 'none',
+            color: pathname.includes('blog') ? 'green80' : 'text',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+          }}
+        >
+          Blogg
+        </NavLink>
+        <NavLink
+          href={'/about'}
+          sx={{
+            textDecoration: 'none',
+            color: pathname.includes('about') ? 'green80' : 'text',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+          }}
+        >
+          Om oss
+        </NavLink>
         </Flex>
       </Flex>
     </Container>
