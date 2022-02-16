@@ -19,6 +19,7 @@ export const theme = merge(webTheme, {
   colors: {
     muted: '#95E0C8',
     green120: '#2E896C',
+    foreground: '#ffffff',
   },
   /**
    * We should add a few notable sizes here,
@@ -76,12 +77,11 @@ export const theme = merge(webTheme, {
     },
   },
   links: {
-    buttonLike: {
+    buttonLink: {
+      variant: 'buttons.primary',
       borderRadius: 1,
-      backgroundColor: 'black100',
-      p: 3,
-      fontSize: 2,
-      color: 'white',
+      color: 'foreground',
+      width: 'fit-content',
     },
   },
   /**

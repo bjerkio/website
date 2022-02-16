@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <Box>
             <Link
               href={'/about'}
-              sx={{ textDecoration: 'none', variant: 'links.buttonLike' }}
+              sx={{ textDecoration: 'none', variant: 'links.buttonLink' }}
             >
               Les mer om oss
             </Link>
