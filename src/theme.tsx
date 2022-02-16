@@ -70,6 +70,7 @@ export const theme = merge(webTheme, {
    */
   buttons: {
     primary: {
+      fontFamily: 'heading',
       backgroundColor: 'black100',
       p: 3,
       fontSize: 2,
