@@ -113,10 +113,17 @@ export const theme = merge(webTheme, {
        */
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
+      h1: { fontWeight: '300' },
+      h2: { fontWeight: '400' },
+      h3: { fontWeight: 'bold' },
+      h4: { fontWeight: 'bold' },
+      h5: { fontWeight: 'bold' },
     },
     a: {
       textDecoration: 'underline',
-      color: 'text',
+    },
+    h1: {
+      fontSize: 20,
     },
   },
 });

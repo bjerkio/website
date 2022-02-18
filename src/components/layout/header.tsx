@@ -21,6 +21,17 @@ export const Header: React.FC = () => {
           />
         </Link>
         <NavLink
+          href={'/blog'}
+          sx={{
+            textDecoration: 'none',
+            color: pathname.includes('blog') ? 'green80' : 'text',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+          }}
+        >
+          Blogg
+        </NavLink>
+        <NavLink
           href={'/about'}
           sx={{
             textDecoration: 'none',
