@@ -2,6 +2,7 @@ import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
 import { Container, Flex } from 'theme-ui';
 import { Logo } from '../logo';
+import { ColorMode } from './header/color-mode';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
@@ -31,6 +32,7 @@ export const Header: React.FC = () => {
         >
           Om oss
         </NavLink>
+        <ColorMode />
       </Flex>
     </Container>
   );

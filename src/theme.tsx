@@ -16,10 +16,19 @@ export const theme = merge(webTheme, {
    *
    * These are added, but not yet synchronized.
    */
+  initialColorModeName: 'dark',
   colors: {
     muted: '#95E0C8',
     green120: '#2E896C',
-    foreground: '#ffffff',
+    foreground: 'white',
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#0cf',
+      },
+      light: { text: '#000000', background: 'background', foreground: 'white' },
+    },
   },
   /**
    * We should add a few notable sizes here,
