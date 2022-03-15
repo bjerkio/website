@@ -22,8 +22,8 @@ const About: React.FC = () => {
             tenker, jobber og kommuniserer på.
           </Paragraph>
           <Paragraph>
-            For oss, er det viktigste vi gjør er å bidra til at hverdagen til
-            mennesker blir bedre, at vi kan oppnå mer.
+            Det viktigste vi gjør er for oss å bidra til at hverdagen til
+            mennesker blir bedre, slik at vi som samfunn kan oppnå mer.
           </Paragraph>
           <Paragraph>
             Vi elsker å skape – og kombinasjonen av å få skape noe, som også har
