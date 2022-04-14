@@ -103,6 +103,16 @@ const About: React.FC = () => {
               'https://www.linkedin.com/in/bj%C3%B8rn-niklas-sj%C3%B8str%C3%B8m-8043277/'
             }
           />
+          <ContactPerson
+            name={'Thomas Brustad'}
+            photoPath={'/persons/thomas.jpg'}
+            phone={'+47 402 86 277‬'}
+            email={'thomas@bjerk.io'}
+            title={'Rådgiver'}
+            linkedIn={
+              'https://www.linkedin.com/in/thomasbrustad/'
+            }
+          />
         </Flex>
       </Grid>
     </Layout>
