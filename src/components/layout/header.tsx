@@ -47,7 +47,10 @@ export const Header: React.FC = () => {
         </NavLink>
         <Box
           sx={{
-            marginLeft: '800px'
+            marginLeft: '800px',
+            background: '#90F494',
+            boxShadow: '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
+            borderRadius: '30px',
           }}
         >
             <Booking label={'Book et møte →'} />

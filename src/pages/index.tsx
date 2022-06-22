@@ -21,20 +21,25 @@ const Home: NextPage = () => {
           <Paragraph>
             De siste 12 årene har vi forbedret og forenklet måten mennesker
             lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
-            tilpasse programvare.
-          </Paragraph>
-          <Paragraph variant="excerpt">
-            Vi utvikler, integrerer, kobler sammen, rådgir og samarbeider med
+            tilpasse programvare. Vi utvikler, integrerer, kobler sammen, rådgir og samarbeider med
             deg om å lage produkter og tekniske løsninger.
           </Paragraph>
-          <Box>
-            <Link
-              href={'/about'}
-              sx={{ textDecoration: 'none', variant: 'links.buttonLink' }}
-            >
-              Les mer om oss
-            </Link>
-          </Box>
+        </Grid>
+
+        <Grid>
+            <Text variant="subtitle">Noen av våre seneste kunder</Text>
+        </Grid>
+        <Grid
+          columns={['repeat(3, 1fr)']}
+          gap={0}
+          sx={{ justifyItems: 'left' }}
+        >
+          <Text>Folio</Text>
+          <Text>Layer</Text>
+          <Text>Grid branding</Text>
+          <Text>Avfall Norge</Text>
+          <Text>DNB</Text>
+          <Text>Digdir</Text>
         </Grid>
         <Card>
           <Grid gap={1}>
@@ -50,19 +55,7 @@ const Home: NextPage = () => {
           </Paragraph>
           <Link href={'/principles'}>Les om våre prinsipper</Link>
         </Card>
-        <Grid
-          columns={['repeat(3, 1fr)']}
-          gap={4}
-          sx={{ justifyItems: 'center' }}
-        >
-          {customers.map(customer => (
-            <Image
-              key={customer}
-              src={`/customers/${customer}.svg`}
-              height="43"
-            />
-          ))}
-        </Grid>
+
       </Grid>
     </Layout>
   );

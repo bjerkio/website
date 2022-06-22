@@ -4,7 +4,7 @@ export const Footer: React.FC = () => (
   <Box sx={{ minHeight: '5vh', background: '#0F2040', mt: 'auto' }}>
     <Container variant="full">
       <Flex
-        sx={{ color: 'background', justifyContent: 'space-evenly', alignItems: 'center' }}
+        sx={{ color: 'background', justifyContent: 'space-between', alignItems: 'center' }}
       >
         <Flex>
           Kontakt oss på 
