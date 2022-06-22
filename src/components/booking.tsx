@@ -11,7 +11,7 @@ export const Booking: React.FC<BookingProps> = ({ label }) => {
     openPopupWidget({ url: 'https://calendly.com/simen-a-w-olsen' });
   return (
     <Button
-      sx={{ color: 'iron', width: 'fit-content', cursor: 'pointer' }}
+      sx={{ color: '#0F2040', width: 'fit-content', cursor: 'pointer' }}
       onClick={onClick}
     >
       {label ? label : 'Book et møte →'}

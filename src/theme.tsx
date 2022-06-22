@@ -20,6 +20,8 @@ export const theme = merge(webTheme, {
     muted: '#95E0C8',
     green120: '#2E896C',
     foreground: '#ffffff',
+    green100: '#90F494',
+
   },
   /**
    * We should add a few notable sizes here,
@@ -30,7 +32,8 @@ export const theme = merge(webTheme, {
    * issue: https://github.com/bjerkio/brand/issues/6
    */
   sizes: {
-    readable: 770,
+    readable: 940,
+    full: 1540,
   },
   /**
    * `radii` should key should be available
@@ -53,7 +56,12 @@ export const theme = merge(webTheme, {
     },
     readable: {
       variant: 'centered',
-      maxWidth: 770,
+      maxWidth: 940,
+      p: 4,
+    },
+    full: {
+      variant: 'centered',
+      maxWidth: 1540,
       p: 4,
     },
   },
@@ -72,7 +80,7 @@ export const theme = merge(webTheme, {
   buttons: {
     primary: {
       fontFamily: 'heading',
-      backgroundColor: 'black100',
+      backgroundColor: '#90F494',
       p: 3,
       fontSize: 2,
     },
@@ -81,7 +89,7 @@ export const theme = merge(webTheme, {
     buttonLink: {
       variant: 'buttons.primary',
       borderRadius: 1,
-      color: 'foreground',
+      color: '#0F2040',
       width: 'fit-content',
     },
   },
@@ -90,10 +98,10 @@ export const theme = merge(webTheme, {
    */
   text: {
     title: {
-      lineHeight: 0.9,
-      fontWeight: 800,
+      lineHeight: '60px',
+      fontWeight: 600,
     },
-    heading: { fontWeight: 800 },
+    heading: { fontWeight: 600 },
     subtitle: {
       color: 'green120',
       fontWeight: 'medium',
@@ -106,7 +114,7 @@ export const theme = merge(webTheme, {
 
   styles: {
     root: {
-      backgroundColor: 'background',
+      backgroundColor: 'green100',
 
       /**
        * 👇 Should be added to webTheme

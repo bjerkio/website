@@ -16,8 +16,7 @@ const Home: NextPage = () => {
       <Grid sx={{ gap: 5 }}>
         <Grid sx={{ gap: 4 }}>
           <Heading variant="title">
-            Vår lidenskap
-            <br /> er å skape
+            Vår lidenskap er å skape
           </Heading>
           <Paragraph>
             De siste 12 årene har vi forbedret og forenklet måten mennesker
