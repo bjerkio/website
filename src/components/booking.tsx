@@ -11,10 +11,20 @@ export const Booking: React.FC<BookingProps> = ({ label }) => {
     openPopupWidget({ url: 'https://calendly.com/simen-a-w-olsen' });
   return (
     <Button
-      sx={{ color: '#0F2040', width: 'fit-content', cursor: 'pointer' }}
+      sx={{ 
+        color: '#0F2040',
+        width: 'fit-content',
+        cursor: 'pointer',
+        fontFamily: 'Sora',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        fontSize: '18px',
+        lineHeight: '23px',
+        letterSpacing: -0.02,
+      }}
       onClick={onClick}
     >
-      {label ? label : 'Book et møte →'}
+      {label ? label : 'Book et møte'}
     </Button>
   );
 };

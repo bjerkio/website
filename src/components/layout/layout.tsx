@@ -14,7 +14,7 @@ export const Layout: React.FC = ({ children }) => (
   >
     <SEO />
     <Header />
-    <Container variant="readable">{children}</Container>
+    <Container variant="full">{children}</Container>
     <Footer />
   </Flex>
 );

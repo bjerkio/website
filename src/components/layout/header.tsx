@@ -27,8 +27,13 @@ export const Header: React.FC = () => {
             textDecoration: 'none',
             color: pathname.includes('about') ? '#2A3BCC' : 'text',
             cursor: 'pointer',
-            fontWeight: '400',
             marginLeft: '60px',
+            fontFamily: 'Sora',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: '18px',
+            lineHeight: '23px',
+            letterSpacing: -0.02,
           }}
         >
           Om oss
@@ -39,21 +44,28 @@ export const Header: React.FC = () => {
             textDecoration: 'none',
             color: pathname.includes('about') ? '#2A3BCC' : 'text',
             cursor: 'pointer',
-            fontWeight: '400',
             marginLeft: '60px',
+            fontFamily: 'Sora',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: '18px',
+            lineHeight: '23px',
+            letterSpacing: -0.02,
           }}
         >
           Våre prinsipper
         </NavLink>
         <Box
           sx={{
-            marginLeft: '800px',
+            marginLeft: 'auto',
             background: '#90F494',
             boxShadow: '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
             borderRadius: '30px',
+            padding: '5px 9px',
+            gap: '10px',
           }}
         >
-            <Booking label={'Book et møte →'} />
+            <Booking label={'Book et møte'} />
         </Box>
       </Flex>
     </Container>

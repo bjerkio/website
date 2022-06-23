@@ -21,7 +21,8 @@ export const theme = merge(webTheme, {
     green120: '#2E896C',
     foreground: '#ffffff',
     green100: '#90F494',
-
+    blue100: '#2A3BCC',
+    dark100:  '#0F2040',
   },
   /**
    * We should add a few notable sizes here,
@@ -56,7 +57,7 @@ export const theme = merge(webTheme, {
     },
     readable: {
       variant: 'centered',
-      maxWidth: 940,
+      maxWidth: 1000,
       p: 4,
     },
     full: {
@@ -79,7 +80,7 @@ export const theme = merge(webTheme, {
    */
   buttons: {
     primary: {
-      fontFamily: 'heading',
+      variant: 'heading',
       backgroundColor: '#90F494',
       p: 3,
       fontSize: 2,
@@ -87,9 +88,9 @@ export const theme = merge(webTheme, {
   },
   links: {
     buttonLink: {
-      variant: 'buttons.primary',
+      variant: 'heading',
       borderRadius: 1,
-      color: '#0F2040',
+      color: 'dark100',
       width: 'fit-content',
     },
   },
@@ -98,17 +99,42 @@ export const theme = merge(webTheme, {
    */
   text: {
     title: {
-      lineHeight: '60px',
+      fontFamily: 'Sora',
+      fontStyle: 'normal',
       fontWeight: 600,
+      fontSize: '48px',
+      lineHeight: '60px',
+      letterSpacing: -0.02,
     },
-    heading: { fontWeight: 600 },
+    heading: { 
+      fontFamily: 'Sora',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      fontSize: '18px',
+      lineHeight: '23px',
+      letterSpacing: -0.02,
+     },
     subtitle: {
-      color: 'green120',
-      fontWeight: 'medium',
+      color: 'blue100',
+      fontWeight: 600,
+      fontFamily: 'Sora',
+      fontSize: '20px',
+      letterSpacing: -0.02,
+      lineHeight: '27px',
     },
+    standard: {
+      fontFamily: 'Sora',
+      fontSize: '28px',
+      lineHeight: '37.8px',
+      fontWeight: 400,
+      letterSpacing: -0.02,
+     },
     excerpt: {
-      fontWeight: 'bold',
-      fontSize: 3,
+      fontWeight: 400,
+      fontSize: '32px',
+      fontFamily: 'Sora',
+      letterSpacing: -0.02,
+      lineHeight: '43px'
     },
   },
 
