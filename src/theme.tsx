@@ -23,6 +23,7 @@ export const theme = merge(webTheme, {
     green100: '#90F494',
     blue100: '#2A3BCC',
     dark100:  '#0F2040',
+    soothing: '#E5E5E5',
   },
   /**
    * We should add a few notable sizes here,
@@ -34,7 +35,8 @@ export const theme = merge(webTheme, {
    */
   sizes: {
     readable: 940,
-    full: 1540,
+    full: 1720,
+    background2: 1720,
   },
   /**
    * `radii` should key should be available
@@ -62,9 +64,14 @@ export const theme = merge(webTheme, {
     },
     full: {
       variant: 'centered',
-      maxWidth: 1540,
+      maxWidth: 1720,
       p: 4,
     },
+    background2: {
+      variant: 'centered',
+      maxWidth: 1720,
+      height: 600,
+    }
   },
   cards: {
     primary: {
@@ -81,14 +88,14 @@ export const theme = merge(webTheme, {
   buttons: {
     primary: {
       variant: 'heading',
-      backgroundColor: '#90F494',
+      backgroundColor: 'green100',
       p: 3,
       fontSize: 2,
     },
   },
   links: {
     buttonLink: {
-      variant: 'heading',
+      variant: 'subtitle',
       borderRadius: 1,
       color: 'dark100',
       width: 'fit-content',
@@ -141,6 +148,7 @@ export const theme = merge(webTheme, {
   styles: {
     root: {
       backgroundColor: 'green100',
+      bgColor2: 'soothing',
 
       /**
        * 👇 Should be added to webTheme
