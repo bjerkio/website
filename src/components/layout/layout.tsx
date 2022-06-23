@@ -8,13 +8,18 @@ export const Layout: React.FC = ({ children }) => (
   <Flex
     sx={{
       flexDirection: 'column',
-      gap: 2,
+      gap: 0,
       pb: 0,
     }}
   >
     <SEO />
     <Header />
-    <Container variant="full">{children}</Container>
+    <Flex sx={{
+      alignItems: 'stretch',
+      
+    }}>{children}</Flex>
+    
     <Footer />
   </Flex>
 );
+//<Container variant="full">{children}</Container>

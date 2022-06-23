@@ -14,6 +14,7 @@ export const Footer: React.FC = () => (
           fontSize: '18px',
           lineHeight: '23px',
           letterSpacing: -0.02,
+          backgroundSize: 'cover',
         }}
       >
         <Flex>

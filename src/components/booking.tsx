@@ -12,7 +12,8 @@ export const Booking: React.FC<BookingProps> = ({ label }) => {
   return (
     <Button
       sx={{ 
-        color: '#0F2040',
+        color: 'dark100',
+        backgroundColor: 'transparent',
         width: 'fit-content',
         cursor: 'pointer',
         fontFamily: 'Sora',

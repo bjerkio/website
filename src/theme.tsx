@@ -34,7 +34,7 @@ export const theme = merge(webTheme, {
    * issue: https://github.com/bjerkio/brand/issues/6
    */
   sizes: {
-    readable: 940,
+    readable: 1000,
     full: 1720,
     background2: 1720,
   },
@@ -56,29 +56,35 @@ export const theme = merge(webTheme, {
       margin: '0 auto',
       m: 0,
       p: 0,
+      backgroundSize: 'cover',
     },
     readable: {
       variant: 'centered',
       maxWidth: 1000,
       p: 4,
+      backgroundSize: 'cover',
     },
     full: {
       variant: 'centered',
       maxWidth: 1720,
       p: 4,
+      //backgroundSize: 'cover',
+      //width: '100%',
+    },
+    fullcover: {
+      variant: 'centered',
+      backgroundSize: 'cover',
+      
+      width: '100%',
     },
     background2: {
       variant: 'centered',
       maxWidth: 1720,
       height: 600,
+      backgroundSize: 'cover',
     }
   },
-  cards: {
-    primary: {
-      backgroundColor: 'green60',
-      borderRadius: 2,
-    },
-  },
+
   /**
    * Default button stylings doesn't fit the current
    * design setup.
@@ -88,7 +94,7 @@ export const theme = merge(webTheme, {
   buttons: {
     primary: {
       variant: 'heading',
-      backgroundColor: 'green100',
+      
       p: 3,
       fontSize: 2,
     },
@@ -147,8 +153,8 @@ export const theme = merge(webTheme, {
 
   styles: {
     root: {
-      backgroundColor: 'green100',
-      bgColor2: 'soothing',
+      backgroundColor: 'soothing',
+      bgColor2: 'green100',
 
       /**
        * 👇 Should be added to webTheme
