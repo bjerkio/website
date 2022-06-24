@@ -135,6 +135,10 @@ export const theme = merge(webTheme, {
       fontWeight: 600,
       fontSize: 2,
     },
+    subtitleblack: {
+      fontSize: 2,
+      fontWeight: 600,
+    },
     standard: {
       fontSize: 4,
       fontWeight: 400,
