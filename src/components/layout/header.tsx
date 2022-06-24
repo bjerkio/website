@@ -7,17 +7,15 @@ import { Logo } from '../logo';
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
   return (
-      <Flex
-        sx={{ 
-          pt: 2,
-          //justifyContent: 'left',
-          //alignItems: 'stretch',
-          backgroundColor: 'green100',
-          
-        }}>
-        <Container variant="full" sx={{
-          
-        }}>
+    <Box
+      sx={{
+        pt: 7,
+        pb: 2,
+        backgroundColor: 'green100',
+      }}
+    >
+      <Container variant="header">
+        <Flex sx={{ alignItems: 'center', gap: 5 }}>
           <Link href={'/'}>
             <Logo
               sx={{
@@ -31,16 +29,7 @@ export const Header: React.FC = () => {
           <NavLink
             href={'/about'}
             sx={{
-              textDecoration: 'none',
               color: pathname.includes('about') ? '#2A3BCC' : 'text',
-              cursor: 'pointer',
-              marginLeft: '60px',
-              fontFamily: 'Sora',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              fontSize: '18px',
-              lineHeight: '23px',
-              letterSpacing: -0.02,
             }}
           >
             Om oss
@@ -48,16 +37,7 @@ export const Header: React.FC = () => {
           <NavLink
             href={'/principles'}
             sx={{
-              textDecoration: 'none',
               color: pathname.includes('principles') ? '#2A3BCC' : 'text',
-              cursor: 'pointer',
-              marginLeft: '60px',
-              fontFamily: 'Sora',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              fontSize: '18px',
-              lineHeight: '23px',
-              letterSpacing: -0.02,
             }}
           >
             Våre prinsipper
@@ -65,15 +45,12 @@ export const Header: React.FC = () => {
           <Box
             sx={{
               marginLeft: 'auto',
-              boxShadow: '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
-              borderRadius: '30px',
-              padding: '1px 8px',
             }}
           >
-              <Booking label={'Book et møte'}></Booking>
+            <Booking label={'Book et møte'}></Booking>
           </Box>
-        </Container>
-      </Flex>
-
+        </Flex>
+      </Container>
+    </Box>
   );
 };

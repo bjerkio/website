@@ -8,10 +8,8 @@ export const Footer: React.FC = () => (
           color: 'background',
           justifyContent: 'space-between',
           alignItems: 'center',
-          fontFamily: 'Sora',
           fontStyle: 'normal',
           fontWeight: 400,
-          fontSize: '18px',
           lineHeight: '23px',
           letterSpacing: -0.02,
           backgroundSize: 'cover',
@@ -21,7 +19,7 @@ export const Footer: React.FC = () => (
           Kontakt oss på 
           <Link
             href={'mailto:kontoret@bjerk.io'}
-            sx={{ textDecoration: 'none', color: '#2A3BCC', marginLeft: '5px' }}
+            sx={{ color: '#2A3BCC', marginLeft: '5px' }}
           >
             kontoret@bjerk.io
           </Link>

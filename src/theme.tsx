@@ -22,8 +22,12 @@ export const theme = merge(webTheme, {
     foreground: '#ffffff',
     green100: '#90F494',
     blue100: '#2A3BCC',
-    dark100:  '#0F2040',
+    dark100: '#0F2040',
     soothing: '#E5E5E5',
+  },
+  fonts: {
+    body: 'Sora',
+    heading: 'inherit',
   },
   /**
    * We should add a few notable sizes here,
@@ -35,8 +39,8 @@ export const theme = merge(webTheme, {
    */
   sizes: {
     readable: 1000,
-    full: 1720,
-    background2: 1720,
+    full: 1500,
+    background2: 1500,
   },
   /**
    * `radii` should key should be available
@@ -61,12 +65,11 @@ export const theme = merge(webTheme, {
     readable: {
       variant: 'centered',
       maxWidth: 1000,
-      p: 4,
       backgroundSize: 'cover',
     },
     full: {
       variant: 'centered',
-      maxWidth: 1720,
+      maxWidth: 1500,
       p: 4,
       //backgroundSize: 'cover',
       //width: '100%',
@@ -74,14 +77,17 @@ export const theme = merge(webTheme, {
     fullcover: {
       variant: 'centered',
       backgroundSize: 'cover',
-      
+
       width: '100%',
     },
     background2: {
       variant: 'centered',
-      maxWidth: 1720,
+      maxWidth: 1500,
       height: 600,
       backgroundSize: 'cover',
+    },
+    header: {
+      maxWidth: 1495
     }
   },
 
@@ -93,10 +99,14 @@ export const theme = merge(webTheme, {
    */
   buttons: {
     primary: {
+      fontFamily: 'body',
       variant: 'heading',
-      
+      color: 'dark100',
       p: 3,
-      fontSize: 2,
+      backgroundColor: 'transparent',
+      boxShadow:
+        '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
+      borderRadius: '30px',
     },
   },
   links: {
@@ -105,56 +115,50 @@ export const theme = merge(webTheme, {
       borderRadius: 1,
       color: 'dark100',
       width: 'fit-content',
+      textDecoration: 'none',
+    },
+    nav: {
+      fontWeight: 'normal',
+      textDecoration: 'none',
     },
   },
+  fontSizes: [12, 18, 20, 24, 28, 32, 48],
   /**
    * Read more: https://github.com/bjerkio/brand/issues/7
    */
   text: {
     title: {
-      fontFamily: 'Sora',
-      fontStyle: 'normal',
       fontWeight: 600,
-      fontSize: '48px',
-      lineHeight: '60px',
-      letterSpacing: -0.02,
+      fontSize: 6,
     },
-    heading: { 
-      fontFamily: 'Sora',
-      fontStyle: 'normal',
+    heading: {
       fontWeight: 400,
-      fontSize: '18px',
-      lineHeight: '23px',
-      letterSpacing: -0.02,
-     },
+      fontSize:1,
+    },
     subtitle: {
       color: 'blue100',
       fontWeight: 600,
-      fontFamily: 'Sora',
-      fontSize: '20px',
-      letterSpacing: -0.02,
-      lineHeight: '27px',
+      fontSize: 2,
     },
     standard: {
-      fontFamily: 'Sora',
-      fontSize: '28px',
-      lineHeight: '37.8px',
+      fontSize: 4,
       fontWeight: 400,
-      letterSpacing: -0.02,
-     },
+    },
     excerpt: {
       fontWeight: 400,
-      fontSize: '32px',
-      fontFamily: 'Sora',
-      letterSpacing: -0.02,
-      lineHeight: '43px'
+      fontSize: 5,
     },
+    readmore: {
+      fontWeight: 400,
+      fontSize: 3,
+    }
   },
 
   styles: {
     root: {
       backgroundColor: 'soothing',
       bgColor2: 'green100',
+      fontFamily: 'body',
 
       /**
        * 👇 Should be added to webTheme
@@ -163,8 +167,9 @@ export const theme = merge(webTheme, {
       MozOsxFontSmoothing: 'grayscale',
     },
     a: {
-      textDecoration: 'underline',
-      color: 'text',
+      textDecoration: 'none',
+      color: 'blue100',
+      fontSize: 3,
     },
   },
 });

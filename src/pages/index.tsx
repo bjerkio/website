@@ -1,100 +1,105 @@
 import type { NextPage } from 'next';
-import { NavLink } from 'next-theme-ui';
-import { Box, Card, Container, Flex, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
+import { Link } from 'next-theme-ui';
+import { text } from 'stream/consumers';
+import {
+  Box,
+  Card,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Paragraph,
+  Text,
+} from 'theme-ui';
+import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
 
-const customers = [
-  'folio',
-  'digdir',
-  'avfall-norge',
-  'layer',
-  'dnb',
-];
+const customers = ['folio', 'digdir', 'avfall-norge', 'layer', 'dnb'];
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Flex sx={{
-        alignItems: 'stretch',
-        width:'100%', 
-        flex: '1 0 100%',
-        flexDirection: 'column'
-      }}>
-        <Container variant='full' backgroundColor={'green100'}>
-          <Container variant='readable'>
-              <Grid sx={{ gap: 3 }}>
-                <Heading variant="title">
-                  Vår lidenskap er å skape
-                </Heading>
-                <Paragraph variant='standard'>
-                  De siste 12 årene har vi forbedret og forenklet måten mennesker
-                  lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
-                  tilpasse programvare. Vi utvikler, integrerer, kobler sammen, rådgir og samarbeider med
-                  deg om å lage produkter og tekniske løsninger.
-                </Paragraph>
-              </Grid>
+      <Grid sx={{ width: '100%' }}>
+        <ContainerWithBackground color="green">
+          <Grid sx={{ gap: 3 }}>
+            <Heading variant="title">Vår lidenskap er å skape</Heading>
+            <Paragraph variant="standard">
+              De siste 12 årene har vi forbedret og forenklet måten mennesker
+              lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
+              tilpasse programvare. Vi utvikler, integrerer, kobler sammen,
+              rådgir og samarbeider med deg om å lage produkter og tekniske
+              løsninger.
+            </Paragraph>
+          </Grid>
 
-              <Grid sx={{ marginTop: '100px'}}>
-                  <Text variant="subtitle">Noen av våre seneste kunder</Text>
-              </Grid>
-            </Container>
-              
-                <Grid
-                  columns={['repeat(2, 1fr)']}
-                  gap={0}
-                  sx={{ 
-                    justifyItems: 'center',
-                    marginLeft: 'auto'
-                }}
-                >
-                  <Container variant='readable'>
-                  <Text variant='excerpt'>Folio</Text>
-                  <Text variant='excerpt' sx={{}}>Layer</Text>
-                  <Text variant='excerpt' sx={{}}>Grid branding</Text>
-                  </Container>
-                  <Image src={'Logo1.svg'} sx={{}}></Image>
-                  <Text variant='excerpt' sx={{}}>Avfall Norge</Text>
-                  <Text variant='excerpt' sx={{}}>DNB</Text>
-                  <Text variant='excerpt' sx={{}}>Digdir</Text>
-                </Grid>
-        </Container>
-  
-      <Container variant='background2' marginBottom='-40px'>
-        <Flex sx={{
-          paddingTop: '150px'
-        }}>
-          <Image src='Logo2.svg' width='550px'></Image>
-            <Flex>
-                <Paragraph variant='standard' sx={{
-                  paddingRight: '400px',
-                  paddingLeft: '60px',
-                  paddingTop: '50px',
-                }}>
-                  Samarbeid, samspill, programvare som virker, iterativ utvikling,
-                  kontinuitet, gode insentiver og Super Mario-effekten er noe av det
-                  vi mener kreves for å lykkes. <br></br>
-                  <NavLink href={'/principles'}
-                  sx={{
-                    color: 'blue100',
-                    fontWeight: 600,
-                    fontFamily: 'Sora',
-                    fontSize: '20px',
-                    letterSpacing: -0.02,
-                    lineHeight: '27px',
-                    paddingTop: '20px',
-                    cursor: 'pointer',
-                  }}>
-                    Les mer om oss og hvordan vi jobber
-                  </NavLink>
-                </Paragraph>
-                
-                  
-                </Flex>
-            <Image></Image>
+          <Flex
+            sx={{ flexDirection: 'column', width: '80%', paddingTop: '100px' }}
+          >
+            <Text variant="subtitle">Noen av våre seneste kunder</Text>
+            <Grid
+              columns={['1fr 1fr 2fr']}
+              gap={4}
+              sx={{
+                justifyItems: 'Left',
+                alignItems: 'center',
+                paddingTop: '40px',
+              }}
+            >
+              <Text variant="excerpt">Folio</Text>
+              <Text variant="excerpt" sx={{}}>
+                Layer
+              </Text>
+              <Text variant="excerpt" sx={{}}>
+                Grid branding
+              </Text>
 
-        </Flex>
-      </Container>
-      </Flex>
+              <Text variant="excerpt" sx={{}}>
+                DNB
+              </Text>
+              <Text variant="excerpt" sx={{}}>
+                Digdir
+              </Text>
+              <Text variant="excerpt" sx={{}}>
+                Avfall Norge
+              </Text>
+            </Grid>
+          </Flex>
+          <Box sx={{ position: 'relative' }}>
+            <Image
+              src={'/Logo1.svg'}
+              sx={{
+                position: 'absolute',
+                width: '481px',
+                left: '917px',
+                bottom: '-100px',
+              }}
+            />
+          </Box>
+        </ContainerWithBackground>
+
+        <ContainerWithBackground color="beige">
+          <Box sx={{ position: 'relative' }}>
+            <Image
+              src={'/Logo2.svg'}
+              sx={{
+                position: 'absolute',
+                width: '298px',
+                left: '-388px',
+                bottom: '-220px',
+              }}
+            />
+          </Box>
+          <Paragraph variant="standard">
+            Samarbeid, samspill, programvare som virker, iterativ utvikling,
+            kontinuitet, gode insentiver og Super Mario-effekten er noe av det
+            vi mener kreves for å lykkes. <br></br>
+            <Link href={'/principles'}>
+              Les mer om oss og hvordan vi jobber
+            </Link>
+          </Paragraph>
+        </ContainerWithBackground>
+      </Grid>
     </Layout>
   );
 };
