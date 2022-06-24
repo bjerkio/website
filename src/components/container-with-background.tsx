@@ -8,7 +8,7 @@ export interface ContainerWithBackgroundProps {
 export const ContainerWithBackground: React.FC<
   ContainerWithBackgroundProps
 > = ({ color, children }) => {
-  const backgroundColor = color === 'green' ? 'green100' : 'soothing';
+  const backgroundColor = color === 'green' ? 'green100' : 'green20';
 
   return (
     <Box

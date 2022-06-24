@@ -89,9 +89,14 @@ const Home: NextPage = () => {
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes. <br></br>
+            <Box sx={{
+              paddingTop: '20px',
+              fontSize: 3,
+            }}>
             <Link href={'/principles'}>
               Les mer om oss og hvordan vi jobber
             </Link>
+            </Box>
           </Paragraph>
         </ContainerWithBackground>
       </Grid>

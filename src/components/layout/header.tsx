@@ -6,12 +6,13 @@ import { Logo } from '../logo';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
+  const color = pathname === '/' ? 'green100' : 'green20'
   return (
     <Box
       sx={{
         pt: 7,
         pb: 2,
-        backgroundColor: 'green100',
+        backgroundColor: color,
       }}
     >
       <Container variant="header">

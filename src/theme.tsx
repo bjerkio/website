@@ -23,7 +23,7 @@ export const theme = merge(webTheme, {
     green100: '#90F494',
     blue100: '#2A3BCC',
     dark100: '#0F2040',
-    soothing: '#E5E5E5',
+    green20: '#EDF9F1',
   },
   fonts: {
     body: 'Sora',
@@ -74,20 +74,8 @@ export const theme = merge(webTheme, {
       //backgroundSize: 'cover',
       //width: '100%',
     },
-    fullcover: {
-      variant: 'centered',
-      backgroundSize: 'cover',
-
-      width: '100%',
-    },
-    background2: {
-      variant: 'centered',
-      maxWidth: 1500,
-      height: 600,
-      backgroundSize: 'cover',
-    },
     header: {
-      maxWidth: 1495
+      maxWidth: 1500
     }
   },
 
@@ -121,14 +109,21 @@ export const theme = merge(webTheme, {
       fontWeight: 'normal',
       textDecoration: 'none',
     },
+    socials: {
+      fontSize: 0,
+    }
   },
-  fontSizes: [12, 18, 20, 24, 28, 32, 48],
+  fontSizes: [16, 18, 20, 24, 28, 32, 48],
   /**
    * Read more: https://github.com/bjerkio/brand/issues/7
    */
   text: {
     title: {
       fontWeight: 600,
+      fontSize: 6,
+    },
+    titlenobold: {
+      fontWeight: 400,
       fontSize: 6,
     },
     heading: {
@@ -151,12 +146,15 @@ export const theme = merge(webTheme, {
     readmore: {
       fontWeight: 400,
       fontSize: 3,
+    },
+    contact: {
+      fontSize: 0,
     }
   },
 
   styles: {
     root: {
-      backgroundColor: 'soothing',
+      backgroundColor: 'green20',
       bgColor2: 'green100',
       fontFamily: 'body',
 
@@ -167,8 +165,8 @@ export const theme = merge(webTheme, {
       MozOsxFontSmoothing: 'grayscale',
     },
     a: {
-      textDecoration: 'none',
       color: 'blue100',
+      textDecoration: 'none',
     },
   },
 });
