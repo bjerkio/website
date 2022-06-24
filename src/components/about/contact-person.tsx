@@ -1,6 +1,4 @@
 import { AspectRatio, Box, Flex, Image, Link, Text } from 'theme-ui';
-import { SocialGithub } from '../illustrations/social-github';
-import { SocialLinkedin } from '../illustrations/social-linkedin';
 
 export interface ContactPersonProps {
   name: string;

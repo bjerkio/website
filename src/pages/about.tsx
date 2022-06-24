@@ -7,7 +7,6 @@ import {
   Image,
   Paragraph,
   Text,
-  Link as ThemeUILink,
 } from 'theme-ui';
 import { ContactPerson } from '../components/about/contact-person';
 import { ContainerWithBackground } from '../components/container-with-background';
