@@ -75,8 +75,8 @@ export const theme = merge(webTheme, {
       //width: '100%',
     },
     header: {
-      maxWidth: 1500
-    }
+      maxWidth: 1500,
+    },
   },
 
   /**
@@ -111,7 +111,7 @@ export const theme = merge(webTheme, {
     },
     socials: {
       fontSize: 0,
-    }
+    },
   },
   fontSizes: [16, 18, 20, 24, 28, 32, 48],
   /**
@@ -128,7 +128,7 @@ export const theme = merge(webTheme, {
     },
     heading: {
       fontWeight: 400,
-      fontSize:1,
+      fontSize: 1,
     },
     subtitle: {
       color: 'blue100',
@@ -153,7 +153,7 @@ export const theme = merge(webTheme, {
     },
     contact: {
       fontSize: 0,
-    }
+    },
   },
 
   styles: {

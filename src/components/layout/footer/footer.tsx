@@ -4,7 +4,7 @@ export const Footer: React.FC = () => (
   <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto' }}>
     <Container variant="full">
       <Flex
-        sx={{ 
+        sx={{
           color: 'background',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => (
         }}
       >
         <Flex>
-          Kontakt oss på 
+          Kontakt oss på
           <Link
             href={'mailto:kontoret@bjerk.io'}
             sx={{ color: 'blue100', marginLeft: '5px' }}
@@ -24,10 +24,7 @@ export const Footer: React.FC = () => (
             kontoret@bjerk.io
           </Link>
         </Flex>
-        <Flex>
-          © Bjerk 2022
-        </Flex>
-
+        <Flex>© Bjerk 2022</Flex>
       </Flex>
     </Container>
   </Box>

@@ -1,13 +1,5 @@
 import { Link } from 'next-theme-ui';
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Paragraph,
-  Text,
-} from 'theme-ui';
+import { Box, Flex, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
 import { ContactPerson } from '../components/about/contact-person';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
@@ -110,9 +102,15 @@ const About: React.FC = () => {
             />
           </Box>
           <Grid sx={{ gap: 1 }}>
-            <Text variant="standard" pb='15px'>Besøk oss i Myntgata 2, 0152 Oslo.</Text>
-            <Text variant="standard" sx={{ fontWeight: 600 }}>kontoret@bjerk.io</Text>
-            <Text variant='standard' sx={{ fontWeight: 600 }}>+47 22 12 05 12</Text>
+            <Text variant="standard" pb="15px">
+              Besøk oss i Myntgata 2, 0152 Oslo.
+            </Text>
+            <Text variant="standard" sx={{ fontWeight: 600 }}>
+              kontoret@bjerk.io
+            </Text>
+            <Text variant="standard" sx={{ fontWeight: 600 }}>
+              +47 22 12 05 12
+            </Text>
           </Grid>
         </ContainerWithBackground>
       </Grid>

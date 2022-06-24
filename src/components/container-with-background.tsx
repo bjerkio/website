@@ -2,7 +2,6 @@ import { Box, Container } from 'theme-ui';
 
 export interface ContainerWithBackgroundProps {
   color?: 'green' | 'beige';
-
 }
 
 export const ContainerWithBackground: React.FC<
@@ -16,14 +15,10 @@ export const ContainerWithBackground: React.FC<
         backgroundColor,
         pt: '190px',
         pb: '207px',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }}
     >
-      <Container
-        variant="readable"
-      >
-        {children}
-      </Container>
+      <Container variant="readable">{children}</Container>
     </Box>
   );
 };

@@ -14,11 +14,14 @@ export const Layout: React.FC = ({ children }) => (
   >
     <SEO />
     <Header />
-    <Flex sx={{
-      alignItems: 'stretch',
-      
-    }}>{children}</Flex>
-    
+    <Flex
+      sx={{
+        alignItems: 'stretch',
+      }}
+    >
+      {children}
+    </Flex>
+
     <Footer />
   </Flex>
 );
