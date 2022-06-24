@@ -1,7 +1,7 @@
-import { Box, Container, Flex, Grid, Link, Text } from 'theme-ui';
+import { Box, Container, Flex, Link } from 'theme-ui';
 
 export const Footer: React.FC = () => (
-  <Box sx={{ minHeight: '5vh', background: '#0F2040', mt: 'auto' }}>
+  <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto' }}>
     <Container variant="full">
       <Flex
         sx={{ 
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => (
           Kontakt oss på 
           <Link
             href={'mailto:kontoret@bjerk.io'}
-            sx={{ color: '#2A3BCC', marginLeft: '5px' }}
+            sx={{ color: 'blue100', marginLeft: '5px' }}
           >
             kontoret@bjerk.io
           </Link>

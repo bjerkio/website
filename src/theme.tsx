@@ -169,7 +169,6 @@ export const theme = merge(webTheme, {
     a: {
       textDecoration: 'none',
       color: 'blue100',
-      fontSize: 3,
     },
   },
 });

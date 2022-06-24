@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Flex } from 'theme-ui';
+import { Flex } from 'theme-ui';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header';
@@ -22,4 +22,3 @@ export const Layout: React.FC = ({ children }) => (
     <Footer />
   </Flex>
 );
-//<Container variant="full">{children}</Container>

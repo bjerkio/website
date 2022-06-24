@@ -1,10 +1,7 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import { text } from 'stream/consumers';
 import {
   Box,
-  Card,
-  Container,
   Flex,
   Grid,
   Heading,
@@ -14,8 +11,6 @@ import {
 } from 'theme-ui';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
-
-const customers = ['folio', 'digdir', 'avfall-norge', 'layer', 'dnb'];
 
 const Home: NextPage = () => {
   return (
