@@ -109,9 +109,15 @@ const About: React.FC = () => {
             phone={'+47 402 86 277'}
             email={'thomas@bjerk.io'}
             title={'Rådgiver'}
-            linkedIn={
-              'https://www.linkedin.com/in/thomasbrustad/'
-            }
+            linkedIn={'https://www.linkedin.com/in/thomasbrustad/'}
+          />
+          <ContactPerson
+            name={'Markus Moripen'}
+            photoPath={'/persons/markus.jpg'}
+            phone={'+47 970 30 084'}
+            email={'markus@bjerk.io'}
+            title={'Programvareutvikler'}
+            github={'https://github.com/CalculatedCode'}
           />
         </Flex>
       </Grid>
