@@ -28,7 +28,7 @@ const Principles: React.FC = () => {
             </Paragraph>
             <Box sx={{ position: 'relative' }}>
               <Image
-                src={'/Logo5.svg'}
+                src={'/element5.svg'}
                 sx={{
                   position: 'absolute',
                   width: '298px',
@@ -85,7 +85,7 @@ const Principles: React.FC = () => {
             </Paragraph>
             <Box sx={{ position: 'relative' }}>
               <Image
-                src={'/Logo4.svg'}
+                src={'/element4.svg'}
                 sx={{
                   position: 'absolute',
                   width: '327px',

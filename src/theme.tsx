@@ -159,7 +159,6 @@ export const theme = merge(webTheme, {
   styles: {
     root: {
       backgroundColor: 'green20',
-      bgColor2: 'green100',
       fontFamily: 'body',
 
       /**

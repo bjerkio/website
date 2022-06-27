@@ -54,7 +54,7 @@ const Home: NextPage = () => {
           </Flex>
           <Box sx={{ position: 'relative' }}>
             <Image
-              src={'/Logo1.svg'}
+              src={'/element1.svg'}
               sx={{
                 position: 'absolute',
                 width: '481px',
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <ContainerWithBackground color="beige">
           <Box sx={{ position: 'relative' }}>
             <Image
-              src={'/Logo2.svg'}
+              src={'/element2.svg'}
               sx={{
                 position: 'absolute',
                 width: '298px',

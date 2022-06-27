@@ -29,7 +29,7 @@ const About: React.FC = () => {
           </Box>
           <Box sx={{ position: 'relative' }}>
             <Image
-              src={'/Logo2.svg'}
+              src={'/element2.svg'}
               sx={{
                 position: 'absolute',
                 width: '298px',
@@ -92,7 +92,7 @@ const About: React.FC = () => {
           </Flex>
           <Box sx={{ position: 'relative' }}>
             <Image
-              src={'/Logo3.svg'}
+              src={'/element3.svg'}
               sx={{
                 position: 'absolute',
                 width: '453px',
