@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Image, Link, Paragraph } from 'theme-ui';
+import { Grid, Heading, Link, Paragraph } from 'theme-ui';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
 

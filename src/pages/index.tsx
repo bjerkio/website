@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import { Box, Flex, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
+import { Box, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
 
