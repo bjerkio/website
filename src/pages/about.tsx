@@ -78,7 +78,7 @@ const About: React.FC = () => {
               phone={'+47 970 30 084'}
               email={'markus@bjerk.io'}
               title={'Programvareutvikler'}
-              github={'https://github.com/Moripen'}
+              github={'https://github.com/moripen'}
             />
           </Flex>
           </ContainerWithBackground>
