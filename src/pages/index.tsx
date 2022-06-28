@@ -22,16 +22,16 @@ const Home: NextPage = () => {
           </Grid>
 
           <Flex
-            sx={{ flexDirection: 'column', width: '80%', paddingTop: '100px' }}
+            sx={{ flexDirection: 'column', width: '80%', paddingTop: ['40px','100px'] }}
           >
             <Text variant="subtitle">Noen av våre seneste kunder</Text>
             <Grid
-              columns={['1fr 1fr 2fr']}
-              gap={4}
+              columns={['1fr 1fr','1fr 1fr 2fr']}
+              gap={[3,4]}
               sx={{
                 justifyItems: 'Left',
                 alignItems: 'center',
-                paddingTop: '40px',
+                paddingTop: ['20px','40px'],
               }}
             >
               <Text variant="excerpt">Folio</Text>

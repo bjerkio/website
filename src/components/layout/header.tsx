@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
-import { Box, Container, Flex, Image } from 'theme-ui';
+import { Box, Container, Flex, IconButton, MenuButton } from 'theme-ui';
 import { Booking } from '../booking';
 import { Logo } from '../logo';
 
@@ -11,7 +11,9 @@ export const Header: React.FC = () => {
   return (
     <Box
       sx={{
-        p:7,
+        px:[5,7],
+        pt:[5,7],
+        pb:[0,7],
         backgroundColor: color,
       }}
     >
@@ -43,12 +45,17 @@ export const Header: React.FC = () => {
           >
             Våre prinsipper
           </NavLink>
-          <Box sx={{
-            marginLeft: 'auto',
-            display: ['block', 'none']
-          }}>
-            <Image src='/element6.svg'></Image>
-          </Box>
+          <IconButton aria-label='Hamburger' sx={{
+            ml: 'auto',
+            display: ['block', 'none'],
+          }}
+          >
+             <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27 21.4336H0V18.2891H27V21.4336Z" fill="#0F2040"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 12.2891H0V9.14453H32V12.2891Z" fill="#0F2040"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 3.14459H0V0H24V3.14459Z" fill="#0F2040"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M32 3.14459H27V0H32V3.14459Z" fill="#0F2040"/></svg>
+            </IconButton>
           <Box
             sx={{
               marginLeft: 'auto',

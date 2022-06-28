@@ -25,8 +25,8 @@ export const ContainerWithBackground: React.FC<
     <Box
       sx={{
         backgroundColor,
-        pt: `${paddingtop}`,
-        pb: `${paddingbottom}`,
+        pt: [0,`${paddingtop}`],
+        pb: [2,`${paddingbottom}`],
         mb: `${marginbottom}`,
         overflow: 'hidden',
         backgroundImage: graphicalAddition,
