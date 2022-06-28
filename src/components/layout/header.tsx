@@ -6,12 +6,13 @@ import { Logo } from '../logo';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
-  const color = pathname === '/' ? 'green100' : 'green20';
+  const isHome = pathname === '/';
+  const color = isHome ? 'green100' : 'green20';
   return (
     <Box
       sx={{
         pt: 7,
-        pb: 2,
+        pb: 3,
         backgroundColor: color,
       }}
     >
@@ -29,17 +30,11 @@ export const Header: React.FC = () => {
           </Link>
           <NavLink
             href={'/about'}
-            sx={{
-              color: pathname.includes('about') ? '#2A3BCC' : 'text',
-            }}
           >
             Om oss
           </NavLink>
           <NavLink
             href={'/principles'}
-            sx={{
-              color: pathname.includes('principles') ? '#2A3BCC' : 'text',
-            }}
           >
             Våre prinsipper
           </NavLink>

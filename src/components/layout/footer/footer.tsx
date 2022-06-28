@@ -1,18 +1,14 @@
 import { Box, Container, Flex, Link } from 'theme-ui';
 
 export const Footer: React.FC = () => (
-  <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto' }}>
+  <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto', p: '30px' }}>
     <Container variant="full">
       <Flex
         sx={{
           color: 'background',
           justifyContent: 'space-between',
           alignItems: 'center',
-          fontStyle: 'normal',
-          fontWeight: 400,
-          lineHeight: '23px',
-          letterSpacing: -0.02,
-          backgroundSize: 'cover',
+          fontSize: 4,
         }}
       >
         <Flex>

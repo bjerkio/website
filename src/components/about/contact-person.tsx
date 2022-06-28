@@ -38,7 +38,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
           />
         </AspectRatio>
       </Box>
-      <Text sx={{ fontSize: 2, fontWeight: 'bold', mt: '20px' }}>{name}</Text>
+      <Text sx={{ fontSize: 2, fontWeight: '600', mt: '20px' }}>{name}</Text>
       <Text variant="contact">{title}</Text>
       <Link variant="socials" color="black" href={`tel:${phone}`} mt="20px">
         {' '}

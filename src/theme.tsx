@@ -108,10 +108,19 @@ export const theme = merge(webTheme, {
     nav: {
       fontWeight: 'normal',
       textDecoration: 'none',
+      color: 'dark100',
+      ":hover": {
+        color: 'blue100',
+        textDecoration: 'underline'
+      }
     },
     socials: {
       fontSize: 0,
     },
+    hover: {
+      textDecoration: 'underline'
+    }
+
   },
   fontSizes: [16, 18, 20, 24, 28, 32, 48],
   /**
