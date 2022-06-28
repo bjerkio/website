@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground color="green">
+        <ContainerWithBackground color="green" element='element1'>
           <Grid sx={{ gap: 3 }}>
             <Heading variant="title">Vår lidenskap er å skape</Heading>
             <Paragraph variant="standard">
@@ -52,17 +52,6 @@ const Home: NextPage = () => {
               </Text>
             </Grid>
           </Flex>
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element1.svg'}
-              sx={{
-                position: 'absolute',
-                width: '481px',
-                left: '917px',
-                bottom: '-100px',
-              }}
-            />
-          </Box>
         </ContainerWithBackground>
 
         <ContainerWithBackground color="beige">
