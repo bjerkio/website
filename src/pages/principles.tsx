@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Image, Link, Paragraph } from 'theme-ui';
+import { Grid, Heading, Link, Paragraph } from 'theme-ui';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
 
@@ -6,7 +6,7 @@ const Principles: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground>
+        <ContainerWithBackground element='element5' paddingtop='190px' positionx='right' positiony='50'>
           <Grid sx={{ width: '100%' }}>
             <Paragraph variant="titlenobold">
               Kompetanse og teknologi, kombinert med et brukervennlig design, er
@@ -26,17 +26,7 @@ const Principles: React.FC = () => {
               </Link>
               , og det er nok prinsippene rundt samarbeid som står oss nærest.
             </Paragraph>
-            <Box sx={{ position: 'relative' }}>
-              <Image
-                src={'/element5.svg'}
-                sx={{
-                  position: 'absolute',
-                  width: '298px',
-                  left: '1100px',
-                  bottom: '-150px',
-                }}
-              />
-            </Box>
+
             <Paragraph variant="standard">
               Vi jobber best under forutsetninger hvor det lages minst og flest
               mulig prosjekter, som skaper verdi. Det handler om å bevise vår
@@ -70,6 +60,8 @@ const Principles: React.FC = () => {
               Sjekk vår Github-profil
             </Link>
           </Grid>
+          </ContainerWithBackground>
+          <ContainerWithBackground element='element4' positionx='left' positiony='40' paddingbottom='210px'>
           <Grid sx={{ gap: 3, mt: '100px' }}>
             <Heading variant="subtitleblack">
               Lære og justere kontinuerlig
@@ -80,20 +72,12 @@ const Principles: React.FC = () => {
               tenker, jobber, lærer og kommuniserer, må vi akseptere at veien er
               ikke gått opp før vi begynner. Den blir til mens vi går.
             </Paragraph>
+
             <Paragraph variant="titlenobold" mt="100px">
               Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.{' '}
             </Paragraph>
-            <Box sx={{ position: 'relative' }}>
-              <Image
-                src={'/element4.svg'}
-                sx={{
-                  position: 'absolute',
-                  width: '327px',
-                  right: '1050px',
-                  bottom: '-5px',
-                }}
-              />
-            </Box>
+              
+
           </Grid>
 
           <Grid sx={{ gap: 3, mt: '100px' }}>
@@ -114,7 +98,7 @@ const Principles: React.FC = () => {
               de.{' '}
             </Paragraph>
           </Grid>
-        </ContainerWithBackground>
+          </ContainerWithBackground>
       </Grid>
     </Layout>
   );

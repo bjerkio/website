@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import { Box, Flex, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
+import { Box, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
 
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground color="green">
+        <ContainerWithBackground color="green" element='element1' paddingbottom='210px' paddingtop='190px' positionx='right' positiony='80' size='453'>
           <Grid sx={{ gap: 3 }}>
             <Heading variant="title">Vår lidenskap er å skape</Heading>
             <Paragraph variant="standard">
@@ -52,32 +52,10 @@ const Home: NextPage = () => {
               </Text>
             </Grid>
           </Flex>
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element1.svg'}
-              sx={{
-                position: 'absolute',
-                width: '481px',
-                left: '917px',
-                bottom: '-100px',
-              }}
-            />
-          </Box>
         </ContainerWithBackground>
 
-        <ContainerWithBackground color="beige">
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element2.svg'}
-              sx={{
-                position: 'absolute',
-                width: '298px',
-                left: '-388px',
-                bottom: '-220px',
-              }}
-            />
-          </Box>
-          <Paragraph variant="standard">
+        <ContainerWithBackground color="beige" element='element2' paddingtop='210px' paddingbottom='210px' positionx='left' positiony='50' size='298'>
+          <Paragraph variant="excerpt">
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes. <br></br>

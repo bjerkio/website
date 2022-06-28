@@ -1,5 +1,5 @@
 import { Link } from 'next-theme-ui';
-import { Box, Flex, Grid, Heading, Image, Paragraph, Text } from 'theme-ui';
+import { Box, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
 import { ContactPerson } from '../components/about/contact-person';
 import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
@@ -8,7 +8,8 @@ const About: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground>
+        <ContainerWithBackground element='element2' paddingtop='190px' positionx='left' positiony='32' size='298'>
+          
           <Heading variant="titlenobold" sx={{ pb: '40px' }}>
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
             tenker, jobber og kommuniserer på.
@@ -27,17 +28,7 @@ const About: React.FC = () => {
           >
             <Link href={'/principles'}>Les mer om hvordan vi jobber</Link>
           </Box>
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element2.svg'}
-              sx={{
-                position: 'absolute',
-                width: '298px',
-                right: '1055px',
-                bottom: '-500px',
-              }}
-            />
-          </Box>
+
           <Flex
             sx={{
               flexDirection: ['column', 'row'],
@@ -90,17 +81,9 @@ const About: React.FC = () => {
               github={'https://github.com/CalculatedCode'}
             />
           </Flex>
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element3.svg'}
-              sx={{
-                position: 'absolute',
-                width: '453px',
-                left: '850px',
-                bottom: '-175px',
-              }}
-            />
-          </Box>
+          </ContainerWithBackground>
+
+          <ContainerWithBackground element='element3' paddingbottom='210px' positionx='right' positiony='0'>
           <Grid sx={{ gap: 1 }}>
             <Text variant="standard" pb="15px">
               Besøk oss i Myntgata 2, 0152 Oslo.
@@ -112,7 +95,7 @@ const About: React.FC = () => {
               +47 22 12 05 12
             </Text>
           </Grid>
-        </ContainerWithBackground>
+          </ContainerWithBackground>
       </Grid>
     </Layout>
   );

@@ -23,7 +23,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
     <Flex sx={{ flexDirection: 'column' }}>
       <Box sx={{ width: ['100%', '25rem'] }}>
         <AspectRatio
-          ratio={308 / 440}
+          ratio={459 / 527}
           sx={{ borderRadius: 6, overflow: 'hidden' }}
         >
           <Image
@@ -31,8 +31,8 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             sx={{
               minWidth: '100%',
               minHeight: '100%',
-              width: 'auto',
-              height: 'auto',
+              width: '459px',
+              height: '527px',
               objectFit: 'cover',
             }}
           />
