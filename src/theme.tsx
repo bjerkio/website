@@ -38,9 +38,8 @@ export const theme = merge(webTheme, {
    * issue: https://github.com/bjerkio/brand/issues/6
    */
   sizes: {
-    readable: 1000,
+    readable: 1200,
     full: 1500,
-    background2: 1500,
   },
   /**
    * `radii` should key should be available
@@ -64,7 +63,7 @@ export const theme = merge(webTheme, {
     },
     readable: {
       variant: 'centered',
-      maxWidth: 1000,
+      maxWidth: 1200,
       backgroundSize: 'cover',
     },
     full: {
@@ -129,11 +128,11 @@ export const theme = merge(webTheme, {
   text: {
     title: {
       fontWeight: 600,
-      fontSize: 6,
+      fontSize: [5,6],
     },
     titlenobold: {
       fontWeight: 400,
-      fontSize: 6,
+      fontSize: [5,6],
     },
     heading: {
       fontWeight: 400,
@@ -142,23 +141,23 @@ export const theme = merge(webTheme, {
     subtitle: {
       color: 'blue100',
       fontWeight: 600,
-      fontSize: 2,
+      fontSize: [0,2],
     },
     subtitleblack: {
       fontSize: 2,
       fontWeight: 600,
     },
     standard: {
-      fontSize: 4,
+      fontSize: [2,4],
       fontWeight: 400,
     },
     excerpt: {
       fontWeight: 400,
-      fontSize: 5,
+      fontSize: [2,5],
     },
     readmore: {
       fontWeight: 400,
-      fontSize: 3,
+      fontSize: [0,3],
     },
     contact: {
       fontSize: 0,

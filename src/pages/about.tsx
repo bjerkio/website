@@ -8,7 +8,7 @@ const About: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground element='element2' paddingtop='190px' positionx='left' positiony='32' size='298'>
+        <ContainerWithBackground element='element2' paddingtop='50px' positionx='left' positiony='30' size='298' marginbottom='-170px'>
           
           <Heading variant="titlenobold" sx={{ pb: '40px' }}>
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
@@ -22,7 +22,7 @@ const About: React.FC = () => {
           </Paragraph>
           <Box
             sx={{
-              fontSize: 4,
+              fontSize: [2,4],
               pb: '120px',
             }}
           >
@@ -83,7 +83,7 @@ const About: React.FC = () => {
           </Flex>
           </ContainerWithBackground>
 
-          <ContainerWithBackground element='element3' paddingbottom='210px' positionx='right' positiony='0'>
+          <ContainerWithBackground element='element3' positionx='right' positiony='0'>
           <Grid sx={{ gap: 1 }}>
             <Text variant="standard" pb="15px">
               Besøk oss i Myntgata 2, 0152 Oslo.

@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
-import { Box, Container, Flex } from 'theme-ui';
+import { Box, Container, Flex, Image } from 'theme-ui';
 import { Booking } from '../booking';
 import { Logo } from '../logo';
 
@@ -11,8 +11,7 @@ export const Header: React.FC = () => {
   return (
     <Box
       sx={{
-        pt: 7,
-        pb: 3,
+        p:7,
         backgroundColor: color,
       }}
     >
@@ -30,17 +29,31 @@ export const Header: React.FC = () => {
           </Link>
           <NavLink
             href={'/about'}
+            sx={{
+              display: ['none', 'block']
+            }}
           >
             Om oss
           </NavLink>
           <NavLink
             href={'/principles'}
+            sx={{
+              display: ['none', 'block']
+            }}
           >
             Våre prinsipper
           </NavLink>
+          <Box sx={{
+            marginLeft: 'auto',
+            display: ['block', 'none']
+          }}>
+            <Image src='/element6.svg'></Image>
+          </Box>
           <Box
             sx={{
               marginLeft: 'auto',
+              pr: '20px',
+              display: ['none', 'block']
             }}
           >
             <Booking label={'Book et møte'}></Booking>

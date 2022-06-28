@@ -8,7 +8,8 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground color="green" element='element1' paddingbottom='210px' paddingtop='190px' positionx='right' positiony='80' size='453'>
+        <ContainerWithBackground color="green" element='element1' paddingbottom='90px' paddingtop='50px' positionx='right' positiony='80' size='453'>
+        
           <Grid sx={{ gap: 3 }}>
             <Heading variant="title">Vår lidenskap er å skape</Heading>
             <Paragraph variant="standard">
@@ -52,9 +53,10 @@ const Home: NextPage = () => {
               </Text>
             </Grid>
           </Flex>
-        </ContainerWithBackground>
-
-        <ContainerWithBackground color="beige" element='element2' paddingtop='210px' paddingbottom='210px' positionx='left' positiony='50' size='298'>
+       
+       </ContainerWithBackground>
+        
+        <ContainerWithBackground color="beige" element='element2' paddingtop='70px' paddingbottom='90px' positionx='left' positiony='50' size='298'>
           <Paragraph variant="excerpt">
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
@@ -62,7 +64,7 @@ const Home: NextPage = () => {
             <Box
               sx={{
                 paddingTop: '20px',
-                fontSize: 3,
+                fontSize: [1,3],
               }}
             >
               <Link href={'/principles'}>

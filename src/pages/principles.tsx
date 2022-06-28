@@ -6,7 +6,7 @@ const Principles: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground element='element5' paddingtop='190px' positionx='right' positiony='50'>
+        <ContainerWithBackground element='element5' paddingtop='50px' positionx='right' positiony='44'>
           <Grid sx={{ width: '100%' }}>
             <Paragraph variant="titlenobold">
               Kompetanse og teknologi, kombinert med et brukervennlig design, er
@@ -37,7 +37,7 @@ const Principles: React.FC = () => {
             <Link
               href={'https://agilemanifesto.org/iso/no/manifesto.html'}
               target={'_blank'}
-              sx={{ fontSize: 4 }}
+              sx={{ fontSize: [2,4] }}
             >
               Les det smidige manifestetet
             </Link>
@@ -55,13 +55,13 @@ const Principles: React.FC = () => {
             <Link
               href={'https://github.com/bjerkio'}
               target={'_blank'}
-              sx={{ fontSize: 4 }}
+              sx={{ fontSize: [2,4] }}
             >
               Sjekk vår Github-profil
             </Link>
           </Grid>
           </ContainerWithBackground>
-          <ContainerWithBackground element='element4' positionx='left' positiony='40' paddingbottom='210px'>
+          <ContainerWithBackground element='element4' positionx='left' positiony='46' paddingbottom='90px'>
           <Grid sx={{ gap: 3, mt: '100px' }}>
             <Heading variant="subtitleblack">
               Lære og justere kontinuerlig

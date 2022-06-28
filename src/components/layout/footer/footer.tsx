@@ -8,7 +8,7 @@ export const Footer: React.FC = () => (
           color: 'background',
           justifyContent: 'space-between',
           alignItems: 'center',
-          fontSize: 4,
+          fontSize: [0,4],
         }}
       >
         <Flex>
