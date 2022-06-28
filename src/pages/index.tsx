@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground color="green" element='element1'>
+        <ContainerWithBackground color="green" element='element1' paddingbottom='210px' paddingtop='190px' positionx='right' positiony='80' size='453'>
           <Grid sx={{ gap: 3 }}>
             <Heading variant="title">Vår lidenskap er å skape</Heading>
             <Paragraph variant="standard">
@@ -54,19 +54,8 @@ const Home: NextPage = () => {
           </Flex>
         </ContainerWithBackground>
 
-        <ContainerWithBackground color="beige">
-          <Box sx={{ position: 'relative' }}>
-            <Image
-              src={'/element2.svg'}
-              sx={{
-                position: 'absolute',
-                width: '298px',
-                left: '-388px',
-                bottom: '-220px',
-              }}
-            />
-          </Box>
-          <Paragraph variant="standard">
+        <ContainerWithBackground color="beige" element='element2' paddingtop='210px' paddingbottom='210px' positionx='left' positiony='50' size='298'>
+          <Paragraph variant="excerpt">
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes. <br></br>
