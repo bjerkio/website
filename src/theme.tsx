@@ -64,7 +64,7 @@ export const theme = merge(webTheme, {
     },
     readable: {
       variant: 'centered',
-      maxWidth: 1000,
+      maxWidth: 940,
       backgroundSize: 'cover',
     },
     full: {

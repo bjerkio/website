@@ -11,8 +11,8 @@ export const Header: React.FC = () => {
   return (
     <Box
       sx={{
-        pt: 7,
-        pb: 3,
+        px: [5, 7],
+        pt: [5, 7],
         backgroundColor: color,
       }}
     >

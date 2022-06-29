@@ -1,13 +1,15 @@
 import { Grid, Heading, Link, Paragraph } from 'theme-ui';
-import { ContainerWithBackground } from '../components/container-with-background';
 import { Layout } from '../components/layout/layout';
+import { BackgroundGraphic } from '../components/background-graphic';
+import { PageSection } from '../components/page-section';
 
 const Principles: React.FC = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground element='element5' paddingtop='190px' positionx='right' positiony='50'>
-          <Grid sx={{ width: '100%' }}>
+        <PageSection>
+          <BackgroundGraphic element='element5' positionx='right' positiony='72%' />
+          <Grid sx={{ width: '100%', gap: 4 }} >
             <Paragraph variant="titlenobold">
               Kompetanse og teknologi, kombinert med et brukervennlig design, er
               viktig for å lykkes
@@ -60,9 +62,9 @@ const Principles: React.FC = () => {
               Sjekk vår Github-profil
             </Link>
           </Grid>
-          </ContainerWithBackground>
-          <ContainerWithBackground element='element4' positionx='left' positiony='40' paddingbottom='210px'>
-          <Grid sx={{ gap: 3, mt: '100px' }}>
+      
+          <BackgroundGraphic element='element4' positionx='left' positiony='82%'/>
+          <Grid sx={{ gap: 3 }}>
             <Heading variant="subtitleblack">
               Lære og justere kontinuerlig
             </Heading>
@@ -98,7 +100,8 @@ const Principles: React.FC = () => {
               de.{' '}
             </Paragraph>
           </Grid>
-          </ContainerWithBackground>
+      
+          </PageSection>
       </Grid>
     </Layout>
   );
