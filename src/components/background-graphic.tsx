@@ -20,19 +20,25 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
   const graphicalAddition = `url(/${element}.svg)`;
 
   return (
+    <Box
+      sx={{
+        position: 'absolute',
+        right: positionx === 'right' ? 0 : 'unset',
+        top: positiony,
+        
+      }}
+    >
       <Box
         sx={{
-          position: 'absolute',
           backgroundImage: graphicalAddition,
           backgroundRepeat: 'no-repeat',
-          backgroundPositionX: `${positionx}`,
-          backgroundPositionY: positiony,
-          visibility: ['hidden', 'hidden', 'visible'],
-          width: '100%',
-          height: '100%',
+          backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
+          display: ['none', 'none', 'block'],
           pointerEvents: 'none',
-          overflow:'hidden'
+          width: '500px',
+          height: '300px',
         }}
       />
+    </Box>
   );
 };

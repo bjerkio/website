@@ -1,17 +1,11 @@
 import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import {
-  Box,
-  Container,
-  Flex,
-  IconButton,
-} from 'theme-ui';
+import { Box, Container, Flex, IconButton } from 'theme-ui';
 import { Booking } from '../booking';
 import { Logo } from '../logo';
 import { Cross } from './header/cross';
-import { Hamburger }  from './header/hamburger';
-
+import { Hamburger } from './header/hamburger';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
@@ -22,8 +16,8 @@ export const Header: React.FC = () => {
   return (
     <Box
       sx={{
-        px: [5, 7],
-        pt: [5, 7],
+        px: [6, 8],
+        pt: [6, 8],
         backgroundColor: color,
       }}
     >
@@ -71,15 +65,17 @@ export const Header: React.FC = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: 5,
+              gap: 6,
               height: '70%',
             }}
           >
-            <Flex sx={{flexDirection: 'column', alignItems: 'center', gap: 4}}>
-              <Link sx={{ color: 'white', fontSize: 5 }} href="/about">
+            <Flex
+              sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}
+            >
+              <Link variant='mobileNav' href="/about">
                 Om oss
               </Link>
-              <Link sx={{ color: 'white', fontSize: 5 }} href="/principles">
+              <Link variant='mobileNav' href="/principles">
                 Våre prinsipper
               </Link>
             </Flex>
@@ -89,7 +85,7 @@ export const Header: React.FC = () => {
       )}
 
       <Container variant="header">
-        <Flex sx={{ alignItems: 'center', gap: 5 }}>
+        <Flex sx={{ alignItems: 'center', gap: 6 }}>
           <Link href={'/'}>
             <Logo
               sx={{

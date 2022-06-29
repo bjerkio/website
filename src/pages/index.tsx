@@ -1,28 +1,15 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Paragraph,
-  Text,
-} from 'theme-ui';
-import { Layout } from '../components/layout/layout';
+import { Box, Container, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
 import { BackgroundGraphic } from '../components/background-graphic';
+import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/page-section';
 
 const Home: NextPage = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>
-        <PageSection backgroundColor='green'>
-        <BackgroundGraphic
-            element="element1"
-            positionx="right"
-            positiony="51%"
-          />
+        <PageSection backgroundColor="green">
           <Container variant="readable">
             <Grid sx={{ gap: 3 }}>
               <Heading variant="title">Vår lidenskap er å skape</Heading>
@@ -45,7 +32,7 @@ const Home: NextPage = () => {
               <Text variant="subtitle">Noen av våre seneste kunder</Text>
               <Grid
                 columns={['1fr 1fr', '1fr 1fr 2fr']}
-                gap={[3, 4]}
+                gap={[3, 5]}
                 sx={{
                   justifyItems: 'Left',
                   alignItems: 'center',
@@ -53,32 +40,27 @@ const Home: NextPage = () => {
                 }}
               >
                 <Text variant="excerpt">Folio</Text>
-                <Text variant="excerpt" sx={{}}>
-                  Layer
-                </Text>
-                <Text variant="excerpt" sx={{}}>
-                  Grid branding
-                </Text>
+                <Text variant="excerpt">Layer</Text>
+                <Text variant="excerpt">Grid branding</Text>
 
-                <Text variant="excerpt" sx={{}}>
-                  DNB
-                </Text>
-                <Text variant="excerpt" sx={{}}>
-                  Digdir
-                </Text>
-                <Text variant="excerpt" sx={{}}>
-                  Avfall Norge
-                </Text>
+                <Text variant="excerpt">DNB</Text>
+                <Text variant="excerpt">Digdir</Text>
+                <Text variant="excerpt">Avfall Norge</Text>
               </Grid>
             </Flex>
           </Container>
+          <BackgroundGraphic
+            element="element1"
+            positionx="right"
+            positiony="710px"
+          />
         </PageSection>
 
         <PageSection>
           <BackgroundGraphic
             element="element2"
             positionx="left"
-            positiony="10%"
+            positiony="1225px"
           />
           <Container variant="readable">
             <Paragraph variant="excerpt">
@@ -91,7 +73,7 @@ const Home: NextPage = () => {
                   fontSize: [1, 3],
                 }}
               >
-                <Link href={'/principles'}>
+                <Link href={'/principles'} variant="emphasis">
                   Les mer om oss og hvordan vi jobber
                 </Link>
               </Box>
