@@ -4,9 +4,10 @@ import { Box, Button } from 'theme-ui';
 
 export interface BookingProps {
   label?: string;
+  variant?: string;
 }
 
-export const Booking: React.FC<BookingProps> = ({ label }) => {
+export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
   const onClick = () =>
     openPopupWidget({ url: 'https://calendly.com/simen-a-w-olsen' });
   return (
@@ -15,6 +16,7 @@ export const Booking: React.FC<BookingProps> = ({ label }) => {
       pb: [0, 3],
 }}>
     <Button
+      variant={variant ?? 'primary' }
       sx={{
         cursor: 'pointer',
 

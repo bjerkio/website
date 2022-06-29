@@ -39,7 +39,7 @@ const Principles: React.FC = () => {
             <Link
               href={'https://agilemanifesto.org/iso/no/manifesto.html'}
               target={'_blank'}
-              sx={{ fontSize: 4 }}
+              sx={{ fontSize: [2,4] }}
             >
               Les det smidige manifestetet
             </Link>
@@ -57,7 +57,7 @@ const Principles: React.FC = () => {
             <Link
               href={'https://github.com/bjerkio'}
               target={'_blank'}
-              sx={{ fontSize: 4 }}
+              sx={{ fontSize: [2,4] }}
             >
               Sjekk vår Github-profil
             </Link>
