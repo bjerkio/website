@@ -1,20 +1,17 @@
 import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import {
   Box,
-  Button,
   Container,
   Flex,
-  Grid,
   IconButton,
-  Image,
-  Text,
 } from 'theme-ui';
 import { Booking } from '../booking';
 import { Logo } from '../logo';
-import { useState } from 'react';
-import Hamburger from './header/hamburger';
-import Cross from './header/cross';
+import { Cross } from './header/cross';
+import { Hamburger }  from './header/hamburger';
+
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();

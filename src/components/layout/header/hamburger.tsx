@@ -1,9 +1,9 @@
-import React, { FC, SVGProps } from 'react';
+import { FC, SVGProps } from 'react';
 import { ThemeUIStyleObject } from 'theme-ui';
 
 type Props = ThemeUIStyleObject & SVGProps<SVGSVGElement>;
 
-const Hamburger: FC<Props> = (props) => {
+export const Hamburger: FC<Props> = () => {
   return (
     <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M27 21.4336H0V18.2891H27V21.4336Z" fill="#0F2040"/>
@@ -13,7 +13,5 @@ const Hamburger: FC<Props> = (props) => {
     </svg>
   );
 };
-
-export default Hamburger;
 
 
