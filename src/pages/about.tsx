@@ -1,15 +1,21 @@
 import { Link } from 'next-theme-ui';
-import { Box, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
+import { Box, Container, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
 import { ContactPerson } from '../components/about/contact-person';
-import { ContainerWithBackground } from '../components/container-with-background';
+import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
+import { PageSection } from '../components/page-section';
 
 const About: React.FC = () => {
   return (
     <Layout>
-      <Grid sx={{ width: '100%' }}>
-        <ContainerWithBackground element='element2' paddingtop='50px' positionx='left' positiony='30' size='298' marginbottom='-170px'>
-          
+      <PageSection>
+        <BackgroundGraphic
+          element="element2"
+          positionx="left"
+          positiony="1040px"
+        />
+
+        <Container variant="readable">
           <Heading variant="titlenobold" sx={{ pb: '40px' }}>
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
             tenker, jobber og kommuniserer på.
@@ -22,18 +28,21 @@ const About: React.FC = () => {
           </Paragraph>
           <Box
             sx={{
-              fontSize: [2,4],
+              fontSize: [2, 4],
               pb: '120px',
             }}
           >
-            <Link href={'/principles'}>Les mer om hvordan vi jobber</Link>
+            <Link href={'/principles'} variant="primary">
+              Les mer om hvordan vi jobber
+            </Link>
           </Box>
 
           <Flex
             sx={{
-              flexDirection: ['column', 'row'],
-              flexWrap: ['nowrap', 'wrap'],
-              gap: 3,
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: 5,
             }}
           >
             <ContactPerson
@@ -81,9 +90,7 @@ const About: React.FC = () => {
               github={'https://github.com/moripen'}
             />
           </Flex>
-          </ContainerWithBackground>
 
-          <ContainerWithBackground element='element3' positionx='right' positiony='0'>
           <Grid sx={{ gap: 1 }}>
             <Text variant="standard" pb="15px">
               Besøk oss i Myntgata 2, 0152 Oslo.
@@ -95,8 +102,13 @@ const About: React.FC = () => {
               +47 22 12 05 12
             </Text>
           </Grid>
-          </ContainerWithBackground>
-      </Grid>
+        </Container>
+        <BackgroundGraphic
+          element="element3"
+          positionx="right"
+          positiony="3080px"
+        />
+      </PageSection>
     </Layout>
   );
 };

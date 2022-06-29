@@ -20,8 +20,8 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
   linkedIn,
 }) => {
   return (
-    <Flex sx={{ flexDirection: 'column' }}>
-      <Box sx={{ width: ['100%', '25rem'] }}>
+    <Flex sx={{ flexDirection: 'column', alignSelf:'center' }}>
+      <Box sx={{ width: '25rem', maxWidth: '25rem' }}>
         <AspectRatio
           ratio={459 / 527}
           sx={{ borderRadius: 6, overflow: 'hidden' }}
@@ -40,11 +40,10 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
       </Box>
       <Text sx={{ fontSize: 2, fontWeight: '600', mt: '20px' }}>{name}</Text>
       <Text variant="contact">{title}</Text>
-      <Link variant="socials" color="black" href={`tel:${phone}`} mt="20px">
-        {' '}
+      <Link color="black" href={`tel:${phone}`} mt="20px">
         {phone}
       </Link>
-      <Link variant="socials" color="black" href={`mailto:${email}`} mb="20px">
+      <Link color="black" href={`mailto:${email}`} mb="20px">
         {email}
       </Link>
       {linkedIn && (
