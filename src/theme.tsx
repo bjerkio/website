@@ -66,17 +66,20 @@ export const theme = merge(webTheme, {
       variant: 'centered',
       maxWidth: 950,
       backgroundSize: 'cover',
-      px: [5, 'unset'],
+      px: 5,
     },
     full: {
       variant: 'centered',
       maxWidth: 1500,
       p: 5,
-      //backgroundSize: 'cover',
-      //width: '100%',
     },
     header: {
       maxWidth: 1500,
+    },
+    pageSection: {
+      maxWidth: 'auto',
+      backgroundColor: 'green100',
+      py: ['98px', '194px'],
     },
   },
 

@@ -17,6 +17,7 @@ export const Layout: React.FC = ({ children }) => (
     <Flex
       sx={{
         alignItems: 'stretch',
+        flexDirection: 'column',
       }}
     >
       {children}
