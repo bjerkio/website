@@ -1,20 +1,31 @@
 import React from 'react';
 import { openPopupWidget } from 'react-calendly';
-import { Button } from 'theme-ui';
+import { Box, Button } from 'theme-ui';
 
 export interface BookingProps {
   label?: string;
+  variant?: string;
 }
 
-export const Booking: React.FC<BookingProps> = ({ label }) => {
+export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
   const onClick = () =>
     openPopupWidget({ url: 'https://calendly.com/simen-a-w-olsen' });
   return (
-    <Button
-      sx={{ color: 'iron', width: 'fit-content', cursor: 'pointer' }}
-      onClick={onClick}
+    <Box
+      sx={{
+        overflow: 'visible',
+        pb: [0, 3],
+      }}
     >
-      {label ? label : 'Book et møte →'}
-    </Button>
+      <Button
+        variant={variant ?? 'primary'}
+        sx={{
+          cursor: 'pointer',
+        }}
+        onClick={onClick}
+      >
+        {label ? label : 'Book et møte'}
+      </Button>
+    </Box>
   );
 };

@@ -1,71 +1,115 @@
-import { Grid, Heading, Link, Paragraph } from 'theme-ui';
+import { Container, Grid, Heading, Link, Paragraph } from 'theme-ui';
+import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
+import { PageSection } from '../components/page-section';
 
 const Principles: React.FC = () => {
   return (
     <Layout>
-      <Grid sx={{ gap: 5 }}>
-        <Grid sx={{ gap: 3 }}>
-          <Heading variant="title">Våre prinsipper</Heading>
-          <Paragraph variant="excerpt">
-            Kompetanse og teknologi, kombinert med et brukervennlig design, er
-            viktig for å lykkes
-          </Paragraph>
-          <Paragraph>
-            Helt siden vi startet i 2009 har vi lært av hvordan man lykkes med
-            produkter og tjenester. Vi er, som mange andre i bransjen, opptatt
-            av{' '}
-            <Link
-              href={'https://agilemanifesto.org/iso/no/manifesto.html'}
-              target={'_blank'}
-            >
-              det smidige manifestet
-            </Link>
-            , og det er nok prinsippene rundt samarbeid som står oss nærest.
-          </Paragraph>
-          <Paragraph>
-            Vi jobber best under forutsetninger hvor det lages minst og flest
-            mulig prosjekter, som skaper verdi. Det handler om å bevise vår
-            verdi, og ha insentiver som skaper et godt samarbeid og driver frem
-            det beste i oss.
-          </Paragraph>
+      <PageSection>
+        <BackgroundGraphic
+          element="element5"
+          positionx="right"
+          positiony="580px"
+        />
+        <BackgroundGraphic
+          element="element4"
+          positionx="left"
+          positiony="1725px"
+        />
+        <Container variant="readable">
+          <Grid gap={9}>
+            <Grid gap={5}>
+              <Paragraph variant="titlenobold">
+                Kompetanse og teknologi, kombinert med et brukervennlig design,
+                er viktig for å lykkes
+              </Paragraph>
+              <Paragraph variant="standard">
+                Helt siden vi startet i 2009 har vi lært av hvordan man lykkes
+                med produkter og tjenester. Vi er, som mange andre i bransjen,
+                opptatt av{' '}
+                <Link
+                  href={'https://agilemanifesto.org/iso/no/manifesto.html'}
+                  target={'_blank'}
+                  color="black"
+                  sx={{ textDecoration: 'underline' }}
+                >
+                  det smidige manifestet
+                </Link>
+                , og det er nok prinsippene rundt samarbeid som står oss nærest.
+              </Paragraph>
 
-          <Link
-            href={'https://agilemanifesto.org/iso/no/manifesto.html'}
-            target={'_blank'}
-          >
-            Les det smidige manifestetet →
-          </Link>
-        </Grid>
-        <Grid sx={{ gap: 3 }}>
-          <Heading>Lære og justere kontinuerlig</Heading>
-          <Paragraph>
-            En viktig del av reisen er å gjøre feil, lære, reflektere og
-            justere. For å kunne forbedre og forenkle hvordan mennesker tenker,
-            jobber, lærer og kommuniserer, må vi akseptere at veien er ikke gått
-            opp før vi begynner. Den blir til mens vi går.
-          </Paragraph>
-          <Paragraph sx={{ fontWeight: 'bold' }}>
-            Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.{' '}
-          </Paragraph>
-        </Grid>
+              <Paragraph variant="standard">
+                Vi jobber best under forutsetninger hvor det lages minst og
+                flest mulig prosjekter, som skaper verdi. Det handler om å
+                bevise vår verdi, og ha insentiver som skaper et godt samarbeid
+                og driver frem det beste i oss.
+              </Paragraph>
 
-        <Grid sx={{ gap: 3 }}>
-          <Heading>Åpen og gjennomsiktig prosess</Heading>
-          <Paragraph>
-            Vi mener det er helt essensielt at vi samarbeider, og at ting skjer
-            i det åpne. I praksis betyr det at vi inviterer gjerne våre kunder
-            inn der vi jobber; (eksempelvis, Slack og Github).
-          </Paragraph>
-          <Paragraph>
-            Det skal være synlig når noe skjer, bedre blir beslutningene når de
-            taes løpende og med mest mulig kontekst.
-          </Paragraph>
-          <Paragraph>
-            La oss unngå barriærer, og all den frustrasjonen som kommer med de.{' '}
-          </Paragraph>
-        </Grid>
-      </Grid>
+              <Link
+                href={'https://agilemanifesto.org/iso/no/manifesto.html'}
+                target={'_blank'}
+                variant="primary"
+              >
+                Les det smidige manifestetet
+              </Link>
+            </Grid>
+
+            <Grid>
+              <Paragraph variant="subtitleblack">Åpen kildekode</Paragraph>
+              <Paragraph variant="standard">
+                Ved å dele erfaringer, diskutere og arbeide åpent mener vi at
+                teknologi blir bedre. Derfor ligger Bjerk på listen over verdens
+                største selskaper på åpen kildekode. For deg som kunde betyr det
+                at du indirekte bidrar til å skape et bedre samfunn, men også
+                betydelig bedre programvare.
+              </Paragraph>
+              <Link
+                href={'https://github.com/bjerkio'}
+                target={'_blank'}
+                variant="primary"
+              >
+                Sjekk vår Github-profil
+              </Link>
+            </Grid>
+
+            <Grid>
+              <Heading variant="subtitleblack">
+                Lære og justere kontinuerlig
+              </Heading>
+              <Paragraph variant="standard">
+                En viktig del av reisen er å gjøre feil, lære, reflektere og
+                justere. For å kunne forbedre og forenkle hvordan mennesker
+                tenker, jobber, lærer og kommuniserer, må vi akseptere at veien
+                er ikke gått opp før vi begynner. Den blir til mens vi går.
+              </Paragraph>
+            </Grid>
+
+            <Paragraph variant="titlenobold">
+              Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.
+            </Paragraph>
+
+            <Grid>
+              <Heading variant="subtitleblack">
+                Åpen og gjennomsiktig prosess
+              </Heading>
+              <Paragraph variant="standard">
+                Vi mener det er helt essensielt at vi samarbeider, og at ting
+                skjer i det åpne. I praksis betyr det at vi inviterer gjerne
+                våre kunder inn der vi jobber; (eksempelvis, Slack og Github).
+              </Paragraph>
+              <Paragraph variant="standard">
+                Det skal være synlig når noe skjer, bedre blir beslutningene når
+                de taes løpende og med mest mulig kontekst.
+              </Paragraph>
+              <Paragraph variant="standard">
+                La oss unngå barriærer, og all den frustrasjonen som kommer med
+                de.
+              </Paragraph>
+            </Grid>
+          </Grid>
+        </Container>
+      </PageSection>
     </Layout>
   );
 };

@@ -1,37 +1,138 @@
 import { Link, NavLink } from 'next-theme-ui';
 import { useRouter } from 'next/router';
-import { Container, Flex } from 'theme-ui';
+import React, { useState } from 'react';
+import { Box, Container, Flex, IconButton } from 'theme-ui';
+import { Booking } from '../booking';
 import { Logo } from '../logo';
+import { Cross } from './header/cross';
+import { Hamburger } from './header/hamburger';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
+  const isHome = pathname === '/';
+  const color = isHome ? 'green100' : 'green20';
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   return (
-    <Container variant="readable">
-      <Flex
-        sx={{ pt: 2, justifyContent: 'space-between', alignItems: 'center' }}
-      >
-        <Link href={'/'}>
-          <Logo
-            sx={{
-              maxWidth: '100px',
-              cursor: 'pointer',
-              height: '40px',
-              color: 'text',
-            }}
-          />
-        </Link>
-        <NavLink
-          href={'/about'}
+    <Box
+      sx={{
+        px: [6, 8],
+        pt: [6, 8],
+        backgroundColor: color,
+      }}
+    >
+      {menuIsOpen && (
+        <Flex
           sx={{
-            textDecoration: 'none',
-            color: pathname.includes('about') ? 'green80' : 'text',
-            cursor: 'pointer',
-            fontWeight: 'bold',
+            position: 'fixed',
+            left: 0,
+            top: 0,
+            backgroundColor: 'dark100',
+            width: '100%',
+            height: '100vh',
+            zIndex: 2,
+            display: ['flex', 'none'],
+            px: 5,
+            pt: 5,
+            pb: 0,
+            gap: 5,
+            flexDirection: 'column',
+            alignItems: 'center',
+            overflow: 'scroll',
           }}
         >
-          Om oss
-        </NavLink>
-      </Flex>
-    </Container>
+          <Flex
+            sx={{ alignItems: 'center', height: 'fit-content', width: '100%' }}
+          >
+            <Box
+              sx={{ width: '100px', height: '40.87px', visibility: 'hidden' }}
+            />
+            <IconButton
+              sx={{
+                width: '32px',
+                height: '22px',
+                backgroundColor: 'dark100',
+                ml: 'auto',
+              }}
+              onClick={() => setMenuIsOpen(false)}
+            >
+              <Cross />
+            </IconButton>
+          </Flex>
+
+          <Flex
+            sx={{
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: 6,
+              height: '70%',
+            }}
+          >
+            <Flex
+              sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}
+            >
+              <Link variant="mobileNav" href="/about">
+                Om oss
+              </Link>
+              <Link variant="mobileNav" href="/principles">
+                Våre prinsipper
+              </Link>
+            </Flex>
+            <Booking variant="secondary" label={'Book et møte'} />
+          </Flex>
+        </Flex>
+      )}
+
+      <Container variant="header">
+        <Flex sx={{ alignItems: 'center', gap: 6 }}>
+          <Link href={'/'}>
+            <Logo
+              sx={{
+                maxWidth: '100px',
+                cursor: 'pointer',
+                height: '40.87px',
+                color: 'text',
+              }}
+            />
+          </Link>
+          <NavLink
+            href={'/about'}
+            sx={{
+              display: ['none', 'block'],
+            }}
+          >
+            Om oss
+          </NavLink>
+          <NavLink
+            href={'/principles'}
+            sx={{
+              display: ['none', 'block'],
+            }}
+          >
+            Våre prinsipper
+          </NavLink>
+          <IconButton
+            sx={{
+              display: ['block', 'none'],
+              ml: 'auto',
+            }}
+            onClick={() => setMenuIsOpen(!menuIsOpen)}
+          >
+            <Hamburger />
+          </IconButton>
+
+          <Box
+            sx={{
+              marginLeft: 'auto',
+              pr: '20px',
+              display: ['none', 'block'],
+            }}
+          >
+            <Booking label={'Book et møte'}></Booking>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   );
 };

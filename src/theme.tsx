@@ -11,6 +11,7 @@ import { merge } from 'theme-ui';
  * in @bjerk/brand project.
  */
 export const theme = merge(webTheme, {
+  space: [0, 1, 8, 16, 24, 32, 48, 64, 96, 115],
   /**
    * Colors
    *
@@ -20,6 +21,14 @@ export const theme = merge(webTheme, {
     muted: '#95E0C8',
     green120: '#2E896C',
     foreground: '#ffffff',
+    green100: '#90F494',
+    blue100: '#2A3BCC',
+    dark100: '#0F2040',
+    green20: '#EDF9F1',
+  },
+  fonts: {
+    body: 'Sora',
+    heading: 'inherit',
   },
   /**
    * We should add a few notable sizes here,
@@ -30,7 +39,8 @@ export const theme = merge(webTheme, {
    * issue: https://github.com/bjerkio/brand/issues/6
    */
   sizes: {
-    readable: 770,
+    readable: 1200,
+    full: 1500,
   },
   /**
    * `radii` should key should be available
@@ -50,19 +60,26 @@ export const theme = merge(webTheme, {
       margin: '0 auto',
       m: 0,
       p: 0,
+      backgroundSize: 'cover',
     },
     readable: {
       variant: 'centered',
-      maxWidth: 770,
-      p: 4,
+      maxWidth: 950,
+      backgroundSize: 'cover',
+      px: [6, 'unset'],
+    },
+    full: {
+      variant: 'centered',
+      maxWidth: 1500,
+      p: 5,
+      //backgroundSize: 'cover',
+      //width: '100%',
+    },
+    header: {
+      maxWidth: 1500,
     },
   },
-  cards: {
-    primary: {
-      backgroundColor: 'green60',
-      borderRadius: 2,
-    },
-  },
+
   /**
    * Default button stylings doesn't fit the current
    * design setup.
@@ -71,42 +88,112 @@ export const theme = merge(webTheme, {
    */
   buttons: {
     primary: {
-      fontFamily: 'heading',
-      backgroundColor: 'black100',
+      fontFamily: 'body',
+      variant: 'heading',
+      color: 'dark100',
       p: 3,
-      fontSize: 2,
+      backgroundColor: 'transparent',
+      boxShadow:
+        '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
+      borderRadius: '30px',
+      width: 'fit-content',
     },
-  },
-  links: {
-    buttonLink: {
-      variant: 'buttons.primary',
-      borderRadius: 1,
-      color: 'foreground',
+    secondary: {
+      fontFamily: 'body',
+      variant: 'heading',
+      color: 'dark100',
+      p: 3,
+      backgroundColor: 'green20',
+      borderRadius: '30px',
       width: 'fit-content',
     },
   },
+  links: {
+    primary: {
+      fontSize: [0, 4],
+      color: 'blue100',
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
+      wordWrap: 'break-word',
+    },
+    buttonLink: {
+      variant: 'subtitle',
+      borderRadius: 1,
+      color: 'dark100',
+      width: 'fit-content',
+      textDecoration: 'none',
+    },
+    nav: {
+      fontWeight: 'normal',
+      textDecoration: 'none',
+      color: 'dark100',
+      ':hover': {
+        color: 'blue100',
+        textDecoration: 'underline',
+      },
+    },
+    emphasis: {
+      variant: 'links.primary',
+      fontSize: [0, 3],
+    },
+    socials: {
+      textDecoration: 'none',
+    },
+    mobileNav: {
+      color: 'white',
+      textDecoration: 'none',
+      fontSize: 5,
+    },
+  },
+  fontSizes: [16, 18, 20, 24, 28, 32, 48],
   /**
    * Read more: https://github.com/bjerkio/brand/issues/7
    */
   text: {
     title: {
-      lineHeight: 0.9,
-      fontWeight: 800,
+      fontWeight: 600,
+      fontSize: [5, 6],
     },
-    heading: { fontWeight: 800 },
+    titlenobold: {
+      fontWeight: 400,
+      fontSize: [5, 6],
+    },
+    heading: {
+      fontWeight: 400,
+      fontSize: 1,
+    },
     subtitle: {
-      color: 'green120',
-      fontWeight: 'medium',
+      color: 'blue100',
+      fontWeight: 600,
+      fontSize: [0, 2],
+    },
+    subtitleblack: {
+      fontSize: 2,
+      fontWeight: 600,
+    },
+    standard: {
+      fontSize: [2, 4],
+      fontWeight: 400,
     },
     excerpt: {
-      fontWeight: 'bold',
-      fontSize: 3,
+      fontWeight: 400,
+      fontSize: [2, 5],
+    },
+    readmore: {
+      fontWeight: 400,
+      fontSize: [0, 3],
+    },
+    contact: {
+      fontSize: 0,
     },
   },
 
   styles: {
     root: {
-      backgroundColor: 'background',
+      backgroundColor: 'green20',
+      fontFamily: 'body',
 
       /**
        * 👇 Should be added to webTheme
@@ -114,9 +201,8 @@ export const theme = merge(webTheme, {
       WebkitFontSmoothing: 'antialiased',
       MozOsxFontSmoothing: 'grayscale',
     },
-    a: {
-      textDecoration: 'underline',
-      color: 'text',
-    },
+    a: {},
   },
+
+  breakpoints: ['53em', '104em'],
 });
