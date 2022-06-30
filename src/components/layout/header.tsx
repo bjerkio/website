@@ -72,10 +72,10 @@ export const Header: React.FC = () => {
             <Flex
               sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}
             >
-              <Link variant='mobileNav' href="/about">
+              <Link variant="mobileNav" href="/about">
                 Om oss
               </Link>
-              <Link variant='mobileNav' href="/principles">
+              <Link variant="mobileNav" href="/principles">
                 Våre prinsipper
               </Link>
             </Flex>

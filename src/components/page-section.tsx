@@ -16,7 +16,6 @@ export const PageSection: React.FC<PageSectionProps> = ({
         backgroundColor,
         py: ['98px', '194px'],
         width: '100%',
-        
       }}
     >
       {children}
