@@ -20,7 +20,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
   linkedIn,
 }) => {
   return (
-    <Flex sx={{ flexDirection: 'column', alignSelf:'center' }}>
+    <Flex sx={{ flexDirection: 'column', alignSelf: 'center' }}>
       <Box sx={{ width: '25rem', maxWidth: '25rem' }}>
         <AspectRatio
           ratio={459 / 527}
@@ -31,8 +31,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             sx={{
               minWidth: '100%',
               minHeight: '100%',
-              width: '459px',
-              height: '527px',
+              maxHeight: '527px',
               objectFit: 'cover',
             }}
           />

@@ -66,7 +66,7 @@ export const theme = merge(webTheme, {
       variant: 'centered',
       maxWidth: 950,
       backgroundSize: 'cover',
-      px: [5, 'unset'],
+      px: [6, 'unset'],
     },
     full: {
       variant: 'centered',

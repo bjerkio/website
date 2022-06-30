@@ -25,7 +25,6 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
         position: 'absolute',
         right: positionx === 'right' ? 0 : 'unset',
         top: positiony,
-        
       }}
     >
       <Box

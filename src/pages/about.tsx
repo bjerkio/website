@@ -16,11 +16,11 @@ const About: React.FC = () => {
         />
 
         <Container variant="readable">
-          <Heading variant="titlenobold" sx={{ pb: '40px' }}>
+          <Heading variant="titlenobold" sx={{ pb: 5 }}>
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
             tenker, jobber og kommuniserer på.
           </Heading>
-          <Paragraph variant="standard" sx={{ pb: '40px' }}>
+          <Paragraph variant="standard" sx={{ pb: 5 }}>
             For oss, er det viktigste vi gjør er å bidra til at hverdagen til
             mennesker blir bedre, at vi kan oppnå mer. Vi elsker å skape - og
             kombinasjonen av å få skape noe, som også har positiv påvirkning for
