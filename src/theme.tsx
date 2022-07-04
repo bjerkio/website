@@ -149,8 +149,12 @@ export const theme = merge(webTheme, {
     },
     footerLink: {
       color: 'blue40',
-      fontSize: [0,2],
-    }
+      fontSize: [0, 2],
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
+    },
   },
   fontSizes: [16, 18, 20, 24, 28, 32, 48],
   /**
