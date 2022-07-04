@@ -8,13 +8,13 @@ export const Footer: React.FC = () => (
           color: 'background',
           justifyContent: 'space-between',
           alignItems: 'center',
-          fontSize: [0, 4],
+          fontSize: [0, 2],
         }}
       >
         <Flex>
           <Text>
             Kontakt oss på{' '}
-            <Link href={'mailto:kontoret@bjerk.io'} variant="primary">
+            <Link href={'mailto:kontoret@bjerk.io'} variant="footerLink">
               kontoret@bjerk.io
             </Link>
           </Text>

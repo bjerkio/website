@@ -25,6 +25,7 @@ export const theme = merge(webTheme, {
     blue100: '#2A3BCC',
     dark100: '#0F2040',
     green20: '#EDF9F1',
+    blue40: '#8FA1FF',
   },
   fonts: {
     body: 'Sora',
@@ -145,6 +146,14 @@ export const theme = merge(webTheme, {
       color: 'white',
       textDecoration: 'none',
       fontSize: 5,
+    },
+    footerLink: {
+      color: 'blue40',
+      fontSize: [0, 2],
+      textDecoration: 'none',
+      ':hover': {
+        textDecoration: 'underline',
+      },
     },
   },
   fontSizes: [16, 18, 20, 24, 28, 32, 48],
