@@ -49,10 +49,11 @@ export const Header: React.FC = () => {
             />
             <IconButton
               sx={{
-                width: '32px',
-                height: '22px',
+                width: '45px',
+                height: '25px',
                 backgroundColor: 'dark100',
                 ml: 'auto',
+                mt:'12px'
               }}
               onClick={() => setMenuIsOpen(false)}
             >
@@ -116,6 +117,9 @@ export const Header: React.FC = () => {
             sx={{
               display: ['block', 'none'],
               ml: 'auto',
+              width: '40px',
+              height: '25px',
+              alignSelf: 'flex-start'
             }}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           >
