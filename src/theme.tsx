@@ -213,5 +213,5 @@ export const theme = merge(webTheme, {
     a: {},
   },
 
-  breakpoints: ['53em', '104em'],
+  breakpoints: ['68.75em', '104em'],
 });
