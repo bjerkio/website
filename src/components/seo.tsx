@@ -40,7 +40,7 @@ export const SEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{seo.title}</title>
-      <link rel="icon" href="/bjerk-favicon.svg" />
+      <link rel="icon" href="favicon.ico" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
