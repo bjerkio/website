@@ -32,10 +32,8 @@ export const Header: React.FC = () => {
             height: '100vh',
             zIndex: 2,
             display: ['flex', 'none'],
-            px: 5,
-            pt: 5,
-            pb: 0,
-            gap: 5,
+            p: 6,
+            gap: 6,
             flexDirection: 'column',
             alignItems: 'center',
             overflow: 'scroll',
@@ -49,11 +47,10 @@ export const Header: React.FC = () => {
             />
             <IconButton
               sx={{
-                width: '45px',
-                height: '25px',
+                width: '30px',
+                height: '30px',
                 backgroundColor: 'dark100',
                 ml: 'auto',
-                mt:'12px'
               }}
               onClick={() => setMenuIsOpen(false)}
             >
@@ -64,14 +61,15 @@ export const Header: React.FC = () => {
           <Flex
             sx={{
               flexDirection: 'column',
-              justifyContent: 'center',
+              justifyContent: 'flex-start',
               alignItems: 'center',
               gap: 6,
               height: '70%',
+              mt: 8,
             }}
           >
             <Flex
-              sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}
+              sx={{ flexDirection: 'column', alignItems: 'center', gap: 3 }}
             >
               <Link variant="mobileNav" href="/about">
                 Om oss
@@ -117,9 +115,8 @@ export const Header: React.FC = () => {
             sx={{
               display: ['block', 'none'],
               ml: 'auto',
-              width: '40px',
-              height: '25px',
-              alignSelf: 'flex-start'
+              width: '30px',
+              height: '30px',
             }}
             onClick={() => setMenuIsOpen(!menuIsOpen)}
           >
