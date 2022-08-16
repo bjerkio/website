@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
       }}
     >
       {menuIsOpen && (
-        <Flex 
+        <Flex
           sx={{
             position: 'fixed',
             left: 0,
@@ -32,12 +32,11 @@ export const Header: React.FC = () => {
             height: '100vh',
             zIndex: 2,
             display: ['flex', 'none'],
-            p:6,
+            p: 6,
             gap: 6,
             flexDirection: 'column',
             alignItems: 'center',
             overflow: 'scroll',
-            
           }}
         >
           <Flex
@@ -66,7 +65,7 @@ export const Header: React.FC = () => {
               alignItems: 'center',
               gap: 6,
               height: '70%',
-              mt:8
+              mt: 8,
             }}
           >
             <Flex
