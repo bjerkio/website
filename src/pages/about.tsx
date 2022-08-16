@@ -88,6 +88,7 @@ const About: React.FC = () => {
               email={'markus@bjerk.io'}
               title={'Programvareutvikler'}
               github={'https://github.com/moripen'}
+              linkedIn={'https://www.linkedin.com/in/moripen/'}
             />
           </Flex>
 
