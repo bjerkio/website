@@ -90,6 +90,15 @@ const About: React.FC = () => {
               github={'https://github.com/moripen'}
               linkedIn={'https://www.linkedin.com/in/moripen/'}
             />
+            <ContactPerson
+            name={'Simon Rugland'}
+            photoPath={'/persons/simon.jpg'}
+            phone={'+47 474 46 841'}
+            email={'js@bjerk.io'}
+            title={'Programvareutvikler'}
+            github={'https://github.com/simonrugland'}
+            linkedIn={'https://www.linkedin.com/in/simon-rugland/'}
+            />
           </Flex>
 
           <Grid sx={{ gap: 1 }}>
