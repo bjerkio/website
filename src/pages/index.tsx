@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
                 <Text variant="excerpt">DNB</Text>
                 <Text variant="excerpt">Digdir</Text>
-                <Text variant="excerpt">Avfall Norge</Text>
+                <Text variant="excerpt">LO Media</Text>
               </Grid>
             </Flex>
           </Container>
