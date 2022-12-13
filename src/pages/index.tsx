@@ -5,7 +5,7 @@ import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/page-section';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <Layout>
       <Grid sx={{ width: '100%' }}>

@@ -1,6 +1,10 @@
 import { webTheme } from '@bjerk/brand';
 import { merge } from 'theme-ui';
-
+import {
+  extendTheme,
+  StyleFunctionProps,
+  type ThemeConfig,
+} from "@chakra-ui/react";
 /**
  * Once values stabilize, they should be
  * considered to be moved to @bjerk/brand
@@ -10,7 +14,15 @@ import { merge } from 'theme-ui';
  * maybe even a reference to a issue / pr
  * in @bjerk/brand project.
  */
-export const theme = merge(webTheme, {
+
+const config: ThemeConfig = {
+  initialColorMode: "system",
+  useSystemColorMode: true,
+};
+
+const theme = extendTheme ({
+  webTheme,
+  config,
   space: [0, 1, 8, 16, 24, 32, 48, 64, 96, 115],
   /**
    * Colors
@@ -215,3 +227,5 @@ export const theme = merge(webTheme, {
 
   breakpoints: ['68.75em', '104em'],
 });
+
+export default theme;
