@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Link } from 'next-theme-ui';
-import { Box, Container, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
+import { Box, Container, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/page-section';
@@ -13,13 +13,13 @@ const Home = () => {
           <Container variant="readable">
             <Grid sx={{ gap: 3 }}>
               <Heading variant="title">Vår lidenskap er å skape</Heading>
-              <Paragraph variant="standard">
+              <Text variant="standard">
                 De siste 12 årene har vi forbedret og forenklet måten mennesker
                 lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
                 tilpasse programvare. Vi utvikler, integrerer, kobler sammen,
                 rådgir og samarbeider med deg om å lage produkter og tekniske
                 løsninger.
-              </Paragraph>
+              </Text>
             </Grid>
 
             <Flex
@@ -31,7 +31,7 @@ const Home = () => {
             >
               <Text variant="subtitle">Noen av våre seneste kunder</Text>
               <Grid
-                columns={['1fr 1fr', '1fr 1fr 2fr']}
+                templateColumns={['1fr 1fr', '1fr 1fr 2fr']}
                 gap={[3, 5]}
                 sx={{
                   justifyItems: 'Left',
@@ -63,7 +63,7 @@ const Home = () => {
             positiony="1225px"
           />
           <Container variant="readable">
-            <Paragraph variant="excerpt">
+            <Text variant="excerpt">
               Samarbeid, samspill, programvare som virker, iterativ utvikling,
               kontinuitet, gode insentiver og Super Mario-effekten er noe av det
               vi mener kreves for å lykkes. <br></br>
@@ -77,7 +77,7 @@ const Home = () => {
                   Les mer om oss og hvordan vi jobber
                 </Link>
               </Box>
-            </Paragraph>
+            </Text>
           </Container>
         </PageSection>
       </Grid>
