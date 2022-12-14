@@ -1,7 +1,9 @@
-import { Box } from 'theme-ui';
+import { ReactNode } from 'react';
+import { Box } from '@chakra-ui/react';
 
 export interface PageSectionProps {
   backgroundColor?: 'green';
+  children?: ReactNode;
 }
 
 export const PageSection: React.FC<PageSectionProps> = ({
