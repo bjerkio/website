@@ -18,9 +18,17 @@ export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
       }}
     >
       <Button
-        variant={variant ?? 'primary'}
         sx={{
           cursor: 'pointer',
+          fontFamily: 'body',
+          variant: 'heading',
+          color: 'dark100',
+          p: 4,
+          backgroundColor: 'green20',
+          boxShadow:
+            '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
+          borderRadius: '30px',
+          width: 'fit-content',
         }}
         onClick={onClick}
       >
