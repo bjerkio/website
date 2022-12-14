@@ -4,7 +4,7 @@ export const GlobalStyles: React.FC = () => (
   <Global
     styles={(theme: any) => ({
       html: { fontSize: '18px' },
-      body: { margin: 0, backgroundColor: theme.colors.background },
+      body: { margin: 0, },
       '*': {
         boxSizing: 'border-box',
       },
