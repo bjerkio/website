@@ -16,7 +16,7 @@ export const PageSection: React.FC<PageSectionProps> = ({
     <Box
       sx={{
         backgroundColor,
-        py: ['98px', '194px'],
+        py: { base: '98px', md: '194px' },
         width: '100%',
       }}
     >

@@ -1,5 +1,12 @@
-import { Link } from 'next-theme-ui';
-import { Box, Container, Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Link,
+  Text,
+} from '@chakra-ui/react';
 import { ContactPerson } from '../components/about/contact-person';
 import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
@@ -91,13 +98,13 @@ const About: React.FC = () => {
               linkedIn={'https://www.linkedin.com/in/moripen/'}
             />
             <ContactPerson
-            name={'Simon Rugland'}
-            photoPath={'/persons/simon.jpg'}
-            phone={'+47 474 46 841'}
-            email={'js@bjerk.io'}
-            title={'Programvareutvikler'}
-            github={'https://github.com/simonrugland'}
-            linkedIn={'https://www.linkedin.com/in/simon-rugland/'}
+              name={'Simon Rugland'}
+              photoPath={'/persons/simon.jpg'}
+              phone={'+47 474 46 841'}
+              email={'js@bjerk.io'}
+              title={'Programvareutvikler'}
+              github={'https://github.com/simonrugland'}
+              linkedIn={'https://www.linkedin.com/in/simon-rugland/'}
             />
           </Flex>
 

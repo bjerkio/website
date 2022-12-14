@@ -1,4 +1,12 @@
-import { AspectRatio, Box, Flex, Grid, Image, Link, Text } from '@chakra-ui/react';
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Grid,
+  Image,
+  Link,
+  Text,
+} from '@chakra-ui/react';
 
 export interface ContactPersonProps {
   name: string;
@@ -28,9 +36,9 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
       }}
     >
       <Grid
+        templateColumns={['auto', '459px 459px', '459px, 459px']}
         sx={{
           display: 'flex',
-          gridTemplateColumns: ['auto', '459px 459px', '459px, 459px'],
         }}
       >
         <Box sx={{ width: '459px' }}>
@@ -48,18 +56,23 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             />
           </AspectRatio>
           <Grid
-            sx={{
-              gridTemplateRows: [
-                'auto',
-                '26px 21px 24px 24px 24px 24px',
-                '26px 21px 24px 24px 24px 24px',
-              ],
-            }}
+            templateRows={[
+              'auto',
+              '26px 21px 24px 24px 24px 24px',
+              '26px 21px 24px 24px 24px 24px',
+            ]}
           >
-            <Text sx={{ fontSize: 2, fontWeight: '600', mt: '20px', color:"black" }}>
+            <Text
+              sx={{
+                fontSize: 2,
+                fontWeight: '600',
+                mt: '20px',
+                color: 'black',
+              }}
+            >
               {name}
             </Text>
-            <Text variant="contact">{title}</Text>
+            <Text textStyle="contact">{title}</Text>
             <Link color="black" href={`tel:${phone}`}>
               {phone}
             </Link>
@@ -94,7 +107,6 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
                 rel="noopener noreferrer"
                 aria-label={`Github Profile for ${name}`}
                 sx={{
-
                   cursor: 'pointer',
                   mt: '-10px',
                   fontSize: 0,

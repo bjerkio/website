@@ -1,7 +1,7 @@
 import { FC, SVGProps } from 'react';
-import { ThemeUIStyleObject } from 'theme-ui';
+import { StyleConfig } from '@chakra-ui/theme-tools';
 
-type Props = ThemeUIStyleObject & SVGProps<SVGSVGElement>;
+type Props = StyleConfig & SVGProps<SVGSVGElement>;
 
 export const Cross: FC<Props> = () => {
   return (

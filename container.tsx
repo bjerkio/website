@@ -1,0 +1,25 @@
+import { defineStyleConfig } from '@chakra-ui/react';
+
+export const Container = defineStyleConfig({
+  variants: {
+    centered: {
+      margin: '0 auto',
+      m: 0,
+      p: 0,
+      backgroundSize: 'cover',
+    },
+    readable: {
+      backgroundSize: 'cover',
+      maxWidth: 950,
+    },
+    full: {
+      maxWidth: 1500,
+      p: 5,
+      //backgroundSize: 'cover',
+      //width: '100%',
+    },
+    header: {
+      maxWidth: 1500,
+    },
+  },
+});

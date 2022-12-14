@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Flex } from '@chakra-ui/react';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
@@ -18,13 +18,7 @@ export const Layout = ({ children }: Props) => (
   >
     <SEO />
     <Header />
-    <Flex
-      sx={{
-        alignItems: 'stretch',
-      }}
-    >
-      {children}
-    </Flex>
+    <Flex alignItems="stretch">{children}</Flex>
 
     <Footer />
   </Flex>

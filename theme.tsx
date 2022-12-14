@@ -1,34 +1,30 @@
-import { webTheme } from '@bjerk/brand';
-import { merge } from 'theme-ui';
 import {
   extendTheme,
   StyleFunctionProps,
   type ThemeConfig,
-} from "@chakra-ui/react";
-/**
- * Once values stabilize, they should be
- * considered to be moved to @bjerk/brand
- * to be consumeable by other projects.
- *
- * When possible, add some description why,
- * maybe even a reference to a issue / pr
- * in @bjerk/brand project.
- */
+} from '@chakra-ui/react';
+import { Container } from './container';
 
 const config: ThemeConfig = {
-  initialColorMode: "system",
+  initialColorMode: 'system',
   useSystemColorMode: true,
 };
 
-const theme = extendTheme ({
-  webTheme,
+const theme = extendTheme({
   config,
-  space: [0, 1, 8, 16, 24, 32, 48, 64, 96, 115],
-  /**
-   * Colors
-   *
-   * These are added, but not yet synchronized.
-   */
+  //[0, 1, 8, 16, 24, 32, 48, 64, 96, 115],
+  space: {
+    0: '0rem',
+    1: '0.0625rem',
+    2: '0.5rem',
+    3: '1rem',
+    4: '1.5rem',
+    5: '2rem',
+    6: '3rem',
+    7: '4rem',
+    8: '6rem',
+    9: '7rem',
+  },
   colors: {
     muted: '#95E0C8',
     green120: '#2E896C',
@@ -41,7 +37,8 @@ const theme = extendTheme ({
   },
   fonts: {
     body: 'Sora',
-    heading: 'inherit',
+    heading: 'Sora',
+    mono: 'Sora',
   },
   /**
    * We should add a few notable sizes here,
@@ -61,37 +58,20 @@ const theme = extendTheme ({
    *
    * Read more: https://github.com/bjerkio/brand/issues/9
    */
-  radii: [0, 4, 8, 100],
+  //[0, 4, 8, 100],
+  radii: {
+    0: '0em',
+    1: '0.25em',
+    2: '0.5em',
+    3: '6em',
+  },
+
   /**
    * These layouts are still being tested/played with
    * in the current design.
    *
    * Read more: https://github.com/bjerkio/brand/issues/8
    */
-  layout: {
-    centered: {
-      margin: '0 auto',
-      m: 0,
-      p: 0,
-      backgroundSize: 'cover',
-    },
-    readable: {
-      variant: 'centered',
-      maxWidth: 950,
-      backgroundSize: 'cover',
-      px: [6, 'unset'],
-    },
-    full: {
-      variant: 'centered',
-      maxWidth: 1500,
-      p: 5,
-      //backgroundSize: 'cover',
-      //width: '100%',
-    },
-    header: {
-      maxWidth: 1500,
-    },
-  },
 
   /**
    * Default button stylings doesn't fit the current
@@ -168,20 +148,33 @@ const theme = extendTheme ({
       },
     },
   },
-  fontSizes: [16, 18, 20, 24, 28, 32, 48],
+  //[16, 18, 20, 24, 28, 32, 48],
+  fontSizes: {
+    sm: 'clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem)',
+    base: 'clamp(1rem, 0.34vw + 0.91rem, 1.19rem)',
+    md: 'clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem)',
+    lg: 'clamp(1.56rem, 1vw + 1.31rem, 2.11rem)',
+    xl: 'clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem)',
+    xxl: 'clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem)',
+    xxxl: 'clamp(3.05rem, 3.54vw + 2.17rem, 5rem)',
+  },
+
   /**
    * Read more: https://github.com/bjerkio/brand/issues/7
    */
-  text: {
-    title: {
-      fontWeight: 600,
-      fontSize: [5, 6],
+  textStyles: {
+    caption: {
+      color: 'dark100',
+      fontWeight: 'semibold',
+      fontSize: 'xl',
     },
     titlenobold: {
+      color: 'dark100',
       fontWeight: 400,
       fontSize: [5, 6],
     },
     heading: {
+      color: 'dark100',
       fontWeight: 400,
       fontSize: 1,
     },
@@ -191,22 +184,27 @@ const theme = extendTheme ({
       fontSize: [0, 2],
     },
     subtitleblack: {
+      color: 'dark100',
       fontSize: 2,
       fontWeight: 600,
     },
     standard: {
+      color: 'dark100',
       fontSize: [2, 4],
       fontWeight: 400,
     },
     excerpt: {
+      color: 'dark100',
       fontWeight: 400,
       fontSize: [2, 5],
     },
     readmore: {
+      color: 'dark100',
       fontWeight: 400,
       fontSize: [0, 3],
     },
     contact: {
+      color: 'dark100',
       fontSize: 0,
     },
   },
@@ -224,8 +222,25 @@ const theme = extendTheme ({
     },
     a: {},
   },
-
-  breakpoints: ['68.75em', '104em'],
+  //['68.75em', '104em'],
+  breakpoints: {
+    sm: '30em',
+    md: '66em',
+    lg: '80em',
+    xl: '104em',
+    '2xl': '128em',
+  },
+  semanticTokens: {
+    colors: {
+      greentodark: {
+        default: 'green100',
+        _dark: 'dark100',
+      },
+    },
+  },
+  components: {
+    Container,
+  },
 });
 
 export default theme;

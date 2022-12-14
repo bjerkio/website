@@ -50,7 +50,7 @@ const Principles: React.FC = () => {
                 href={'https://agilemanifesto.org/iso/no/manifesto.html'}
                 target={'_blank'}
                 variant="primary"
-                sx={{textDecoration:"underline"}}
+                sx={{ textDecoration: 'underline' }}
               >
                 Les det smidige manifestetet
               </Link>

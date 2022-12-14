@@ -19,7 +19,7 @@ export const Footer: React.FC = () => (
             </Link>
           </Text>
         </Flex>
-        <Flex sx={{color:"green20"}}>© Bjerk 2022</Flex>
+        <Flex sx={{ color: 'green20' }}>© Bjerk 2022</Flex>
       </Flex>
     </Container>
   </Box>
