@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Flex } from 'theme-ui';
+import { Flex } from '@chakra-ui/react';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header';
