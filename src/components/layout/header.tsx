@@ -1,16 +1,17 @@
-import { Link, NavLink } from 'next-theme-ui';
+
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { Box, Container, Flex, IconButton } from 'theme-ui';
+import { Box, Container, Flex, IconButton, Link } from '@chakra-ui/react';
 import { Booking } from '../booking';
-import { Logo } from '../logo';
+import { Logo } from './header/logo';
 import { Cross } from './header/cross';
 import { Hamburger } from './header/hamburger';
+
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
   const isHome = pathname === '/';
-  const color = isHome ? 'green100' : 'green20';
+  const color = isHome ? 'greentodark' : 'green20';
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
@@ -46,6 +47,7 @@ export const Header: React.FC = () => {
               sx={{ width: '100px', height: '40.87px', visibility: 'hidden' }}
             />
             <IconButton
+              aria-label='cross'
               sx={{
                 width: '30px',
                 height: '30px',
@@ -95,24 +97,26 @@ export const Header: React.FC = () => {
               }}
             />
           </Link>
-          <NavLink
+          <Link
             href={'/about'}
             sx={{
               display: ['none', 'block'],
             }}
           >
             Om oss
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             href={'/principles'}
             sx={{
               display: ['none', 'block'],
             }}
           >
             Våre prinsipper
-          </NavLink>
+          </Link>
           <IconButton
+            aria-label='hamburger'
             sx={{
+              
               display: ['block', 'none'],
               ml: 'auto',
               width: '30px',
@@ -125,13 +129,14 @@ export const Header: React.FC = () => {
 
           <Box
             sx={{
-              marginLeft: 'auto',
+              ml: 'auto',
               pr: '20px',
               display: ['none', 'block'],
             }}
           >
             <Booking label={'Book et møte'}></Booking>
           </Box>
+
         </Flex>
       </Container>
     </Box>
