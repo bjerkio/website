@@ -11,7 +11,7 @@ import { Hamburger } from './header/hamburger';
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
   const isHome = pathname === '/';
-  const color = isHome ? 'greentodark' : 'green20';
+  const color = isHome ? 'green100' : 'green20';
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
