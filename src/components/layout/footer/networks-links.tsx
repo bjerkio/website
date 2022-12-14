@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Link } from 'theme-ui';
+import { Box, Flex, Link } from '@chakra-ui/react';
 import { SocialFacebook } from '../../illustrations/social-facebook';
 import { SocialGithub } from '../../illustrations/social-github';
 import { SocialLinkedin } from '../../illustrations/social-linkedin';
