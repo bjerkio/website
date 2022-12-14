@@ -1,5 +1,5 @@
 import { Link } from 'next-theme-ui';
-import { Box, Container, Flex, Grid, Heading, Paragraph, Text } from 'theme-ui';
+import { Box, Container, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { ContactPerson } from '../components/about/contact-person';
 import { BackgroundGraphic } from '../components/background-graphic';
 import { Layout } from '../components/layout/layout';
@@ -20,12 +20,12 @@ const About: React.FC = () => {
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
             tenker, jobber og kommuniserer på.
           </Heading>
-          <Paragraph variant="standard" sx={{ pb: 5 }}>
+          <Text variant="standard" sx={{ pb: 5 }}>
             For oss, er det viktigste vi gjør er å bidra til at hverdagen til
             mennesker blir bedre, at vi kan oppnå mer. Vi elsker å skape - og
             kombinasjonen av å få skape noe, som også har positiv påvirkning for
             de menneskene vi jobber med er det som motiverer oss.
-          </Paragraph>
+          </Text>
           <Box
             sx={{
               fontSize: [2, 4],
