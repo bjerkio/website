@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 
-export interface SocialGithubProps extends BoxProps {
+export interface SocialGithubProps {
   width?: number | string;
   height?: number | string;
 }
@@ -13,7 +13,6 @@ export const SocialGithub: React.FC<SocialGithubProps> = ({
 }) => (
   <Box
     as="svg"
-    // @ts-expect-error svg encoding
     xmlns="http://www.w3.org/2000/svg"
     width={String(width)}
     height={String(height)}

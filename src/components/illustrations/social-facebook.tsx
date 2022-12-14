@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 
-export interface SocialFacebookProps extends BoxProps {
+export interface SocialFacebookProps {
   width?: number | string;
   height?: number | string;
 }
@@ -13,7 +13,7 @@ export const SocialFacebook: React.FC<SocialFacebookProps> = ({
 }) => (
   <Box
     as="svg"
-    // @ts-expect-error svg encoding
+    
     xmlns="http://www.w3.org/2000/svg"
     width={String(width)}
     height={String(height)}
