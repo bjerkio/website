@@ -10,7 +10,7 @@ const Home = () => {
     <Layout>
       <Grid sx={{ width: '100%' }}>
         <PageSection backgroundColor="green">
-          <Container variant="readable">
+          <Container sx={{maxWidth:"950px", px: [6, 'unset']}}>
             <Grid sx={{ gap: 3 }}>
               <Heading variant="title">Vår lidenskap er å skape</Heading>
               <Text variant="standard">
