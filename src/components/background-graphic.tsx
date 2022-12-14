@@ -32,7 +32,7 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
           backgroundImage: graphicalAddition,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
-          display: ['none', 'none', 'block'],
+          display: ['none', 'none', 'none', 'block'],
           pointerEvents: 'none',
           width: '500px',
           height: '300px',
