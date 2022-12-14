@@ -1,4 +1,4 @@
-import { Box } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 
 export interface ReadableWithGraphicsProps {
   element?:
