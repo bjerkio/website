@@ -103,8 +103,9 @@ const theme = extendTheme({
     },
     titlenobold: {
       color: 'dark100',
-      fontWeight: 400,
+      fontWeight: 'normal',
       fontSize: 'xl',
+      lineHeight: "3.5rem"
     },
     heading: {
       color: 'dark100',
@@ -118,8 +119,8 @@ const theme = extendTheme({
     },
     subtitleblack: {
       color: 'dark100',
-      fontSize: 2,
-      fontWeight: 600,
+      fontSize: 'base',
+      fontWeight: 'semibold',
     },
     standard: {
       color: 'dark100',
@@ -128,17 +129,17 @@ const theme = extendTheme({
     },
     excerpt: {
       color: 'dark100',
-      fontWeight: 400,
+      fontWeight: 'normal',
       fontSize: [2, 5],
     },
     readmore: {
       color: 'dark100',
-      fontWeight: 400,
+      fontWeight: 'normal',
       fontSize: [0, 3],
     },
     contact: {
       color: 'dark100',
-      fontSize: 0,
+      fontSize: 'sm',
     },
   },
 
