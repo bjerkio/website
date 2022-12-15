@@ -36,7 +36,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
       }}
     >
       <Grid
-        templateColumns={['auto', '459px 459px', '459px, 459px']}
+        templateColumns={{base:'auto', md:'459px 459px'}}
         sx={{
           display: 'flex',
         }}
@@ -46,8 +46,6 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             <Image
               src={photoPath}
               sx={{
-                height: '100%',
-                width: '100%',
                 maxwidth: '459px',
                 maxheight: '527px',
                 objectFit: 'cover',
@@ -56,27 +54,26 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             />
           </AspectRatio>
           <Grid
-            templateRows={[
-              'auto',
-              '26px 21px 24px 24px 24px 24px',
-              '26px 21px 24px 24px 24px 24px',
-            ]}
+            templateRows={{
+              base:'auto',
+              md: '3rem 2rem 1.5rem 2rem 2rem 2rem',
+            }}
           >
             <Text
               sx={{
-                fontSize: 2,
-                fontWeight: '600',
+                fontSize: 'base',
+                fontWeight: 'semibold',
                 mt: '20px',
                 color: 'black',
               }}
             >
               {name}
             </Text>
-            <Text textStyle="contact">{title}</Text>
-            <Link color="black" href={`tel:${phone}`}>
+            <Text textStyle={{base:"contact"}}>{title}</Text>
+            <Link color="black" href={`tel:${phone}`} fontSize={{base:"base"}}>
               {phone}
             </Link>
-            <Link color="black" href={`mailto:${email}`} mt="-10px">
+            <Link color="black" href={`mailto:${email}`} fontSize={{base:"base"}}>
               {email}
             </Link>
             {linkedIn && (
@@ -87,13 +84,9 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
                 aria-label={`LinkedIn Profile for ${name}`}
                 sx={{
                   cursor: 'pointer',
-                  fontSize: 0,
+                  fontSize: {base:"base"},
                   color: 'blue100',
                   textDecoration: 'none',
-                  ':hover': {
-                    textDecoration: 'underline',
-                  },
-                  wordWrap: 'break-word',
                 }}
               >
                 Linkedin
@@ -108,14 +101,9 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
                 aria-label={`Github Profile for ${name}`}
                 sx={{
                   cursor: 'pointer',
-                  mt: '-10px',
-                  fontSize: 0,
+                  fontSize: {base:"base"},
                   color: 'blue100',
                   textDecoration: 'none',
-                  ':hover': {
-                    textDecoration: 'underline',
-                  },
-                  wordWrap: 'break-word',
                 }}
               >
                 Github
