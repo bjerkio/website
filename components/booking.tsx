@@ -1,10 +1,10 @@
 import React from 'react';
 import { openPopupWidget } from 'react-calendly';
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, ResponsiveValue } from '@chakra-ui/react';
 
 export interface BookingProps {
   label?: string;
-  variant?: string;
+  variant?: ResponsiveValue<string & {}>;
 }
 
 export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
@@ -14,17 +14,15 @@ export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
     <Box
       sx={{
         overflow: 'visible',
-        pb: [0, 3],
       }}
     >
       <Button
+        variant={variant}
         sx={{
           cursor: 'pointer',
-          fontFamily: 'body',
-          variant: 'heading',
           color: 'dark100',
-          p: 4,
-          backgroundColor: 'green20',
+          p: 5,
+          fontWeight: "normal",
           boxShadow:
             '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
           borderRadius: '30px',
