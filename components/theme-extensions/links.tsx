@@ -3,9 +3,8 @@ import { defineStyleConfig } from '@chakra-ui/react';
 export const Link = defineStyleConfig({
   variants: {
     primary: {
-      fontSize: [0, 4],
+      fontSize: 'md',
       color: 'blue100',
-      textDecoration: 'none',
       ':hover': {
         textDecoration: 'underline',
       },
