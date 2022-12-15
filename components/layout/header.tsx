@@ -39,11 +39,12 @@ export const Header: React.FC = () => {
       <Flex
         sx={{
           flexDirection: 'row',
-          display: { sm: 'none', base: 'none', md: 'flex' },
-          alignItems: 'center',
-          gap: 6,
+          display: { base: 'none', md: 'flex' },
+          justifyContent: 'space-between',
+          width: "100%"
         }}
       >
+        <Flex sx={{flexDirection:"row", gap: 6, alignItems:"center" }}>
         {logoInput}
         <Link href={'/about'} sx={{}}>
           Om oss
@@ -51,13 +52,21 @@ export const Header: React.FC = () => {
         <Link href={'/principles'} sx={{}}>
           Våre prinsipper
         </Link>
+        </Flex>
+        <Flex
+                  sx={{
+                    flexDirection: 'column',
+                  }}
+                >
+                  <Booking label={'Book et møte'} variant={{md: "primary"}}></Booking>
+                </Flex>
       </Flex>
       <Flex
         sx={{
           alignContent: 'space-between',
           flexDirection: 'row',
           width: '100%',
-          display: { sm: 'flex', base: 'flex', md: 'none', lg: 'none' },
+          display: { base: 'flex', md: 'none' },
         }}
       >
         <Link href={'/'}>{logoInput}</Link>
@@ -87,14 +96,14 @@ export const Header: React.FC = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                fontSize: 5,
-                m: 2,
+                fontSize: 'lg',
+                
               }}
             >
               <Flex
                 sx={{
                   flexDirection: 'column',
-                  gap: 2,
+                  gap: 3,
                   width: '100%',
                   alignItems: 'center',
                 }}
@@ -115,6 +124,7 @@ export const Header: React.FC = () => {
                   sx={{
                     flexDirection: 'column',
                     mt: 3,
+                    fontSize: "md",
                   }}
                 >
                   <Booking label={'Book et møte'}></Booking>
