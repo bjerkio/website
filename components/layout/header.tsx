@@ -45,11 +45,11 @@ export const Header: React.FC = () => {
         }}
       >
         <Flex sx={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
-          {logoInput}
-          <Link href={'/about'} sx={{}}>
+       <Link href={'/'}>{logoInput}</Link>
+          <Link href={'/about'} fontSize={{base:"base"}}>
             Om oss
           </Link>
-          <Link href={'/principles'} sx={{}}>
+          <Link href={'/principles'} fontSize={{md:"base"}}>
             Våre prinsipper
           </Link>
         </Flex>
