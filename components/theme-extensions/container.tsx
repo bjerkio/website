@@ -11,6 +11,7 @@ export const Container = defineStyleConfig({
     readable: {
       backgroundSize: 'cover',
       maxWidth: 950,
+      px: { base: 6, md: 0 }
     },
     full: {
       maxWidth: 1500,
