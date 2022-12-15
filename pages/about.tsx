@@ -23,11 +23,11 @@ const About: React.FC = () => {
         />
 
         <Container variant="readable">
-          <Heading variant="titlenobold" sx={{ pb: 5 }}>
+          <Text textStyle={{base:"titlenobold"}} >
             Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
             tenker, jobber og kommuniserer på.
-          </Heading>
-          <Text variant="standard" sx={{ pb: 5 }}>
+          </Text>
+          <Text textStyle={{base:"standard"}} sx={{ py: 5 }}>
             For oss, er det viktigste vi gjør er å bidra til at hverdagen til
             mennesker blir bedre, at vi kan oppnå mer. Vi elsker å skape - og
             kombinasjonen av å få skape noe, som også har positiv påvirkning for
@@ -39,7 +39,7 @@ const About: React.FC = () => {
               pb: '120px',
             }}
           >
-            <Link href={'/principles'} variant="primary">
+            <Link href={'/principles'} variant={{base: "primary"}}>
               Les mer om hvordan vi jobber
             </Link>
           </Box>
@@ -109,13 +109,13 @@ const About: React.FC = () => {
           </Flex>
 
           <Grid sx={{ gap: 1 }}>
-            <Text variant="standard" pb="15px">
-              Besøk oss i Myntgata 2, 0152 Oslo.
+            <Text textStyle={{base:"standard"}} pb="15px">
+              Besøk oss i Myntgata 2, 0152 Oslo
             </Text>
-            <Text variant="standard" sx={{ fontWeight: 600 }}>
+            <Text textStyle={{base:"standard"}} sx={{ fontWeight: 'semibold' }}>
               kontoret@bjerk.io
             </Text>
-            <Text variant="standard" sx={{ fontWeight: 600 }}>
+            <Text textStyle={{base:"standard"}} sx={{ fontWeight: 'semibold' }}>
               +47 22 12 05 12
             </Text>
           </Grid>
