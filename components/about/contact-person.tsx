@@ -36,7 +36,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
       }}
     >
       <Grid
-        templateColumns={{base:'auto', md:'459px 459px'}}
+        templateColumns={{ base: 'auto', md: '459px 459px' }}
         sx={{
           display: 'flex',
         }}
@@ -55,7 +55,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
           </AspectRatio>
           <Grid
             templateRows={{
-              base:'auto',
+              base: 'auto',
               md: '3rem 2rem 1.5rem 2rem 2rem 2rem',
             }}
           >
@@ -69,11 +69,19 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
             >
               {name}
             </Text>
-            <Text textStyle={{base:"contact"}}>{title}</Text>
-            <Link color="black" href={`tel:${phone}`} fontSize={{base:"base"}}>
+            <Text textStyle={{ base: 'contact' }}>{title}</Text>
+            <Link
+              color="black"
+              href={`tel:${phone}`}
+              fontSize={{ base: 'base' }}
+            >
               {phone}
             </Link>
-            <Link color="black" href={`mailto:${email}`} fontSize={{base:"base"}}>
+            <Link
+              color="black"
+              href={`mailto:${email}`}
+              fontSize={{ base: 'base' }}
+            >
               {email}
             </Link>
             {linkedIn && (
@@ -84,7 +92,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
                 aria-label={`LinkedIn Profile for ${name}`}
                 sx={{
                   cursor: 'pointer',
-                  fontSize: {base:"base"},
+                  fontSize: { base: 'base' },
                   color: 'blue100',
                   textDecoration: 'none',
                 }}
@@ -101,7 +109,7 @@ export const ContactPerson: React.FC<ContactPersonProps> = ({
                 aria-label={`Github Profile for ${name}`}
                 sx={{
                   cursor: 'pointer',
-                  fontSize: {base:"base"},
+                  fontSize: { base: 'base' },
                   color: 'blue100',
                   textDecoration: 'none',
                 }}

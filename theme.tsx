@@ -105,7 +105,7 @@ const theme = extendTheme({
       color: 'dark100',
       fontWeight: 'normal',
       fontSize: 'xl',
-      lineHeight: "3.5rem"
+      lineHeight: '3.5rem',
     },
     heading: {
       color: 'dark100',
