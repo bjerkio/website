@@ -41,7 +41,6 @@ export const Link = defineStyleConfig({
         },
         footerLink: {
           color: 'blue40',
-          fontSize: [0, 2],
           textDecoration: 'none',
           ':hover': {
             textDecoration: 'underline',
