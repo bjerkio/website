@@ -37,9 +37,11 @@ const Home = () => (
               width: '80%',
             }}
           >
-            <Text textStyle={{ base: 'subtitle' }}>Noen av våre seneste kunder</Text>
+            <Text textStyle={{ base: 'subtitle' }}>
+              Noen av våre seneste kunder
+            </Text>
             <Grid
-              templateColumns={{ base:'1fr 1fr', md:'1fr 1fr 2fr'}}
+              templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 2fr' }}
               gap={[3, 5]}
               sx={{
                 justifyItems: 'Left',

@@ -81,16 +81,15 @@ const theme = extendTheme({
    * Read more: https://github.com/bjerkio/brand/issues/10
    */
 
-  
   //[13, 16, 20, 24, 32, 40, 48],
   fontSizes: {
-    sm: "clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)",
-    base: "clamp(1rem, 0.45vw + 0.89rem, 1.25rem)",
-    md: "clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem)",
-    lg: "clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem)",
-    xl: "clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem)",
-    xxl: "clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem)",
-    xxxl: "clamp(3.05rem, 4.02vw + 2.05rem, 5.26rem)"
+    sm: 'clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)',
+    base: 'clamp(1rem, 0.45vw + 0.89rem, 1.25rem)',
+    md: 'clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem)',
+    lg: 'clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem)',
+    xl: 'clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem)',
+    xxl: 'clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem)',
+    xxxl: 'clamp(3.05rem, 4.02vw + 2.05rem, 5.26rem)',
   },
 
   /**
@@ -105,7 +104,7 @@ const theme = extendTheme({
     titlenobold: {
       color: 'dark100',
       fontWeight: 400,
-      fontSize: "xl"
+      fontSize: 'xl',
     },
     heading: {
       color: 'dark100',
@@ -176,17 +175,16 @@ const theme = extendTheme({
     Container,
     Link,
     Button: {
-      variants:{
+      variants: {
         primary: {
           fontFamily: 'body',
-          fontSize: {md: "base"},
+          fontSize: { md: 'base' },
           color: 'dark100',
           p: 5,
           backgroundColor: 'transparent',
           boxShadow:
             '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
           borderRadius: '30px',
-          
         },
         secondary: {
           fontFamily: 'body',
@@ -197,9 +195,9 @@ const theme = extendTheme({
           borderRadius: '30px',
           width: 'fit-content',
         },
+      },
     },
   },
-}
 });
 
 export default theme;

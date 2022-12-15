@@ -41,25 +41,25 @@ export const Header: React.FC = () => {
           flexDirection: 'row',
           display: { base: 'none', md: 'flex' },
           justifyContent: 'space-between',
-          width: "100%"
+          width: '100%',
         }}
       >
-        <Flex sx={{flexDirection:"row", gap: 6, alignItems:"center" }}>
-        {logoInput}
-        <Link href={'/about'} sx={{}}>
-          Om oss
-        </Link>
-        <Link href={'/principles'} sx={{}}>
-          Våre prinsipper
-        </Link>
+        <Flex sx={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
+          {logoInput}
+          <Link href={'/about'} sx={{}}>
+            Om oss
+          </Link>
+          <Link href={'/principles'} sx={{}}>
+            Våre prinsipper
+          </Link>
         </Flex>
         <Flex
-                  sx={{
-                    flexDirection: 'column',
-                  }}
-                >
-                  <Booking label={'Book et møte'} variant={{md: "primary"}}></Booking>
-                </Flex>
+          sx={{
+            flexDirection: 'column',
+          }}
+        >
+          <Booking label={'Book et møte'} variant={{ md: 'primary' }}></Booking>
+        </Flex>
       </Flex>
       <Flex
         sx={{
@@ -97,7 +97,6 @@ export const Header: React.FC = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 fontSize: 'lg',
-                
               }}
             >
               <Flex
@@ -124,7 +123,7 @@ export const Header: React.FC = () => {
                   sx={{
                     flexDirection: 'column',
                     mt: 3,
-                    fontSize: "md",
+                    fontSize: 'md',
                   }}
                 >
                   <Booking label={'Book et møte'}></Booking>
