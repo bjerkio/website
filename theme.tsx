@@ -3,7 +3,8 @@ import {
   StyleFunctionProps,
   type ThemeConfig,
 } from '@chakra-ui/react';
-import { Container } from './container';
+import { Container } from './components/theme-extensions/container';
+import { Link } from './components/theme-extensions/links';
 
 const config: ThemeConfig = {
   initialColorMode: 'system',
@@ -101,62 +102,16 @@ const theme = extendTheme({
       width: 'fit-content',
     },
   },
-  links: {
-    primary: {
-      fontSize: [0, 4],
-      color: 'blue100',
-      textDecoration: 'none',
-      ':hover': {
-        textDecoration: 'underline',
-      },
-      wordWrap: 'break-word',
-    },
-    buttonLink: {
-      variant: 'subtitle',
-      borderRadius: 1,
-      color: 'dark100',
-      width: 'fit-content',
-      textDecoration: 'none',
-    },
-    nav: {
-      fontWeight: 'normal',
-      textDecoration: 'none',
-      color: 'dark100',
-      ':hover': {
-        color: 'blue100',
-        textDecoration: 'underline',
-      },
-    },
-    emphasis: {
-      variant: 'links.primary',
-      fontSize: [0, 3],
-    },
-    socials: {
-      textDecoration: 'none',
-    },
-    mobileNav: {
-      color: 'white',
-      textDecoration: 'none',
-      fontSize: 5,
-    },
-    footerLink: {
-      color: 'blue40',
-      fontSize: [0, 2],
-      textDecoration: 'none',
-      ':hover': {
-        textDecoration: 'underline',
-      },
-    },
-  },
-  //[16, 18, 20, 24, 28, 32, 48],
+  
+  //[13, 16, 20, 24, 32, 40, 48],
   fontSizes: {
-    sm: 'clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem)',
-    base: 'clamp(1rem, 0.34vw + 0.91rem, 1.19rem)',
-    md: 'clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem)',
-    lg: 'clamp(1.56rem, 1vw + 1.31rem, 2.11rem)',
-    xl: 'clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem)',
-    xxl: 'clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem)',
-    xxxl: 'clamp(3.05rem, 3.54vw + 2.17rem, 5rem)',
+    sm: "clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)",
+    base: "clamp(1rem, 0.45vw + 0.89rem, 1.25rem)",
+    md: "clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem)",
+    lg: "clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem)",
+    xl: "clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem)",
+    xxl: "clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem)",
+    xxxl: "clamp(3.05rem, 4.02vw + 2.05rem, 5.26rem)"
   },
 
   /**
@@ -171,7 +126,7 @@ const theme = extendTheme({
     titlenobold: {
       color: 'dark100',
       fontWeight: 400,
-      fontSize: [5, 6],
+      fontSize: "xl"
     },
     heading: {
       color: 'dark100',
@@ -180,8 +135,8 @@ const theme = extendTheme({
     },
     subtitle: {
       color: 'blue100',
-      fontWeight: 600,
-      fontSize: [0, 2],
+      fontWeight: 'semibold',
+      fontSize: 'base',
     },
     subtitleblack: {
       color: 'dark100',
@@ -190,8 +145,8 @@ const theme = extendTheme({
     },
     standard: {
       color: 'dark100',
-      fontSize: [2, 4],
-      fontWeight: 400,
+      fontSize: 'md',
+      fontWeight: 'normal',
     },
     excerpt: {
       color: 'dark100',
@@ -240,6 +195,7 @@ const theme = extendTheme({
   },
   components: {
     Container,
+    Link
   },
 });
 
