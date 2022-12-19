@@ -73,8 +73,8 @@ export const theme = merge(webTheme, {
       variant: 'centered',
       maxWidth: 1500,
       p: 5,
-      //backgroundSize: 'cover',
-      //width: '100%',
+      // backgroundSize: 'cover',
+      // width: '100%',
     },
     header: {
       maxWidth: 1500,
