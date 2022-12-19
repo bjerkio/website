@@ -1,10 +1,9 @@
-import React from 'react';
 import { Flex } from 'theme-ui';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header';
 
-export const Layout: React.FC = ({ children }) => (
+export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => (
   <Flex
     sx={{
       flexDirection: 'column',

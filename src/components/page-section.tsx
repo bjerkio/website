@@ -4,10 +4,9 @@ export interface PageSectionProps {
   backgroundColor?: 'green';
 }
 
-export const PageSection: React.FC<PageSectionProps> = ({
-  children,
-  backgroundColor: backgroundColorProp,
-}) => {
+export const PageSection: React.FC<
+  React.PropsWithChildren<PageSectionProps>
+> = ({ children, backgroundColor: backgroundColorProp }) => {
   const backgroundColor =
     backgroundColorProp === 'green' ? 'green100' : 'green20';
   return (
