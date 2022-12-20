@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import theme from '../theme';
 import { ChakraProvider } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 export interface AppRenderProps {
   pageProps: object;
@@ -10,8 +11,11 @@ export interface AppRenderProps {
 }
 import type { NextComponentType, NextPageContext } from 'next';
 import type { NextRouter } from 'next/router';
-export default function App({ Component, pageProps }: AppProps) {
-  <ChakraProvider theme={theme}>
-  <Component {...pageProps} />
-  </ChakraProvider> 
+
+export default function App({ Component, pageProps }: AppRenderProps) {
+  return (
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  );
 }
