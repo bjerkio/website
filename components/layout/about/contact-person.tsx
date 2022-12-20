@@ -45,6 +45,7 @@ import {
             <AspectRatio ratio={459 / 527}>
               <Image
                 src={photoPath}
+                alt={"Bilde av Bjerkansatt"}
                 sx={{
                   maxwidth: '459px',
                   maxheight: '527px',
