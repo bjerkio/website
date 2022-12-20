@@ -47,7 +47,7 @@ import {
         fontWeight: 'semibold',
         fontSize: 'xl',
       },
-      titlenobold: {
+      titleNoBold: {
         color: 'dark100',
         fontWeight: 'normal',
         fontSize: 'xl',
@@ -58,7 +58,7 @@ import {
         fontWeight: 'semibold',
         fontSize: 'base',
       },
-      subtitleblack: {
+      subtitleBlack: {
         color: 'dark100',
         fontSize: 'base',
         fontWeight: 'semibold',
