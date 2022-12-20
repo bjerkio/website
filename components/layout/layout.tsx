@@ -4,11 +4,7 @@ import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header/header';
 
-type Props = {
-  children?: ReactNode;
-};
-
-export const Layout = ({ children }: Props) => (
+export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
   <Flex
     sx={{
       flexDirection: 'column',
