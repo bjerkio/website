@@ -10,6 +10,16 @@ import {
   
   const theme = extendTheme({
     config,
+    colors: {
+      muted: '#95E0C8',
+      green120: '#2E896C',
+      foreground: '#ffffff',
+      green100: '#90F494',
+      blue100: '#2A3BCC',
+      dark100: '#0F2040',
+      green20: '#EDF9F1',
+      blue40: '#8FA1FF',
+    },
     fontSizes: {
       sm: 'clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)',
       base: 'clamp(1rem, 0.45vw + 0.89rem, 1.25rem)',
@@ -57,6 +67,12 @@ import {
       lg: '80em',
       xl: '104em',
       '2xl': '128em',
+    },
+    radii: {
+      0: '0em',
+      1: '0.25em',
+      2: '0.5em',
+      3: '6em',
     },
     semanticTokens: {
       colors: {
