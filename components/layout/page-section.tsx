@@ -3,10 +3,9 @@ import { Box } from '@chakra-ui/react';
 
 export interface PageSectionProps {
   backgroundColor?: 'green';
-  children?: ReactNode;
 }
 
-export const PageSection: React.FC<PageSectionProps> = ({
+export const PageSection: React.FC<PropsWithChildren<PageSectionProps>> = ({
   children,
   backgroundColor: backgroundColorProp,
 }) => {
