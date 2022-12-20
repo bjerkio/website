@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import { Box } from '@chakra-ui/react';
 
 export interface PageSectionProps {

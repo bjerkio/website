@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import { Flex } from '@chakra-ui/react';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
