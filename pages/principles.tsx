@@ -11,12 +11,12 @@ const Principles: React.FC = () => {
         <BackgroundGraphic
           element="element5"
           positionx="right"
-          positiony="580px"
+          positiony="540px"
         />
         <BackgroundGraphic
           element="element4"
           positionx="left"
-          positiony="1725px"
+          positiony="1675px"
         />
         <Container variant="readable">
           <Grid gap={9}>
@@ -94,7 +94,7 @@ const Principles: React.FC = () => {
               </Text>
             </Grid>
 
-            <Text textStyle={{ base: 'titlenobold' }}>
+            <Text textStyle={{ base: 'titleNoBold' }}>
               Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.
             </Text>
 
