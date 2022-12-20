@@ -2,6 +2,7 @@ import { Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
 import { BackgroundGraphic } from '../components/layout/background-graphic';
 import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/layout/page-section';
+import NextLink from 'next/link';
 
 const Principles: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const Principles: React.FC = () => {
                 med produkter og tjenester. Vi er, som mange andre i bransjen,
                 opptatt av{' '}
                 <Link
+                  as={NextLink}
                   href={'https://agilemanifesto.org/iso/no/manifesto.html'}
                   target={'_blank'}
                   color="dark100"
@@ -47,6 +49,7 @@ const Principles: React.FC = () => {
               </Text>
 
               <Link
+                as={NextLink}
                 href={'https://agilemanifesto.org/iso/no/manifesto.html'}
                 target={'_blank'}
                 variant={{base: "primary"}}
@@ -67,6 +70,7 @@ const Principles: React.FC = () => {
                 betydelig bedre programvare.
               </Text>
               <Link
+                as={NextLink}
                 href={'https://github.com/bjerkio'}
                 target={'_blank'}
                 variant="primary"

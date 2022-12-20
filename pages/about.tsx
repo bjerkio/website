@@ -7,10 +7,11 @@ import {
     Link,
     Text,
   } from '@chakra-ui/react';
-  import { ContactPerson } from '../components/layout/about/contact-person';
-  import { BackgroundGraphic } from '../components/layout/background-graphic';
-  import { Layout } from '../components/layout/layout';
-  import { PageSection } from '../components/layout/page-section';
+import { ContactPerson } from '../components/layout/about/contact-person';
+import { BackgroundGraphic } from '../components/layout/background-graphic';
+import { Layout } from '../components/layout/layout';
+import { PageSection } from '../components/layout/page-section';
+import NextLink from 'next/link'; 
   
 const About: React.FC = () => {
     return (
@@ -39,7 +40,10 @@ const About: React.FC = () => {
                 pb: 8,
               }}
             >
-              <Link href={'/principles'} variant={{ base: 'primary' }}>
+              <Link 
+              as={NextLink}
+              href={'/principles'} 
+              variant={{ base: 'primary' }}>
                 Les mer om hvordan vi jobber
               </Link>
             </Box>

@@ -7,6 +7,7 @@ import {
     Link,
     Text,
   } from '@chakra-ui/react';
+  import NextLink from 'next/link';
   
   export interface ContactPersonProps {
     name: string;
@@ -72,6 +73,7 @@ import {
               </Text>
               <Text textStyle={{ base: 'contact' }}>{title}</Text>
               <Link
+                as={NextLink}
                 color="black"
                 href={`tel:${phone}`}
                 fontSize={{ base: 'base' }}
@@ -79,6 +81,7 @@ import {
                 {phone}
               </Link>
               <Link
+                as={NextLink}
                 color="black"
                 href={`mailto:${email}`}
                 fontSize={{ base: 'base' }}
@@ -87,6 +90,7 @@ import {
               </Link>
               {linkedIn && (
                 <Link
+                  as={NextLink}
                   href={linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -103,6 +107,7 @@ import {
               )}
               {github && (
                 <Link
+                  as={NextLink}
                   variant="socials"
                   href={github}
                   target="_blank"

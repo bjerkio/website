@@ -17,6 +17,7 @@ import {
 // import { Booking } from '../../booking';
 import { Logo } from './logo';
 import { Hamburger } from './hamburger';
+import NextLink from 'next/link';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
@@ -44,8 +45,12 @@ export const Header: React.FC = () => {
         }}
       >
         <Flex sx={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
-          <Link href={'/'}>{logoInput}</Link>
+          <Link 
+          as={NextLink}
+          href={'/'}>{logoInput}
+          </Link>
           <Link
+            as={NextLink}
             href={'/about'}
             fontSize={{ md: 'base' }}
             variant={{ md: 'nav' }}
@@ -53,6 +58,7 @@ export const Header: React.FC = () => {
             Om oss
           </Link>
           <Link
+            as={NextLink}
             href={'/principles'}
             fontSize={{ md: 'base' }}
             variant={{ md: 'nav' }}
@@ -76,7 +82,10 @@ export const Header: React.FC = () => {
           display: { base: 'flex', md: 'none' },
         }}
       >
-        <Link href={'/'}>{logoInput}</Link>
+        <Link
+         as={NextLink}
+         href={'/'}>{logoInput}
+         </Link>
 
         <IconButton
           variant="link"
@@ -115,12 +124,14 @@ export const Header: React.FC = () => {
                 }}
               >
                 <Link
+                  as={NextLink}
                   href="/about"
                   sx={{ color: 'green20', textDecoration: 'none' }}
                 >
                   Om oss
                 </Link>
                 <Link
+                  as={NextLink}
                   href="/principles"
                   sx={{ color: 'green20', textDecoration: 'none' }}
                 >

@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Link, Text } from '@chakra-ui/react';
+import NextLink from 'next/link'
 
 export const Footer: React.FC = () => (
   <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto', p: '30px' }}>
@@ -15,6 +16,7 @@ export const Footer: React.FC = () => (
           <Text color="green20">
             Kontakt oss på{' '}
             <Link
+              as={NextLink}
               href={'mailto:kontoret@bjerk.io'}
               variant={{ base: 'footerLink' }}
             >
