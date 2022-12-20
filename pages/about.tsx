@@ -19,7 +19,7 @@ const About: React.FC = () => {
           <BackgroundGraphic
             element="element2"
             positionx="left"
-            positiony="1040px"
+            positiony="970px"
           />
   
           <Container variant="readable">
