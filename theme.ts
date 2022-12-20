@@ -66,6 +66,31 @@ import {
         },
       },
     },
+    components: {
+      Button: {
+        variants: {
+          primary: {
+            fontFamily: 'body',
+            fontSize: { md: 'base' },
+            color: 'dark100',
+            p: 5,
+            backgroundColor: 'transparent',
+            boxShadow:
+              '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
+            borderRadius: '30px',
+          },
+          secondary: {
+            fontFamily: 'body',
+            variant: 'heading',
+            color: 'dark100',
+            p: 3,
+            backgroundColor: 'green20',
+            borderRadius: '30px',
+            width: 'fit-content',
+          },
+        },
+      },
+    }
   });
 
   export default theme;
