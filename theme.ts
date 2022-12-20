@@ -2,14 +2,21 @@ import {
     extendTheme,
     type ThemeConfig,
   } from '@chakra-ui/react';
-  
+import { Container } from './components/theme-extensions/container';
+import { Link } from './components/theme-extensions/links';
+
   const config: ThemeConfig = {
     initialColorMode: 'system',
     useSystemColorMode: true,
   };
-  
+
   const theme = extendTheme({
     config,
+    fonts:{
+      heading: 'Sora',
+      body: 'Sora',
+      mono: 'Sora'
+    },
     space: {
       0: '0rem',
       1: '0.0625rem',
@@ -95,6 +102,8 @@ import {
       },
     },
     components: {
+      Container,
+      Link,
       Button: {
         variants: {
           primary: {
@@ -118,7 +127,7 @@ import {
           },
         },
       },
-    }
+    },
   });
 
   export default theme;
