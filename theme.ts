@@ -2,7 +2,10 @@ import {
     extendTheme,
     type ThemeConfig,
   } from '@chakra-ui/react';
-  
+import { Container } from './components/theme-extensions/container';
+import { Link } from './components/theme-extensions/links';
+
+
   const config: ThemeConfig = {
     initialColorMode: 'system',
     useSystemColorMode: true,
@@ -95,6 +98,8 @@ import {
       },
     },
     components: {
+      Container,
+      Link,
       Button: {
         variants: {
           primary: {
