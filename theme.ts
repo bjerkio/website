@@ -10,7 +10,6 @@ import {
   
   const theme = extendTheme({
     config,
-
     fontSizes: {
       sm: 'clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)',
       base: 'clamp(1rem, 0.45vw + 0.89rem, 1.25rem)',
@@ -51,6 +50,13 @@ import {
         color: 'dark100',
         fontSize: 'sm',
       },
+    },
+    breakpoints: {
+      sm: '30em',
+      md: '66em',
+      lg: '80em',
+      xl: '104em',
+      '2xl': '128em',
     },
   });
 
