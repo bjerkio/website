@@ -58,6 +58,14 @@ import {
       xl: '104em',
       '2xl': '128em',
     },
+    semanticTokens: {
+      colors: {
+        greentodark: {
+          default: 'green100',
+          _dark: 'dark100',
+        },
+      },
+    },
   });
 
   export default theme;
