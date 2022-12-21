@@ -18,6 +18,7 @@ import {
 import { Logo } from './logo';
 import { Hamburger } from './hamburger';
 import NextLink from 'next/link';
+import { Booking } from './booking';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
@@ -71,7 +72,7 @@ export const Header: React.FC = () => {
             flexDirection: 'column',
           }}
         >
-          
+          <Booking label={'Book et møte'} variant={{ md: 'primary' }}/>
         </Flex>
       </Flex>
       <Flex
@@ -144,6 +145,7 @@ export const Header: React.FC = () => {
                     fontSize: 'md',
                   }}
                 >
+                  <Booking label={'Book et møte'}/>
                 </Flex>
               </Flex>
             </Flex>
