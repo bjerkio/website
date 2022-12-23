@@ -1,7 +1,8 @@
-import { Container, Grid, Heading, Link, Paragraph } from 'theme-ui';
-import { BackgroundGraphic } from '../components/background-graphic';
+import { Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
+import { BackgroundGraphic } from '../components/layout/background-graphic';
 import { Layout } from '../components/layout/layout';
-import { PageSection } from '../components/page-section';
+import { PageSection } from '../components/layout/page-section';
+import NextLink from 'next/link';
 
 const Principles: React.FC = () => {
   return (
@@ -10,102 +11,110 @@ const Principles: React.FC = () => {
         <BackgroundGraphic
           element="element5"
           positionx="right"
-          positiony="580px"
+          positiony="540px"
         />
         <BackgroundGraphic
           element="element4"
           positionx="left"
-          positiony="1725px"
+          positiony="1675px"
         />
         <Container variant="readable">
           <Grid gap={9}>
             <Grid gap={5}>
-              <Paragraph variant="titlenobold">
+              <Text textStyle={{ base: 'titleNoBold' }}>
                 Kompetanse og teknologi, kombinert med et brukervennlig design,
                 er viktig for å lykkes
-              </Paragraph>
-              <Paragraph variant="standard">
+              </Text>
+              <Text textStyle={{ base: 'standard' }}>
                 Helt siden vi startet i 2009 har vi lært av hvordan man lykkes
                 med produkter og tjenester. Vi er, som mange andre i bransjen,
                 opptatt av{' '}
                 <Link
+                  as={NextLink}
                   href={'https://agilemanifesto.org/iso/no/manifesto.html'}
                   target={'_blank'}
-                  color="black"
-                  sx={{ textDecoration: 'underline' }}
+                  color="dark100"
+                  textDecorationLine="underline"
                 >
                   det smidige manifestet
                 </Link>
                 , og det er nok prinsippene rundt samarbeid som står oss nærest.
-              </Paragraph>
+              </Text>
 
-              <Paragraph variant="standard">
+              <Text textStyle={{ base: 'standard' }}>
                 Vi jobber best under forutsetninger hvor det lages minst og
                 flest mulig prosjekter, som skaper verdi. Det handler om å
                 bevise vår verdi, og ha insentiver som skaper et godt samarbeid
                 og driver frem det beste i oss.
-              </Paragraph>
+              </Text>
 
               <Link
+                as={NextLink}
                 href={'https://agilemanifesto.org/iso/no/manifesto.html'}
                 target={'_blank'}
-                variant="primary"
+                variant={{base: "primary"}}
+                textDecorationLine="underline"
+                fontSize={{base: 'base'}}
               >
                 Les det smidige manifestetet
               </Link>
             </Grid>
 
             <Grid>
-              <Paragraph variant="subtitleblack">Åpen kildekode</Paragraph>
-              <Paragraph variant="standard">
+              <Text textStyle={{ base: 'subtitleBlack' }}>Åpen kildekode</Text>
+              <Text textStyle={{ base: 'standard' }}>
                 Ved å dele erfaringer, diskutere og arbeide åpent mener vi at
                 teknologi blir bedre. Derfor ligger Bjerk på listen over verdens
                 største selskaper på åpen kildekode. For deg som kunde betyr det
                 at du indirekte bidrar til å skape et bedre samfunn, men også
                 betydelig bedre programvare.
-              </Paragraph>
+              </Text>
               <Link
+                as={NextLink}
                 href={'https://github.com/bjerkio'}
                 target={'_blank'}
                 variant="primary"
+                textDecorationLine="underline"
+                mt={2}
+                fontSize={{base: 'base'}}
               >
                 Sjekk vår Github-profil
               </Link>
             </Grid>
 
             <Grid>
-              <Heading variant="subtitleblack">
+              <Text textStyle={{ base: 'subtitleBlack' }}>
                 Lære og justere kontinuerlig
-              </Heading>
-              <Paragraph variant="standard">
+              </Text>
+              <Text textStyle={{ base: 'standard' }}>
                 En viktig del av reisen er å gjøre feil, lære, reflektere og
                 justere. For å kunne forbedre og forenkle hvordan mennesker
                 tenker, jobber, lærer og kommuniserer, må vi akseptere at veien
                 er ikke gått opp før vi begynner. Den blir til mens vi går.
-              </Paragraph>
+              </Text>
             </Grid>
 
-            <Paragraph variant="titlenobold">
+            <Text textStyle={{ base: 'titleNoBold' }}>
               Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.
-            </Paragraph>
+            </Text>
 
             <Grid>
-              <Heading variant="subtitleblack">
+              <Text textStyle={{ base: 'subtitleBlack' }}>
                 Åpen og gjennomsiktig prosess
-              </Heading>
-              <Paragraph variant="standard">
+              </Text>
+              <Text textStyle={{ base: 'standard' }}>
                 Vi mener det er helt essensielt at vi samarbeider, og at ting
                 skjer i det åpne. I praksis betyr det at vi inviterer gjerne
                 våre kunder inn der vi jobber; (eksempelvis, Slack og Github).
-              </Paragraph>
-              <Paragraph variant="standard">
+              </Text>
+              <Text textStyle={{ base: 'standard' }}>
                 Det skal være synlig når noe skjer, bedre blir beslutningene når
                 de taes løpende og med mest mulig kontekst.
-              </Paragraph>
-              <Paragraph variant="standard">
+              </Text>
+              <Text textStyle={{ base: 'standard' }}>
                 La oss unngå barriærer, og all den frustrasjonen som kommer med
                 de.
-              </Paragraph>
+              </Text>
             </Grid>
           </Grid>
         </Container>

@@ -1,10 +1,11 @@
-import { Box } from 'theme-ui';
+import { PropsWithChildren, ReactNode } from 'react';
+import { Box } from '@chakra-ui/react';
 
 export interface PageSectionProps {
   backgroundColor?: 'green';
 }
 
-export const PageSection: React.FC<PageSectionProps> = ({
+export const PageSection: React.FC<PropsWithChildren<PageSectionProps>> = ({
   children,
   backgroundColor: backgroundColorProp,
 }) => {
@@ -14,7 +15,7 @@ export const PageSection: React.FC<PageSectionProps> = ({
     <Box
       sx={{
         backgroundColor,
-        py: ['98px', '194px'],
+        py: { base: '98px', md: '194px' },
         width: '100%',
       }}
     >

@@ -1,4 +1,4 @@
-import { Box } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 
 export interface ReadableWithGraphicsProps {
   element?:
@@ -32,7 +32,13 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
           backgroundImage: graphicalAddition,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
-          display: ['none', 'none', 'block'],
+          display: {
+            base: 'none',
+            sm: 'none',
+            md: 'none',
+            lg: 'none',
+            xl: 'block',
+          },
           pointerEvents: 'none',
           width: '500px',
           height: '300px',

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Flex } from 'theme-ui';
+import { PropsWithChildren, ReactNode } from 'react';
+import { Flex } from '@chakra-ui/react';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
-import { Header } from './header';
+import { Header } from './header/header';
 
-export const Layout: React.FC = ({ children }) => (
+export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
   <Flex
     sx={{
       flexDirection: 'column',
@@ -14,13 +14,7 @@ export const Layout: React.FC = ({ children }) => (
   >
     <SEO />
     <Header />
-    <Flex
-      sx={{
-        alignItems: 'stretch',
-      }}
-    >
-      {children}
-    </Flex>
+    <Flex alignItems="stretch">{children}</Flex>
 
     <Footer />
   </Flex>
