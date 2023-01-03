@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode } from 'react';
 import { Box } from '@chakra-ui/react';
+import React from 'react';
 
 export interface PageSectionProps {
   backgroundColor?: 'green';

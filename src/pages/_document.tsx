@@ -7,6 +7,7 @@ import NextDocument, {
   DocumentContext,
 } from 'next/document';
 import theme from '../theme';
+import React from 'react';
 
 export default class Document extends NextDocument {
   static getInitialProps(ctx: DocumentContext) {

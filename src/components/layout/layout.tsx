@@ -3,6 +3,7 @@ import { Flex } from '@chakra-ui/react';
 import { SEO } from '../seo';
 import { Footer } from './footer/footer';
 import { Header } from './header/header';
+import React from 'react';
 
 export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
   <Flex

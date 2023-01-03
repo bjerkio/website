@@ -1,5 +1,6 @@
 import { Box, Container, Flex, Link, Text } from '@chakra-ui/react';
 import NextLink from 'next/link'
+import React from 'react';
 
 export const Footer: React.FC = () => (
   <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto', p: '30px' }}>

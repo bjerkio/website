@@ -11,6 +11,7 @@ import { BackgroundGraphic } from '../components/layout/background-graphic';
 import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/layout/page-section';
 import NextLink from 'next/link';
+import React from 'react';
 
 const Home = () => (
   <Layout>
