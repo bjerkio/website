@@ -145,7 +145,7 @@ export const Header: React.FC = () => {
                     fontSize: 'md',
                   }}
                 >
-                  <Booking label={'Book et møte'}/>
+                  <Booking label={'Book et møte'} variant="secondary"/>
                 </Flex>
               </Flex>
             </Flex>
