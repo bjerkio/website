@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import React from 'react';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React from "react";
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -18,22 +18,22 @@ export const SEO: React.FC<SEOProps> = ({
 
   // TODO: add good defaults for title, description and image
   const seo = {
-    title: title || 'Bjerk',
-    description: description || 'Bjerk sin nettside',
-    image: `${basePath}/${image || ''}`,
+    title: title || "Bjerk",
+    description: description || "Bjerk sin nettside",
+    image: `${basePath}/${image || ""}`,
     url: `${basePath}${pathname}`,
   };
 
   const orgSchema = schema || {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    url: 'https://bjerk.io',
-    name: 'Bjerk',
-    logo: 'https://bjerk.io/images/logo.svg',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://bjerk.io",
+    name: "Bjerk",
+    logo: "https://bjerk.io/images/logo.svg",
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+4722120512',
-      contactType: 'Main phone number',
+      "@type": "ContactPoint",
+      telephone: "+4722120512",
+      contactType: "Main phone number",
     },
   };
 

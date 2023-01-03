@@ -1,14 +1,14 @@
-import { Box } from '@chakra-ui/react';
+import { Box } from "@chakra-ui/react";
 
 export interface ReadableWithGraphicsProps {
   element?:
-    | 'element1'
-    | 'element2'
-    | 'element3'
-    | 'element4'
-    | 'element5'
-    | 'element6';
-  positionx?: 'right' | 'left';
+    | "element1"
+    | "element2"
+    | "element3"
+    | "element4"
+    | "element5"
+    | "element6";
+  positionx?: "right" | "left";
   positiony?: string | number;
 }
 
@@ -22,26 +22,26 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
   return (
     <Box
       sx={{
-        position: 'absolute',
-        right: positionx === 'right' ? 0 : 'unset',
+        position: "absolute",
+        right: positionx === "right" ? 0 : "unset",
         top: positiony,
       }}
     >
       <Box
         sx={{
           backgroundImage: graphicalAddition,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: positionx === "right" ? "top right" : "top left",
           display: {
-            base: 'none',
-            sm: 'none',
-            md: 'none',
-            lg: 'none',
-            xl: 'block',
+            base: "none",
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
           },
-          pointerEvents: 'none',
-          width: '500px',
-          height: '300px',
+          pointerEvents: "none",
+          width: "500px",
+          height: "300px",
         }}
       />
     </Box>

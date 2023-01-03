@@ -18,8 +18,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
-          key:
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{
             hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
@@ -34,9 +33,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: firebase
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount:
-            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           channelId: live
           target: dev
           projectId: bjerk-io
