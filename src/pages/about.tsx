@@ -47,12 +47,9 @@ const About: React.FC = () => {
                 Les mer om hvordan vi jobber
               </Link>
             </Box>
-  
-            <Flex
+            <Grid
+              templateColumns={{base:"1fr", md:'459px 459px'}}
               sx={{
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
                 gap: 5,
               }}
             >
@@ -110,8 +107,8 @@ const About: React.FC = () => {
                 github={'https://github.com/simonrugland'}
                 linkedIn={'https://www.linkedin.com/in/simon-rugland/'}
               />
-            </Flex>
-  
+            </Grid>
+
             <Grid sx={{ gap: 1 }}>
               <Text textStyle={{ base: 'standard' }} pb="15px">
                 Besøk oss i Myntgata 2, 0152 Oslo

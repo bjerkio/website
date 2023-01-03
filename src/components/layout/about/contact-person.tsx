@@ -3,6 +3,7 @@ import {
     Box,
     Flex,
     Grid,
+    GridItem,
     Image,
     Link,
     Text,
@@ -29,36 +30,17 @@ import {
     linkedIn,
   }) => {
     return (
-      <Flex
-        sx={{
-          flexDirection: 'column',
-          alignSelf: 'center',
-          mb: ['20px', '60px', '60px'],
-        }}
-      >
-        <Grid
-          templateColumns={{ base: 'auto', md: '459px 459px' }}
-          sx={{
-            display: 'flex',
-          }}
-        >
-          <Box sx={{ width: '459px' }}>
-            <AspectRatio ratio={459 / 527}>
+          <Box justifySelf={{base:"none",sm:"center",md:"none"}}>
+            <AspectRatio w={{base:"100%", sm:"459px"}} ratio={459 / 527}>
               <Image
                 src={photoPath}
-                alt={"Bilde av Bjerkansatt"}
-                sx={{
-                  maxwidth: '459px',
-                  maxheight: '527px',
-                  objectFit: 'cover',
-                  borderRadius: '6px',
-                }}
+                alt="Bilde av Bjerkansatt"
+                borderRadius= '6px'
               />
             </AspectRatio>
             <Grid
               templateRows={{
-                base: 'auto',
-                md: '3rem 2rem 1.5rem 2rem 2rem 2rem',
+                base: '3rem 2rem 1.5rem 2rem 1.5rem 2rem',
               }}
             >
               <Text
@@ -125,8 +107,6 @@ import {
               )}
             </Grid>
           </Box>
-        </Grid>
-      </Flex>
     );
   };
   
