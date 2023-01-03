@@ -32,8 +32,8 @@ export const Header: React.FC = () => {
   return (
     <Flex
       sx={{
-        px: { base: 6, sm: 6, md: 8, lg: 8, xl: 8 },
-        pt: { base: 6, sm: 6, md: 8, lg: 8, xl: 8 },
+        px: { base: 6, md: 8 },
+        pt: { base: 6, md: 8 },
         backgroundColor: color,
       }}
     >
