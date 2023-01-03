@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "format": "prettier --write . --ignore-path .gitignore ",
+    "format:check": "prettier --check . --ignore-path .gitignore",
+    "lint": "next lint",
     "postbuild": "next export",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.14",
     "@chakra-ui/react": "^2.4.4",
     "@chakra-ui/theme-tools": "^2.0.14",
+    "@cobraz/prettier": "^2.0.1",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@next/font": "13.0.7",
@@ -29,6 +32,7 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
+    "prettier": "^2.8.1",
     "typescript": "4.9.4"
   }
 }
