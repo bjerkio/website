@@ -88,10 +88,10 @@ import { Link } from './components/theme-extensions/links';
       '2xl': '128em',
     },
     radii: {
-      0: '0em',
-      1: '0.25em',
-      2: '0.5em',
-      3: '6em',
+      sm: '0.4rem',
+      md: '1rem',
+      lg: '2rem',
+      xl: '4rem'
     },
     semanticTokens: {
       colors: {
@@ -114,7 +114,7 @@ import { Link } from './components/theme-extensions/links';
             backgroundColor: 'transparent',
             boxShadow:
               '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
-            borderRadius: '30px',
+            borderRadius: 'lg',
           },
           secondary: {
             fontFamily: 'body',
@@ -122,7 +122,7 @@ import { Link } from './components/theme-extensions/links';
             color: 'dark100',
             p: 3,
             backgroundColor: 'green20',
-            borderRadius: '30px',
+            borderRadius: 'lg',
             width: 'fit-content',
           },
         },
