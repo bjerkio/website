@@ -21,7 +21,7 @@ const About: React.FC = () => {
           <BackgroundGraphic
             element="element2"
             positionx="left"
-            positiony="970px"
+            positiony="62.5rem"
           />
   
           <Container variant="readable">
@@ -140,7 +140,7 @@ const About: React.FC = () => {
           <BackgroundGraphic
             element="element3"
             positionx="right"
-            positiony="3080px"
+            positiony="192.5rem"
           />
         </PageSection>
       </Layout>
