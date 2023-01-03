@@ -81,7 +81,7 @@ import { Link } from './components/theme-extensions/links';
       },
     },
     breakpoints: {
-      sm: '32em',
+      sm: '35em',
       md: '66em',
       lg: '80em',
       xl: '104em',
