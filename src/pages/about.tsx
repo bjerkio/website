@@ -107,6 +107,15 @@ const About: React.FC = () => {
                 github={'https://github.com/simonrugland'}
                 linkedIn={'https://www.linkedin.com/in/simon-rugland/'}
               />
+              <ContactPerson
+                name={'Anna Christina Lyra'}
+                photoPath={'/persons/christina.jpg'}
+                phone={'+47 936 86 056'}
+                email={'christina@bjerk.io'}
+                title={'Markedsføringssjef'}
+                github={'https://github.com/ChristinaLyra'}
+                linkedIn={'https://www.linkedin.com/in/annachristinalyra/'}
+              />
             </Grid>
 
             <Grid sx={{ gap: 1 }}>
