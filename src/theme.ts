@@ -54,11 +54,18 @@ import { Link } from './components/theme-extensions/links';
         fontWeight: 'semibold',
         fontSize: 'xl',
       },
-      titleNoBold: {
+      contact: {
         color: 'dark100',
+        fontSize: 'sm',
+      },
+      footerText: {
+        color: "green20",
+        fontSize: "base"
+      },
+      standard: {
+        color: 'dark100',
+        fontSize: 'md',
         fontWeight: 'normal',
-        fontSize: 'xl',
-        lineHeight: '3.5rem',
       },
       subtitle: {
         color: 'blue100',
@@ -70,14 +77,11 @@ import { Link } from './components/theme-extensions/links';
         fontSize: 'base',
         fontWeight: 'semibold',
       },
-      standard: {
+      titleNoBold: {
         color: 'dark100',
-        fontSize: 'md',
         fontWeight: 'normal',
-      },
-      contact: {
-        color: 'dark100',
-        fontSize: 'sm',
+        fontSize: 'xl',
+        lineHeight: '3.5rem',
       },
     },
     breakpoints: {
