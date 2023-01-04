@@ -3,7 +3,6 @@ import {
     Container,
     Flex,
     Grid,
-    Heading,
     Link,
     Text,
   } from '@chakra-ui/react';
