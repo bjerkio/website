@@ -1,4 +1,4 @@
-import { Container, Grid, Heading, Link, Text } from '@chakra-ui/react';
+import { Container, Grid, Link, Text } from '@chakra-ui/react';
 import { BackgroundGraphic } from '../components/layout/background-graphic';
 import { Layout } from '../components/layout/layout';
 import { PageSection } from '../components/layout/page-section';
