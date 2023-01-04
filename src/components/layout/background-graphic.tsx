@@ -41,8 +41,8 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
             xl: 'block',
           },
           pointerEvents: 'none',
-          width: '500px',
-          height: '300px',
+          width: '31.25rem',
+          height: '18.75rem',
         }}
       />
     </Box>
