@@ -15,11 +15,11 @@ export const Link = defineStyleConfig({
     },
     hamburgerLink: {
       color: 'green20',
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
     inline: {
-      color: "dark100",
-      textDecoration: "underline"
+      color: 'dark100',
+      textDecoration: 'underline',
     },
     nav: {
       color: 'dark100',

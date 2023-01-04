@@ -5,7 +5,7 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import React from 'react';
 
-export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
+export const Layout: React.FC<PropsWithChildren> = ({ children }) => (
   <Flex
     sx={{
       flexDirection: 'column',
@@ -15,9 +15,7 @@ export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
   >
     <SEO />
     <Header />
-    <Flex alignItems="stretch">
-      {children}
-    </Flex>
+    <Flex alignItems="stretch">{children}</Flex>
     <Footer />
   </Flex>
 );
