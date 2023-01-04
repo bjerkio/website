@@ -105,25 +105,26 @@ import { Link } from './components/theme-extensions/links';
       Container,
       Link,
       Button: {
+        baseStyle: {
+          fontWeight: 'normal',
+          color: 'dark100',
+          borderRadius: 'lg',
+          backgroundColor: 'transparent',
+          fontFamily: 'body',
+
+        },
         variants: {
           primary: {
-            fontFamily: 'body',
-            fontSize: { md: 'base' },
-            color: 'dark100',
-            p: 5,
-            backgroundColor: 'transparent',
+          },
+          with_box: {
+            fontSize: 'base',
+            p: 4,
             boxShadow:
-              '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
-            borderRadius: 'lg',
+            '0.2rem 0.2rem 0.7rem rgba(0, 0, 0, 0.1)',
           },
           secondary: {
-            fontFamily: 'body',
-            variant: 'heading',
-            color: 'dark100',
-            p: 3,
             backgroundColor: 'green20',
-            borderRadius: 'lg',
-            width: 'fit-content',
+            p: 4
           },
         },
       },
