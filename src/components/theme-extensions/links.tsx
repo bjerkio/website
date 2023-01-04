@@ -13,8 +13,13 @@ export const Link = defineStyleConfig({
         textDecoration: 'underline',
       },
     },
+    hamburgerLink: {
+      color: 'green20',
+      textDecoration: 'none'
+    },
     nav: {
       color: 'dark100',
+      fontSize: 'base',
       ':hover': {
         color: 'blue100',
         textDecoration: 'underline',
