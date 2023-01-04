@@ -107,9 +107,8 @@ export const Header: React.FC = () => {
             <Flex
               sx={{
                 width: '100%',
-                height: '20em',
+                height: '35rem',
                 zIndex: 2,
-                display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
