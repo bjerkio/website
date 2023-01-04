@@ -29,9 +29,6 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
           backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
           display: {
             base: 'none',
-            sm: 'none',
-            md: 'none',
-            lg: 'none',
             xl: 'block',
           },
           pointerEvents: 'none',
