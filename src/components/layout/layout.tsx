@@ -15,8 +15,9 @@ export const Layout : React.FC<PropsWithChildren> = ({ children }) => (
   >
     <SEO />
     <Header />
-    <Flex alignItems="stretch">{children}</Flex>
-
+    <Flex alignItems="stretch">
+      {children}
+    </Flex>
     <Footer />
   </Flex>
 );
