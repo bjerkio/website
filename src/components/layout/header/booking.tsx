@@ -16,10 +16,7 @@ export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
         overflow: 'visible',
       }}
     >
-      <Button
-        variant={variant}
-        onClick={onClick}
-      >
+      <Button variant={variant} onClick={onClick}>
         {label ? label : 'Book et møte'}
       </Button>
     </Box>
