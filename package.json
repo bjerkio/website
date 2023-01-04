@@ -13,6 +13,7 @@
     "@chakra-ui/icons": "^2.0.14",
     "@chakra-ui/react": "^2.4.4",
     "@chakra-ui/theme-tools": "^2.0.14",
+    "@cobraz/prettier": "^2.0.1",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@next/font": "13.0.7",
