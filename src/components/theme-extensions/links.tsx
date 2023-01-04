@@ -17,6 +17,10 @@ export const Link = defineStyleConfig({
       color: 'green20',
       textDecoration: 'none'
     },
+    inline: {
+      color: "dark100",
+      textDecoration: "underline"
+    },
     nav: {
       color: 'dark100',
       fontSize: 'base',
