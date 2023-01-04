@@ -15,8 +15,6 @@ export const Container = defineStyleConfig({
     },
     full: {
       maxWidth: 1500,
-      //backgroundSize: 'cover',
-      //width: '100%',
     },
   },
 });
