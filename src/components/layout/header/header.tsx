@@ -30,13 +30,14 @@ export const Header: React.FC = () => {
   const burgerInput = colorMode === 'light' ? <Hamburger /> : <Hamburger />; //<HamburgerDark />;
 
   return (
+
     <Flex
       sx={{
-        px: { base: 6, md: 8 },
-        pt: { base: 6, md: 8 },
+        p: { base: 5, md: 7 },
         backgroundColor: color,
       }}
     >
+          <Container variant="full" backgroundColor={color}>
       <Flex
         sx={{
           flexDirection: 'row',
@@ -92,7 +93,8 @@ export const Header: React.FC = () => {
           variant="primary"
           aria-label="Hamburger"
           onClick={onOpen}
-          p={3}
+          py={4}
+          pl={4}
         >
           {burgerInput}
         </IconButton>
@@ -100,7 +102,7 @@ export const Header: React.FC = () => {
       <Drawer placement={'top'} onClose={onClose} isOpen={isOpen} size="sm">
         <DrawerOverlay />
         <DrawerContent backgroundColor="dark100" alignItems={'center'}>
-          <DrawerCloseButton color="green20" p={6} size="lg" m="0.5rem" />
+          <DrawerCloseButton color="green20" p={6} size="lg"/>
           <DrawerBody>
             <Flex
               sx={{
@@ -149,6 +151,7 @@ export const Header: React.FC = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      </Container>
     </Flex>
   );
 };
