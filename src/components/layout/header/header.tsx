@@ -53,16 +53,16 @@ export const Header: React.FC = () => {
           <Link
             as={NextLink}
             href={'/about'}
-            fontSize={{ md: 'base' }}
-            variant={{ md: 'nav' }}
+            fontSize='base'
+            variant='nav'
           >
             Om oss
           </Link>
           <Link
             as={NextLink}
             href={'/principles'}
-            fontSize={{ md: 'base' }}
-            variant={{ md: 'nav' }}
+            fontSize='base'
+            variant='nav'
           >
             Våre prinsipper
           </Link>
@@ -72,12 +72,12 @@ export const Header: React.FC = () => {
             flexDirection: 'column',
           }}
         >
-          <Booking label={'Book et møte'} variant={{ md: 'primary' }}/>
+          <Booking label={'Book et møte'} variant='with_box'/>
         </Flex>
       </Flex>
       <Flex
         sx={{
-          alignContent: 'space-between',
+          justifyContent: 'space-between',
           flexDirection: 'row',
           width: '100%',
           display: { base: 'flex', md: 'none' },
@@ -89,12 +89,10 @@ export const Header: React.FC = () => {
          </Link>
 
         <IconButton
-          variant="link"
+          variant="primary"
           aria-label="Hamburger"
           onClick={onOpen}
-          ml="auto"
-          p="0.5em"
-          height="35px"
+          p={3}
         >
           {burgerInput}
         </IconButton>
@@ -102,7 +100,7 @@ export const Header: React.FC = () => {
       <Drawer placement={'top'} onClose={onClose} isOpen={isOpen} size="sm">
         <DrawerOverlay />
         <DrawerContent backgroundColor="dark100" alignItems={'center'}>
-          <DrawerCloseButton color="green20" p={6} size="lg" m="0.5em" />
+          <DrawerCloseButton color="green20" p={6} size="lg" m="0.5rem" />
           <DrawerBody>
             <Flex
               sx={{
@@ -142,7 +140,6 @@ export const Header: React.FC = () => {
                   sx={{
                     flexDirection: 'column',
                     mt: 3,
-                    fontSize: 'md',
                   }}
                 >
                   <Booking label={'Book et møte'} variant="secondary"/>
