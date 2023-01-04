@@ -2,8 +2,13 @@ import { defineStyleConfig } from '@chakra-ui/react';
 
 export const Link = defineStyleConfig({
   variants: {
-    primary: {
+    emphasis: {
       color: 'blue100',
+      fontSize: 'base',
+    },
+    footerLink: {
+      color: 'blue40',
+      textDecoration: 'none',
       ':hover': {
         textDecoration: 'underline',
       },
@@ -15,16 +20,24 @@ export const Link = defineStyleConfig({
         textDecoration: 'underline',
       },
     },
-    emphasis: {
+    primary: {
       color: 'blue100',
-      fontSize: 'base',
+      ':hover': {
+        textDecoration: 'underline',
+      },
     },
     socials: {
       textDecoration: 'none',
+      color: 'blue100',
+      fontSize: 'base',
+      ':hover': {
+        textDecoration: 'underline',
+      },
     },
-    footerLink: {
-      color: 'blue40',
+    socialsBlack: {
       textDecoration: 'none',
+      color: 'dark100',
+      fontSize: 'base',
       ':hover': {
         textDecoration: 'underline',
       },
