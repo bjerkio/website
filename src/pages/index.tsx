@@ -32,7 +32,7 @@ const Home = () => (
           </Grid>
 
           <Flex
-            pt={{ base: '40px', md: '100px' }}
+            pt={{ base: 5, md: 8 }}
             sx={{
               flexDirection: 'column',
               width: '80%',
@@ -47,7 +47,7 @@ const Home = () => (
               sx={{
                 justifyItems: 'Left',
                 alignItems: 'center',
-                paddingTop: ['20px', '40px'],
+                paddingTop: [3, 5],
               }}
             >
               <Text textStyle={{ base: 'standard' }}>Folio</Text>
@@ -63,7 +63,7 @@ const Home = () => (
         <BackgroundGraphic
           element="element1"
           positionx="right"
-          positiony="44rem"
+          positiony="43rem"
         />
       </PageSection>
 
@@ -71,7 +71,7 @@ const Home = () => (
         <BackgroundGraphic
           element="element2"
           positionx="left"
-          positiony="75rem"
+          positiony="73.5rem"
         />
         <Container variant="readable">
           <Text textStyle={{ base: 'standard' }}>
