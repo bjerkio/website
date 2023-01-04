@@ -1,9 +1,7 @@
 import {
     AspectRatio,
     Box,
-    Flex,
     Grid,
-    GridItem,
     Image,
     Link,
     Text,
@@ -45,29 +43,25 @@ import {
               }}
             >
               <Text
+                textStyle="subtitleBlack"
                 sx={{
-                  fontSize: 'base',
-                  fontWeight: 'semibold',
                   mt: 3,
-                  color: 'black',
                 }}
               >
                 {name}
               </Text>
-              <Text textStyle={{ base: 'contact' }}>{title}</Text>
+              <Text textStyle='contact'>{title}</Text>
               <Link
                 as={NextLink}
-                color="black"
                 href={`tel:${phone}`}
-                fontSize= 'base'
+                variant="socialsBlack"
               >
                 {phone}
               </Link>
               <Link
                 as={NextLink}
-                color="black"
                 href={`mailto:${email}`}
-                fontSize= 'base'
+                variant="socialsBlack"
               >
                 {email}
               </Link>
@@ -75,15 +69,8 @@ import {
                 <Link
                   as={NextLink}
                   href={linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-label={`LinkedIn Profile for ${name}`}
-                  sx={{
-                    cursor: 'pointer',
-                    fontSize: 'base',
-                    color: 'blue100',
-                    textDecoration: 'none',
-                  }}
+                  variant="socials"
                 >
                   Linkedin
                 </Link>
@@ -91,17 +78,9 @@ import {
               {github && (
                 <Link
                   as={NextLink}
-                  variant="socials"
                   href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-label={`Github Profile for ${name}`}
-                  sx={{
-                    cursor: 'pointer',
-                    fontSize: 'base',
-                    color: 'blue100',
-                    textDecoration: 'none',
-                  }}
+                  variant="socials"
                 >
                   Github
                 </Link>
