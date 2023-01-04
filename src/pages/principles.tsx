@@ -17,7 +17,7 @@ const Principles: React.FC = () => {
         <BackgroundGraphic
           element="element4"
           positionx="left"
-          positiony="102rem"
+          positiony="101.5rem"
         />
         <Container variant="readable">
           <Grid gap={{base:6, md:8 }}>
