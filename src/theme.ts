@@ -111,7 +111,6 @@ import { Link } from './components/theme-extensions/links';
           borderRadius: 'lg',
           backgroundColor: 'transparent',
           fontFamily: 'body',
-
         },
         variants: {
           primary: {

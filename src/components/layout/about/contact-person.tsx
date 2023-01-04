@@ -32,11 +32,11 @@ import {
   }) => {
     return (
           <Box justifySelf={{base:"none",sm:"center",md:"none"}}>
-            <AspectRatio w={{base:"100%", sm:"459px"}} ratio={459 / 527}>
+            <AspectRatio w={{base:"100%", sm:"28.5rem"}} ratio={459 / 527}>
               <Image
                 src={photoPath}
                 alt="Bilde av Bjerkansatt"
-                borderRadius= '6px'
+                borderRadius="sm"
               />
             </AspectRatio>
             <Grid
@@ -48,7 +48,7 @@ import {
                 sx={{
                   fontSize: 'base',
                   fontWeight: 'semibold',
-                  mt: '20px',
+                  mt: 3,
                   color: 'black',
                 }}
               >
@@ -59,7 +59,7 @@ import {
                 as={NextLink}
                 color="black"
                 href={`tel:${phone}`}
-                fontSize={{ base: 'base' }}
+                fontSize= 'base'
               >
                 {phone}
               </Link>
@@ -67,7 +67,7 @@ import {
                 as={NextLink}
                 color="black"
                 href={`mailto:${email}`}
-                fontSize={{ base: 'base' }}
+                fontSize= 'base'
               >
                 {email}
               </Link>
@@ -80,7 +80,7 @@ import {
                   aria-label={`LinkedIn Profile for ${name}`}
                   sx={{
                     cursor: 'pointer',
-                    fontSize: { base: 'base' },
+                    fontSize: 'base',
                     color: 'blue100',
                     textDecoration: 'none',
                   }}
@@ -98,7 +98,7 @@ import {
                   aria-label={`Github Profile for ${name}`}
                   sx={{
                     cursor: 'pointer',
-                    fontSize: { base: 'base' },
+                    fontSize: 'base',
                     color: 'blue100',
                     textDecoration: 'none',
                   }}
