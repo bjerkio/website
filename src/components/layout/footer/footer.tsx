@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 import React from 'react';
 
 export const Footer: React.FC = () => (
-  <Box sx={{ minHeight: '5vh', background: 'dark100', mt: 'auto', p: '30px' }}>
+  <Box sx={{ minHeight: 7, background: 'dark100', mt: 'auto', p: {base: 5, md: 7}}}>
     <Container variant="full">
       <Flex
         sx={{
@@ -11,6 +11,7 @@ export const Footer: React.FC = () => (
           justifyContent: 'space-between',
           alignItems: 'center',
           fontSize: 'base',
+          gap: 4
         }}
       >
         <Flex>
