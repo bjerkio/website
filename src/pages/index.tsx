@@ -19,10 +19,10 @@ const Home = () => (
       <PageSection backgroundColor="green">
         <Container variant="readable">
           <Grid sx={{ gap: 3 }}>
-            <Text textStyle={{ base: 'caption' }}>
+            <Text textStyle='caption'>
               Vår lidenskap er å skape
             </Text>
-            <Text textStyle={{ base: 'standard' }}>
+            <Text textStyle='standard'>
               De siste 12 årene har vi forbedret og forenklet måten mennesker
               lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
               tilpasse programvare. Vi utvikler, integrerer, kobler sammen,
@@ -33,30 +33,26 @@ const Home = () => (
 
           <Flex
             pt={{ base: 5, md: 8 }}
-            sx={{
-              flexDirection: 'column',
-              width: '80%',
-            }}
+            flexDirection='column'
+            width='80%'
           >
-            <Text textStyle={{ base: 'subtitle' }}>
+            <Text textStyle='subtitle'>
               Noen av våre seneste kunder
             </Text>
             <Grid
               templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 2fr' }}
-              gap={[3, 5]}
-              sx={{
-                justifyItems: 'Left',
-                alignItems: 'center',
-                paddingTop: [3, 5],
-              }}
+              gap={{ base: 3, md: 5 }}
+              justifyItems='left'
+              alignItems= 'center'
+              paddingTop= {{base: 3, md: 5}}
             >
-              <Text textStyle={{ base: 'standard' }}>Folio</Text>
-              <Text textStyle={{ base: 'standard' }}>Layer</Text>
-              <Text textStyle={{ base: 'standard' }}>Grid branding</Text>
+              <Text textStyle='standard'>Folio</Text>
+              <Text textStyle='standard'>Layer</Text>
+              <Text textStyle='standard'>Grid branding</Text>
 
-              <Text textStyle={{ base: 'standard' }}>DNB</Text>
-              <Text textStyle={{ base: 'standard' }}>Digdir</Text>
-              <Text textStyle={{ base: 'standard' }}>LO Media</Text>
+              <Text textStyle='standard'>DNB</Text>
+              <Text textStyle='standard'>Digdir</Text>
+              <Text textStyle='standard'>LO Media</Text>
             </Grid>
           </Flex>
         </Container>
@@ -74,15 +70,13 @@ const Home = () => (
           positiony="60rem"
         />
         <Container variant="readable">
-          <Text textStyle={{ base: 'standard' }}>
+          <Text textStyle='standard'>
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
             kontinuitet, gode insentiver og Super Mario-effekten er noe av det
             vi mener kreves for å lykkes. <br></br>
-
-              <Link as={NextLink} href={'/principles'} variant="emphasis">
-                Les mer om oss og hvordan vi jobber
-              </Link>
-
+            <Link as={NextLink} href={'/principles'} variant="emphasis">
+              Les mer om oss og hvordan vi jobber
+            </Link>
           </Text>
         </Container>
       </PageSection>
