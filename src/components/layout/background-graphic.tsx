@@ -2,13 +2,7 @@ import { Box } from '@chakra-ui/react';
 import React from 'react';
 
 export interface ReadableWithGraphicsProps {
-  element?:
-    | 'element1'
-    | 'element2'
-    | 'element3'
-    | 'element4'
-    | 'element5'
-    | 'element6';
+  element?: string;
   positionx?: 'right' | 'left';
   positiony?: string | number;
 }
