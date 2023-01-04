@@ -81,11 +81,11 @@ import { Link } from './components/theme-extensions/links';
       },
     },
     breakpoints: {
-      sm: '35em',
-      md: '66em',
-      lg: '80em',
-      xl: '104em',
-      '2xl': '128em',
+      sm: '35rem',
+      md: '66rem',
+      lg: '80rem',
+      xl: '104rem',
+      '2xl': '128rem',
     },
     radii: {
       sm: '0.4rem',
