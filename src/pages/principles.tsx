@@ -20,50 +20,42 @@ const Principles: React.FC = () => {
           positiony="102rem"
         />
         <Container variant="readable">
-          <Grid gap={9}>
+          <Grid gap={{base:6, md:8 }}>
             <Grid gap={5}>
-              <Text textStyle={{ base: 'titleNoBold' }}>
+              <Text textStyle='titleNoBold'>
                 Kompetanse og teknologi, kombinert med et brukervennlig design,
                 er viktig for å lykkes
               </Text>
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 Helt siden vi startet i 2009 har vi lært av hvordan man lykkes
                 med produkter og tjenester. Vi er, som mange andre i bransjen,
                 opptatt av{' '}
                 <Link
                   as={NextLink}
                   href={'https://agilemanifesto.org/iso/no/manifesto.html'}
-                  target={'_blank'}
-                  color="dark100"
-                  textDecorationLine="underline"
+                  variant='inline'
                 >
                   det smidige manifestet
                 </Link>
                 , og det er nok prinsippene rundt samarbeid som står oss nærest.
               </Text>
-
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 Vi jobber best under forutsetninger hvor det lages minst og
                 flest mulig prosjekter, som skaper verdi. Det handler om å
                 bevise vår verdi, og ha insentiver som skaper et godt samarbeid
                 og driver frem det beste i oss.
               </Text>
-
               <Link
                 as={NextLink}
                 href={'https://agilemanifesto.org/iso/no/manifesto.html'}
-                target={'_blank'}
-                variant={{base: "primary"}}
-                textDecorationLine="underline"
-                fontSize={{base: 'base'}}
+                variant='emphasis'
               >
                 Les det smidige manifestetet
               </Link>
             </Grid>
-
-            <Grid>
-              <Text textStyle={{ base: 'subtitleBlack' }}>Åpen kildekode</Text>
-              <Text textStyle={{ base: 'standard' }}>
+            <Grid gap={3}>
+              <Text textStyle='subtitleBlack'>Åpen kildekode</Text>
+              <Text textStyle='standard'>
                 Ved å dele erfaringer, diskutere og arbeide åpent mener vi at
                 teknologi blir bedre. Derfor ligger Bjerk på listen over verdens
                 største selskaper på åpen kildekode. For deg som kunde betyr det
@@ -73,21 +65,17 @@ const Principles: React.FC = () => {
               <Link
                 as={NextLink}
                 href={'https://github.com/bjerkio'}
-                target={'_blank'}
-                variant="primary"
-                textDecorationLine="underline"
-                mt={2}
-                fontSize={{base: 'base'}}
+                variant='emphasis'
               >
                 Sjekk vår Github-profil
               </Link>
             </Grid>
 
-            <Grid>
-              <Text textStyle={{ base: 'subtitleBlack' }}>
+            <Grid gap={3}>
+              <Text textStyle='subtitleBlack'>
                 Lære og justere kontinuerlig
               </Text>
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 En viktig del av reisen er å gjøre feil, lære, reflektere og
                 justere. For å kunne forbedre og forenkle hvordan mennesker
                 tenker, jobber, lærer og kommuniserer, må vi akseptere at veien
@@ -95,24 +83,24 @@ const Principles: React.FC = () => {
               </Text>
             </Grid>
 
-            <Text textStyle={{ base: 'titleNoBold' }}>
+            <Text textStyle='titleNoBold'>
               Fokuset ligger i å lære, tilpasse, navigere bedre og prøve igjen.
             </Text>
 
-            <Grid>
-              <Text textStyle={{ base: 'subtitleBlack' }}>
+            <Grid gap={3}>
+              <Text textStyle='subtitleBlack'>
                 Åpen og gjennomsiktig prosess
               </Text>
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 Vi mener det er helt essensielt at vi samarbeider, og at ting
                 skjer i det åpne. I praksis betyr det at vi inviterer gjerne
                 våre kunder inn der vi jobber; (eksempelvis, Slack og Github).
               </Text>
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 Det skal være synlig når noe skjer, bedre blir beslutningene når
                 de taes løpende og med mest mulig kontekst.
               </Text>
-              <Text textStyle={{ base: 'standard' }}>
+              <Text textStyle='standard'>
                 La oss unngå barriærer, og all den frustrasjonen som kommer med
                 de.
               </Text>
