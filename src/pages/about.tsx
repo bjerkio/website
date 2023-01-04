@@ -49,7 +49,7 @@ const About: React.FC = () => {
               </Link>
             </Box>
             <Grid
-              templateColumns={{base:"1fr", md:'459px 459px'}}
+              templateColumns={{base:"1fr", md:'29rem 29rem'}}
               sx={{
                 gap: 5,
               }}
@@ -120,7 +120,7 @@ const About: React.FC = () => {
             </Grid>
 
             <Grid sx={{ gap: 1 }}>
-              <Text textStyle={{ base: 'standard' }} pb="15px">
+              <Text textStyle={{ base: 'standard' }} pb={3} pt={{ base:5, md:8 }}>
                 Besøk oss i Myntgata 2, 0152 Oslo
               </Text>
               <Text
