@@ -140,7 +140,7 @@ const About: React.FC = () => {
           <BackgroundGraphic
             element="element3"
             positionx="right"
-            positiony="183rem"
+            positiony="236rem"
           />
         </PageSection>
       </Layout>
