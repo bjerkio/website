@@ -32,12 +32,10 @@ export const Header: React.FC = () => {
   return (
 
     <Flex
-      sx={{
-        p: { base: 5, md: 7 },
-        backgroundColor: color,
-      }}
+      p= {{ base: 6, md: 7 }}
+      backgroundColor= {color}
     >
-          <Container variant="full" backgroundColor={color}>
+          <Container variant="full" backgroundColor={color} p={0}>
       <Flex
         sx={{
           flexDirection: 'row',
@@ -46,7 +44,11 @@ export const Header: React.FC = () => {
           width: '100%',
         }}
       >
-        <Flex sx={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
+        <Flex sx={{ 
+          flexDirection: 'row',
+          gap: 6,
+          alignItems: 'center' 
+        }}>
           <Link 
           as={NextLink}
           href={'/'}>{logoInput}
@@ -54,7 +56,6 @@ export const Header: React.FC = () => {
           <Link
             as={NextLink}
             href={'/about'}
-            fontSize='base'
             variant='nav'
           >
             Om oss
@@ -62,7 +63,6 @@ export const Header: React.FC = () => {
           <Link
             as={NextLink}
             href={'/principles'}
-            fontSize='base'
             variant='nav'
           >
             Våre prinsipper
@@ -80,6 +80,7 @@ export const Header: React.FC = () => {
         sx={{
           justifyContent: 'space-between',
           flexDirection: 'row',
+          alignItems: 'center',
           width: '100%',
           display: { base: 'flex', md: 'none' },
         }}
@@ -93,16 +94,15 @@ export const Header: React.FC = () => {
           variant="primary"
           aria-label="Hamburger"
           onClick={onOpen}
-          py={4}
-          pl={4}
+          p={4}
         >
           {burgerInput}
         </IconButton>
       </Flex>
-      <Drawer placement={'top'} onClose={onClose} isOpen={isOpen} size="sm">
+      <Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent backgroundColor="dark100" alignItems={'center'}>
-          <DrawerCloseButton color="green20" p={6} size="lg"/>
+        <DrawerContent backgroundColor="dark100" alignItems='center'>
+          <DrawerCloseButton color="green20" p={7} size="lg" mr={1}/>
           <DrawerBody>
             <Flex
               sx={{
@@ -111,14 +111,13 @@ export const Header: React.FC = () => {
                 zIndex: 2,
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center',
                 fontSize: 'lg',
               }}
             >
               <Flex
                 sx={{
                   flexDirection: 'column',
-                  gap: 3,
+                  gap: 2,
                   width: '100%',
                   alignItems: 'center',
                 }}
@@ -126,23 +125,18 @@ export const Header: React.FC = () => {
                 <Link
                   as={NextLink}
                   href="/about"
-                  sx={{ color: 'green20', textDecoration: 'none' }}
+                  variant="hamburgerLink"
                 >
                   Om oss
                 </Link>
                 <Link
                   as={NextLink}
                   href="/principles"
-                  sx={{ color: 'green20', textDecoration: 'none' }}
+                  variant="hamburgerLink"
                 >
                   Våre prinsipper
                 </Link>
-                <Flex
-                  sx={{
-                    flexDirection: 'column',
-                    mt: 3,
-                  }}
-                >
+                <Flex mt={3}>
                   <Booking label={'Book et møte'} variant="secondary"/>
                 </Flex>
               </Flex>
