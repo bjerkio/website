@@ -63,7 +63,7 @@ const Home = () => (
         <BackgroundGraphic
           element="element1"
           positionx="right"
-          positiony="43rem"
+          positiony="39.5rem"
         />
       </PageSection>
 
@@ -71,7 +71,7 @@ const Home = () => (
         <BackgroundGraphic
           element="element2"
           positionx="left"
-          positiony="73.5rem"
+          positiony="60rem"
         />
         <Container variant="readable">
           <Text textStyle={{ base: 'standard' }}>

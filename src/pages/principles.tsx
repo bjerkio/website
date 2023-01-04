@@ -12,12 +12,12 @@ const Principles: React.FC = () => {
         <BackgroundGraphic
           element="element5"
           positionx="right"
-          positiony="35rem"
+          positiony="31rem"
         />
         <BackgroundGraphic
           element="element4"
           positionx="left"
-          positiony="106rem"
+          positiony="102rem"
         />
         <Container variant="readable">
           <Grid gap={9}>
