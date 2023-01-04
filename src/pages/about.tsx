@@ -25,11 +25,12 @@ const About: React.FC = () => {
           />
   
           <Container variant="readable">
-            <Text textStyle={{ base: 'titleNoBold' }}>
+            <Flex flexDirection="column" gap={5}>
+            <Text textStyle='titleNoBold'>
               Bjerk er skapt for å forbedre og forenkle måten mennesker lærer,
               tenker, jobber og kommuniserer på.
             </Text>
-            <Text textStyle={{ base: 'standard' }} sx={{ py: 5 }}>
+            <Text textStyle='standard'>
               For oss, er det viktigste vi gjør er å bidra til at hverdagen til
               mennesker blir bedre, at vi kan oppnå mer. Vi elsker å skape - og
               kombinasjonen av å få skape noe, som også har positiv påvirkning for
@@ -37,19 +38,19 @@ const About: React.FC = () => {
             </Text>
             <Box
               sx={{
-                fontSize: 'base',
                 pb: 8,
               }}
             >
               <Link 
               as={NextLink}
               href={'/principles'} 
-              variant={{ base: 'primary' }}>
+              variant='socials'>
                 Les mer om hvordan vi jobber
               </Link>
             </Box>
+            </Flex>
             <Grid
-              templateColumns={{base:"1fr", md:'29rem 29rem'}}
+              templateColumns={{ base:'1fr', md:'29rem 29rem' }}
               sx={{
                 gap: 5,
               }}
@@ -119,23 +120,25 @@ const About: React.FC = () => {
               />
             </Grid>
 
-            <Grid sx={{ gap: 1 }}>
-              <Text textStyle={{ base: 'standard' }} pb={3} pt={{ base:5, md:8 }}>
+            <Flex flexDirection='column' pt={{ base:5, md:8 }} gap={3}>
+              <Text textStyle='standard'>
                 Besøk oss i Myntgata 2, 0152 Oslo
               </Text>
+              <Flex flexDirection='column'>
               <Text
-                textStyle={{ base: 'standard' }}
-                sx={{ fontWeight: 'semibold' }}
+                textStyle='standard'
+                fontWeight='semibold'
               >
                 kontoret@bjerk.io
               </Text>
               <Text
-                textStyle={{ base: 'standard' }}
-                sx={{ fontWeight: 'semibold' }}
+                textStyle='standard'
+                fontWeight='semibold'
               >
                 +47 22 12 05 12
               </Text>
-            </Grid>
+              </Flex>
+            </Flex>
           </Container>
           <BackgroundGraphic
             element="element3"
