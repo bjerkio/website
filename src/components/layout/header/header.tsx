@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import {
-  Box,
   Container,
   Drawer,
   DrawerBody,
@@ -30,128 +29,105 @@ export const Header: React.FC = () => {
   const burgerInput = colorMode === 'light' ? <Hamburger /> : <Hamburger />; //<HamburgerDark />;
 
   return (
-    <Flex
-      sx={{
-        px: { base: 6, sm: 6, md: 8, lg: 8, xl: 8 },
-        pt: { base: 6, sm: 6, md: 8, lg: 8, xl: 8 },
-        backgroundColor: color,
-      }}
-    >
-      <Flex
-        sx={{
-          flexDirection: 'row',
-          display: { base: 'none', md: 'flex' },
-          justifyContent: 'space-between',
-          width: '100%',
-        }}
-      >
-        <Flex sx={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
-          <Link 
-          as={NextLink}
-          href={'/'}>{logoInput}
-          </Link>
-          <Link
-            as={NextLink}
-            href={'/about'}
-            fontSize={{ md: 'base' }}
-            variant={{ md: 'nav' }}
+    <Flex p={{ base: 6, md: 7 }} backgroundColor={color}>
+      <Container variant="full" backgroundColor={color} p={0}>
+        <Flex
+          sx={{
+            flexDirection: 'row',
+            display: { base: 'none', md: 'flex' },
+            justifyContent: 'space-between',
+            width: '100%',
+          }}
+        >
+          <Flex
+            sx={{
+              flexDirection: 'row',
+              gap: 6,
+              alignItems: 'center',
+            }}
           >
-            Om oss
-          </Link>
-          <Link
-            as={NextLink}
-            href={'/principles'}
-            fontSize={{ md: 'base' }}
-            variant={{ md: 'nav' }}
+            <Link as={NextLink} href={'/'}>
+              {logoInput}
+            </Link>
+            <Link as={NextLink} href={'/about'} variant="nav">
+              Om oss
+            </Link>
+            <Link as={NextLink} href={'/principles'} variant="nav">
+              Våre prinsipper
+            </Link>
+          </Flex>
+          <Flex
+            sx={{
+              flexDirection: 'column',
+            }}
           >
-            Våre prinsipper
-          </Link>
+            <Booking label={'Book et møte'} variant="with_box" />
+          </Flex>
         </Flex>
         <Flex
           sx={{
-            flexDirection: 'column',
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            alignItems: 'center',
+            width: '100%',
+            display: { base: 'flex', md: 'none' },
           }}
         >
-          <Booking label={'Book et møte'} variant={{ md: 'primary' }}/>
-        </Flex>
-      </Flex>
-      <Flex
-        sx={{
-          alignContent: 'space-between',
-          flexDirection: 'row',
-          width: '100%',
-          display: { base: 'flex', md: 'none' },
-        }}
-      >
-        <Link
-         as={NextLink}
-         href={'/'}>{logoInput}
-         </Link>
+          <Link as={NextLink} href={'/'}>
+            {logoInput}
+          </Link>
 
-        <IconButton
-          variant="link"
-          aria-label="Hamburger"
-          onClick={onOpen}
-          ml="auto"
-          p="0.5em"
-          height="35px"
-        >
-          {burgerInput}
-        </IconButton>
-      </Flex>
-      <Drawer placement={'top'} onClose={onClose} isOpen={isOpen} size="sm">
-        <DrawerOverlay />
-        <DrawerContent backgroundColor="dark100" alignItems={'center'}>
-          <DrawerCloseButton color="green20" p={6} size="lg" m="0.5em" />
-          <DrawerBody>
-            <Flex
-              sx={{
-                width: '100%',
-                height: '20em',
-                zIndex: 2,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: 'lg',
-              }}
-            >
+          <IconButton
+            variant="primary"
+            aria-label="Hamburger"
+            onClick={onOpen}
+            p={4}
+          >
+            {burgerInput}
+          </IconButton>
+        </Flex>
+        <Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent backgroundColor="dark100" alignItems="center">
+            <DrawerCloseButton color="green20" p={7} size="lg" mr={1} />
+            <DrawerBody>
               <Flex
                 sx={{
-                  flexDirection: 'column',
-                  gap: 3,
                   width: '100%',
-                  alignItems: 'center',
+                  height: '35rem',
+                  zIndex: 2,
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  fontSize: 'lg',
                 }}
               >
-                <Link
-                  as={NextLink}
-                  href="/about"
-                  sx={{ color: 'green20', textDecoration: 'none' }}
-                >
-                  Om oss
-                </Link>
-                <Link
-                  as={NextLink}
-                  href="/principles"
-                  sx={{ color: 'green20', textDecoration: 'none' }}
-                >
-                  Våre prinsipper
-                </Link>
                 <Flex
                   sx={{
                     flexDirection: 'column',
-                    mt: 3,
-                    fontSize: 'md',
+                    gap: 2,
+                    width: '100%',
+                    alignItems: 'center',
                   }}
                 >
-                  <Booking label={'Book et møte'} variant="secondary"/>
+                  <Link as={NextLink} href="/about" variant="hamburgerLink">
+                    Om oss
+                  </Link>
+                  <Link
+                    as={NextLink}
+                    href="/principles"
+                    variant="hamburgerLink"
+                  >
+                    Våre prinsipper
+                  </Link>
+                  <Flex mt={3}>
+                    <Booking label={'Book et møte'} variant="secondary" />
+                  </Flex>
                 </Flex>
               </Flex>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Container>
     </Flex>
   );
 };

@@ -16,19 +16,7 @@ export const Booking: React.FC<BookingProps> = ({ label, variant }) => {
         overflow: 'visible',
       }}
     >
-      <Button
-        variant={variant}
-        sx={{
-          cursor: 'pointer',
-          color: 'dark100',
-          p: 5,
-          fontWeight: 'normal',
-          boxShadow:
-            '2px 4px 11px rgba(0, 0, 0, 0.1), inset 3px 4px 9px rgba(255, 255, 255, 0.15)',
-          borderRadius: '30px',
-        }}
-        onClick={onClick}
-      >
+      <Button variant={variant} onClick={onClick}>
         {label ? label : 'Book et møte'}
       </Button>
     </Box>

@@ -1,5 +1,6 @@
 import { StyleConfig } from '@chakra-ui/theme-tools';
 import { FC, SVGProps } from 'react';
+import React from 'react';
 
 type Props = StyleConfig & SVGProps<SVGSVGElement>;
 
