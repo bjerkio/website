@@ -46,7 +46,7 @@ const About: React.FC = () => {
           >
             <ContactPerson
               name={'Brage Sekse Aarset'}
-              photoPath={'/persons/brage.png'}
+              photoPath={'/persons/brage.jpg'}
               phone={'+47 464 65 823'}
               email={'brage@bjerk.io'}
               title={'Programvareutvikler'}
