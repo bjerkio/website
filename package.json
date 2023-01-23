@@ -20,7 +20,7 @@
     "@emotion/styled": "11.10.4",
     "@next/font": "13.0.7",
     "framer-motion": "^7.10.2",
-    "next": "13.0.7",
+    "next": "13.1.4",
     "react": "18.2.0",
     "react-calendly": "2.2.3",
     "react-dom": "18.2.0"
