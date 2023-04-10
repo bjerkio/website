@@ -59,8 +59,8 @@ const About: React.FC = () => {
               phone={'+47 953 08 087'}
               email={'so@bjerk.io'}
               title={'Daglig leder / Programvareutvikler'}
-              github={'https://github.com/cobraz'}
-              linkedIn={'https://www.linkedin.com/in/cobraz/'}
+              github={'https://github.com/simenandre'}
+              linkedIn={'https://www.linkedin.com/in/simenandre/'}
             />
             <ContactPerson
               name={'Bjørn Niklas Sjøstrøm'}
