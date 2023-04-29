@@ -18,9 +18,9 @@
     "@chakra-ui/theme-tools": "^2.0.14",
     "@emotion/react": "11.10.8",
     "@emotion/styled": "11.10.8",
-    "@next/font": "13.3.1",
+    "@next/font": "13.3.2",
     "framer-motion": "^7.10.2",
-    "next": "13.3.1",
+    "next": "13.3.2",
     "react": "18.2.0",
     "react-calendly": "2.2.3",
     "react-dom": "18.2.0"
@@ -32,7 +32,7 @@
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
+    "eslint-config-next": "13.3.2",
     "prettier": "^2.7.1",
     "typescript": "4.9.5"
   }
