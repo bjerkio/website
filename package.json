@@ -16,24 +16,24 @@
     "@chakra-ui/icons": "^2.0.14",
     "@chakra-ui/react": "^2.4.4",
     "@chakra-ui/theme-tools": "^2.0.14",
-    "@emotion/react": "11.10.8",
-    "@emotion/styled": "11.10.8",
-    "@next/font": "13.3.2",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@next/font": "^13.3.2",
     "framer-motion": "^10.0.0",
-    "next": "13.3.2",
-    "react": "18.2.0",
-    "react-calendly": "2.2.3",
-    "react-dom": "18.2.0"
+    "next": "^13.3.2",
+    "react": "^18.2.0",
+    "react-calendly": "^2.2.3",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.2.1",
     "@cobraz/prettier": "^2.0.1",
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.1",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.2",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "eslint": "^8.39.0",
+    "eslint-config-next": "^13.3.2",
     "prettier": "^2.7.1",
-    "typescript": "5.0.4"
+    "typescript": "^5.0.4"
   }
 }
