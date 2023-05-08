@@ -22,7 +22,7 @@
     "framer-motion": "^10.0.0",
     "next": "^13.3.2",
     "react": "^18.2.0",
-    "react-calendly": "^2.2.3",
+    "react-calendly": "^4.0.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
