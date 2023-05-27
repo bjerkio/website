@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "bjerk-io"
+  },
+  "targets": {
+    "bjerk-io": {
+      "hosting": {
+        "dev": [
+          "dev-bjerk-io"
+        ],
+        "prod": [
+          "bjerk-io"
+        ]
+      }
+    }
+  }
+}
