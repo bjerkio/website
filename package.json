@@ -1,17 +1,16 @@
 {
+  "private": true,
   "name": "bjerk-website",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "postbuild": "next export",
+    "dev": "next dev",
     "format": "prettier --write . --ignore-path .gitignore ",
     "format:check": "prettier --check . --ignore-path .gitignore",
     "lint": "next lint",
-    "postbuild": "next export",
     "start": "next start"
   },
-  "prettier": "@simenandre/prettier",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.14",
     "@chakra-ui/react": "^2.4.4",
@@ -27,13 +26,14 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.2.1",
+    "@simenandre/prettier": "^3.0.2",
     "@types/node": "^18.16.3",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
     "eslint": "^8.39.0",
     "eslint-config-next": "^13.3.2",
     "prettier": "^2.7.1",
-    "typescript": "^5.0.4",
-    "@simenandre/prettier": "3.0.2"
-  }
+    "typescript": "^5.0.4"
+  },
+  "prettier": "@simenandre/prettier"
 }

@@ -1,5 +1,7 @@
-import theme from '../theme';
 import { ChakraProvider } from '@chakra-ui/react';
+import type { NextComponentType, NextPageContext } from 'next';
+import type { NextRouter } from 'next/router';
+import theme from '../theme';
 
 export interface AppRenderProps {
   pageProps: object;
@@ -7,9 +9,6 @@ export interface AppRenderProps {
   Component: NextComponentType<NextPageContext, AppRenderProps, object>;
   router: NextRouter;
 }
-import type { NextComponentType, NextPageContext } from 'next';
-import type { NextRouter } from 'next/router';
-import React from 'react';
 
 export default function App({ Component, pageProps }: AppRenderProps) {
   return (

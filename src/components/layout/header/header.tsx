@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
 import {
   Container,
   Drawer,
@@ -13,11 +11,13 @@ import {
   useColorMode,
   useDisclosure,
 } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import React from 'react';
 // import { Booking } from '../../booking';
-import { Logo } from './logo';
-import { Hamburger } from './hamburger';
 import NextLink from 'next/link';
 import { Booking } from './booking';
+import { Hamburger } from './hamburger';
+import { Logo } from './logo';
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();

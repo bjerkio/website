@@ -1,6 +1,6 @@
+import { Box, Button, ResponsiveValue } from '@chakra-ui/react';
 import React from 'react';
 import { openPopupWidget } from 'react-calendly';
-import { Box, Button, ResponsiveValue } from '@chakra-ui/react';
 
 export interface BookingProps {
   label?: string;

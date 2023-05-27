@@ -1255,7 +1255,7 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
-"@simenandre/prettier@3.0.2":
+"@simenandre/prettier@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@simenandre/prettier/-/prettier-3.0.2.tgz#c2af74cfc67453a268092b8b79dc08d971e53c56"
   integrity sha512-r8uJuUBm+sjn2/wACtHcbPsXSaewN2e10bKHDBWi7p8t+J+vedjuqTTWZDf0LLGM97WgrGk10DN4wPCdMf1Ypw==
