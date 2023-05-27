@@ -13,12 +13,12 @@ const Home = () => (
           backgroundPosition: '100% 80%',
           backgroundSize: '400px',
 
-          py: { base: 7, md: 9 },
+          py: { base: 7, md: 0 },
           px: { base: 0, md: 7 }
         }}
       >
         <Container variant="full">
-        <Container variant="readable" sx={{ margin: '0' }}>
+        <Container variant="readable" sx={{ margin: ['', '', 9] }}>
           <Grid sx={{ gap: 3 }}>
             <Text textStyle="caption">
               Vi vil skape en bedre verden gjennom teknologi
