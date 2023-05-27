@@ -27,13 +27,14 @@ export const BackgroundGraphic: React.FC<ReadableWithGraphicsProps> = ({
           backgroundImage: graphicalAddition,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: positionx === 'right' ? 'top right' : 'top left',
+          backgroundSize: 'contain',
           display: {
             base: 'none',
             xl: 'block',
           },
           pointerEvents: 'none',
-          width: '31.25rem',
-          height: '18.75rem',
+          width: '30rem',
+          height: '10rem',
         }}
       />
     </Box>

@@ -57,13 +57,13 @@ const theme = extendTheme({
     mono: 'Sora',
   },
   fontSizes: {
-    sm: 'clamp(0.8rem, 0.25vw + 0.74rem, 0.94rem)',
-    base: 'clamp(1rem, 0.45vw + 0.89rem, 1.25rem)',
-    md: 'clamp(1.25rem, 0.76vw + 1.06rem, 1.67rem)',
-    lg: 'clamp(1.56rem, 1.2vw + 1.26rem, 2.22rem)',
-    xl: 'clamp(1.95rem, 1.83vw + 1.5rem, 2.96rem)',
-    xxl: 'clamp(2.44rem, 2.74vw + 1.76rem, 3.95rem)',
-    xxxl: 'clamp(3.05rem, 4.02vw + 2.05rem, 5.26rem)',
+    sm: 'clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem)', // 13px
+    base: 'clamp(1rem, 0.34vw + 0.91rem, 1.19rem)', // 16px
+    md: 'clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem)', // 20px
+    lg: 'clamp(1.56rem, 1vw + 1.31rem, 2.11rem)', // 25px
+    xl: 'clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem)', // 31px
+    xxl: 'clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem)', // 39px
+    xxxl: 'clamp(3.05rem, 3.54vw + 2.17rem, 5rem)', // 49px
   },
   radii: {
     sm: '0.4rem',
@@ -91,11 +91,12 @@ const theme = extendTheme({
     7: '4rem',
     8: '6rem',
     9: '7rem',
+    10: '11rem',
   },
   textStyles: {
     caption: {
       color: 'dark100',
-      fontSize: 'xl',
+      fontSize: 'lg',
       fontWeight: 'semibold',
     },
     contact: {

@@ -1,23 +1,32 @@
-import { Container, Flex, Grid, Link, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, Grid, Link, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { BackgroundGraphic } from '../components/layout/background-graphic';
 import { Layout } from '../components/layout/layout';
-import { PageSection } from '../components/layout/page-section';
 
 const Home = () => (
   <Layout>
     <Grid sx={{ width: '100%' }}>
-      <PageSection backgroundColor="green">
+      <Box
+        sx={{
+          backgroundColor: 'green100',
+          backgroundImage: [, , 'url(/element1.svg)'],
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '100% 80%',
+          backgroundSize: '400px',
+
+          py: { base: 7, md: 9 },
+          width: '100%',
+        }}
+      >
         <Container variant="readable">
           <Grid sx={{ gap: 3 }}>
-            <Text textStyle="caption">Vår lidenskap er å skape</Text>
-            <Text textStyle="standard">
-              De siste 12 årene har vi forbedret og forenklet måten mennesker
-              lærer, tenker, jobber, og kommuniserer på gjennom å utvikle og
-              tilpasse programvare. Vi utvikler, integrerer, kobler sammen,
-              rådgir og samarbeider med deg om å lage produkter og tekniske
-              løsninger.
+            <Text textStyle="caption">
+              Verden til et bedre sted gjennom teknologi
             </Text>
+            <Text textStyle="standard">
+              Vi forbedret og forenklet måten mennesker lærer, tenker, jobber,
+              og kommuniserer på gjennom å utvikle og tilpasse produkter.
+            </Text>
+             <Link as={NextLink} href={'/about'} variant="emphasis">Bli med på reisen med oss</Link>
           </Grid>
 
           <Flex pt={{ base: 5, md: 8 }} flexDirection="column" width="80%">
@@ -39,19 +48,19 @@ const Home = () => (
             </Grid>
           </Flex>
         </Container>
-        <BackgroundGraphic
-          element="element1"
-          positionx="right"
-          positiony="39.5rem"
-        />
-      </PageSection>
+      </Box>
 
-      <PageSection>
-        <BackgroundGraphic
-          element="element2"
-          positionx="left"
-          positiony="60rem"
-        />
+      <Box
+        sx={{
+          backgroundColor: 'green20',
+          backgroundImage: [, , , 'url(/element2.svg)'],
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center left',
+          backgroundSize: [, , '', '150px'],
+
+          py: { base: 7, md: 10 },
+        }}
+      >
         <Container variant="readable">
           <Text textStyle="standard">
             Samarbeid, samspill, programvare som virker, iterativ utvikling,
@@ -62,7 +71,7 @@ const Home = () => (
             </Link>
           </Text>
         </Container>
-      </PageSection>
+      </Box>
     </Grid>
   </Layout>
 );
