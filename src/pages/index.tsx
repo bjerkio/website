@@ -14,13 +14,14 @@ const Home = () => (
           backgroundSize: '400px',
 
           py: { base: 7, md: 9 },
-          width: '100%',
+          px: { base: 0, md: 7 }
         }}
       >
-        <Container variant="readable">
+        <Container variant="full">
+        <Container variant="readable" sx={{ margin: '0' }}>
           <Grid sx={{ gap: 3 }}>
             <Text textStyle="caption">
-              Verden til et bedre sted gjennom teknologi
+              Vi vil skape en bedre verden gjennom teknologi
             </Text>
             <Text textStyle="standard">
               Vi forbedret og forenklet måten mennesker lærer, tenker, jobber,
@@ -47,6 +48,7 @@ const Home = () => (
               <Text textStyle="standard">LO Media</Text>
             </Grid>
           </Flex>
+        </Container>
         </Container>
       </Box>
 

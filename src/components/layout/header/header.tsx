@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
 
   return (
     <Flex p={{ base: 6, md: 7 }} backgroundColor={color}>
-      <Container variant="full" backgroundColor={color} p={0}>
+      <Container variant="full">
         <Flex
           sx={{
             flexDirection: 'row',
