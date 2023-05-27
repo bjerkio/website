@@ -14,41 +14,44 @@ const Home = () => (
           backgroundSize: '400px',
 
           py: { base: 7, md: 0 },
-          px: { base: 0, md: 7 }
+          px: { base: 0, md: 7 },
         }}
       >
         <Container variant="full">
-        <Container variant="readable" sx={{ margin: ['', '', 9] }}>
-          <Grid sx={{ gap: 3 }}>
-            <Text textStyle="caption">
-              Vi vil skape en bedre verden gjennom teknologi
-            </Text>
-            <Text textStyle="standard">
-              Vi forbedret og forenklet måten mennesker lærer, tenker, jobber,
-              og kommuniserer på gjennom å utvikle og tilpasse produkter.
-            </Text>
-             <Link as={NextLink} href={'/about'} variant="emphasis">Bli med på reisen med oss</Link>
-          </Grid>
-
-          <Flex pt={{ base: 5, md: 8 }} flexDirection="column" width="80%">
-            <Text textStyle="subtitle">Noen av våre seneste kunder</Text>
-            <Grid
-              templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 2fr' }}
-              gap={{ base: 3, md: 5 }}
-              justifyItems="left"
-              alignItems="center"
-              paddingTop={{ base: 3, md: 5 }}
-            >
-              <Text textStyle="standard">Folio</Text>
-              <Text textStyle="standard">Layer</Text>
-              <Text textStyle="standard">Grid branding</Text>
-
-              <Text textStyle="standard">DNB</Text>
-              <Text textStyle="standard">Digdir</Text>
-              <Text textStyle="standard">LO Media</Text>
+          <Container variant="readable" sx={{ margin: ['', '', 9] }}>
+            <Grid sx={{ gap: 3 }}>
+              <Text textStyle="caption">
+                Vi vil skape en bedre verden gjennom teknologi
+              </Text>
+              <Text textStyle="standard">
+                Vi forbedrer og forenkler måten mennesker lærer, tenker, jobber,
+                og kommuniserer på gjennom å utvikle og tilpasse digitale
+                produkter.
+              </Text>
+              <Link as={NextLink} href={'/about'} variant="emphasis">
+                Bli med på reisen med oss
+              </Link>
             </Grid>
-          </Flex>
-        </Container>
+
+            <Flex pt={{ base: 5, md: 8 }} flexDirection="column" width="80%">
+              <Text textStyle="subtitle">Noen av våre seneste kunder</Text>
+              <Grid
+                templateColumns={{ base: '1fr 1fr', md: '1fr 1fr 2fr' }}
+                gap={{ base: 3, md: 5 }}
+                justifyItems="left"
+                alignItems="center"
+                paddingTop={{ base: 3, md: 5 }}
+              >
+                <Text textStyle="standard">Folio</Text>
+                <Text textStyle="standard">Layer</Text>
+                <Text textStyle="standard">Grid branding</Text>
+
+                <Text textStyle="standard">DNB</Text>
+                <Text textStyle="standard">Digdir</Text>
+                <Text textStyle="standard">LO Media</Text>
+              </Grid>
+            </Flex>
+          </Container>
         </Container>
       </Box>
 
