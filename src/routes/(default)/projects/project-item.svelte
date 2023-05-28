@@ -39,6 +39,8 @@
 		flex-direction: row;
 		justify-content: space-between;
 		gap: var(--size-base);
+
+		color: var(--dark100);
 	}
 
 	.introduction {

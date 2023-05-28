@@ -32,22 +32,22 @@ const query = `
 
 const privacy = z.object({
 	hideName: z.boolean(),
-	anonymizedName: z.string().optional()
+	anonymizedName: z.string().nullable()
 });
 
 const customer = z.object({
 	name: z.string(),
-	privacy: privacy.optional(),
-	sameAs: z.array(z.string()).optional()
+	privacy: privacy.nullable(),
+	sameAs: z.array(z.string()).nullable()
 });
 
 const model = z.object({
 	_type: z.literal('project'),
 	name: z.string(),
 	description: z.string(),
-	customer: customer.optional(),
+	customer: customer.nullable(),
 	yearFrom: z.number(),
-	yearTo: z.number().optional(),
+	yearTo: z.number().nullable(),
 	links: z
 		.array(
 			z.object({
@@ -57,7 +57,7 @@ const model = z.object({
 				url: z.string()
 			})
 		)
-		.optional()
+		.nullable()
 });
 
 export type Project = z.infer<typeof model>;
