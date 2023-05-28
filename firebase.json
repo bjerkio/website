@@ -4,23 +4,13 @@
 			"target": "dev",
 			"public": "build",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-			"rewrites": [
-				{
-					"source": "**",
-					"destination": "/200.html"
-				}
-			]
+			"cleanUrls": true
 		},
 		{
 			"target": "prod",
 			"public": "build",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-			"rewrites": [
-				{
-					"source": "**",
-					"destination": "/200.html"
-				}
-			],
+      "cleanUrls": true,
 			"headers": [
 				{
 					"source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
