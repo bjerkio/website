@@ -39,9 +39,4 @@
 			grid-template-columns: 1fr;
 		}
 	}
-
-	.highlight {
-		font-size: var(--font-size-lg);
-		font-weight: 500;
-	}
 </style>
