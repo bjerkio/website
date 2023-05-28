@@ -1,17 +1,24 @@
+<script>
+	import Employees from './employees.svelte';
+</script>
+
 <div class="container">
 	<div class="section">
-		<p class="highlight">
+		<h1>
 			Bjerk er skapt for å forbedre og forenkle måten mennesker lærer, tenker, jobber og
 			kommuniserer på.
-		</p>
+    </h1>
 		<p>For oss, er det viktigste vi gjør er å bidra til å gjøre verden til et bedre sted.</p>
 		<a href="/">Les mer om hvordan vi jobber</a>
+	</div>
+	<div class="section employees">
+		<Employees />
 	</div>
 </div>
 
 <style>
 	.container {
-		width: 60ch;
+		max-width: 60ch;
 	}
 
 	.section,
@@ -22,7 +29,19 @@
 		gap: var(--size-md);
 	}
 
+  .employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    .employees {
+      grid-template-columns: 1fr;
+    }
+  }
+
 	.highlight {
 		font-size: var(--font-size-lg);
+    font-weight: 500;
 	}
 </style>
