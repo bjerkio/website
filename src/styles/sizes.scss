@@ -1,0 +1,29 @@
+:root {
+  // Fluid Type Scale polyfill, for browsers that don't support clamp
+  --font-size-sm: 0.8125rem; // 13px
+  --font-size-base: 1rem; // 16px
+  --font-size-md: 1.25rem; // 20px
+  --font-size-lg: 1.56rem; // 25px
+  --font-size-xl: 1.95rem; // 31px
+  --font-size-xxl: 2.44rem; // 39px
+  --font-size-xxxl: 3.05rem; // 49px
+
+  // Fluid Type Scale clamp
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem); // 13px
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem); // 16px
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem); // 20px
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem); // 25px
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem); // 31px
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem); // 39px
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem); // 49px
+
+  // Size Scale
+  --size-xs: 0.25rem; // 4px
+  --size-sm: 0.5rem; // 8px
+  --size-base: 1rem; // 16px
+  --size-md: 2rem; // 32px
+  --size-lg: 4rem; // 64px
+  --size-xl: 8rem; // 128px
+  --size-xxl: 16rem; // 256px
+  --size-xxxl: 32rem; // 512px
+}
