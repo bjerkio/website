@@ -1,7 +1,7 @@
 <script>
 	import Footer from '../components/footer.svelte';
 	import Header from '../components/header.svelte';
-  import Feature from './feature.svelte';
+	import Feature from './feature.svelte';
 	import Hero from './hero.svelte';
 </script>
 

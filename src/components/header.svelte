@@ -37,9 +37,9 @@
 					color: var(--text-color);
 					text-decoration: none;
 
-          &:hover {
-            font-weight: 500;
-          }
+					&:hover {
+						font-weight: 500;
+					}
 				}
 
 				&:first-child {

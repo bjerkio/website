@@ -28,11 +28,11 @@
 	}
 
 	.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--size-md);
-    
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: var(--size-md);
+
 		max-width: 60ch;
 		/* font-size: var(--font-size-md); */
 	}

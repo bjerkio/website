@@ -22,7 +22,7 @@
 </div>
 
 <style>
-  .hero-container {
+	.hero-container {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;

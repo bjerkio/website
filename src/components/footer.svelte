@@ -16,21 +16,21 @@
 		color: var(--text-color-light);
 	}
 
-  a {
-    color: var(--text-color-light);
-  }
+	a {
+		color: var(--text-color-light);
+	}
 
 	.container {
 		padding-top: var(--size-lg);
 		padding-bottom: var(--size-lg);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--size-md);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: var(--size-md);
 	}
 
-  .highlight {
-    font-size: var(--font-size-base);
-  }
+	.highlight {
+		font-size: var(--font-size-base);
+	}
 </style>
