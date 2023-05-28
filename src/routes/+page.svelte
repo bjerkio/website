@@ -24,11 +24,11 @@
 		background-position: right 80%;
 	}
 
-  @media (prefers-color-scheme: dark) {
-    .homepage-container {
-      background-image: url('/assets/speckled-dark.svg');
-    }
-  }
+	@media (prefers-color-scheme: dark) {
+		.homepage-container {
+			background-image: url('/assets/speckled-dark.svg');
+		}
+	}
 
 	@media (max-width: 1060px) {
 		.homepage-container {
