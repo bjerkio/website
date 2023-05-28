@@ -94,18 +94,18 @@
 
 	.name {
 		font-size: var(--font-size-md);
-    font-weight: 500;
+		font-weight: 500;
 	}
 
-  .social-media-links {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-xs);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-      font-size: var(--font-size-sm);
-    }
-  }
+	.social-media-links {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-xs);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			font-size: var(--font-size-sm);
+		}
+	}
 </style>
