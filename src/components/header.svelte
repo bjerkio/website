@@ -1,6 +1,10 @@
+<script>
+	import Logo from './logo.svelte';
+</script>
+
 <header>
 	<a class="logo" href="/">
-		<img src="/assets/logo.svg" alt="Bjerk logo" />
+		<Logo />
 	</a>
 	<nav>
 		<ul>
@@ -17,9 +21,6 @@
 		align-items: center;
 
 		.logo {
-			img {
-				width: 100%;
-			}
 			color: var(--text-color);
 			display: inline-block;
 		}

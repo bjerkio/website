@@ -16,16 +16,19 @@ $green100: rgba(144, 244, 148, 1);
 	--accent-color: var(--blue100);
 
 	--font-line-height: 1.75rem;
-	--text-color: #0f2040;
-	--text-color-light: #fff;
+	--text-color: var(--dark100);
+	--text-color-light: var(--green20);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: #273653;
-		--text-color: #edf9f1;
+		--text-color: var(--green20);
 		--foreground-color: #0f2040;
-		--text-color-light: #fff;
+		--text-color-light: var(--green20);
+
+		--accent-color: var(--green20);
+		--hero-background-color: var(--dark60);
 	}
 	:global(html) {
 		color-scheme: dark;
