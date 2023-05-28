@@ -3,12 +3,24 @@
 		{
 			"target": "dev",
 			"public": "build",
-			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/200.html"
+				}
+			]
 		},
 		{
 			"target": "prod",
 			"public": "build",
 			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/200.html"
+				}
+			],
 			"headers": [
 				{
 					"source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
