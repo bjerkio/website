@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { WithContext, LocalBusiness } from 'schema-dts';
-	import { serializeSchema } from '../utils';
-	// import '../styles/globals.scss';
+	import Metadata from '../components/metadata.svelte';
 
 	const localBusiness: WithContext<LocalBusiness> = {
 		'@context': 'https://schema.org',
@@ -24,9 +23,7 @@
 	};
 </script>
 
-<svelte:head>
-	{@html serializeSchema(localBusiness)}
-</svelte:head>
+<Metadata schema={localBusiness} />
 
 <slot>
 	<!-- +page.svelte is rendered here -->

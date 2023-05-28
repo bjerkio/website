@@ -4,8 +4,8 @@
 	</a>
 	<nav>
 		<ul>
-			<li><a href="/about">About us</a></li>
-			<li><a href="/contact">Contact</a></li>
+			<li><a href="/">About us</a></li>
+			<li><a href="/">Contact</a></li>
 		</ul>
 	</nav>
 </header>

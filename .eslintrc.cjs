@@ -25,6 +25,12 @@ module.exports = {
 			parserOptions: {
 				parser: '@typescript-eslint/parser'
 			}
+		},
+		{
+			files: ['src/components/metadata.svelte'],
+			rules: {
+				'svelte/no-at-html-tags': 'off'
+			}
 		}
 	]
 };
