@@ -10,28 +10,15 @@
 </script>
 
 <Employee
-	givenName="Thomas"
-	familyName="Brustad"
-	position="Rådgiver"
-	phone="+47 402 86 277"
-	email="thomas@bjerk.io"
-	image={thomas}
+	givenName="Simen A. W."
+	familyName="Olsen"
+	position="Daglig leder"
+	phone="+47 95 30 80 87"
+	email="simen@bjerk.io"
+	image={simen}
 	socialMedia={[
-		{ type: 'github', url: 'https://github.com/HanBrustad' },
-		{ type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' }
-	]}
-/>
-
-<Employee
-	givenName="Brage Sekse"
-	familyName="Aarset"
-	position="Programvareutvikler"
-	phone="+47 464 65 823"
-	email="brage@bjerk.io"
-	image={brage}
-	socialMedia={[
-		{ type: 'linkedin', url: 'https://www.linkedin.com/in/braaar/' },
-		{ type: 'github', url: 'https://github.com/braaar' }
+		{ type: 'linkedin', url: 'https://www.linkedin.com/in/simenandre/' },
+		{ type: 'github', url: 'https://github.com/simenandre' }
 	]}
 />
 
@@ -55,15 +42,41 @@
 />
 
 <Employee
-	givenName="Simen A. W."
-	familyName="Olsen"
-	position="Daglig leder"
-	phone="+47 95 30 80 87"
-	email="simen@bjerk.io"
-	image={simen}
+	givenName="Brage Sekse"
+	familyName="Aarset"
+	position="Programvareutvikler"
+	phone="+47 464 65 823"
+	email="brage@bjerk.io"
+	image={brage}
 	socialMedia={[
-		{ type: 'linkedin', url: 'https://www.linkedin.com/in/simenandre/' },
-		{ type: 'github', url: 'https://github.com/simenandre' }
+		{ type: 'linkedin', url: 'https://www.linkedin.com/in/braaar/' },
+		{ type: 'github', url: 'https://github.com/braaar' }
+	]}
+/>
+
+<Employee
+	givenName="Thomas"
+	familyName="Brustad"
+	position="Rådgiver"
+	phone="+47 402 86 277"
+	email="thomas@bjerk.io"
+	image={thomas}
+	socialMedia={[
+		{ type: 'github', url: 'https://github.com/HanBrustad' },
+		{ type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' }
+	]}
+/>
+
+<Employee
+	givenName="Markus"
+	familyName="Moripen"
+	position="Programvareutvikler"
+	phone="+47 970 30 084"
+	email="markus@bjerk.io"
+	image={markus}
+	socialMedia={[
+		{ type: 'linkedin', url: 'https://www.linkedin.com/in/moripen/' },
+		{ type: 'github', url: 'https://github.com/moripen' }
 	]}
 />
 
@@ -90,18 +103,5 @@
 	socialMedia={[
 		{ type: 'linkedin', url: 'https://www.linkedin.com/in/annachristinalyra/' },
 		{ type: 'github', url: 'https://github.com/ChristinaLyra' }
-	]}
-/>
-
-<Employee
-	givenName="Markus"
-	familyName="Moripen"
-	position="Programvareutvikler"
-	phone="+47 970 30 084"
-	email="markus@bjerk.io"
-	image={markus}
-	socialMedia={[
-		{ type: 'linkedin', url: 'https://www.linkedin.com/in/moripen/' },
-		{ type: 'github', url: 'https://github.com/moripen' }
 	]}
 />
