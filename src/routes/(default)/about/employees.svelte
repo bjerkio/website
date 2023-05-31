@@ -10,6 +10,19 @@
 </script>
 
 <Employee
+	givenName="Thomas"
+	familyName="Brustad"
+	position="Rådgiver"
+	phone="+47 402 86 277"
+	email="thomas@bjerk.io"
+	image={thomas}
+	socialMedia={[
+		{ type: 'github', url: 'https://github.com/HanBrustad' },
+		{ type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' }
+	]}
+/>
+
+<Employee
 	givenName="Simen A. W."
 	familyName="Olsen"
 	position="Daglig leder"
@@ -23,25 +36,6 @@
 />
 
 <Employee
-	givenName="Bjørn Niklas"
-	familyName="Sjøstrøm"
-	position="Rådgiver"
-	phone="+47 905 86 616"
-	email="bns@bjerk.io"
-	image={bns}
-	socialMedia={[
-		{
-			type: 'linkedin',
-			url: 'https://www.linkedin.com/in/bj%C3%B8rn-niklas-sj%C3%B8str%C3%B8m-8043277/'
-		},
-		{
-			type: 'github',
-			url: 'https://github.com/seacurrent'
-		}
-	]}
-/>
-
-<Employee
 	givenName="Brage Sekse"
 	familyName="Aarset"
 	position="Programvareutvikler"
@@ -51,19 +45,6 @@
 	socialMedia={[
 		{ type: 'linkedin', url: 'https://www.linkedin.com/in/braaar/' },
 		{ type: 'github', url: 'https://github.com/braaar' }
-	]}
-/>
-
-<Employee
-	givenName="Thomas"
-	familyName="Brustad"
-	position="Rådgiver"
-	phone="+47 402 86 277"
-	email="thomas@bjerk.io"
-	image={thomas}
-	socialMedia={[
-		{ type: 'github', url: 'https://github.com/HanBrustad' },
-		{ type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' }
 	]}
 />
 
@@ -103,5 +84,24 @@
 	socialMedia={[
 		{ type: 'linkedin', url: 'https://www.linkedin.com/in/annachristinalyra/' },
 		{ type: 'github', url: 'https://github.com/ChristinaLyra' }
+	]}
+/>
+
+<Employee
+	givenName="Bjørn Niklas"
+	familyName="Sjøstrøm"
+	position="Rådgiver"
+	phone="+47 905 86 616"
+	email="bns@bjerk.io"
+	image={bns}
+	socialMedia={[
+		{
+			type: 'linkedin',
+			url: 'https://www.linkedin.com/in/bj%C3%B8rn-niklas-sj%C3%B8str%C3%B8m-8043277/'
+		},
+		{
+			type: 'github',
+			url: 'https://github.com/seacurrent'
+		}
 	]}
 />
