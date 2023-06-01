@@ -7,6 +7,7 @@
 	import simen from '$assets/people/simen.jpg';
 	import simon from '$assets/people/simon.jpg';
 	import thomas from '$assets/people/thomas.jpg';
+	import sandra from '$assets/people/sandra.jpg'
 </script>
 
 <Employee
@@ -71,6 +72,25 @@
 	socialMedia={[
 		{ type: 'linkedin', url: 'https://www.linkedin.com/in/simon-rugland/' },
 		{ type: 'github', url: 'https://github.com/simonrugland' }
+	]}
+/>
+
+<Employee
+	givenName="Sandra Viktoria"
+	familyName="Toftemo"
+	position="Programvareutvikler"
+	phone="+47 406 30 694"
+	email="sandra.toftemo@bjerk.io"
+	image={sandra}
+	socialMedia={[
+		{
+			type: 'linkedin',
+			url: 'https://www.linkedin.com/in/sandra-viktoria-doseth-toftemo-b9b946227/'
+		},
+		{
+			type: 'github',
+			url: 'https://github.com/xillians'
+		}
 	]}
 />
 
