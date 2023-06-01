@@ -7,7 +7,7 @@
 	import simen from '$assets/people/simen.jpg';
 	import simon from '$assets/people/simon.jpg';
 	import thomas from '$assets/people/thomas.jpg';
-	import sandra from '$assets/people/sandra.jpg'
+	import sandra from '$assets/people/sandra.jpg';
 </script>
 
 <Employee
