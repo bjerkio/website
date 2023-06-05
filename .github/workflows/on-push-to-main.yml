@@ -53,7 +53,7 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           channelId: live
-          target: dev
+          target: prod
           projectId: bjerk-io
 
       # - uses: atymic/sitemap-ping-action@master
