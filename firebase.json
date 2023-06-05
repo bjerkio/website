@@ -1,37 +1,27 @@
 {
-  "hosting": [
-    {
-      "target": "dev",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
-      "target": "prod",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "headers": [
-        {
-          "source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=31536000"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+	"hosting": [
+		{
+			"target": "dev",
+			"public": "build",
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"cleanUrls": true
+		},
+		{
+			"target": "prod",
+			"public": "build",
+			"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+			"cleanUrls": true,
+			"headers": [
+				{
+					"source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=31536000"
+						}
+					]
+				}
+			]
+		}
+	]
 }

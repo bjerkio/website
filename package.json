@@ -1,39 +1,40 @@
 {
-  "private": true,
-  "name": "bjerk-website",
-  "version": "0.1.0",
-  "scripts": {
-    "build": "next build",
-    "postbuild": "next export",
-    "dev": "next dev",
-    "format": "prettier --write . --ignore-path .gitignore ",
-    "format:check": "prettier --check . --ignore-path .gitignore",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.14",
-    "@chakra-ui/react": "^2.4.4",
-    "@chakra-ui/theme-tools": "^2.0.14",
-    "@emotion/react": "^11.10.8",
-    "@emotion/styled": "^11.10.8",
-    "@next/font": "^13.3.2",
-    "framer-motion": "^10.0.0",
-    "next": "^13.3.2",
-    "react": "^18.2.0",
-    "react-calendly": "^2.2.3",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@chakra-ui/cli": "^2.2.1",
-    "@simenandre/prettier": "^3.0.2",
-    "@types/node": "^18.16.3",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.1",
-    "eslint": "^8.39.0",
-    "eslint-config-next": "^13.3.2",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
-  },
-  "prettier": "@simenandre/prettier"
+	"name": "my-app",
+	"version": "0.0.1",
+	"private": true,
+	"packageManager": "pnpm@8.5.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^2.0.2",
+		"@sveltejs/kit": "^1.5.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.26.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"schema-dts": "^1.1.2",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^4.3.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@fontsource-variable/sora": "^5.0.1",
+		"@sanity/client": "^6.1.2",
+		"sass": "^1.62.1",
+		"svelte-preprocess": "^5.0.4",
+		"zod": "^3.21.4"
+	}
 }
