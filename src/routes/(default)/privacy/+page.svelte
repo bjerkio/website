@@ -21,13 +21,12 @@
 		andre formål enn å levere tjenesten, og vil ikke dele personopplysningene med andre. Vi vil
 		slette personopplysningene når de ikke lenger er nødvendige for å levere tjenesten.
 	</p>
-  <p>
+	<p>
 		Les mer om Chatwoot personvernerklæring her:
 		<a href="https://www.chatwoot.com/privacy-policy/">
 			https://www.chatwoot.com/privacy-policy/
 		</a>
 	</p>
-
 
 	<h2>Kontakt oss</h2>
 
