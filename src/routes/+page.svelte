@@ -1,12 +1,24 @@
 <script>
 	import Footer from '../components/footer.svelte';
 	import Header from '../components/header.svelte';
+	import { isBjerkDeveloper } from '../stores';
 	import Feature from './feature.svelte';
 	import Hero from './hero.svelte';
+
+	let isBjerkDeveloperValue = false;
+
+	isBjerkDeveloper.subscribe((value) => {
+		isBjerkDeveloperValue = value;
+	});
+
+	function handleClick() {
+		isBjerkDeveloper.update((value) => !value);
+	}
 </script>
 
 <div class="homepage-container">
 	<div class="container">
+		<button on:click={handleClick}>hallo {isBjerkDeveloperValue}</button>
 		<Header />
 		<Hero />
 	</div>

@@ -1,5 +1,21 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+	import { isBjerkDeveloper } from '../stores';
 	import Logo from './logo.svelte';
+
+	let isBjerkDeveloperValue = false;
+
+	isBjerkDeveloper.subscribe((value) => {
+		isBjerkDeveloperValue = value;
+		if (browser && window.$chatwoot) {
+			if (!window.chatwootSettings) {
+				window.chatwootSettings = { hideMessageBubble: !value };
+			} else {
+				window.chatwootSettings.hideMessageBubble = !value;
+			}
+			window.$chatwoot.toggleBubbleVisibility(value ? 'show' : 'hide');
+		}
+	});
 
 	if (typeof window !== 'undefined') {
 		const BASE_URL = 'https://app.chatwoot.com';
@@ -12,6 +28,7 @@
 		g.onload = function () {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			(window as any).chatwootSDK.run({
+				hideMessageBubble: true,
 				websiteToken: 'm94Z8YzguKbGc1XnowaNjHfM',
 				baseUrl: BASE_URL
 			});
