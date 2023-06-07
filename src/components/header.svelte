@@ -1,22 +1,5 @@
-<script lang="ts">
+<script>
 	import Logo from './logo.svelte';
-
-	if (typeof window !== 'undefined') {
-		const BASE_URL = 'https://app.chatwoot.com';
-		const g = document.createElement('script');
-		const s = document.getElementsByTagName('script')[0];
-		g.src = BASE_URL + '/packs/js/sdk.js';
-		g.defer = true;
-		g.async = true;
-		s.parentNode?.insertBefore(g, s);
-		g.onload = function () {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			(window as any).chatwootSDK.run({
-				websiteToken: 'm94Z8YzguKbGc1XnowaNjHfM',
-				baseUrl: BASE_URL
-			});
-		};
-	}
 </script>
 
 <header>
