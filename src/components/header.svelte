@@ -1,10 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { isBjerkDeveloper } from '../stores';
-	import { getToggles, isEnabled } from '../toggles';
+	import { isEnabled } from '../toggles';
 	import Logo from './logo.svelte';
-
-	import { onMount } from 'svelte';
 
 	if (typeof window !== 'undefined' && isEnabled('chat')) {
 		const BASE_URL = 'https://app.chatwoot.com';
