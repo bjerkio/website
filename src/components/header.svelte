@@ -1,23 +1,12 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { isBjerkDeveloper } from '../stores';
+	import { getToggles, isEnabled } from '../toggles';
 	import Logo from './logo.svelte';
 
-	let isBjerkDeveloperValue = false;
+	import { onMount } from 'svelte';
 
-	isBjerkDeveloper.subscribe((value) => {
-		isBjerkDeveloperValue = value;
-		if (browser && window.$chatwoot) {
-			if (!window.chatwootSettings) {
-				window.chatwootSettings = { hideMessageBubble: !value };
-			} else {
-				window.chatwootSettings.hideMessageBubble = !value;
-			}
-			window.$chatwoot.toggleBubbleVisibility(value ? 'show' : 'hide');
-		}
-	});
-
-	if (typeof window !== 'undefined') {
+	if (typeof window !== 'undefined' && isEnabled('chat')) {
 		const BASE_URL = 'https://app.chatwoot.com';
 		const g = document.createElement('script');
 		const s = document.getElementsByTagName('script')[0];
@@ -28,7 +17,6 @@
 		g.onload = function () {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			(window as any).chatwootSDK.run({
-				hideMessageBubble: true,
 				websiteToken: 'm94Z8YzguKbGc1XnowaNjHfM',
 				baseUrl: BASE_URL
 			});
