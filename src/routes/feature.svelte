@@ -5,7 +5,7 @@
 			og Super Mario-effekten er noe av det vi mener kreves for å lykkes.
 		</p>
 
-		<a href="/">Les mer om oss og hvordan vi jobber</a>
+		<a href="/about">Les mer om oss og hvordan vi jobber</a>
 	</div>
 </div>
 
