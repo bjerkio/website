@@ -45,7 +45,7 @@ export async function getProjects(): Promise<Project[]> {
 			const customer = project.customer?.privacy?.hideName
 				? {
 						...project.customer,
-						name: project.customer?.privacy?.anonymizedName ?? 'Anonymt'
+						name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
 				  }
 				: project.customer;
 
