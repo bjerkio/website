@@ -1,5 +1,5 @@
 <script lang="ts">
-  import InlineImage from '../../../../components/inline-image.svelte';
+	import InlineImage from '../../../../components/inline-image.svelte';
 	import type { PageData } from './$types';
 	import { PortableText } from '@portabletext/svelte';
 	export let data: PageData;
@@ -49,11 +49,14 @@
 
 {#if project.body}
 	<div class="container story">
-		<PortableText value={project.body} components={{
-      types: {
-        image: InlineImage,
-      }
-    }} />
+		<PortableText
+			value={project.body}
+			components={{
+				types: {
+					image: InlineImage
+				}
+			}}
+		/>
 	</div>
 {/if}
 
