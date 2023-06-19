@@ -32,7 +32,9 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/sora": "^5.0.1",
+		"@portabletext/svelte": "^2.0.0",
 		"@sanity/client": "^6.1.2",
+		"@sanity/image-url": "^1.0.2",
 		"sass": "^1.62.1",
 		"svelte-preprocess": "^5.0.4",
 		"zod": "^3.21.4"
