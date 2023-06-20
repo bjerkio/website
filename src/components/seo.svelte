@@ -5,6 +5,7 @@
 	import { urlFor } from '../data/sanity-client-browser';
 
 	export let title: string | undefined = undefined;
+	export let description: string | undefined = undefined;
 	export let data: MetaTagsProps = {};
 	export let seo: Seo | null = null;
 
@@ -23,7 +24,7 @@
 <MetaTags
 	{...data}
 	titleTemplate={data.title ? '%s – Bjerk' : 'Bjerk - Digitale produktutviklere'}
-	description={seo?.description ?? data.description ?? defaultDescription}
+	description={seo?.description ?? description ?? data.description ?? defaultDescription}
 	openGraph={{
 		site_name: 'Bjerk',
 		title: seo?.title ?? data.title ?? 'Bjerk',
