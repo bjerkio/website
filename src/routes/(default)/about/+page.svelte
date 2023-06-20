@@ -1,6 +1,9 @@
 <script>
+	import Seo from '../../../components/seo.svelte';
 	import Employees from './employees.svelte';
 </script>
+
+<Seo title="Om oss" />
 
 <div class="container">
 	<div class="section">

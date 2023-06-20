@@ -32,6 +32,12 @@ const query = `
     },
     links[]{
       _type, name, target, url
+    },
+    seo {
+      title,
+      description,
+      image,
+      keywords
     }
   }
 `;

@@ -1,3 +1,9 @@
+<script>
+	import Seo from '../../../components/seo.svelte';
+</script>
+
+<Seo title="Personvernerklæring" />
+
 <div class="content">
 	<h1>Personvern­erklæring</h1>
 

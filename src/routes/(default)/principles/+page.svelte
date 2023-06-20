@@ -1,3 +1,9 @@
+<script>
+	import Seo from '../../../components/seo.svelte';
+</script>
+
+<Seo title="Prinsipper" />
+
 <div class="container">
 	<div class="section">
 		<h1>Kompetanse og teknologi, kombinert med et brukervennlig design, er viktig for å lykkes</h1>

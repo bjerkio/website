@@ -9,7 +9,7 @@ export const prerender = true;
 
 export const entries = (() => {
 	const urls = projects
-		.filter((project) => project.preamble)
+		.filter((project) => project.slug)
 		.map((project) => ({
 			slug: project.slug.current
 		}));

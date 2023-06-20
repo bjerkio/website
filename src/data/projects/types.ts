@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { seoModel } from '../types';
 
 export const privacyModel = z.object({
 	hideName: z.boolean(),
@@ -48,7 +49,8 @@ export const projectModel = z.object({
 				url: z.string()
 			})
 		)
-		.nullable()
+		.nullable(),
+	seo: seoModel.nullable()
 });
 
 export type Project = z.infer<typeof projectModel>;

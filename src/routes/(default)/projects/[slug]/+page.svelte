@@ -2,16 +2,25 @@
 	import InlineImage from '../../../../components/inline-image.svelte';
 	import type { PageData } from './$types';
 	import { PortableText } from '@portabletext/svelte';
+	import Seo from '../../../../components/seo.svelte';
 	export let data: PageData;
 
 	const { project } = data;
 </script>
 
+<Seo
+	title={project.name}
+	seo={project.seo}
+	defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
+/>
+
 <div class="container introduction">
-	<h1>{project.name}</h1>
+	<h1>{project.title ?? project.name}</h1>
 	<div class="content">
 		<div class="body">
-			<PortableText value={project.preamble} />
+			{#if project.preamble}
+				<PortableText value={project.preamble} />
+			{/if}
 			<div class="links">
 				{#if project.links}
 					{#each project.links as link}
@@ -20,24 +29,24 @@
 				{/if}
 			</div>
 		</div>
-		<div class="metadata">
-			<dl>
-				<dt>Teknologi</dt>
-				<dd>
-					<ul class="badges">
-						{#if project.technologies}
+		<dl class="metadata">
+			<div>
+				{#if project.technologies}
+					<dt>Teknologi</dt>
+					<dd>
+						<ul class="badges">
 							{#each project.technologies as technology}
 								<li>{technology.name}</li>
 							{/each}
-						{/if}
-					</ul>
-				</dd>
-			</dl>
-			<dl>
+						</ul>
+					</dd>
+				{/if}
+			</div>
+			<div>
 				<dt>Oppdragsgiver / samarbeidspartner</dt>
 				<dd>{project.customer?.name}</dd>
-			</dl>
-		</div>
+			</div>
+		</dl>
 	</div>
 </div>
 
@@ -96,20 +105,16 @@
 		flex-direction: column;
 		gap: var(--size-base);
 
-		dl {
+		div {
 			display: flex;
 			flex-direction: column;
 			gap: var(--size-xs);
 
 			dt {
 				font-weight: bold;
-
-				dt {
-					font-weight: normal;
-				}
-				dd {
-					font-weight: normal;
-				}
+			}
+			dd {
+				font-weight: normal;
 			}
 		}
 	}
