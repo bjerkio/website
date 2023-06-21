@@ -10,7 +10,7 @@
 
 <Seo
 	title={project.name}
-  description={project.description}
+	description={project.description}
 	seo={project.seo}
 	defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
 />
