@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { isEnabled } from '../toggles';
 	import Logo from './logo.svelte';
 
-	if (typeof window !== 'undefined' && isEnabled('chat')) {
+	if (typeof window !== 'undefined') {
 		const BASE_URL = 'https://app.chatwoot.com';
 		const g = document.createElement('script');
 		const s = document.getElementsByTagName('script')[0];
