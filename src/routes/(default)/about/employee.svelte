@@ -22,7 +22,8 @@
 	const name = `${givenName} ${familyName}`;
 </script>
 
-<JsonLd schema={{
+<JsonLd
+	schema={{
 		'@context': 'https://schema.org',
 		'@type': 'Person',
 		givenName,
@@ -39,7 +40,8 @@
 				}
 			}
 		]
-	}} />
+	}}
+/>
 
 <div class="employee">
 	<Image src={image} class="profile-image" alt={name} />

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MetaTags, type MetaTagsProps } from 'svelte-meta-tags';
+	import { MetaTags, type MetaTagsProps } from 'svelte-meta-tags';
 	import type { Seo } from '../data/types';
 	import dedent from 'dedent';
 	import { urlFor } from '../data/sanity-client-browser';
