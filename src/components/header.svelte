@@ -26,8 +26,8 @@
 	<nav>
 		<ul>
 			<li><a href="/about">Om oss</a></li>
-			<li><a href="/principles">Prinsipper</a></li>
 			<li><a href="/projects">Prosjekter</a></li>
+      <li><a href="/contact">Kontakt</a></li>
 		</ul>
 	</nav>
 </header>
