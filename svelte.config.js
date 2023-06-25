@@ -16,7 +16,8 @@ const config = {
 		adapter: adapter(),
 
 		alias: {
-			$assets: './src/assets'
+			$assets: './src/assets',
+			$components: './src/components'
 		}
 
 		// csp: {
