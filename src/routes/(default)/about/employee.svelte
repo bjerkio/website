@@ -17,6 +17,7 @@
 	};
 
 	export let socialMedia: socialMedia[] = [];
+  // TODO: Use Picture type from components/image.svelte
 	export let image: any;
 
 	const name = `${givenName} ${familyName}`;
