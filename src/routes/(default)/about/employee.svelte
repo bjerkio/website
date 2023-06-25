@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { WithContext, Person } from 'schema-dts';
-  import GitHubLogo from "phosphor-svelte/lib/GitHubLogo";
-  import LinkedInLogo from "phosphor-svelte/lib/LinkedInLogo";
+	import GitHubLogo from 'phosphor-svelte/lib/GitHubLogo';
+	import LinkedInLogo from 'phosphor-svelte/lib/LinkedInLogo';
 	import Metadata from '$components/metadata.svelte';
 	import Image from '$components/image.svelte';
 
@@ -89,7 +89,7 @@
 	}
 
 	.intro {
-    min-height: 70px;
+		min-height: 70px;
 
 		.name {
 			font-size: var(--font-size-base);
@@ -104,9 +104,9 @@
 	.details {
 		font-size: var(--font-size-sm);
 
-    a {
-      color: var(--dark80);
-    }
+		a {
+			color: var(--dark80);
+		}
 	}
 
 	.social-media-links {
@@ -118,9 +118,9 @@
 		margin: 0;
 		li {
 			font-size: var(--font-size-md);
-      a {
-        color: var(--dark80);
-      }
+			a {
+				color: var(--dark80);
+			}
 		}
 	}
 </style>

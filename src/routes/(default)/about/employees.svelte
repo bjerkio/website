@@ -10,7 +10,6 @@
 	import sandra from '$assets/people/sandra.jpg?w=300&h=400';
 </script>
 
-
 <Employee
 	givenName="Thomas"
 	familyName="Brustad"
