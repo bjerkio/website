@@ -1,8 +1,8 @@
 <script>
-	import Seo from '../../../components/seo.svelte';
+	import Metadata from '$components/metadata.svelte';
 </script>
 
-<Seo title="Prinsipper" />
+<Metadata title="Prinsipper" />
 
 <div class="container">
 	<div class="section">

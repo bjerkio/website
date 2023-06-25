@@ -1,14 +1,14 @@
 <script lang="ts">
-	import InlineImage from '../../../../components/inline-image.svelte';
+	import InlineImage from '$components/inline-image.svelte';
 	import type { PageData } from './$types';
 	import { PortableText } from '@portabletext/svelte';
-	import Seo from '../../../../components/seo.svelte';
+	import Metadata from '$components/metadata.svelte';
 	export let data: PageData;
 
 	const { project } = data;
 </script>
 
-<Seo
+<Metadata
 	title={project.name}
 	description={project.description}
 	seo={project.seo}

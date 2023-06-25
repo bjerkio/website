@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { WithContext, LocalBusiness } from 'schema-dts';
-	import Metadata from '../components/metadata.svelte';
+	import { JsonLd } from 'svelte-meta-tags';
+</script>
 
-	const localBusiness: WithContext<LocalBusiness> = {
+<JsonLd
+	schema={{
 		'@context': 'https://schema.org',
 		'@type': 'LocalBusiness',
 		name: 'Bjerk AS',
@@ -20,10 +21,8 @@
 			postalCode: '0180',
 			addressCountry: 'NO'
 		}
-	};
-</script>
-
-<Metadata schema={localBusiness} />
+	}}
+/>
 
 <slot>
 	<!-- +page.svelte is rendered here -->

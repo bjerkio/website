@@ -1,12 +1,12 @@
 <script>
-	import Footer from '../components/footer.svelte';
-	import Header from '../components/header.svelte';
-	import Seo from '../components/seo.svelte';
+	import Footer from '$components/footer.svelte';
+	import Header from '$components/header.svelte';
+	import Metadata from '$components/metadata.svelte';
 	import Feature from './feature.svelte';
 	import Hero from './hero.svelte';
 </script>
 
-<Seo />
+<Metadata />
 
 <div class="homepage-container">
 	<div class="container">

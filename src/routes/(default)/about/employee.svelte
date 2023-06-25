@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { WithContext, Person } from 'schema-dts';
 	import GithubLogo from 'phosphor-svelte/lib/GithubLogo';
 	import LinkedinLogo from 'phosphor-svelte/lib/LinkedinLogo';
-	import Metadata from '$components/metadata.svelte';
 	import Image from '$components/image.svelte';
+	import { JsonLd } from 'svelte-meta-tags';
 
 	export let givenName: string;
 	export let familyName: string;
@@ -21,8 +20,9 @@
 	export let image: any;
 
 	const name = `${givenName} ${familyName}`;
+</script>
 
-	const person: WithContext<Person> = {
+<JsonLd schema={{
 		'@context': 'https://schema.org',
 		'@type': 'Person',
 		givenName,
@@ -39,10 +39,7 @@
 				}
 			}
 		]
-	};
-</script>
-
-<Metadata schema={person} />
+	}} />
 
 <div class="employee">
 	<Image src={image} class="profile-image" alt={name} />

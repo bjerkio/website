@@ -1,9 +1,9 @@
 <script>
-	import Seo from '../../../components/seo.svelte';
+	import Metadata from '$components/metadata.svelte';
 	import Employees from './employees.svelte';
 </script>
 
-<Seo title="Om oss" />
+<Metadata title="Om oss" />
 
 <div class="container">
 	<div class="section">

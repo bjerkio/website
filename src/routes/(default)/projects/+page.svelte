@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Seo from '../../../components/seo.svelte';
+	import Metadata from '$components/metadata.svelte';
 	import type { PageData } from './$types';
 	import ProjectItem from './project-item.svelte';
 	export let data: PageData;
 </script>
 
-<Seo title="Prosjekter" />
+<Metadata title="Prosjekter" />
 
 <div class="container projects">
 	{#each data.projects as project}
