@@ -18,7 +18,7 @@ const config = {
 		alias: {
 			$assets: './src/assets',
 			$components: './src/components',
-      $styles: './src/styles',
+			$styles: './src/styles'
 		}
 
 		// csp: {

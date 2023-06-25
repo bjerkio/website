@@ -27,7 +27,7 @@
 		<ul>
 			<li><a href="/about">Om oss</a></li>
 			<li><a href="/projects">Prosjekter</a></li>
-      <li><a href="/contact">Kontakt</a></li>
+			<li><a href="/contact">Kontakt</a></li>
 		</ul>
 	</nav>
 </header>

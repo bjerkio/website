@@ -1,6 +1,6 @@
 @mixin button {
 	box-shadow: var(--border-radius-base);
-  border: 0px;
+	border: 0px;
 
 	cursor: pointer;
 	display: inline-block;
@@ -9,20 +9,20 @@
 	text-decoration: none;
 
 	padding: var(--size-base) var(--size-md);
-  background-color: transparent;
+	background-color: transparent;
 	border: 0.15rem solid var(--foreground-color);
 	color: var(--text-color);
-  font-size: var(--font-size-base);
-  border-radius: 80px;
+	font-size: var(--font-size-base);
+	border-radius: 80px;
 
-  transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+	transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
 
 	&:hover {
 		text-decoration: none;
 
-    background-color: var(--green100);
-    transform: scale(1.15) rotate(-3deg);
-    border-color: transparent;
+		background-color: var(--green100);
+		transform: scale(1.15) rotate(-3deg);
+		border-color: transparent;
 	}
 
 	&:active {
