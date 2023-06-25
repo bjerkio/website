@@ -1,14 +1,15 @@
 <script>
 	import Employee from './employee.svelte';
-	import bns from '$assets/people/bns.jpg';
-	import brage from '$assets/people/brage.jpg';
-	import christina from '$assets/people/christina.jpg';
-	import markus from '$assets/people/markus.jpg';
-	import simen from '$assets/people/simen.jpg';
-	import simon from '$assets/people/simon.jpg';
-	import thomas from '$assets/people/thomas.jpg';
-	import sandra from '$assets/people/sandra.jpg';
+	import bns from '$assets/people/bns.jpg?w=300&h=400';
+	import brage from '$assets/people/brage.jpg?w=300&h=400';
+	import christina from '$assets/people/christina.jpg?w=300&h=400';
+	import markus from '$assets/people/markus.jpg?w=300&h=400';
+	import simen from '$assets/people/simen.jpg?w=300&h=400';
+	import simon from '$assets/people/simon.jpg?w=300&h=400';
+	import thomas from '$assets/people/thomas.jpg?w=300&h=400';
+	import sandra from '$assets/people/sandra.jpg?w=300&h=400';
 </script>
+
 
 <Employee
 	givenName="Thomas"
@@ -110,7 +111,7 @@
 <Employee
 	givenName="Bjørn Niklas"
 	familyName="Sjøstrøm"
-	position="Rådgiver"
+	position="Styreleder"
 	phone="+47 905 86 616"
 	email="bns@bjerk.io"
 	image={bns}
