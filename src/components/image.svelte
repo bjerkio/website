@@ -1,5 +1,5 @@
 <script>
-  // TODO: Refactor to use Typescript
+	// TODO: Refactor to use Typescript
 	/**
 	 * @typedef {Object} Picture
 	 * @property {Object} sources - The object containing different sources of image data.

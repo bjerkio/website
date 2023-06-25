@@ -1,5 +1,5 @@
 <script lang="ts">
-  // TODO: Refactor to use image.svelte component for image processing
+	// TODO: Refactor to use image.svelte component for image processing
 	import type { CustomBlockComponentProps } from '@portabletext/svelte';
 	import { urlFor } from '../data/sanity-client-browser';
 
