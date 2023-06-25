@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { WithContext, Person } from 'schema-dts';
-	import GitHubLogo from 'phosphor-svelte/lib/GitHubLogo';
-	import LinkedInLogo from 'phosphor-svelte/lib/LinkedInLogo';
+  import GithubLogo from 'phosphor-svelte/lib/GithubLogo';
+  import LinkedinLogo from 'phosphor-svelte/lib/LinkedinLogo';
 	import Metadata from '$components/metadata.svelte';
 	import Image from '$components/image.svelte';
 
@@ -59,10 +59,10 @@
 			<ul class="social-media-links">
 				{#each socialMedia as link}
 					{#if link.type == 'linkedin'}
-						<li><a href={link.url} target="_blank" rel="noopener"><LinkedInLogo /></a></li>
+						<li><a href={link.url} target="_blank" rel="noopener"><LinkedinLogo /></a></li>
 					{/if}
 					{#if link.type == 'github'}
-						<li><a href={link.url} target="_blank" rel="noopener"><GitHubLogo /></a></li>
+						<li><a href={link.url} target="_blank" rel="noopener"><GithubLogo /></a></li>
 					{/if}
 				{/each}
 			</ul>
