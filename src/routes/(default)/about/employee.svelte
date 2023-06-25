@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { WithContext, Person } from 'schema-dts';
-  import GithubLogo from 'phosphor-svelte/lib/GithubLogo';
-  import LinkedinLogo from 'phosphor-svelte/lib/LinkedinLogo';
+	import GithubLogo from 'phosphor-svelte/lib/GithubLogo';
+	import LinkedinLogo from 'phosphor-svelte/lib/LinkedinLogo';
 	import Metadata from '$components/metadata.svelte';
 	import Image from '$components/image.svelte';
 
