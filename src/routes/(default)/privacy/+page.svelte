@@ -1,8 +1,8 @@
 <script>
-	import Seo from '../../../components/seo.svelte';
+	import Metadata from '../../../components/metadata.svelte';
 </script>
 
-<Seo title="Personvernerklæring" />
+<Metadata title="Personvernerklæring" />
 
 <div class="content">
 	<h1>Personvern­erklæring</h1>
