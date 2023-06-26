@@ -31,7 +31,7 @@
 <style lang="scss">
 	.project {
 		/* border: 5px solid var(--blue20); */
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		padding: var(--size-md);
 		border-radius: var(--border-radius-sm);
 
