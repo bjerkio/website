@@ -11,7 +11,7 @@
 	padding: var(--size-base) var(--size-md);
 	background-color: transparent;
 	border: 0.15rem solid var(--foreground-color);
-	color: var(--text-color);
+	color: inherit;
 	border-radius: 80px;
 
 	transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
