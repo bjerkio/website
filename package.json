@@ -46,6 +46,7 @@
 		"sass": "^1.62.1",
 		"svelte-meta-tags": "^2.8.0",
 		"svelte-preprocess": "^5.0.4",
+		"ts-invariant": "^0.10.3",
 		"zod": "^3.21.4"
 	}
 }

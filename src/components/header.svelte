@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MobileNav from './mobile-nav.svelte';
 	import Logo from './logo.svelte';
 
 	if (typeof window !== 'undefined') {
@@ -29,6 +30,9 @@
 			<li><a href="/projects">Prosjekter</a></li>
 			<li><a href="/contact">Kontakt</a></li>
 		</ul>
+		<div class="mobile-nav">
+			<MobileNav />
+		</div>
 	</nav>
 </header>
 
@@ -45,12 +49,18 @@
 	}
 
 	nav {
+		display: flex;
+		list-style: none;
+		gap: var(--size-base);
+		align-items: center;
+
 		ul {
 			display: flex;
 			list-style: none;
+			gap: var(--size-base);
 
 			li {
-				margin-left: 1rem;
+				font-size: var(--font-size-sm);
 
 				a {
 					color: var(--text-color);
@@ -65,6 +75,21 @@
 					margin-left: 0;
 				}
 			}
+		}
+	}
+
+	.mobile-nav {
+		display: none;
+	}
+
+	@media (max-width: 430px) {
+		header {
+			nav ul li:not(.emphasis) {
+				display: none;
+			}
+		}
+		.mobile-nav {
+			display: block;
 		}
 	}
 </style>
