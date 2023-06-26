@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	onMount(() => {
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		(window as any).chatwootSDK.run({
-			websiteToken: 'm94Z8YzguKbGc1XnowaNjHfM',
-			baseUrl: 'https://app.chatwoot.com'
-		});
+		const chatwoot = window.chatwootSDK;
+		if (chatwoot) {
+			chatwoot.run({
+				websiteToken: 'm94Z8YzguKbGc1XnowaNjHfM',
+				baseUrl: 'https://app.chatwoot.com'
+			});
+		}
 	});
 </script>
 
