@@ -2,7 +2,7 @@
 	import Metadata from '$components/metadata.svelte';
 </script>
 
-<Metadata title="Prinsipper" />
+<Metadata title="Prinsipper" path="/about/principles" />
 
 <div class="container">
 	<div class="section">

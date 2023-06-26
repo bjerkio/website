@@ -8,6 +8,7 @@
 	export let description: string | undefined = undefined;
 	export let data: MetaTagsProps = {};
 	export let seo: Seo | null = null;
+	export let path: string | undefined = undefined;
 
 	export let defaultImage = '/assets/bjerk-default-seo.png';
 
@@ -27,6 +28,7 @@
 	{...data}
 	titleTemplate={data.title ? '%s – Bjerk' : 'Bjerk - Digitale produktutviklere'}
 	description={seo?.description ?? description ?? data.description ?? defaultDescription}
+	canonical={path ? new URL(path, 'https://bjerk.io').toString() : undefined}
 	openGraph={{
 		site_name: 'Bjerk',
 		title: seo?.title ?? data.title ?? 'Bjerk',
@@ -35,7 +37,8 @@
 			{
 				url: image
 			}
-		]
+		],
+		...(path ? { canonical: new URL(path, 'https://bjerk.io').toString() } : {})
 	}}
 	twitter={{
 		cardType: 'summary_large_image',

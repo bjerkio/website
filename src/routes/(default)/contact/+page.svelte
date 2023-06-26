@@ -3,7 +3,7 @@
 	import Employees from '$components/employees.svelte';
 </script>
 
-<Metadata title="Om oss" />
+<Metadata title="Om oss" path="/contact" />
 
 <div class="container">
 	<div class="section elevator">

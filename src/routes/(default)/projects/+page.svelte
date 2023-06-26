@@ -5,7 +5,7 @@
 	export let data: PageData;
 </script>
 
-<Metadata title="Prosjekter" />
+<Metadata title="Prosjekter" path="/projects" />
 
 <div class="container projects">
 	{#each data.projects as project}

@@ -12,6 +12,7 @@
 	title={project.name}
 	description={project.description}
 	seo={project.seo}
+	path={`/projects/${project.slug?.current}`}
 	defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
 />
 

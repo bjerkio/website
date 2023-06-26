@@ -2,7 +2,7 @@
 	import Metadata from '../../../components/metadata.svelte';
 </script>
 
-<Metadata title="Personvernerklæring" />
+<Metadata title="Personvernerklæring" path="/privacy" />
 
 <div class="content">
 	<h1>Personvern­erklæring</h1>

@@ -6,7 +6,7 @@
 	import Hero from './hero.svelte';
 </script>
 
-<Metadata />
+<Metadata path="/" />
 
 <div class="homepage-container">
 	<div class="container">
