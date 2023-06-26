@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Chatwoot from '$components/chatwoot.svelte';
 	import { JsonLd } from 'svelte-meta-tags';
 </script>
 
@@ -23,6 +24,8 @@
 		}
 	}}
 />
+
+<Chatwoot />
 
 <slot>
 	<!-- +page.svelte is rendered here -->

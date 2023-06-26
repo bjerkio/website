@@ -4,7 +4,7 @@
 	import Image from '$components/image.svelte';
 </script>
 
-<Metadata title="Om oss" />
+<Metadata title="Om oss" path="/about" />
 
 <div class="container">
 	<div class="section">
