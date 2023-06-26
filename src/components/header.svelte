@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<a class="logo" href="/">
+	<a class="logo" aria-label="Gå til forsiden" href="/">
 		<Logo />
 	</a>
 	<nav>
