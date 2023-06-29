@@ -1,3 +1,4 @@
+import { invariant } from 'ts-invariant';
 import { getProjects } from '../../../../data/projects/get-projects';
 import type { EntryGenerator } from './$types';
 
@@ -8,15 +9,18 @@ const projects = await getProjects();
 export const entries = (() => {
 	const urls = projects
 		.filter((project) => project.slug)
-		.map((project) => ({
-			slug: project.slug.current
-		}));
+		.map((project) => {
+			invariant(project.slug?.current);
+			return {
+				slug: project.slug.current
+			};
+		});
 
 	return urls;
 }) satisfies EntryGenerator;
 
 export async function GET({ params }) {
-	const project = projects.find((project) => project.slug.current === params.slug);
+	const project = projects.find((project) => project.slug?.current === params.slug);
 
 	if (!project) {
 		throw new Error(`Project not found`);

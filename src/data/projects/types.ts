@@ -32,7 +32,7 @@ export const projectModel = z.object({
 	yearTo: z.number().nullable(),
 	slug: z.object({
 		current: z.string()
-	}),
+	}).nullable().optional(),
 	technologies: z
 		.array(
 			z.object({
