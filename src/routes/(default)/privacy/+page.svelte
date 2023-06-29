@@ -21,7 +21,7 @@
 
 	<h2>Chatwoot</h2>
 	<p>
-		Bjerk eksperminterer med å bruke Chatwoot som chatløsning. Chatwoot er en åpen kildekode
+		Bjerk eksperimenterer med å bruke Chatwoot som chatløsning. Chatwoot er en åpen kildekode
 		chatløsning. I en testfase vil vi bruke Chatwoot sin skytjeneste. Det betyr at Chatwoot vil
 		behandle personopplysninger på vegne av Bjerk. Chatwoot vil ikke bruke personopplysningene til
 		andre formål enn å levere tjenesten, og vil ikke dele personopplysningene med andre. Vi vil

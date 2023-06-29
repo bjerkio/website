@@ -30,9 +30,12 @@ export const projectModel = z.object({
 	customer: customerModel.nullable(),
 	yearFrom: z.number(),
 	yearTo: z.number().nullable(),
-	slug: z.object({
-		current: z.string()
-	}).nullable().optional(),
+	slug: z
+		.object({
+			current: z.string()
+		})
+		.nullable()
+		.optional(),
 	technologies: z
 		.array(
 			z.object({
