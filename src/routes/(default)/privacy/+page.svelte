@@ -37,12 +37,13 @@
 	<h2>Kontakt oss</h2>
 
 	<p>
-		<strong>E-post:</strong> aleksander.ryan@wla.no.
+		<strong>E-post:</strong>
+		<a href="mailto:aleksander.ryan@wla.no">aleksander.ryan@wla.no</a>
 	</p>
 	<p>
 		<strong>Postadresse:</strong><br />
 		Wahl-Larsen Advokatfirma AS<br />
-		℅ Aleksander Ryan<br />
+		Aleksander Ryan<br />
 		Fridtjof Nansens plass 5<br />
 		0160 OSLO
 	</p>
