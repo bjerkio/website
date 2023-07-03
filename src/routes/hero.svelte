@@ -1,7 +1,7 @@
 <div class="hero-container">
 	<div class="hero">
 		<div class="section">
-			<h2>Vi vil skape en bedre verden gjennom teknologi</h2>
+			<h1>Vi vil skape en bedre verden gjennom teknologi</h1>
 			<p>
 				Vi forbedrer og forenkler måten mennesker lærer, tenker, jobber, og kommuniserer på gjennom
 				å utvikle og tilpasse digitale produkter.
@@ -46,7 +46,7 @@
 		gap: var(--size-base);
 	}
 
-	h2 {
+	h1 {
 		font-size: var(--font-size-lg);
 	}
 
