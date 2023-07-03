@@ -10,7 +10,7 @@
 	<div class="section">
 		<h1>Vi skaper digitale produkter</h1>
 		<p>
-			Den beste i verden er skapt av oppfinnere, særinger og avvikere som er ambisiøse, nysgjerrige
+			Det beste i verden er skapt av oppfinnere, særinger og avvikere som er ambisiøse, nysgjerrige
 			og motiverte nok til å gi mening til allslags rot.
 		</p>
 		<p>
