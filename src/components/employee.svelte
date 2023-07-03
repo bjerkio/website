@@ -44,7 +44,7 @@
 />
 
 <div class="employee">
-	<Image src={image} class="profile-image" alt={name} />
+	<Image src={image} class="profile-image" alt="" />
 	<div class="section">
 		<div class="intro">
 			<p class="name">{name}</p>
@@ -58,10 +58,28 @@
 			<ul class="social-media-links">
 				{#each socialMedia as link}
 					{#if link.type == 'linkedin'}
-						<li><a href={link.url} target="_blank" rel="noopener"><LinkedinLogo /></a></li>
+						<li>
+							<a
+								href={link.url}
+								target="_blank"
+								rel="noopener"
+								aria-label={`Gå til LinkedIn-profilen til ${name}`}
+							>
+								<LinkedinLogo />
+							</a>
+						</li>
 					{/if}
 					{#if link.type == 'github'}
-						<li><a href={link.url} target="_blank" rel="noopener"><GithubLogo /></a></li>
+						<li>
+							<a
+								href={link.url}
+								target="_blank"
+								rel="noopener"
+								aria-label={`Gå til GitHub-profilen til ${name}`}
+							>
+								<GithubLogo />
+							</a>
+						</li>
 					{/if}
 				{/each}
 			</ul>
@@ -97,7 +115,7 @@
 		}
 
 		.position {
-			color: var(--dark60);
+			color: var(--dark80);
 		}
 	}
 
