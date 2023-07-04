@@ -9,14 +9,29 @@
 <div class="container">
 	<div class="section">
 		<h1>Vi skaper digitale produkter</h1>
-		<p>Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling.</p>
+		<p>
+			Det beste i verden er skapt av de dristige, utfordrere, de som ser ting annerledes som er
+			ambisiøse, nysgjerrige og motiverte nok til å finne orden i virvaret av det uforståelige.
+		</p>
+		<p>
+			Bjerk er et lite byrå med vilje og <a href="/about/principles">sterke prinsipper</a>, som
+			jobber med vanskelige utfordringer som krever tett samarbeid og tillit. Vi er et dialogdrevet
+			byrå som lager digitale produkter og tjenester for mennesker. Utover det er vi sterkt
+			engasjert i å bygge en etisk, transparent praksis som er bærekraftig for oss, våre kunder og
+			samfunnet. Vi søker samarbeidspartnere som lar oss underbygge arbeidet vårt med den
+			filosofien.
+		</p>
+		<em>
+			Teknologi i seg selv er ikke det den viktigste delen av vårt arbeid – det er måten vi bruker
+			den på.
+		</em>
 		<p>
 			De siste 12 årene har vi endret måten mennesker lærer, tenker, jobber, og kommuniserer innen
-			eiendom, regnskap og forvaltning.
+			eiendom, regnskap og forvaltning gjennom teknologi.
 		</p>
-	</div>
-	<div class="call-to-action">
-		<a href="/about/principles">Lær om hvordan vi jobber</a>
+		<div class="call-to-action">
+			<a href="/about/principles">Lær om hvordan vi jobber</a>
+		</div>
 	</div>
 </div>
 <div class="hero">
@@ -29,14 +44,15 @@
 			det bruker vi iterative utviklingsprosesser, tverrfaglig samarbeid, designorientert
 			produkutvikling og brukerfokuserte designmetoder.
 		</p>
+		<p />
 		<p>
 			Gjennom årene har vært heldige å få lov å jobbe med mange spennende kunder, små og store,
 			nasjonale og internasjonale. Vi har også fått lov å jobbe med mange spennende prosjekter, som
 			vi er stolte av å vise frem.
 		</p>
-	</div>
-	<div class="call-to-action">
-		<a href="/projects">Sjekk ut tidligere jobber</a>
+		<div class="call-to-action">
+			<a href="/projects">Sjekk ut tidligere jobber</a>
+		</div>
 	</div>
 </div>
 
@@ -57,6 +73,11 @@
 	}
 
 	a {
+		color: var(--text-color);
+		text-decoration: underline;
+	}
+
+	.call-to-action a {
 		@include mixins.button;
 	}
 
@@ -64,6 +85,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	em {
+		font-weight: 700;
+		font-style: normal;
 	}
 
 	:global(.hero-image) {
