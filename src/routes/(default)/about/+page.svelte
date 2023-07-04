@@ -10,11 +10,11 @@
 	<div class="section">
 		<h1>Vi skaper digitale produkter</h1>
 		<p>
-			Det beste i verden er skapt av oppfinnere, særinger og avvikere som er ambisiøse, nysgjerrige
-			og motiverte nok til å gi mening til allslags rot.
+			Det beste i verden er skapt av de dristige, utfordrere, de som ser ting annerledes som er
+			ambisiøse, nysgjerrige og motiverte nok til å finne orden i virvaret av det uforståelige.
 		</p>
 		<p>
-			Bjerk er et lite byrå med vilje og sterke <a href="/about/principles">prinsipper</a>, som
+			Bjerk er et lite byrå med vilje og <a href="/about/principles">sterke prinsipper</a>, som
 			jobber med vanskelige utfordringer som krever tett samarbeid og tillit. Vi er et dialogdrevet
 			byrå som lager digitale produkter og tjenester for mennesker. Utover det er vi sterkt
 			engasjert i å bygge en etisk, transparent praksis som er bærekraftig for oss, våre kunder og
