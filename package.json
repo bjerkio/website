@@ -44,10 +44,12 @@
 		"phosphor-svelte": "^1.3.0",
 		"puppeteer-core": "^20.7.2",
 		"sass": "^1.62.1",
+		"svelte-carbonbadge": "^0.0.1",
 		"svelte-meta-tags": "^2.8.0",
 		"svelte-preprocess": "^5.0.4",
 		"svelte-sitemap": "^2.6.0",
 		"ts-invariant": "^0.10.3",
+		"website-carbon-badges": "^1.1.3",
 		"zod": "^3.21.4"
 	}
 }

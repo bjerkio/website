@@ -1,3 +1,6 @@
+<script>
+  import CarbonBadge from 'svelte-carbonbadge';
+</script>
 <div class="outer-container">
 	<footer class="container">
 		<p>
@@ -7,6 +10,9 @@
 		<p class="highlight">
 			Kontakt oss på <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>
 		</p>
+    <p>
+      <CarbonBadge />
+    </p>
 	</footer>
 </div>
 
@@ -33,4 +39,8 @@
 	.highlight {
 		font-size: var(--font-size-base);
 	}
+
+  :global(.carbonbadge) {
+    text-align: left !important;
+  }
 </style>

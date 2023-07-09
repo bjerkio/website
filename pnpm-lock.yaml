@@ -29,6 +29,9 @@ dependencies:
   sass:
     specifier: ^1.62.1
     version: 1.63.6
+  svelte-carbonbadge:
+    specifier: ^0.0.1
+    version: 0.0.1
   svelte-meta-tags:
     specifier: ^2.8.0
     version: 2.8.0(svelte@4.0.1)(typescript@5.1.6)
@@ -41,6 +44,9 @@ dependencies:
   ts-invariant:
     specifier: ^0.10.3
     version: 0.10.3
+  website-carbon-badges:
+    specifier: ^1.1.3
+    version: 1.1.3
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -2757,6 +2763,10 @@ packages:
       has-flag: 4.0.0
     dev: true
 
+  /svelte-carbonbadge@0.0.1:
+    resolution: {integrity: sha512-q6HqOrwI4AIJggGNnqyP1G5mSOX2UVMg5unmnQLTFydHD+595sBjlpLJYmjveTfSIle6JfQ8htNMxYVj4BttKA==}
+    dev: false
+
   /svelte-check@3.4.4(postcss@8.4.24)(sass@1.63.6)(svelte@4.0.1):
     resolution: {integrity: sha512-Uys9+R65cj8TmP8f5UpS7B2xKpNLYNxEWJsA5ZoKcWq/uwvABFF7xS6iPQGLoa7hxz0DS6xU60YFpmq06E4JxA==}
     hasBin: true
@@ -3135,6 +3145,10 @@ packages:
     resolution: {integrity: sha512-cSwwQIeg8v4i3p4ajHhwgR7N6VyxAf+KYSSsY6Pd3aETE+xEU4vbitz7qQkB0I321xnhDdgtxuiSfk5r/FVtjg==}
     hasBin: true
     dev: true
+
+  /website-carbon-badges@1.1.3:
+    resolution: {integrity: sha512-3qZm1rGWe0PSuKqlYIYDbxBLfbNK8ko0MiHtlq1GFUOGoThshjem9SWRQ+IXp4KAhcwPp5qRkgQP6hGZioZJjw==}
+    dev: false
 
   /whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
