@@ -75,7 +75,7 @@
 	}
 
 	.details {
-    max-width: 60ch;
+		max-width: 60ch;
 		dl {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));

@@ -66,7 +66,7 @@
 
 		span {
 			font-size: var(--font-size-base);
-		} 
+		}
 
 		&:focus,
 		&:active {

@@ -2,7 +2,7 @@
 	box-shadow: var(--border-radius-base);
 	border: 0px;
 
-  font: inherit;
+	font: inherit;
 	cursor: pointer;
 	display: inline-flex;
 	width: fit-content;
@@ -28,8 +28,9 @@
 		border-color: transparent;
 	}
 
-	&:active, &:focus {
-    background-color: var(--color-ui-bg);
+	&:active,
+	&:focus {
+		background-color: var(--color-ui-bg);
 		border-color: var(--color-ui-border-hover);
 	}
 }

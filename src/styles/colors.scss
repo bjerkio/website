@@ -19,83 +19,83 @@
 }
 
 :root {
-  --color-light: var(--green20);
-  --color-dark: var(--dark100);
+	--color-light: var(--green20);
+	--color-dark: var(--dark100);
 
-  // App background
-  --color-app-bg: var(--green20);
+	// App background
+	--color-app-bg: var(--green20);
 
-  // Subtle background
-  --color-subtle-bg: white;
+	// Subtle background
+	--color-subtle-bg: white;
 
-  // UI element background
-  --color-ui-bg: var(--blue20);
+	// UI element background
+	--color-ui-bg: var(--blue20);
 
-  // Hovered UI element background
-  --color-ui-bg-hover: var(--blue40);
+	// Hovered UI element background
+	--color-ui-bg-hover: var(--blue40);
 
-  // Active / Selected UI element background
-  --color-ui-bg-active: var(--blue100);
+	// Active / Selected UI element background
+	--color-ui-bg-active: var(--blue100);
 
-  // Subtle borders and separators
-  --color-subtle-border: var(--blue100);
+	// Subtle borders and separators
+	--color-subtle-border: var(--blue100);
 
-  // UI element border and focus rings
-  --color-ui-border: var(--blue100);
+	// UI element border and focus rings
+	--color-ui-border: var(--blue100);
 
-  // Hovered UI element border
-  --color-ui-border-hover: var(--violet-8);
+	// Hovered UI element border
+	--color-ui-border-hover: var(--violet-8);
 
-  // Solid backgrounds
-  --color-solid-bg: var(--dark80);
+	// Solid backgrounds
+	--color-solid-bg: var(--dark80);
 
-  // Hovered solid backgrounds
-  --color-solid-bg-hover: var(--dark100);
+	// Hovered solid backgrounds
+	--color-solid-bg-hover: var(--dark100);
 
-  // Low-contrast text
-  --color-low-contrast-text: var(--dark80);
+	// Low-contrast text
+	--color-low-contrast-text: var(--dark80);
 
-  // High-contrast text
-  --color-high-contrast-text: var(--dark100);
+	// High-contrast text
+	--color-high-contrast-text: var(--dark100);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		// App background
-  --color-app-bg: var(--dark100);
+		--color-app-bg: var(--dark100);
 
-  // Subtle background
-  --color-subtle-bg: var(--dark80);
+		// Subtle background
+		--color-subtle-bg: var(--dark80);
 
-  // UI element background
-  --color-ui-bg: var(--blue20);
+		// UI element background
+		--color-ui-bg: var(--blue20);
 
-  // Hovered UI element background
-  --color-ui-bg-hover: var(--blue40);
+		// Hovered UI element background
+		--color-ui-bg-hover: var(--blue40);
 
-  // Active / Selected UI element background
-  --color-ui-bg-active: var(--blue100);
+		// Active / Selected UI element background
+		--color-ui-bg-active: var(--blue100);
 
-  // Subtle borders and separators
-  --color-subtle-border: var(--blue100);
+		// Subtle borders and separators
+		--color-subtle-border: var(--blue100);
 
-  // UI element border and focus rings
-  --color-ui-border: var(--blue100);
+		// UI element border and focus rings
+		--color-ui-border: var(--blue100);
 
-  // Hovered UI element border
-  --color-ui-border-hover: var(--violet-8);
+		// Hovered UI element border
+		--color-ui-border-hover: var(--violet-8);
 
-  // Solid backgrounds
-  --color-solid-bg: var(--dark80);
+		// Solid backgrounds
+		--color-solid-bg: var(--dark80);
 
-  // Hovered solid backgrounds
-  --color-solid-bg-hover: var(--dark100);
+		// Hovered solid backgrounds
+		--color-solid-bg-hover: var(--dark100);
 
-  // Low-contrast text
-  --color-low-contrast-text: var(--color-light);
+		// Low-contrast text
+		--color-low-contrast-text: var(--color-light);
 
-  // High-contrast text
-  --color-high-contrast-text: white;
+		// High-contrast text
+		--color-high-contrast-text: white;
 	}
 	:global(html) {
 		color-scheme: dark;

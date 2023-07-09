@@ -30,16 +30,16 @@
 
 <style lang="scss">
 	.project {
-    /* border: 2px solid var(--color-ui-border); */
+		/* border: 2px solid var(--color-ui-border); */
 		padding: var(--size-md);
 		border-radius: var(--border-radius-sm);
-    background-color: var(--color-subtle-bg);
+		background-color: var(--color-subtle-bg);
 
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		gap: var(--size-base);
-    /* &:hover {
+		/* &:hover {
       background-color: var(--color-ui-bg-hover);
     }
     &:focus, &:active {

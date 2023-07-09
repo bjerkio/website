@@ -21,7 +21,7 @@
 	.outer-container {
 		background-color: var(--color-solid-bg);
 		color: var(--color-light);
-    margin-top: var(--size-lg);
+		margin-top: var(--size-lg);
 	}
 
 	a {
