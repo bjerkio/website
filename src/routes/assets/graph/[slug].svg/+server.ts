@@ -1,5 +1,5 @@
 import { invariant } from 'ts-invariant';
-import { getProjects } from '../../../../data/projects/get-projects';
+import { getProjects } from '$data/projects/get-projects';
 import type { EntryGenerator } from './$types';
 
 export const prerender = true;

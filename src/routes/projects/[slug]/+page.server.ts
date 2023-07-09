@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { invariant } from 'ts-invariant';
-import { getProjects } from '../../../../data/projects/get-projects';
-import { urlFor } from '../../../../data/sanity-client';
+import { getProjects } from '$data/projects/get-projects';
+import { urlFor } from '$data/sanity-client';
 import type { EntryGenerator } from './$types.js';
 
 const projects = await getProjects();

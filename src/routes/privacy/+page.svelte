@@ -1,5 +1,5 @@
 <script>
-	import Metadata from '../../../components/metadata.svelte';
+	import Metadata from '$components/metadata.svelte';
 </script>
 
 <Metadata title="Personvernerklæring" path="/privacy" />

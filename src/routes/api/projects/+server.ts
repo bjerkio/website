@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { getProjects } from '../../../data/projects/get-projects';
+import { getProjects } from '$data/projects/get-projects';
 
 export const prerender = true;
 
