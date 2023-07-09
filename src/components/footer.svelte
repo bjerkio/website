@@ -11,7 +11,7 @@
 			Kontakt oss på <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>
 		</p>
     <p>
-      <CarbonBadge />
+      <CarbonBadge dark />
     </p>
 	</footer>
 </div>
