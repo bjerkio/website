@@ -1,39 +1,59 @@
-<div class="outer-container">
-	<div class="container">
-		<p>
-			Samarbeid, samspill, programvare som virker, iterativ utvikling, kontinuitet, gode insentiver
-			og Super Mario-effekten er noe av det vi mener kreves for å lykkes.
-		</p>
+<script>
+	import { Warning } from 'phosphor-svelte';
 
-		<a href="/about">Les mer om oss og hvordan vi jobber</a>
+	function openChatDialog() {
+		window.$chatwoot.toggle('open');
+	}
+</script>
+
+<div class="container">
+	<div class="broadcast">
+		<div class="icon"><Warning size="22" /></div>
+		<p>
+			Vi har ferie nå, men <button on:click={() => window.$chatwoot.toggle('open')}
+				>send oss gjerne en beskjed</button
+			> så kommer vi tilbake til deg 🏖️
+		</p>
 	</div>
 </div>
 
-<style>
-	.outer-container {
-		background-image: url('/assets/cheeky.svg');
-		background-size: 250px;
-		background-repeat: no-repeat;
-		background-position: left center;
-
-		min-height: 410px;
-		padding-top: var(--size-xl);
-		padding-bottom: var(--size-xl);
-	}
-
-	@media (max-width: 1310px) {
-		.outer-container {
-			background-image: none;
-		}
-	}
-
+<style lang="scss">
+  @use '$styles/mixins.scss';
 	.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: var(--size-md);
+		background-image: url('/assets/sommer-bg.jpg');
+		background-size: cover;
+		background-position: center;
 
-		max-width: 60ch;
-		/* font-size: var(--font-size-md); */
+		min-height: 565px;
+		width: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	.broadcast {
+		display: flex;
+		justify-content: center;
+		gap: var(--size-base);
+		background-color: var(--dark100);
+		max-width: 40ch;
+		color: var(--green20);
+		font-size: var(--font-size-sm);
+		padding: var(--size-base);
+		border-radius: var(--border-radius-sm);
+    
+    button {
+      @include mixins.button-link;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+	}
+
+	@media (max-width: 768px) {
+		.broadcast {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 </style>

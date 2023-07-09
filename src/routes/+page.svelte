@@ -8,34 +8,20 @@
 
 <Metadata path="/" />
 
-<div class="homepage-container">
-	<div class="container">
-		<Header />
-		<Hero />
-	</div>
+<div class="container">
+	<Header />
+	<Hero />
+	<Feature />
 </div>
-<Feature />
+
 <Footer />
 
 <style>
-	.homepage-container {
-		background-color: var(--hero-background-color);
+	.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-		background-image: url('/assets/speckled.svg');
-		background-size: 400px;
-		background-repeat: no-repeat;
-		background-position: right 80%;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.homepage-container {
-			background-image: url('/assets/speckled-dark.svg');
-		}
-	}
-
-	@media (max-width: 1060px) {
-		.homepage-container {
-			background-image: none;
-		}
+    gap: var(--size-lg);
 	}
 </style>
