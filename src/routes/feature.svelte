@@ -18,7 +18,7 @@
 </div>
 
 <style lang="scss">
-  @use '$styles/mixins.scss';
+	@use '$styles/mixins.scss';
 	.container {
 		background-image: url('/assets/sommer-bg.jpg');
 		background-size: cover;
@@ -42,12 +42,12 @@
 		font-size: var(--font-size-sm);
 		padding: var(--size-base);
 		border-radius: var(--border-radius-sm);
-    
-    button {
-      @include mixins.button-link;
-      text-decoration: underline;
-      cursor: pointer;
-    }
+
+		button {
+			@include mixins.button-link;
+			text-decoration: underline;
+			cursor: pointer;
+		}
 	}
 
 	@media (max-width: 768px) {

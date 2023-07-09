@@ -18,10 +18,10 @@
 
 <style>
 	.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
-    gap: var(--size-lg);
+		gap: var(--size-lg);
 	}
 </style>

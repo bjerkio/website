@@ -43,9 +43,9 @@
 		justify-content: center;
 		gap: var(--size-base);
 
-    p {
-      font-size: var(--font-size-md);
-    }
+		p {
+			font-size: var(--font-size-md);
+		}
 	}
 
 	h1 {
@@ -60,9 +60,9 @@
 		font-size: var(--font-size-sm);
 		font-weight: normal;
 		padding: var(--size-sm) var(--size-base);
-    transform: translateY(-40%);
-    &:hover {
-      transform: translateY(-40%) scale(1.05) rotate(1deg);
-    }
+		transform: translateY(-40%);
+		&:hover {
+			transform: translateY(-40%) scale(1.05) rotate(1deg);
+		}
 	}
 </style>

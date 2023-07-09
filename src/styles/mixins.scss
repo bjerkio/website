@@ -17,10 +17,7 @@
 	color: inherit;
 	border-radius: 80px;
 
-	transition:
-		background-color 0.2s,
-		transform 0.2s,
-		border-color 0.2s;
+	transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
 
 	&:hover {
 		text-decoration: none;
@@ -36,25 +33,25 @@
 }
 
 @mixin button-link {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
 
-  background: transparent;
+	background: transparent;
 
-  /* inherit font & color from ancestor */
-  color: inherit;
-  font: inherit;
+	/* inherit font & color from ancestor */
+	color: inherit;
+	font: inherit;
 
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
+	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+	line-height: normal;
 
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
 
-  /* Corrects inability to style clickable `input` types in iOS */
-  appearance: none;
+	/* Corrects inability to style clickable `input` types in iOS */
+	appearance: none;
 }
