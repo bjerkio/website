@@ -1,9 +1,5 @@
 <script>
 	import { Warning } from 'phosphor-svelte';
-
-	function openChatDialog() {
-		window.$chatwoot.toggle('open');
-	}
 </script>
 
 <div class="container">
