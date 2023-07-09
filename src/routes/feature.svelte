@@ -52,8 +52,8 @@
 			align-items: center;
 		}
 
-    .container {
-      min-height: 400px;
-    }
+		.container {
+			min-height: 400px;
+		}
 	}
 </style>

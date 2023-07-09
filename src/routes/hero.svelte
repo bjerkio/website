@@ -66,13 +66,13 @@
 		}
 	}
 
-  @media (max-width: 512px) {
-    .button {
-      transform: none;
+	@media (max-width: 512px) {
+		.button {
+			transform: none;
 
-      &:hover {
-        transform: scale(1.05) rotate(1deg);
-      }
-    }
-  }
+			&:hover {
+				transform: scale(1.05) rotate(1deg);
+			}
+		}
+	}
 </style>
