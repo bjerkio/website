@@ -65,4 +65,14 @@
 			transform: translateY(-40%) scale(1.05) rotate(1deg);
 		}
 	}
+
+  @media (max-width: 512px) {
+    .button {
+      transform: none;
+
+      &:hover {
+        transform: scale(1.05) rotate(1deg);
+      }
+    }
+  }
 </style>
