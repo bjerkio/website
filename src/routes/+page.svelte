@@ -1,6 +1,4 @@
 <script>
-	import Footer from '$components/footer.svelte';
-	import Header from '$components/header.svelte';
 	import Metadata from '$components/metadata.svelte';
 	import Feature from './feature.svelte';
 	import Hero from './hero.svelte';
@@ -8,13 +6,10 @@
 
 <Metadata path="/" />
 
-<div class="container">
-	<Header />
+<div class="container">	
 	<Hero />
 	<Feature />
 </div>
-
-<Footer />
 
 <style>
 	.container {

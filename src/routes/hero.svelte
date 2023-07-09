@@ -44,7 +44,7 @@
 		gap: var(--size-base);
 
 		p {
-			font-size: var(--font-size-md);
+			font-size: var(--font-size-base);
 		}
 	}
 
