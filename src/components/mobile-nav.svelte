@@ -66,12 +66,12 @@
 
 		span {
 			font-size: var(--font-size-base);
-		}
+		} 
 
 		&:focus,
 		&:active {
 			outline: none !important;
-			background-color: var(--green40);
+			background-color: var(--color-subtle-bg);
 		}
 	}
 
@@ -143,7 +143,6 @@
 
 		&:focus,
 		&:active {
-			border: 2px solid var(--blue100);
 			outline: none !important;
 		}
 	}

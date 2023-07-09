@@ -19,12 +19,13 @@
 
 <style>
 	.outer-container {
-		background-color: var(--foreground-color);
-		color: var(--text-color-light);
+		background-color: var(--color-solid-bg);
+		color: var(--color-light);
+    margin-top: var(--size-lg);
 	}
 
 	a {
-		color: var(--text-color-light);
+		color: var(--color-light);
 	}
 
 	.container {

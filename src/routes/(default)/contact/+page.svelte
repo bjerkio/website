@@ -1,6 +1,7 @@
 <script>
 	import Metadata from '$components/metadata.svelte';
 	import Employees from '$components/employees.svelte';
+	import { ArrowSquareOut } from 'phosphor-svelte';
 </script>
 
 <Metadata title="Om oss" path="/contact" />
@@ -11,14 +12,14 @@
 		<p>Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland.</p>
 		<p>
 			Du får tak i oss via chatten, eller på e-post til
-			<a href="mailto:kontoret@bjerk.io"> kontoret@bjerk.io </a>.
+			<a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
 		</p>
 		<div class="call-to-action">
 			<button on:click={() => window.$chatwoot.toggle('open')}>Snakk med oss!</button>
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section details">
 		<dl>
 			<div>
 				<dt>Organisasjonsnummer</dt>
@@ -28,13 +29,11 @@
 				<dt>E-post</dt>
 				<dd>kontoret@bjerk.io</dd>
 			</div>
-		</dl>
-		<dl>
 			<div>
 				<dt>Adresse</dt>
 				<dd>
 					<a href="https://goo.gl/maps/FkcqThLgRtCauPmZA" target="_blank" rel="noopener noreferrer">
-						Akersgata 51, 0180 Oslo
+						Akersgata 51, 0180 Oslo <ArrowSquareOut />
 					</a>
 				</dd>
 			</div>
@@ -57,12 +56,11 @@
 	}
 
 	.container {
-		max-width: 60ch;
-
 		gap: var(--size-lg);
 	}
 
 	.elevator {
+		max-width: 60ch;
 		h1 {
 			font-size: var(--font-size-lg);
 		}
@@ -76,21 +74,24 @@
 		}
 	}
 
-	.section dl {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-		gap: var(--size-sm);
+	.details {
+    max-width: 60ch;
+		dl {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			gap: var(--size-base);
 
-		dt {
-			font-weight: bold;
-		}
-		dd a {
-			color: var(--color-primary);
+			dt {
+				font-weight: bold;
+			}
+			dd a {
+				color: var(--color-primary);
+			}
 		}
 	}
 
 	.employees {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	}
 </style>

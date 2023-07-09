@@ -30,17 +30,21 @@
 
 <style lang="scss">
 	.project {
-		/* border: 5px solid var(--blue20); */
-		background-color: #ffffff;
+    /* border: 2px solid var(--color-ui-border); */
 		padding: var(--size-md);
 		border-radius: var(--border-radius-sm);
+    background-color: var(--color-subtle-bg);
 
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		gap: var(--size-base);
-
-		color: var(--dark100);
+    /* &:hover {
+      background-color: var(--color-ui-bg-hover);
+    }
+    &:focus, &:active {
+      background-color: var(--color-ui-bg-active);
+    } */
 	}
 
 	.introduction {

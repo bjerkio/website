@@ -32,9 +32,9 @@
 		display: flex;
 		justify-content: center;
 		gap: var(--size-base);
-		background-color: var(--dark100);
+		background-color: var(--color-solid-bg);
 		max-width: 40ch;
-		color: var(--green20);
+		color: var(--color-light);
 		font-size: var(--font-size-sm);
 		padding: var(--size-base);
 		border-radius: var(--border-radius-sm);

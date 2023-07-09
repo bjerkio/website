@@ -26,7 +26,7 @@
 		align-items: center;
 
 		.logo {
-			color: var(--text-color);
+			color: var(--color-high-contrast-text);
 			display: inline-block;
 		}
 	}
@@ -46,7 +46,7 @@
 				font-size: var(--font-size-sm);
 
 				a {
-					color: var(--text-color);
+					color: var(--color-high-contrast-text);
 					text-decoration: none;
 
 					&:hover {

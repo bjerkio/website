@@ -115,7 +115,7 @@
 		}
 
 		.position {
-			color: var(--dark80);
+			color: var(--color-low-contrast-text);
 		}
 	}
 
@@ -123,7 +123,7 @@
 		font-size: var(--font-size-sm);
 
 		a {
-			color: var(--dark80);
+			color: var(--color-low-contrast-text);
 		}
 	}
 
@@ -137,7 +137,7 @@
 		li {
 			font-size: var(--font-size-md);
 			a {
-				color: var(--dark80);
+				color: var(--color-low-contrast-text);
 			}
 		}
 	}

@@ -130,10 +130,10 @@
 		list-style: none;
 
 		li {
-			background-color: var(--blue20);
+			background-color: var(--color-ui-bg);
 			padding: var(--size-xs) var(--size-sm);
 			border-radius: var(--size-xs);
-			color: var(--blue100);
+			color: var(--color-low-contrast-text);
 
 			font-size: var(--font-size-sm);
 		}
@@ -147,7 +147,7 @@
 		gap: var(--size-base);
 
 		a {
-			color: var(--dark80);
+			color: inherit;
 			font-weight: 600;
 		}
 	}

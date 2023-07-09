@@ -73,7 +73,7 @@
 	}
 
 	a {
-		color: var(--text-color);
+		color: var(--color-high-contrast-text);
 		text-decoration: underline;
 	}
 
