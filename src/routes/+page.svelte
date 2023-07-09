@@ -6,7 +6,7 @@
 
 <Metadata path="/" />
 
-<div class="container">	
+<div class="container">
 	<Hero />
 	<Feature />
 </div>
