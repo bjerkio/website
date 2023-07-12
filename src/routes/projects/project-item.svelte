@@ -1,12 +1,20 @@
 <script lang="ts">
+	import { ArrowCircleUpRight } from 'phosphor-svelte';
 	import type { Project } from './+page.server';
 	export let project: Project;
 </script>
 
 <div class="project">
 	<div class="introduction">
-		<h2>{project.name}</h2>
-		<p>{project.description}</p>
+		<div class="content">
+			<h2>{project.name}</h2>
+			<p>{project.description}</p>
+		</div>
+		{#if project.slug}
+			<a class="read-more-link" href="projects/{project.slug.current}">
+				Les mer <ArrowCircleUpRight />
+			</a>
+		{/if}
 	</div>
 	<div class="metadata">
 		<dl>
@@ -29,8 +37,9 @@
 </div>
 
 <style lang="scss">
+	@use '$styles/mixins';
+
 	.project {
-		/* border: 2px solid var(--color-ui-border); */
 		padding: var(--size-md);
 		border-radius: var(--border-radius-sm);
 		background-color: var(--color-subtle-bg);
@@ -39,12 +48,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		gap: var(--size-base);
-		/* &:hover {
-      background-color: var(--color-ui-bg-hover);
-    }
-    &:focus, &:active {
-      background-color: var(--color-ui-bg-active);
-    } */
 	}
 
 	.introduction {
@@ -52,7 +55,26 @@
 
 		display: flex;
 		flex-direction: column;
-		gap: var(--size-sm);
+		gap: var(--size-base);
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			gap: var(--size-sm);
+		}
+
+		.read-more-link {
+			@include mixins.button;
+			padding: var(--size-sm) var(--size-base);
+
+			background-color: transparent;
+			border: 1px solid var(--color-high-contrast-text);
+			color: var(--color-high-contrast-text);
+			&:hover {
+				background-color: var(--color-ui-bg-hover);
+				transform: none;
+			}
+		}
 	}
 
 	.metadata {
