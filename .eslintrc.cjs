@@ -1,36 +1,16 @@
 module.exports = {
-	root: true,
-	extends: [
-		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:svelte/recommended',
-		'prettier'
-	],
-	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
-	parserOptions: {
-		sourceType: 'module',
-		ecmaVersion: 2020,
-		extraFileExtensions: ['.svelte']
-	},
-	env: {
-		browser: true,
-		es2017: true,
-		node: true
-	},
-	overrides: [
-		{
-			files: ['*.svelte'],
-			parser: 'svelte-eslint-parser',
-			parserOptions: {
-				parser: '@typescript-eslint/parser'
-			}
-		},
-		{
-			files: ['src/components/metadata.svelte'],
-			rules: {
-				'svelte/no-at-html-tags': 'off'
-			}
-		}
-	]
+  extends: ['@bjerk/eslint-config', 'plugin:jest/recommended'],
+  plugins: ['jest'],
+  overrides: [
+    {
+      files: 'jest.config.*',
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
+  ],
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
 };
