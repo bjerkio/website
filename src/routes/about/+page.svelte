@@ -65,7 +65,7 @@
 		justify-content: center;
 		gap: var(--size-base);
 
-    text-wrap: pretty;
+		text-wrap: pretty;
 	}
 
 	.container {
