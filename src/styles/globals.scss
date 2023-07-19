@@ -55,6 +55,10 @@ $green100: rgba(144, 244, 148, 1);
 	color: var(--color-high-contrast-text);
 }
 
+:global(h1,h2,h3,h4,h5) {
+  text-wrap: balance;
+}
+
 :global(.container) {
 	margin: 0 auto;
 	max-width: var(--max-width);

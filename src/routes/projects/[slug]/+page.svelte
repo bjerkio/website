@@ -79,6 +79,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--size-md);
+    text-wrap: pretty;
 	}
 
 	h1 {

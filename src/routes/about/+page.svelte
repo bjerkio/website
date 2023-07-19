@@ -44,7 +44,6 @@
 			det bruker vi iterative utviklingsprosesser, tverrfaglig samarbeid, designorientert
 			produkutvikling og brukerfokuserte designmetoder.
 		</p>
-		<p />
 		<p>
 			Gjennom årene har vært heldige å få lov å jobbe med mange spennende kunder, små og store,
 			nasjonale og internasjonale. Vi har også fått lov å jobbe med mange spennende prosjekter, som
@@ -65,6 +64,8 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: var(--size-base);
+
+    text-wrap: pretty;
 	}
 
 	.container {
