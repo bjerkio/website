@@ -7,9 +7,9 @@
 	</p>
 
 	<p>
-		<strong>Note about subscriptions:</strong> We use Cardboard to track subscriptions, automatically collect receipts, and automate
-		accounting. This means that in order to onboard a new service or subscription we need to add
-		these details to Cardboard and generate a invoice email.
+		<strong>Note about subscriptions:</strong> We use Cardboard to track subscriptions, automatically
+		collect receipts, and automate accounting. This means that in order to onboard a new service or subscription
+		we need to add these details to Cardboard and generate a invoice email.
 	</p>
 
 	<div class="company-details">
