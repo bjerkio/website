@@ -17,6 +17,7 @@
 
 	export let socialMedia: socialMedia[] = [];
 	// TODO: Use Picture type from components/image.svelte
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 	export let image: any;
 
 	const name = `${givenName} ${familyName}`;
