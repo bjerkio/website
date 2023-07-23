@@ -18,7 +18,9 @@
 	color: inherit;
 	border-radius: 80px;
 
-	transition: background-color 0.2s, transform 0.2s;
+	transition:
+		background-color 0.2s,
+		transform 0.2s;
 
 	&:hover {
 		text-decoration: none;
