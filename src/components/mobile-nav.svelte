@@ -91,7 +91,9 @@
 		will-change: transform, opacity;
 		transform-origin: 100% 0;
 		border-radius: var(--border-radius-sm);
-		transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+		transition:
+			opacity 0.35s ease 0s,
+			transform 0.35s ease 0s;
 	}
 
 	dialog[open] {
