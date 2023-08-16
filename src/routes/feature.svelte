@@ -1,7 +1,3 @@
-<script>
-	import { Warning } from 'phosphor-svelte';
-</script>
-
 <div class="container">
 	<!-- <div class="broadcast">
 		<div class="icon"><Warning size="22" /></div>
