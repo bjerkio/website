@@ -3,20 +3,20 @@
 </script>
 
 <div class="container">
-	<div class="broadcast">
+	<!-- <div class="broadcast">
 		<div class="icon"><Warning size="22" /></div>
 		<p>
 			Vi har ferie nå, men <button on:click={() => window.$chatwoot.toggle('open')}
 				>send oss gjerne en beskjed</button
 			> så kommer vi tilbake til deg 🏖️
 		</p>
-	</div>
+	</div> -->
 </div>
 
 <style lang="scss">
 	@use '$styles/mixins.scss';
 	.container {
-		background-image: url('/assets/sommer-bg.jpg');
+		background-image: url('/assets/k8-G8dlL6UEt_I-unsplash.jpg');
 		background-size: cover;
 		background-position: center;
 
