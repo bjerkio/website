@@ -1,58 +1,36 @@
-<script>
-	// TODO: Refactor to use Typescript
-	/**
-	 * @typedef {Object} Picture
-	 * @property {Object} sources - The object containing different sources of image data.
-	 * @property {Object[]} sources.avif - The array of objects containing source and width for AVIF images.
-	 * @property {string} sources.avif[].src - The source of the AVIF image.
-	 * @property {number} sources.avif[].w - The width of the AVIF image.
-	 * @property {Object[]} sources.webp - The array of objects containing source and width for WebP images.
-	 * @property {string} sources.webp[].src - The source of the WebP image.
-	 * @property {number} sources.webp[].w - The width of the WebP image.
-	 * @property {Object} img - The object containing the default image source.
-	 * @property {string} img.src - The default image source.
-	 * @property {number} img.w - The width of the default image.
-	 * @property {number} img.h - The height of the default image.
-	 */
+<script lang="ts">
+	import type { Picture } from '../types';
 
-	/** REQUIRED */
-
-	/** @type {Picture} */
-	export let src;
-
+	export let src: Picture | string;
 	export let alt = '';
 
-	/** OPTIONAL */
-
-	/** @type {Boolean} */
 	export let draggable = false;
+	export let decoding: 'async' | 'sync' | 'auto' = 'async';
+	export let loading: 'lazy' | 'eager' = 'lazy';
 
-	/** @type {'async' | 'sync' | 'auto'} */
-	export let decoding = 'async';
+	if (typeof src === 'string') {
+		throw new Error('src must be of type Picture');
+	}
 
-	/** @type {'lazy' | 'eager'} */
-	export let loading = 'lazy';
+	const picture: Picture = src;
 
 	let classes = '';
 	export { classes as class };
-
-	/** @type {number} */
-	// export let width;
 </script>
 
 <picture>
-	{#each Object.entries(src.sources) as [format, images]}
+	{#each Object.entries(picture.sources) as [format, images = []]}
 		<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
 	{/each}
 
 	<img
-		src={src.img.src}
+		src={picture.img.src}
 		{alt}
 		class={classes}
 		{loading}
 		{decoding}
 		{draggable}
-		width={src.img.w}
-		height={src.img.h}
+		width={picture.img.w}
+		height={picture.img.h}
 	/>
 </picture>

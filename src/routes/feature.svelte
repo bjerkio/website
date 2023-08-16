@@ -1,55 +1,18 @@
-<div class="container">
-	<!-- <div class="broadcast">
-		<div class="icon"><Warning size="22" /></div>
-		<p>
-			Vi har ferie nå, men <button on:click={() => window.$chatwoot.toggle('open')}
-				>send oss gjerne en beskjed</button
-			> så kommer vi tilbake til deg 🏖️
-		</p>
-	</div> -->
-</div>
+<script>
+	import Image from '$components/image.svelte';
+	import backgroundImage from '$assets/k8-G8dlL6UEt_I-unsplash.jpg?w=1200&h=565&fit=crop&fm=webp&q=80';
+</script>
+
+<Image src={backgroundImage} class="feature-image" />
 
 <style lang="scss">
 	@use '$styles/mixins.scss';
-	.container {
-		background-image: url('/assets/k8-G8dlL6UEt_I-unsplash.jpg');
-		background-size: cover;
-		background-position: center;
-
-		min-height: 565px;
+	:global(.feature-image) {
+		object-fit: cover;
 		width: 100%;
 
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
-	}
-
-	.broadcast {
-		display: flex;
-		justify-content: center;
-		gap: var(--size-base);
-		background-color: var(--color-solid-bg);
-		max-width: 40ch;
-		color: var(--color-light);
-		font-size: var(--font-size-sm);
-		padding: var(--size-base);
-		border-radius: var(--border-radius-sm);
-
-		button {
-			@include mixins.button-link;
-			text-decoration: underline;
-			cursor: pointer;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.broadcast {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.container {
-			min-height: 400px;
-		}
 	}
 </style>
