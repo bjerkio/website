@@ -1,3 +1,9 @@
+<script>
+	import Metadata from '$components/metadata.svelte';
+</script>
+
+<Metadata title="Billing Details" path="/about/billing" />
+
 <main class="container">
 	<h1>Billing Information</h1>
 
