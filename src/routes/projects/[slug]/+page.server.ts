@@ -9,36 +9,36 @@ const projects = await getProjects();
 export const prerender = true;
 
 export const entries = (() => {
-	const urls = projects
-		.filter((project) => project.slug?.current)
-		.map((project) => {
-			invariant(project.slug?.current);
-			return {
-				slug: project.slug.current
-			};
-		});
+  const urls = projects
+    .filter((project) => project.slug?.current)
+    .map((project) => {
+      invariant(project.slug?.current);
+      return {
+        slug: project.slug.current
+      };
+    });
 
-	return urls;
+  return urls;
 }) satisfies EntryGenerator;
 
 export const load = async ({ params }) => {
-	const project = projects
-		.filter((project) => project.slug?.current)
-		.find((project) => project.slug?.current === params.slug);
+  const project = projects
+    .filter((project) => project.slug?.current)
+    .find((project) => project.slug?.current === params.slug);
 
-	if (!project) {
-		throw error(404, {
-			message: 'Not found'
-		});
-	}
+  if (!project) {
+    throw error(404, {
+      message: 'Not found'
+    });
+  }
 
-	return {
-		project: {
-			...project,
-			title: project.title ?? project.name,
-			imageUrl: project.image ? urlFor(project.image.asset).url() : undefined,
-			// TODO: Add imageAlt from Sanity
-			imageAlt: project.name
-		}
-	};
+  return {
+    project: {
+      ...project,
+      title: project.title ?? project.name,
+      imageUrl: project.image ? urlFor(project.image.asset).url() : undefined,
+      // TODO: Add imageAlt from Sanity
+      imageAlt: project.name
+    }
+  };
 };

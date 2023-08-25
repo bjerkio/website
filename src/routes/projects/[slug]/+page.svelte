@@ -1,173 +1,173 @@
 <script lang="ts">
-	import InlineImage from '$components/inline-image.svelte';
-	import type { PageData } from './$types';
-	import { PortableText } from '@portabletext/svelte';
-	import Metadata from '$components/metadata.svelte';
-	export let data: PageData;
+  import InlineImage from '$components/inline-image.svelte';
+  import type { PageData } from './$types';
+  import { PortableText } from '@portabletext/svelte';
+  import Metadata from '$components/metadata.svelte';
+  export let data: PageData;
 
-	const { project } = data;
+  const { project } = data;
 </script>
 
 <Metadata
-	title={project.name}
-	description={project.description}
-	seo={project.seo}
-	path={`/projects/${project.slug?.current}`}
-	defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
+  title={project.name}
+  description={project.description}
+  seo={project.seo}
+  path={`/projects/${project.slug?.current}`}
+  defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
 />
 
 <div class="container introduction">
-	<h1>{project.title ?? project.name}</h1>
-	<div class="content">
-		<div class="body">
-			{#if project.preamble}
-				<PortableText value={project.preamble} />
-			{/if}
-			<div class="links">
-				{#if project.links}
-					{#each project.links as link}
-						<a href={link.url}>{link.name} →</a>
-					{/each}
-				{/if}
-			</div>
-		</div>
-		<dl class="metadata">
-			<div>
-				{#if project.technologies}
-					<dt>Teknologi</dt>
-					<dd>
-						<ul class="badges">
-							{#each project.technologies as technology}
-								<li>{technology.name}</li>
-							{/each}
-						</ul>
-					</dd>
-				{/if}
-			</div>
-			<div>
-				<dt>Oppdragsgiver / samarbeidspartner</dt>
-				<dd>{project.customer?.name}</dd>
-			</div>
-		</dl>
-	</div>
+  <h1>{project.title ?? project.name}</h1>
+  <div class="content">
+    <div class="body">
+      {#if project.preamble}
+        <PortableText value={project.preamble} />
+      {/if}
+      <div class="links">
+        {#if project.links}
+          {#each project.links as link}
+            <a href={link.url}>{link.name} →</a>
+          {/each}
+        {/if}
+      </div>
+    </div>
+    <dl class="metadata">
+      <div>
+        {#if project.technologies}
+          <dt>Teknologi</dt>
+          <dd>
+            <ul class="badges">
+              {#each project.technologies as technology}
+                <li>{technology.name}</li>
+              {/each}
+            </ul>
+          </dd>
+        {/if}
+      </div>
+      <div>
+        <dt>Oppdragsgiver / samarbeidspartner</dt>
+        <dd>{project.customer?.name}</dd>
+      </div>
+    </dl>
+  </div>
 </div>
 
 {#if project.image}
-	<div class="hero">
-		<img src={project.imageUrl} alt={project.imageAlt} />
-	</div>
+  <div class="hero">
+    <img src={project.imageUrl} alt={project.imageAlt} />
+  </div>
 {/if}
 
 {#if project.body}
-	<div class="container story">
-		<PortableText
-			value={project.body}
-			components={{
-				types: {
-					image: InlineImage
-				}
-			}}
-		/>
-	</div>
+  <div class="container story">
+    <PortableText
+      value={project.body}
+      components={{
+        types: {
+          image: InlineImage
+        }
+      }}
+    />
+  </div>
 {/if}
 
 <style lang="scss">
-	.container,
-	.introduction,
-	.metadata,
-	.body {
-		display: flex;
-		flex-direction: column;
-		gap: var(--size-md);
-		text-wrap: pretty;
-	}
+  .container,
+  .introduction,
+  .metadata,
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-md);
+    text-wrap: pretty;
+  }
 
-	h1 {
-		max-width: 60ch;
-	}
+  h1 {
+    max-width: 60ch;
+  }
 
-	.content {
-		display: flex;
-		flex-direction: row;
-		gap: var(--size-md);
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-md);
 
-		.body {
-			max-width: 50ch;
-			font-size: var(--font-size-base);
-		}
-	}
+    .body {
+      max-width: 50ch;
+      font-size: var(--font-size-base);
+    }
+  }
 
-	@media (max-width: 768px) {
-		.content {
-			flex-direction: column;
-		}
-	}
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  }
 
-	.metadata {
-		display: flex;
-		flex-direction: column;
-		gap: var(--size-base);
+  .metadata {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-base);
 
-		div {
-			display: flex;
-			flex-direction: column;
-			gap: var(--size-xs);
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-xs);
 
-			dt {
-				font-weight: bold;
-			}
-			dd {
-				font-weight: normal;
-			}
-		}
-	}
+      dt {
+        font-weight: bold;
+      }
+      dd {
+        font-weight: normal;
+      }
+    }
+  }
 
-	.badges {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--size-sm);
+  .badges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--size-sm);
 
-		list-style: none;
+    list-style: none;
 
-		li {
-			background-color: var(--color-ui-bg);
-			padding: var(--size-xs) var(--size-sm);
-			border-radius: var(--size-xs);
-			color: var(--color-low-contrast-text);
+    li {
+      background-color: var(--color-ui-bg);
+      padding: var(--size-xs) var(--size-sm);
+      border-radius: var(--size-xs);
+      color: var(--color-low-contrast-text);
 
-			font-size: var(--font-size-sm);
-		}
-	}
+      font-size: var(--font-size-sm);
+    }
+  }
 
-	.links {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-		gap: var(--size-base);
+    gap: var(--size-base);
 
-		a {
-			color: inherit;
-			font-weight: 600;
-		}
-	}
+    a {
+      color: inherit;
+      font-weight: 600;
+    }
+  }
 
-	.hero {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		img {
-			width: 100%;
-			max-width: 1200px;
-			height: 100%;
-			max-height: 600px;
-			object-fit: cover;
-		}
-	}
+    img {
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+  }
 
-	.story {
-		max-width: 60ch;
-	}
+  .story {
+    max-width: 60ch;
+  }
 </style>

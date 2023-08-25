@@ -1,22 +1,22 @@
 <script>
-	import Metadata from '$components/metadata.svelte';
-	import Feature from './feature.svelte';
-	import Hero from './hero.svelte';
+  import Metadata from '$components/metadata.svelte';
+  import Feature from './feature.svelte';
+  import Hero from './hero.svelte';
 </script>
 
 <Metadata path="/" />
 
 <div class="container">
-	<Hero />
-	<Feature />
+  <Hero />
+  <Feature />
 </div>
 
 <style>
-	.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-		gap: var(--size-lg);
-	}
+    gap: var(--size-lg);
+  }
 </style>

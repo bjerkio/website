@@ -43,23 +43,23 @@ const query = `
 `;
 
 export async function getProjects(): Promise<Project[]> {
-	const dataFromSanity = await client.fetch(query);
-	const projects = z
-		.array(projectModel)
-		.parse(dataFromSanity)
-		.map((project) => {
-			const customer = project.customer?.privacy?.hideName
-				? {
-						...project.customer,
-						name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
-				  }
-				: project.customer;
+  const dataFromSanity = await client.fetch(query);
+  const projects = z
+    .array(projectModel)
+    .parse(dataFromSanity)
+    .map((project) => {
+      const customer = project.customer?.privacy?.hideName
+        ? {
+            ...project.customer,
+            name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
+          }
+        : project.customer;
 
-			return {
-				...project,
-				customer
-			};
-		});
+      return {
+        ...project,
+        customer
+      };
+    });
 
-	return projects;
+  return projects;
 }

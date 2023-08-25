@@ -3,11 +3,11 @@ import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 export const client = createClient({
-	projectId: '1zkk2ha0',
-	dataset: 'production',
-	useCdn: false,
-	token: process.env.SANITY_TOKEN,
-	apiVersion: '2023-05-29'
+  projectId: '1zkk2ha0',
+  dataset: 'production',
+  useCdn: false,
+  token: process.env.SANITY_TOKEN,
+  apiVersion: '2023-05-29'
 });
 
 // Get a pre-configured url-builder from your sanity client
@@ -17,5 +17,5 @@ const builder = imageUrlBuilder(client);
 // builder an image and returns the builder for you to specify additional
 // parameters:
 export function urlFor(source: SanityImageSource) {
-	return builder.image(source);
+  return builder.image(source);
 }
