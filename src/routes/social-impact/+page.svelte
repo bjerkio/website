@@ -5,7 +5,14 @@
   import LearningScribble from './illustrations/learning-scribble.svelte';
   import A11y from './illustrations/a11y.svelte';
   import Sustainability from './illustrations/sustainability.svelte';
+  import Metadata from '$components/metadata.svelte';
 </script>
+
+<Metadata
+  title="Sosial påvirkning"
+  description="Bjerk er et digitalt byrå som brenner for sosial påvirkning."
+  path="/social-impact"
+/>
 
 <main>
   <div class="container">
@@ -22,8 +29,6 @@
   </div>
   <Image src={abstractArt} class="feature-image" />
   <div class="container">
-    <QuoteSvg />
-
     <div class="quote">
       <p>
         «I hjertet av Bjerk ligger ønsket om å skape varige, positive forandringer. Gjennom å
@@ -32,6 +37,10 @@
       </p>
       <p>Simen A. W. Olsen, daglig leder i Bjerk AS</p>
     </div>
+  </div>
+
+  <div class="divider">
+    <QuoteSvg />
   </div>
 
   <div class="container">
@@ -91,11 +100,13 @@
       Om du vil lære mer om hvordan vi arbeider, om å samarbeide med eller komme i kontakt med oss,
       kontakt oss i dag!
     </p>
-    <a href="/contact">Send e-post til en av oss →</a>
+    <a class="button" href="/contact">Sjekk oss ut →</a>
   </div>
 </main>
 
 <style lang="scss">
+  @use '$styles/mixins.scss';
+
   main,
   .container {
     display: grid;
@@ -105,6 +116,9 @@
   :global(.feature-image) {
     object-fit: cover;
     width: 100%;
+
+    max-width: 1550px;
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
@@ -213,6 +227,13 @@
     }
   }
 
+  .divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--size-md) 0;
+  }
+
   .pitch {
     max-width: 50ch;
     text-align: center;
@@ -229,6 +250,11 @@
     flex-direction: column;
     align-items: center;
     gap: var(--size-md);
+    min-height: 30ch;
+
+    .button {
+      @include mixins.button;
+    }
 
     h2 {
       font-size: var(--font-size-xl);
