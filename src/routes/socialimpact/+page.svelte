@@ -1,7 +1,7 @@
 <script>
 	import abstractArt from '$assets/li-zhang-wtDy3HaivJI-unsplash.jpg?w=1200&h=565&fit=crop&fm=webp&q=80';
 	import Image from '$components/image.svelte';
-  import QuoteSvg from './illustrations/quote.svelte';
+	import QuoteSvg from './illustrations/quote.svelte';
 	import LearningScribble from './illustrations/learning-scribble.svelte';
 	import A11y from './illustrations/a11y.svelte';
 	import Sustainability from './illustrations/sustainability.svelte';
@@ -218,7 +218,7 @@
 		text-align: center;
 		margin: 0 auto;
 		font-weight: 600;
-    padding: 0 var(--size-md);
+		padding: 0 var(--size-md);
 
 		font-size: var(--font-size-base);
 		margin-bottom: var(--size-xl);
