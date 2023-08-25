@@ -13,7 +13,7 @@
 			<h1>Positiv påvirkning gjennom teknologi</h1>
 
 			<p>
-				I Bjerk tror vi at teknologi i seg selv er en kraft, men det er måten vi bruker den på som
+				I Bjerk mener vi at teknologi i seg selv er kraftfull, men det er måten vi bruker den på som
 				bestemmer dens innflytelse. I en verden som stadig utvikler seg, har vi valgt å rette fokus
 				mot sosial innvirkning – en satsing for å gjøre verden bedre gjennom våre digitale produkter
 				og prinsipper.
