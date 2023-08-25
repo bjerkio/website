@@ -113,7 +113,7 @@
 			Om du vil lære mer om hvordan vi arbeider, om å samarbeide med eller komme i kontakt med oss,
 			kontakt oss i dag!
 		</p>
-    <a href="/contact">Send e-post til en av oss →</a>
+		<a href="/contact">Send e-post til en av oss →</a>
 	</div>
 </main>
 
@@ -243,12 +243,12 @@
 
 	.pitch {
 		max-width: 50ch;
-    text-align: center;
-    margin: 0 auto;
-    font-weight: 600;
+		text-align: center;
+		margin: 0 auto;
+		font-weight: 600;
 
-    font-size: var(--font-size-base);
-    margin-bottom: var(--size-xl);
+		font-size: var(--font-size-base);
+		margin-bottom: var(--size-xl);
 	}
 
 	.contact {
