@@ -1,0 +1,9 @@
+name: Workflow
+
+on: 
+  pull_request:
+
+jobs:
+  typical-workflow:
+    name: Lint, format, test and build
+    uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v2
