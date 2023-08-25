@@ -7,27 +7,27 @@ export const prerender = true;
 const projects = await getProjects();
 
 export const entries = (() => {
-	const urls = projects
-		.filter((project) => project.slug)
-		.map((project) => {
-			invariant(project.slug?.current);
-			return {
-				slug: project.slug.current
-			};
-		});
+  const urls = projects
+    .filter((project) => project.slug)
+    .map((project) => {
+      invariant(project.slug?.current);
+      return {
+        slug: project.slug.current
+      };
+    });
 
-	return urls;
+  return urls;
 }) satisfies EntryGenerator;
 
 export async function GET({ params }) {
-	const project = projects.find((project) => project.slug?.current === params.slug);
+  const project = projects.find((project) => project.slug?.current === params.slug);
 
-	if (!project) {
-		throw new Error(`Project not found`);
-	}
+  if (!project) {
+    throw new Error(`Project not found`);
+  }
 
-	return new Response(
-		`<svg xmlns="http://www.w3.org/2000/svg" fill="none" style="font-family:&quot;Sora&quot;,sans-serif;;color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale" viewBox="0 0 1200 627">
+  return new Response(
+    `<svg xmlns="http://www.w3.org/2000/svg" fill="none" style="font-family:&quot;Sora&quot;,sans-serif;;color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale" viewBox="0 0 1200 627">
   <defs>
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Sora);
@@ -49,5 +49,5 @@ export async function GET({ params }) {
     </div>
   </foreignObject>
 </svg>`
-	);
+  );
 }

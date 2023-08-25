@@ -1,62 +1,62 @@
 @mixin button {
-	box-shadow: var(--border-radius-base);
-	border: 0px;
+  box-shadow: var(--border-radius-base);
+  border: 0px;
 
-	font: inherit;
-	cursor: pointer;
-	display: inline-flex;
-	width: fit-content;
-	align-items: center;
-	gap: var(--size-sm);
-	outline: none;
-	text-align: center;
-	text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--size-sm);
+  outline: none;
+  text-align: center;
+  text-decoration: none;
 
-	padding: var(--size-base) var(--size-md);
-	background-color: transparent;
-	border: 2px solid var(--color-ui-border);
-	color: inherit;
-	border-radius: 80px;
+  padding: var(--size-base) var(--size-md);
+  background-color: transparent;
+  border: 2px solid var(--color-ui-border);
+  color: inherit;
+  border-radius: 80px;
 
-	transition:
-		background-color 0.2s,
-		transform 0.2s;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
 
-	&:hover {
-		text-decoration: none;
+  &:hover {
+    text-decoration: none;
 
-		background-color: var(--color-ui-bg);
-		transform: scale(1.15) rotate(-3deg);
-		border-color: transparent;
-	}
+    background-color: var(--color-ui-bg);
+    transform: scale(1.15) rotate(-3deg);
+    border-color: transparent;
+  }
 
-	&:active,
-	&:focus {
-		background-color: var(--color-ui-bg);
-		border-color: var(--color-ui-border-hover);
-	}
+  &:active,
+  &:focus {
+    background-color: var(--color-ui-bg);
+    border-color: var(--color-ui-border-hover);
+  }
 }
 
 @mixin button-link {
-	border: none;
-	margin: 0;
-	padding: 0;
-	width: auto;
-	overflow: visible;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
 
-	background: transparent;
+  background: transparent;
 
-	/* inherit font & color from ancestor */
-	color: inherit;
-	font: inherit;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
 
-	/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-	line-height: normal;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
 
-	/* Corrects font smoothing for webkit */
-	-webkit-font-smoothing: inherit;
-	-moz-osx-font-smoothing: inherit;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 
-	/* Corrects inability to style clickable `input` types in iOS */
-	appearance: none;
+  /* Corrects inability to style clickable `input` types in iOS */
+  appearance: none;
 }

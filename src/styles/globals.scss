@@ -5,66 +5,66 @@
 $green100: rgba(144, 244, 148, 1);
 
 :root {
-	--max-width: 1100px;
-	--border-radius-sm: 0.375rem;
-	--border-radius-base: 0.75rem;
-	--font-line-height: 1.75rem;
+  --max-width: 1100px;
+  --border-radius-sm: 0.375rem;
+  --border-radius-base: 0.75rem;
+  --font-line-height: 1.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background-color: #273653;
-		--text-color: var(--green20);
-		--foreground-color: #0f2040;
-		--text-color-light: var(--green20);
-		--accent-color: var(--green20);
-	}
-	:global(html) {
-		color-scheme: dark;
-	}
+  :root {
+    --background-color: #273653;
+    --text-color: var(--green20);
+    --foreground-color: #0f2040;
+    --text-color-light: var(--green20);
+    --accent-color: var(--green20);
+  }
+  :global(html) {
+    color-scheme: dark;
+  }
 }
 
 :global(*) {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 
-	// text smoothing / antialiasing / rendering
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
+  // text smoothing / antialiasing / rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 :global(a) {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 
-	&:hover {
-		text-decoration: underline;
-	}
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 :global(html, body) {
-	max-width: 100vw;
-	overflow-x: hidden;
-	font-size: 18px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 18px;
 
-	font-family:
-		'Sora Variable',
-		system-ui,
-		-apple-system,
-		sans-serif;
+  font-family:
+    'Sora Variable',
+    system-ui,
+    -apple-system,
+    sans-serif;
 
-	background-color: var(--color-app-bg);
-	color: var(--color-high-contrast-text);
+  background-color: var(--color-app-bg);
+  color: var(--color-high-contrast-text);
 }
 
 :global(h1, h2, h3, h4, h5) {
-	text-wrap: balance;
+  text-wrap: balance;
 }
 
 :global(.container) {
-	margin: 0 auto;
-	max-width: var(--max-width);
-	padding: var(--size-md);
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: var(--size-md);
 }
