@@ -19,8 +19,8 @@
   email="thomas@bjerk.io"
   image={thomas}
   socialMedia={[
-    { type: 'github', url: 'https://github.com/HanBrustad' },
-    { type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' }
+    { type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' },
+    { type: 'github', url: 'https://github.com/HanBrustad' }
   ]}
 />
 
