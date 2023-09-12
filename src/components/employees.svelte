@@ -8,6 +8,7 @@
   import simon from '$assets/people/simon.jpg?w=300&h=400';
   import thomas from '$assets/people/thomas.jpg?w=300&h=400';
   import sandra from '$assets/people/sandra.jpg?w=300&h=400';
+  import cop from '$assets/people/cop.jpg?w=300&h=400';
 </script>
 
 <Employee
@@ -33,6 +34,25 @@
   socialMedia={[
     { type: 'linkedin', url: 'https://www.linkedin.com/in/simenandre/' },
     { type: 'github', url: 'https://github.com/simenandre' }
+  ]}
+/>
+
+<Employee
+  givenName="Carl Oscar"
+  familyName="Petterson"
+  position="Rådgiver"
+  phone="+47 908 59 851"
+  email="cop@bjerk.io"
+  image={cop}
+  socialMedia={[
+    {
+      type: 'linkedin',
+      url: 'https://www.linkedin.com/in/copetterson/'
+    },
+    {
+      type: 'github',
+      url: 'https://github.com/copetterson'
+    }
   ]}
 />
 
