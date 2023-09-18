@@ -75,7 +75,7 @@
           url: 'https://www.linkedin.com/in/braaar/'
         },
         github: {
-          url: 'https://www.linkedin.com/in/braaar/'
+          url: 'https://www.github.com/braaar/'
         }
       }
     },
