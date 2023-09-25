@@ -19,7 +19,7 @@ export const story = [
   {
     message:
       'Alle på kontoret hadde full overtenning. Det var en uhyggelig atmosfære i luften, som at dette var starten på noe som ville få store konsekvenser.',
-    author: 'COP'
+    author: 'Carl Oscar P.'
   },
   {
     message: 'Hvilke konsekvenser kunne det få? Hva skulle de gjøre?',
@@ -33,7 +33,7 @@ export const story = [
   {
     message:
       'Nå måtte de bare stå i det. "Skal vi peise på da, eller?", sa Ingunn. "Vi forsøker å få den inn i buret igjen liksom?"',
-    author: 'COP'
+    author: 'Carl Oscar P.'
   },
   {
     message:
