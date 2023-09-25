@@ -26,6 +26,11 @@
     margin-block-start: 2em;
   }
 
+  .story {
+    width: min(64ch, 100% - 4rem);
+    margin-inline: auto;
+  }
+
   .message {
     font-weight: bold;
     font-size: 1.8rem;
