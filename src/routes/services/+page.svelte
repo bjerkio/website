@@ -3,7 +3,15 @@
   import HeaderImage from '$assets/aaron-burden-Bycd2wF5vQU-unsplash.png';
   import Image from '$components/image.svelte';
   import { JsonLd } from 'svelte-meta-tags';
+  import Metadata from '$components/metadata.svelte';
 </script>
+
+<Metadata
+  path="/services"
+  description="Bjerk samler folk med kompetanse innen programvareutvikling, brukeropplevelse og
+      produktledelse for å gjøre verden til et litt bedre sted. Vi håper at gjennom å lage digitale
+      produkter, så kan vi skape positive effekter for mennesker."
+/>
 
 <div class="hero">
   <Image src={HeaderImage} alt="Abstract art by Aaron Burden" />
