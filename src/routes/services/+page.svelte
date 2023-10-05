@@ -2,11 +2,33 @@
   import { ArrowDownRight } from 'phosphor-svelte';
   import HeaderImage from '$assets/aaron-burden-Bycd2wF5vQU-unsplash.png';
   import Image from '$components/image.svelte';
+  import { JsonLd } from 'svelte-meta-tags';
 </script>
 
 <div class="hero">
   <Image src={HeaderImage} alt="Abstract art by Aaron Burden" />
 </div>
+
+<JsonLd
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Bjerk',
+        item: 'https://bjerk.io/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Teknologi og produktledelse',
+        item: 'https://bjerk.io/services'
+      }
+    ]
+  }}
+/>
 
 <!-- breadcrumps -->
 <nav aria-label="navigasjon" class="container breadcrumb">
@@ -125,6 +147,14 @@
 
   .breadcrumb ol li {
     font-size: clamp(0.7rem, 1.5vw, 1rem);
+  }
+
+  .breadcrumb ol li a {
+    text-decoration: none;
+  }
+
+  .breadcrumb ol li a:hover {
+    text-decoration: underline;
   }
 
   .breadcrumb ol li:last-child {
