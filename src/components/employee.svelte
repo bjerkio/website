@@ -3,6 +3,7 @@
   import LinkedinLogo from 'phosphor-svelte/lib/LinkedinLogo';
   import Image from '$components/image.svelte';
   import { JsonLd } from 'svelte-meta-tags';
+  import type { Picture } from 'vite-imagetools';
 
   export let givenName: string;
   export let familyName: string;
@@ -16,9 +17,8 @@
   };
 
   export let socialMedia: socialMedia[] = [];
-  // TODO: Use Picture type from components/image.svelte
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export let image: any;
+  export let image: Picture;
+  export let photographerName: string | undefined = undefined;
 
   const name = `${givenName} ${familyName}`;
 </script>
@@ -41,6 +41,20 @@
         }
       }
     ]
+  }}
+/>
+
+<JsonLd
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: image.img.src,
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    creditText: 'Bjerk AS',
+    creator: {
+      '@type': 'Person',
+      name: photographerName ?? 'Bjerk AS'
+    }
   }}
 />
 

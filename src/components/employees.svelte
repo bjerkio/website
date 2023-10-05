@@ -22,6 +22,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/thomasbrustad/' },
     { type: 'github', url: 'https://github.com/HanBrustad' }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -35,6 +36,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/simenandre/' },
     { type: 'github', url: 'https://github.com/simenandre' }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -54,6 +56,7 @@
       url: 'https://github.com/copetterson'
     }
   ]}
+  photographerName="Tom-Egil Jensen"
 />
 
 <Employee
@@ -67,6 +70,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/braaar/' },
     { type: 'github', url: 'https://github.com/braaar' }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -80,6 +84,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/moripen/' },
     { type: 'github', url: 'https://github.com/moripen' }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -93,6 +98,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/simon-rugland/' },
     { type: 'github', url: 'https://github.com/simonrugland' }
   ]}
+  photographerName="Fabian Roberto Gomez"
 />
 
 <Employee
@@ -112,6 +118,7 @@
       url: 'https://github.com/xillians'
     }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -125,6 +132,7 @@
     { type: 'linkedin', url: 'https://www.linkedin.com/in/annachristinalyra/' },
     { type: 'github', url: 'https://github.com/ChristinaLyra' }
   ]}
+  photographerName="Steffen Normark"
 />
 
 <Employee
@@ -144,4 +152,5 @@
       url: 'https://github.com/seacurrent'
     }
   ]}
+  photographerName="Sebastian Andersen"
 />
