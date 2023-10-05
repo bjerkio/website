@@ -48,8 +48,10 @@
   schema={{
     '@context': 'https://schema.org',
     '@type': 'ImageObject',
+    about: `${name} @ Bjerk`,
     contentUrl: image.img.src,
     license: 'https://creativecommons.org/licenses/by/4.0/',
+    acquireLicensePage: 'https://creativecommons.org/licenses/by/4.0/',
     creditText: 'Bjerk AS',
     creator: {
       '@type': 'Person',
