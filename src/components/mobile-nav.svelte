@@ -78,8 +78,6 @@
   dialog {
     padding: 0.5rem;
     padding-top: 4rem;
-    /* margin: 0.5rem; */
-    /* width: 100%; */
     width: calc((100% - 6px) - 2em);
     max-width: 450px;
     border: 0px;

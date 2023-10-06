@@ -58,7 +58,7 @@
 
 <style>
   .container {
-    margin: 0 auto;
+    margin-inline: auto;
   }
 
   .container,

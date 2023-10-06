@@ -137,7 +137,7 @@
     max-height: 200px;
     max-width: 1260px;
 
-    margin: 0 auto;
+    margin-inline: auto;
   }
 
   @media (max-width: 768px) {

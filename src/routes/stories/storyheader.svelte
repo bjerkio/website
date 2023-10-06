@@ -16,7 +16,7 @@
 <style>
   .story-header {
     max-width: 60ch;
-    margin: 0 auto;
+    margin-inline: auto;
     padding: 2rem;
   }
 

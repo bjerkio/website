@@ -19,7 +19,7 @@
 <style>
   main {
     max-width: 40ch;
-    margin: 0 auto;
+    margin-inline: auto;
   }
 
   main > * {

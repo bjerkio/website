@@ -118,7 +118,7 @@
     width: 100%;
 
     max-width: 1550px;
-    margin: 0 auto;
+    margin-inline: auto;
 
     display: flex;
     justify-content: center;
@@ -237,7 +237,7 @@
   .pitch {
     max-width: 50ch;
     text-align: center;
-    margin: 0 auto;
+    margin-inline: auto;
     font-weight: 600;
     padding: 0 2rem;
 
