@@ -78,7 +78,7 @@
   .body {
     display: flex;
     flex-direction: column;
-    gap: var(--size-md);
+    gap: 2rem;
     text-wrap: pretty;
   }
 
@@ -89,7 +89,7 @@
   .content {
     display: flex;
     flex-direction: row;
-    gap: var(--size-md);
+    gap: 2rem;
 
     .body {
       max-width: 50ch;
@@ -106,12 +106,12 @@
   .metadata {
     display: flex;
     flex-direction: column;
-    gap: var(--size-base);
+    gap: 1rem;
 
     div {
       display: flex;
       flex-direction: column;
-      gap: var(--size-xs);
+      gap: 0.25rem;
 
       dt {
         font-weight: bold;
@@ -126,14 +126,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--size-sm);
+    gap: 0.5rem;
 
     list-style: none;
 
     li {
       background-color: var(--color-ui-bg);
-      padding: var(--size-xs) var(--size-sm);
-      border-radius: var(--size-xs);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
       color: var(--color-low-contrast-text);
 
       font-size: var(--font-size-sm);
@@ -145,7 +145,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    gap: var(--size-base);
+    gap: 1rem;
 
     a {
       color: inherit;
@@ -157,6 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-block: 2rem;
 
     img {
       width: 100%;

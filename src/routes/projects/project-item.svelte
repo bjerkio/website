@@ -40,14 +40,14 @@
   @use '$styles/mixins';
 
   .project {
-    padding: var(--size-md);
+    padding: 2rem;
     border-radius: var(--border-radius-sm);
     background-color: var(--color-subtle-bg);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: var(--size-base);
+    gap: 1rem;
   }
 
   .introduction {
@@ -55,17 +55,17 @@
 
     display: flex;
     flex-direction: column;
-    gap: var(--size-base);
+    gap: 1rem;
 
     .content {
       display: flex;
       flex-direction: column;
-      gap: var(--size-sm);
+      gap: 0.5rem;
     }
 
     .read-more-link {
       @include mixins.button;
-      padding: var(--size-sm) var(--size-base);
+      padding: 0.5rem 1rem;
 
       background-color: transparent;
       border: 1px solid var(--color-high-contrast-text);
@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--size-base);
+    gap: 1rem;
     min-width: 30%;
     overflow: hidden;
 
@@ -91,7 +91,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: var(--size-xs);
+      gap: 0.25rem;
 
       dt {
         font-weight: bold;

@@ -6,9 +6,10 @@
 
 <Metadata title="Om oss" path="/about" />
 
-<div class="container">
-  <div class="section">
+<main>
+  <div class="content">
     <h1>Vi skaper digitale produkter</h1>
+
     <p>
       Det beste i verden er skapt av de dristige, utfordrere, de som ser ting annerledes som er
       ambisiøse, nysgjerrige og motiverte nok til å finne orden i virvaret av det uforståelige.
@@ -33,12 +34,10 @@
       <a href="/about/principles">Lær om hvordan vi jobber</a>
     </div>
   </div>
-</div>
-<div class="hero">
-  <Image src={AboutBjerk} class="hero-image" alt="Bjerk" />
-</div>
-<div class="container">
-  <div class="section">
+  <div class="hero">
+    <Image src={AboutBjerk} class="hero-image" alt="Bjerk" />
+  </div>
+  <div class="content">
     <p>
       Vi elsker å skape digitale løsninger som gjør en ekte påvirkning i menneskers liv. For å oppnå
       det bruker vi iterative utviklingsprosesser, tverrfaglig samarbeid, designorientert
@@ -53,24 +52,43 @@
       <a href="/projects">Sjekk ut tidligere jobber</a>
     </div>
   </div>
-</div>
+</main>
 
 <style lang="scss">
   @use '$styles/mixins.scss';
 
-  .section,
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--size-base);
+  .content {
+    max-width: 50ch;
+    margin-inline: auto;
+    gap: 2em;
 
-    text-wrap: pretty;
-  }
+    > * {
+      margin-block-end: 1em;
+      line-height: 1.5em;
+    }
 
-  .container {
-    max-width: 60ch;
-    gap: var(--size-lg);
+    nav > ul li {
+      margin-block-end: 0.5em;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &::before {
+        content: '→';
+        margin-inline-end: 0.5em;
+        margin-inline-start: 0.2em;
+      }
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+    }
   }
 
   a {
@@ -83,9 +101,9 @@
   }
 
   .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-inline: auto;
+    width: min(100%, 1100px);
+    margin-block: 2rem;
   }
 
   em {

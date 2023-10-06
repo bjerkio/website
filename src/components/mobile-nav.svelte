@@ -59,9 +59,9 @@
 
     display: flex;
     align-items: center;
-    gap: var(--size-xs);
+    gap: 0.25rem;
     font-size: var(--font-size-md);
-    padding: var(--size-sm);
+    padding: 0.5rem;
     border-radius: var(--border-radius-sm);
 
     span {
@@ -76,9 +76,9 @@
   }
 
   dialog {
-    padding: var(--size-sm);
-    padding-top: var(--size-lg);
-    /* margin: var(--size-sm); */
+    padding: 0.5rem;
+    padding-top: 4rem;
+    /* margin: 0.5rem; */
     /* width: 100%; */
     width: calc((100% - 6px) - 2em);
     max-width: 450px;
@@ -112,7 +112,7 @@
   .dialog-content {
     display: flex;
     flex-direction: column;
-    gap: var(--size-md);
+    gap: 2rem;
   }
 
   ul {
@@ -122,14 +122,14 @@
 
     display: flex;
     flex-direction: column;
-    /* gap: var(--size-base); */
+    /* gap: 1rem; */
   }
 
   .navigation li a {
     color: var(--color-primary);
     text-decoration: none;
 
-    padding: var(--size-base);
+    padding: 1rem;
     display: block;
 
     border: 2px solid transparent;
@@ -153,7 +153,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: var(--size-base);
+    padding: 1rem;
     border: 0;
     background: transparent;
     color: var(--color-primary);
@@ -162,7 +162,7 @@
   }
 
   .actions {
-    padding: var(--size-base);
+    padding: 1rem;
     padding-top: 0;
 
     .button {

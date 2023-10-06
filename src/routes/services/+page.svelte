@@ -131,7 +131,7 @@
   </div>
 </main>
 
-<style>
+<style lang="scss">
   .hero {
     overflow: hidden;
     max-height: 200px;
@@ -151,44 +151,44 @@
     flex-wrap: wrap;
     list-style: none;
     gap: 0.5em;
-  }
 
-  .breadcrumb ol li {
-    font-size: clamp(0.7rem, 1.5vw, 1rem);
-  }
+    margin-block: 1.5rem;
 
-  .breadcrumb ol li a {
-    text-decoration: none;
-  }
+    > li {
+      font-size: clamp(0.7rem, 1.5vw, 1rem);
 
-  .breadcrumb ol li a:hover {
-    text-decoration: underline;
-  }
+      a {
+        text-decoration: none;
 
-  .breadcrumb ol li:last-child {
-    display: flex;
-    align-items: center;
-    gap: 0.2em;
-  }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
-  .breadcrumb ol li::after {
-    content: '/';
-    margin: 0 0.5em;
-  }
+      &::after {
+        content: '/';
+        margin: 0 0.5em;
+      }
 
-  .breadcrumb ol li:last-child::after {
-    content: '';
+      &:last-child {
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+
+        &::after {
+          content: '';
+        }
+      }
+    }
   }
 
   main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: var(--container-width);
+    margin-inline: auto;
     gap: 2em;
-
-    padding: 0 2rem;
   }
 
   @media (max-width: 768px) {
@@ -201,50 +201,42 @@
     text-decoration: underline;
   }
 
-  h1,
-  h2 {
-    text-wrap: pretty;
-  }
-
   main > .content {
     max-width: 50ch;
-  }
 
-  .content > * {
-    margin-block-end: 1em;
-    line-height: 1.5em;
-    font-size: 1.125rem;
-    /* font-size: clamp(1rem, 1.5vw, 1.125rem); */
-  }
+    > * {
+      margin-block-end: 1em;
+      line-height: 1.5em;
+    }
 
-  .content .headline {
-    font-size: clamp(1.5rem, 2vw, 1.6rem);
-    font-weight: 600;
-    text-wrap: pretty;
-    margin-block-end: 1.5em;
-  }
+    .headline {
+      font-size: var(--font-size-md);
+      font-weight: 600;
+      text-wrap: pretty;
+      margin-block-end: 1.5em;
+    }
 
-  .content nav > ul li {
-    margin-block-end: 0.5em;
-    list-style: none;
-  }
+    nav > ul li {
+      margin-block-end: 0.5em;
+      list-style: none;
 
-  .content nav > ul li a {
-    text-decoration: none;
-  }
+      a {
+        text-decoration: none;
 
-  .content nav > ul li a:hover {
-    text-decoration: underline;
-  }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
-  .content nav > ul li::before {
-    content: '→';
-    margin-inline-end: 0.5em;
-    margin-inline-start: 0.2em;
-  }
+      &::before {
+        content: '→';
+        margin-inline-end: 0.5em;
+        margin-inline-start: 0.2em;
+      }
+    }
 
-  .content h2 {
-    /* font-size: 2rem; */
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    h2 {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+    }
   }
 </style>

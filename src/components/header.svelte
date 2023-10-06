@@ -26,9 +26,9 @@
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 auto;
-    max-width: var(--max-width);
-    padding: var(--size-md);
+    width: var(--container-width);
+    margin-inline: auto;
+    padding: 2rem 0;
 
     .logo {
       color: var(--color-high-contrast-text);
@@ -39,13 +39,13 @@
   nav {
     display: flex;
     list-style: none;
-    gap: var(--size-base);
+    gap: 1rem;
     align-items: center;
 
     ul {
       display: flex;
       list-style: none;
-      gap: var(--size-base);
+      gap: 1rem;
 
       li {
         font-size: var(--font-size-sm);

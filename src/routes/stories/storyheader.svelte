@@ -17,7 +17,7 @@
   .story-header {
     max-width: 60ch;
     margin: 0 auto;
-    padding: var(--size-md);
+    padding: 2rem;
   }
 
   .story-header > * {

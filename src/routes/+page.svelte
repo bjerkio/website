@@ -17,6 +17,6 @@
     flex-direction: column;
     justify-content: center;
 
-    gap: var(--size-lg);
+    gap: 4rem;
   }
 </style>

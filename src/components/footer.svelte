@@ -21,7 +21,7 @@
   .outer-container {
     background-color: var(--color-solid-bg);
     color: var(--color-light);
-    margin-top: var(--size-lg);
+    margin-top: 4rem;
   }
 
   a {
@@ -29,13 +29,13 @@
   }
 
   .container {
-    padding-top: var(--size-lg);
-    padding-bottom: var(--size-lg);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--size-md);
+    gap: 2rem;
   }
 
   .highlight {

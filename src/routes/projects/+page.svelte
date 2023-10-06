@@ -17,6 +17,6 @@
   .projects {
     display: flex;
     flex-direction: column;
-    gap: var(--size-base);
+    gap: 1rem;
   }
 </style>
