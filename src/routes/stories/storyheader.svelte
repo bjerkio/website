@@ -16,8 +16,8 @@
 <style>
   .story-header {
     max-width: 60ch;
-    margin: 0 auto;
-    padding: var(--size-md);
+    margin-inline: auto;
+    padding: 2rem;
   }
 
   .story-header > * {

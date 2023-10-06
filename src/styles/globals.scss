@@ -1,27 +1,28 @@
 @use './colors.scss';
-@use './sizes.scss';
 @use '@fontsource-variable/sora';
 
-$green100: rgba(144, 244, 148, 1);
-
 :root {
-  --max-width: 1100px;
+  --container-width: min(76ch, 100% - 4rem);
   --border-radius-sm: 0.375rem;
   --border-radius-base: 0.75rem;
-  --font-line-height: 1.75rem;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #273653;
-    --text-color: var(--green20);
-    --foreground-color: #0f2040;
-    --text-color-light: var(--green20);
-    --accent-color: var(--green20);
-  }
-  :global(html) {
-    color-scheme: dark;
-  }
+  // Fluid Type Scale polyfill, for browsers that don't support clamp
+  --font-size-sm: 0.8125rem; // 13px
+  --font-size-base: 1rem; // 16px
+  --font-size-md: 1.25rem; // 20px
+  --font-size-lg: 1.56rem; // 25px
+  --font-size-xl: 1.95rem; // 31px
+  --font-size-xxl: 2.44rem; // 39px
+  --font-size-xxxl: 3.05rem; // 49px
+
+  // Fluid Type Scale clamp
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem); // 13px
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem); // 16px
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem); // 20px
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem); // 25px
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem); // 31px
+  --font-size-xxl: clamp(2rem, 2.38vw + 1.85rem, 3.75rem); // 39px
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem); // 49px
 }
 
 :global(*) {
@@ -45,9 +46,7 @@ $green100: rgba(144, 244, 148, 1);
 }
 
 :global(html, body) {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-size: 18px;
+  font-size: var(--font-size-base);
 
   font-family:
     'Sora Variable',
@@ -64,7 +63,6 @@ $green100: rgba(144, 244, 148, 1);
 }
 
 :global(.container) {
-  margin: 0 auto;
-  max-width: var(--max-width);
-  padding: var(--size-md);
+  width: var(--container-width);
+  margin-inline: auto;
 }

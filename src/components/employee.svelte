@@ -108,13 +108,13 @@
   .employee {
     display: flex;
     flex-direction: column;
-    gap: var(--size-base);
+    gap: 1rem;
   }
 
   .section {
     display: flex;
     flex-direction: column;
-    gap: var(--size-base);
+    gap: 1rem;
   }
 
   :global(.profile-image) {
@@ -147,7 +147,7 @@
   .social-media-links {
     display: flex;
     flex-direction: row;
-    gap: var(--size-xs);
+    gap: 0.25rem;
     list-style: none;
     padding: 0;
     margin: 0;

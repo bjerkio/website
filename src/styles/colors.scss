@@ -61,7 +61,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    // App background
     --color-app-bg: var(--dark100);
 
     // Subtle background
@@ -97,6 +96,7 @@
     // High-contrast text
     --color-high-contrast-text: white;
   }
+
   :global(html) {
     color-scheme: dark;
   }

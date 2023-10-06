@@ -52,11 +52,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--size-base);
+    gap: 1rem;
   }
 
   .container {
-    gap: var(--size-lg);
+    gap: 4rem;
   }
 
   .elevator {
@@ -66,7 +66,7 @@
     }
 
     .call-to-action {
-      margin-top: var(--size-base);
+      margin-top: 1rem;
 
       button {
         @include mixins.button;
@@ -79,7 +79,7 @@
     dl {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: var(--size-base);
+      gap: 1rem;
 
       dt {
         font-weight: bold;
@@ -92,6 +92,6 @@
 
   .employees {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 </style>

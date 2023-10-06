@@ -60,7 +60,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--size-lg);
+    gap: 4rem;
   }
 
   .container {
@@ -68,7 +68,7 @@
   }
 
   .section {
-    gap: var(--size-md);
+    gap: 2rem;
   }
 
   .highlight {

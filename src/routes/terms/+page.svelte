@@ -234,7 +234,7 @@
 <style>
   .content {
     max-width: 60ch;
-    margin: 0 auto;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;

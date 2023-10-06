@@ -118,7 +118,7 @@
     width: 100%;
 
     max-width: 1550px;
-    margin: 0 auto;
+    margin-inline: auto;
 
     display: flex;
     justify-content: center;
@@ -162,7 +162,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--size-md);
+    gap: 2rem;
 
     > p {
       max-width: 60ch;
@@ -179,7 +179,7 @@
 
   .potentials {
     display: grid;
-    gap: var(--size-lg);
+    gap: 4rem;
   }
 
   article.potential {
@@ -200,7 +200,7 @@
     }
 
     justify-content: space-between;
-    gap: var(--size-lg);
+    gap: 4rem;
 
     .illustration {
       display: flex;
@@ -213,7 +213,7 @@
     .content {
       display: flex;
       flex-direction: column;
-      gap: var(--size-base);
+      gap: 1rem;
 
       h3 {
         font-size: var(--font-size-lg);
@@ -231,25 +231,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: var(--size-md) 0;
+    margin: 2rem 0;
   }
 
   .pitch {
     max-width: 50ch;
     text-align: center;
-    margin: 0 auto;
+    margin-inline: auto;
     font-weight: 600;
-    padding: 0 var(--size-md);
+    padding: 0 2rem;
 
     font-size: var(--font-size-base);
-    margin-bottom: var(--size-xl);
+    margin-bottom: 8rem;
   }
 
   .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--size-md);
+    gap: 2rem;
     min-height: 30ch;
 
     .button {

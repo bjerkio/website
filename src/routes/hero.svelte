@@ -34,14 +34,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--size-lg);
+    gap: 4rem;
   }
 
   .section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--size-base);
+    gap: 1rem;
 
     p {
       font-size: var(--font-size-base);
@@ -59,7 +59,7 @@
     @include mixins.button;
     font-size: var(--font-size-sm);
     font-weight: normal;
-    padding: var(--size-sm) var(--size-base);
+    padding: 0.5rem 1rem;
     transform: translateY(-40%);
     &:hover {
       transform: translateY(-40%) scale(1.05) rotate(1deg);
