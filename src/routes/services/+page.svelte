@@ -80,9 +80,9 @@
     </p>
     <p>
       <a href="/contact">Våre rådgivere</a> kan lede utvikling av produkter (produktledelse),
-      inkludert å forstå brukerne, hva som gir effekt og hva man bør gjøre først og sist. Rådgiverne i Bjerk
-      kan både produkt- og prosjektledelse, og er glad i metoder, prinsipper og løsninger som gir
-      mest innvirkning, slik som
+      inkludert å forstå brukerne, hva som gir effekt og hva man bør gjøre først og sist. Rådgiverne
+      i Bjerk kan både produkt- og prosjektledelse, og er glad i metoder, prinsipper og løsninger
+      som gir mest innvirkning, slik som
       <a href="https://en.wikipedia.org/wiki/Design_thinking" target="_blank">Design Thinking</a>
       og
       <a href="https://agilemanifesto.org/iso/no/manifesto.html" target="_blank">
@@ -92,8 +92,8 @@
     <p>
       For å skape gode produkter, trengs det fagpersoner som kan lage dem. Vi tror noen fagmområder
       trenger samspill for å skinne, og derfor er vi <a href="/contact">flere utviklere</a> i Bjerk.
-      Vi spiller på hverandre og bruker alle slags rammeverk, programmeringsspråk og paradigmer. For oss
-       gir det mening å ha et pragmatisk syn på hva som brukes når – det som gir mest mulig effekt.
+      Vi spiller på hverandre og bruker alle slags rammeverk, programmeringsspråk og paradigmer. For
+      oss gir det mening å ha et pragmatisk syn på hva som brukes når – det som gir mest mulig effekt.
     </p>
     <p>
       For å skape gode brukeropplevelser i digitale produkter tror vi produktteam trenger dedikerte
@@ -119,8 +119,8 @@
     </nav>
     <p>
       Aller helst liker vi å ha delte kanaler på Slack eller Teams, slik at vi kan snakke sammen når
-      ting oppstår. Om det ikke passer organisasjonen vi jobber sammen med, har vi jevnlige møter
-      om det vi jobber med.
+      ting oppstår. Om det ikke passer organisasjonen vi jobber sammen med, har vi jevnlige møter om
+      det vi jobber med.
     </p>
     <p>
       For at våre kunder skal ha oversikt over hva vi jobber med, har vi helst en
