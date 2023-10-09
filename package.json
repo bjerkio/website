@@ -50,6 +50,6 @@
     "svelte-sitemap": "^2.6.0",
     "ts-invariant": "^0.10.3",
     "website-carbon-badges": "^1.1.3",
-    "zod": "^3.21.4"
+    "zod": "^3.22.3"
   }
 }
