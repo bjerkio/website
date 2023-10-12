@@ -1,4 +1,6 @@
 <script>
+  import { ArrowRight } from "phosphor-svelte";
+
   const showSignupForm = false;
 </script>
 
@@ -16,7 +18,7 @@
         <strong>Sted:</strong> Akersgata 51, 0180 Oslo
       </p>
       <p>
-        → <a href="https://www.google.com/"> Meld meg på</a>
+        <ArrowRight /> <a href="https://forms.gle/ouHcJ77eVvMoDamk8"> Meld meg på</a>
       </p>
     </div>
 
@@ -104,5 +106,9 @@
     border-radius: 0.25rem;
     padding: 1em;
     font-size: var(--font-size-sm);
+  }
+
+  a {
+    text-decoration: underline;
   }
 </style>
