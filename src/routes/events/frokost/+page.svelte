@@ -8,13 +8,13 @@
 <main class="container">
   <div class="content">
     {#if showBreadcrumb}
-    <div class="breadcrumb">
-      <a href="/">Bjerk</a>
-      <span>/</span>
-      <a href="/events">Arrangementer</a>
-      <span>/</span>
-      <span>Frokostmingling hos Bjerk </span><ArrowDownRight />
-    </div>
+      <div class="breadcrumb">
+        <a href="/">Bjerk</a>
+        <span>/</span>
+        <a href="/events">Arrangementer</a>
+        <span>/</span>
+        <span>Frokostmingling hos Bjerk </span><ArrowDownRight />
+      </div>
     {/if}
     <div class="section">
       <h1>Frokostmingling hos Bjerk</h1>
