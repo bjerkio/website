@@ -1,4 +1,3 @@
-
 <main class="container">
   <div class="content">
     <div class="section">
@@ -36,31 +35,22 @@
         deg en kollega eller venn - vi gleder oss til å se deg der!
       </p>
     </div>
-    <div class="section">
-      <a href="https://www.google.com/" class="button">
-        Meld meg på
-      </a>
-    </div>
+  </div>
+  <div class="section">
+    <a href="https://www.google.com/" class="button"> Meld meg på </a>
   </div>
 </main>
 
 <style lang="scss">
   @use '$styles/mixins.scss';
 
- 
-  .section, .content {
+  .section,
+  .content {
     max-width: 50ch;
-    gap: 2em;
-
     > * {
       margin-block-end: 1em;
       line-height: 1.5em;
     }
-
-  }
-
-  .content {
-    gap: 4em;
   }
 
   .headline {
@@ -79,5 +69,10 @@
     &:hover {
       transform: translateY(-40%) scale(1.05) rotate(1deg);
     }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>
