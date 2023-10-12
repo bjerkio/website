@@ -1,8 +1,3 @@
-<script>
-
-  import { ArrowRight } from "phosphor-svelte";
-
-</script>
 
 <main class="container">
   <div class="content">
@@ -18,7 +13,7 @@
         <strong>Sted:</strong> Akersgata 51, 0180 Oslo
       </p>
       <p>
-        → <a href="google.com"> Meld meg på</a>
+        → <a href="https://www.google.com/"> Meld meg på</a>
       </p>
     </div>
 
@@ -40,8 +35,10 @@
         Bli med oss og bidra til å gjøre denne frokostminglingen til en suksess! Inviter gjerne med
         deg en kollega eller venn - vi gleder oss til å se deg der!
       </p>
-      <a href="/about" class="button">
-        Les mer om oss <ArrowRight />
+    </div>
+    <div class="section">
+      <a href="https://www.google.com/" class="button">
+        Meld meg på
       </a>
     </div>
   </div>
