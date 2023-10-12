@@ -1,9 +1,13 @@
 <script>
-  import { ArrowDownRight, ArrowRight } from 'phosphor-svelte';
+  import Metadata from '$components/metadata.svelte';
+  import Frokost2023 from '$assets/frokost-2023.png';
+  import { ArrowDownRight } from 'phosphor-svelte';
 
   const showBreadcrumb = false;
   const showSignupForm = false;
 </script>
+
+<Metadata title="Frokostmingling – 16. oktober 2023" image={Frokost2023} path="/events/frokost" />
 
 <main class="container">
   <div class="content">
@@ -26,10 +30,6 @@
       <p>
         <strong>Tid:</strong> Onsdag 18. oktober kl. 08.00 til 08.45<br />
         <strong>Sted:</strong> Akersgata 51, 0180 Oslo
-      </p>
-      <p>
-        <ArrowRight />
-        <a class="signup-link" href="https://forms.gle/ouHcJ77eVvMoDamk8"> Meld meg på</a>
       </p>
     </div>
 
