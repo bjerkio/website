@@ -3,6 +3,7 @@
   import type { Seo } from '../data/types';
   import dedent from 'dedent';
   import { urlFor } from '../data/sanity-client-browser';
+  import type { Picture } from 'vite-imagetools';
 
   export let title: string | undefined = undefined;
   export let description: string | undefined = undefined;
@@ -12,9 +13,17 @@
 
   export let defaultImage = '/assets/bjerk-default-seo.png';
 
-  export let image: string = seo?.image
+  export let image: string | Picture = seo?.image
     ? urlFor(seo.image.asset).size(1200, 630).url()
     : defaultImage;
+
+  function isPicture(image: string | Picture): image is Picture {
+    return typeof image !== 'string' && 'img' in image;
+  }
+
+  if (isPicture(image)) {
+    image = image.img.src;
+  }
 
   data.title = data.title ?? title;
   const defaultDescription = dedent`

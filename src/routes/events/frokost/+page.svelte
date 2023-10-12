@@ -1,17 +1,17 @@
 <script>
   import Metadata from '$components/metadata.svelte';
   import Frokost2023 from '$assets/frokost-2023.png';
-  import { ArrowDownRight } from 'phosphor-svelte';
+  // import { ArrowDownRight } from 'phosphor-svelte';
 
-  const showBreadcrumb = false;
+  // const showBreadcrumb = false;
   const showSignupForm = false;
 </script>
 
-<Metadata title="Frokostmingling – 16. oktober 2023" image={Frokost2023} path="/events/frokost" />
+<Metadata title="Frokostmingling – 16. oktober 2023" path="/events/frokost" image={Frokost2023} />
 
 <main class="container">
   <div class="content">
-    {#if showBreadcrumb}
+    <!-- {#if showBreadcrumb}
       <div class="breadcrumb">
         <a href="/">Bjerk</a>
         <span>/</span>
@@ -19,7 +19,7 @@
         <span>/</span>
         <span>Frokostmingling hos Bjerk </span><ArrowDownRight />
       </div>
-    {/if}
+    {/if} -->
     <div class="section">
       <h1>Frokostmingling hos Bjerk</h1>
       <p class="headline">
@@ -122,9 +122,5 @@
     border-radius: 0.25rem;
     padding: 1em;
     font-size: var(--font-size-sm);
-  }
-
-  .signup-link {
-    text-decoration: underline;
   }
 </style>
