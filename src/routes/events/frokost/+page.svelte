@@ -1,3 +1,7 @@
+<script>
+  const showSignupForm = false;
+</script>
+
 <main class="container">
   <div class="content">
     <div class="section">
@@ -37,15 +41,32 @@
     </div>
   </div>
   <div class="section">
-    <a href="https://www.google.com/" class="button"> Meld meg på </a>
+    {#if showSignupForm}
+    <h3>Påmelding</h3>
+
+    <form>
+      <div class="form-content">
+        
+        <label for="name">Ditt navn</label>
+        <input name="name"/>
+        <label for="company">Hvor jobber du?</label>
+        <input name="company"/>
+        <label for="email">E-post</label>
+        <input name="email" type="email"/>
+        
+        <button type="submit" class="button">Meld meg på</button>
+      </div>
+    </form>
+    {:else}
+    <a href="https://forms.gle/ouHcJ77eVvMoDamk8" class="button"> Meld meg på </a>
+    {/if}
   </div>
 </main>
 
 <style lang="scss">
   @use '$styles/mixins.scss';
 
-  .section,
-  .content {
+  .section, .content {
     max-width: 50ch;
     > * {
       margin-block-end: 1em;
@@ -62,17 +83,26 @@
 
   .button {
     @include mixins.button;
-    font-size: var(--font-size-sm);
-    font-weight: normal;
-    padding: 0.5rem 1rem;
-    transform: translateY(-40%);
-    &:hover {
-      transform: translateY(-40%) scale(1.05) rotate(1deg);
-    }
+   
   }
+
   main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .form-content {
+    display: flex;
+    max-width: 20ch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input {
+    border-color: linear-gradient(0deg, #0F2040, #0F2040), linear-gradient(0deg, #FFFDFD, #FFFDFD);
+    border-radius: 0.25rem;
+    padding: 1em;
+    font-size: var(--font-size-sm);
   }
 </style>
