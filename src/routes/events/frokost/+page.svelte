@@ -1,11 +1,21 @@
 <script>
-  import { ArrowRight } from "phosphor-svelte";
+  import { ArrowDownRight, ArrowRight } from 'phosphor-svelte';
 
+  const showBreadcrumb = false;
   const showSignupForm = false;
 </script>
 
 <main class="container">
   <div class="content">
+    {#if showBreadcrumb}
+    <div class="breadcrumb">
+      <a href="/">Bjerk</a>
+      <span>/</span>
+      <a href="/events">Arrangementer</a>
+      <span>/</span>
+      <span>Frokostmingling hos Bjerk </span><ArrowDownRight />
+    </div>
+    {/if}
     <div class="section">
       <h1>Frokostmingling hos Bjerk</h1>
       <p class="headline">
@@ -18,7 +28,8 @@
         <strong>Sted:</strong> Akersgata 51, 0180 Oslo
       </p>
       <p>
-        <ArrowRight /> <a href="https://forms.gle/ouHcJ77eVvMoDamk8"> Meld meg på</a>
+        <ArrowRight />
+        <a class="signup-link" href="https://forms.gle/ouHcJ77eVvMoDamk8"> Meld meg på</a>
       </p>
     </div>
 
@@ -44,23 +55,22 @@
   </div>
   <div class="section">
     {#if showSignupForm}
-    <h3>Påmelding</h3>
+      <h3>Påmelding</h3>
 
-    <form>
-      <div class="form-content">
-        
-        <label for="name">Ditt navn</label>
-        <input name="name"/>
-        <label for="company">Hvor jobber du?</label>
-        <input name="company"/>
-        <label for="email">E-post</label>
-        <input name="email" type="email"/>
-        
-        <button type="submit" class="button">Meld meg på</button>
-      </div>
-    </form>
+      <form>
+        <div class="form-content">
+          <label for="name">Ditt navn</label>
+          <input name="name" />
+          <label for="company">Hvor jobber du?</label>
+          <input name="company" />
+          <label for="email">E-post</label>
+          <input name="email" type="email" />
+
+          <button type="submit" class="button">Meld meg på</button>
+        </div>
+      </form>
     {:else}
-    <a href="https://forms.gle/ouHcJ77eVvMoDamk8" class="button"> Meld meg på </a>
+      <a href="https://forms.gle/ouHcJ77eVvMoDamk8" class="button"> Meld meg på </a>
     {/if}
   </div>
 </main>
@@ -68,12 +78,19 @@
 <style lang="scss">
   @use '$styles/mixins.scss';
 
-  .section, .content {
+  .section,
+  .content {
     max-width: 50ch;
     > * {
       margin-block-end: 1em;
       line-height: 1.5em;
     }
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 0.25em;
   }
 
   .headline {
@@ -85,7 +102,6 @@
 
   .button {
     @include mixins.button;
-   
   }
 
   main {
@@ -102,13 +118,13 @@
   }
 
   input {
-    border-color: linear-gradient(0deg, #0F2040, #0F2040), linear-gradient(0deg, #FFFDFD, #FFFDFD);
+    border-color: linear-gradient(0deg, #0f2040, #0f2040), linear-gradient(0deg, #fffdfd, #fffdfd);
     border-radius: 0.25rem;
     padding: 1em;
     font-size: var(--font-size-sm);
   }
 
-  a {
+  .signup-link {
     text-decoration: underline;
   }
 </style>
