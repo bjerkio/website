@@ -15,45 +15,47 @@ export const seoModel = z.object({
 
 export type Seo = z.infer<typeof seoModel>;
 
-export const metadataModel = z.object({
-  title: z.string().nullable().describe('The title of the page'),
-  searchEngine: z.object({
-    title: z
-      .string()
-      .nullable()
-      .describe(
-        'The title of the page in the search engine. the ideal length is 50-60 characters. Exceeding this length will result in the title being truncated in the search results.'
-      ),
-    description: z
-      .string()
-      .nullable()
-      .describe(
-        'The description of the page in the search engine. the ideal length is 70-155 characters. Exceeding this length will result in the description being truncated in the search results.'
-      )
-  }),
-  socialMedia: z.object({
-    title: z
-      .string()
-      .nullable()
-      .describe(
-        'The title of the page in social media. the ideal length is 47 characters. Exceeding this length will result in the title being truncated in the search results. Linkedin will truncate at 119 characters.'
-      ),
-    description: z
-      .string()
-      .nullable()
-      .describe('Should not exceed 85 characters to fit most platforms.'),
-    images: z
-      .array(
-        z
-          .object({
-            url: z.string().nullable(),
-            alt: z.string().nullable()
-          })
-          .nullable()
-      )
-      .describe(
-        'The ideal size is 1200x630px. When you are providing multiple images, the first image will be used as the main image. Some social media platforms will allow the user to choose which image to use.'
-      )
-  })
-});
-export type Metadata = z.infer<typeof metadataModel>;
+export interface Metadata {
+  /**
+   * Fields are used by search engines to index your site.
+   */
+  searchEngine: {
+    /**
+     * The ideal length for a title is approx. 60 characters.
+     * When exceeding this limit, search engines will truncate the title.
+     */
+    title: string;
+
+    /**
+     * The ideal length is between 70 and 155 characters.
+     * Minium length is 70 characters.
+     * When exceeding this limit, search engines will truncate the description.
+     */
+    description: string;
+  };
+
+  /**
+   * Fields are used by social media platforms to display your site.
+   */
+  socialMedia: {
+    /**
+     * The ideal length for a title is approx. 47 characters.
+     * When exceeding this limit, platforms will truncate the title.
+     *
+     * LinkedIn will truncate the title at 119 characters.
+     */
+    title: string;
+
+    /**
+     * Should not exceed 85 characters to fit most platforms.
+     */
+    description: string;
+
+    /**
+     * The ideal size is 1200 x 630 pixels.
+     * When you are providing more than one image, the first image will be used, but some
+     * platforms will allow the user to choose which image to use.
+     */
+    images: Picture[];
+  };
+}
