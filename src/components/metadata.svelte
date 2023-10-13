@@ -7,25 +7,27 @@
 
   export let data: Metadata = {
     title: null,
-    searchEngine:{
+    searchEngine: {
       title: null,
       description: null
     },
     socialMedia: {
       title: null,
       description: null,
-      images: [{
-        url: null,
-        alt: null
-      }]
+      images: [
+        {
+          url: null,
+          alt: null
+        }
+      ]
     }
   };
   export let path: string | undefined = undefined;
 
   export let defaultImage = '/assets/bjerk-default-seo.png';
 
-  export let image: string = data.socialMedia.images[0]?.url ?
-    urlFor(data.socialMedia.images[0].url).size(1200, 630).url()
+  export let image: string = data.socialMedia.images[0]?.url
+    ? urlFor(data.socialMedia.images[0].url).size(1200, 630).url()
     : defaultImage;
 
   function isPicture(image: string | Picture): image is Picture {
@@ -45,7 +47,7 @@
 <MetaTags
   {...data}
   title={data.title ?? 'Bjerk'}
-  description={ data.searchEngine.description ?? defaultDescription }
+  description={data.searchEngine.description ?? defaultDescription}
   canonical={path ? new URL(path, 'https://bjerk.io').toString() : undefined}
   openGraph={{
     siteName: 'Bjerk',
@@ -64,5 +66,4 @@
     description: data.socialMedia.description ?? defaultDescription,
     image: image
   }}
-
 />
