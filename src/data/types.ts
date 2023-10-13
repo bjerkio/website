@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { Picture } from '../types';
 
 export const seoModel = z.object({
   title: z.string().nullable(),
@@ -17,27 +18,42 @@ export type Seo = z.infer<typeof seoModel>;
 
 export interface Metadata {
   /**
+   * The ideal length for a title is approx. 60 characters.
+   * When exceeding this limit, search engines will truncate the title.
+   */
+  title?: string;
+  /**
+   * The ideal length is between 70 and 155 characters.
+   * Minium length is 70 characters.
+   * When exceeding this limit, search engines will truncate the description.
+   */
+  description?: string;
+  /**
    * Fields are used by search engines to index your site.
    */
-  searchEngine: {
-    /**
-     * The ideal length for a title is approx. 60 characters.
-     * When exceeding this limit, search engines will truncate the title.
-     */
-    title: string;
-
-    /**
-     * The ideal length is between 70 and 155 characters.
-     * Minium length is 70 characters.
-     * When exceeding this limit, search engines will truncate the description.
-     */
-    description: string;
-  };
+  searchEngine?: SearchEngineMetadata;
 
   /**
    * Fields are used by social media platforms to display your site.
    */
-  socialMedia: {
+  socialMedia?: SocialMediaMetaData;
+}
+
+export interface SearchEngineMetadata {
+  /**
+   * The ideal length for a title is approx. 60 characters.
+   * When exceeding this limit, search engines will truncate the title.
+   */
+  title: string;
+
+  /**
+   * The ideal length is between 70 and 155 characters.
+   * Minium length is 70 characters.
+   * When exceeding this limit, search engines will truncate the description.
+   */
+  description: string;
+}
+export interface SocialMediaMetaData {
     /**
      * The ideal length for a title is approx. 47 characters.
      * When exceeding this limit, platforms will truncate the title.
@@ -57,5 +73,4 @@ export interface Metadata {
      * platforms will allow the user to choose which image to use.
      */
     images: Picture[];
-  };
 }
