@@ -5,9 +5,9 @@
   import type { Picture } from '../types';
 
   export let data: Metadata = {
-     searchEngine: undefined,
-     socialMedia: undefined
-   };
+    searchEngine: undefined,
+    socialMedia: undefined
+  };
   export let searchEngine: SearchEngineMetadata | undefined = undefined;
   export let socialMedia: SocialMediaMetaData | undefined = undefined;
   export let path: string | undefined = undefined;
