@@ -6,6 +6,24 @@ export const privacyModel = q.object({
   anonymizedName: q.string().optional()
 });
 
+export const metadataModel = q.object({
+  searchEngine: q
+    .object({
+      title: q.string().optional(),
+      description: q.string().optional()
+    })
+    .optional(),
+  socialMedia: q
+    .object({
+      title: q.string().optional(),
+      description: q.string().optional(),
+      images: q
+        .array(sanityImage('image', { withCrop: true, withHotspot: true }).schema)
+        .default([])
+    })
+    .optional()
+});
+
 const projectQuery = q('*', {
   isArray: true
 })
@@ -42,7 +60,8 @@ const projectQuery = q('*', {
           url: q.string()
         })
       )
-      .optional()
+      .optional(),
+    metadata: metadataModel.optional()
   });
 
 export async function getProjects() {

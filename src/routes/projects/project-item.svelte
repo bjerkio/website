@@ -39,6 +39,10 @@
 <style lang="scss">
   @use '$styles/mixins';
 
+  h2 {
+    font-size: var(--font-size-base);
+  }
+
   .project {
     padding: 2rem;
     border-radius: var(--border-radius-sm);

@@ -7,74 +7,79 @@
   export let data: PageData;
 
   const { project } = data;
+
+  const { metadata } = project;
+  console.log({ metadata });
   const seoImage =
-    (project.seo?.image as SanityImageSource) ??
-    `https://bjerk.io/assets/graph/${project.slug?.current}.png`;
+    metadata?.socialMedia?.images[0] ??
+    project.image ??
+    `https://bjerk.io/assets/graph/${project.slug}.png`;
 </script>
 
 <Metadata
   title={project.name}
   description={project.description}
-  socialMediaTitle={project.seo?.title ?? undefined}
-  socialMediaDescription={project.seo?.description ?? undefined}
+  socialMediaTitle={metadata?.socialMedia?.title}
+  socialMediaDescription={metadata?.socialMedia?.description}
   images={[seoImage]}
-  path={`/projects/${project.slug?.current}`}
+  path={`/projects/${project.slug}`}
 />
-
-<div class="container introduction">
-  <h1>{project.title ?? project.name}</h1>
-  <div class="content">
-    <div class="body">
-      {#if project.preamble}
-        <PortableText value={project.preamble} />
-      {/if}
-      <div class="links">
-        {#if project.links}
-          {#each project.links as link}
-            <a href={link.url}>{link.name} →</a>
-          {/each}
+<main>
+  <div class="container introduction">
+    <h1>{project.title ?? project.name}</h1>
+    <div class="content">
+      <div class="body">
+        {#if project.preamble}
+          <PortableText value={project.preamble} />
         {/if}
+        <div class="links">
+          {#if project.links}
+            {#each project.links as link}
+              <a href={link.url}>{link.name} →</a>
+            {/each}
+          {/if}
+        </div>
       </div>
+      <dl class="metadata">
+        <div>
+          {#if project.technologies}
+            <dt>Teknologi</dt>
+            <dd>
+              <ul class="badges">
+                {#each project.technologies as technology}
+                  <li>{technology}</li>
+                {/each}
+              </ul>
+            </dd>
+          {/if}
+        </div>
+        <div>
+          <dt>Oppdragsgiver / samarbeidspartner</dt>
+          <dd>{project.customer?.name}</dd>
+        </div>
+      </dl>
     </div>
-    <dl class="metadata">
-      <div>
-        {#if project.technologies}
-          <dt>Teknologi</dt>
-          <dd>
-            <ul class="badges">
-              {#each project.technologies as technology}
-                <li>{technology}</li>
-              {/each}
-            </ul>
-          </dd>
-        {/if}
-      </div>
-      <div>
-        <dt>Oppdragsgiver / samarbeidspartner</dt>
-        <dd>{project.customer?.name}</dd>
-      </div>
-    </dl>
   </div>
-</div>
 
-{#if project.image}
-  <div class="hero">
-    <img src={project.imageUrl} alt={project.imageAlt} />
-  </div>
-{/if}
+  {#if project.image}
+    <div class="hero">
+      <img src={project.imageUrl} alt={project.imageAlt} />
+    </div>
+  {/if}
 
-{#if project.body}
-  <div class="container story">
-    <PortableText
-      value={project.body}
-      components={{
-        types: {
-          image: InlineImage
-        }
-      }}
-    />
-  </div>
-{/if}
+  {#if project.body}
+    <div class="container story">
+      <PortableText
+        value={project.body}
+        components={{
+          types: {
+            image: InlineImage
+          }
+        }}
+      />
+    </div>
+  {/if}
+</main>
 
 <style lang="scss">
   .container,
@@ -85,6 +90,8 @@
     flex-direction: column;
     gap: 2rem;
     text-wrap: pretty;
+
+    max-width: 60ch;
   }
 
   h1 {
