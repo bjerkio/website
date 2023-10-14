@@ -7,7 +7,14 @@
   const showSignupForm = false;
 </script>
 
-<Metadata title="Frokostmingling – 16. oktober 2023" path="/events/frokost" image={Frokost2023} />
+<Metadata
+  title="Nettverksfrokost hos Bjerk den 18. Oktober - Møt nye bekjentskaper i Oslo!"
+  description="Utvid ditt nettverk og møt folk fra ulike bransjer hos Bjerk. Del idéer, nyte god kaffe og knytt bånd over en uformell frokost i Akersgata 51, Oslo."
+  socialMediaTitle="🤝 Nettverksfrokost hos Bjerk | Onsdag 18. Oktober kl. 08:00"
+  socialMediaDescription="Start dagen med inspirerende samtaler! Møt likesinnede fra forskjellige fagområder, del tanker og nyt deilige snitter med kaffe fra KAFFA. Bli med oss i Akersgata 51, Oslo."
+  path="/events/frokost"
+  images={[Frokost2023]}
+/>
 
 <main class="container">
   <div class="content">
