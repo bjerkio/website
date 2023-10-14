@@ -1,6 +1,7 @@
 <script>
   import Metadata from '$components/metadata.svelte';
   import Frokost2023 from '$assets/frokost-2023.png';
+  import { JsonLd } from 'svelte-meta-tags';
   // import { ArrowDownRight } from 'phosphor-svelte';
 
   // const showBreadcrumb = false;
@@ -15,6 +16,41 @@
   path="/events/frokost"
   images={[Frokost2023]}
 />
+
+<JsonLd schema={{
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Frokostmingling hos Bjerk',
+  startDate: '2023-10-18T08:00',
+  endDate: '2023-10-18T08:45',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'Bjerk',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Akersgata 51',
+      addressLocality: 'Oslo',
+      postalCode: '0180',
+      addressCountry: 'NO',
+    },
+  },
+  description: 'Vi ønsker å invitere deg til en flott mulighet for å utvide ditt nettverk og møte spennende mennesker fra ulike fagområder og bransjer. Bjerk ønsker å skape en inkluderende og uformell atmosfære der du kan dele tanker og idéer over en god frokost.',
+  offers: {
+    '@type': 'Offer',
+    url: 'https://forms.gle/ouHcJ77eVvMoDamk8',
+    price: '0',
+    priceCurrency: 'NOK',
+    availability: 'https://schema.org/InStock',
+    validFrom: '2023-09-01T00:00',
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Bjerk',
+    url: 'https://bjerk.io',
+  },
+}}
 
 <main class="container">
   <div class="content">
