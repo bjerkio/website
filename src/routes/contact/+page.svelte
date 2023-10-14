@@ -41,7 +41,7 @@
   }}
 />
 
-<div class="container">
+<main class="container">
   <div class="section elevator">
     <h1>Vi gleder oss til å høre fra deg!</h1>
     <p>Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland.</p>
@@ -77,7 +77,7 @@
   <div class="section employees">
     <Employees />
   </div>
-</div>
+</main>
 
 <style lang="scss">
   @use '$styles/mixins.scss';

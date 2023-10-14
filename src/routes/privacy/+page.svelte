@@ -18,7 +18,7 @@
   path="/privacy"
 />
 
-<div class="content">
+<main class="content">
   <h1>Personvern­erklæring</h1>
 
   <p>Her kan du lese om hvordan Bjerk samler inn og bruker personopplysninger.</p>
@@ -61,7 +61,7 @@
     Fridtjof Nansens plass 5<br />
     0160 OSLO
   </p>
-</div>
+</main>
 
 <style>
   .content {

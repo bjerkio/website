@@ -4,7 +4,7 @@
 
 <Metadata title="Betingelser" path="/terms" />
 
-<div class="content">
+<main class="content">
   <h1>Alminnelige betingelser for Bjerk AS</h1>
   <p>Her kan du lese om Bjerks avtalevilkår</p>
   <h2>Betingelser</h2>
@@ -229,7 +229,7 @@
     til å søke midlertidig forføyning) i andre jurisdiksjoner og i henhold til de prosedyrer og regler
     som gjelder på slikt sted.
   </p>
-</div>
+</main>
 
 <style>
   .content {

@@ -50,7 +50,6 @@ export async function getProjects() {
 
   const rawProjects = schema.parse(await client.fetch(query));
   return rawProjects.map((project) => {
-    console.log({ customer: project.customer });
     let customerName = project.customer?.name;
 
     if (project.customer?.privacy?.hideName) {

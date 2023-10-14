@@ -5,18 +5,35 @@
   export let data: PageData;
 </script>
 
-<Metadata title="Prosjekter" path="/projects" />
+<Metadata
+  title="Prosjekter"
+  description="
+    Se et utvalg av prosjekter vi har jobbet. Siden 2009 har
+    vi endret hvordan folk tenker, arbeider, kommuniserer og
+    jobber gjennom å skape digitale produkter."
+  path="/projects"
+/>
 
-<div class="container projects">
+<main class="container projects">
+  <h1>Våre prosjekter</h1>
+  <p>
+    Siden 2009 har vi endret hvordan folk tenker, arbeider, kommuniserer og jobber gjennom å skape
+    digitale produkter. Her er et utvalg av våre prosjekter.
+  </p>
   {#each data.projects as project}
     <ProjectItem {project} />
   {/each}
-</div>
+</main>
 
 <style>
   .projects {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  p {
+    max-width: 50ch;
+    margin-bottom: 1rem;
   }
 </style>

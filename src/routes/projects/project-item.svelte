@@ -18,20 +18,20 @@
   </div>
   <div class="metadata">
     <dl>
-      <dd>Periode</dd>
+      <dt>Periode</dt>
       {#if project.yearTo}
         {#if project.yearFrom === project.yearTo}
-          <dt>{project.yearFrom}</dt>
+          <dd>{project.yearFrom}</dd>
         {:else}
-          <dt>{project.yearFrom} - {project.yearTo}</dt>
+          <dd>{project.yearFrom} - {project.yearTo}</dd>
         {/if}
       {:else}
-        <dt>{project.yearFrom} –</dt>
+        <dd>{project.yearFrom} –</dd>
       {/if}
     </dl>
     <dl>
-      <dd>Kunde</dd>
-      <dt>{project.customer?.name}</dt>
+      <dt>Kunde</dt>
+      <dd>{project.customer?.name}</dd>
     </dl>
   </div>
 </div>
@@ -93,7 +93,7 @@
       align-items: flex-start;
       gap: 0.25rem;
 
-      dt {
+      dd {
         font-weight: bold;
       }
     }

@@ -4,7 +4,7 @@
 
 <Metadata title="Prinsipper" path="/about/principles" />
 
-<div class="container">
+<main class="container">
   <div class="section">
     <h1>Kompetanse og teknologi, kombinert med et brukervennlig design, er viktig for å lykkes</h1>
     <p>
@@ -52,7 +52,7 @@
     </p>
     <p>La oss unngå barriærer, og all den frustrasjonen som kommer med de.</p>
   </div>
-</div>
+</main>
 
 <style>
   .container,
