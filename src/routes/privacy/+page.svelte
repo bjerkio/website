@@ -1,8 +1,22 @@
 <script>
   import Metadata from '$components/metadata.svelte';
+  import OpenGraphImg from '$assets/opengraph-privacy.svg';
 </script>
 
-<Metadata title="Personvernerklæring" path="/privacy" />
+<Metadata
+  title="Personvernerklæring"
+  description="
+    Vi er veldig opptatt av ditt personvern. Her kan du lese
+    om hvordan Bjerk samler inn og bruker personopplysninger.
+  "
+  socialMediaTitle="🔒 Personvernerklæring"
+  socialMediaDescription="
+    Vi er veldig opptatt av ditt personvern. Her kan du lese om
+    hvordan Bjerk samler inn og bruker personopplysninger.
+  "
+  images={[OpenGraphImg]}
+  path="/privacy"
+/>
 
 <div class="content">
   <h1>Personvern­erklæring</h1>

@@ -6,15 +6,15 @@
 </script>
 
 <Metadata
-  title="Møt teamet i Bjerk - Bli med å skap noe med oss!"
+  title="Møt teamet i Bjerk"
   description="
-    Start en samtale med Bjerk i dag for å lage skreddersydde løsninger
-    og tilgang på ekspertise innen digital innovasjon.
+    Bli med å skap noe med oss! Start i dag om å lage skreddersydde løsninger
+    og få tilgang på ekspertise innen digital innovasjon.
   "
-  socialMediaTitle="🚀 Start samtalen med Bjerk!"
+  socialMediaTitle="🚀 Start samtalen med Bjerk: Bli med å skap noe med oss!"
   socialMediaDescription="
     Start en samtale med Bjerk i dag for å lage skreddersydde løsninger
-    og tilgang på ekspertise innen digital innovasjon.
+    og få tilgang på ekspertise innen digital innovasjon.
   "
   path="/contact"
 />
