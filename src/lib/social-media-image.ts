@@ -23,4 +23,3 @@ export function parseSocialMediaImage(image: SocialMediaImage): string {
 
   return image;
 }
-
