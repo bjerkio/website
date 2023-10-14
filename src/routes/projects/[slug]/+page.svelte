@@ -3,17 +3,22 @@
   import type { PageData } from './$types';
   import { PortableText } from '@portabletext/svelte';
   import Metadata from '$components/metadata.svelte';
+  import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
   export let data: PageData;
 
   const { project } = data;
+  const seoImage =
+    (project.seo?.image as SanityImageSource) ??
+    `https://bjerk.io/assets/graph/${project.slug?.current}.png`;
 </script>
 
 <Metadata
   title={project.name}
   description={project.description}
-  seo={project.seo}
+  socialMediaTitle={project.seo?.title ?? undefined}
+  socialMediaDescription={project.seo?.description ?? undefined}
+  images={[seoImage]}
   path={`/projects/${project.slug?.current}`}
-  defaultImage={`https://bjerk.io/assets/graph/${project.slug?.current}.png`}
 />
 
 <div class="container introduction">

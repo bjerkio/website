@@ -1,58 +1,75 @@
 <script lang="ts">
-  import { MetaTags, type MetaTagsProps } from 'svelte-meta-tags';
-  import type { Seo } from '../data/types';
-  import dedent from 'dedent';
-  import { urlFor } from '../data/sanity-client-browser';
-  import type { Picture } from 'vite-imagetools';
+  import { MetaTags } from 'svelte-meta-tags';
+  import { parseSocialMediaImage, type SocialMediaImage } from '$lib/social-media-image';
 
-  export let title: string | undefined = undefined;
-  export let description: string | undefined = undefined;
-  export let data: MetaTagsProps = {};
-  export let seo: Seo | null = null;
-  export let path: string | undefined = undefined;
-
-  export let defaultImage = '/assets/bjerk-default-seo.png';
-
-  export let image: string | Picture = seo?.image
-    ? urlFor(seo.image.asset).size(1200, 630).url()
-    : defaultImage;
-
-  function isPicture(image: string | Picture): image is Picture {
-    return typeof image !== 'string' && 'img' in image;
-  }
-
-  if (isPicture(image)) {
-    image = image.img.src;
-  }
-
-  data.title = data.title ?? title;
-  const defaultDescription = dedent`
-    Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling. 
-    De siste 12 årene har vi endret måten mennesker lærer, tenker, jobber, og kommuniserer
-    innen eiendom, regnskap og forvaltning.
+  const defaultDescription = `
+  Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling. 
+  De siste 12 årene har vi endret måten mennesker lærer, tenker, jobber, og kommuniserer
+  innen eiendom, regnskap og forvaltning.
   `;
+
+  const defaultTitle = 'Bjerk';
+
+  /**
+   * The ideal length for a title is approx. 60 characters.
+   * When exceeding this limit, search engines will truncate the title.
+   */
+  export let title: string = defaultTitle;
+
+  /**
+   * The ideal length is between 70 and 155 characters.
+   * Minium length is 70 characters.
+   * When exceeding this limit, search engines will truncate the description.
+   */
+  export let description: string = defaultDescription;
+
+  /**
+   * The ideal length for a title is approx. 47 characters.
+   * When exceeding this limit, platforms will truncate the title.
+   *
+   * LinkedIn will truncate the title at 119 characters.
+   */
+  export let socialMediaTitle = title ?? defaultTitle;
+
+  /**
+   * Should not exceed 85 characters to fit most platforms.
+   */
+  export let socialMediaDescription = description ?? defaultDescription;
+
+  /**
+   * The ideal size is 1200 x 630 pixels.
+   * When you are providing more than one image, the first image will be used, but some
+   * platforms will allow the user to choose which image to use.
+   */
+  export let images: SocialMediaImage[] = [];
+
+  /**
+   * Used to generate the canonical URL.
+   */
+  export let path: string = '/';
+
+  const parsedImages = images.map((image) => parseSocialMediaImage(image));
+  const [image] = parsedImages;
+
+  const canonical = new URL(path, 'https://bjerk.io').toString();
 </script>
 
 <MetaTags
-  {...data}
-  titleTemplate={data.title ? '%s – Bjerk' : 'Bjerk - Digitale produktutviklere'}
-  description={seo?.description ?? description ?? data.description ?? defaultDescription}
-  canonical={path ? new URL(path, 'https://bjerk.io').toString() : undefined}
+  {title}
+  {description}
+  {canonical}
   openGraph={{
     site_name: 'Bjerk',
-    title: seo?.title ?? data.title ?? 'Bjerk',
-    description: seo?.description ?? data.description ?? defaultDescription,
-    images: [
-      {
-        url: image
-      }
-    ],
-    ...(path ? { canonical: new URL(path, 'https://bjerk.io').toString() } : {})
+    title: socialMediaTitle,
+    description: socialMediaDescription,
+    images: parsedImages.map((image) => ({
+      url: image
+    }))
   }}
   twitter={{
     cardType: 'summary_large_image',
-    title: seo?.title ?? data.title ?? 'Bjerk',
-    description: seo?.description ?? data.description ?? defaultDescription,
-    image: image
+    title: socialMediaTitle,
+    description: socialMediaDescription,
+    image
   }}
 />
