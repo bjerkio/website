@@ -55,22 +55,22 @@
 </script>
 
 <MetaTags
-  {title}
-  {description}
+  title={title.trim()}
+  description={description.trim()}
   {canonical}
   openGraph={{
     type: 'website',
     siteName: 'Bjerk',
-    title: socialMediaTitle,
-    description: socialMediaDescription,
+    title: socialMediaTitle.trim(),
+    description: socialMediaDescription.trim(),
     images: parsedImages.map((image) => ({
       url: image
     }))
   }}
   twitter={{
     cardType: 'summary_large_image',
-    title: socialMediaTitle,
-    description: socialMediaDescription,
+    title: socialMediaTitle.trim(),
+    description: socialMediaDescription.trim(),
     image
   }}
 />

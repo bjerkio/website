@@ -16,14 +16,7 @@ const projectQuery = q('*', {
     preamble: q.contentBlocks().optional(),
     mission: q.string().optional(),
     image: sanityImage('image', { withCrop: true, withHotspot: true }).nullable(),
-    body: q
-      .array(
-        q.union([
-          q.contentBlock(),
-          sanityImage('').schema
-        ])
-      )
-      .optional(),
+    body: q.array(q.union([q.contentBlock(), sanityImage('').schema])).optional(),
     description: q.string(),
     customer: q('customer')
       .grab$({
