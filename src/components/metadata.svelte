@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MetaTags } from 'svelte-meta-tags';
+  import { JsonLd, MetaTags } from 'svelte-meta-tags';
   import { parseSocialMediaImage, type SocialMediaImage } from '$lib/social-media-image';
 
   const defaultDescription = `
@@ -53,6 +53,16 @@
 
   const canonical = new URL(path, 'https://bjerk.io').toString();
 </script>
+
+<JsonLd
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Bjerk',
+    alternateName: ['BK', 'BJRK'],
+    url: canonical,
+  }}
+/>
 
 <MetaTags
   {title}
