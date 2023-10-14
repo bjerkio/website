@@ -10,7 +10,7 @@
 <JsonLd
   schema={{
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'ProfessionalService',
     name: 'Bjerk AS',
     url: 'https://bjerk.io/',
     logo: 'https://bjerk.io/assets/logo.svg',
