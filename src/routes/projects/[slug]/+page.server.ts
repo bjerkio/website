@@ -10,11 +10,11 @@ export const prerender = true;
 
 export const entries = (() => {
   const urls = projects
-    .filter((project) => project.slug?.current)
+    .filter((project) => project.slug)
     .map((project) => {
-      invariant(project.slug?.current);
+      invariant(project.slug);
       return {
-        slug: project.slug.current
+        slug: project.slug
       };
     });
 
@@ -23,8 +23,8 @@ export const entries = (() => {
 
 export const load = async ({ params }) => {
   const project = projects
-    .filter((project) => project.slug?.current)
-    .find((project) => project.slug?.current === params.slug);
+    .filter((project) => project.slug)
+    .find((project) => project.slug === params.slug);
 
   if (!project) {
     throw error(404, {

@@ -1,65 +1,64 @@
-import { z } from 'zod';
+import { q, sanityImage } from 'groqd';
 import { client } from '../sanity-client';
-import { projectModel, type Project } from './types';
 
-const query = `
-  *[
-    _type == "project" &&
-    !(_id in path("drafts.**"))
-  ] | order(yearFrom desc) {
-    _id,
-    _type,
-    name,
-    title,
-    description,
-    preamble,
-    mission,
-    image,
-    body,
-    slug,
-    customer->{
-      name,
-      privacy {
-        hideName,
-        anonymizedName
-      },
-      sameAs
-    },
-    yearFrom,
-    yearTo,
-    technologies[]->{
-      name
-    },
-    links[]{
-      _type, name, target, url
-    },
-    seo {
-      title,
-      description,
-      image,
-      keywords
-    }
-  }
-`;
+export const privacyModel = q.object({
+  hideName: q.boolean(),
+  anonymizedName: q.string().optional()
+});
 
-export async function getProjects(): Promise<Project[]> {
-  const dataFromSanity = await client.fetch(query);
-  const projects = z
-    .array(projectModel)
-    .parse(dataFromSanity)
-    .map((project) => {
-      const customer = project.customer?.privacy?.hideName
-        ? {
-            ...project.customer,
-            name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
-          }
-        : project.customer;
+const projectQuery = q('*', {
+  isArray: true
+})
+  .filter("_type == 'project' && !(_id in path('drafts.**'))")
+  .grab$({
+    name: q.string(),
+    title: q.string().optional(),
+    preamble: q.contentBlocks().optional(),
+    mission: q.string().optional(),
+    image: sanityImage('image', { withCrop: true, withHotspot: true }).nullable(),
+    body: q.array(q.union([q.contentBlock(), sanityImage('').schema])).optional(),
+    description: q.string(),
+    customer: q('customer')
+      .grab$({
+        name: q.string(),
+        privacy: privacyModel.optional(),
+        sameAs: q.array(q.string()).optional()
+      })
+      .nullable(),
+    yearFrom: q.number(),
+    yearTo: q.number().optional(),
+    slug: ['slug.current', q.string().optional()],
+    technologies: q('technologies[]', { isArray: true })
+      .deref()
+      .grabOne$('name', q.string())
+      .nullable(),
+    links: q
+      .array(
+        q.object({
+          _type: q.literal('link'),
+          name: q.string(),
+          target: q.string(),
+          url: q.string()
+        })
+      )
+      .optional()
+  });
 
-      return {
-        ...project,
-        customer
-      };
-    });
+export async function getProjects() {
+  const { schema, query } = projectQuery;
 
-  return projects;
+  const rawProjects = schema.parse(await client.fetch(query));
+  return rawProjects.map((project) => {
+    const customer = project.customer?.privacy?.hideName
+      ? {
+          ...project.customer,
+          name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
+        }
+      : project.customer;
+
+    return {
+      ...project,
+      customer
+    };
+  });
 }

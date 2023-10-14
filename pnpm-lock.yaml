@@ -17,9 +17,9 @@ dependencies:
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
-  dedent:
-    specifier: ^1.0.0
-    version: 1.5.1
+  groqd:
+    specifier: ^0.15.9
+    version: 0.15.9
   phosphor-svelte:
     specifier: ^1.3.0
     version: 1.3.0(svelte@4.2.1)
@@ -47,12 +47,6 @@ dependencies:
   ts-invariant:
     specifier: ^0.10.3
     version: 0.10.3
-  website-carbon-badges:
-    specifier: ^1.1.3
-    version: 1.1.3
-  zod:
-    specifier: ^3.21.4
-    version: 3.22.2
 
 devDependencies:
   '@sveltejs/adapter-static':
@@ -1106,15 +1100,6 @@ packages:
       mimic-response: 3.1.0
     dev: false
 
-  /dedent@1.5.1:
-    resolution: {integrity: sha512-+LxW+KLWxu3HW3M2w2ympwtqPrqYRzU8fqi6Fhd18fBALe15blJPI/I4+UHveMVG6lJqB4JNd4UG0S5cnVHwIg==}
-    peerDependencies:
-      babel-plugin-macros: ^3.1.0
-    peerDependenciesMeta:
-      babel-plugin-macros:
-        optional: true
-    dev: false
-
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
@@ -1686,6 +1671,13 @@ packages:
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
+
+  /groqd@0.15.9:
+    resolution: {integrity: sha512-kpAt7hRa8NO7+icWvLaT7Mraxh7bJp8d64Z49ae949FTBR7zd/IaVAlIpZkjuD1IA5P0vEw3a8ZUuarCwUEl1Q==}
+    engines: {node: '>= 14'}
+    dependencies:
+      zod: 3.21.4
+    dev: false
 
   /has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -3045,10 +3037,6 @@ packages:
     hasBin: true
     dev: true
 
-  /website-carbon-badges@1.1.3:
-    resolution: {integrity: sha512-3qZm1rGWe0PSuKqlYIYDbxBLfbNK8ko0MiHtlq1GFUOGoThshjem9SWRQ+IXp4KAhcwPp5qRkgQP6hGZioZJjw==}
-    dev: false
-
   /whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
     dependencies:
@@ -3160,8 +3148,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod@3.22.2:
-    resolution: {integrity: sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==}
+  /zod@3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: false
 
   /zx@7.2.3:

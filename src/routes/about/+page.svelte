@@ -4,7 +4,16 @@
   import Image from '$components/image.svelte';
 </script>
 
-<Metadata title="Om oss" path="/about" />
+<Metadata
+  title="Om Bjerk"
+  description="
+    Bjerk er et dialogdrevet byrå som skaper digitale løsninger.
+    Gjennom 14 år har vi transformert hvordan folk lærer og jobber.
+  "
+  socialMediaTitle="Oppdrag Bjerk 🌳"
+  socialMediaDescription="Bli med oss i vår misjon. Utforsk hvordan vi skaper en digital forskjell!"
+  path="/about"
+/>
 
 <main>
   <div class="content">

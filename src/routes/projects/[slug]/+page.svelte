@@ -43,7 +43,7 @@
           <dd>
             <ul class="badges">
               {#each project.technologies as technology}
-                <li>{technology.name}</li>
+                <li>{technology}</li>
               {/each}
             </ul>
           </dd>

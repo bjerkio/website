@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ArrowCircleUpRight } from 'phosphor-svelte';
-  import type { Project } from './+page.server';
-  export let project: Project;
+  import type { PageData } from './$types';
+  export let project: PageData['projects'][0];
 </script>
 
 <div class="project">
@@ -11,7 +11,7 @@
       <p>{project.description}</p>
     </div>
     {#if project.slug}
-      <a class="read-more-link" href="projects/{project.slug.current}">
+      <a class="read-more-link" href="projects/{project.slug}">
         Les mer <ArrowCircleUpRight />
       </a>
     {/if}
