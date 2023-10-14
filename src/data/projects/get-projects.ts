@@ -19,6 +19,7 @@ const projectQuery = q('*', {
     body: q.array(q.union([q.contentBlock(), sanityImage('').schema])).optional(),
     description: q.string(),
     customer: q('customer')
+    .deref()
       .grab$({
         name: q.string(),
         privacy: privacyModel.optional(),
@@ -49,16 +50,19 @@ export async function getProjects() {
 
   const rawProjects = schema.parse(await client.fetch(query));
   return rawProjects.map((project) => {
-    const customer = project.customer?.privacy?.hideName
-      ? {
-          ...project.customer,
-          name: project.customer?.privacy?.anonymizedName ?? 'Anonym'
-        }
-      : project.customer;
+    console.log({ customer: project.customer });
+    let customerName = project.customer?.name;
+
+    if (project.customer?.privacy?.hideName) {
+      customerName = project.customer?.privacy?.anonymizedName ?? 'Anonym';
+    }
 
     return {
       ...project,
-      customer
+      customer: {
+        ...project.customer,
+        name: customerName
+      }
     };
   });
 }
