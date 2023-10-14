@@ -5,13 +5,7 @@
   import Hero from './hero.svelte';
 </script>
 
-<Metadata
-  title="Bjerk"
-  description="Vi samarbeider med bedrifter for å skape digitale løsninger som gir verdi."
-  socialMediaTitle="Bjerk 🌳"
-  socialMediaDescription="Vi samarbeider med bedrifter for å skape digitale løsninger som gir verdi."
-  path="/"
-/>
+<Metadata title="Bjerk" socialMediaTitle="Bjerk 🌳" path="/" />
 
 <JsonLd
   schema={{
