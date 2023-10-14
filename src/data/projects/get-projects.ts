@@ -19,7 +19,7 @@ const projectQuery = q('*', {
     body: q.array(q.union([q.contentBlock(), sanityImage('').schema])).optional(),
     description: q.string(),
     customer: q('customer')
-    .deref()
+      .deref()
       .grab$({
         name: q.string(),
         privacy: privacyModel.optional(),
