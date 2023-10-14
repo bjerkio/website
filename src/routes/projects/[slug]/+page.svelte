@@ -3,7 +3,6 @@
   import type { PageData } from './$types';
   import { PortableText } from '@portabletext/svelte';
   import Metadata from '$components/metadata.svelte';
-  import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
   export let data: PageData;
 
   const { project } = data;
