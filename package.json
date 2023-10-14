@@ -39,7 +39,7 @@
     "@portabletext/svelte": "^2.0.0",
     "@sanity/client": "^6.1.2",
     "@sanity/image-url": "^1.0.2",
-    "dedent": "^1.0.0",
+    "groqd": "^0.15.9",
     "phosphor-svelte": "^1.3.0",
     "puppeteer-core": "^21.0.0",
     "sass": "^1.62.1",
@@ -48,8 +48,6 @@
     "svelte-meta-tags": "^3.0.0",
     "svelte-preprocess": "^5.0.4",
     "svelte-sitemap": "^2.6.0",
-    "ts-invariant": "^0.10.3",
-    "website-carbon-badges": "^1.1.3",
-    "zod": "^3.21.4"
+    "ts-invariant": "^0.10.3"
   }
 }

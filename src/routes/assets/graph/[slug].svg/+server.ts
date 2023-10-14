@@ -10,9 +10,9 @@ export const entries = (() => {
   const urls = projects
     .filter((project) => project.slug)
     .map((project) => {
-      invariant(project.slug?.current);
+      invariant(project.slug);
       return {
-        slug: project.slug.current
+        slug: project.slug
       };
     });
 
@@ -20,7 +20,7 @@ export const entries = (() => {
 }) satisfies EntryGenerator;
 
 export async function GET({ params }) {
-  const project = projects.find((project) => project.slug?.current === params.slug);
+  const project = projects.find((project) => project.slug === params.slug);
 
   if (!project) {
     throw new Error(`Project not found`);
