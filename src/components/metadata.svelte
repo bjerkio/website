@@ -1,6 +1,7 @@
 <script lang="ts">
   import { MetaTags } from 'svelte-meta-tags';
   import { parseSocialMediaImage, type SocialMediaImage } from '$lib/social-media-image';
+  import { parseMetaText } from '$lib/parse-meta-text';
 
   const defaultDescription = `
   Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling. 
@@ -55,22 +56,22 @@
 </script>
 
 <MetaTags
-  title={title.trim()}
-  description={description.trim()}
+  title={parseMetaText(title)}
+  description={parseMetaText(description)}
   {canonical}
   openGraph={{
     type: 'website',
     siteName: 'Bjerk',
-    title: socialMediaTitle.trim(),
-    description: socialMediaDescription.trim(),
+    title: parseMetaText(socialMediaTitle),
+    description: parseMetaText(socialMediaDescription),
     images: parsedImages.map((image) => ({
       url: image
     }))
   }}
   twitter={{
     cardType: 'summary_large_image',
-    title: socialMediaTitle.trim(),
-    description: socialMediaDescription.trim(),
+    title: parseMetaText(socialMediaTitle),
+    description: parseMetaText(socialMediaDescription),
     image
   }}
 />

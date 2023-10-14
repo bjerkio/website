@@ -11,7 +11,10 @@
     Gjennom 14 år har vi transformert hvordan folk lærer og jobber.
   "
   socialMediaTitle="Oppdrag Bjerk 🌳"
-  socialMediaDescription="Bli med oss i vår misjon. Utforsk hvordan vi skaper en digital forskjell!"
+  socialMediaDescription="
+    Vårt oppdrag er å forbedre menneskers liv gjennom teknologi.
+    Vi skaper digitale produkter og tjenester for mennesker.
+  "
   path="/about"
 />
 
