@@ -54,23 +54,13 @@
   const canonical = new URL(path, 'https://bjerk.io').toString();
 </script>
 
-<JsonLd
-  schema={{
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Bjerk',
-    alternateName: ['BK', 'BJRK'],
-    url: canonical
-  }}
-/>
-
 <MetaTags
   {title}
   {description}
   {canonical}
   openGraph={{
     type: 'website',
-    site_name: 'Bjerk',
+    siteName: 'Bjerk',
     title: socialMediaTitle,
     description: socialMediaDescription,
     images: parsedImages.map((image) => ({
