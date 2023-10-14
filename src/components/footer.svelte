@@ -1,7 +1,3 @@
-<script>
-  import CarbonBadge from 'svelte-carbonbadge';
-</script>
-
 <div class="outer-container">
   <footer class="container">
     <p>
@@ -10,9 +6,6 @@
     </p>
     <p class="highlight">
       Kontakt oss på <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>
-    </p>
-    <p>
-      <CarbonBadge dark />
     </p>
   </footer>
 </div>

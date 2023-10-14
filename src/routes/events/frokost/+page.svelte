@@ -2,10 +2,13 @@
   import Metadata from '$components/metadata.svelte';
   import Frokost2023 from '$assets/frokost-2023.png';
   import { JsonLd } from 'svelte-meta-tags';
+  import { parseSocialMediaImage } from '$lib/social-media-image';
   // import { ArrowDownRight } from 'phosphor-svelte';
 
   // const showBreadcrumb = false;
   const showSignupForm = false;
+
+  const eventImage = parseSocialMediaImage(Frokost2023);
 </script>
 
 <Metadata
@@ -37,6 +40,7 @@
         addressCountry: 'NO'
       }
     },
+    image: [eventImage],
     description:
       'Vi ønsker å invitere deg til en flott mulighet for å utvide ditt nettverk og møte spennende mennesker fra ulike fagområder og bransjer. Bjerk ønsker å skape en inkluderende og uformell atmosfære der du kan dele tanker og idéer over en god frokost.',
     offers: {
@@ -51,6 +55,10 @@
       '@type': 'Organization',
       name: 'Bjerk',
       url: 'https://bjerk.io'
+    },
+    performer: {
+      '@type': 'PerformingGroup',
+      name: 'Bjerk'
     }
   }}
 />
