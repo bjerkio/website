@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { JsonLd, MetaTags } from 'svelte-meta-tags';
+  import { MetaTags } from 'svelte-meta-tags';
   import { parseSocialMediaImage, type SocialMediaImage } from '$lib/social-media-image';
 
   const defaultDescription = `
