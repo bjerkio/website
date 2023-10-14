@@ -1,6 +1,6 @@
 <script lang="ts">
   import { MetaTags } from 'svelte-meta-tags';
-  import { parseSocialMediaImage, type SocialMediaMetaData } from '$lib/social-media';
+  import { parseSocialMediaImage, type SocialMediaImage } from '$lib/social-media-image';
 
   const defaultDescription = `
   Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling. 
@@ -9,12 +9,6 @@
   `;
 
   const defaultTitle = 'Bjerk';
-
-  const socialMediaDefaults: SocialMediaMetaData = {
-    title: defaultTitle,
-    description: defaultDescription,
-    images: []
-  };
 
   /**
    * The ideal length for a title is approx. 60 characters.
@@ -29,15 +23,34 @@
    */
   export let description: string = defaultDescription;
 
-  export let socialMedia: Partial<SocialMediaMetaData> = socialMediaDefaults;
+  /**
+   * The ideal length for a title is approx. 47 characters.
+   * When exceeding this limit, platforms will truncate the title.
+   *
+   * LinkedIn will truncate the title at 119 characters.
+   */
+  export let socialMediaTitle = title ?? defaultTitle;
+
+  /**
+   * Should not exceed 85 characters to fit most platforms.
+   */
+  export let socialMediaDescription = description ?? defaultDescription;
+
+  /**
+   * The ideal size is 1200 x 630 pixels.
+   * When you are providing more than one image, the first image will be used, but some
+   * platforms will allow the user to choose which image to use.
+   */
+  export let images: SocialMediaImage[] = [];
 
   /**
    * Used to generate the canonical URL.
    */
   export let path: string = '/';
 
-  const images = socialMedia.images.map((image) => parseSocialMediaImage(image));
-  const [image] = images;
+  const parsedImages = images.map((image) => parseSocialMediaImage(image));
+  const [image] = parsedImages;
+
   const canonical = new URL(path, 'https://bjerk.io').toString();
 </script>
 
@@ -47,16 +60,16 @@
   {canonical}
   openGraph={{
     site_name: 'Bjerk',
-    title: socialMedia.title,
-    description: socialMedia.description,
-    images: images.map((image) => ({
+    title: socialMediaTitle,
+    description: socialMediaDescription,
+    images: parsedImages.map((image) => ({
       url: image
     }))
   }}
   twitter={{
     cardType: 'summary_large_image',
-    title: socialMedia?.title ?? 'Bjerk',
-    description: socialMedia?.description,
+    title: socialMediaTitle,
+    description: socialMediaDescription,
     image
   }}
 />

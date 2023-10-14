@@ -15,11 +15,9 @@
 <Metadata
   title={project.name}
   description={project.description}
-  socialMedia={{
-    title: project.seo?.title ?? undefined,
-    description: project.seo?.description ?? undefined,
-    images: [seoImage]
-  }}
+  socialMediaTitle={project.seo?.title ?? undefined}
+  socialMediaDescription={project.seo?.description ?? undefined}
+  images={[seoImage]}
   path={`/projects/${project.slug?.current}`}
 />
 
