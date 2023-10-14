@@ -69,6 +69,7 @@
   {description}
   {canonical}
   openGraph={{
+    type: 'website',
     site_name: 'Bjerk',
     title: socialMediaTitle,
     description: socialMediaDescription,
