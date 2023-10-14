@@ -5,7 +5,19 @@
   import { JsonLd } from 'svelte-meta-tags';
 </script>
 
-<Metadata title="Om oss" path="/contact" />
+<Metadata
+  title="Møt teamet i Bjerk - Bli med å skap noe med oss!"
+  description="
+    Start en samtale med Bjerk i dag for å lage skreddersydde løsninger
+    og tilgang på ekspertise innen digital innovasjon.
+  "
+  socialMediaTitle="🚀 Start samtalen med Bjerk!"
+  socialMediaDescription="
+    Start en samtale med Bjerk i dag for å lage skreddersydde løsninger
+    og tilgang på ekspertise innen digital innovasjon.
+  "
+  path="/contact"
+/>
 
 <JsonLd
   schema={{
