@@ -1,6 +1,6 @@
-import { urlFor } from "$data/sanity-client-browser";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import type { Picture } from "vite-imagetools";
+import { urlFor } from '$data/sanity-client-browser';
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import type { Picture } from 'vite-imagetools';
 
 export type SocialMediaImage = SanityImageSource | Picture | string;
 

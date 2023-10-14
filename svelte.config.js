@@ -20,7 +20,7 @@ const config = {
       $components: './src/components',
       $styles: './src/styles',
       $data: './src/data',
-      $lib: './src/lib',
+      $lib: './src/lib'
     }
 
     // csp: {
