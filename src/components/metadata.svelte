@@ -60,7 +60,7 @@
     '@type': 'WebSite',
     name: 'Bjerk',
     alternateName: ['BK', 'BJRK'],
-    url: canonical,
+    url: canonical
   }}
 />
 
