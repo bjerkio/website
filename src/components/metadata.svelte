@@ -42,7 +42,7 @@
    * When you are providing more than one image, the first image will be used, but some
    * platforms will allow the user to choose which image to use.
    */
-  export let images: SocialMediaImage[] = [];
+  export let images: SocialMediaImage[] = ['https://bjerk.io/assets/bjerk-default-seo.png'];
 
   /**
    * Used to generate the canonical URL.
