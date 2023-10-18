@@ -41,11 +41,25 @@
     andre formål enn å levere tjenesten, og vil ikke dele personopplysningene med andre. Vi vil
     slette personopplysningene når de ikke lenger er nødvendige for å levere tjenesten.
   </p>
+
   <p>
     Les mer om Chatwoot personvernerklæring her:
     <a href="https://www.chatwoot.com/privacy-policy/">
       https://www.chatwoot.com/privacy-policy/
     </a>
+  </p>
+
+  <h2>Google</h2>
+  <p>
+    Vi bruker Google Workspace og Google Cloud Platform, begge produkter av Google. Vi bruker Google
+    Forms til påmelding av arrangementer. Vi lagrer fult navn, selskapsnavn og e-postadresse som
+    brukes for å sende ut påminnelser og oppfølginger. Informasjonen slettes senest 30 dager etter
+    endt arrangement.
+  </p>
+
+  <p>
+    Ved eksplisitt samtykke, lagres informasjonen til senere oppfølgning av Bjerk. Du kan alltid be
+    om å bli slettet. Dersom vi ikke har vært i kontakt med deg på 1 år, slettes opplysningene.
   </p>
 
   <h2>Kontakt oss</h2>

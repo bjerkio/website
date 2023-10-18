@@ -25,8 +25,8 @@
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: 'Frokostmingling hos Bjerk',
-    startDate: '2023-10-18T08:00',
-    endDate: '2023-10-18T08:45',
+    startDate: '2023-11-07T08:00',
+    endDate: '2023-11-07T08:45',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
@@ -82,7 +82,7 @@
         atmosfære der du kan dele tanker og idéer over en god frokost.
       </p>
       <p>
-        <strong>Tid:</strong> Onsdag 18. oktober kl. 08.00 til 08.45<br />
+        <strong>Tid:</strong> Tirsdag 7. november kl. 08.00 til 08.45<br />
         <strong>Sted:</strong> Akersgata 51, 0180 Oslo
       </p>
     </div>
