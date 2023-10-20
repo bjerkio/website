@@ -128,6 +128,16 @@
       skal følge med på forbruket av timer, kan våre kunder følge med på forbruket gjennom
       prosjektrapporten (et egenutviklet rapport-verktøy gir innsikt i timeføringene i sanntid).
     </p>
+    <nav aria-label="tjenester">
+      <ul>
+        <li><a href="/services/product-management">Produktledelse</a></li>
+        <li><a href="/services/ux">Brukeropplevelse</a></li>
+        <li><a href="/services/development">Programvareutvikling</a></li>
+        <li><a href="/services/accessibility">Universell Utforming (UU)</a></li>
+        <li><a href="/services/technology-management">Teknologiledelse</a></li>
+        <li><a href="/services/integrations">Integrasjoner</a></li>
+      </ul>
+    </nav>
   </div>
 </main>
 
