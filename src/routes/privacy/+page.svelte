@@ -51,10 +51,9 @@
 
   <h2>Google</h2>
   <p>
-    Vi bruker Google Workspace og Google Cloud Platform, begge produkter av Google. Vi bruker Google
-    Forms til påmelding av arrangementer. Vi lagrer fult navn, selskapsnavn og e-postadresse som
-    brukes for å sende ut påminnelser og oppfølginger. Informasjonen slettes senest 30 dager etter
-    endt arrangement.
+    Vi bruker Google Workspace og Google Cloud Platform. Vi bruker Google Forms til påmelding av
+    arrangementer. Vi lagrer fult navn, selskapsnavn og e-postadresse som brukes for å sende ut
+    påminnelser og oppfølginger. Informasjonen slettes senest 30 dager etter endt arrangement.
   </p>
 
   <p>
