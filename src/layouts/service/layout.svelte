@@ -48,46 +48,46 @@
     }
   }
 
-  a {
-    text-decoration: underline;
-  }
-
-  main > .content {
+  .content {
     width: min(50ch, 100% - 4rem);
   }
 
-  main > .content > :global(*) {
+  .content > :global(*) {
     margin-block-end: 1em;
     line-height: 1.5em;
   }
 
-  main > .content > .headline {
+  .content :global(a) {
+    text-decoration: underline;
+  }
+
+  .content > :global(p:first-child) {
     font-size: var(--font-size-md);
     font-weight: 600;
     text-wrap: pretty;
     margin-block-end: 1.5em;
   }
 
-  main > .content nav > ul li {
+  .content :global(ul li) {
     margin-block-end: 0.5em;
     list-style: none;
   }
 
-  main > .content nav > ul li::before {
+  .content :global(ul li::before) {
     content: '→';
     margin-inline-end: 0.5em;
     margin-inline-start: 0.2em;
   }
 
-  main > .content nav > ul li a {
+  .content :global(ul li > a) {
     text-decoration: none;
   }
 
-  main > .content nav > ul li a:hover {
+  .content :global(ul li > a:hover) {
     text-decoration: underline;
   }
 
-  h2 {
+  .content :global(h2) {
     font-size: clamp(1.5rem, 2vw, 2rem);
   }
 </style>
