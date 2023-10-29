@@ -1,10 +1,36 @@
 <script>
-  import Image from '$components/logo.svelte';
+  /** @type {string} */
+  export let title;
 
-  // import { h1, p, li } from './components.js';
+  /** @type {string} */
+  export let description;
 
-  const img = Image;
-  export { img };
+  /** @type {string|undefined} */
+  export let headline;
+
+  /** @type {string} */
+  export let image;
+
+  const imageData = import(image);
 </script>
+<main>
+  <article>
+    <h1>{headline ?? title}</h1>
+    <slot />
+  </article>
+</main>
 
-<slot />
+<style>
+  main {
+    width: min(50ch, 100% - 4rem);
+    margin-inline: auto;
+  }
+
+  article > :global(*) {
+    margin-block-end: 1rem;
+  }
+
+  article :global(img) {
+    padding-bottom: 1rem;
+  }
+</style>

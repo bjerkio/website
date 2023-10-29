@@ -34,3 +34,11 @@
     height={picture.img.h}
   />
 </picture>
+
+<style>
+  img, source {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>

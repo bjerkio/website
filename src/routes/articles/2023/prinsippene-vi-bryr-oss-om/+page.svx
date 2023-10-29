@@ -1,18 +1,16 @@
 ---
-title:
+title: En helt ny arbeidsflyt
 description:
-headline:
+headline: Heisann verden!
 image: ./k8-G8dlL6UEt_I-unsplash.jpg
 date: 2023-01-01
 author: Simen A. W. Olsen
 ---
 
 <script>
-  import FullWidthImage from '$components/full-width-image.svelte';
+  import Image from '$components/image.svelte';
   import k8G8dlL6UEtIUnsplash from './k8-G8dlL6UEt_I-unsplash.jpg';
 </script>
-
-![Image1](./k8-G8dlL6UEt_I-unsplash.jpg)
 
 For snart én måned siden kastet jeg hele arbeidsflyten min og begynte på nytt,
 nå gjør jeg mer enn fire ganger så mye, og føler mer mestring. La meg starte med
@@ -30,7 +28,7 @@ program, men hvordan jeg bruker det. Det hele startet med at jeg hadde lyst til
 å resette alt. Starte litt på scratch, du vet, lære det hele litt på nytt. Det
 skulle vise seg å være det beste jeg har gjort.
 
-<FullWidthImage src={k8G8dlL6UEtIUnsplash} />
+<Image src={k8G8dlL6UEtIUnsplash} alt="Finland" />
 
 La oss se litt på hva jeg hadde før. For å notere ting ned, skrev jeg i Apple
 sin notater og Google Keep. Om jeg skulle dele notatene mine med noen, brukte
