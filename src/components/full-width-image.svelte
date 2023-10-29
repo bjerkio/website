@@ -2,7 +2,7 @@
   /** @type {string} */
   export let src;
 
-  console.log({ src })
+  console.log({ src });
 </script>
 
-<img src={src} alt="Bjerk" />
+<img {src} alt="Bjerk" />
