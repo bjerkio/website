@@ -36,9 +36,11 @@ const project = defineCollection({
   type: 'content',
   schema: ({ image }) =>
     z.object({
-      image: image().refine(img => img.width >= 300, {
-        message: 'Cover image must be at least 1080 pixels wide!',
-      }).optional(), // Image type validation depends on your implementation
+      image: image()
+        .refine(img => img.width >= 300, {
+          message: 'Cover image must be at least 1080 pixels wide!',
+        })
+        .optional(), // Image type validation depends on your implementation
       title: z.string(),
       description: z.string(),
       headline: z.string().optional(),

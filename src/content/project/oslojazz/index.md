@@ -1,7 +1,8 @@
 ---
 title: Nettside for Oslo Jazzfestival
 description:
-  Gjøre informasjon om festivalen mer tilgjengelig, både på nettside og potensielle andre kilder.
+  Gjøre informasjon om festivalen mer tilgjengelig, både på nettside og
+  potensielle andre kilder.
 categories:
   - development
   - ux
