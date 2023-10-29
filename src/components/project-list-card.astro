@@ -1,0 +1,62 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export type Props = CollectionEntry<'project'>;
+
+const format = (date: Date) => {
+  if (!date) return undefined;
+
+  return date.getFullYear();
+};
+
+const { data } = Astro.props;
+---
+
+<div class="card">
+  <div class="info">
+    <h2>{data.title}</h2>
+    <p>{data.description}</p>
+  </div>
+  <dl>
+    <div>
+      <dt>Periode</dt>
+      <dd>{[data.dateFrom, data.dateTo].map(d => format(d)).join('-')}</dd>
+    </div>
+    <div>
+      <dt>Kunde</dt>
+      <dd>
+        {data.customer}
+      </dd>
+    </div>
+  </dl>
+</div>
+
+<style>
+  .card {
+    background-color: hsl(var(--blue-base) 95%);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+
+  }
+
+  .info p, .info h2 {
+    margin: 0;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0;
+  }
+</style>

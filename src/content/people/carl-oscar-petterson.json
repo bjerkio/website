@@ -1,0 +1,19 @@
+{
+  "givenName": "Carl Oscar",
+  "familyName": "Petterson",
+  "position": "Rådgiver",
+  "phone": "+47 908 59 851",
+  "email": "cop@bjerk.io",
+  "image": "./cop.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/copetterson/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/copetterson"
+    }
+  ],
+  "photographerName": "Tom-Egil Jensen"
+}

@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import LinkedInLogo from '~icons/ph/linkedin-logo';
+import GithubLogo from '~icons/ph/github-logo';
+
+interface Props {
+  person: CollectionEntry<'people'>;
+}
+
+const { person } = Astro.props;
+const { givenName, familyName, position, phone, email, image, socialMedia } =
+  person.data;
+const name = `${givenName} ${familyName}`;
+const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
+---
+
+<div class="employee">
+  <Image
+    src={image}
+    width={300}
+    height={400}
+    alt={imageAlt}
+    class="profile-image"
+  />
+  <div class="section">
+    <div class="intro">
+      <p class="name">{name}</p>
+      <p class="position">{position}</p>
+    </div>
+    <div class="details">
+      <a href={`tel:${phone}`}>{phone}</a>
+      <a href={`mailto:${email}`}>{email}</a>
+    </div>
+    {
+      socialMedia.length > 0 && (
+        <ul class="social-media-links">
+          {socialMedia
+            .filter(link => link.type === 'linkedin')
+            .map(link => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label={`Gå til LinkedIn-profilen til ${name}`}
+                >
+                  <LinkedInLogo />
+                </a>
+              </li>
+            ))}
+          {socialMedia
+            .filter(link => link.type === 'github')
+            .map(link => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label={`Gå til GitHub-profilen til ${name}`}
+                >
+                  <GithubLogo />
+                </a>
+              </li>
+            ))}
+        </ul>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .employee {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (hover) {
+    a:hover {
+      --link-color: hsl(var(--blue-base) 40%);
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: 0.125em;
+      text-underline-offset: 0.125em;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+
+  .intro > * {
+    margin: 0;
+  }
+
+  .intro > .name {
+    font-weight: 600;
+  }
+
+  .intro > .position {
+    color: var(--color-low-contrast-text);
+  }
+
+  .details > * {
+    display: block;
+  }
+
+  .social-media-links {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>

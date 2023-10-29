@@ -1,0 +1,19 @@
+{
+  "givenName": "Bjørn Niklas",
+  "familyName": "Sjøstrøm",
+  "position": "Styreleder",
+  "phone": "+47 905 86 616",
+  "email": "bns@bjerk.io",
+  "image": "./bns.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/bj%C3%B8rn-niklas-sj%C3%B8str%C3%B8m-8043277/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/seacurrent"
+    }
+  ],
+  "photographerName": "Sebastian Andersen"
+}

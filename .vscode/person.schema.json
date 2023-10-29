@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "givenName": {
+      "type": "string",
+      "description": "The given name (first name) of the person."
+    },
+    "familyName": {
+      "type": "string",
+      "description": "The family name (last name) of the person."
+    },
+    "position": {
+      "type": "string",
+      "description": "The position or job title of the person in the organization."
+    },
+    "phone": {
+      "type": "string",
+      "description": "The telephone number of the person."
+    },
+    "email": {
+      "type": "string",
+      "description": "The email address of the person."
+    },
+    "socialMedia": {
+      "type": "array",
+      "description": "The list of social media profiles of the person.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["github", "linkedin"],
+            "description": "The type of social media platform (e.g., GitHub, LinkedIn)."
+          },
+          "url": {
+            "type": "string",
+            "description": "The URL of the social media profile."
+          }
+        },
+        "required": ["type", "url"],
+        "additionalProperties": false
+      }
+    },
+    "image": {
+      "type": "string",
+      "description": "Relative path to the image that represents the person."
+    },
+    "imageAlt": {
+      "type": ["string", "null"],
+      "description": "The alt text for the person's image. Defaults to the person's name."
+    },
+    "photographerName": {
+      "type": ["string", "null"],
+      "description": "The name of the photographer who took the person's image, if applicable."
+    }
+  },
+  "required": [
+    "givenName",
+    "familyName",
+    "position",
+    "phone",
+    "email",
+    "socialMedia",
+    "image"
+  ],
+  "additionalProperties": false
+}

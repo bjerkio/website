@@ -1,0 +1,232 @@
+---
+import type { WithContext, Thing } from "schema-dts";
+import { jsonLd } from "./json-ld";
+import Header from "@components/header.astro";
+
+export type Props = {
+  /**
+   * The title of the page. The ideal length is approximately 60 characters.
+   * When exceeding this limit, search engines will truncate the title.
+   *
+   * @default Bjerk
+   */
+  title?: string;
+
+  /**
+   * The description of the page. The ideal length is between 70 and 155 characters.
+   * Minimum length is 70 characters. When exceeding this limit, search engines will
+   * truncate the description.
+   *
+   * @default Default description
+   */
+  description?: string;
+
+  /**
+   * The headline on the page. The ideal length is approximately 47 characters.
+   *
+   * @default title
+   */
+  headline?: string;
+
+  /**
+   * The title for social media platforms. The ideal length is approximately 47 characters.
+   * When exceeding this limit, platforms will truncate the title. LinkedIn will truncate
+   * the title at 119 characters.
+   *
+   * @default Uses the title prop
+   */
+  socialMediaTitle?: string;
+
+  /**
+   * The description for social media platforms. Should not exceed 85 characters to fit most platforms.
+   *
+   * @default Uses the description prop
+   */
+  socialMediaDescription?: string;
+
+  /**
+   * Images for social media platforms. The ideal size is 1200 x 630 pixels.
+   * When providing more than one image, the first image will be used, but some
+   * platforms will allow the user to choose which image to use.
+   *
+   * @default ['/images/social-media-image.png']
+   */
+  images?: string[];
+
+  /**
+   * The type of the page.
+   *
+   * @default website
+   */
+  type?: "website" | "article";
+
+  /**
+   * The path of the page. Used to generate the canonical URL.
+   */
+  path: string;
+
+  /**
+   * JSON-LD structured data for the page.
+   */
+  schema?: WithContext<Thing> | WithContext<Thing>[];
+};
+
+const defaultDescription = `
+  Bjerk er et dialogdrevet byrå innen digital produktutvikling og programvareutvikling. 
+  De siste 12 årene har vi endret måten mennesker lærer, tenker, jobber, og kommuniserer
+  innen eiendom, regnskap og forvaltning.
+  `;
+
+const defaultTitle = "Bjerk";
+
+const {
+  title = defaultTitle,
+  description = defaultDescription,
+  socialMediaTitle = title ?? defaultTitle,
+  socialMediaDescription = description ?? defaultDescription,
+  images = ["https://bjerk.io/assets/bjerk-default-seo.png"],
+  type = "website",
+  path = "/",
+  schema,
+} = Astro.props;
+
+// const parsedImages = images.map((image) => parseSocialMediaImage(image));
+// const [image] = parsedImages;
+
+const [image] = images;
+
+const canonical = new URL(path, "https://bjerk.io");
+---
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={socialMediaTitle} />
+    <meta name="twitter:description" content={socialMediaDescription} />
+    <meta name="twitter:image" content={image} />
+
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={socialMediaTitle} />
+    <meta property="og:description" content={socialMediaDescription} />
+    {images.map((img) => <meta property="og:image" content={img} />)}
+    <meta property="og:site_name" content="Bjerk" />
+
+    {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-light: var(--green20);
+    --color-dark: var(--dark100);
+
+    --green-base: 122 83%;
+    --blue-base: 234 66%;
+
+    --container-width: min(90ch, 100% - 4rem);
+
+    /* Legacy color variables */
+    --color-app-bg: white;
+    --color-subtle-bg: hsl(var(--blue-base) 95%);
+    --color-subtle-border: hsl(var(--blue-base) 95%);
+
+    /* --color-ui-bg: var(--blue20);
+    --color-ui-bg-hover: var(--blue40);
+    --color-ui-bg-active: var(--blue100);
+    --color-ui-border: var(--blue100);
+    --color-ui-border-hover: var(--violet-8);
+
+    --color-solid-bg: var(--dark80);
+    --color-solid-bg-hover: var(--dark100);
+    --color-low-contrast-text: var(--dark80);
+    --color-high-contrast-text: var(--dark100); */
+
+    --border-radius: 0.25rem;
+    --border-radius-sm: 0.125rem;
+  }
+
+  html {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1d1d1d;
+    background-color: var(--color-light);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern", "liga";
+  }
+
+  body {
+    overflow-y: scroll;
+    background-color: var(--color-app-bg);
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+    caret-color: hsl(var(--blue-base) 40%);
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: hsl(var(--blue-base) 90%);
+    color: #1d1d1d;
+  }
+
+  body *::-webkit-scrollbar {
+    background-color: hsl(var(--blue-base) 90%);
+  }
+
+  body *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: hsl(var(--blue-base) 90%);
+    border: 3px solid hsl(var(--blue-base) 90%);
+  }
+
+  body *::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--blue-base) 90%);
+  }
+
+  p {
+    margin-inline-end: 1em;
+  }
+
+  a {
+    --link-color: hsl(var(--blue-base) 40%);
+
+    color: var(--link-color);
+    text-decoration-color: var(--link-color);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: 0.125em;
+  }
+
+  @media (hover) {
+    a:hover {
+      --link-color: hsl(var(--blue-base) 5%);
+    }
+  }
+
+  a:focus-visible {
+    outline-color: var(--link-color);
+    outline-offset: 0.4em;
+    border-radius: 0.225em;
+  }
+</style>
