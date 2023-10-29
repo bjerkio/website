@@ -2,6 +2,14 @@
 
 Website: https://bjerk.io/
 
+## Writing Articles
+
+Articles are written in Markdown and stored in the [`src/routes/articles`
+directory][articles].
+
+[articles]:
+  https://github.com/bjerkio/website/tree/simenandre/markdown-thingy/src/routes/articles
+
 ## Contributing
 
 We love contributions! Before submitting a Pull Request, it's always good to
