@@ -1,0 +1,19 @@
+{
+  "givenName": "Brage Sekse",
+  "familyName": "Aarset",
+  "position": "Programvareutvikler",
+  "phone": "+47 464 65 823",
+  "email": "brage@bjerk.io",
+  "image": "./brage.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/braaar/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/braaar"
+    }
+  ],
+  "photographerName": "Steffen Normark"
+}

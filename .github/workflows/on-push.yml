@@ -1,7 +1,22 @@
 name: Workflow
 
 on:
-  pull_request:
+  schedule:
+    # Schedule for every day at 12:00 CEST
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -26,6 +41,9 @@ jobs:
       - name: Lint 💅
         run: pnpm lint
 
+      # - name: Test 🧪
+      #   run: yarn test --passWithNoTests
+
       - name: Build 🔨
         run: pnpm build
 
@@ -35,5 +53,10 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
-          expires: 30d
+          channelId: live
+          target: prod
           projectId: bjerk-io
+
+      - uses: atymic/sitemap-ping-action@master
+        with:
+          sitemap-url: https://bjerk.io/sitemap.xml

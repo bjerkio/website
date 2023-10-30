@@ -1,0 +1,86 @@
+---
+import MobileNav from "./mobile-nav.astro";
+import Logo from "./logo.astro";
+---
+
+<header>
+  <a class="logo" aria-label="Gå til forsiden" href="/">
+    <Logo />
+  </a>
+  <nav>
+    <ul>
+      <li><a href="/about">Om oss</a></li>
+      <li><a href="/work">Arbeider</a></li>
+      <!-- <li><a href="/services">Tjenester</a></li> -->
+      <li><a href="/contact">Kontakt</a></li>
+    </ul>
+    <div class="mobile-nav">
+      <MobileNav />
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--container-width);
+    margin-inline: auto;
+    padding: 2rem 0;
+  }
+
+  header .logo {
+    display: inline-block;
+    color: inherit;
+  }
+
+  nav {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  nav ul li {
+    font-size: rem;
+  }
+
+  nav ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (hover) {
+    nav ul li a:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: 0.125em;
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  @media (max-width: 480px) {
+    header nav ul li:not(.emphasis) {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: block;
+    }
+  }
+</style>

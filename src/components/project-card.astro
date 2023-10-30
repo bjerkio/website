@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+export type Props = CollectionEntry<'project'>;
+
+const tagNames: Record<Props['data']['categories'][0], string> = {
+  accessiblity: 'Universell utforming',
+  development: 'Programvareutvikling',
+  integrations: 'Integrasjoner',
+  'product-management': 'Produktledelse',
+  'technology-management': 'Teknologiledelse',
+  ux: 'Brukeropplevelse',
+};
+
+const { data, slug } = Astro.props;
+---
+
+<a href={`/work/${slug}`}>
+  <article>
+    <Image src={data.image} alt={data.title} class="project-image" />
+    <header>
+      <div class="project-tags">
+        {data.categories.map(tag => <span>{tagNames[tag]}</span>)}
+      </div>
+      <h2>{data.title}</h2>
+      <p>{data.customer}</p>
+    </header>
+  </article>
+</a>
+
+<style>
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: inherit;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-block-end: 0.5rem;
+  }
+
+  .project-tags span {
+    padding: 0.25rem 0.5rem;
+    border-radius: 2rem;
+    background-color: hsl(var(--blue-base) 10%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin-block-end: 0;
+  }
+
+  p {
+    margin: 0;
+    color: hsl(var(--blue-base) 40%);
+  }
+</style>

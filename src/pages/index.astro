@@ -1,0 +1,73 @@
+---
+import Layout from '@layouts/default.astro';
+import { Image } from 'astro:assets';
+import ArrowRight from '~icons/ph/arrow-right';
+import LandingImage from '@assets/lea-l-q--99IzY8Lw-unsplash.jpg';
+---
+
+<Layout
+  title="Bjerk"
+  socialMediaTitle="Bjerk 🌳"
+  path="/"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Bjerk',
+    alternateName: ['Bjerk AS', 'BJRK', 'BK'],
+    url: 'https://bjerk.io',
+  }}
+>
+  <main>
+    <div class="hero">
+      <h1>Vi vil skape en bedre verden gjennom teknologi</h1>
+      <p>
+        Vi forbedrer og forenkler måten mennesker lærer, tenker, jobber, og
+        kommuniserer på gjennom å utvikle og tilpasse digitale produkter.
+      </p>
+      <a href="/about" class="button">
+        Les mer om oss <ArrowRight />
+      </a>
+    </div>
+    <Image src={LandingImage} alt="Abstract art image" class="landing-image" />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  .hero {
+    max-width: 60ch;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .landing-image {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-block-start: 2rem;
+  }
+
+  h1 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    font-weight: 900;
+    text-wrap: pretty;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>

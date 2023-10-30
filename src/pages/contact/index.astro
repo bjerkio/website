@@ -1,0 +1,139 @@
+---
+import Person from '@components/person.astro';
+import Layout from '@layouts/default.astro';
+import { getCollection } from 'astro:content';
+
+const people = await getCollection('people');
+---
+
+<Layout
+  title="Møt teamet i Bjerk"
+  description="Bli med å skap noe med oss! Start i dag om å lage skreddersydde løsninger og få tilgang på ekspertise innen digital innovasjon."
+  socialMediaTitle="🚀 Start samtalen med Bjerk: Bli med å skap noe med oss!"
+  socialMediaDescription="Start en samtale med Bjerk i dag for å lage skreddersydde løsningerog få tilgang på ekspertise innen digital innovasjon."
+  path="/contact"
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Bjerk AS',
+    url: 'https://bjerk.io/',
+    logo: 'https://bjerk.io/assets/logo.svg',
+    image: 'https://bjerk.io/assets/logo.svg',
+    telephone: '+47 95308087',
+    email: 'office@bjerk.io',
+    taxID: '930 334 693',
+    priceRange: '$$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Akersgata 51',
+      addressLocality: 'Oslo',
+      addressRegion: 'Oslo',
+      postalCode: '0180',
+      addressCountry: 'NO',
+    },
+    member: people.map(person => ({
+      '@type': 'EmployeeRole',
+      name: person.data.position,
+      member: {
+        '@type': 'Person',
+        givenName: person.data.givenName,
+        familyName: person.data.familyName,
+        image: person.data.image.src,
+        sameAs: person.data.socialMedia.map(media => media.url),
+      },
+    })),
+  }}
+>
+  <main>
+    <section class="brief">
+      <h1>Vi gleder oss til å høre fra deg!</h1>
+      <p>
+        Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland. Du får
+        tak i oss via chatten, eller på e-post til
+        <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
+      </p>
+    </section>
+
+    <section class="details">
+      <dl>
+        <div>
+          <dt>E-post</dt>
+          <dd>kontoret@bjerk.io</dd>
+        </div>
+        <div>
+          <dt>Adresse</dt>
+          <dd>
+            <a
+              href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Akersgata 51, 0180 Oslo <!-- <ArrowSquareOut /> -->
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="employees">
+      {
+        people
+          .sort((a, b) => {
+            if (b.data.position.toLowerCase().includes('styreleder')) {
+              return -1;
+            }
+
+            if (a.data.position.toLowerCase().includes('rådgiver')) {
+              return -1;
+            }
+
+            return a.data.givenName.localeCompare(b.data.givenName);
+          })
+          .map(person => <Person person={person} />)
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  section,
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .brief {
+    max-width: 64ch;
+  }
+
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+    gap: 2rem;
+  }
+
+
+  dl {
+    display: grid;
+    gap: 1rem;
+  }
+
+  dl div > dt {
+    font-weight: bold;
+  }
+
+  dl div > dd {
+    margin-inline-start: 0px;
+  }
+
+  dl div > dd a {
+    color: inherit;
+  }
+
+  .employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2rem;
+  }
+</style>

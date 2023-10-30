@@ -1,0 +1,19 @@
+{
+  "givenName": "Simen A. W.",
+  "familyName": "Olsen",
+  "position": "Daglig leder og rådgiver",
+  "phone": "+47 95 30 80 87",
+  "email": "simen@bjerk.io",
+  "image": "./simen.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/simenandre/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/simenandre"
+    }
+  ],
+  "photographerName": "Steffen Normark"
+}
