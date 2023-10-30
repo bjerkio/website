@@ -5,8 +5,6 @@ categories:
   - development
   - ux
   - technology-management
-technologies:
-
 customer: Boligbyggelag i Norge
 dateFrom: 2019-01-01
 dateTo: 2020-01-01
