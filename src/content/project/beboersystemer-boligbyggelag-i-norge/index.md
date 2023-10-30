@@ -1,7 +1,6 @@
 ---
 title: Beboersystemer og nettløsninger for borettslag
-description:
-  Utvikling og ledelse av et større prosjekt innen borettslag
+description: Utvikling og ledelse av et større prosjekt innen borettslag
 categories:
   - software-development
   - ux
