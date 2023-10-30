@@ -30,6 +30,7 @@ const { frontmatter } = Astro.props;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   :global(section > :first-child) {
@@ -39,7 +40,9 @@ const { frontmatter } = Astro.props;
   }
 
   aside {
-    max-width: 275px;
+    max-width: 300px;
+    /* fill the remaining space */
+    flex: 1;
   }
 
   h1 {
@@ -50,12 +53,12 @@ const { frontmatter } = Astro.props;
   }
 
   section {
-    max-width: 60ch;
+    max-width: 55ch;
   }
 
   main :global(img) {
     /* TODO: fix this ugly hack */
-    max-width: 150%;
+    max-width: 140%;
     float: right;
     height: auto;
     margin-block: 2rem;

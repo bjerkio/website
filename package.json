@@ -14,8 +14,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/sora": "^5.0.15",
     "astro": "^3.4.0",
-    "sass": "^1.69.5",
     "sharp": "^0.32.6",
     "unplugin-icons": "^0.17.1"
   },

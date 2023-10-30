@@ -1,7 +1,9 @@
 ---
-import type { WithContext, Thing } from "schema-dts";
-import { jsonLd } from "./json-ld";
-import Header from "@components/header.astro";
+import type { WithContext, Thing } from 'schema-dts';
+import '@fontsource-variable/sora';
+import { jsonLd } from './json-ld';
+import Header from '@components/header.astro';
+import Footer from '@components/footer.astro';
 
 export type Props = {
   /**
@@ -58,7 +60,7 @@ export type Props = {
    *
    * @default website
    */
-  type?: "website" | "article";
+  type?: 'website' | 'article';
 
   /**
    * The path of the page. Used to generate the canonical URL.
@@ -77,16 +79,16 @@ const defaultDescription = `
   innen eiendom, regnskap og forvaltning.
   `;
 
-const defaultTitle = "Bjerk";
+const defaultTitle = 'Bjerk';
 
 const {
   title = defaultTitle,
   description = defaultDescription,
   socialMediaTitle = title ?? defaultTitle,
   socialMediaDescription = description ?? defaultDescription,
-  images = ["https://bjerk.io/assets/bjerk-default-seo.png"],
-  type = "website",
-  path = "/",
+  images = ['https://bjerk.io/assets/bjerk-default-seo.png'],
+  type = 'website',
+  path = '/',
   schema,
 } = Astro.props;
 
@@ -95,7 +97,7 @@ const {
 
 const [image] = images;
 
-const canonical = new URL(path, "https://bjerk.io");
+const canonical = new URL(path, 'https://bjerk.io');
 ---
 
 <html lang="nb">
@@ -118,7 +120,7 @@ const canonical = new URL(path, "https://bjerk.io");
     <meta property="og:type" content={type} />
     <meta property="og:title" content={socialMediaTitle} />
     <meta property="og:description" content={socialMediaDescription} />
-    {images.map((img) => <meta property="og:image" content={img} />)}
+    {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Bjerk" />
 
     {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
@@ -126,6 +128,7 @@ const canonical = new URL(path, "https://bjerk.io");
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -160,7 +163,11 @@ const canonical = new URL(path, "https://bjerk.io");
   }
 
   html {
-    font-family: "Inter", sans-serif;
+    font-family:
+      'Sora Variable',
+      system-ui,
+      -apple-system,
+      sans-seri;
     font-size: 16px;
     line-height: 1.5;
     color: #1d1d1d;
@@ -168,10 +175,11 @@ const canonical = new URL(path, "https://bjerk.io");
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "kern", "liga";
+    font-feature-settings: 'kern', 'liga';
   }
 
   body {
+    margin: 0;
     overflow-y: scroll;
     background-color: var(--color-app-bg);
     -webkit-text-size-adjust: 100%;

@@ -1,0 +1,72 @@
+---
+import DiscordIcon from '~icons/ph/discord-logo-fill';
+import GitHubIcon from '~icons/ph/github-logo-fill';
+import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
+---
+
+<footer>
+  <div class="container">
+    <section class="content">
+      <p>
+        Send oss noen ord på <a href="mailto:kontoret@bjerk.io">
+          kontoret@bjerk.io
+        </a> eller ring oss på <a href="tel:+4722120512">+47 22 12 05 12</a>.
+      </p>
+
+      <p>Bjerk 2022 | Org. nr.: 930 334 693</p>
+    </section>
+    <section class="socials">
+      <a href="https://discord.gg/v6uUBFxXNf"><DiscordIcon /></a>
+      <a href="https://github.com/bjerkio"><GitHubIcon /></a>
+      <a href="https://www.linkedin.com/company/bjerk"><LinkedInIcon /></a>
+    </section>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: 4rem;
+    background-color: hsl(var(--blue-base) 20%);
+  }
+
+  a {
+    --link-color: hsl(var(--blue-base) 80%);
+  }
+
+  @media (hover) {
+    a:hover {
+      --link-color: hsl(var(--blue-base) 70%);
+    }
+  }
+
+  .container {
+    width: var(--container-width);
+    margin-inline: auto;
+    color: white;
+    padding-block: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .content p:first-child {
+    font-size: 1.2rem;
+    width: 30ch;
+  }
+
+  .content p:last-child {
+    font-size: 0.8rem;
+    color: hsl(var(--blue-base) 70%);
+  }
+
+  .socials {
+    font-size: 1.7rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .socials a {
+    color: white;
+  }
+</style>

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/sora':
+    specifier: ^5.0.15
+    version: 5.0.15
   astro:
     specifier: ^3.4.0
     version: 3.4.0(sass@1.69.5)(typescript@5.2.2)
@@ -729,6 +732,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/sora@5.0.15:
+    resolution: {integrity: sha512-TfYn6vbOTwcwEAbrrmJ5XwPBX63Z828/7XPzZR7wPJMDloSeR51kIXYzybYccj172haB/ioO+nQtlZBEsQyZIg==}
+    dev: false
 
   /@iconify-json/ph@1.1.6:
     resolution: {integrity: sha512-dexzEndlXQX/sbQhnEpA94Pby6JCGV2tZToSGcPPQpbilDGyk5VMd0ymusYoocRAn6+qLpGRvMoz5XFKGqP+VA==}
