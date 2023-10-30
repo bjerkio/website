@@ -7,7 +7,7 @@ categories:
   - development
   - ux
   - technology-management
-  - product-development
+  - product-management
 customer: Flexi Soft
 dateFrom: 2023-01-01
 ---
