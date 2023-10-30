@@ -81,7 +81,46 @@ const project = defineCollection({
     }),
 });
 
+const post = defineCollection({
+  type: 'content',
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      headline: z.string().optional(),
+      image: image()
+        .refine(img => img.width >= 300, {
+          message: 'Cover image must be at least 1080 pixels wide!',
+        })
+        .optional(),
+      socialMediaTitle: z
+        .string()
+        .describe(
+          `
+            The title for social media platforms.
+            The ideal length is approximately 47 characters.
+            
+            When exceeding this limit, platforms will truncate the title.
+            LinkedIn will truncate the title at 119 characters.
+         `,
+        )
+        .optional(),
+      socialMediaDescription: z.string().optional(),
+      socialMediaImages: z
+        .array(
+          image().refine(img => img.width >= 300, {
+            message: 'Social media images must be at least 1080 pixels wide!',
+          }),
+        )
+        .optional(),
+      date: z.date(),
+      author: z.string().or(z.array(z.string())).optional(),
+      sameAs: z.array(z.string().url()).optional(),
+    }),
+});
+
 export const collections = {
   project,
   people,
+  post,
 };
