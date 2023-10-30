@@ -7,9 +7,7 @@ categories:
   - ux
   - technology-management
 technologies:
-  - node.js
-  - kubernetes
-  - pulumi
+
 customer: Boligbyggelag i Norge
 dateFrom: 2019-01-01
 dateTo: 2020-01-01
