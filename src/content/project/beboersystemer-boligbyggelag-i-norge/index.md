@@ -11,7 +11,4 @@ technologies:
 customer: Boligbyggelag i Norge
 dateFrom: 2019-01-01
 dateTo: 2020-01-01
-links:
-  - name: Nettsiden
-    url: https://oslojazz.no
 ---
