@@ -9,7 +9,7 @@ categories:
   - technology-management
   - product-development
 technologies:
-- test
+  - test
 customer: Flexi Soft
 dateFrom: 2023-01-01
 dateTo:
