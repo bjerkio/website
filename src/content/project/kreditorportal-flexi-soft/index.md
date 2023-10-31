@@ -1,7 +1,9 @@
 ---
 title: En moderne inkassoportal
 description:
-  Flexi Soft hadde behov for å videreutvikle og modernisere sin inkassoportal for inkassobyråer. Vi har bistått med ledelse og tvikling av en plattform hvor kunder av inkassobyråer kan logge på for å se hvilke saker, fakturaer og avtaler som er sendt inn. 
+  Flexi Soft hadde behov for å videreutvikle og modernisere sin inkassoportal for inkassobyråer. 
+  Vi har bistått med ledelse og tvikling av en plattform hvor kunder av inkassobyråer kan logge på for å se hvilke saker, 
+  fakturaer og avtaler som er sendt inn. 
 categories:
   - development
   - ux
