@@ -1,7 +1,6 @@
 ---
 title: Filmboka
-description:
-  Utvikling av møteplass-plattformen for filmarbeidere.
+description: Utvikling av møteplass-plattformen for filmarbeidere.
 categories:
   - development
   - ux
