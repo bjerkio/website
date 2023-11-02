@@ -71,7 +71,7 @@ export type Props = {
   /**
    * The date the page was published. Only used with type = 'article'.
    */
-  articlePublishDate?: string;
+  articlePublishDate?: Date;
 
   /**
    * The date the page was last modified. Only used with type = 'article'.
@@ -144,7 +144,7 @@ const canonical = new URL(path, 'https://bjerk.io');
     }
     {
       type == 'article' && articlePublishDate && (
-        <meta property="article:published_time" content={articlePublishDate} />
+        <meta property="article:published_time" content={articlePublishDate.toISOString()} />
       )
     }
 
