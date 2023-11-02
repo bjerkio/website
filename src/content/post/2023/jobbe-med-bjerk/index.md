@@ -13,7 +13,7 @@ author:
 ---
 
 **Hos oss skal menneskelige relasjoner, dialogdrevet innovasjon og tverrfaglig
-samarbeid stå i sentrum**
+samarbeid stå i sentrum. Vi skal skape suksess sammen.**
 
 Det er vanskelig å beskrive _en måte_ for hvordan vi jobber, det er tross alt
 forskjellig hver gang. Uansett, så starter det gjerne med at vi blir kjent med
@@ -24,8 +24,8 @@ Det er ikke bare en jobb — det er et samarbeid.
 Bjerk jobber dialogdrevet og tverrfaglig. Hva betyr det, spør du kanskje. Det at
 vi jobber dialogdrevet betyr at vi legger stor vekt på kommunikasjon,
 samhandling, og ofte samarbeid basert på åpen og konstruktiv dialog. I praksis
-betyr det gjerne at vi setter opp felles Slack-kanaler, har jevnlige møter om
-hva vi skal gjøre og hvordan vi har gjort ting.
+betyr det gjerne at vi setter opp felles Slack-kanaler, inviterer alle inn i
+GitHub, har jevnlige møter om hva vi skal gjøre og hvordan vi har gjort ting.
 
 Tverrfaglig er egentlig bare en fancy måte å si at vi er forskjellige
 fagpersoner som jobber sammen, til motsetning at det er et team som jobber med
@@ -37,16 +37,18 @@ prosessen.
 
 ## Fokus på positive effekter
 
-I starten er det viktig for oss å finne ut av hva som er viktig for for å få en
+I starten er det viktig for oss å finne ut av hva som er viktig for å få en
 effekt i det vi skal gjøre – og så tidlig som mulig! Det er derfor viktig for
 oss å definere noen tydelige mål og underbygge med oppgaver som gir verdi. Det
 er ikke alltid vi vet hva som er viktig, og det er helt greit. Vi er ikke redd
 for å prøve og feile, og vi er ikke redd for å endre mening. Det er alt en del
 av prosessen.
 
-Vi tror på en modell hvor vi jobbe i korte økter, så når vi begynner å jobbe
-sammen er første steg å definere et innledende mål. Jeg tror det er viktig å ha
-en felles forståelse av hva vi skal gjøre, og hvorfor vi skal gjøre det.
+Vi tror på en modell hvor vi jobber i korte økter. Når vi begynner å jobbe
+sammen er derfor første steg å definere et innledende mål, og jeg pleier å jobbe
+for å redusere arbeidet så mye som mulig, samtidig som det gir en verdi. Jeg
+erfarer at det er viktig å ha en felles forståelse av hva vi skal gjøre, og
+hvorfor vi skal gjøre det – så det føles litt naturlig å starte der.
 
 ## Gi folk det de trenger
 
@@ -55,15 +57,15 @@ oppgaven å skrive en slags _State of the Union_-rapport som skulle svare på
 hvordan det gikk med arrangementet. I den sammenheng hadde jeg en prat med
 Vegard Skjefstad, som var med å skape The Gathering i 1992. Vi snakket om hva
 som skal til for å gjøre arrangementet til hva det er, og da fortalte han at vi
-hadde stands som viste frem VR-briller i 96', nå har alle det. Det handler ikke
-om å gi det folk vil ha, men det folk ikke vet at de vil ha. Det er det vi
+hadde stands som viste frem VR-briller i 96', nå har alle det. Det handler altså
+ikke om å gi det folk vil ha, men det folk ikke vet at de vil ha. Det er det vi
 prøver å gjøre i Bjerk.
 
-Vi prøver å gi folk det de trenger, ikke det de vil ha. Sagt med andre ord, så
-er det viktig for oss å utgjøre en forskjell eller skape en positiv effekt. I
-praksis betyr det at vi kommer til å utfordre agendaen når vi jobber sammen til
-å skape noe som er verdifult og at vi sørger for at vi forstår det _ekte_
-problemet.
+Vi prøver å gi folk det de trenger, ikke det de vil ha, om det gir mening? Sagt
+med andre ord, så er det viktig for oss å utgjøre en forskjell eller skape en
+positiv effekt. I praksis betyr det at vi kommer til å utfordre agendaen når vi
+jobber sammen til å skape noe som er verdifult og at vi sørger for at vi forstår
+det _ekte_ problemet.
 
 ## Veien til en løsning
 
