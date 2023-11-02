@@ -15,7 +15,7 @@ const people = await getCollection('people');
   schema={{
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Bjerk AS',
+    name: 'Bjerk',
     url: 'https://bjerk.io/',
     logo: 'https://bjerk.io/assets/logo.svg',
     image: 'https://bjerk.io/assets/logo.svg',
@@ -31,6 +31,11 @@ const people = await getCollection('people');
       postalCode: '0180',
       addressCountry: 'NO',
     },
+    sameAs: [
+      'https://www.facebook.com/bjerkorg',
+      'https://www.linkedin.com/company/bjerk',
+      'https://github.com/bjerkio',
+    ],
     member: people.map(person => ({
       '@type': 'EmployeeRole',
       name: person.data.position,
@@ -112,7 +117,6 @@ const people = await getCollection('people');
     margin-inline: auto;
     gap: 2rem;
   }
-
 
   dl {
     display: grid;

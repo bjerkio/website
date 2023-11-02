@@ -49,6 +49,31 @@ const authorNames = authors
     isAccessibleForFree: true,
     // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
     mainEntityOfPage: `https://bjerk.io/articles/${entry.slug}`,
+    publisher: {
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      name: 'Bjerk',
+      url: 'https://bjerk.io/',
+      logo: 'https://bjerk.io/assets/logo.svg',
+      image: 'https://bjerk.io/assets/logo.svg',
+      telephone: '+4722120512',
+      email: 'office@bjerk.io',
+      taxID: '930 334 693',
+      priceRange: '$$$',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Akersgata 51',
+        addressLocality: 'Oslo',
+        addressRegion: 'Oslo',
+        postalCode: '0180',
+        addressCountry: 'NO',
+      },
+      sameAs: [
+        'https://www.facebook.com/bjerkorg',
+        'https://www.linkedin.com/company/bjerk',
+        'https://github.com/bjerkio',
+      ],
+    },
   }}
 >
   <main>
