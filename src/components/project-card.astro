@@ -20,9 +20,9 @@ const { data, slug } = Astro.props;
   <article>
     <Image src={data.image} alt={data.title} class="project-image" />
     <header>
-      <div class="project-tags">
+      <!-- <div class="project-tags">
         {data.categories.map(tag => <span>{tagNames[tag]}</span>)}
-      </div>
+      </div> -->
       <h2>{data.title}</h2>
       <p>{data.customer}</p>
     </header>
@@ -33,7 +33,8 @@ const { data, slug } = Astro.props;
   a {
     display: block;
     color: inherit;
-    text-decoration: none;
+    text-decoration: inherit;
+    outline: 0;
   }
 
   a:hover {
@@ -42,7 +43,7 @@ const { data, slug } = Astro.props;
 
   .project-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
 
@@ -67,6 +68,6 @@ const { data, slug } = Astro.props;
 
   p {
     margin: 0;
-    color: hsl(var(--blue-base) 40%);
+    color: hsl(var(--blue-base) 10%);
   }
 </style>

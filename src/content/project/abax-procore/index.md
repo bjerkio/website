@@ -1,5 +1,5 @@
 ---
-title: ABAX → Procore
+title: Integration between ABAX and Procore
 headline: Connecting telemetry with project managers for the environment
 description:
   Integration between Abax (telemetry provider) and Procore (construction

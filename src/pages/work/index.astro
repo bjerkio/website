@@ -19,9 +19,9 @@ const projects = await getCollection('project');
       <p>
         Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
         forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
-        lage digre mengder digitale godbiter. Her får du en smakebit på noen av
-        våre hjertebarn.
+        lage digre mengder digitale godbiter.
       </p>
+      <p>Her får du en smakebit på noen av våre hjertebarn.</p>
     </section>
     <section class="projects">
       {
@@ -48,16 +48,21 @@ const projects = await getCollection('project');
     width: var(--container-width);
     margin-inline: auto;
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .brief > p {
+    font-size: 1.2rem;
     max-width: 64ch;
+  }
+
+  section {
+    margin-block: 1rem;
   }
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
 
