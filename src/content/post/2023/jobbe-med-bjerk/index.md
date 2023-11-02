@@ -1,12 +1,18 @@
 ---
 title: 'Hvordan er det å jobbe med Bjerk?'
+headline: Hvordan er det å jobbe sammen med Bjerk?
+description:
+  Utforsk hvordan det er å jobbe med Bjerk gjennom en personlig fortelling som
+  avdekker vår unike tilnærming til relasjoner, dialogdrevet innovasjon, og
+  tverrfaglig samarbeid. Bli med bak kulissene og se hvordan vi skaper varig
+  verdi.
 date: 2023-11-02
 image: ./simen-host-2023.jpg
 author:
   - simenandre
 ---
 
-**Hos skal menneskelige relasjoner, dialogdrevet innovasjon og tverrfaglig
+**Hos oss skal menneskelige relasjoner, dialogdrevet innovasjon og tverrfaglig
 samarbeid stå i sentrum**
 
 Det er vanskelig å beskrive en rutine for hvordan vi jobber, det er tross alt
@@ -25,6 +31,8 @@ at vi er forskjellige fagpersoner som jobber sammen, til motsetning at det er et
 team som jobber med utvikling, et som jobber med design og et som driver med
 brukeropplevelse, for eksempel. Vi er alle med på å forme løsningen, og vi er
 alle med på å forme prosessen.
+
+![](./simen-host-2023.jpg)
 
 I starten er det viktig for oss å finne ut av hva som er viktig for for å få en
 effekt i det vi skal gjøre – og så tidlig som mulig! Det er derfor viktig for
