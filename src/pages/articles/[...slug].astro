@@ -26,6 +26,8 @@ const authorNames = authors
   {...entry.data}
   images={[entry.data.image.src]}
   type="article"
+  articleAuthor={authorNames}
+  articlePublishDate={entry.data.date}
   schema={{
     '@type': 'NewsArticle',
     '@context': 'http://schema.org',

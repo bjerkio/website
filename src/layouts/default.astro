@@ -69,6 +69,16 @@ export type Props = {
   path: string;
 
   /**
+   * The date the page was published. Only used with type = 'article'.
+   */
+  articlePublishDate?: string;
+
+  /**
+   * The date the page was last modified. Only used with type = 'article'.
+   */
+  articleAuthor?: string;
+
+  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -91,6 +101,8 @@ const {
   type = 'website',
   path = '/',
   schema,
+  articleAuthor,
+  articlePublishDate,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -125,28 +137,39 @@ const canonical = new URL(path, 'https://bjerk.io');
     {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Bjerk" />
 
+    {
+      type == 'article' && articleAuthor && (
+        <meta property="article:author" content={articleAuthor} />
+      )
+    }
+    {
+      type == 'article' && articlePublishDate && (
+        <meta property="article:published_time" content={articlePublishDate} />
+      )
+    }
+
     {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
   </head>
   <body>
     <Header />
     <slot />
     <Footer />
-  </body><style is:global>
-    :root {
-      --color-light: var(--green20);
-      --color-dark: var(--dark100);
+    <style is:global>
+      :root {
+        --color-light: var(--green20);
+        --color-dark: var(--dark100);
 
-      --green-base: 122 83%;
-      --blue-base: 234 66%;
+        --green-base: 122 83%;
+        --blue-base: 234 66%;
 
-      --container-width: min(90ch, 100% - 4rem);
+        --container-width: min(90ch, 100% - 4rem);
 
-      /* Legacy color variables */
-      --color-app-bg: white;
-      --color-subtle-bg: hsl(var(--blue-base) 95%);
-      --color-subtle-border: hsl(var(--blue-base) 95%);
+        /* Legacy color variables */
+        --color-app-bg: white;
+        --color-subtle-bg: hsl(var(--blue-base) 95%);
+        --color-subtle-border: hsl(var(--blue-base) 95%);
 
-      /* --color-ui-bg: var(--blue20);
+        /* --color-ui-bg: var(--blue20);
     --color-ui-bg-hover: var(--blue40);
     --color-ui-bg-active: var(--blue100);
     --color-ui-border: var(--blue100);
@@ -157,84 +180,85 @@ const canonical = new URL(path, 'https://bjerk.io');
     --color-low-contrast-text: var(--dark80);
     --color-high-contrast-text: var(--dark100); */
 
-      --border-radius: 0.25rem;
-      --border-radius-sm: 0.125rem;
-    }
-
-    html {
-      font-family:
-        'Sora Variable',
-        system-ui,
-        -apple-system,
-        sans-seri;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #1d1d1d;
-      background-color: var(--color-light);
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-feature-settings: 'kern', 'liga';
-    }
-
-    body {
-      margin: 0;
-      overflow-y: scroll;
-      background-color: var(--color-app-bg);
-      -webkit-text-size-adjust: 100%;
-      touch-action: manipulation;
-      caret-color: hsl(var(--blue-base) 40%);
-    }
-
-    *,
-    ::before,
-    ::after {
-      box-sizing: border-box;
-    }
-
-    ::selection {
-      background: hsl(var(--blue-base) 90%);
-      color: #1d1d1d;
-    }
-
-    body *::-webkit-scrollbar {
-      background-color: hsl(var(--blue-base) 90%);
-    }
-
-    body *::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: hsl(var(--blue-base) 90%);
-      border: 3px solid hsl(var(--blue-base) 90%);
-    }
-
-    body *::-webkit-scrollbar-thumb:hover {
-      background-color: hsl(var(--blue-base) 90%);
-    }
-
-    p {
-      margin-inline-end: 1em;
-    }
-
-    a {
-      --link-color: hsl(var(--blue-base) 40%);
-
-      color: var(--link-color);
-      text-decoration-color: var(--link-color);
-      text-decoration-skip-ink: none;
-      text-decoration-thickness: 0.125em;
-      text-underline-offset: 0.125em;
-    }
-
-    @media (hover) {
-      a:hover {
-        --link-color: hsl(var(--blue-base) 5%);
+        --border-radius: 0.25rem;
+        --border-radius-sm: 0.125rem;
       }
-    }
 
-    a:focus-visible {
-      outline-color: var(--link-color);
-      outline-offset: 0.4em;
-      border-radius: 0.225em;
-    }
-  </style>
+      html {
+        font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #1d1d1d;
+        background-color: var(--color-light);
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'kern', 'liga';
+      }
+
+      body {
+        margin: 0;
+        overflow-y: scroll;
+        background-color: var(--color-app-bg);
+        -webkit-text-size-adjust: 100%;
+        touch-action: manipulation;
+        caret-color: hsl(var(--blue-base) 40%);
+      }
+
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
+      ::selection {
+        background: hsl(var(--blue-base) 90%);
+        color: #1d1d1d;
+      }
+
+      body *::-webkit-scrollbar {
+        background-color: hsl(var(--blue-base) 90%);
+      }
+
+      body *::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: hsl(var(--blue-base) 90%);
+        border: 3px solid hsl(var(--blue-base) 90%);
+      }
+
+      body *::-webkit-scrollbar-thumb:hover {
+        background-color: hsl(var(--blue-base) 90%);
+      }
+
+      p {
+        margin-inline-end: 1em;
+      }
+
+      a {
+        --link-color: hsl(var(--blue-base) 40%);
+
+        color: var(--link-color);
+        text-decoration-color: var(--link-color);
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 0.125em;
+        text-underline-offset: 0.125em;
+      }
+
+      @media (hover) {
+        a:hover {
+          --link-color: hsl(var(--blue-base) 5%);
+        }
+      }
+
+      a:focus-visible {
+        outline-color: var(--link-color);
+        outline-offset: 0.4em;
+        border-radius: 0.225em;
+      }
+    </style>
+  </body>
 </html>
