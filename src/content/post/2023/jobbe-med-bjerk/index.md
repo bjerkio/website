@@ -73,7 +73,7 @@ at vi ofte bidrar med å skape en løsning ut av en idé. I praksis betyr det at
 setter opp en teknisk arkitektur for løsningen, prototype og plan. Vi følger
 også opp planen og sørger for alle som er med har det de trenger.
 
-![Illustrasjon som forklarer cynefin-modellen](./cynefin.svg "Cynefin-modellen")
+![Illustrasjon som forklarer cynefin-modellen](./cynefin.svg 'Cynefin-modellen')
 
 I min erfaring er det mange produkter som lages basert på mange antagelser, og
 det kan være bra med antagelser for å komme et stykke nærmere en løsning.
