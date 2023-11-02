@@ -11,15 +11,11 @@ export async function getStaticPaths() {
   }));
 }
 
-console.log({ data: Astro.props.entry.data });
-
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-
-const headline = entry.data.headline ?? entry.data.title;
-
 const rawAuthors = await getEntries(entry.data.author);
 
+const headline = entry.data.headline ?? entry.data.title;
 const authors = Array.isArray(rawAuthors) ? rawAuthors : [rawAuthors];
 const authorNames = authors
   .map(author => `${author.data.givenName} ${author.data.familyName}`)
