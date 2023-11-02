@@ -5,6 +5,9 @@ author:
   - simenandre
 ---
 
+**Hos skal menneskelige relasjoner, dialogdrevet innovasjon og tverrfaglig
+samarbeid stå i sentrum**
+
 Det er vanskelig å beskrive en rutine for hvordan vi jobber, det er tross alt
 forskjellig hver gang. Uansett, så starter det gjerne med at vi blir kjent med
 de menneskene vi skal jobbe med. Jeg mener en relasjon er helt sentralt for å
