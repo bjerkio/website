@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 const people = defineCollection({
   type: 'data',
@@ -114,7 +114,9 @@ const post = defineCollection({
         )
         .optional(),
       date: z.date(),
-      author: z.string().or(z.array(z.string())).optional(),
+      author: reference('people')
+        .or(z.array(reference('people')))
+        .optional(),
       sameAs: z.array(z.string().url()).optional(),
     }),
 });

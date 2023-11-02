@@ -1,0 +1,145 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import Layout from '@layouts/default.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('post');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const rawAuthors = await getEntries(entry.data.author);
+
+const headline = entry.data.headline ?? entry.data.title;
+const authors = Array.isArray(rawAuthors) ? rawAuthors : [rawAuthors];
+const authorNames = authors
+  .map(author => `${author.data.givenName} ${author.data.familyName}`)
+  .join(', ');
+---
+
+<Layout
+  {...entry.data}
+  images={[entry.data.image.src]}
+  type="article"
+  schema={{
+    '@type': 'NewsArticle',
+    '@context': 'http://schema.org',
+    headline: headline,
+    // about: entry.data.description,
+    description: entry.data.description,
+    // TODO: wordCount: 1394,
+    author: authors.map(author => ({
+      '@type': 'Person',
+      name: `${author.data.givenName} ${author.data.familyName}`,
+      url: `https://bjerk.io`,
+    })),
+    datePublished: entry.data.date,
+    image: [entry.data.image.src],
+    thumbnail: entry.data.image.src,
+    // TODO: articleSection: 'Beste praksis',
+    // TODO: inLanguage: 'nb-NO',
+    isAccessibleForFree: true,
+    // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
+    mainEntityOfPage: `https://bjerk.io/articles/${entry.slug}`,
+  }}
+>
+  <main>
+    <article>
+      <h1 class="title">{headline}</h1>
+      <Image
+        src={entry.data.image}
+        width={1000}
+        alt={entry.data.title}
+        class="hero"
+      />
+      <div class="metadata">Skrevet av {authorNames}</div>
+      <hr />
+      <Content />
+    </article>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  article {
+    /* font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif; */
+    line-height: 1.6;
+    letter-spacing: -0.003em;
+
+    display: grid;
+    grid-template-columns:
+      minmax(1.2rem, 1fr)
+      minmax(auto, 60ch)
+      minmax(1.2rem, 1fr);
+  }
+
+  article > * {
+    min-width: 0;
+  }
+
+  .title {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.3;
+    grid-column: 1 / 4;
+
+    text-wrap: pretty;
+    max-width: 25ch;
+
+    margin-bottom: 3rem;
+  }
+
+  .metadata {
+    margin-block: 2rem;
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid hsl(var(--blue-base) 90%);
+  }
+
+  article :global(> p > strong) {
+    font-weight: 600;
+    font-size: clamp(0.8rem, 1.2rem + 0.5vw, 1.5rem);
+  }
+
+  article :global(> p) {
+    font-size: clamp(0.8rem, 1.2rem + 0.5vw, 1.2rem);
+  }
+
+  article :global(> h2) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  article :global(> *) {
+    grid-column: 2;
+  }
+
+  article :global(img) {
+    width: 100%;
+    height: auto;
+  }
+
+  article :global(> p:has(img)) {
+    grid-column: 1 / 4;
+    width: 100%;
+    max-width: 70ch;
+    justify-self: center;
+    margin-block: 3rem;
+  }
+
+  article > .hero {
+    grid-column: 1 / -1;
+  }
+</style>
