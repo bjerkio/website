@@ -15,24 +15,27 @@ author:
 **Hos oss skal menneskelige relasjoner, dialogdrevet innovasjon og tverrfaglig
 samarbeid stå i sentrum**
 
-Det er vanskelig å beskrive en rutine for hvordan vi jobber, det er tross alt
+Det er vanskelig å beskrive en _måte_ for hvordan vi jobber, det er tross alt
 forskjellig hver gang. Uansett, så starter det gjerne med at vi blir kjent med
 de menneskene vi skal jobbe med. Jeg mener en relasjon er helt sentralt for å
 kunne jobbe godt sammen. Vi er jo tross alt mennesker, og det trenger vi å huske
-på. Det er ikke bare en jobb, det er et samarbeid.
+på. Det er ikke bare en jobb — det er et samarbeid.
 
-Bjerk jobber dialogdrevet og tverrfaglig. Hva betyr det? spør du kanskje. Det at
+Bjerk jobber dialogdrevet og tverrfaglig. Hva betyr det, spør du kanskje. Det at
 vi jobber dialogdrevet betyr at vi legger stor vekt på kommunikasjon,
 samhandling, og ofte samarbeid basert på åpen og konstruktiv dialog. I praksis
 betyr det gjerne at vi setter opp felles Slack-kanaler, har jevnlige møter om
-hva vi skal gjøre og hvordan vi har gjort ting. Selvfølgelig er mengden avhengig
-av omfanget av arbeidet vi gjør. Tverrfaglig er egentlig bare en fancy måte å si
-at vi er forskjellige fagpersoner som jobber sammen, til motsetning at det er et
-team som jobber med utvikling, et som jobber med design og et som driver med
-brukeropplevelse, for eksempel. Vi er alle med på å forme løsningen, og vi er
-alle med på å forme prosessen.
+hva vi skal gjøre og hvordan vi har gjort ting.
 
-![](./simen-host-2023.jpg)
+Tverrfaglig er egentlig bare en fancy måte å si at vi er forskjellige
+fagpersoner som jobber sammen, til motsetning at det er et team som jobber med
+utvikling, et som jobber med design og et som driver med brukeropplevelse, for
+eksempel. Vi er alle med på å forme løsningen, og vi er alle med på å forme
+prosessen.
+
+![krussedull](./veien-dit.svg)
+
+## Fokus på positive effekter
 
 I starten er det viktig for oss å finne ut av hva som er viktig for for å få en
 effekt i det vi skal gjøre – og så tidlig som mulig! Det er derfor viktig for
@@ -69,6 +72,8 @@ utvikle digitale produkter og tjenester, og designe brukeropplevelser. Det betyr
 at vi ofte bidrar med å skape en løsning ut av en idé. I praksis betyr det at vi
 setter opp en teknisk arkitektur for løsningen, prototype og plan. Vi følger
 også opp planen og sørger for alle som er med har det de trenger.
+
+![Illustrasjon som forklarer cynefin-modellen](./cynefin.svg "Cynefin-modellen")
 
 I min erfaring er det mange produkter som lages basert på mange antagelser, og
 det kan være bra med antagelser for å komme et stykke nærmere en løsning.
