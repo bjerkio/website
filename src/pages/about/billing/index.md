@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/page.astro'
-title: Om Bjerk
+title: Billing Information for Bjerk
 path: /about
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
@@ -36,7 +36,7 @@ Cardboard and generate an invoice email.
 If you are unable to send EHF invoices: please contact us. Invoice email must
 only be used when EHF is unavailable.
 
-## Bjerk Oy (Finland)
+## Bjerkin Oy (Finland)
 
 - **Y code:** 3375578-4
 - **Postal Address:** Vehkakuja 2 C 20, 40700 JYVÄSKYLÄ

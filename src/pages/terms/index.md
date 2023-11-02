@@ -1,7 +1,17 @@
 ---
 layout: '@layouts/page.astro'
-title: Alminnelige betingelser for Bjerk AS
 path: /terms
+title: Alminnelige betingelser for Bjerk AS
+description:
+  Se detaljene i de alminnelige betingelsene for Bjerk AS. Lær om våre
+  leveranser, elektronisk kommunikasjon, bruk av underleverandører,
+  prisinformasjon, faktureringsprosesser og mye mer. Hold deg informert om dine
+  rettigheter og forpliktelser som kunde hos Bjerk AS.
+socialMediaTitle: Alminnelige betingelser for Bjerk 🌳
+socialMediaDescription:
+  Oppdater deg på de alminnelige betingelsene for Bjerk AS. Fra elektronisk post
+  til betalingsbetingelser, vi dekker alt du trenger å vite som vår verdsatte
+  kunde.
 ---
 
 # Alminnelige betingelser for Bjerk AS

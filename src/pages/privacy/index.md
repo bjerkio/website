@@ -1,5 +1,17 @@
 ---
 layout: '@layouts/page.astro'
+title: 'Vi er opptatt av ditt personvern'
+path: /about
+description:
+  Bjerk tar ditt personvern på alvor. Les vår personvernerklæring for å forstå
+  hvordan vi håndterer personopplysninger, respekterer dine rettigheter og
+  samarbeider/deler med andre. Ditt personvern, vår prioritet.
+socialMediaTitle: Vi prioriterer ditt personvern 🌳
+socialMediaDescription:
+  Oppdag hvordan Bjerk engasjerer seg for å beskytte dine personlige
+  opplysninger. Fra innsynsrett til sikker datalagring, vi er transparente og
+  ansvarlige. Les vår personvernerklæring for detaljer og kontakt oss for
+  spørsmål om ditt personvern!
 ---
 
 # Personvern­erklæring

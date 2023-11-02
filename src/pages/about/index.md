@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/page.astro'
-title: Om Bjerk
+title: 'Lær om Bjerk – Vi skaper digitale produkter'
 headline: Vi skaper digitale produkter
 path: /about
 description:
