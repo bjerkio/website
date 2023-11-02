@@ -28,6 +28,7 @@ const authorNames = authors
   type="article"
   articleAuthor={authorNames}
   articlePublishDate={entry.data.date}
+  path={`/articles/${entry.slug}`}
   schema={{
     '@type': 'NewsArticle',
     '@context': 'http://schema.org',
