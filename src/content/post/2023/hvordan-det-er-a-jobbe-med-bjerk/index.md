@@ -1,6 +1,7 @@
 ---
 title: 'Hvordan er det å jobbe med Bjerk?'
 date: 2023-11-02
+image: ./simen-host-2023.jpg
 author:
   - simenandre
 ---
@@ -21,8 +22,9 @@ betyr det gjerne at vi setter opp felles Slack-kanaler, har jevnlige møter om
 hva vi skal gjøre og hvordan vi har gjort ting. Selvfølgelig er mengden avhengig
 av omfanget av arbeidet vi gjør. Tverrfaglig er egentlig bare en fancy måte å si
 at vi er forskjellige fagpersoner som jobber sammen, til motsetning at det er et
-team som jobber med utvikling og et som jobber med design. Vi er alle med på å
-forme løsningen, og vi er alle med på å forme prosessen.
+team som jobber med utvikling, et som jobber med design og et som driver med
+brukeropplevelse, for eksempel. Vi er alle med på å forme løsningen, og vi er
+alle med på å forme prosessen.
 
 I starten er det viktig for oss å finne ut av hva som er viktig for for å få en
 effekt i det vi skal gjøre – og så tidlig som mulig! Det er derfor viktig for
