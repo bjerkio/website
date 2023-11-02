@@ -144,7 +144,17 @@ const canonical = new URL(path, 'https://bjerk.io');
     }
     {
       type == 'article' && articlePublishDate && (
-        <meta property="article:published_time" content={articlePublishDate.toISOString()} />
+        <>
+          <meta
+            name="publish_date"
+            property="og:publish_date"
+            content={articlePublishDate.toISOString()}
+          />
+          <meta
+            property="article:published_time"
+            content={articlePublishDate.toISOString()}
+          />
+        </>
       )
     }
 

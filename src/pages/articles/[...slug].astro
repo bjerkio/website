@@ -20,6 +20,11 @@ const authors = Array.isArray(rawAuthors) ? rawAuthors : [rawAuthors];
 const authorNames = authors
   .map(author => `${author.data.givenName} ${author.data.familyName}`)
   .join(', ');
+const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
 ---
 
 <Layout
@@ -85,7 +90,12 @@ const authorNames = authors
         alt={entry.data.title}
         class="hero"
       />
-      <div class="metadata">Skrevet av {authorNames}</div>
+      <div class="metadata">
+        Skrevet av {authorNames}.
+        <time datetime={entry.data.date.toISOString()}>
+          {humanDate}
+        </time>
+      </div>
       <hr />
       <Content />
     </article>
@@ -128,6 +138,12 @@ const authorNames = authors
 
   .metadata {
     margin-block: 2rem;
+  }
+
+  .metadata time {
+    display: block;
+    font-size: 0.8em;
+    color: hsl(var(--blue-base) 60%);
   }
 
   hr {
