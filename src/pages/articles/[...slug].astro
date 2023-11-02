@@ -115,9 +115,9 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
 
     display: grid;
     grid-template-columns:
-      minmax(1.2rem, 1fr)
+      minmax(auto, 1fr)
       minmax(auto, 60ch)
-      minmax(1.2rem, 1fr);
+      minmax(auto, 1fr);
   }
 
   article > * {
@@ -154,11 +154,11 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
 
   article :global(> p > strong) {
     font-weight: 600;
-    font-size: clamp(0.8rem, 1.2rem + 0.5vw, 1.5rem);
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
   }
 
   article :global(> p) {
-    font-size: clamp(0.8rem, 1.2rem + 0.5vw, 1.2rem);
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
 
   article :global(> h2) {
