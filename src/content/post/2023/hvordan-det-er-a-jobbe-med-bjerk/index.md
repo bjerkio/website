@@ -91,7 +91,7 @@ Helt siden jeg stiftet Bjerk har jeg hatt en drøm om å skape et selskap som
 skaper en forskjell. Jeg har alltid vært opptatt av å skape noe som er større
 enn meg selv, og jeg tror det er viktig for å skape noe som varer. Denne
 artikkelen er veldig subjektiv, og kanskje sier mest om hvordan jeg ønsker at
-det skal være, mer enn hvordan det egentlig er.
+det skal være enn hvordan det egentlig er.
 
 Så jeg føler det er best å avslutte med å si. Du vet best hvordan det er å jobbe
 med Bjerk om du prøver, og det skal være enkelt å prøve. Har du et mindre
