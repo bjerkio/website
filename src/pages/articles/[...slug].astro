@@ -161,6 +161,10 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
 
+  article :global(> pre) {
+    padding: 1rem;
+  }
+
   article :global(> h2) {
     margin-top: 2rem;
     margin-bottom: 0;
