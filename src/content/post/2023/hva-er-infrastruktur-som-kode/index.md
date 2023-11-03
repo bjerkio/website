@@ -83,4 +83,5 @@ har jeg bidratt både til Terraform og Pulumi.
 
 ## Hva hjelper det meg med?
 
-Jeg tror det gir mening for de fleste å bruke infastruktur som kode på et eller annet tidspunkt når man lager et digitalt prod
+Jeg tror det gir mening for de fleste å bruke infastruktur som kode på et eller
+annet tidspunkt når man lager et digitalt prod
