@@ -22,16 +22,16 @@ kunne jobbe godt sammen. Vi er jo tross alt mennesker, og det trenger vi å husk
 på. Det er ikke bare en jobb — det er et samarbeid.
 
 Bjerk jobber dialogdrevet og tverrfaglig. Hva betyr det, spør du kanskje. Det at
-vi jobber dialogdrevet betyr at vi legger stor vekt på kommunikasjon,
-samhandling, og ofte samarbeid basert på åpen og konstruktiv dialog. I praksis
-betyr det gjerne at vi setter opp felles Slack-kanaler, inviterer alle inn i
-GitHub, har jevnlige møter om hva vi skal gjøre og hvordan vi har gjort ting.
+vi jobber dialogdrevet er egentlig bare en fancy måte å si at vi legger stor
+vekt på kommunikasjon, samhandling, og ofte samarbeid basert på åpen og
+konstruktiv dialog. I praksis betyr det gjerne at vi setter opp felles
+Slack-kanaler, inviterer alle inn i GitHub, har jevnlige møter om hva vi skal
+gjøre og hvordan vi har gjort ting.
 
-Tverrfaglig er egentlig bare en fancy måte å si at vi er forskjellige
-fagpersoner som jobber sammen, til motsetning at det er et team som jobber med
-utvikling, et som jobber med design og et som driver med brukeropplevelse, for
-eksempel. Vi er alle med på å forme løsningen, og vi er alle med på å forme
-prosessen.
+Tverrfaglig betyr at vi er forskjellige fagpersoner som jobber sammen, til
+motsetning at det er et team som jobber med utvikling, et som jobber med design
+og et som driver med brukeropplevelse, for eksempel. Vi er alle med på å forme
+løsningen, og vi er alle med på å forme prosessen.
 
 ![krussedull](./veien-dit.svg)
 
