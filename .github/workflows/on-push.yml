@@ -19,8 +19,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Lint, format, test and build
+  formatting:
+    name: Formatting
     runs-on: ubuntu-latest
 
     steps:
@@ -38,11 +38,26 @@ jobs:
       - name: Install dependencies 📦️
         run: pnpm install --frozen-lockfile
 
-      - name: Lint 💅
+      - name: Lint 🔨
         run: pnpm lint
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
 
-      # - name: Test 🧪
-      #   run: yarn test --passWithNoTests
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+
+      - name: Use Node LTS ✨
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies 📦️
+        run: pnpm install --frozen-lockfile
 
       - name: Build 🔨
         run: pnpm build

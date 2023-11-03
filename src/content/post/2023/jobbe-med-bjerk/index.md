@@ -17,9 +17,9 @@ samarbeid stå i sentrum. Vi skal skape suksess sammen.**
 
 Det er vanskelig å beskrive _én måte_ for hvordan vi jobber, det er tross alt
 forskjellig hver gang. Uansett, så starter det gjerne med at vi blir kjent med
-de menneskene vi skal jobbe med. Jeg mener en god relasjon er sentralt for å kunne
-jobbe godt sammen. Vi er jo tross alt mennesker, og det trenger vi å huske på.
-Det er ikke bare en jobb — det er et samarbeid.
+de menneskene vi skal jobbe med. Jeg mener en god relasjon er sentralt for å
+kunne jobbe godt sammen. Vi er jo tross alt mennesker, og det trenger vi å huske
+på. Det er ikke bare en jobb — det er et samarbeid.
 
 Bjerk jobber dialogdrevet og tverrfaglig. Hva betyr det, spør du kanskje. Det at
 vi jobber dialogdrevet betyr at vi legger stor vekt på kommunikasjon,
