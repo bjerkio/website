@@ -17,27 +17,27 @@ author:
 
 Det korte svaret er at _Infrastructure as Code_ eller IAC er en måte å beskrive,
 styre og provisjonere infrastruktur på. Det vil si, alt fra servere, nettverk,
-databaser og andre ting, og i dag er det kanskje mer vanlig at man provisjonerer
+databaser og andre ting, og i dag er det kanskje vanligst at man provisjonerer
 disse tingene i en av de store skyleverandørene som Google Cloud, Azure og
 Amazon Web Services (AWS).
 
-Infrastruktur som kode har endret stort hvordan IT-ressurser håndteres og
+Infrastruktur som kode har endret hvordan IT-ressurser håndteres og
 styres. Med infrastruktur som kode kan du bruke prinsipper fra programmering,
 slik som versjoneringskontroll (Git), samarbeid og kontinuerlig integrasjon og
 levering (CI/CD) slik at organisasjoner kan bli mer effektive og automatisere
 prosesser.
 
-Verktøyene reduserer risiko for menneskelig feil, skaper hurtige og sikre
-deployments (eller utrulling). Måten det ofte fungerer på er at man definererer
+Verktøyene reduserer risiko for menneskelig feil, og skaper hurtige og sikre
+deployments (utrullinger). Måten det ofte fungerer på er at man definerer
 en ønsket tilstand til infrastrukturen, eksempelvis at en _Deployment_ i
 Kubernetes skal kjøre en Docker-fil med en spesifisert tag, og så sørger
 verktøyet for at det blir sånn. Dette skiftet har også vært med på å skape en ny
 rolle i IT-organisasjoner, nemlig _DevOps_ (en slags sammensmeltet rolle mellom
-utvikling og IT-driftspersonell).
+utvikler og IT-driftspersonell).
 
 ## Verktøyene
 
-Det finnes mange verktøy, det første verktøyet som tok verden med storm var nok
+Det finnes mange verktøy. Det første verktøyet som tok verden med storm var nok
 Chef, som ble lansert i 2009. Siden den gang har det kommet mange verktøy, slik
 som Puppet, Terraform, Ansible, Pulumi, CloudFormation, CDK, Serverless og Helm.
 
@@ -77,11 +77,11 @@ const example = new aws.ec2.Instance('example', {
 });
 ```
 
-En av fordelene med Pulumi er at det er i et hvilket som helst
+En av fordelene med Pulumi er at det lar deg bruke et hvilket som helst
 programmeringsspråk. Alle verktøyene er basert på åpen kildekode, og personlig
 har jeg bidratt både til Terraform og Pulumi.
 
 ## Hva hjelper det meg med?
 
 Jeg tror det gir mening for de fleste å bruke infastruktur som kode på et eller
-annet tidspunkt når man lager et digitalt prod
+annet tidspunkt når man lager et digitalt produkt.
