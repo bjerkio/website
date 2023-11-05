@@ -66,7 +66,7 @@ export type Props = {
   /**
    * The path of the page. Used to generate the canonical URL.
    */
-  path: string;
+  path?: string;
 
   /**
    * The date the page was published. Only used with type = 'article'.
@@ -101,7 +101,7 @@ const {
   socialMediaDescription = description ?? defaultDescription,
   images = [defaultImage.toString()],
   type = 'website',
-  path = '/',
+  path,
   schema,
   articleAuthor,
   articlePublishDate,
@@ -112,7 +112,7 @@ const {
 
 const [image] = images;
 
-const makeUrl = (path: string) => new URL(path, Astro.site).toString();
+const makeUrl = (newPath: string) => new URL(newPath, Astro.site).toString();
 
 const canonical = new URL(path, Astro.site);
 ---
@@ -141,7 +141,7 @@ const canonical = new URL(path, Astro.site);
     <title>{title}</title>
     <meta name="robots" content="index,follow" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={socialMediaTitle} />
