@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bjerk.io/sitemap-index.xml
