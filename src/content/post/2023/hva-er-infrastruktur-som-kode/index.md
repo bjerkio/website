@@ -21,19 +21,18 @@ databaser og andre ting, og i dag er det kanskje vanligst at man provisjonerer
 disse tingene i en av de store skyleverandørene som Google Cloud, Azure og
 Amazon Web Services (AWS).
 
-Infrastruktur som kode har endret hvordan IT-ressurser håndteres og
-styres. Med infrastruktur som kode kan du bruke prinsipper fra programmering,
-slik som versjoneringskontroll (Git), samarbeid og kontinuerlig integrasjon og
-levering (CI/CD) slik at organisasjoner kan bli mer effektive og automatisere
-prosesser.
+Infrastruktur som kode har endret hvordan IT-ressurser håndteres og styres. Med
+infrastruktur som kode kan du bruke prinsipper fra programmering, slik som
+versjoneringskontroll (Git), samarbeid og kontinuerlig integrasjon og levering
+(CI/CD) slik at organisasjoner kan bli mer effektive og automatisere prosesser.
 
 Verktøyene reduserer risiko for menneskelig feil, og skaper hurtige og sikre
-deployments (utrullinger). Måten det ofte fungerer på er at man definerer
-en ønsket tilstand til infrastrukturen, eksempelvis at en _Deployment_ i
-Kubernetes skal kjøre en Docker-fil med en spesifisert tag, og så sørger
-verktøyet for at det blir sånn. Dette skiftet har også vært med på å skape en ny
-rolle i IT-organisasjoner, nemlig _DevOps_ (en slags sammensmeltet rolle mellom
-utvikler og IT-driftspersonell).
+deployments (utrullinger). Måten det ofte fungerer på er at man definerer en
+ønsket tilstand til infrastrukturen, eksempelvis at en _Deployment_ i Kubernetes
+skal kjøre en Docker-fil med en spesifisert tag, og så sørger verktøyet for at
+det blir sånn. Dette skiftet har også vært med på å skape en ny rolle i
+IT-organisasjoner, nemlig _DevOps_ (en slags sammensmeltet rolle mellom utvikler
+og IT-driftspersonell).
 
 ## Verktøyene
 
