@@ -4,6 +4,7 @@ import Layout from '@layouts/default.astro';
 import { getCollection } from 'astro:content';
 
 const people = await getCollection('people');
+const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 ---
 
 <Layout
@@ -16,9 +17,9 @@ const people = await getCollection('people');
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Bjerk',
-    url: 'https://bjerk.io/',
-    logo: 'https://bjerk.io/assets/logo.svg',
-    image: 'https://bjerk.io/assets/logo.svg',
+    url: makeUrl('/'),
+    logo: makeUrl('/assets/logo.svg'),
+    image: makeUrl('/assets/logo.svg'),
     telephone: '+47 95308087',
     email: 'office@bjerk.io',
     taxID: '930 334 693',

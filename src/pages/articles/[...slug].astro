@@ -25,6 +25,8 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
   month: 'long',
   day: 'numeric',
 });
+
+const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 ---
 
 <Layout
@@ -44,7 +46,7 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     author: authors.map(author => ({
       '@type': 'Person',
       name: `${author.data.givenName} ${author.data.familyName}`,
-      url: `https://bjerk.io`,
+      url: Astro.site,
     })),
     datePublished: entry.data.date,
     image: [entry.data.image.src],
@@ -53,14 +55,14 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     // TODO: inLanguage: 'nb-NO',
     isAccessibleForFree: true,
     // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
-    mainEntityOfPage: `https://bjerk.io/articles/${entry.slug}`,
+    mainEntityOfPage: makeUrl(`/articles/${entry.slug}`),
     publisher: {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
       name: 'Bjerk',
-      url: 'https://bjerk.io/',
-      logo: 'https://bjerk.io/assets/logo.svg',
-      image: 'https://bjerk.io/assets/logo.svg',
+      url: makeUrl('/'),
+      logo: makeUrl('/assets/logo.svg'),
+      image: makeUrl('/assets/logo.svg'),
       telephone: '+4722120512',
       email: 'office@bjerk.io',
       taxID: '930 334 693',
