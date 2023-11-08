@@ -17,14 +17,17 @@ const rawAuthors = await getEntries(entry.data.author);
 
 const headline = entry.data.headline ?? entry.data.title;
 const authors = Array.isArray(rawAuthors) ? rawAuthors : [rawAuthors];
+const [mainAuthor] = authors;
 const authorNames = authors
-  .map(author => `${author.data.givenName} ${author.data.familyName}`)
+  .map(author => `${author.data.givenName} ${author.data.familyName} (${author.data.position})`)
   .join(', ');
 const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
+
+const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 ---
 
 <Layout
@@ -44,7 +47,7 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     author: authors.map(author => ({
       '@type': 'Person',
       name: `${author.data.givenName} ${author.data.familyName}`,
-      url: `https://bjerk.io`,
+      url: Astro.site,
     })),
     datePublished: entry.data.date,
     image: [entry.data.image.src],
@@ -53,14 +56,14 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     // TODO: inLanguage: 'nb-NO',
     isAccessibleForFree: true,
     // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
-    mainEntityOfPage: `https://bjerk.io/articles/${entry.slug}`,
+    mainEntityOfPage: makeUrl(`/articles/${entry.slug}`),
     publisher: {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
       name: 'Bjerk',
-      url: 'https://bjerk.io/',
-      logo: 'https://bjerk.io/assets/logo.svg',
-      image: 'https://bjerk.io/assets/logo.svg',
+      url: makeUrl('/'),
+      logo: makeUrl('/assets/logo.svg'),
+      image: makeUrl('/assets/logo.svg'),
       telephone: '+4722120512',
       email: 'office@bjerk.io',
       taxID: '930 334 693',
@@ -96,8 +99,22 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
           {humanDate}
         </time>
       </div>
-      <hr />
+      {
+        mainAuthor.data.description ? (
+          <div class="about-card">{mainAuthor.data.description}</div>
+        ) : (
+          <hr />
+        )
+      }
       <Content />
+      {
+        mainAuthor.data.type == 'external-author' && (
+          <div class="disclaimer">
+            <strong>Gjesteforfatter.</strong> Dette er en artikkel skrevet av noen
+            andre enn Bjerk.
+          </div>
+        )
+      }
     </article>
   </main>
 </Layout>
@@ -152,7 +169,7 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
     border-bottom: 1px solid hsl(var(--blue-base) 90%);
   }
 
-  article :global(> p > strong) {
+  article :global(> p:first-of-type strong) {
     font-weight: 600;
     font-size: clamp(0.8rem, 5vw, 1.5rem);
   }
@@ -189,5 +206,20 @@ const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
 
   article > .hero {
     grid-column: 1 / -1;
+  }
+
+  .disclaimer {
+    font-size: 0.8em;
+    margin-top: 2rem;
+    background-color: hsl(var(--blue-base) 90%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .about-card {
+    background-color: hsl(var(--blue-base) 90%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
   }
 </style>

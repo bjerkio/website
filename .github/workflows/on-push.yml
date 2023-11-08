@@ -74,4 +74,4 @@ jobs:
 
       - uses: atymic/sitemap-ping-action@master
         with:
-          sitemap-url: https://bjerk.io/sitemap.xml
+          sitemap-url: https://bjerk.io/sitemap-index.xml

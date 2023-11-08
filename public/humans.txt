@@ -1,0 +1,27 @@
+/* Rådgiverne */
+
+Markedsansvarlig og rådgiver: Carl Oscar Petterson
+Location: Oslo, Norway
+
+Rådgiver og daglig leder: Simen A. W. Olsen
+Twitter: @simandrewes
+Location: Oslo, Norway
+
+Rådgiver: Thomas Brustad
+Twitter: @HanBonetti
+Location: Oslo, Norway
+
+/* Utviklerne */
+
+Programvareutvikler: Brage Sekse Aarset
+Twitter: @komfyrion
+Location: Jyväskylä, Finland
+
+Programvareutvikler: Markus Moripen
+Location: Oslo, Norway
+
+Programvareutvikler: Sandra Viktora Moripen
+Location: Oslo, Norway
+
+Programvareutvikler: Simen Rugland
+Location: Tvedestrand, Norway

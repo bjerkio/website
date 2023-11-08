@@ -1,0 +1,16 @@
+{
+  "givenName": "Even",
+  "familyName": "Røgeberg",
+  "type": "external-author",
+  "position": "Senior rådgiver og partner, House of Agile",
+  "description": "Even Røgeberg jobber som prosjektleder, arkitekt og rådgiver i House of Agile. Han motiveres av å levere resultater, endring og brukerorientert innovasjon som gir effekt, og som av sluttbrukerne oppleves som verdifullt og meningsfylt. Også synes han det er ekstra stas å jobbe i gode team.",
+  "phone": "+47 40 04 40 25",
+  "email": "er@houseofagile.no",
+  "image": "./even.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/evenrogeberg/"
+    }
+  ]
+}

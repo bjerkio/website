@@ -66,7 +66,7 @@ export type Props = {
   /**
    * The path of the page. Used to generate the canonical URL.
    */
-  path: string;
+  path?: string;
 
   /**
    * The date the page was published. Only used with type = 'article'.
@@ -92,14 +92,16 @@ const defaultDescription = `
 
 const defaultTitle = 'Bjerk';
 
+const defaultImage = new URL('/images/social-media-image.png', Astro.site);
+
 const {
   title = defaultTitle,
   description = defaultDescription,
   socialMediaTitle = title ?? defaultTitle,
   socialMediaDescription = description ?? defaultDescription,
-  images = ['https://bjerk.io/assets/bjerk-default-seo.png'],
+  images = [defaultImage.toString()],
   type = 'website',
-  path = '/',
+  path,
   schema,
   articleAuthor,
   articlePublishDate,
@@ -110,33 +112,36 @@ const {
 
 const [image] = images;
 
-const canonical = new URL(path, 'https://bjerk.io');
+const makeUrl = (newPath: string) => new URL(newPath, Astro.site).toString();
+
+const canonical = new URL(path, Astro.site);
 ---
 
 <html lang="nb">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="https://bjerk.io/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={makeUrl('favicon.svg')} />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="https://bjerk.io/favicon-16x16.png"
+      href={makeUrl('favicon-16x16.png')}
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://bjerk.io/favicon-32x32.png"
+      href={makeUrl('favicon-32x32.png')}
     />
-    <link rel="shortcut icon" href="https://bjerk.io/favicon.ico">
+    <link rel="shortcut icon" href={makeUrl('favicon.ico')} />
     <meta name="viewport" content="width=device-width" />
+    <link type="text/plain" rel="author" href={makeUrl('humans.txt')} />
     <ViewTransitions />
 
     <title>{title}</title>
     <meta name="robots" content="index,follow" />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={socialMediaTitle} />
@@ -191,17 +196,6 @@ const canonical = new URL(path, 'https://bjerk.io');
         --color-app-bg: white;
         --color-subtle-bg: hsl(var(--blue-base) 95%);
         --color-subtle-border: hsl(var(--blue-base) 95%);
-
-        /* --color-ui-bg: var(--blue20);
-    --color-ui-bg-hover: var(--blue40);
-    --color-ui-bg-active: var(--blue100);
-    --color-ui-border: var(--blue100);
-    --color-ui-border-hover: var(--violet-8);
-
-    --color-solid-bg: var(--dark80);
-    --color-solid-bg-hover: var(--dark100);
-    --color-low-contrast-text: var(--dark80);
-    --color-high-contrast-text: var(--dark100); */
 
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;

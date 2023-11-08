@@ -22,6 +22,15 @@
       "type": "string",
       "description": "The email address of the person."
     },
+    "description": {
+      "type": "string",
+      "description": "A short description of the person."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["employee", "external-author"],
+      "description": "The type of person (e.g., employee or external author)."
+    },
     "socialMedia": {
       "type": "array",
       "description": "The list of social media profiles of the person.",

@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/page.astro'
 title: 'Lær om Bjerk – Vi skaper digitale produkter'
-headline: Vi skaper digitale produkter
+headline: Vi lager digitale produkter
 path: /about
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
@@ -12,33 +12,66 @@ socialMediaDescription:
   digitale produkter og tjenester for mennesker.
 ---
 
-Det beste i verden er skapt av de dristige, utfordrere, de som ser ting
-annerledes som er ambisiøse, nysgjerrige og motiverte nok til å finne orden i
-virvaret av det uforståelige.
+Vi står opp hver dag for å forbedre og forenkle måten mennesker lærer, tenker,
+jobber og kommuniserer på. Bjerk samler folk med kompetanse innen
+programvareutvikling, brukeropplevelse og produktledelse for å gjøre verden til
+et bedre sted.
 
-Bjerk er et lite byrå med vilje og sterke prinsipper, som jobber med vanskelige
-utfordringer som krever tett samarbeid og tillit. Vi er et dialogdrevet byrå som
-lager digitale produkter og tjenester for mennesker. Utover det er vi sterkt
-engasjert i å bygge en etisk, transparent praksis som er bærekraftig for oss,
-våre kunder og samfunnet. Vi søker samarbeidspartnere som lar oss underbygge
-arbeidet vårt med den filosofien.
+Vi tror at gjennom å lage digitale produkter, så kan vi skape positive effekter
+for mennesker.
 
-_Teknologi i seg selv er ikke det den viktigste delen av vårt arbeid – det er
-måten vi bruker den på._
+Bjerk ble startet i 2009 fordi vi ønsket å skape en trygg arbeidsplass, som gjør
+en forskjell og bruker teknologi for å utrette det. Vi motiveres av å hjelpe
+folk, slik at de kan fokusere på de viktige tingene.
 
-De siste 12 årene har vi endret måten mennesker lærer, tenker, jobber, og
-kommuniserer innen eiendom, regnskap og forvaltning gjennom teknologi.
+- [Sjekk ut våre arbeider](/work)
 
-<!-- [Lær om hvordan vi jobber](/about/principles) -->
+![En mann, og to kvinner: Christina, Thomas og Sandra.](@assets/about-bjerk.jpg 'Fra venstre: Christina, Thomas og Sandra.')
 
-![En mann og to kvinner: Christina, Thomas og Sandra.](@assets/about-bjerk.jpg 'Fra venstre: Christina, Thomas og Sandra.')
+## Hva gjør Bjerk?
 
-Vi elsker å skape digitale løsninger som gjør en ekte påvirkning i menneskers
-liv. For å oppnå det bruker vi iterative utviklingsprosesser, tverrfaglig
-samarbeid, designorientert produkutvikling og brukerfokuserte designmetoder.
+Vi kan ta en idé til et produkt folk kan ta i bruk eller hjelpe gjøre et produkt
+bedre. Det som er fint hos oss er at vi har flere av de ressursene man trenger
+for å skape gode produkter.
 
-Gjennom årene har vært heldige å få lov å jobbe med mange spennende kunder, små
-og store, nasjonale og internasjonale. Vi har også fått lov å jobbe med mange
-spennende prosjekter, som vi er stolte av å vise frem.
+[Våre rådgivere](/contact) kan lede utvikling av produkter (produktledelse),
+inkludert å forstå brukerne, hva som gir effekt og hva man bør gjøre først og
+sist. Rådgiverne i Bjerk kan både produkt- og prosjektledelse, og er glad i
+metoder, prinsipper og løsninger som gir mest innvirkning, slik som [Design
+Thinking][design-thinking] og [Manifestet for smidig
+programvareutvikling][manifestet].
 
-[Sjekk ut tidligere jobber](/work)
+For å skape gode produkter, trengs det fagpersoner som kan lage dem. Vi spiller
+på hverandre og bruker alle slags rammeverk, programmeringsspråk og paradigmer.
+For oss gir det mening å ha et pragmatisk syn på hva som brukes når – det som
+gir mest mulig effekt.
+
+For å skape gode brukeropplevelser i digitale produkter tror vi produktteam
+trenger dedikerte ressurser, som bryner seg på hvordan vi kan skape den beste
+opplevelsen. I tillegg til å samarbeide med flere av de ledende selskapene i
+verden er vi gode på brukeropplevelser (UX).
+
+[design-thinking]: https://en.wikipedia.org/wiki/Design_thinking
+[manifestet]: https://agilemanifesto.org/iso/no/manifesto.html
+
+## Hvordan samarbeider vi?
+
+Et godt samarbeid krever en god relasjon til hverandre, derfor er det viktig for
+oss å senke terskelen for å bli kjent. Vi starter gjerne et samarbeid med en løs
+prat om hvordan vi jobber, hva du vil oppnå og hvordan vi passer sammen.
+
+Etter en prat tar vi gjerne et møte, eller enda bedre, en gratis workshop hvor
+vi går dypere inn i behovet, produktet og visjonen.
+
+- [Snakk med en av våre rådgivere](/contact)
+- [Les artikkelen vår om hvordan vi jobber](/articles/2023/jobbe-med-bjerk)
+
+Aller helst liker vi å ha delte kanaler på Slack eller Teams, slik at vi kan
+snakke sammen når ting oppstår. Om det ikke passer organisasjonen vi jobber
+sammen med, har vi jevnlige møter om det vi jobber med.
+
+For at våre kunder skal ha oversikt over hva vi jobber med, har vi helst en
+organisasjon/kodebrønn i GitHub hvor vi lager saker og organiserer arbeidet. For
+at kunden skal følge med på forbruket av timer, kan våre kunder følge med på
+forbruket gjennom prosjektrapporten (et egenutviklet rapport-verktøy gir innsikt
+i timeføringene i sanntid).
