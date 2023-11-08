@@ -23,7 +23,7 @@ frokost-opplevelser rett hjem til deg. I første kvartal 2023 lanserte
 Morgenlevering en nytt visuell profil, og sammen med ny profil ønsket de å
 forsterke identiteten deres på nyhetsbrevene.
 
-Bjerk har sammen [Grid Branding](https://grid.no) utviklet et eget designverktøy
+Bjerk har sammen [Grid branding](https://grid.no) utviklet et eget designverktøy
 for nyhetsbrev, som ikke bare fremhever identiteten deres, men gjør det også
 enklere for de ansatte i Morgenlevering å komme med selskapets budskap!
 

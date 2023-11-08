@@ -161,19 +161,23 @@ const event = defineCollection({
       ...defaultFields(image),
       startDate: z.date(),
       endDate: z.date(),
-      eventAttendanceMode: z.enum([
-        'https://schema.org/OnlineEventAttendanceMode',
-        'https://schema.org/OfflineEventAttendanceMode',
-        'https://schema.org/MixedEventAttendanceMode',
-      ]),
-      eventStatus: z.enum([
-        'https://schema.org/EventScheduled',
-        'https://schema.org/EventCancelled',
-        'https://schema.org/EventMovedOnline',
-        'https://schema.org/EventPostponed',
-        'https://schema.org/EventRescheduled',
-        'https://schema.org/EventLive',
-      ]),
+      eventAttendanceMode: z
+        .enum([
+          'https://schema.org/OnlineEventAttendanceMode',
+          'https://schema.org/OfflineEventAttendanceMode',
+          'https://schema.org/MixedEventAttendanceMode',
+        ])
+        .default('https://schema.org/OnlineEventAttendanceMode'),
+      eventStatus: z
+        .enum([
+          'https://schema.org/EventScheduled',
+          'https://schema.org/EventCancelled',
+          'https://schema.org/EventMovedOnline',
+          'https://schema.org/EventPostponed',
+          'https://schema.org/EventRescheduled',
+          'https://schema.org/EventLive',
+        ])
+        .default('https://schema.org/EventScheduled'),
       location: z
         .object({
           name: z.string(),
@@ -193,7 +197,7 @@ const event = defineCollection({
             addressCountry: 'NO',
           },
         }),
-      offers: z.array(eventOffer).nonempty(),
+      offers: z.array(eventOffer).default([]),
       performer: z
         .array(eventPerformer(image))
         .nonempty()
