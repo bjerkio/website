@@ -90,6 +90,8 @@ Metodikken baserer seg på tre sentrale prinsipper:
    forbedres, og hvordan man kan bruke denne kunnskapen til å øke effekten i
    fremtidige prosjekter.
 
+![sirkel som illustrerer half double metodologien](./prosjektsirkel.png)
+
 ## Forskning viser at det fungerer!
 
 Universitetet i Århus har forsket på over 100 prosjekter i 23 organisasjoner og
@@ -104,6 +106,8 @@ nesten 350 000 timer.
 
 Resultatet er oppløftene. **74% av prosjektene når alle eller de fleste av sine
 suksesskriterier med høy grad av måloppnåelse.** Kun 7% mislykkes.
+
+![illustrasjon som viser resultater fra en studie om bruk av half double metodologi](./halfdoublestudier.png)
 
 Hele rapporten finner du her:
 [Rode and Svejvig (2023) Project Half Double Evaluation of Phase 3.pdf (halfdoubleinstitute.org)](https://halfdoubleinstitute.org/sites/default/files/2023-06/Rode%20and%20Svejvig%20%282023%29%20Project%20Half%20Double%20Evaluation%20of%20Phase%203.pdf)
