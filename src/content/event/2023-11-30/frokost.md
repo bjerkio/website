@@ -11,11 +11,10 @@ description:
   substans.
 socialMediaTitle: 🌐 Universell Utforming og Frokost @Bjerk | 30. November 08:00
 socialMediaDescription:
-  Oppdag kraften i universell utforming hos Bjerk, 30. November! Bli med
-  Christian Thon for et dykk i hvordan vi gjør teknologi tilgjengelig for alle.
-  Engasjer deg, nettverk, og start dagen med et meningsfullt møte fra kl. 08:00
-  til 09:30. Vi ses i Akersgata 51, Oslo – ta steget mot en inkluderende
-  fremtid.
+  Lær om universell utforming hos Bjerk, 30. November! Bli med Christian Thon
+  forteller hvordan vi gjør teknologi tilgjengelig for alle. Engasjer deg, bygg
+  nettverk, og start dagen med noe meningsfullt fra kl. 08:00 til 09:30. Vi ses
+  i Akersgata 51, Oslo – ta steget mot en inkluderende fremtid.
 image: ./frokost-2023.png
 startDate: 2023-11-30 08:00:00 +1
 endDate: 2023-11-30 09:10:00 +1
