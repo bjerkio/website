@@ -1,6 +1,8 @@
 ---
 title:
-  Nettverksfrokost hos Bjerk den 18. Oktober - Møt nye bekjentskaper i Oslo!
+  Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
+  November
+headline: 'Nettverksfrokost hos Bjerk: Universell utforming med Christian Thon'
 description:
   Den 30. november inviterer Bjerk til en frokost og lærerik dialog med
   Christian Thon fra Norges Blindeforbund. Opplev hvordan universell utforming
@@ -14,14 +16,14 @@ socialMediaDescription:
   Engasjer deg, nettverk, og start dagen med et meningsfullt møte fra kl. 08:00
   til 09:30. Vi ses i Akersgata 51, Oslo – ta steget mot en inkluderende
   fremtid.
-image: ./frokost.jpg
-startDate: 2023-11-30T08:00+01:00
-endDate: 2023-11-30T09:30+01:00
+image: ./frokost-2023.png
+startDate: 2023-11-30 08:00:00 +1
+endDate: 2023-11-30 09:10:00 +1
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 eventStatus: https://schema.org/EventScheduled
 offers:
   - url: https://forms.gle/ouHcJ77eVvMoDamk8
-    price: 0
+    price: '0'
     priceCurrency: NOK
     availability: https://schema.org/InStock
     validFrom: 2023-11-08T08:00+01:00
@@ -35,6 +37,7 @@ performer:
     logo: ./blindeforbundet.svg
   - type: Person
     name: Christian Thon
+    jobTitle: Universell utforming hos Norges Blindeforbund
     url: https://www.linkedin.com/in/christian-thon-07615285/
     image: ./christian-thon.jpeg
 ---
@@ -45,8 +48,7 @@ Blindeforbund på besøk. Med sin ekspertise vil han belyse hvordan inkluderende
 design ikke bare er et ideal, men en konkret måte å skape digitale opplevelser
 for alle.
 
-Tenk deg en verden der hver nettside, hver app, er tilgjengelig for absolutt
-alle. Christian arbeider hver dag for å gjøre denne visjonen til virkelighet og
+Christian arbeider hver dag for å gjøre teknologi mer tilgjengelig for alle og
 vil dele innsikter og historier som vil utvide vår forståelse og tenkning rundt
 teknologi. Sammen kan vi utforske hvordan vi gjør teknologien vår mer
 tilgjengelig, og dermed tar et skritt nærmere en verden hvor ingen er utelatt.
