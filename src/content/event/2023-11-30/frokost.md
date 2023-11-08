@@ -43,7 +43,7 @@ performer:
 ---
 
 Bjerk inviterer deg til et frokostmøte med et kritisk og inspirerende fokus:
-Universell utforming.
+_Universell utforming_.
 
 Vi har nemlig æren av å ha Christian Thon fra Norges Blindeforbund på besøk. Med
 sin ekspertise vil han belyse hvordan inkluderende design ikke bare er et ideal,
