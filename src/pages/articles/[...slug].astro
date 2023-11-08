@@ -17,8 +17,9 @@ const rawAuthors = await getEntries(entry.data.author);
 
 const headline = entry.data.headline ?? entry.data.title;
 const authors = Array.isArray(rawAuthors) ? rawAuthors : [rawAuthors];
+const [mainAuthor] = authors;
 const authorNames = authors
-  .map(author => `${author.data.givenName} ${author.data.familyName}`)
+  .map(author => `${author.data.givenName} ${author.data.familyName} (${author.data.position})`)
   .join(', ');
 const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
   year: 'numeric',
@@ -98,8 +99,22 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
           {humanDate}
         </time>
       </div>
-      <hr />
+      {
+        mainAuthor.data.description ? (
+          <div class="about-card">{mainAuthor.data.description}</div>
+        ) : (
+          <hr />
+        )
+      }
       <Content />
+      {
+        mainAuthor.data.type == 'external-author' && (
+          <div class="disclaimer">
+            <strong>Gjesteforfatter.</strong> Dette er en artikkel skrevet noen
+            andre enn Bjerk.
+          </div>
+        )
+      }
     </article>
   </main>
 </Layout>
@@ -154,7 +169,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
     border-bottom: 1px solid hsl(var(--blue-base) 90%);
   }
 
-  article :global(> p > strong) {
+  article :global(> p:first-of-type strong) {
     font-weight: 600;
     font-size: clamp(0.8rem, 5vw, 1.5rem);
   }
@@ -191,5 +206,20 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 
   article > .hero {
     grid-column: 1 / -1;
+  }
+
+  .disclaimer {
+    font-size: 0.8em;
+    margin-top: 2rem;
+    background-color: hsl(var(--blue-base) 90%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .about-card {
+    background-color: hsl(var(--blue-base) 90%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
   }
 </style>
