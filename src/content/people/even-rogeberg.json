@@ -1,0 +1,15 @@
+{
+  "givenName": "Even",
+  "familyName": "Røgeberg",
+  "type": "external-author",
+  "position": "Senior rådgiver og partner, House of Agile",
+  "phone": "+47 40 04 40 25",
+  "email": "er@houseofagile.no",
+  "image": "./even.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/evenrogeberg/"
+    }
+  ]
+}
