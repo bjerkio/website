@@ -17,7 +17,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const headline = entry.data.headline ?? entry.data.title;
 
-const makeUrl = (path: string) => new URL(path, Astro.site).toString();
+const images = entry.data.image?.src && [entry.data.image.src];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -38,7 +38,7 @@ const schema = {
       addressCountry: entry.data.location.addressCountry,
     },
   },
-  image: [entry.data.image.src],
+  image: images,
   description: entry.data.description,
   offers: entry.data.offers.map(offer => ({
     '@type': 'Offer',
@@ -54,7 +54,7 @@ const schema = {
       ? {
           '@type': 'Person',
           name: performer.name,
-          image: performer.image.src,
+          image: performer.image?.src ?? undefined,
           description: performer.description,
         }
       : {
@@ -95,7 +95,7 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
 
 <Layout
   {...entry.data}
-  images={[entry.data.image.src]}
+  images={images}
   path={`/events/${entry.slug}`}
   schema={schema}
 >
@@ -130,7 +130,9 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
             <ul class="speakers">
               {speakers.map(performer => (
                 <li>
-                  <Image src={performer.image} alt={performer.name} />
+                  {performer.image && (
+                    <Image src={performer.image} alt={performer.name} />
+                  )}
                   <div class="metadata">
                     <p>
                       <a href={performer.url} target="_blank">
