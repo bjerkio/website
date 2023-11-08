@@ -1,9 +1,8 @@
 ---
 import { getCollection, getEntries } from 'astro:content';
 import Layout from '@layouts/default.astro';
-import Performer from '@components/performer.astro';
 import { format } from 'date-fns';
-import { nb } from 'date-fns/locale';
+import nb from 'date-fns/locale/nb/index.js';
 import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
