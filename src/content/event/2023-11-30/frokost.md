@@ -2,7 +2,7 @@
 title:
   Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
   November
-headline: 'Nettverksfrokost hos Bjerk: Universell utforming med Christian Thon'
+headline: 'Frokost hos Bjerk: «Universell utforming» med Christian Thon'
 description:
   Den 30. november inviterer Bjerk til en frokost og lærerik dialog med
   Christian Thon fra Norges Blindeforbund. Opplev hvordan universell utforming
@@ -43,20 +43,18 @@ performer:
 ---
 
 Bjerk inviterer deg til et frokostmøte med et kritisk og inspirerende fokus:
-universell utforming. Vi er æret over å ha Christian Thon fra Norges
-Blindeforbund på besøk. Med sin ekspertise vil han belyse hvordan inkluderende
-design ikke bare er et ideal, men en konkret måte å skape digitale opplevelser
-for alle.
+Universell utforming.
 
-Christian arbeider hver dag for å gjøre teknologi mer tilgjengelig for alle og
-vil dele innsikter og historier som vil utvide vår forståelse og tenkning rundt
-teknologi. Sammen kan vi utforske hvordan vi gjør teknologien vår mer
-tilgjengelig, og dermed tar et skritt nærmere en verden hvor ingen er utelatt.
+Vi har nemlig æren av å ha Christian Thon fra Norges Blindeforbund på besøk. Med
+sin ekspertise vil han belyse hvordan inkluderende design ikke bare er et ideal,
+men en konkret måte å skape digitale opplevelser for alle på.
 
-Vi ser frem til en morgen fylt med engasjerende dialog og opplysende øyeblikk.
-Ta med deg en kollega eller en venn – enhver som deler en lidenskap for en mer
-inkluderende digital fremtid. Bli med og la oss sammen inspireres av Christian
-Thons kunnskap og entusiasme for universell utforming.
+Christian jobber hver dag for å gjøre teknologi mer tilgjengelig for alle og vil
+dele innsikter og historier som vil utvide vår forståelse og tenkning rundt
+teknologi. La oss sammen utforske hvordan vi kan gjøre teknologien vår mer
+inkluderende og dermed ta et skritt nærmere en verden hvor ingen er utelatt.
 
-Vi ser frem til en hyggelig morgen med gode samtaler og nye bekjentskaper.
-Inviter gjerne med deg en kollega eller venn - vi gleder oss til å se deg der!
+Vi ser frem til en opplysende, engasjerende og motiverende start på akkurat
+denne torsdagen. Ta med deg en kollega, en venn, en du vet bryr seg om teknologi
+og inkludering og bli inspirert av Christian og hans kunnskap og entusiasme for
+universell utforming.
