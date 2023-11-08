@@ -1,0 +1,326 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import Layout from '@layouts/default.astro';
+import Performer from '@components/performer.astro';
+import { format } from 'date-fns';
+import { nb } from 'date-fns/locale';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const eventEntries = await getCollection('event');
+  return eventEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const headline = entry.data.headline ?? entry.data.title;
+
+const makeUrl = (path: string) => new URL(path, Astro.site).toString();
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: entry.data.title,
+  startDate: entry.data.startDate.toISOString(),
+  endDate: entry.data.endDate.toISOString(),
+  eventAttendanceMode: entry.data.eventAttendanceMode,
+  eventStatus: entry.data.eventStatus,
+  location: {
+    '@type': 'Place',
+    name: entry.data.location.name,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: entry.data.location.streetAddress,
+      addressLocality: entry.data.location.addressLocality,
+      postalCode: entry.data.location.postalCode,
+      addressCountry: entry.data.location.addressCountry,
+    },
+  },
+  image: [entry.data.image.src],
+  description: entry.data.description,
+  offers: entry.data.offers.map(offer => ({
+    '@type': 'Offer',
+    ...offer,
+  })),
+  organizer: {
+    '@type': 'Organization',
+    name: 'Bjerk',
+    url: 'https://bjerk.io',
+  },
+  performer: entry.data.performer.map(performer =>
+    performer.type === 'Person'
+      ? {
+          '@type': 'Person',
+          name: performer.name,
+          image: performer.image.src,
+          description: performer.description,
+        }
+      : {
+          '@type': 'Organization',
+          name: performer.name,
+          image: performer.image?.src ?? undefined,
+          description: performer.description,
+        },
+  ),
+};
+
+const [primaryOffer] = entry.data.offers;
+const signUpUrl = primaryOffer ? primaryOffer.url : undefined;
+const contributors = entry.data.performer.filter(
+  performer => performer.name !== 'Bjerk' && performer.type === 'Organization',
+);
+const speakers = entry.data.performer.filter(
+  performer => performer.name !== 'Bjerk' && performer.type === 'Person',
+);
+
+const startDate = entry.data.startDate;
+const endDate = entry.data.endDate;
+
+const address = [
+  entry.data.location.name,
+  entry.data.location.address.streetAddress,
+  entry.data.location.address.postalCode,
+  entry.data.location.address.addressLocality,
+  entry.data.location.address.addressCountry,
+].join(', ');
+
+const formattedDateFrom =
+  format(startDate, 'EEEE d. MMMM', { locale: nb }) +
+  ' kl. ' +
+  format(startDate, 'HH.mm');
+const formattedDateTo = format(entry.data.endDate, 'HH.mm');
+---
+
+<Layout
+  {...entry.data}
+  images={[entry.data.image.src]}
+  path={`/events/${entry.slug}`}
+  schema={schema}
+>
+  <main>
+    <article>
+      <h1 class="title">{headline}</h1>
+      <p class="metadata">
+        <strong>Tid:</strong>
+        {' '}<time datetime={startDate.toISOString()}>{formattedDateFrom}</time>
+         til <time datetime={endDate.toISOString()}>
+          {formattedDateTo}
+        </time><br />
+        <strong>Sted:</strong>{' '}
+        {address}
+      </p>
+      <Content />
+
+      {
+        signUpUrl && (
+          <div>
+            <a class="sign-up-link" href={signUpUrl}>
+              Påmelding →
+            </a>
+          </div>
+        )
+      }
+
+      {
+        speakers.length > 0 && (
+          <>
+            <h2>Foredragsholdere</h2>
+            <ul class="speakers">
+              {speakers.map(performer => (
+                <li>
+                  <Image src={performer.image} alt={performer.name} />
+                  <div class="metadata">
+                    <p>
+                      <a href={performer.url} target="_blank">
+                        {performer.name}
+                      </a>
+                    </p>
+                    <p>{performer.jobTitle}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        contributors.length > 0 && (
+          <>
+            <h2>Medvirkende / Samarbeidspartnere</h2>
+            <div class="contributor">
+              {contributors.map(performer => (
+                <a href={performer.url} target="_blank">
+                  <Image
+                    src={performer.logo}
+                    alt={`Bilde av ${performer.name}`}
+                  />
+                </a>
+              ))}
+            </div>
+          </>
+        )
+      }
+    </article>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  .contributor {
+    margin-block: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+  }
+
+  .speakers {
+    list-style: none;
+    padding: 0px;
+    margin-block: 1rem;
+
+    display: grid;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .speakers > li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .speakers > li > img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .speakers > li > .metadata {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .speakers > li > .metadata > p {
+    margin: 0;
+  }
+
+  .speakers > a .metadata p:first-child {
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    text-decoration: underline;
+    text-decoration-color: var(--link-color);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: 0.125em;
+  }
+
+  article {
+    line-height: 1.6;
+    letter-spacing: -0.003em;
+
+    display: grid;
+    width: min(55ch, 100% - 4rem);
+  }
+
+  article > * {
+    min-width: 0;
+  }
+
+  .title {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.3;
+    grid-column: 1 / 4;
+
+    text-wrap: pretty;
+    max-width: 25ch;
+
+    margin-bottom: 3rem;
+  }
+
+  .metadata {
+    margin-block: 2rem;
+  }
+
+  hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid hsl(var(--blue-base) 90%);
+  }
+
+  article :global(> p:nth-child(3)) {
+    font-weight: 600;
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
+    text-wrap: pretty;
+  }
+
+  article :global(> p) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(> pre) {
+    padding: 1rem;
+  }
+
+  article :global(> h2) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  article :global(> *) {
+    grid-column: 2;
+  }
+
+  article :global(img) {
+    width: 100%;
+    height: auto;
+  }
+
+  article :global(> p:has(img)) {
+    grid-column: 1 / 4;
+    width: 100%;
+    max-width: 70ch;
+    justify-self: center;
+    margin-block: 3rem;
+  }
+
+  article > .hero {
+    grid-column: 1 / -1;
+  }
+
+  .sign-up-link {
+    display: inline-block;
+    background-color: hsl(var(--blue-base) 50%);
+    font-size: 1.2rem;
+
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-radius: 5rem;
+    margin-block: 3rem;
+
+    color: hsl(var(--blue-base) 95%);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (hover) {
+    .sign-up-link:hover {
+      background-color: hsl(var(--blue-base) 60%);
+    }
+
+    .sign-up-link:active {
+      background-color: hsl(var(--blue-base) 70%);
+    }
+  }
+</style>
