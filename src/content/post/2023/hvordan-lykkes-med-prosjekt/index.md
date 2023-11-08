@@ -129,5 +129,7 @@ utviklingsprosjekter, hvor endringer og usikkerhet er vanlige.
 Double-metodikken hjelpe prosjekteiere, prosjektledere og teamene deres med å
 oppnå ønsket effekt i utviklingsprosjekter på en mer effektiv måte.**
 
-**Ta gjerne kontakt dersom du er nysgjerrig på Half Double eller House of
-Agile.**
+**Ta gjerne kontakt dersom du er nysgjerrig på Half Double eller [House of
+Agile][hoa].**
+
+[hoa]: https://www.house-of-agile.no/
