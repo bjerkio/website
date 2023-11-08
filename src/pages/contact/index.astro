@@ -5,6 +5,19 @@ import { getCollection } from 'astro:content';
 
 const people = await getCollection('people');
 const makeUrl = (path: string) => new URL(path, Astro.site).toString();
+
+
+const employees = people.filter(person => person.data.email.includes('@bjerk.io')).sort((a, b) => {
+  if (b.data.position.toLowerCase().includes('styreleder')) {
+    return -1;
+  }
+
+  if (a.data.position.toLowerCase().includes('rådgiver')) {
+    return -1;
+  }
+
+  return a.data.givenName.localeCompare(b.data.givenName);
+});
 ---
 
 <Layout
@@ -82,21 +95,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
     </section>
 
     <section class="employees">
-      {
-        people
-          .sort((a, b) => {
-            if (b.data.position.toLowerCase().includes('styreleder')) {
-              return -1;
-            }
-
-            if (a.data.position.toLowerCase().includes('rådgiver')) {
-              return -1;
-            }
-
-            return a.data.givenName.localeCompare(b.data.givenName);
-          })
-          .map(person => <Person person={person} />)
-      }
+      {employees.map(person => <Person person={person} />)}
     </section>
   </main>
 </Layout>

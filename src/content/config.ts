@@ -9,6 +9,9 @@ const people = defineCollection({
       position: z.string(),
       phone: z.string(),
       email: z.string().email(),
+      type: z
+        .union([z.literal('employee'), z.literal('external-author')])
+        .default('employee'),
       socialMedia: z.array(
         z.object({
           type: z.enum(['github', 'linkedin']),
@@ -20,6 +23,7 @@ const people = defineCollection({
       }),
       imageAlt: z.string().optional(),
       photographerName: z.string().optional(),
+      description: z.string().optional(),
     }),
 });
 
