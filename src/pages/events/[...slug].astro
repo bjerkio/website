@@ -17,8 +17,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const headline = entry.data.headline ?? entry.data.title;
 
-const makeUrl = (path: string) => new URL(path, Astro.site).toString();
-
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
@@ -195,6 +193,10 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
+    margin-block: 1rem;
+
+    /* center */
+    /* justify-content: center; */
   }
 
   .speakers > li > img {
@@ -207,6 +209,7 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
   .speakers > li > .metadata {
     display: grid;
     gap: 0.5rem;
+    max-width: 30ch;
   }
 
   .speakers > li > .metadata > p {
@@ -229,7 +232,7 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
     letter-spacing: -0.003em;
 
     display: grid;
-    width: min(55ch, 100% - 4rem);
+    max-width: 55ch;
   }
 
   article > * {
@@ -246,10 +249,6 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
     max-width: 25ch;
 
     margin-bottom: 3rem;
-  }
-
-  .metadata {
-    margin-block: 2rem;
   }
 
   hr {
