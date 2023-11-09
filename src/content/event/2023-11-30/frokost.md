@@ -21,7 +21,7 @@ endDate: 2023-11-30 09:10:00 +1
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 eventStatus: https://schema.org/EventScheduled
 offers:
-  - url: https://forms.gle/ouHcJ77eVvMoDamk8
+  - url: https://forms.gle/oAyVtHDGAsp3WhH9A
     price: '0'
     priceCurrency: NOK
     availability: https://schema.org/InStock
