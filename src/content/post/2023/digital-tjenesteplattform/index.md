@@ -10,9 +10,11 @@ author:
   - simenandre
 ---
 
-> **Digital tjenesteplattform** er skreddersydde digitalt produkter bygget rundt
-> sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
-> koblinger til og mellom andre systemer, både internt og eksternt.
+**Ingress kommer her**
+
+**Digital tjenesteplattform** er skreddersydde digitalt produkter bygget rundt
+sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
+koblinger til og mellom andre systemer, både internt og eksternt.
 
 Jeg skal starte med en antagelse: For å få nødvendig gjennomslagskraft kan man
 ikke kjøpe kjerne-system som man krangler om å gjøre bedre eller mer tilpasset
