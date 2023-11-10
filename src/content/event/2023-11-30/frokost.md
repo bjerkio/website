@@ -16,8 +16,8 @@ socialMediaDescription:
   nettverk, og start dagen med noe meningsfullt fra kl. 08:00 til 09:30. Vi ses
   i Akersgata 51, Oslo – ta steget mot en inkluderende fremtid.
 image: ./frokost-2023.png
-startDate: 2023-11-30 08:00:00 +1
-endDate: 2023-11-30 09:10:00 +1
+startDate: 2023-11-30 07:45:00
+endDate: 2023-11-30 09:00:00
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 eventStatus: https://schema.org/EventScheduled
 offers:
