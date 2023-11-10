@@ -5,12 +5,10 @@ description:
   sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
   koblinger til og mellom andre systemer, både internt og eksternt
 date: 2023-11-08T14:00:00
-image: ./even.jpg
+image: ./2023-11-23-simen-a-w-olsen.jpg
 author:
-  - even-rogeberg
+  - simenandre
 ---
-
-Noe som gjør at du får lyst til å lese!
 
 > **Digital tjenesteplattform** er skreddersydde digitalt produkter bygget rundt
 > sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
