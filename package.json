@@ -14,12 +14,17 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.1.4",
     "@astrojs/sitemap": "^3.0.3",
     "@fontsource-variable/sora": "^5.0.15",
     "astro": "^3.4.0",
+    "astro-m2dx": "^0.7.16",
     "date-fns": "^2.30.0",
+    "remark-attr": "^0.11.1",
+    "remark-directive": "^2.0.1",
     "remark-gfm": "^4.0.0",
     "sharp": "^0.32.6",
+    "unist-util-visit": "^5.0.0",
     "unplugin-icons": "^0.17.1"
   },
   "devDependencies": {
