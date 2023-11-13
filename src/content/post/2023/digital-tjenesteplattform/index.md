@@ -1,8 +1,8 @@
 ---
-title: 'Hva er digital tjenesteplattform?'
+title: 'Hva er en digital tjenesteplattform?'
 description:
-  Digital tjenesteplattform er skreddersydde digitalt produkter bygget rundt
-  sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
+  Digital tjenesteplattformer er skreddersydde digitale produkter bygget rundt
+  sentrale data. Målet er ofte å gjøre data tilgjengelig og å ha et fundament for
   koblinger til og mellom andre systemer, både internt og eksternt
 date: 2023-11-13T14:00:00
 image: ./2023-11-10-simen-a-w-olsen.jpg
@@ -12,11 +12,11 @@ author:
 
 **Ingress kommer her**
 
-**Digital tjenesteplattformer** er skreddersydde digitale produkter bygget rundt
-sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
+**Digitale tjenesteplattformer** er skreddersydde digitale produkter bygget rundt
+sentrale data. Målet er ofte å gjøre data tilgjengelig og å ha et fundament for
 koblinger til og mellom andre systemer, både internt og eksternt.
 
-Digital tjenesteplattformer er egentlig ikke noe nytt, de fleste mellomstore
+Digitale tjenesteplattformer er egentlig ikke noe nytt. De fleste mellomstore
 bedrifter og oppover har i mer eller mindre grad etablert noe som ligner på en
 digital tjenesteplattform. Begrepet fagsystem har over tid vært mer brukt for å
 forklare det, spesielt i en tid hvor programmene ble laget som store sammensatte
@@ -44,4 +44,4 @@ tilpasset egne behov. Man må lage eget. Man er avhengig av å kunne endre på t
 for å kunne fortsette å skape verdi, og det er spesielt derfor jeg tror det er
 viktig at man starter å lage digital tjenesteplattform så tidlig som mulig.
 
-Heisann
+Det finnes gode produkter der ute som løser vanlige problem nesten alle virksomheter har. Kalender, kundekontakt, chatteprogram, osv. En digital tjenesteplattform gjør at man kan man nyte godene av å ha et skreddersydd system samtidig som man kan ta i bruk de beste arbeidsverktøyene som er tilgjengelige på markedet. Man kan også bytte ut slike verktøy uten å tape vesentlig data siden den ligger trygt i tjenesteplattformen. 
