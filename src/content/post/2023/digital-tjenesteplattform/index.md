@@ -17,16 +17,26 @@ sentrale data. Målet er ofte å gjøre data tilgjengelig, være fundament for
 koblinger til og mellom andre systemer, både internt og eksternt.
 
 Digital tjenesteplattformer er egentlig ikke noe nytt, de fleste mellomstore
-bedrifter og oppover har i mer eller mindre grad alle etablert en plattform, men
-kanskje under navn. Tidligere ble begrepet fagsystem i større grad brukt for å
-forklare det, men det var også en tid hvor programmene ble laget som store
-sammensatte enkeltprogrammer (monolitter).
+bedrifter og oppover har i mer eller mindre grad etablert noe som ligner på en
+digital tjenesteplattform. Begrepet fagsystem har over tid vært mer brukt for å
+forklare det, spesielt i en tid hvor programmene ble laget som store sammensatte
+enkeltprogrammer (monolitter).
 
-Det er blitt mer normalt å sy sammen systemer i dag enn før og det er viktigere
-å kunne skalere utviklingen av nye tjenester til flere, og det er nok her
-begrepet digital tjenesteplattform har fått en større betydning.
+Jeg tror at når det er blitt mer normalt å sy sammen systemene har begrepet
+digital tjenesteplattform fått større betydning. Fellestrekket er at det er
+systemer som er laget for å ivareta funksjoner og data felles for et fagfelt
+eller det vi kaller et domene.
 
 ![Figur som viser prikker som peker mot en sentral prikk](./service-figure.svg 'Figuren illustrerer en sentral plattform som andre produkter er koblet med')
+
+Taksering Norge har utviklet en digital tjenesteplattform hos oss. I løsningen
+ligger oppdragene, og det er i dette systemet takstene lages. Bookingen av
+befaringer gjøres i et annet system, og kundestøtte gjøres i et annet.
+Intensjonen er at alle systemene skal være koblet sammen, og at de skal kunne
+utveksle data med hverandre, og det gjør de med utgangspunkt i den digitale
+tjenesteplattformen.
+
+## Hvorfor skal jeg ha det?
 
 **Jeg skal starte med en antagelse:** For å få nødvendig gjennomslagskraft kan
 man ikke kjøpe kjerne-system som man krangler om å gjøre bedre eller mer
