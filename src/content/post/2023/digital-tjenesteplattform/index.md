@@ -23,9 +23,10 @@ forklare det, spesielt i en tid hvor programmene ble laget som store sammensatte
 enkeltprogrammer (monolitter).
 
 Jeg tror at når det er blitt mer normalt å sy sammen systemene har begrepet
-digital tjenesteplattform fått større betydning. Fellestrekket er at det er
-systemer som er laget for å ivareta funksjoner og data felles for et fagfelt
-eller det vi kaller et domene.
+digital tjenesteplattform fått større betydning, dette fordi man trenger å
+etablere et felles sted hvor dataene lagres. Fellestrekket er at det er systemer
+som er laget for å ivareta funksjoner og data felles for et fagfelt eller det vi
+kaller et domene.
 
 ![Figur som viser prikker som peker mot en sentral prikk](./service-figure.svg 'Figuren illustrerer en sentral plattform som andre produkter er koblet med')
 
