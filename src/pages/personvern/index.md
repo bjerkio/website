@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/page.astro'
 title: 'Vi er opptatt av ditt personvern'
-path: /about
+path: /personvern
 description:
   Bjerk tar ditt personvern på alvor. Les vår personvernerklæring for å forstå
   hvordan vi håndterer personopplysninger, respekterer dine rettigheter og

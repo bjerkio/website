@@ -2,7 +2,7 @@
 layout: '@layouts/page.astro'
 title: 'Lær om Bjerk – Vi skaper digitale produkter'
 headline: Vi lager digitale produkter
-path: /about
+path: /om
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
   vi transformert hvordan folk lærer og jobber.
@@ -24,7 +24,7 @@ Bjerk ble startet i 2009 fordi vi ønsket å skape en trygg arbeidsplass, som gj
 en forskjell og bruker teknologi for å utrette det. Vi motiveres av å hjelpe
 folk, slik at de kan fokusere på de viktige tingene.
 
-- [Sjekk ut våre arbeider](/work)
+- [Sjekk ut våre arbeider](/arbeid)
 
 ![En mann, og to kvinner: Christina, Thomas og Sandra.](@assets/about-bjerk.jpg 'Fra venstre: Christina, Thomas og Sandra.')
 
@@ -34,7 +34,7 @@ Vi kan ta en idé til et produkt folk kan ta i bruk eller hjelpe gjøre et produ
 bedre. Det som er fint hos oss er at vi har flere av de ressursene man trenger
 for å skape gode produkter.
 
-[Våre rådgivere](/contact) kan lede utvikling av produkter (produktledelse),
+[Våre rådgivere](/kontakt) kan lede utvikling av produkter (produktledelse),
 inkludert å forstå brukerne, hva som gir effekt og hva man bør gjøre først og
 sist. Rådgiverne i Bjerk kan både produkt- og prosjektledelse, og er glad i
 metoder, prinsipper og løsninger som gir mest innvirkning, slik som [Design
@@ -63,8 +63,8 @@ prat om hvordan vi jobber, hva du vil oppnå og hvordan vi passer sammen.
 Etter en prat tar vi gjerne et møte, eller enda bedre, en gratis workshop hvor
 vi går dypere inn i behovet, produktet og visjonen.
 
-- [Snakk med en av våre rådgivere](/contact)
-- [Les artikkelen vår om hvordan vi jobber](/articles/2023/jobbe-med-bjerk)
+- [Snakk med en av våre rådgivere](/kontakt)
+- [Les artikkelen vår om hvordan vi jobber](/artikler/2023/jobbe-med-bjerk)
 
 Aller helst liker vi å ha delte kanaler på Slack eller Teams, slik at vi kan
 snakke sammen når ting oppstår. Om det ikke passer organisasjonen vi jobber

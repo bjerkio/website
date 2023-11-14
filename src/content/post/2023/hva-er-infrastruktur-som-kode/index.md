@@ -137,6 +137,6 @@ Discord-server][discord]. Her finner du de fleste av oss i Bjerk!
 [import-pulumi]: https://www.pulumi.com/docs/reference/cli/pulumi_import/
 [import-terraform]:
   https://developer.hashicorp.com/terraform/language/state/import
-[våre rådgivere]: https://bjerk.io/contact
+[våre rådgivere]: https://bjerk.io/kontakt
 [pug]: https://www.meetup.com/oslo-pulumi-user-group/
 [discord]: https://discord.gg/v6uUBFxXNf

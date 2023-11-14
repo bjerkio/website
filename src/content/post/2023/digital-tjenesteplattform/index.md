@@ -103,9 +103,9 @@ mest mulig effekt og verdi. Med konseptet digitale tjenesteplattformer kan vi ta
 i bruk nye digitale produkter og teknologier tidligere, senke terskelen for
 innovasjon og skape nye muligheter for samarbeid og verdiskapning.
 
-[Rådgiverne i Bjerk][rådgivere] kan hjelpe deg med å sette i gang med å skape en
+[Rådgiverne i Bjerk][kontakt] kan hjelpe deg med å sette i gang med å skape en
 digital tjenesteplattform. Bruk oss gjerne for å finne ut av hva du trenger,
 hvilken strategi du skal ha for å implementere det, eller om det gir mening for
 deg å gjøre det.
 
-[rådgivere]: /contact
+[kontakt]: /kontakt

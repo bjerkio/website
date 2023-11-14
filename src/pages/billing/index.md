@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/page.astro'
 title: Billing Information for Bjerk
-path: /about
+path: /billing
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
   vi transformert hvordan folk lærer og jobber.
