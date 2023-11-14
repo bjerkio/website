@@ -20,7 +20,7 @@ kan digitale tjenesteplattformer spille en sentral rolle. <br />La oss dykke inn
 i det!**
 
 **Digitale tjenesteplattformer** eller _kjernesystemer_ er skreddersydde
-digitale produkter bygget rundt sentrale data rundt et emne eller virksomhet.
+digitale produkter bygget rundt sentrale data for et emne eller virksomhet.
 Målet er som regel å gjøre data tilgjengelig samt bygge et fundament for
 koblinger til og mellom andre systemer – både internt og eksternt.
 
@@ -49,7 +49,7 @@ hverandre, og det gjør de med utgangspunkt i den digitale tjenesteplattformen.
 Jeg skal starte med en antagelse; For å få nødvendig gjennomslagskraft kan man
 ikke kjøpe kjernesystem som man krangler om å gjøre bedre eller mer tilpasset
 egne behov – man må lage eget. For å fortsette å skape verdi må vi kunne endre
-oss, og det er spesielt derfor jeg tror det er viktig at man starter å lage
+oss, og det er spesielt derfor jeg tror det er viktig at man starter å lage en
 digital tjenesteplattform så tidlig som mulig.
 
 Det finnes gode produkter der ute som løser vanlige problem nesten alle
@@ -57,18 +57,18 @@ virksomheter har. Kalender, kundekontakt, chatteprogram, osv. En digital
 tjenesteplattform gjør at vi kan nyte godene av å ha et skreddersydd system
 samtidig som vi kan ta i bruk de beste arbeidsverktøyene som er tilgjengelige på
 markedet. Vi kan bytte ut slike verktøy uten å tape vesentlig data siden den
-ligger trygt i tjenesteplattformen, ikke minst eksperimenterer med nye ting.
+ligger trygt i tjenesteplattformen, og ikke minst eksperimenterer med nye ting.
 
 ## Bruksområder
 
 Om vi tar utgangspunkt i en eiendomsforvalter, så kan en digital
 tjenesteplattform være stedet man lagrer informasjon om eiendommene,
 vedlikeholdsplaner og kontrakter. Allikevel er det kanskje et forvaltningssystem
-hvor eiendommene og vedlikeholdet styret og kontraktes legges inn. Selv om alle
+hvor eiendommene og vedlikeholdet styres og kontrakter legges inn. Selv om alle
 i selskapet jobber daglig i det ene forvaltningssystemet, så trenger det ikke å
 være den primære kilden til all data. Om vi ser for oss at man i fremtiden har
 lyst til å bytte ut forvaltningssystemet, kan man potensielt jobbe i begge
-systemer parallelt, men med felles digital tjenesteplattform.
+systemer parallelt, men en felles digital tjenesteplattform.
 
 Med flere forvaltningssystemer, som begge har to-veis integrasjoner, skaper det
 muligheter på flere måter. Et annet eksempel er kanskje et regnskapsbyrå, som i
@@ -81,14 +81,14 @@ _kundebilde_ gjøres kanskje i et kundehåndteringssystem.
 ## Hvordan implementere det?
 
 Jeg tror vi bør være litt pragmatiske. En digital tjenesteplattform er ikke et
-veldig spesifikk produkt, mitt perspektiv er at det kun sier noe om intensjonen
-og ikke hvordan. Med andre ord, så ville jeg anbefalt en mindre bedrift å starte
-med noe enkelt, slik som å kun ha en database, kanskje et oppsett basert på
-[Sanity][] eller noe som [Airtable][] kanskje.
+veldig spesifikt produkt, og mitt perspektiv er at det kun sier noe om
+intensjonen og ikke hvordan. Med andre ord, så ville jeg anbefalt om man ikke
+kjenner sitt behov å starte med noe enkelt, slik som å kun ha en database,
+kanskje et oppsett basert på [Sanity][] eller kanskje noe som [Airtable][].
 
 I en bedrift med større behov, som kanskje har eller vil få flere tjenester som
 trenger kjernedataen, så vil det være naturlig å ha et API av noe slag. Da blir
-det viktigere avklarte regler for hvordan vi henter dataen, med tilgangsstyring
+det viktigere å avklare regler for hvordan vi henter dataen, med tilgangsstyring
 og det hele.
 
 [sanity]: https://www.sanity.io/
@@ -96,7 +96,7 @@ og det hele.
 
 ## Oppsummert
 
-Digitale tjenesteplattformer er et nøkkelkomponent i moderne
+Digitale tjenesteplattformer er en nøkkelkomponent i moderne
 virksomhetsstrategier. Dette handler først og fremst om den visjonære
 tilnærmingen en bedrift har til hvordan data og systemer skal utnyttes for å få
 mest mulig effekt og verdi. Med konseptet digitale tjenesteplattformer kan vi ta
