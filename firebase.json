@@ -49,7 +49,7 @@
         },
         {
           "source": "/about",
-          "destination": "/about",
+          "destination": "/om",
           "type": 301
         }
       ],
