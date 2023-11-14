@@ -39,7 +39,7 @@ IT-driftspersonell).
 [k8s]: https://kubernetes.io/
 [devops]: https://en.wikipedia.org/wiki/DevOps
 
-## Verktøyene
+## Verktøyene for infrastruktur som kode
 
 Det finnes mange verktøy. Det første verktøyet som tok verden med storm var nok
 Chef, som ble lansert i 2009. Siden den gang har det kommet mange verktøy, slik
