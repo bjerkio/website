@@ -2,7 +2,7 @@
 layout: '@layouts/page.astro'
 title: 'Lær mer om Bjerk – Produkutvikling og -ledelse'
 headline: Produktutvikling og -ledelse
-path: /tjenester/produktutvikling-og-ledelse
+path: /tjenester/produktledelse
 description:
   Det er mye å tenke på når du skal utvikle et produkt. I Bjerk har vi et
   mangfoldig fagmiljø med utviklere og produktledere som bistår deg fra idé til
