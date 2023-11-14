@@ -46,6 +46,11 @@
           "source": "/contact",
           "destination": "/kontakt",
           "type": 301
+        },
+        {
+          "source": "/about",
+          "destination": "/about",
+          "type": 301
         }
       ],
       "headers": [
