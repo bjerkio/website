@@ -13,6 +13,31 @@
       "cleanUrls": true,
       "headers": [
         {
+          "source": "**/*",
+          "headers": [
+            {
+              "key": "Content-Security-Policy",
+              "value": "script-src 'self'"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "origin"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=(), camera=()"
+            }
+          ]
+        },
+        {
           "source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|woff|woff2|ttf|webp|avif)",
           "headers": [
             {
