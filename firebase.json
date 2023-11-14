@@ -11,6 +11,43 @@
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "cleanUrls": true,
+      "redirects": [
+        {
+          "source": "/articles/:slug*",
+          "destination": "/artikler/:slug",
+          "type": 301
+        },
+        {
+          "source": "/events/:slug*",
+          "destination": "/arrangementer/:slug",
+          "type": 301
+        },
+        {
+          "source": "/work/:slug*",
+          "destination": "/arbeid/:slug",
+          "type": 301
+        },
+        {
+          "source": "/privacy",
+          "destination": "/personvern",
+          "type": 301
+        },
+        {
+          "source": "/terms",
+          "destination": "/vilkar",
+          "type": 301
+        },
+        {
+          "source": "/about/billing",
+          "destination": "/billing",
+          "type": 301
+        },
+        {
+          "source": "/contact",
+          "destination": "/kontakt",
+          "type": 301
+        }
+      ],
       "headers": [
         {
           "source": "**/*",

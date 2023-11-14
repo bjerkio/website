@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/page.astro'
-path: /terms
+path: /vilkar
 title: Alminnelige betingelser for Bjerk AS
 description:
   Se detaljene i de alminnelige betingelsene for Bjerk AS. Lær om våre

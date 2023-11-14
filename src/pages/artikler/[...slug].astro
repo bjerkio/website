@@ -39,7 +39,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
   type="article"
   articleAuthor={authorNames}
   articlePublishDate={entry.data.date}
-  path={`/articles/${entry.slug}`}
+  path={`/artikler/${entry.slug}`}
   schema={{
     '@type': 'NewsArticle',
     '@context': 'http://schema.org',
@@ -59,7 +59,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
     // TODO: inLanguage: 'nb-NO',
     isAccessibleForFree: true,
     // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
-    mainEntityOfPage: makeUrl(`/articles/${entry.slug}`),
+    mainEntityOfPage: makeUrl(`/artikler/${entry.slug}`),
     publisher: {
       '@context': 'https://schema.org',
       '@type': 'ProfessionalService',
