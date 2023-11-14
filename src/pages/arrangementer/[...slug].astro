@@ -1,9 +1,8 @@
 ---
 import { getCollection, getEntries } from 'astro:content';
 import Layout from '@layouts/default.astro';
-import { format } from 'date-fns';
-import nb from 'date-fns/locale/nb/index.js';
 import { Image } from 'astro:assets';
+import { formatDateRange } from 'src/utils';
 
 export async function getStaticPaths() {
   const eventEntries = await getCollection('event');
@@ -86,11 +85,7 @@ const address = [
   entry.data.location.address.addressCountry,
 ].join(', ');
 
-const formattedDateFrom =
-  format(startDate, 'EEEE d. MMMM', { locale: nb }) +
-  ' kl. ' +
-  format(startDate, 'HH.mm');
-const formattedDateTo = format(entry.data.endDate, 'HH.mm');
+const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
 ---
 
 <Layout
@@ -104,9 +99,9 @@ const formattedDateTo = format(entry.data.endDate, 'HH.mm');
       <h1 class="title">{headline}</h1>
       <p class="metadata">
         <strong>Tid:</strong>
-        {' '}<time datetime={startDate.toISOString()}>{formattedDateFrom}</time>
+        {' '}<time datetime={startDate.toISOString()}>{dateFrom}</time>
          til <time datetime={endDate.toISOString()}>
-          {formattedDateTo}
+          {dateTo}
         </time><br />
         <strong>Sted:</strong>{' '}
         {address}
