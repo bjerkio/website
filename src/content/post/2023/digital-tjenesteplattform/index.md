@@ -98,7 +98,7 @@ og det hele.
 
 Digitale tjenesteplattformer er et nøkkelkomponent i moderne
 virksomhetsstrategier. Dette handler først og fremst om den visjonære
-tilnærmingen en bedrift har til hvrodan data og systemer skal utnyttes for å få
+tilnærmingen en bedrift har til hvordan data og systemer skal utnyttes for å få
 mest mulig effekt og verdi. Med konseptet digitale tjenesteplattformer kan vi ta
 i bruk nye digitale produkter og teknologier tidligere, senke terskelen for
 innovasjon og skape nye muligheter for samarbeid og verdiskapning.
