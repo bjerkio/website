@@ -47,11 +47,7 @@ export function formatDateRange(
   const showYearOnDateFrom = !isSameYear(dateFrom, dateTo);
   const showYearOnDateTo =
     showYearOnDateFrom || !isSameYear(dateFrom, new Date());
-  const formattedDateFrom = formatDate(
-    dateFrom,
-    withTime,
-    showYearOnDateFrom,
-  );
+  const formattedDateFrom = formatDate(dateFrom, withTime, showYearOnDateFrom);
   const formattedDateTo = formatDateToString(
     dateFrom,
     dateTo,
