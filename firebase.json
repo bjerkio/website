@@ -29,7 +29,7 @@
             },
             {
               "key": "Referrer-Policy",
-              "value": "origin"
+              "value": "strict-origin-when-cross-origin"
             },
             {
               "key": "Permissions-Policy",
