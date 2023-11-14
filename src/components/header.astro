@@ -1,7 +1,19 @@
 ---
-import MobileNav from "./mobile-nav.astro";
-import Logo from "./logo.astro";
+import MobileNav from './mobile-nav.astro';
+import Logo from './logo.astro';
+import Megaphone from '~icons/ph/megaphone';
 ---
+
+<div class="broadcast">
+  <div class="broadcast-content">
+    <Megaphone class="icon" />
+    <p>
+      Vi bryr oss om <strong>universell utforming</strong>, lær om det og spis
+      frokost med oss 30. november.
+      <a href="/arrangementer/2023-11-30/frokost">Les mer →</a>
+    </p>
+  </div>
+</div>
 
 <header>
   <a class="logo" aria-label="Gå til forsiden" href="/">
@@ -82,5 +94,28 @@ import Logo from "./logo.astro";
     .mobile-nav {
       display: block;
     }
+  }
+
+  .broadcast {
+    width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  .broadcast .icon {
+    min-width: 1.5rem;
+    color: hsl(var(--blue-base) 20%);
+  }
+
+  .broadcast > .broadcast-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: hsl(var(--blue-base) 90%);
+    padding-inline: 1rem;
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+
+    color: hsl(var(--blue-base) 20%);
+    font-size: 0.9rem;
   }
 </style>
