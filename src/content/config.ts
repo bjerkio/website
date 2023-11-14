@@ -113,6 +113,7 @@ const post = defineCollection({
 const eventOffer = z.object({
   url: z.string(),
   price: z.string(),
+  priceCurrency: z.string().default('NOK'),
   availability: z.enum([
     'https://schema.org/InStock',
     'https://schema.org/SoldOut',
