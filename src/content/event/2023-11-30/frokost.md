@@ -7,17 +7,17 @@ description:
   Den 30. november inviterer Bjerk til en frokost og lærerik dialog med
   Christian Thon fra Norges Blindeforbund. Opplev hvordan universell utforming
   skaper broer i den digitale verden. Nyt godt selskap og engasjerende samtaler
-  fra kl. 08:00 til 09:30 i Akersgata 51, Oslo. Kom for nettverksbygging med
+  fra kl. 07:45 til 09:30 i Akersgata 51, Oslo. Kom for nettverksbygging med
   substans.
 socialMediaTitle: 🌐 Universell Utforming og Frokost @Bjerk | 30. November 08:00
 socialMediaDescription:
   Lær om universell utforming hos Bjerk, 30. November! Bli med Christian Thon
   forteller hvordan vi gjør teknologi tilgjengelig for alle. Engasjer deg, bygg
-  nettverk, og start dagen med noe meningsfullt fra kl. 08:00 til 09:30. Vi ses
+  nettverk, og start dagen med noe meningsfullt fra kl. 07:45 til 09:30. Vi ses
   i Akersgata 51, Oslo – ta steget mot en inkluderende fremtid.
 image: ./frokost-2023.png
 startDate: 2023-11-30 07:45:00 +1
-endDate: 2023-11-30 09:10:00 +1
+endDate: 2023-11-30 09:30:00 +1
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 eventStatus: https://schema.org/EventScheduled
 offers:
