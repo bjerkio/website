@@ -29,16 +29,55 @@ rettet, slettet eller supplert.
 
 Krav fra den registrerte skal besvares kostnadsfritt og senest innen 30 dager.
 
-## Google
+Du kan se når personvernerklæringen oppdateres på [GitHub][github-privacy].
 
-Vi bruker Google Workspace og Google Cloud Platform. Vi bruker Google Forms til
-påmelding av arrangementer. Vi lagrer fult navn, selskapsnavn og e-postadresse
-som brukes for å sende ut påminnelser og oppfølginger. Informasjonen slettes
-senest 30 dager etter endt arrangement.
+[github-privacy]:
+  https://github.com/bjerkio/website/blob/main/src/pages/personvern/index.md
+
+## Arrangementer
+
+Vi bruker Google Forms til påmelding av arrangementer. Vi lagrer fult navn,
+selskapsnavn og e-postadresse som brukes for å sende ut påminnelser og
+oppfølginger. Informasjonen slettes senest 30 dager etter endt arrangement.
 
 Ved eksplisitt samtykke, lagres informasjonen til senere oppfølgning av Bjerk.
 Du kan alltid be om å bli slettet. Dersom vi ikke har vært i kontakt med deg på
 1 år, slettes opplysningene.
+
+Du kan lese mer om [Googles personvern på deres nettsted][google-terms].
+
+[google-terms]: https://policies.google.com/
+
+## Slack
+
+Vi bruker Slack primært til intern kommunikasjon, alle ansatte i Bjerk har
+tilgang til Slack. Vi bruker også Slack til å kommunisere med kunder og
+samarbeidspartnere. Vi lagrer navn, profilbilde, e-postadresse og telefonnummer
+i Slack.
+
+Når vi kobler sammen med [Slack Connect][slack-connect] vil vi få tilgang til
+profildetaljer som deles med de personene som vi kommuniserer med eller deler
+kanal med.
+
+Du kan lese mer om [Slacks personvern på deres nettsted][slack-terms].
+
+[slack-connect]: https://slack.com/connect
+[slack-terms]: https://slack.com/trust/privacy/privacy-policy
+
+## Discord
+
+Vi bruker Discord til å kommunisere med mennesker som er interessert eller
+tilknyttet Bjerk i en eller annen form. Discord brukes til mye forskjellig,
+blant annet spillkvelder og sosiale arrangementer. Vi lagrer navn, profilbilde,
+e-postadresse og telefonnummer i Discord.
+
+Det er Discord som er ansvarlig for dine personopplysninger. Bjerk får kun
+tilgang til dine offentlige opplysninger. Opplysningene er i utgangspunktet et
+kallenavn.
+
+Du kan lese mer om [Discords personvern på deres nettsted][discord-terms].
+
+[discord-terms]: https://discord.com/privacy
 
 ## Kontakt oss
 
