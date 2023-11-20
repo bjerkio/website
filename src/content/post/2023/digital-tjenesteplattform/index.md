@@ -1,7 +1,7 @@
 ---
 title: 'Hva er en digital tjenesteplattform?'
 description:
-  Digital tjenesteplattformer er skreddersydde digitale produkter bygget rundt
+  Digitale tjenesteplattformer er skreddersydde digitale produkter bygget rundt
   sentrale data. Målet er ofte å gjøre data tilgjengelig og å ha et fundament
   for koblinger til og mellom andre systemer, både internt og eksternt
 socialMediaTitle: 'Hva er egentlig en digital tjenesteplattform? 🤔'
