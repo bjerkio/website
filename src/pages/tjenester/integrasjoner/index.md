@@ -32,8 +32,11 @@ og ressurser enkelt kan bevege seg fra en øy til en annen. Dette gir deg
 muligheten til å spare tid og ressurser, fordi informasjon og funksjonalitet kan
 deles på tvers av systemene, noe som resulterer i mer effektivitet og økt verdi.
 
-Se noen eksempler på integrasjoner vi har skapt her: [ABAX -
-Procore][kundecase-1]
+Se noen eksempler på integrasjoner vi har skapt her:
+
+[ABAX - Procore][kundecase-1]
+
+![Abstrakt maleri i nyanser av blå, skapt av Anni Roenkae](pexels-anni-roenkae.jpg)
 
 Kort fortalt vil integrerte systemer hjelpe deg med:
 
@@ -68,10 +71,10 @@ Eksempler på systemer:
 
 ## Har du en idé eller er du nysgjerrig på hvordan integrasjoner kan gjøre hverdagen enklere for deg?
 
-Vi tar gjerne en prat med deg! [Ta kontak med oss][ta-kontakt] for en
+Vi tar gjerne en prat med deg! [Ta kontakt med oss][ta-kontakt] for en
 uforpliktende prat, så hjelper vi deg med å kartlegge mulighetene.
 
-[ta-kontakt]: https://bjerk.io/contact-us
+[ta-kontakt]: https://bjerk.io/kontakt
 
 ## Trenger du en integrasjonspartner?
 
