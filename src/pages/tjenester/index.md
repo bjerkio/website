@@ -24,13 +24,13 @@ lage digitale produkter, så kan vi skape positive effekter for mennesker.
 - [teknologiledelse][itm]
 - [Universell utforming][uu]
 
-[pm]: https://bjerk.io/tjenester/produtvikling-og-ledelse
+[pm]: https://bjerk.io/tjenester/produktledelse
 [plattform]: #
 [dev]: #
-[ux]: #
+[ux]: https://bjerk.io/tjenester/brukeropplevelse
 [intg]: https://bjerk.io/tjenester/integrasjoner
 [itm]: #
-[uu]: https://bjerk.io/tjenester/universal-utforming
+[uu]: https://bjerk.io/tjenester/universell-utforming
 
 ## Hva gjør Bjerk?
 

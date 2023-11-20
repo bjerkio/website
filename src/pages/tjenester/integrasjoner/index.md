@@ -36,7 +36,7 @@ Se noen eksempler på integrasjoner vi har skapt her:
 
 [ABAX - Procore][kundecase-1]
 
-![Abstrakt maleri i nyanser av blå, skapt av Anni Roenkae](pexels-anni-roenkae.jpg)
+![Abstrakt maleri i nyanser av blå, skapt av Anni Roenkae](./pexels-anni-roenkae.jpg)
 
 Kort fortalt vil integrerte systemer hjelpe deg med:
 
