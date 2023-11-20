@@ -8,7 +8,7 @@ description:
   engasjerende samtaler fra kl. 07:45 til 09:30 i Akersgata 51, Oslo.
 socialMediaTitle: 📦 Frokost med Cardboard og Bjerk | 17. Januar 08:00
 startDate: 2024-01-17 07:45:00 +1
-endDate: 2023-01-17 09:30:00 +1
+endDate: 2024-01-17 09:30:00 +1
 performer:
   - type: Organization
     name: Bjerk
