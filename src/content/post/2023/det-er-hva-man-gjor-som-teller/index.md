@@ -14,33 +14,50 @@ gjør at man får jobben, blir forfremmet, får mer ansvar og høyere lønn. Det
 viktig, men ikke viktigst. Det som er viktigst er hva man gjør med det man
 kan.**
 
-Ikke misforstå meg, det er en balanse her. Det er uten tvil sentralt å ha
-kompetanse og erfaring. Det å være åpen for og ha evnen til å lære nye ting er
-minst like viktig som å ha kompetansen. Det er selvfølgelig kombinasjonen som er
-suksessfaktoren, men ber du meg om å sette det på spissen – så er hva man gjør
-med det man kan som er viktigst.
+Det å være åpen for og ha evnen til å lære nye ting er minst like viktig som å
+ha kompetansen i seg selv. Det er kombinasjonen av disse elementene som skaper
+suksess, men ber du meg om å sette det på spissen – så er hva man gjør med det
+man kan som er viktigst.
 
-Jeg mener det er viktig å lage kulturer hvor man først og fremst utretter ting,
-og sentralt er hvordan handling kobles til kunnskap og innsikt for å skape
-meningsfull endring. Andy Grove (tidligere CEO i Intel), som for mange kjent for
-å ha [skapt fundamentet som ble OKR-metoden (Objectives and Key
-Results)][andy-about-okr] la stor vekt på gjennomføringskraft. Dette skulle få
-spesielt stor effekt når Intel gikk fra minnechips til mikroprosessorer på
-1980-tallet, det reddet selskapet. Her til lands kjenner de fleste til Petter
-Stordalen, som på mange måter har tatt eierskap til ordet gjennomføringskraft.
-Petter mener den [viktigste nøkkelen til suksess er systematisk og hard
-øving][petter-podcast], og det som gjør deg best er nettopp gjennomføringskraft.
+Andy Grove (tidligere CEO i Intel), kjent for å ha [skapt fundamentet som ble
+OKR-metoden (Objectives and Key Results)][andy-about-okr], la stor vekt på
+gjennomføringskraft. Dette skulle bli kritisk når Intel gikk fra minnechips til
+mikroprosessorer på 1980-tallet, det reddet selskapet. I norge har vi Petter
+Stordalen, som mener at den [viktigste nøkkelen til suksess er systematisk og
+hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss best.
 
 [andy-about-okr]: https://www.youtube.com/watch?v=1ht_1VAF6ik
 [petter-podcast]:
   https://open.spotify.com/episode/2fqNNyRhPYDFduRV8vTS6y?si=970f5688cd314ddc
 
-Personlig elsker jeg å sette sammen team med mennesker som har forskjellige
-perspektiver, under en felles kraft av meningsfulle mål og oppdrag. Grunnen for
-at vi i Bjerk lykkes med å forbedre hvordan mennesker kommuniserer, lærer,
-tenker og jobber handler om hvordan vi omsetter kompetanse til handling.
+I Bjerk lever vi etter den filosofien. Grunnen for at vi i Bjerk lykkes med å
+forbedre hvordan mennesker kommuniserer, lærer, tenker og jobber handler om
+hvordan vi omsetter kompetanse til handling. Selv motiveres jeg av å skape
+kulturer hvor det å utrette ting er i sentrum, og hvor handling kobles til
+kunnskap og innsikt for å skape meningsfull positiv endring.
 
 ## Kulturer som fremmer handling
+
+Jeg er overbevist om at de beste teamene i verden er ikke satt sammen av folk
+med den mest relevante kompetansen, men den er komponert av mange forskjellige
+mennesker med forskjellig bakgrunn og erfaring. Jeg tror interaktivitet med
+andre øker egen evne til handling. Det åpenbare er gjennom kunnskapsdeling, men
+forskning viser også at mangfold gjør team mer innovative. Jeg tror det er
+spesielt når forskjellige perspektiver møtes det skjer magi, og enda mer når
+forskjellige mennesker prøver å forstå hverandre.
+
+Like barn leker altså _ikke_ best.
+
+## Et poeng i rekruttering
+
+Miriam Moe, skrev nylig en artikkel i Kode24, hvor hun skrev at hun møter avslag
+i prosessen med å søke seg jobb. Hun skriver at hele speiler et større problem;
+«Nemlig arbeidsmarkedets rigiditet og systematiske utestengning av nyutdannede
+som meg. Det vitner om en underliggende strukturell utfordring som trenger
+oppmerksomhet.»
+
+Jeg tror det er et poeng at flere bør omstille seg til å se etter hva folk har
+gjort med det de kan og hvilke perspektiver potensielle ansatte kan bidra med.
 
 <!--Jeg tror det gir mening å begynne historien med å reflektere over hva som har
 vært, altså hva som jeg oppfatter er det dagligdagse, kjedelige, etablerte og
