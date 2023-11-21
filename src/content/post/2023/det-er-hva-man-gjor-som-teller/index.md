@@ -51,13 +51,14 @@ Like barn leker altså _ikke_ best.
 ## Et poeng i rekruttering
 
 Miriam Moe, skrev nylig en artikkel i Kode24, hvor hun skrev at hun møter avslag
-i prosessen med å søke seg jobb. Hun skriver at hele speiler et større problem;
+i prosessen med å søke seg jobb. Hun skriver at det speiler et større problem;
 «Nemlig arbeidsmarkedets rigiditet og systematiske utestengning av nyutdannede
 som meg. Det vitner om en underliggende strukturell utfordring som trenger
 oppmerksomhet.»
 
 Jeg tror det er et poeng at flere bør omstille seg til å se etter hva folk har
-gjort med det de kan og hvilke perspektiver potensielle ansatte kan bidra med.
+gjort med det de kan og hvilke perspektiver potensielle nye ansatte kan bidra
+med.
 
 <!--Jeg tror det gir mening å begynne historien med å reflektere over hva som har
 vært, altså hva som jeg oppfatter er det dagligdagse, kjedelige, etablerte og
