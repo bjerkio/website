@@ -36,6 +36,8 @@ hvordan vi omsetter kompetanse til handling. Selv motiveres jeg av å skape
 kulturer hvor det å utrette ting er i sentrum, og hvor handling kobles til
 kunnskap og innsikt for å skape meningsfull positiv endring.
 
+<!-- "gjennomføringsevne" -->
+
 ## Kulturer som fremmer handling
 
 Jeg er overbevist om at de beste teamene i verden er ikke satt sammen av folk
