@@ -9,8 +9,8 @@ author:
   - simenandre
 ---
 
-**Det er en slags allment akseptert sannhet at kompetanse og erfaring er det som
-gjør at man får jobben, blir forfremmet, får mer ansvar og høyere lønn. Det er
+**Det er en allment akseptert sannhet at kompetanse og erfaring er det som gjør
+at man får jobben, blir forfremmet, får mer ansvar og høyere lønn. Det er
 viktig, men ikke viktigst. Det som er viktigst er hva man gjør med det man
 kan.**
 
