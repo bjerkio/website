@@ -19,10 +19,12 @@ ha kompetansen i seg selv. Det er kombinasjonen av disse elementene som skaper
 suksess, men ber du meg om å sette det på spissen – så er hva man gjør med det
 man kan som er viktigst.
 
+## Evnen til å gjennomføre
+
 Andy Grove (tidligere CEO i Intel), kjent for å ha [skapt fundamentet som ble
 OKR-metoden (Objectives and Key Results)][andy-about-okr], la stor vekt på
 gjennomføringskraft. Dette skulle bli kritisk når Intel gikk fra minnechips til
-mikroprosessorer på 1980-tallet, det reddet selskapet. I norge har vi Petter
+mikroprosessorer på 1980-tallet, det reddet selskapet. I Norge har vi Petter
 Stordalen, som mener at den [viktigste nøkkelen til suksess er systematisk og
 hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss best.
 
@@ -32,10 +34,12 @@ hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss be
 
 I Bjerk lever vi etter den filosofien. Grunnen for at vi i Bjerk lykkes med å
 forbedre hvordan mennesker kommuniserer, lærer, tenker og jobber handler om
-hvordan vi omsetter kompetanse til handling. Gjennomføringsevne i kombinasjon av
-et mangfold av perspektiver tror vi er nøkkelen til å skape de beste løsningene.
-Jeg er nok ikke alene om å bli motivert av å skape en kultur hvor vi oppnår
-meningsfull, positiv, påvirkning og effekt.
+hvordan vi omsetter kompetanse til handling.
+
+Gjennomføringsevne i kombinasjon av et mangfold av perspektiver tror vi er
+nøkkelen til å skape de beste løsningene. Jeg er nok ikke alene om å bli
+motivert av å skape en kultur hvor vi oppnår meningsfull, positiv, påvirkning og
+effekt.
 
 ## Kulturer som fremmer handling
 
