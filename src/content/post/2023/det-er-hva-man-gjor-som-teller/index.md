@@ -59,8 +59,15 @@ av forskjellighet, kan utnytte dynamikken til å drive innovasjon og oppnå
 eksepsjonelle resultater.
 
 Det handler ikke bare om å ha alle de riktige svarene, men om å stille de
-riktige spørsmålene og utforske svar sammen. Som leder føler jeg et ansvar for å
-lage et [miljø der idéer skapes][der-ideer-skapes], som vokser sammen.
+riktige spørsmålene og utforske svar sammen.
+
+<!--Som leder føler jeg et ansvar for å lage et [miljø der idéer
+skapes][der-ideer-skapes], hvor mennesker vokser sammen.
+
+Simon Sinek, forfatter og foredragsholder inne ledelse, har et sitat som jeg
+tenker mye på «If your actions inspire others to dream more, learn more, do more
+and become more, you are a leader.».
 
 [der-ideer-skapes]:
   https://www.linkedin.com/pulse/der-id%25C3%25A9er-skapes-simen-a-w-olsen/
+-->
