@@ -32,54 +32,31 @@ hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss be
 
 I Bjerk lever vi etter den filosofien. Grunnen for at vi i Bjerk lykkes med å
 forbedre hvordan mennesker kommuniserer, lærer, tenker og jobber handler om
-hvordan vi omsetter kompetanse til handling. Selv motiveres jeg av å skape
-kulturer hvor det å utrette ting er i sentrum, og hvor handling kobles til
-kunnskap og innsikt for å skape meningsfull positiv endring.
-
-<!-- "gjennomføringsevne" -->
+hvordan vi omsetter kompetanse til handling. Gjennomføringsevne i kombinasjon av
+et mangfold av perspektiver tror vi er nøkkelen til å skape de beste løsningene.
+Jeg er nok ikke alene om å bli motivert av å skape en kultur hvor vi oppnår
+meningsfull, positiv, påvirkning og effekt.
 
 ## Kulturer som fremmer handling
 
-Jeg er overbevist om at de beste teamene i verden er ikke satt sammen av folk
-med den mest relevante kompetansen, men den er komponert av mange forskjellige
-mennesker med forskjellig bakgrunn og erfaring. Jeg tror interaktivitet med
-andre øker egen evne til handling. Det åpenbare er gjennom kunnskapsdeling, men
-forskning viser også at mangfold gjør team mer innovative. Jeg tror det er
-spesielt når forskjellige perspektiver møtes det skjer magi, og enda mer når
-forskjellige mennesker prøver å forstå hverandre.
+De beste teamene i verden er ikke satt sammen av folk med den mest relevante
+kompetansen, men de er komponert av mange forskjellige mennesker med variert
+bakgrunn og erfaring. Jeg tror interaktivitet med andre øker egen evne til
+handling. Det åpenbare er gjennom kunnskapsdeling, men forskning viser også at
+mangfold gjør team mer innovative. Jeg tror det er spesielt når forskjellige
+perspektiver møtes det skjer magi, og enda mer når forskjellige mennesker prøver
+å forstå hverandre.
 
-Like barn leker altså _ikke_ best.
+Det er viktig å anerkjenne verdien av kommunikasjonsferdigheter, ydmykhet og
+empati. Effektive team krever medlemmer med evnen til å lytte og tilpasse seg.
+Dette skaper et miljø hvor ideer kan vokse og utvikle seg, fri fra fordommer
+eller antakelser. Team som mestrer kunsten å kommunisere og samarbeide på tvers
+av forskjellighet, kan utnytte dynamikken til å drive innovasjon og oppnå
+eksepsjonelle resultater.
 
-## Et poeng i rekruttering
+Det handler ikke bare om å ha alle de riktige svarene, men om å stille de
+riktige spørsmålene og utforske svar sammen. Som leder føler jeg et ansvar for å
+lage et [miljø der idéer skapes][der-ideer-skapes], som vokser sammen.
 
-Miriam Moe, skrev nylig en artikkel i Kode24, hvor hun skrev at hun møter avslag
-i prosessen med å søke seg jobb. Hun skriver at det speiler et større problem;
-«Nemlig arbeidsmarkedets rigiditet og systematiske utestengning av nyutdannede
-som meg. Det vitner om en underliggende strukturell utfordring som trenger
-oppmerksomhet.»
-
-Jeg tror det er et poeng at flere bør omstille seg til å se etter hva folk har
-gjort med det de kan og hvilke perspektiver potensielle nye ansatte kan bidra
-med.
-
-<!--Jeg tror det gir mening å begynne historien med å reflektere over hva som har
-vært, altså hva som jeg oppfatter er det dagligdagse, kjedelige, etablerte og
-hvordan jeg mener vi bør gjøre ting litt annerledes. Gjennom årene jeg har skapt
-samlingspunkter, vært arbeidsgiver eller frivillig, har jeg sett hvor viktig det
-er med ekspertise, kompetanse eller erfaring er.
-
-Det er tradisjonelt sett kompetanse som gjør at du blir forfremmet, får høyere
-lønn, får mer ansvar eller får jobben i utgangspunktet. Jeg er enig at det er
-utrolig viktig, og kanskje like viktig er det åpen man er til å lære nye ting.
-Allikevel mener jeg det er noe som står høyest her, som ikke er artikulert godt
-nok. Jeg mener at det er ikke viktigst hva du kan eller hvor flink du er til å
-lære, men hvor flink du er til å oversette det du kan til handling.
-
-Det er med andre ord viktigst hva du gjør, ikke hva du kan. Det er hva man gjør
-som teller. Jeg er ikke alene om å mene det, vi skal ikke lenger enn til Peter
-Stordalen og hans ord «gjennomføringskraft». Andy Grove, tidligere CEO i Intel,
-var også en sterk tilhenger.
-
-Alle i Bjerk er opptatt av å oppnå noe. Vi ønsker å utrette noe, skape noe som
-gjør verden til et bedre sted og forbedrer hvordan mennesker kommuniserer,
-lærer, tenker og jobber. For å lykkes med det er handling helt sentralt.-->
+[der-ideer-skapes]:
+  https://www.linkedin.com/pulse/der-id%25C3%25A9er-skapes-simen-a-w-olsen/
