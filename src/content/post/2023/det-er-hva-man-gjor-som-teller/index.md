@@ -18,14 +18,14 @@ author:
   - simenandre
 ---
 
-**Selv om det er allment akseptert at kompetanse og erfaring er det som gjør at
-en får jobber, forfremmelser, mer ansvar, og høyere lønn. Det er viktig, men
-ikke det viktigste. Det viktigste er hva man gjør med det man kan.**
+**Det er blitt allment akseptert at kompetanse og erfaring er det som gjør at en
+får jobber, forfremmelser, mer ansvar, og høyere lønn. Det er viktig, men ikke
+det viktigste. Det viktigste er hva man gjør med det man kan.**
 
-Å være åpen og evne til å lære nye ting er like viktig som som å ha kompetansen
-i seg selv. Det er kombinasjonen av disse elementene som skaper suksess, men ber
-du meg om å sette det på spissen – så er hva man gjør med det en kan som er det
-viktigste.
+Å være åpen og ha evne til å lære nye ting er like viktig som som å ha
+kompetansen i seg selv. Det er kombinasjonen av disse som skaper suksess, men
+ber du meg om å sette det på spissen – så er hva man gjør med det en kan som er
+det viktigste.
 
 ## Evnen til å gjennomføre
 
@@ -40,7 +40,7 @@ hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss be
 [petter-podcast]:
   https://open.spotify.com/episode/2fqNNyRhPYDFduRV8vTS6y?si=970f5688cd314ddc
 
-I Bjerk føler vi denne filosofien. Grunnen for at vi i Bjerk lykkes med å
+I Bjerk følger vi denne filosofien. Grunnen for at vi i Bjerk lykkes med å
 forbedre hvordan mennesker kommuniserer, lærer, tenker og jobber handler om
 hvordan vi omsetter kompetanse til handling.
 
