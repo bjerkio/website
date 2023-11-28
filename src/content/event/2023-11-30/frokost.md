@@ -41,9 +41,12 @@ performer:
     image: ./christian-thon.jpeg
 ---
 
-Vi har dessverre ingen fler ledige plasser til dette eventet. Interessen har vært over all forventning, og det synes vi er utrolig gøy. Spesielt for et tema som er så viktig som universell utforming.  
+Vi har dessverre ingen fler ledige plasser til dette eventet. Interessen har
+vært over all forventning, og det synes vi er utrolig gøy. Spesielt for et tema
+som er så viktig som universell utforming.
 
-Vi planlegger allerede flere arrangementer. Om du ønsker å få med deg når det skjer noe mer hos Bjerk, så kan du [registerere deg her][sign-up] 🌳
+Vi planlegger allerede flere arrangementer. Om du ønsker å få med deg når det
+skjer noe mer hos Bjerk, så kan du [registerere deg her][sign-up] 🌳
 
 ---
 
