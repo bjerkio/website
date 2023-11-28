@@ -2,16 +2,9 @@
 title: – Det er hva man gjør som teller
 socialMediaTitle: Hvordan utnytte din kunnskap for å lykkes? 💡🚀
 description:
-  Utforsk hvordan kombinasjonen av kompetanse, gjennomføringsevne og mangfold i
-  teamarbeid skaper suksess. Lær fra eksemplene til Andy Grove og Petter
-  Stordalen, og oppdag hvordan Bjerk implementerer disse prinsippene for å
-  forbedre kommunikasjon og innovasjon.
-socialMediaDescription:
-  Dykk inn i verdenen av effektivt teamarbeid og innovasjon. Oppdag hvordan
-  riktig kombinasjon av kompetanse, gjennomføringskraft og mangfold kan
-  transformere din måte å jobbe på. Bli inspirert av Andy Grove og Petter
-  Stordalen, og se hvordan Bjerk praktiserer disse prinsippene for å skape
-  banebrytende resultater
+  Det viktigste er at man får effekt ut av det man gjør. Lær hvordan
+  kombinasjonen av kompetanse, gjennomføringsevne og mangfold i teamarbeid
+  skaper suksess.
 date: 2023-11-27T15:00:00
 image: ./2023-10-28-simen-a-w-olsen.jpg
 author:
