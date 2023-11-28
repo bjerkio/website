@@ -1,6 +1,6 @@
 ---
 title: – Det er hva man gjør som teller
-socialMediaTitle: Hvordan utnytte din kunnskap for å lykkes? 💡🚀
+socialMediaTitle: – Det er hva man gjør som teller 💡🚀
 description:
   Det viktigste er at man får effekt ut av det man gjør. Lær hvordan
   kombinasjonen av kompetanse, gjennomføringsevne og mangfold i teamarbeid
