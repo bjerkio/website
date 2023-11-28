@@ -5,8 +5,8 @@
   "packageManager": "pnpm@8.11.0",
   "prettier": "@simenandre/prettier",
   "scripts": {
-    "format": "prettier --write .",
-    "lint": "prettier --check .",
+    "format": "biome format ./ --write && prettier --write src/content",
+    "lint": "biome lint --apply ./",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -24,6 +24,7 @@
     "unplugin-icons": "^0.17.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.4.0",
     "@iconify-json/ph": "^1.1.6",
     "@simenandre/prettier": "^5.0.0",
     "prettier": "^3.0.3",
