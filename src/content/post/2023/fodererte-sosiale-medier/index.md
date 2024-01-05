@@ -8,7 +8,7 @@ og man ikke låses til én plattform.'
 socialMediaDescription: 'Det er på tide å ta tilbake internettet fra de fire-fem store plattformene som
 bruker alle triksene i boken for å holde seg selv på toppen og høste størst
 mulig gevinst for sine investorer på bekostning av frihet.'
-date: 2023-11-22T14:00:00
+date: 2024-01-09T14:00:00
 image: ./network.jpg
 author:
   - brage-sekse-aarset
