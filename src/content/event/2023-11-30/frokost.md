@@ -24,7 +24,7 @@ offers:
   - url: https://forms.gle/oAyVtHDGAsp3WhH9A
     price: '0'
     priceCurrency: NOK
-    availability: https://schema.org/InStock
+    availability: https://schema.org/SoldOut
     validFrom: 2023-11-08T08:00+01:00
 performer:
   - type: Organization
@@ -39,6 +39,15 @@ performer:
     jobTitle: Universell utforming hos Norges Blindeforbund
     url: https://www.linkedin.com/in/christian-thon-07615285/
     image: ./christian-thon.jpeg
+---
+
+Vi har dessverre ingen fler ledige plasser til dette eventet. Interessen har
+vært over all forventning, og det synes vi er utrolig gøy. Spesielt for et tema
+som er så viktig som universell utforming.
+
+Vi planlegger allerede flere arrangementer. Om du ønsker å få med deg når det
+skjer noe mer hos Bjerk, så kan du [registerere deg her][sign-up] 🌳
+
 ---
 
 Bjerk inviterer deg til et frokostmøte med et kritisk og inspirerende fokus:
@@ -57,3 +66,5 @@ Vi ser frem til en opplysende, engasjerende og motiverende start på akkurat
 denne torsdagen. Ta med deg en kollega, en venn, en du vet bryr seg om teknologi
 og inkludering og bli inspirert av Christian og hans kunnskap og entusiasme for
 universell utforming.
+
+[sign-up]: https://forms.gle/tPyprBgHUM85nC1F9
