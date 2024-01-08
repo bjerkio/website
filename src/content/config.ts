@@ -19,7 +19,7 @@ const people = defineCollection({
         .default('employee'),
       socialMedia: z.array(
         z.object({
-          type: z.enum(['github', 'linkedin']),
+          type: z.enum(['github', 'linkedin', 'matrix']),
           url: z.string().url(),
         }),
       ),

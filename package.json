@@ -26,6 +26,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.4.0",
     "@iconify-json/ph": "^1.1.6",
+    "@iconify-json/tabler": "^1.1.103",
     "@simenandre/prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "schema-dts": "^1.1.2",
