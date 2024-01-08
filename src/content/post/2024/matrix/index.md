@@ -79,7 +79,7 @@ Matrix er ikke helt mainstream enda, men heldigvis er det er designet for å
 kunne kobles til andre kommunikasjonsplattformer for å gjøre overgangen lettere.
 Broer sender meldinger på tvers av tjenestene som om alle i chatten brukte samme
 kommunikasjonsplattform og fasiliterer da en myk overgang til (og evt. fra)
-Matrix.
+Matrix. Les mer om broer [her](https://matrix.org/ecosystem/bridges/).
 
 Bedrifter, foreninger og forbund er gode institusjoner for å drifte
 Matrix-tjenere, da de har en naturlig interesse av å koble folk sammen. Kanskje
