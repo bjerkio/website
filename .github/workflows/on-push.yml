@@ -71,3 +71,4 @@ jobs:
           channelId: live
           target: prod
           projectId: bjerk-io
+
