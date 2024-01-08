@@ -19,18 +19,17 @@ sterke ord på temaet vil jeg sterkt anbefale forfatter og aktivist Cory Doctoro
 sitt foredrag
 [An Audacious Plan to Halt the Internet’s Enshittification](https://youtu.be/rimtaSgGz_4?si=rzJPn9Pn1yYcQE2u).
 
-Dagens sosiale medieplattformer har bygget opp inngjerdede økosystemer som ikke
-snakker med andre systemer og gjør alt de kan for å holde fast på deg og ditt
-vennenettverk. Men det må faktisk ikke være slik. Mange kloke hoder har utviklet
-smarte løsninger for å motvirke monopolisering av kommunikasjonsteknologi og
-sikre interoperabilitet, altså at forskjellige systemer er kompatible og kan
-snakke med hverandre. Det var faktisk slik internettet oppsto i utgangspunktet,
-så dette har man lang tradisjon for.
+Dagens sosiale medier består i stor grad av inngjerdede økosystemer som ikke
+snakker med andre systemer og ønsker å holde fast på deg og ditt vennenettverk.
+Men det må faktisk ikke være slik. Mange kloke hoder har utviklet smarte
+løsninger for å motvirke monopolisering av kommunikasjonsteknologi og sikre
+interoperabilitet, altså at forskjellige systemer er kompatible og kan snakke
+med hverandre. Det var faktisk slik internettet oppsto i utgangspunktet, så
+dette har man lang tradisjon for.
 
 De siste årene har vi for alvor begynt å ta et oppgjør med lukkede, proprietære
-plattformer og se tilbake til grunnpillarene for internettet. Det er mulig å ha
-moderne funksjonalitet og brukervennliget samtidig som personvern er ivaretatt
-og man ikke låses til én plattform.
+plattformer og se tilbake til grunnpillarene for internettet: Åpne standarder og
+fri kommunikasjon.
 
 ## Enter the Matrix
 
@@ -54,46 +53,41 @@ som med epost.
 
 ## Hvordan kommer jeg i gang?
 
-Det første man må gjøre når man skal ta i bruk Matrix er det samme man må gjøre
-når man skal ta i bruk epost. Man må velge hvor man skal lage en konto.
+### Registrer deg
 
 Matrix.org har en
 [liste over offentlig tilgjengelige matrix-tjenere](https://servers.joinmatrix.org/)
 som er et godt sted å starte, men jeg vil tipse om den norske
 [norge.chat](https://norge.chat/), som drives av noen ildsjeler som på sikt
-ønsker å drive tjenesten gjennom en ideell organisasjon.
+ønsker å drive tjenesten gjennom en ideell organisasjon. Innmelding er enkelt og
+rett frem.
 
 ![norge.chat-signup](./bli-medlem.jpg)
 
-Selv har jeg Matrix-konto gjennom hacklab.fi, som er paraplyorganisasjonen hvor
-[mitt lokale hackerspace](https://xn--jyvskyl-7wae.hacklab.fi/) er medlem.
-Bedrifter, foreninger og forbund er gode institusjoner for å drifte
-Matrix-tjenere, da de har en naturlig interesse av å koble folk sammen. Kanskje
-er arbeidsplassen din interessert i å sette opp en egen Matrix-tjener og
-potensielt bytte ut Slack, Telegram eller Discord?
+### Last ned applikasjon
 
-Innmelding er enkelt og rett frem. Når du har en konto kan du installere en
-Matrix-klient på enhetene dine og logge inn. Den mest populære er nok
-[Element](https://element.io/), men det er egentlig helt vilkårlig hvilken
-klient du bruker, akkurat som med epostklienter som Mozilla Thunderbird og Apple
-Mail.d
+Når du har en konto kan du installere en
+[Matrix-klient](https://matrix.org/ecosystem/clients/) på enhetene dine og logge
+inn der. Jeg bruker den mest populære, [Element](https://element.io/), men
+[Cinny](https://cinny.in/) faller nok i smak for de som liker Discord, for
+eksempel. Den velkjente [Thunderbird](https://www.thunderbird.net/en-GB/) fra
+Mozilla har også Matrix-støtte.
 
-## Ok, men jeg kjenner jo ingen som bruker Matrix?
+## Men jeg kjenner jo ingen som bruker Matrix?
 
-Det vil nok ta litt tid før "alle" bruker Matrix, men heldigvis er det er
-designet for å kunne kobles til andre kommunikasjonsplattformer for å gjøre
-overgangen lettere. På nettsiden deres kan du få hjelp til å sette opp såkalte
-["bridges"](https://matrix.org/ecosystem/bridges), altså broer til andre
-applikasjoner som Discord og Slack.
-
+Matrix er ikke helt mainstream enda, men heldigvis er det er designet for å
+kunne kobles til andre kommunikasjonsplattformer for å gjøre overgangen lettere.
 Broer sender meldinger på tvers av tjenestene som om alle i chatten brukte samme
 kommunikasjonsplattform og fasiliterer da en myk overgang til (og evt. fra)
-Matrix. I hackerspacet mitt har vi broer til Discord, Telegram, IRC og WhatsApp,
-så det skal ikke være noe problem for hvem som helst å delta i samtalen!
+Matrix.
 
-Dessuten kan du jo invitere folk du kjenner til å bruke Matrix. Start en
-gruppechat, inviter folk du kjenner og se hvem som dukker opp? Hvem vet, kanskje
-kjenner du allerede noen som bruker Matrix?
+Bedrifter, foreninger og forbund er gode institusjoner for å drifte
+Matrix-tjenere, da de har en naturlig interesse av å koble folk sammen. Kanskje
+er arbeidsplassen din eller en forening du driver interessert i å bytte ut
+Slack, Telegram, WhatsApp eller Discord?
+
+Dessuten kan du jo invitere folk du kjenner til å bruke Matrix til privat
+kommunikasjon eller bli med i eksisterende offentlige rom.
 
 Du kan også gjerne slenge meg en melding på
 [@braaar:hacklab.fi](https://matrix.to/#/@braaar:hacklab.fi).
