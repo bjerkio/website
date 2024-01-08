@@ -6,7 +6,7 @@ vennenettverk. Men det må faktisk ikke være slik.'
 socialMediaDescription: 'Dagens sosiale medieplattformer har bygget opp inngjerdede økosystemer som ikke
 snakker med andre systemer og gjør alt de kan for å holde fast på deg og ditt
 vennenettverk. Men det må faktisk ikke være slik.'
-date: 2024-01-09T14:00:00
+date: 2024-01-08T13:10:00
 image: ./brage.jpg
 author:
   - brage-sekse-aarset
