@@ -55,7 +55,7 @@ som med epost.
 
 ### Registrer deg
 
-Matrix.org har en
+Du står fritt til å velge hvor du vil registrere deg. Matrix.org har en
 [liste over offentlig tilgjengelige matrix-tjenere](https://servers.joinmatrix.org/)
 som er et godt sted å starte, men jeg vil tipse om den norske
 [norge.chat](https://norge.chat/), som drives av noen ildsjeler som på sikt
