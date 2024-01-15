@@ -1,0 +1,19 @@
+{
+  "givenName": "Flemming Møller",
+  "familyName": "Pedersen",
+  "position": "Programvareutvikler",
+  "phone": "+47 412 03 415",
+  "email": "flemming@bjerk.io",
+  "image": "./flemming-moeller-pedersen.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/flemming-m%C3%B8ller-pedersen-878757254/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/FlemmingMP"
+    }
+  ],
+  "photographerName": "Carl Oscar Petterson"
+}
