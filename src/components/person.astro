@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import LinkedInLogo from '~icons/ph/linkedin-logo';
 import GithubLogo from '~icons/ph/github-logo';
+import MatrixLogo from '~icons/tabler/brand-matrix';
 
 interface Props {
   person: CollectionEntry<'people'>;
@@ -60,6 +61,20 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
                   aria-label={`Gå til GitHub-profilen til ${name}`}
                 >
                   <GithubLogo />
+                </a>
+              </li>
+            ))}
+          {socialMedia
+            .filter(link => link.type === 'matrix')
+            .map(link => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label={`Kontakt ${name} på Matrix`}
+                >
+                  <MatrixLogo />
                 </a>
               </li>
             ))}
