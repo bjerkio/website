@@ -71,7 +71,3 @@ jobs:
           channelId: live
           target: prod
           projectId: bjerk-io
-
-      - uses: atymic/sitemap-ping-action@master
-        with:
-          sitemap-url: https://bjerk.io/sitemap-index.xml
