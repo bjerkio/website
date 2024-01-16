@@ -18,6 +18,7 @@ import List from "~icons/ph/list";
 
     document.addEventListener("click", handleClickOutside);
     closeButton.addEventListener("click", closeModal);
+    document.addEventListener("astro:page-load", closeModal);
   };
 
   const closeModal = () => {
@@ -26,6 +27,7 @@ import List from "~icons/ph/list";
 
     document.removeEventListener("click", handleClickOutside);
     closeButton.removeEventListener("click", closeModal);
+    document.removeEventListener("astro:page-load", closeModal);
   };
 
   const handleClickOutside = (event) => {
