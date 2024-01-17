@@ -2,7 +2,7 @@
   "givenName": "Brage Sekse",
   "familyName": "Aarset",
   "position": "Programvareutvikler",
-  "phone": "+47 464 65 823",
+  "phone": ["+47 464 65 823", "+358 40 484 7663"],
   "email": "brage@bjerk.io",
   "image": "./brage.jpg",
   "socialMedia": [

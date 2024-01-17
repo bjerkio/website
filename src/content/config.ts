@@ -12,7 +12,7 @@ const people = defineCollection({
       givenName: z.string(),
       familyName: z.string(),
       position: z.string(),
-      phone: z.string(),
+      phone: z.union([z.string(), z.array(z.string())]),
       email: z.string().email(),
       type: z
         .union([z.literal('employee'), z.literal('external-author')])

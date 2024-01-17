@@ -15,8 +15,19 @@
       "description": "The position or job title of the person in the organization."
     },
     "phone": {
-      "type": "string",
-      "description": "The telephone number of the person."
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "The telephone number of the person."
+        },
+        {
+          "type": "array",
+          "description": "A list of telephone numbers of the person.",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
     },
     "email": {
       "type": "string",
