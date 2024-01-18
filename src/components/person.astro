@@ -30,7 +30,14 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
       <p class="position">{position}</p>
     </div>
     <div class="details">
-      <a href={`tel:${phone}`}>{phone}</a>
+      {
+        typeof phone === 'string' ? (
+          <a href={`tel:${phone}`}>{phone}</a>
+        ) : (
+          phone.map(phone => <a href={`tel:${phone}`}>{phone}</a>)
+        )
+      }
+
       <a href={`mailto:${email}`}>{email}</a>
     </div>
     {
