@@ -51,6 +51,11 @@
           "source": "/about",
           "destination": "/om",
           "type": 301
+        },
+        {
+          "source": "/ai",
+          "destination": "https://chat.openai.com/g/g-aJI0fiUjD-bjerkie",
+          "type": 301
         }
       ],
       "headers": [
