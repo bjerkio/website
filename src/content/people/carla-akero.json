@@ -1,0 +1,19 @@
+{
+  "givenName": "Carla Benedicte",
+  "familyName": "Akerø",
+  "position": "Rådgiver",
+  "phone": "+47 411 91 480",
+  "email": "carla@bjerk.io",
+  "image": "./carla.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/carlaakero/"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/carlabe"
+    }
+  ],
+  "photographerName": "Simen A. W. Olsen"
+}
