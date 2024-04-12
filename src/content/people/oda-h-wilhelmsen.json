@@ -1,0 +1,19 @@
+{
+  "givenName": "Oda",
+  "familyName": "Hennissen Wilhelmsen",
+  "position": "Rådgiver",
+  "phone": "+47 938 40 823",
+  "email": "oda@bjerk.io",
+  "image": "./oda.jpg",
+  "socialMedia": [
+    {
+      "type": "linkedin",
+      "url": "www.linkedin.com/in/oda-hennissen-wilhelmsen"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/Odahei98"
+    }
+  ],
+  "photographerName": "..."
+}
