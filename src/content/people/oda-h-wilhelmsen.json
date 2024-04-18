@@ -1,7 +1,7 @@
 {
   "givenName": "Oda",
   "familyName": "Hennissen Wilhelmsen",
-  "position": "Trainee rådgiver",
+  "position": "Rådgiver",
   "phone": "+47 938 40 823",
   "email": "oda@bjerk.io",
   "image": "./oda.jpg",
@@ -15,5 +15,5 @@
       "url": "https://github.com/Odahei98"
     }
   ],
-  "photographerName": "..."
+  "photographerName": "Simen A. W. Olsen"
 }
