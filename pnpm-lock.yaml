@@ -16,13 +16,13 @@ importers:
         version: 5.0.16
       astro:
         specifier: ^4.0.0
-        version: 4.2.1(typescript@5.3.3)
+        version: 4.2.1(@types/node@20.11.5)(typescript@5.3.3)
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
       date-fns-tz:
-        specifier: ^2.0.0
-        version: 2.0.0(date-fns@2.30.0)
+        specifier: ^3.0.0
+        version: 3.1.3(date-fns@2.30.0)
       remark-gfm:
         specifier: ^4.0.0
         version: 4.0.0
@@ -789,10 +789,10 @@ packages:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
 
-  date-fns-tz@2.0.0:
-    resolution: {integrity: sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==}
+  date-fns-tz@3.1.3:
+    resolution: {integrity: sha512-ZfbMu+nbzW0mEzC8VZrLiSWvUIaI3aRHeq33mTe7Y38UctKukgqPR4nTDwcwS4d64Gf8GghnVsroBuMY3eiTeA==}
     peerDependencies:
-      date-fns: '>=2.0.0'
+      date-fns: ^3.0.0
 
   date-fns@2.30.0:
     resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
@@ -2678,7 +2678,7 @@ snapshots:
 
   assertion-error@1.1.0: {}
 
-  astro@4.2.1(typescript@5.3.3):
+  astro@4.2.1(@types/node@20.11.5)(typescript@5.3.3):
     dependencies:
       '@astrojs/compiler': 2.5.0
       '@astrojs/internal-helpers': 0.2.1
@@ -2739,7 +2739,7 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.0.12(@types/node@20.11.5)
-      vitefu: 0.2.5(vite@5.0.12)
+      vitefu: 0.2.5(vite@5.0.12(@types/node@20.11.5))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -2914,7 +2914,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  date-fns-tz@2.0.0(date-fns@2.30.0):
+  date-fns-tz@3.1.3(date-fns@2.30.0):
     dependencies:
       date-fns: 2.30.0
 
@@ -4244,7 +4244,7 @@ snapshots:
   trough@2.1.0: {}
 
   tsconfck@3.0.1(typescript@5.3.3):
-    dependencies:
+    optionalDependencies:
       typescript: 5.3.3
 
   tunnel-agent@0.6.0:
@@ -4409,15 +4409,15 @@ snapshots:
 
   vite@5.0.12(@types/node@20.11.5):
     dependencies:
-      '@types/node': 20.11.5
       esbuild: 0.19.11
       postcss: 8.4.33
       rollup: 4.9.6
     optionalDependencies:
+      '@types/node': 20.11.5
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.0.12):
-    dependencies:
+  vitefu@0.2.5(vite@5.0.12(@types/node@20.11.5)):
+    optionalDependencies:
       vite: 5.0.12(@types/node@20.11.5)
 
   vitest@0.34.6:
