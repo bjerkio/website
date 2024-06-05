@@ -2,29 +2,37 @@
 import Layout from '@layouts/default.astro';
 import { getCollection } from 'astro:content';
 import PostCard from '@components/post-card.astro';
+import Brief from '@components/brief.astro';
 
 const posts = await getCollection('post');
+
+const compareNum = (a: any, b: any) => {
+  if (a.data.date.valueOf() > b.data.date.valueOf()) {
+    return -1;
+  } else if (a.data.date.valueOf() < b.data.date.valueOf()) {
+    return 1;
+  }
+  return 0;
+}
 ---
 
 <Layout
-  title="Arbeider - Ting vi har skapt"
+  title="Artikler"
   description="Se et utvalg av prosjekter vi har jobbet. Siden 2009 har vi endret hvordan folk tenker, arbeider, kommuniserer og jobber gjennom å skape digitale produkter."
   socialMediaTitle="Ting vi har skapt i Bjerk 🌳"
-  path="/arbeid"
+  path="/artikler"
 >
   <main>
-    <section class="brief">
-      <h1>Meninger</h1>
-      <p>
-        Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
-        forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
-        lage digre mengder digitale godbiter. Her får du en smakebit på noen 
-        av våre hjertebarn.</p>
-    </section>
-    <section class="projects">
+    <Brief 
+      title="Meninger"
+      text="Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å forvandle måten folk tenker, jobber, prater og livnærer seg på ved å lage digre mengder digitale godbiter. Her får du en smakebit på noen av våre hjertebarn."
+    />
+    <section class="posts">
       {
         posts
+          .sort(compareNum)
           .filter(project => project.data.image)
+          .filter((p, index) => index < 12)
           .map(project => <PostCard {...project} />)
       }
     </section>
@@ -39,23 +47,14 @@ const posts = await getCollection('post');
     gap: 3rem;
   }
 
-  .brief > p {
-    font-size: 1.2rem;
-    max-width: 64ch;
-  }
-
   section {
     margin-block: 1rem;
   }
 
-  .projects {
+  .posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
 
-  .other-projects {
-    display: grid;
-    gap: 1rem;
-  }
 </style>
