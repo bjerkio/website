@@ -2,6 +2,7 @@
 import { getCollection, getEntries } from 'astro:content';
 import Layout from '@layouts/default.astro';
 import { Image } from 'astro:assets';
+import formatHumanDate from '../../utils'
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('post');
@@ -24,11 +25,7 @@ const authorNames = authors
       `${author.data.givenName} ${author.data.familyName} (${author.data.position})`,
   )
   .join(', ');
-const humanDate = new Date(entry.data.date).toLocaleDateString('nb-NO', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const humanDate = formatHumanDate(entry.data.date);
 
 const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 ---

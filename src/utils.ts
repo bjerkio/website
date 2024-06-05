@@ -66,3 +66,11 @@ export function formatDateRange(dateFrom: Date, dateTo: Date, withTime = true) {
   );
   return { dateFrom: formattedDateFrom, dateTo: formattedDateTo };
 }
+
+export default function formatHumanDate(date: Date) {
+  return new Date(date).toLocaleDateString('nb-NO', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
