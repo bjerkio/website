@@ -1,0 +1,73 @@
+---
+import Layout from '@layouts/default.astro';
+import { getCollection } from 'astro:content';
+import ProjectCard from '@components/project-card.astro';
+import ProjectListCard from '@components/project-list-card.astro';
+
+const projects = await getCollection('project');
+---
+
+<Layout
+  title="Arbeider - Ting vi har skapt"
+  description="Se et utvalg av prosjekter vi har jobbet. Siden 2009 har vi endret hvordan folk tenker, arbeider, kommuniserer og jobber gjennom å skape digitale produkter."
+  socialMediaTitle="Ting vi har skapt i Bjerk 🌳"
+  path="/arbeid"
+>
+  <main>
+    <section class="brief">
+      <h1>Arbeider</h1>
+      <p>
+        Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
+        forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
+        lage digre mengder digitale godbiter.
+      </p>
+      <p>Her får du en smakebit på noen av våre hjertebarn.</p>
+    </section>
+    <section class="projects">
+      {
+        projects
+          .filter(project => project.data.image)
+          .map(project => <ProjectCard {...project} />)
+      }
+    </section>
+    <section>
+      <h2>Noen av våre andre samarbeid</h2>
+      <div class="other-projects">
+        {
+          projects
+            .filter(project => !project.data.image)
+            .map(project => <ProjectListCard {...project} />)
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+    display: grid;
+    gap: 3rem;
+  }
+
+  .brief > p {
+    font-size: 1.2rem;
+    max-width: 64ch;
+  }
+
+  section {
+    margin-block: 1rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .other-projects {
+    display: grid;
+    gap: 1rem;
+  }
+</style>
