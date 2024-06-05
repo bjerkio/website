@@ -1,10 +1,9 @@
 ---
 import Layout from '@layouts/default.astro';
 import { getCollection } from 'astro:content';
-import ProjectCard from '@components/project-card.astro';
-import ProjectListCard from '@components/project-list-card.astro';
+import PostCard from '@components/post-card.astro';
 
-const projects = await getCollection('project');
+const posts = await getCollection('post');
 ---
 
 <Layout
@@ -15,30 +14,19 @@ const projects = await getCollection('project');
 >
   <main>
     <section class="brief">
-      <h1>Arbeider</h1>
+      <h1>Meninger</h1>
       <p>
         Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
         forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
-        lage digre mengder digitale godbiter.
-      </p>
-      <p>Her får du en smakebit på noen av våre hjertebarn.</p>
+        lage digre mengder digitale godbiter. Her får du en smakebit på noen 
+        av våre hjertebarn.</p>
     </section>
     <section class="projects">
       {
-        projects
+        posts
           .filter(project => project.data.image)
-          .map(project => <ProjectCard {...project} />)
+          .map(project => <PostCard {...project} />)
       }
-    </section>
-    <section>
-      <h2>Noen av våre andre samarbeid</h2>
-      <div class="other-projects">
-        {
-          projects
-            .filter(project => !project.data.image)
-            .map(project => <ProjectListCard {...project} />)
-        }
-      </div>
     </section>
   </main>
 </Layout>
