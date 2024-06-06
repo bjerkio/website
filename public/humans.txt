@@ -11,14 +11,29 @@ Rådgiver: Thomas Brustad
 Twitter: @HanBonetti
 Location: Oslo, Norway
 
+Rådgiver: Carla Benedicte Akerø
+Location: Oslo, Norway
+
+Rådgiver: Oda Hennissen Wilhelmsen
+Location: Oslo, Norway
+
+Rådgiver: Noora Tuokkola
+Location: Jyväskylä, Finland
+
 /* Utviklerne */
 
 Programvareutvikler: Brage Sekse Aarset
 Twitter: @komfyrion
 Location: Jyväskylä, Finland
 
-Programvareutvikler: Sandra Viktora Moripen
+Programvareutvikler: Sandra Viktoria Toftemo
 Location: Oslo, Norway
 
-Programvareutvikler: Simen Rugland
+Programvareutvikler: Flemming Møller Pedersen
+Location: Oslo, Norway
+
+Programvareutvikler: Mats Ringstad Møglestue
+Location: Oslo, Norway
+
+Programvareutvikler: Simon Rugland
 Location: Tvedestrand, Norway
