@@ -4,7 +4,7 @@ description:
   Hvordan lykkes man med et prosjekt? Og hva er utfordringene med tradisjonell
   prosjektledelse? Les mer om fallgruver og hvordan Half Double-metodikken kan
   være en løsning for prosjekter i ulik kompleksitet, skala og størrelse,
-date: 2023-01-08T14:00:00
+date: 2023-02-18T14:00:00
 image: ./even.jpg
 author:
   - even-rogeberg
