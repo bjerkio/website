@@ -8,7 +8,7 @@ socialMediaTitle: 'Hva er egentlig en digital tjenesteplattform? 🤔'
 socialMediaDescription:
   Dykk ned i hva en digital tjenesteplattform eller kjernesystem er, og hvordan
   dette kan hjelpe deg å oppnå mer av det som er viktig.
-date: 2023-01-09T14:00:00
+date: 2023-02-13T14:00:00
 image: ./2023-11-10-simen-a-w-olsen.jpg
 author:
   - simenandre

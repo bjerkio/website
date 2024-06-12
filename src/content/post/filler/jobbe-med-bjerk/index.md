@@ -6,7 +6,7 @@ description:
   avdekker vår unike tilnærming til relasjoner, dialogdrevet innovasjon, og
   tverrfaglig samarbeid. Bli med bak kulissene og se hvordan vi skaper varig
   verdi.
-date: 2024-01-02T15:00:00
+date: 2024-02-02T15:00:00
 image: ./header-laughing-bjerk.png
 author:
   - simenandre

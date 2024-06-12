@@ -7,7 +7,7 @@ description:
   tverrfaglig samarbeid. Bli med bak kulissene og se hvordan vi skaper varig
   verdi.
 date: 2023-11-02T15:00:00
-image: ./header-laughing-bjerk.png
+image: ./simen-host-2023.jpg
 author:
   - simenandre
 ---
