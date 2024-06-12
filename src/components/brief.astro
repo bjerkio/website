@@ -1,12 +1,23 @@
 ---
-const { title, text } = Astro.props;
+
+interface Props {
+  title: string,
+  content: string[]
+}
+
+const { title, content } = Astro.props;
 
 ---
 <section class="brief">
-  <h1>{title}
-    <span>.</span>
+  <h1>{title}<span>.</span>
   </h1>
-  <p>{text}</p>
+  <div class="content">
+    {
+      content.map(text => 
+        <p>{text}</p>
+      )
+    }  
+  </div>
 </section>
 
 <style>
@@ -17,7 +28,7 @@ const { title, text } = Astro.props;
     gap: 3rem;
   }
   h1 {
-    display: flex;
+    display: block;
     align-self: top;
     margin: 0;
     line-height: 1;
@@ -35,7 +46,12 @@ const { title, text } = Astro.props;
     padding-right: 5%;
     font-size: 1.2rem;
     max-width: 64ch;
-    margin: 0;
+  }
+  .content p:first-child {
+    margin-top: 0;
+  }
+  .content p:last-child {
+    margin-bottom: 0;
   }
   @media (max-width: 640px) {
     .brief {
