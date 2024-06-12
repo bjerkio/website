@@ -26,9 +26,60 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
   />
   <div class="section">
     <div class="intro">
-      <p class="name">{name}</p>
-      <p class="position">{position}</p>
+      <div class="description">
+        <p class="name">{name}</p>
+        <p class="position">{position}</p>
+      </div>
+      {
+        socialMedia.length > 0 && (
+          <ul class="social-media-links">
+            {socialMedia
+              .filter(link => link.type === 'linkedin')
+              .map(link => (
+                <li>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`Gå til LinkedIn-profilen til ${name}`}
+                  >
+                    <LinkedInLogo />
+                  </a>
+                </li>
+              ))}
+            {socialMedia
+              .filter(link => link.type === 'github')
+              .map(link => (
+                <li>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`Gå til GitHub-profilen til ${name}`}
+                  >
+                    <GithubLogo />
+                  </a>
+                </li>
+              ))}
+            {socialMedia
+              .filter(link => link.type === 'matrix')
+              .map(link => (
+                <li>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`Kontakt ${name} på Matrix`}
+                  >
+                    <MatrixLogo />
+                  </a>
+                </li>
+              ))}
+          </ul>
+        )
+      }  
     </div>
+  </div>
     <div class="details">
       {
         typeof phone === 'string' ? (
@@ -40,54 +91,6 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
 
       <a href={`mailto:${email}`}>{email}</a>
     </div>
-    {
-      socialMedia.length > 0 && (
-        <ul class="social-media-links">
-          {socialMedia
-            .filter(link => link.type === 'linkedin')
-            .map(link => (
-              <li>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={`Gå til LinkedIn-profilen til ${name}`}
-                >
-                  <LinkedInLogo />
-                </a>
-              </li>
-            ))}
-          {socialMedia
-            .filter(link => link.type === 'github')
-            .map(link => (
-              <li>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={`Gå til GitHub-profilen til ${name}`}
-                >
-                  <GithubLogo />
-                </a>
-              </li>
-            ))}
-          {socialMedia
-            .filter(link => link.type === 'matrix')
-            .map(link => (
-              <li>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={`Kontakt ${name} på Matrix`}
-                >
-                  <MatrixLogo />
-                </a>
-              </li>
-            ))}
-        </ul>
-      )
-    }
   </div>
 </div>
 
@@ -125,20 +128,29 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
     aspect-ratio: 3/4;
   }
 
-  .intro > * {
+  .description > * {
     margin: 0;
   }
 
-  .intro > .name {
+  .description > .name {
     font-weight: 600;
   }
 
-  .intro > .position {
+  .description > .position {
     color: var(--color-low-contrast-text);
   }
 
   .details > * {
     display: block;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  img {
+    border-radius: 16px;
   }
 
   .social-media-links {
