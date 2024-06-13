@@ -22,8 +22,7 @@ const posts = await getCollection('post');
       {
         posts
           .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-          .filter(project => project.data.image)
-          .filter((p, index) => index < 12)
+          .filter((project, index) => project.data.image && index < 12)
           .map(project => <PostCard {...project} />)
       }
     </section>
