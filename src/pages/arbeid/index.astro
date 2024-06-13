@@ -3,6 +3,7 @@ import Layout from '@layouts/default.astro';
 import { getCollection } from 'astro:content';
 import ProjectCard from '@components/project-card.astro';
 import ProjectListCard from '@components/project-list-card.astro';
+import Brief from '@components/brief.astro';
 
 const projects = await getCollection('project');
 ---
@@ -14,15 +15,10 @@ const projects = await getCollection('project');
   path="/arbeid"
 >
   <main>
-    <section class="brief">
-      <h1>Arbeider</h1>
-      <p>
-        Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
-        forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
-        lage digre mengder digitale godbiter.
-      </p>
-      <p>Her får du en smakebit på noen av våre hjertebarn.</p>
-    </section>
+    <Brief title="Arbeider" content={[
+      "Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å forvandle måten folk tenker, jobber, prater og livnærer seg på ved å lage digre mengder digitale godbiter."
+    , "Her får du en smakebit på noen av våre hjertebarn."]}>
+    </Brief>
     <section class="projects">
       {
         projects
@@ -49,11 +45,6 @@ const projects = await getCollection('project');
     margin-inline: auto;
     display: grid;
     gap: 3rem;
-  }
-
-  .brief > p {
-    font-size: 1.2rem;
-    max-width: 64ch;
   }
 
   section {
