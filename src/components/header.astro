@@ -6,6 +6,7 @@ import Megaphone from '~icons/ph/megaphone';
 const navs = [
   {name: "Om", path: "/om"},
   {name: "Arbeid", path: "/arbeid"},
+  {name: "Artikler", path: "/artikler"},
   {name: "Kontakt", path: "/kontakt"}
 ]
 
@@ -31,7 +32,7 @@ const currentPath = removeTrailingSlash(Astro.url).pathname;
       )}
     </ul>
     <div class="mobile-nav" transition:persist>
-      <MobileNav />
+      <MobileNav navOptions={navs} />
     </div>
   </nav>
 </header>
