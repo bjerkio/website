@@ -5,15 +5,6 @@ import PostCard from '@components/post-card.astro';
 import Brief from '@components/brief.astro';
 
 const posts = await getCollection('post');
-
-const compareNum = (a: any, b: any) => {
-  if (a.data.date.valueOf() > b.data.date.valueOf()) {
-    return -1;
-  } else if (a.data.date.valueOf() < b.data.date.valueOf()) {
-    return 1;
-  }
-  return 0;
-}
 ---
 
 <Layout
@@ -30,7 +21,7 @@ const compareNum = (a: any, b: any) => {
     <section class="posts">
       {
         posts
-          .sort(compareNum)
+          .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
           .filter(project => project.data.image)
           .filter((p, index) => index < 12)
           .map(project => <PostCard {...project} />)
