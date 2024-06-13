@@ -2,6 +2,23 @@
 import MobileNav from './mobile-nav.astro';
 import Logo from './logo.astro';
 import Megaphone from '~icons/ph/megaphone';
+
+const navs = [
+  {name: "Om", path: "/om"},
+  {name: "Arbeid", path: "/arbeid"},
+  {name: "Artikler", path: "/artikler"},
+  {name: "Kontakt", path: "/kontakt"}
+]
+
+const removeTrailingSlash = (url: URL) => {
+  if (url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.slice(0, -1);
+  }
+  return url;
+};
+
+const currentPath = removeTrailingSlash(Astro.url).pathname;
+
 ---
 
 <header>
@@ -10,13 +27,12 @@ import Megaphone from '~icons/ph/megaphone';
   </a>
   <nav>
     <ul>
-      <li><a href="/om">Om oss</a></li>
-      <li><a href="/arbeid">Arbeider</a></li>
-      <!-- <li><a href="/services">Tjenester</a></li> -->
-      <li><a href="/kontakt">Kontakt</a></li>
+      {navs.map(nav =>
+        <li class={nav.path === currentPath ? "active" : "inactive" } ><a href={nav.path}>{nav.name}</a></li>
+      )}
     </ul>
     <div class="mobile-nav" transition:persist>
-      <MobileNav />
+      <MobileNav navOptions={navs} />
     </div>
   </nav>
 </header>
@@ -32,10 +48,11 @@ import Megaphone from '~icons/ph/megaphone';
   }
 
   header .logo {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: inherit;
   }
-
   nav {
     display: flex;
     list-style: none;
@@ -47,15 +64,23 @@ import Megaphone from '~icons/ph/megaphone';
     display: flex;
     list-style: none;
     gap: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
 
   nav ul li {
     font-size: rem;
+    padding: 0.25rem 1rem;
+    border-radius: 16px;
   }
 
   nav ul li a {
     color: inherit;
     text-decoration: none;
+  }
+
+  nav ul .active {
+    background-color: hsl(var(--green-base) 75%);
   }
 
   @media (hover) {
@@ -75,7 +100,7 @@ import Megaphone from '~icons/ph/megaphone';
     display: none;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     header nav ul li:not(.emphasis) {
       display: none;
     }

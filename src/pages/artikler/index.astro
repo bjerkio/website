@@ -1,0 +1,50 @@
+---
+import Layout from '@layouts/default.astro';
+import { getCollection } from 'astro:content';
+import PostCard from '@components/post-card.astro';
+import Brief from '@components/brief.astro';
+
+const posts = await getCollection('post');
+---
+
+<Layout
+  title="Artikler"
+  description="Artikler vi har skrevet"
+  socialMediaTitle="Artikler"
+  path="/artikler"
+>
+  <main>
+    <Brief 
+      title="Artikler"
+      content={[]}
+    />
+    <section class="posts">
+      {
+        posts
+          .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+          .filter((project, index) => project.data.image && index < 12)
+          .map(project => <PostCard {...project} />)
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+    display: grid;
+    gap: 3rem;
+  }
+
+  section {
+    margin-block: 1rem;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+</style>

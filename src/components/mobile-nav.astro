@@ -1,6 +1,8 @@
 ---
 import X from "~icons/ph/x";
 import List from "~icons/ph/list";
+
+const { navOptions } = Astro.props;
 ---
 
 <script>
@@ -61,9 +63,9 @@ import List from "~icons/ph/list";
   </button>
   <div class="dialog-content">
     <ul class="navigation">
-      <li><a href="/om">Om oss</a></li>
-      <li><a href="/arbeid">Arbeider</a></li>
-      <li><a href="/kontakt">Kontakt</a></li>
+      {navOptions.map(nav =>
+        <li><a href={nav.path}>{nav.name}</a></li>
+      )}
     </ul>
     <div class="actions">
       <a class="button" href="tel:+4722120512">Ring oss</a>
