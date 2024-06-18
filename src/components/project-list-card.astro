@@ -33,6 +33,7 @@ const { data } = Astro.props;
 
 <style>
   .card {
+    width: 100%;
     background-color: hsl(var(--blue-base) 95%);
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -62,5 +63,14 @@ const { data } = Astro.props;
 
   dd {
     margin: 0;
+  }
+  @media (max-width: 640px) {
+    .card {
+      grid-template-columns: auto;
+    }
+    dl {
+      text-align: start;
+      grid-template-columns: 1fr;
+    }
   }
 </style>

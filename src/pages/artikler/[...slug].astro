@@ -238,4 +238,9 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
     margin-bottom: 2rem;
     border-radius: 0.5rem;
   }
+  @media (max-width: 640px) {
+    .title {
+      font-size: clamp(2rem, 5vw, 2rem);
+    }
+  }
 </style>
