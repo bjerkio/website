@@ -33,9 +33,10 @@ const { data } = Astro.props;
 
 <style>
   .card {
+    width: 100%;
     background-color: hsl(var(--blue-base) 95%);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
     padding: 1.5rem;
     border-radius: var(--border-radius);
     gap: 1.5rem;
@@ -51,7 +52,7 @@ const { data } = Astro.props;
 
   dl {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    text-align: end;
     gap: 1rem;
     margin: 0;
   }
@@ -62,5 +63,13 @@ const { data } = Astro.props;
 
   dd {
     margin: 0;
+  }
+  @media (max-width: 640px) {
+    .card {
+      flex-direction: column;
+    }
+    dl {
+      text-align: start;
+    }
   }
 </style>
