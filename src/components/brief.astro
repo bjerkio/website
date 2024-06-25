@@ -8,7 +8,8 @@ const { title } = Astro.props;
 
 ---
 <section class="brief">
-  <h1>{title}</h1>
+  <h1>{title}<span>.</span>
+  </h1>
   <div class="heading">
     <slot/>
   </div>
@@ -21,8 +22,7 @@ const { title } = Astro.props;
     display: flex;
     gap: 3rem;
   }
-  h1::after {
-    content: '.';
+  span {
     font-family: 'Source Code Pro';
     color: hsl(var(--blue-base) 50%);
     font-weight: 800;
@@ -50,7 +50,7 @@ const { title } = Astro.props;
     font-weight: 400;
     font-stretch: extra-condensed;
   }
-  .heading {
+  .heading * {
     padding-left: 5%;
     padding-right: 5%;
     font-size: 1.2rem;
@@ -63,7 +63,7 @@ const { title } = Astro.props;
     margin-bottom: 0;
   }
   @media (max-width: 640px) {
-    .heading  {
+    .heading * {
       padding-left: 0;
       padding-right: 0;
     }
