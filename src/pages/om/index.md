@@ -2,6 +2,7 @@
 layout: '@layouts/page.astro'
 title: 'Lær om Bjerk – Vi skaper digitale produkter'
 headline: Vi lager digitale produkter
+heading: Vi står opp hver dag for å forbedre og forenkle måten mennesker lærer, tenker, jobber og kommuniserer på. Bjerk samler folk med kompetanse innen programvareutvikling, brukeropplevelse og produktledelse for å gjøre verden til et bedre sted.
 path: /om
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
