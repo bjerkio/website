@@ -2,21 +2,16 @@
 
 interface Props {
   title: string,
-  content: string[]
 }
 
-const { title, content } = Astro.props;
+const { title } = Astro.props;
 
 ---
 <section class="brief">
   <h1>{title}<span>.</span>
   </h1>
-  <div class="content">
-    {
-      content.map(text => 
-        <p>{text}</p>
-      )
-    }  
+  <div class="heading">
+    <slot/>
   </div>
 </section>
 
@@ -27,7 +22,26 @@ const { title, content } = Astro.props;
     display: flex;
     gap: 3rem;
   }
-  h1 {
+  span {
+    font-family: 'Source Code Pro';
+    color: hsl(var(--blue-base) 50%);
+    font-weight: 800;
+  }
+  @media (max-width: 640px) {
+    .brief {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<style is:global>
+  .brief {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 3rem;
+  }
+  .brief h1 {
     display: block;
     align-self: top;
     margin: 0;
@@ -36,32 +50,22 @@ const { title, content } = Astro.props;
     font-weight: 400;
     font-stretch: extra-condensed;
   }
-  span {
-    font-family: 'Source Code Pro';
-    color: hsl(var(--blue-base) 50%);
-    font-weight: 800;
-  }
-  p {
+  .heading * {
     padding-left: 5%;
     padding-right: 5%;
     font-size: 1.2rem;
     max-width: 64ch;
   }
-  .content p:first-child {
+  .heading *:first-child {
     margin-top: 0;
   }
-  .content p:last-child {
+  .heading *:last-child {
     margin-bottom: 0;
   }
   @media (max-width: 640px) {
-    .brief {
-      flex-direction: column;
-    }
-    p {
+    .heading * {
       padding-left: 0;
       padding-right: 0;
-      font-size: 1.2rem;
-      max-width: 64ch;
     }
   }
 </style>
