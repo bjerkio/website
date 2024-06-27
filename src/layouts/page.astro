@@ -2,10 +2,7 @@
 import type { MarkdownLayoutProps } from 'astro';
 import Layout, { type Props as DefaultLayoutProps } from './default.astro';
 import Brief from '@components/brief.astro';
-<<<<<<< HEAD
 import Image from 'astro/components/Image.astro';
-=======
->>>>>>> 1b7c81e (VIP: Add new components to default pages and edit about page)
 
 export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
 const { frontmatter } = Astro.props;
@@ -15,7 +12,6 @@ const { frontmatter } = Astro.props;
   {...frontmatter}
 >
   <main>
-<<<<<<< HEAD
     <article>
       <div class="hero">
         { frontmatter.headline && (
@@ -39,7 +35,6 @@ const { frontmatter } = Astro.props;
         />  
         )}
       </div>
-=======
     <Brief title={frontmatter.headline} content={[]}>
       {
         frontmatter.heading && (
@@ -50,7 +45,6 @@ const { frontmatter } = Astro.props;
       }
     </Brief>
     <section>
->>>>>>> 1b7c81e (VIP: Add new components to default pages and edit about page)
       <slot />
     </article>
   </main>
