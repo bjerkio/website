@@ -1,4 +1,5 @@
 ---
+import Logo from './logo.astro';
 import DiscordIcon from '~icons/ph/discord-logo-fill';
 import GitHubIcon from '~icons/ph/github-logo-fill';
 import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
@@ -6,6 +7,15 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
 
 <footer>
   <div class="container">
+    <section class="logo">
+      <Logo />
+      <div>
+        © Bjerk 2023
+      </div>
+      <div>
+        Org. nr.: 930 334 693
+      </div>
+    </section>
     <section class="content">
       <p>
         Send oss noen ord på <a href="mailto:kontoret@bjerk.io">
@@ -17,8 +27,6 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
         <li><a href="/vilkar">Vilkår</a></li>
         <li><a href="/personvern">Personvernerklæring</a></li>
       </ul>
-
-      <p>Bjerk 2023 | Org. nr.: 930 334 693</p>
     </section>
     <section class="socials">
       <a
@@ -67,21 +75,24 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
 
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
-
+  .content {
+  }
   .content p:first-child {
     font-size: 1.2rem;
     max-width: 30ch;
   }
 
-  .content p:last-child {
-    font-size: 0.8rem;
+  .logo div {
     color: hsl(var(--blue-base) 70%);
   }
-
+  .logo {
+    margin-top: 1.2rem;
+  }
   .socials {
+    margin-top: 1.2rem;
     font-size: 1.7rem;
     display: flex;
     gap: 1rem;
