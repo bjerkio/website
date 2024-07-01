@@ -212,10 +212,7 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
-    {
-      contactFooter && 
-      <ContactFooter />
-    }
+    <ContactFooter />
     <Footer />
     <style is:global>
       :root {
