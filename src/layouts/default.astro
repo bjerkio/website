@@ -1,11 +1,11 @@
 ---
-import type { WithContext, Thing } from "schema-dts";
-import "@fontsource-variable/sora";
-import { jsonLd } from "./json-ld";
-import Header from "@components/header.astro";
-import ContactFooter from "@components/contact-footer.astro";
-import Footer from "@components/footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import type { WithContext, Thing } from 'schema-dts';
+import '@fontsource-variable/sora';
+import { jsonLd } from './json-ld';
+import Header from '@components/header.astro';
+import ContactFooter from '@components/contact-footer.astro';
+import Footer from '@components/footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 export type Props = {
   /**
@@ -205,10 +205,7 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
-    {
-      contactFooter && 
-      <ContactFooter />
-    }
+    <ContactFooter />
     <Footer />
     <style is:global>
       :root {
