@@ -1,34 +1,43 @@
----
-import ContactForm from '@components/contact-form.astro';
----
-
 <section class="contact-footer">
   <div class="container">
-    <img src="/assets/about-bjerk.jpg" alt="Bilde av Bjerk" />
     <section class="content">
-        <h2>Vi vil gjerne høre fra deg!</h2>
-        <p>
-          Uansett om du har en idé som vil forandre verden, eller om det er en
-          liten sak i hverdagen som må fikses, så er vi like ivrige.
-        </p>
-        <p>Ta kontakt med oss for en hyggelig kaffeprat!</p>
-        <ContactForm />
+      <h2>
+        Vi vil gjerne høre fra deg!
+      </h2>
+      <p>
+        Uansett om du har en idé som vil forandre verden, eller om det er en liten sak som irriterer deg i hverdagen, så er vi like ivrige.
+      </p>
+      <p>
+        Ta kontakt med oss for en hyggelig kaffeprat!
+      </p>
+      <form action="">
+        <div class="identity">
+          <input placeholder="Fullt navn" type="text" name="name" id="name" required />
+          <input placeholder="E-postadresse" type="email" name="email" id="email" required />
+        </div>
+        <div class="issue">
+          <input placeholder="Hva dreier deg seg om?" type="text" name="text" id="text" required />
+        </div>
+        <div class="buttons">
+          <div class="accept">
+            <input type="checkbox" name="personvern" id="" value="I AM HERE ok" required>  
+            <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
+          </div>
+          <input type="submit" value="Trykk meg" id="submit">
+        </div>
+      </form>
     </section>
   </div>
 </section>
 
 <style>
   .contact-footer {
+    margin-top: 4rem;
     background-color: hsl(var(--blue-base) 95%);
   }
 
   a {
     --link-color: hsl(var(--blue-base) 50%);
-  }
-
-  img {
-    max-width: 550px;
-    border-radius: 1rem;
   }
 
   @media (hover) {
@@ -40,30 +49,95 @@ import ContactForm from '@components/contact-form.astro';
   .container {
     width: var(--container-width);
     margin-inline: auto;
+    color: white;
     padding-block: 4rem;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    justify-content: center;
-    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
   }
 
-  .content {
-    flex-grow: 1;
-    max-width: 60ch;
+  .content p, h2, input {
+    color: hsl(var(--blue-base) 30%);
   }
-
+  
   .content p:last-child {
     font-size: 0.8rem;
+    color: hsl(var(--blue-base) 40%);
   }
 
-  @media (max-width: 1024px) {
-    .container {
-      display: flex;
-      gap: 2rem;
-    }
-    img {
-      display: none;
-    }
+  input {
+    padding: 16px 0;
+    background-color: hsl(var(--blue-base) 95%);
+    border: none;
+    border-block-end: 1px solid grey;
   }
+
+  input:focus {
+    background-color: hsl(var(--blue-base) 95%);
+  }
+
+  .socials {
+    font-size: 1.7rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .socials a {
+    color: white;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  form .identity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  form .issue {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  form #submit {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    border-radius: 16px;
+    border: solid;
+    border-width: 2px;
+    border-color: hsl(var(--green-base) 75%);
+    text-decoration: none;
+
+  }
+  form #submit:hover {
+    background-color: hsl(var(--green-base) 75%);
+  }
+  form #submit:active {
+    border-color: hsl(var(--green-base) 55%);
+    background-color: hsl(var(--green-base) 55%);
+  }
+  form .buttons {
+    padding-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  form .accept {
+    display: flex;
+    flex-grow: 2;
+    gap: 0.5em;
+  }
+  form .accept * {
+    max-width: 60ch;
+    font-size: 0.75rem;
+    margin: 0.5em 0;
+  }
+
 </style>
