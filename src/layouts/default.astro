@@ -3,6 +3,7 @@ import type { WithContext, Thing } from 'schema-dts';
 import '@fontsource-variable/sora';
 import { jsonLd } from './json-ld';
 import Header from '@components/header.astro';
+import ContactFooter from '@components/contact-footer.astro';
 import Footer from '@components/footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -182,6 +183,7 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
+    <ContactFooter />
     <Footer />
     <style is:global>
       :root {
