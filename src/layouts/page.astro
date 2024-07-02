@@ -15,7 +15,7 @@ const { frontmatter } = Astro.props;
         </aside>
       )
     }
-    <section>
+    <section class="main-section">
       <slot />
     </section>
   </main>
@@ -33,7 +33,7 @@ const { frontmatter } = Astro.props;
     justify-content: space-between;
   }
 
-  :global(section > :first-child) {
+  :global(.main-section > :first-child) {
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.4;
