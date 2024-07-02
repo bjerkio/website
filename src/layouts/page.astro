@@ -12,39 +12,14 @@ const { frontmatter } = Astro.props;
   {...frontmatter}
 >
   <main>
-    <article>
-      <div class="hero">
-        { frontmatter.headline && (
-          <Brief 
-          title={frontmatter.headline}>
-            {
-              frontmatter.heading && (
-                <p>
-                  {frontmatter.heading}
-                </p>
-              )
-            }
-        </Brief>  
-        )}
-        { frontmatter.image && (
-                  <Image 
-        src={frontmatter.image} 
-        alt={frontmatter.imageAlt}
-        width={2140}
-        height={2140}
-        />  
-        )}
-      </div>
-    <Brief title={frontmatter.headline} content={[]}>
-      {
-        frontmatter.heading && (
-          <p>
-            {frontmatter.heading}
-          </p>
-        )
-      }
-    </Brief>
-    <section>
+    {
+      frontmatter.headline && (
+        <aside>
+          <h1>{frontmatter.headline}</h1>
+        </aside>
+      )
+    }
+    <section class="main-section">
       <slot />
     </article>
   </main>
