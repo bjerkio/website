@@ -1,4 +1,5 @@
 ---
+import Brief from '@components/brief.astro';
 import Person from '@components/person.astro';
 import Layout from '@layouts/default.astro';
 import { getCollection } from 'astro:content';
@@ -64,36 +65,53 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   }}
 >
   <main>
-    <section class="brief">
-      <h1>Vi gleder oss til å høre fra deg!</h1>
+    <Brief title='Kontakt'>
+      <p>Vi gleder oss til å høre fra deg!</p>
       <p>
         Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland. Du får
         tak i oss via e-post til
         <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
       </p>
-    </section>
-
-    <section class="details">
-      <dl>
-        <div>
-          <dt>E-post</dt>
-          <dd>kontoret@bjerk.io</dd>
+      <section class="details">
+        <dl>
+          <div>
+            <dt>E-post</dt>
+            <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
+          </div>
+          <div>
+            <dt>Adresse</dt>
+            <dd>
+              <a
+                href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Akersgata 51, 0180 Oslo <!-- <ArrowSquareOut /> -->
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+      <br>
+      <p>
+        Send oss en melding
+      </p>
+      <form action="">
+        <div class="issue">
+          <textarea placeholder="Hva dreier deg seg om?" name="text" id="text" rows="5" required />
         </div>
-        <div>
-          <dt>Adresse</dt>
-          <dd>
-            <a
-              href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Akersgata 51, 0180 Oslo <!-- <ArrowSquareOut /> -->
-            </a>
-          </dd>
+        <div class="identity">
+          <input placeholder="Navn eller e-postadresse" type="text" name="name" id="name" required />
+          <input type="submit" value="Trykk meg" id="submit">
         </div>
-      </dl>
-    </section>
-
+        <div class="gdpr">
+          <div class="accept">
+            <input type="checkbox" name="personvern" id="" value="accept" required>  
+            <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
+          </div>
+        </div>
+      </form>    
+    </Brief>
     <section class="employees">
       {employees.map(person => <Person person={person} />)}
     </section>
@@ -120,11 +138,18 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
 
   dl {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1rem;
     gap: 1rem;
+    font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
   }
 
   dl div > dt {
-    font-weight: bold;
+    opacity: 50%;
   }
 
   dl div > dd {
@@ -134,7 +159,69 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   dl div > dd a {
     color: inherit;
   }
+  input, textarea {
+    width: auto;
+    padding: 16px 0;
+    border: none;
+    border-block-end: 1px solid grey;
+    resize: none;
+    font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
+  }
 
+  input:focus {
+    background-color: hsl(var(--blue-base) 95%);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  form .identity {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+  }
+  form .issue {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  form #submit {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    margin: 4px;
+    border-radius: 16px;
+    border: solid;
+    border-width: 2px;
+    border-color: hsl(var(--green-base) 75%);
+    text-decoration: none;
+    background-color: white;
+  }
+  form #submit:hover {
+    background-color: hsl(var(--green-base) 75%);
+  }
+  form #submit:active {
+    border-color: hsl(var(--green-base) 55%);
+    background-color: hsl(var(--green-base) 55%);
+  }
+  form .gdpr {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  form .accept {
+    display: flex;
+    flex-grow: 2;
+    gap: 0.5em;
+  }
+  form .accept * {
+    max-width: 60ch;
+    font-size: 0.75rem;
+    margin: 0.5em 0;
+  }
   .employees {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
