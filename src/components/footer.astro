@@ -16,7 +16,7 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
         Org. nr.: 930 334 693
       </div>
     </section>
-    <section class="content">
+    <section class="contact">
       <p>
         Arbins gate 11 
         <br>
@@ -34,7 +34,6 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
         <li><a href="/vilkar">Vilkår</a></li>
         <li><a href="/personvern">Personvernerklæring</a></li>
       </ul>
-    </section>
     <section class="socials">
       <a
         aria-label="Discord-server for Bjerk"
@@ -84,11 +83,12 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  .content {
-  }
-  .content p:first-child {
-    font-size: 1.2rem;
+  .contact p:first-child {
+    margin-top: 1.2rem;
     max-width: 30ch;
+  }
+  .content {
+    height: 100%;
   }
 
   .logo div {
@@ -115,27 +115,5 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
-  }
-  ul {
-    padding: 0;
-    list-style-type: none;
-  }
-  @media(max-width: 767px) {
-    .container {
-      padding-block: 1rem;
-    }
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .container {
-      justify-content: space-around;
-    }
-    .socials {
-      width: 100%;
-      justify-content: space-around;
-    }
   }
 </style>
