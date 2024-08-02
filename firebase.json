@@ -64,7 +64,7 @@
           "headers": [
             {
               "key": "Content-Security-Policy",
-              "value": "script-src 'self'"
+              "value": "script-src 'self' gc.zgo.at"
             },
             {
               "key": "X-Frame-Options",
