@@ -64,7 +64,7 @@
           "headers": [
             {
               "key": "Content-Security-Policy",
-              "value": "script-src 'self' https://gc.zgo.at; connect-src https://padeia.goatcounter.com/count"
+              "value": "script-src 'self' https://gc.zgo.at; connect-src https://bjerk.goatcounter.com/count"
             },
             {
               "key": "X-Frame-Options",
