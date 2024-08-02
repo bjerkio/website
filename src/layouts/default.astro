@@ -1,10 +1,10 @@
 ---
-import type { WithContext, Thing } from 'schema-dts';
-import '@fontsource-variable/sora';
-import { jsonLd } from './json-ld';
-import Header from '@components/header.astro';
-import Footer from '@components/footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import type { WithContext, Thing } from "schema-dts";
+import "@fontsource-variable/sora";
+import { jsonLd } from "./json-ld";
+import Header from "@components/header.astro";
+import Footer from "@components/footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
   /**
@@ -61,7 +61,7 @@ export type Props = {
    *
    * @default website
    */
-  type?: 'website' | 'article';
+  type?: "website" | "article";
 
   /**
    * The path of the page. Used to generate the canonical URL.
@@ -90,9 +90,9 @@ const defaultDescription = `
   innen eiendom, regnskap og forvaltning.
   `;
 
-const defaultTitle = 'Bjerk';
+const defaultTitle = "Bjerk";
 
-const defaultImage = new URL('/images/social-media-image.png', Astro.site);
+const defaultImage = new URL("/images/social-media-image.png", Astro.site);
 
 const {
   title = defaultTitle,
@@ -100,7 +100,7 @@ const {
   socialMediaTitle = title ?? defaultTitle,
   socialMediaDescription = description ?? defaultDescription,
   images = [defaultImage.toString()],
-  type = 'website',
+  type = "website",
   path,
   schema,
   articleAuthor,
@@ -155,6 +155,8 @@ const canonical = new URL(path, Astro.site);
     <meta property="og:description" content={socialMediaDescription} />
     {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Bjerk" />
+    <script data-goatcounter="https://bjerk.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
     {
       type == 'article' && articleAuthor && (
