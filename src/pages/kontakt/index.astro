@@ -66,51 +66,56 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
 >
   <main>
     <Brief title='Kontakt'>
-      <p>Vi gleder oss til å høre fra deg!</p>
-      <p>
-        Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland. Du får
-        tak i oss via e-post til
-        <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
-      </p>
-      <section class="details">
-        <dl>
-          <div>
-            <dt>E-post</dt>
-            <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
-          </div>
-          <div>
-            <dt>Adresse</dt>
-            <dd>
-              <a
-                href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Akersgata 51, 0180 Oslo <!-- <ArrowSquareOut /> -->
-              </a>
-            </dd>
-          </div>
-        </dl>
-      </section>
-      <br>
-      <p>
-        Send oss en melding
-      </p>
-      <form action="">
-        <div class="issue">
-          <textarea placeholder="Hva dreier deg seg om?" name="text" id="text" rows="5" required />
-        </div>
-        <div class="identity">
-          <input placeholder="Navn eller e-postadresse" type="text" name="name" id="name" required />
-          <input type="submit" value="Trykk meg" id="submit">
-        </div>
-        <div class="gdpr">
-          <div class="accept">
-            <input type="checkbox" name="personvern" id="" value="accept" required>  
-            <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
-          </div>
-        </div>
-      </form>    
+      <div class="contact-info">
+        <section>
+          <p>Vi gleder oss til å høre fra deg!</p>
+          <p>
+            Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland. Du får
+            tak i oss via e-post til
+            <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
+          </p>
+        </section>
+        <section class="details">
+          <dl>
+            <div>
+              <dt>E-post</dt>
+              <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
+            </div>
+            <div>
+              <dt>Adresse</dt>
+              <dd>
+                <a
+                  href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Akersgata 51, 0180 Oslo <!-- <ArrowSquareOut /> -->
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <section class="contact-form">
+          <p>
+            Send oss en melding
+          </p>
+          <form action="">
+            <div class="issue">
+              <textarea placeholder="Hva dreier deg seg om?" name="text" id="text" rows="5" required />
+            </div>
+            <div class="identity">
+              <input placeholder="Navn eller e-postadresse" type="text" name="name" id="name" required />
+              <input type="submit" value="Trykk meg" id="submit">
+            </div>
+            <div class="gdpr">
+              <div class="accept">
+                <input type="checkbox" name="personvern" id="" value="accept" required>  
+                <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
+              </div>
+            </div>
+          </form>    
+        </section>
+      </div>
     </Brief>
     <section class="employees">
       {employees.map(person => <Person person={person} />)}
@@ -129,6 +134,11 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   .brief {
     max-width: 64ch;
   }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 
   main {
     width: var(--container-width);
@@ -137,8 +147,9 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   }
 
   dl {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 1rem;
     gap: 1rem;
     font-family:
@@ -161,15 +172,21 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   }
   input, textarea {
     width: auto;
-    padding: 16px 0;
-    border: none;
-    border-block-end: 1px solid grey;
+    padding: 1em;
     resize: none;
     font-family:
-          'Sora Variable',
-          system-ui,
-          -apple-system,
-          sans-seri;
+    'Sora Variable',
+    system-ui,
+    -apple-system,
+    sans-seri;
+  }
+  input {
+    border: none;
+    border-block-end: 1px solid grey;
+    padding: 16px 0;
+  }
+  textarea {
+    border-radius: 8px;
   }
 
   input:focus {
