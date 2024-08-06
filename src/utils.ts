@@ -74,3 +74,17 @@ export default function formatHumanDate(date: Date) {
     day: "numeric",
   });
 }
+
+export interface ImageData {width: number, height: number};
+
+export function scaleImage(image: ImageData, maxWidth: number, maxRatio: number): ImageData {
+  if (image.width > maxWidth) {
+    const ratio = image.width/image.height < maxRatio ? maxRatio : image.width/image.height;
+    const width = maxWidth;
+    const height = Math.round(width/ratio);
+
+    return {width, height};
+  } else {
+    return image;  
+  }
+}
