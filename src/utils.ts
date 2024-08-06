@@ -75,16 +75,26 @@ export default function formatHumanDate(date: Date) {
   });
 }
 
-export interface ImageData {width: number, height: number};
+export interface ImageData {
+  width: number;
+  height: number;
+}
 
-export function scaleImage(image: ImageData, maxWidth: number, maxRatio: number): ImageData {
+export function scaleImage(
+  image: ImageData,
+  maxWidth: number,
+  maxRatio: number,
+): ImageData {
   if (image.width > maxWidth) {
-    const ratio = image.width/image.height < maxRatio ? maxRatio : image.width/image.height;
+    const ratio =
+      image.width / image.height < maxRatio
+        ? maxRatio
+        : image.width / image.height;
     const width = maxWidth;
-    const height = Math.round(width/ratio);
+    const height = Math.round(width / ratio);
 
-    return {width, height};
+    return { width, height };
   } else {
-    return image;  
+    return image;
   }
 }
