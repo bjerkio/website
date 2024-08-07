@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXT_BRANCH: simenandre/add-workflow-for-staging
+      NEXT_BRANCH: next
 
     steps:
       - name: Checkout 🛎️
@@ -68,10 +68,8 @@ jobs:
         id: branch-names
         uses: tj-actions/branch-names@v8
 
-      - run: echo "${{ steps.branch-names.outputs.current_branch }} == ${{ env.NEXT_BRANCH }}"
-
       - name: Deploy
-        if: ${{ steps.branch-names.outputs.current_branch != env.NEXT_BRANCH }}
+        if: ${{ steps.branch-names.outputs.current_branch == env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -82,7 +80,7 @@ jobs:
           target: next
 
       - name: Deploy to next.bjerk.io
-        if: ${{ steps.branch-names.outputs.current_branch == env.NEXT_BRANCH }}
+        if: ${{ steps.branch-names.outputs.current_branch != env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -90,5 +88,5 @@ jobs:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
           expires: 30d
-          channelId: ${{ steps.branch-names.outputs.branchName }}
+          channelID: ${{ steps.branch-names.outputs.current_branch }} 
           target: next
