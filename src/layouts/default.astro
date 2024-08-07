@@ -32,12 +32,12 @@ export type Props = {
    */
   headline?: string;
 
-    /**
+  /**
    * The heading on the page next to headline. Should be longer than headline.
    *
    * @default title
    */
-   heading?: string;
+  heading?: string;
 
   /**
    * The heading on the page next to headline. Should be longer than headline.
@@ -272,7 +272,7 @@ const canonical = new URL(path, Astro.site);
         border-width: 2px;
         border-color: hsl(var(--green-base) 75%);
         text-decoration: none;
-        background-color: hsl(var(--green-base) 75%);
+        background-color: white;
         width: fit-content;
       }
       .primary:hover {
@@ -343,6 +343,33 @@ const canonical = new URL(path, Astro.site);
         background-color: hsl(var(--blue-base) 95%);
         padding: 16px 1em;
         background-color: white;
+      }
+
+      input,
+      textarea {
+        width: auto;
+        padding: 1em;
+        resize: none;
+        font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
+        transition: all 0.5s ease;
+        max-width: 60ch;
+      }
+      input {
+        border: none;
+        border-block-end: 1px solid grey;
+        padding: 16px 0;
+      }
+      textarea {
+        border-radius: 8px;
+      }
+
+      input:focus {
+        background-color: hsl(var(--blue-base) 95%);
+        padding: 16px 1em;
       }
 
       @media (hover) {
