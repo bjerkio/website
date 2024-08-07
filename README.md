@@ -32,6 +32,18 @@ To start the development server, run:
 pnpm dev
 ```
 
+## Deploying to next branches
+
+Next branches are development channels for this website. There is a permanent
+next website available at https://next.bjerk.io/. This website is deployed when
+pushing to the [`next`](https://github.com/bjerkio/website/tree/next) branch.
+
+You can also deploy a temporary next website by pushing to a branch named `next-<name>`.
+The URL for that branch will be available in the GitHub Actions logs.
+
+The `next` branch is kept update to date with `main` branches with an auto update
+workflow.
+
 ## Legacy
 
 This website has been refactored many times, the latest legacy is based on
