@@ -68,7 +68,7 @@ jobs:
         id: branch-names
         uses: tj-actions/branch-names@v8
 
-      - name: Deploy
+      - name: Deploy to next.bjerk.io
         if: ${{ steps.branch-names.outputs.current_branch == env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -79,7 +79,7 @@ jobs:
           channelId: live
           target: next
 
-      - name: Deploy to next.bjerk.io
+      - name: Deploy
         if: ${{ steps.branch-names.outputs.current_branch != env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
