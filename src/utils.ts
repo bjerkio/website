@@ -75,7 +75,7 @@ export default function formatHumanDate(date: Date) {
   });
 }
 
-export class ImageData {
+export class ImageSize {
   width: number;
   height: number;
   scaledWidth: number;
