@@ -102,18 +102,12 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
             Send oss en melding
           </p>
           <form action="">
+            <div class="identity">
+              <input placeholder="E-postadresse" type="text" name="name" id="name" required />
+            </div>
             <div class="issue">
               <textarea placeholder="Hva dreier deg seg om?" name="text" id="text" rows="5" required />
-            </div>
-            <div class="identity">
-              <input placeholder="Navn eller e-postadresse" type="text" name="name" id="name" required />
-              <input type="submit" value="Trykk meg" id="submit">
-            </div>
-            <div class="gdpr">
-              <div class="accept">
-                <input type="checkbox" name="personvern" id="" value="accept" required>  
-                <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
-              </div>
+              <input type="submit" value="Send inn" id="submit">
             </div>
           </form>    
         </section>
@@ -182,6 +176,7 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
     -apple-system,
     sans-seri;
     transition: all 0.5s ease;
+    max-width: 60ch;
   }
   input {
     border: none;
@@ -199,27 +194,27 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2em;
   }
   form .identity {
     display: grid;
-    grid-template-columns: 3fr 1fr;
     gap: 1rem;
   }
   form .issue {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   form #submit {
     font-size: 1rem;
     padding: 0.25rem 1rem;
-    margin: 4px;
     border-radius: 16px;
     border: solid;
     border-width: 2px;
     border-color: hsl(var(--green-base) 75%);
     text-decoration: none;
     background-color: white;
+    width: fit-content;
   }
   form #submit:hover {
     background-color: hsl(var(--green-base) 75%);
@@ -227,21 +222,6 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   form #submit:active {
     border-color: hsl(var(--green-base) 55%);
     background-color: hsl(var(--green-base) 55%);
-  }
-  form .gdpr {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  form .accept {
-    display: flex;
-    flex-grow: 2;
-    gap: 0.5em;
-  }
-  form .accept * {
-    max-width: 60ch;
-    font-size: 0.75rem;
-    margin: 0.5em 0;
   }
   .employees {
     display: grid;
