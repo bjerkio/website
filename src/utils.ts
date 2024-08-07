@@ -74,31 +74,3 @@ export default function formatHumanDate(date: Date) {
     day: "numeric",
   });
 }
-
-export class ImageSize {
-  width: number;
-  height: number;
-  scaledWidth: number;
-  scaledHeight: number;
-
-  constructor(width: number, height: number) {
-    this.width = width;
-    this.height = height;
-    this.scaledWidth = width;
-    this.scaledHeight = height;
-  }
-
-  scaleImage(maxWidth: number, maxRatio: number) {
-    if (this.width > maxWidth) {
-      const ratio =
-        this.width / this.height < maxRatio
-          ? maxRatio
-          : this.width / this.height;
-      const width = maxWidth;
-      const height = Math.round(width / ratio);
-
-      this.scaledWidth = width;
-      this.scaledHeight = height;
-    }
-  }
-}
