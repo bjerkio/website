@@ -62,14 +62,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: promote/main-to-next
-          title: 'Promote changes in main → next'
-          body: |
-            This PR promotes changes from the main branch to the next branch.
-
-            It is created automatically by the GitHub Actions workflow.
-
-            **PS!** This should not be squashed or rebased, as it will be used to merge changes back to main.
+          branch: next-promotion
 
   build:
     name: Build and Deploy
