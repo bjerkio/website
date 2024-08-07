@@ -5,8 +5,8 @@ on:
   push:
     branches:
       - simenandre/add-workflow-for-staging
-      - dev
-      - dev/**
+      - next
+      - next-*
 
 permissions:
   contents: read
@@ -67,5 +67,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
-          expires: 90d
           projectId: bjerk-io
+          # Use branch name as channel ID
+          channelId: ${{ github.ref }}
