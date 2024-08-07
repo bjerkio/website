@@ -246,7 +246,7 @@ const canonical = new URL(path, Astro.site);
       }
 
       .primary {
-        font-size: 1em;
+        font-size: 1rem;
         padding: 0.25rem 1rem;
         border-radius: 16px;
         border: solid;
@@ -255,6 +255,13 @@ const canonical = new URL(path, Astro.site);
         text-decoration: none;
         background-color: white;
         width: fit-content;
+      }
+      .primary:hover {
+        background-color: hsl(var(--green-base) 75%);
+      }
+      .primary:active {
+        border-color: hsl(var(--green-base) 55%);
+        background-color: hsl(var(--green-base) 55%);
       }
 
       body *::-webkit-scrollbar {
