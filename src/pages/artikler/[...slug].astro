@@ -2,7 +2,7 @@
 import { getCollection, getEntries } from 'astro:content';
 import Layout from '@layouts/default.astro';
 import { Image } from 'astro:assets';
-import formatHumanDate, { scaleImage, type ImageData } from '../../utils';
+import formatHumanDate, { ImageData } from '../../utils';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('post');
@@ -27,11 +27,9 @@ const authorNames = authors
   .join(', ');
 const humanDate = formatHumanDate(entry.data.date);
 
-const imageData: ImageData = {
-  width: entry.data.image.width, 
-  height: entry.data.image.height
-}
-const scaledImage = scaleImage(imageData, 1070, 4/3);
+const image = entry.data.image;
+const imageSize = new ImageData(image.width, image.height);
+imageSize.scaleImage(1070, 4/3);
 
 const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 ---
@@ -113,9 +111,9 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
         )
       }
       <Image
-        src={entry.data.image}
-        width={scaledImage.width}
-        height={scaledImage.height}
+        src={image}
+        width={imageSize.scaledWidth}
+        height={imageSize.scaledHeight}
         alt={entry.data.title}
         class="hero"
       />
