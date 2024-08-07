@@ -1,4 +1,4 @@
-name: On Push to Staging
+name: On Push to Next
 
 on:
   workflow_dispatch:
@@ -61,6 +61,10 @@ jobs:
       - name: Build 🔨
         run: pnpm build
 
+      - name: Get branch names.
+        id: branch-names
+        uses: tj-actions/branch-names@v8
+
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -69,4 +73,4 @@ jobs:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
           # Use branch name as channel ID
-          channelId: ${{ github.ref }}
+          channelId: ${{ steps.branch-names.outputs.current_branch }}
