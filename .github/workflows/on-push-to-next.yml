@@ -65,6 +65,8 @@ jobs:
         id: branch-names
         uses: tj-actions/branch-names@v8
 
+
+
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -72,5 +74,7 @@ jobs:
           firebaseServiceAccount:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
-          # Use branch name as channel ID
-          channelId: ${{ steps.branch-names.outputs.current_branch }}
+          expires: 30d
+          # Set channelId to "live" if the branch is "next", otherwise use name of branch
+          channelId: ${{ steps.branch-names.outputs.branchName == 'simenandre/add-workflow-for-staging' && 'live' || steps.branch-names.outputs.branchName }}
+          target: next
