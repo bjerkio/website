@@ -83,8 +83,8 @@ export class ImageSize {
 
   constructor(width: number, height: number) {
     this.width = width;
-    this.scaledWidth = width;
     this.height = height;
+    this.scaledWidth = width;
     this.scaledHeight = height;
   }
 
