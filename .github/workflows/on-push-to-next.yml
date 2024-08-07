@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - simenandre/add-workflow-for-staging
       - next
       - next-*
 
