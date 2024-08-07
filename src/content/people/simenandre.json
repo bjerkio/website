@@ -1,9 +1,9 @@
 {
   "givenName": "Simen A. W.",
   "familyName": "Olsen",
-  "position": "Daglig leder og rådgiver",
+  "position": "Programvareutvikler, styreleder og gründer",
   "phone": "+47 95 30 80 87",
-  "email": "simen@bjerk.io",
+  "email": "so@bjerk.io",
   "image": "./simen.jpg",
   "socialMedia": [
     {
@@ -15,5 +15,5 @@
       "url": "https://github.com/simenandre"
     }
   ],
-  "photographerName": "Steffen Normark"
+  "photographerName": "Carl Oscar Petterson"
 }

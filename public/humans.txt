@@ -17,9 +17,6 @@ Location: Oslo, Norway
 Rådgiver: Oda Hennissen Wilhelmsen
 Location: Oslo, Norway
 
-Rådgiver: Noora Tuokkola
-Location: Jyväskylä, Finland
-
 /* Utviklerne */
 
 Programvareutvikler: Brage Sekse Aarset
@@ -34,6 +31,3 @@ Location: Oslo, Norway
 
 Programvareutvikler: Mats Ringstad Møglestue
 Location: Oslo, Norway
-
-Programvareutvikler: Simon Rugland
-Location: Tvedestrand, Norway

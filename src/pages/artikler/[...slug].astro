@@ -2,7 +2,7 @@
 import { getCollection, getEntries } from 'astro:content';
 import Layout from '@layouts/default.astro';
 import { Image } from 'astro:assets';
-import formatHumanDate from '../../utils'
+import formatHumanDate from '../../utils';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('post');
@@ -108,7 +108,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
       }
       <Image
         src={entry.data.image}
-        width={1000}
+        width={1070}
         alt={entry.data.title}
         class="hero"
       />

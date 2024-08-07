@@ -2,6 +2,10 @@
 layout: '@layouts/page.astro'
 title: 'Lær om Bjerk – Vi skaper digitale produkter'
 headline: Vi lager digitale produkter
+heading: Vi står opp hver dag for å forbedre og forenkle måten mennesker lærer, tenker, jobber og kommuniserer på. Bjerk samler folk med kompetanse innen programvareutvikling, brukeropplevelse og produktledelse for å gjøre verden til et bedre sted.
+image: '/assets/about-bjerk.jpg'
+imageAlt: 'En mann, og to kvinner: Christina, Thomas og Sandra.'
+imageTitle: 'Fra venstre: Christina, Thomas og Sandra.'
 path: /om
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
@@ -12,11 +16,6 @@ socialMediaDescription:
   digitale produkter og tjenester for mennesker.
 ---
 
-Vi står opp hver dag for å forbedre og forenkle måten mennesker lærer, tenker,
-jobber og kommuniserer på. Bjerk samler folk med kompetanse innen
-programvareutvikling, brukeropplevelse og produktledelse for å gjøre verden til
-et bedre sted.
-
 Vi tror at gjennom å lage digitale produkter, så kan vi skape positive effekter
 for mennesker.
 
@@ -25,8 +24,6 @@ en forskjell og bruker teknologi for å utrette det. Vi motiveres av å hjelpe
 folk, slik at de kan fokusere på de viktige tingene.
 
 - [Sjekk ut våre arbeider](/arbeid)
-
-![En mann, og to kvinner: Christina, Thomas og Sandra.](@assets/about-bjerk.jpg 'Fra venstre: Christina, Thomas og Sandra.')
 
 ## Hva gjør Bjerk?
 

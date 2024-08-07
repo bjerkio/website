@@ -7,6 +7,12 @@
       "cleanUrls": true
     },
     {
+      "target": "next",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true
+    },
+    {
       "target": "prod",
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
@@ -64,7 +70,7 @@
           "headers": [
             {
               "key": "Content-Security-Policy",
-              "value": "script-src 'self'"
+              "value": "script-src 'self' https://gc.zgo.at; connect-src https://bjerk.goatcounter.com/count"
             },
             {
               "key": "X-Frame-Options",

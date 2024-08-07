@@ -1,74 +1,97 @@
 ---
 import type { MarkdownLayoutProps } from 'astro';
 import Layout, { type Props as DefaultLayoutProps } from './default.astro';
+import Brief from '@components/brief.astro';
+import Image from 'astro/components/Image.astro';
 
 export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
 const { frontmatter } = Astro.props;
 ---
 
-<Layout {...frontmatter}>
+<Layout 
+  {...frontmatter}
+>
   <main>
-    {
-      frontmatter.headline && (
-        <aside>
-          <h1>{frontmatter.headline}</h1>
-        </aside>
-      )
-    }
-    <section class="main-section">
+    <article>
+      <div class="hero">
+        { frontmatter.headline && (
+          <Brief 
+          title={frontmatter.headline}>
+            {
+              frontmatter.heading && (
+                <p>
+                  {frontmatter.heading}
+                </p>
+              )
+            }
+        </Brief>  
+        )}
+        { frontmatter.image && (
+                  <Image 
+        src={frontmatter.image} 
+        alt={frontmatter.imageAlt}
+        width={2140}
+        height={2140}
+        />  
+        )}
+      </div>
       <slot />
-    </section>
+    </article>
   </main>
 </Layout>
 
 <style>
   main {
-    margin-block: 2rem;
-    width: min(90ch, 100% - 4rem);
+    width: var(--container-width);
     margin-inline: auto;
-
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
+  article {
+    /* font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif; */
+    line-height: 1.6;
+    letter-spacing: -0.003em;
 
-  :global(.main-section > :first-child) {
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 1fr)
+      minmax(auto, 60ch)
+      minmax(auto, 1fr);
+  }
+  article :global(> p:first-of-type strong) {
     font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
   }
 
-  aside {
-    max-width: 300px;
-    /* fill the remaining space */
-    flex: 1;
+  article :global(> p:first-of-type) {
+    margin-top: 2em;
   }
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-block: 0.7rem;
-    text-wrap: pretty;
+  article :global(> p) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
-
-  section {
-    max-width: 55ch;
+  article :global(ul > li) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
-
-  main :global(img) {
-    /* TODO: fix this ugly hack */
-    max-width: 140%;
-    float: right;
+  article :global(> pre) {
+    padding: 1rem;
+  }
+  article :global(> h2) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  article > .hero {
+    grid-column: 1 / -1;
+  }
+  article :global(> *) {
+    grid-column: 2;
+  }
+  article :global(img) {
+    width: 100%;
     height: auto;
-    margin-block: 2rem;
+  }
+  article :global(.hero) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 
-  @media (max-width: 994px) {
-    main :global(img) {
-      max-width: 100%;
-      float: none;
-      margin-block: 1rem;
-    }
-  }
 </style>

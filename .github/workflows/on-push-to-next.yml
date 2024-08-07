@@ -1,13 +1,11 @@
-name: On Push
+name: On Push to Next
 
 on:
-  schedule:
-    # Schedule for every day at 12:00 CEST
-    - cron: '0 10 * * *'
   workflow_dispatch:
   push:
     branches:
-      - main
+      - next
+      - next-*
 
 permissions:
   contents: read
@@ -15,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: 'next-pages'
   cancel-in-progress: true
 
 jobs:
@@ -40,33 +38,12 @@ jobs:
 
       - name: Lint 🔨
         run: pnpm lint
- 
-  update-next:
-    name: Update next
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-        with:
-          ref: next
-
-      - name: Reset promotion branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: next-promotion
-
   build:
     name: Build and Deploy
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_BRANCH: next
 
     steps:
       - name: Checkout 🛎️
@@ -86,12 +63,29 @@ jobs:
       - name: Build 🔨
         run: pnpm build
 
-      - name: Upload website
+      - name: Get branch names.
+        id: branch-names
+        uses: tj-actions/branch-names@v8
+
+      - name: Deploy to next.bjerk.io
+        if: ${{ steps.branch-names.outputs.current_branch == env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
-          channelId: live
-          target: prod
           projectId: bjerk-io
+          channelId: live
+          target: next
+
+      - name: Deploy
+        if: ${{ steps.branch-names.outputs.current_branch != env.NEXT_BRANCH }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount:
+            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          projectId: bjerk-io
+          expires: 30d
+          channelID: ${{ steps.branch-names.outputs.current_branch }} 
+          target: next
