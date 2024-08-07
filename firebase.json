@@ -7,6 +7,12 @@
       "cleanUrls": true
     },
     {
+      "target": "next",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true
+    },
+    {
       "target": "prod",
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],

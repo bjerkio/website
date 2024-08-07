@@ -5,12 +5,9 @@
   "targets": {
     "bjerk-io": {
       "hosting": {
-        "dev": [
-          "dev-bjerk-io"
-        ],
-        "prod": [
-          "bjerk-io"
-        ]
+        "dev": ["bjerk-io"],
+        "next": ["next-bjerk"],
+        "prod": ["bjerk-io"]
       }
     }
   }
