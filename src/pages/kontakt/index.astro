@@ -105,7 +105,7 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
             </div>
             <div class="issue">
               <textarea placeholder="Hva dreier deg seg om?" name="text" id="text" rows="5" required />
-              <input type="submit" value="Send inn" id="submit">
+              <button class="primary" type="submit" id="submit">Send inn</button>
             </div>
           </form>    
         </section>
@@ -199,20 +199,9 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
     gap: 1rem;
   }
   form .issue {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
-  }
-  form #submit {
-    font-size: 1rem;
-    padding: 0.25rem 1rem;
-    border-radius: 16px;
-    border: solid;
-    border-width: 2px;
-    border-color: hsl(var(--green-base) 75%);
-    text-decoration: none;
-    background-color: white;
-    width: fit-content;
   }
   form #submit:hover {
     background-color: hsl(var(--green-base) 75%);
