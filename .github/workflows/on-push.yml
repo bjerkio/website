@@ -62,7 +62,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: next-promotion
+          branch: promote/main-to-next
           title: 'Promote changes in main → next'
           body: |
             This PR promotes changes from the main branch to the next branch.
