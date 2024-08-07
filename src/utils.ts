@@ -88,18 +88,15 @@ export class ImageData {
     this.scaledHeight = height;
   }
 
-  scaleImage(
-    maxWidth: number,
-    maxRatio: number,
-  ) {
+  scaleImage(maxWidth: number, maxRatio: number) {
     if (this.width > maxWidth) {
       const ratio =
-      this.width / this.height < maxRatio
+        this.width / this.height < maxRatio
           ? maxRatio
           : this.width / this.height;
       const width = maxWidth;
       const height = Math.round(width / ratio);
-  
+
       this.scaledWidth = width;
       this.scaledHeight = height;
     }
