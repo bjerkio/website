@@ -1,4 +1,5 @@
 ---
+import Logo from './logo.astro';
 import DiscordIcon from '~icons/ph/discord-logo-fill';
 import GitHubIcon from '~icons/ph/github-logo-fill';
 import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
@@ -6,20 +7,33 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
 
 <footer>
   <div class="container">
-    <section class="content">
+    <section class="logo">
+      <Logo />
+      <div>
+        © Bjerk 2023
+      </div>
+      <div>
+        Org. nr.: 930 334 693
+      </div>
+    </section>
+    <section class="contact">
       <p>
-        Send oss noen ord på <a href="mailto:kontoret@bjerk.io">
-          kontoret@bjerk.io
-        </a> eller ring oss på <a href="tel:+4722120512">+47 22 12 05 12</a>.
+        Arbins gate 11 
+        <br>
+        0253 Oslo
       </p>
-
+      <p>
+        <a href="mailto:kontoret@bjerk.io">
+          kontoret@bjerk.io
+        </a>
+        <br>
+        <a href="tel:+4722120512">+47 22 12 05 12</a>
+      </p>
+    </section>
       <ul class="links">
         <li><a href="/vilkar">Vilkår</a></li>
         <li><a href="/personvern">Personvernerklæring</a></li>
       </ul>
-
-      <p>Bjerk 2023 | Org. nr.: 930 334 693</p>
-    </section>
     <section class="socials">
       <a
         aria-label="Discord-server for Bjerk"
@@ -66,21 +80,25 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
 
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
-
-  .content p:first-child {
-    font-size: 1.2rem;
+  .contact p:first-child {
+    margin-top: 1.2rem;
     max-width: 30ch;
   }
-
-  .content p:last-child {
-    font-size: 0.8rem;
-    color: hsl(var(--blue-base) 70%);
+  .content {
+    height: 100%;
   }
 
+  .logo div {
+    color: hsl(var(--blue-base) 70%);
+  }
+  .logo {
+    margin-top: 1.2rem;
+  }
   .socials {
+    margin-top: 1.2rem;
     font-size: 1.7rem;
     display: flex;
     gap: 1rem;
@@ -92,10 +110,32 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
 
   .links {
     display: flex;
+    height: 100px;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-block: 1rem;
+    justify-content: space-around;
     list-style: none;
+  }
+  ul {
     padding: 0;
+    list-style-type: none;
+  }
+  @media(max-width: 767px) {
+    .container {
+      padding-block: 1rem;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .container {
+      justify-content: space-around;
+    }
+    .socials {
+      width: 100%;
+      justify-content: space-around;
+    }
   }
 </style>
