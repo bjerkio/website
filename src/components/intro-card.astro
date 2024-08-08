@@ -3,14 +3,15 @@ const { title, description} = Astro.props;
 ---
 
 <div class="card">
+  <img src="assets/big-smile.png" alt="big-smile" />
   <h2>{title}</h2>
   <p>{description}</p>
 </div>
 
 <style>
   img {
-    width: 240px;
-    height: 240px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
   }
