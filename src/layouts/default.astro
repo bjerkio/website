@@ -197,9 +197,7 @@ const canonical = new URL(path, Astro.site);
   </head>
   <body>
     <Header />
-    <div class="slot">
-      <slot />
-    </div>
+    <slot />
     {
       contactFooter && 
       <ContactFooter />
@@ -238,7 +236,7 @@ const canonical = new URL(path, Astro.site);
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
       }
-      .slot {
+      main {
         margin-bottom: 4rem;
       }
 
