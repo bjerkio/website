@@ -3,6 +3,7 @@ import type { WithContext, Thing } from "schema-dts";
 import "@fontsource-variable/sora";
 import { jsonLd } from "./json-ld";
 import Header from "@components/header.astro";
+import ContactFooter from "@components/contact-footer.astro";
 import Footer from "@components/footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -86,6 +87,11 @@ export type Props = {
   articleAuthor?: string;
 
   /**
+   * Set to false for pages that shouldn't have a contact form at the bottom.
+   */
+  contactFooter?: boolean;
+
+  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -112,6 +118,7 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
+  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -191,6 +198,10 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
+    {
+      contactFooter && 
+      <ContactFooter />
+    }
     <Footer />
     <style is:global>
       :root {
@@ -210,7 +221,6 @@ const canonical = new URL(path, Astro.site);
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
-
       html {
         font-family:
           'Sora Variable',
@@ -225,6 +235,9 @@ const canonical = new URL(path, Astro.site);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
+      }
+      main {
+        margin-bottom: 4rem;
       }
 
       body {
@@ -255,7 +268,7 @@ const canonical = new URL(path, Astro.site);
         border-width: 2px;
         border-color: hsl(var(--green-base) 75%);
         text-decoration: none;
-        background-color: white;
+        background-color: hsl(var(--green-base) 75%);
         width: fit-content;
       }
       .primary:hover {
@@ -306,6 +319,7 @@ const canonical = new URL(path, Astro.site);
           sans-seri;
         transition: all 0.5s ease;
         max-width: 60ch;
+        background-color: transparent;
       }
       input {
         border: none;
@@ -315,10 +329,11 @@ const canonical = new URL(path, Astro.site);
       textarea {
         border-radius: 8px;
       }
-
+      textarea:focus,
       input:focus {
         background-color: hsl(var(--blue-base) 95%);
         padding: 16px 1em;
+        background-color: white;
       }
 
       @media (hover) {

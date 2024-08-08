@@ -1,0 +1,88 @@
+---
+import ContactForm from '@components/contact-form.astro';
+---
+
+<section class="contact-footer">
+  <div class="container">
+    <img src="/assets/about-bjerk.jpg" alt="Bilde av Bjerk" />
+    <section class="content">
+        <h2>Vi vil gjerne høre fra deg!</h2>
+        <p>
+          Uansett om du har en idé som vil forandre verden, eller om det er en
+          liten sak som irriterer deg i hverdagen, så er vi like ivrige.
+        </p>
+        <p>Ta kontakt med oss for en hyggelig kaffeprat!</p>
+        <ContactForm />
+    </section>
+  </div>
+</section>
+
+<style>
+  .contact-footer {
+    background-color: hsl(var(--blue-base) 95%);
+  }
+
+  a {
+    --link-color: hsl(var(--blue-base) 50%);
+  }
+
+  img {
+    max-width: 550px;
+    border-radius: 1rem;
+  }
+
+  @media (hover) {
+    a:hover {
+      --link-color: hsl(var(--blue-base) 25%);
+    }
+  }
+
+  .container {
+    width: var(--container-width);
+    margin-inline: auto;
+    padding-block: 4rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    flex-grow: 1;
+    max-width: 60ch;
+  }
+
+  .content p:last-child {
+    font-size: 0.8rem;
+  }
+
+  .socials {
+    font-size: 1.7rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .socials a {
+    color: white;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  @media (max-width: 1024px) {
+    .container {
+      display: flex;
+      gap: 2rem;
+    }
+    img {
+      display: none;
+    }
+  }
+</style>
