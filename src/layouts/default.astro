@@ -191,8 +191,13 @@ const canonical = new URL(path, Astro.site);
   </head>
   <body>
     <Header />
-    <slot />
-    <ContactFooter />
+    <div class="slot">
+      <slot />
+    </div>
+    {
+      path !== "/kontakt" && 
+      <ContactFooter />
+    }
     <Footer />
     <style is:global>
       :root {
@@ -212,7 +217,6 @@ const canonical = new URL(path, Astro.site);
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
-
       html {
         font-family:
           'Sora Variable',
@@ -227,6 +231,9 @@ const canonical = new URL(path, Astro.site);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
+      }
+      .slot {
+        margin-bottom: 4rem;
       }
 
       body {
