@@ -1,19 +1,18 @@
 ---
 import ContactForm from '@components/contact-form.astro';
 ---
+
 <section class="contact-footer">
   <div class="container">
+    <img src="/assets/about-bjerk.jpg" alt="Bilde av Bjerk" />
     <section class="content">
-      <h2>
-        Vi vil gjerne høre fra deg!
-      </h2>
-      <p>
-        Uansett om du har en idé som vil forandre verden, eller om det er en liten sak som irriterer deg i hverdagen, så er vi like ivrige.
-      </p>
-      <p>
-        Ta kontakt med oss for en hyggelig kaffeprat!
-      </p>
-      <ContactForm />
+        <h2>Vi vil gjerne høre fra deg!</h2>
+        <p>
+          Uansett om du har en idé som vil forandre verden, eller om det er en
+          liten sak som irriterer deg i hverdagen, så er vi like ivrige.
+        </p>
+        <p>Ta kontakt med oss for en hyggelig kaffeprat!</p>
+        <ContactForm />
     </section>
   </div>
 </section>
@@ -28,6 +27,11 @@ import ContactForm from '@components/contact-form.astro';
     --link-color: hsl(var(--blue-base) 50%);
   }
 
+  img {
+    max-width: 550px;
+    border-radius: 1rem;
+  }
+
   @media (hover) {
     a:hover {
       --link-color: hsl(var(--blue-base) 25%);
@@ -39,9 +43,10 @@ import ContactForm from '@components/contact-form.astro';
     margin-inline: auto;
     padding-block: 4rem;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
   }
 
@@ -49,20 +54,9 @@ import ContactForm from '@components/contact-form.astro';
     flex-grow: 1;
     max-width: 60ch;
   }
-  
+
   .content p:last-child {
     font-size: 0.8rem;
-  }
-
-  input {
-    padding: 16px 0;
-    background-color: hsl(var(--blue-base) 95%);
-    border: none;
-    border-block-end: 1px solid grey;
-  }
-
-  input:focus {
-    background-color: hsl(var(--blue-base) 95%);
   }
 
   .socials {
@@ -83,48 +77,13 @@ import ContactForm from '@components/contact-form.astro';
     list-style: none;
     padding: 0;
   }
-
-  form .identity {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+  @media (max-width: 1024px) {
+    .container {
+      display: flex;
+      gap: 2rem;
+    }
+    img {
+      display: none;
+    }
   }
-  form .issue {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  form #submit {
-    font-size: 1rem;
-    padding: 0.25rem 1rem;
-    border-radius: 16px;
-    border: solid;
-    border-width: 2px;
-    border-color: hsl(var(--green-base) 75%);
-    text-decoration: none;
-
-  }
-  form #submit:hover {
-    background-color: hsl(var(--green-base) 75%);
-  }
-  form #submit:active {
-    border-color: hsl(var(--green-base) 55%);
-    background-color: hsl(var(--green-base) 55%);
-  }
-  form .buttons {
-    padding-top: 2rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  form .accept {
-    display: flex;
-    flex-grow: 2;
-    gap: 0.5em;
-  }
-  form .accept * {
-    max-width: 60ch;
-    font-size: 0.75rem;
-    margin: 0.5em 0;
-  }
-
 </style>
