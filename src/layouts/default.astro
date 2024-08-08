@@ -87,6 +87,11 @@ export type Props = {
   articleAuthor?: string;
 
   /**
+   * Set to false for pages that shouldn't have a contact form at the bottom.
+   */
+  contactFooter?: boolean;
+
+  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -113,6 +118,7 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
+  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -192,7 +198,10 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
-    <ContactFooter />
+    {
+      contactFooter && 
+      <ContactFooter />
+    }
     <Footer />
     <style is:global>
       :root {
@@ -212,7 +221,6 @@ const canonical = new URL(path, Astro.site);
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
-
       html {
         font-family:
           'Sora Variable',
@@ -227,6 +235,9 @@ const canonical = new URL(path, Astro.site);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
+      }
+      main {
+        margin-bottom: 4rem;
       }
 
       body {
