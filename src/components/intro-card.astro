@@ -10,10 +10,9 @@ const { title, description} = Astro.props;
 
 <style>
   img {
-    width: 120px;
-    height: 120px;
+    width: 220px;
+    border-radius: 1em;
     object-fit: cover;
-    border-radius: 50%;
   }
   .card {
     display: flex;
@@ -22,6 +21,6 @@ const { title, description} = Astro.props;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--blue-base) 95%);
   }
 </style>
