@@ -32,12 +32,12 @@ export type Props = {
    */
   headline?: string;
 
-    /**
+  /**
    * The heading on the page next to headline. Should be longer than headline.
    *
    * @default title
    */
-   heading?: string;
+  heading?: string;
 
   /**
    * The title for social media platforms. The ideal length is approximately 47 characters.
@@ -249,6 +249,25 @@ const canonical = new URL(path, Astro.site);
         color: #1d1d1d;
       }
 
+      .primary {
+        font-size: 1rem;
+        padding: 0.25rem 1rem;
+        border-radius: 16px;
+        border: solid;
+        border-width: 2px;
+        border-color: hsl(var(--green-base) 75%);
+        text-decoration: none;
+        background-color: white;
+        width: fit-content;
+      }
+      .primary:hover {
+        background-color: hsl(var(--green-base) 75%);
+      }
+      .primary:active {
+        border-color: hsl(var(--green-base) 55%);
+        background-color: hsl(var(--green-base) 55%);
+      }
+
       body *::-webkit-scrollbar {
         background-color: hsl(var(--blue-base) 90%);
       }
@@ -275,6 +294,33 @@ const canonical = new URL(path, Astro.site);
         text-decoration-skip-ink: none;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.125em;
+      }
+
+      input,
+      textarea {
+        width: auto;
+        padding: 1em;
+        resize: none;
+        font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
+        transition: all 0.5s ease;
+        max-width: 60ch;
+      }
+      input {
+        border: none;
+        border-block-end: 1px solid grey;
+        padding: 16px 0;
+      }
+      textarea {
+        border-radius: 8px;
+      }
+
+      input:focus {
+        background-color: hsl(var(--blue-base) 95%);
+        padding: 16px 1em;
       }
 
       @media (hover) {

@@ -1,0 +1,37 @@
+---
+---
+
+<form action="">
+  <div>
+    <input
+      placeholder="E-postadresse"
+      type="text"
+      name="name"
+      id="name"
+      required
+    />
+  </div>
+  <div>
+    <textarea
+      placeholder="Hva dreier deg seg om?"
+      name="text"
+      id="text"
+      rows="5"
+      required
+    >
+    </textarea>
+    <button class="primary" type="submit" id="submit">Send inn</button>
+  </div>
+</form>
+
+<style>
+  form,
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  form {
+    gap: 2rem;
+  }
+</style>
