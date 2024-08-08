@@ -87,6 +87,11 @@ export type Props = {
   articleAuthor?: string;
 
   /**
+   * Set to false for pages that shouldn't have a contact form at the bottom.
+   */
+  contactFooter?: boolean;
+
+  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -113,6 +118,7 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
+  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -195,7 +201,7 @@ const canonical = new URL(path, Astro.site);
       <slot />
     </div>
     {
-      path !== "/kontakt" && 
+      contactFooter && 
       <ContactFooter />
     }
     <Footer />
