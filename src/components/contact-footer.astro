@@ -1,3 +1,6 @@
+---
+import ContactForm from '@components/contact-form.astro';
+---
 <section class="contact-footer">
   <div class="container">
     <section class="content">
@@ -10,22 +13,7 @@
       <p>
         Ta kontakt med oss for en hyggelig kaffeprat!
       </p>
-      <form action="">
-        <div class="identity">
-          <input placeholder="Fullt navn" type="text" name="name" id="name" required />
-          <input placeholder="E-postadresse" type="email" name="email" id="email" required />
-        </div>
-        <div class="issue">
-          <input placeholder="Hva dreier deg seg om?" type="text" name="text" id="text" required />
-        </div>
-        <div class="buttons">
-          <div class="accept">
-            <input type="checkbox" name="personvern" id="" value="I AM HERE ok" required>  
-            <p>Jeg bekrefter at jeg har lest og akseptert vår <a href="/personvern" target="_blank">personvern­erklæring</a>.</p>
-          </div>
-          <input type="submit" value="Trykk meg" id="submit">
-        </div>
-      </form>
+      <ContactForm />
     </section>
   </div>
 </section>
@@ -59,6 +47,7 @@
 
   .content {
     flex-grow: 1;
+    max-width: 60ch;
   }
   
   .content p:last-child {
