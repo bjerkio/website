@@ -1,16 +1,11 @@
----
-const { title, description, flowDirection} = Astro.props;
----
-
 <div class="card">
   <img src="assets/intro-card.png" alt="big-smile" />
   <div class="intro-content">
-    <h2>{title}</h2>
-    <p>{description}</p>
+    <slot />
   </div>
 </div>
 
-<style define:vars={{ flowDirection }}>
+<style>
   img {
     width: 240px;
     border-radius: 1em;
@@ -18,13 +13,18 @@ const { title, description, flowDirection} = Astro.props;
   }
   .card {
     display: flex;
-    flex-direction: var(--flowDirection);
     align-items: center;
     padding: 20px;
     border-radius: 10px;
     background-color: hsl(var(--blue-base) 95%);
     gap: 2rem;
     padding: 2em;
+  }
+  .card:nth-child(odd) {
+    flex-direction: row;
+  }
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
   }
   .intro-content {
     display: flex;
