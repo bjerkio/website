@@ -1,25 +1,33 @@
----
-const { title, description} = Astro.props;
----
-
 <div class="card">
   <img src="assets/intro-card.png" alt="big-smile" />
-  <h2>{title}</h2>
-  <p>{description}</p>
+  <div class="intro-content">
+    <slot />
+  </div>
 </div>
 
 <style>
   img {
-    width: 100%;
+    width: 240px;
     border-radius: 1em;
     object-fit: cover;
   }
   .card {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
     background-color: hsl(var(--blue-base) 95%);
+    gap: 2rem;
+    padding: 2em;
+  }
+  .card:nth-child(odd) {
+    flex-direction: row;
+  }
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
   }
 </style>
