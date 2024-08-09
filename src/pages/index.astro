@@ -62,14 +62,20 @@ const introCards = [
       </a>
     </div>
     <Image src={LandingImage} alt="Abstract art image" class="landing-image" />
-    <section class="intro-cards">
-      {introCards.map((item) => (
-      <IntroCard 
-        title={item.title}
-        description={item.description}
-      />
-      ))}
-    </section>
+    <section class="intro">
+      <p>
+        Bjerk tilbyr skreddersydde digitale løsninger for bedrifter. Vi fyller gapet etterlatt
+        av kommersielle programvareløsninger ved å forbedre eksisterende systemer, sy ulike systemer
+        sammen eller utvikle helt nye løsninger. I grove trekk jobber vi ofte med:
+      </p>
+      <div class="intro-cards">
+        {introCards.map((item) => (
+          <IntroCard 
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
     </section>
   </main>
 </Layout>
@@ -90,11 +96,18 @@ const introCards = [
     justify-content: center;
     gap: 1rem;
   }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro p {
+  }
+
   .intro-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    margin-block-start: 2rem;
   }
 
   .landing-image {
