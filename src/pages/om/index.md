@@ -16,8 +16,13 @@ socialMediaDescription:
   digitale produkter og tjenester for mennesker.
 ---
 
-Vi tror at gjennom å lage digitale produkter, så kan vi skape positive effekter
-for mennesker.
+## Vår historie
+
+Siden oppstarten i 2009 har Bjerk jobbet med en klar visjon: å skape en trygg 
+arbeidsplass som utgjør en forskjell gjennom bruk av teknologi. Vi motiveres av 
+å hjelpe folk og bedrifter til å fokusere på det som virkelig betyr noe, og 
+bruker vår ekspertise til å skape løsninger som gir positive effekter for våre 
+kunder.
 
 ## Våre tjenester
 
@@ -26,7 +31,33 @@ spesifikke behov. Vi fyller gapet etterlatt av standariserte
 programvareløsninger ved å forbedre eksisterende systemer, sy ulike systemer 
 sammen eller utvikle helt nye løsninger.
 
-## Hva gjør Bjerk?
+
+Lurer du på hva dette faktisk innebærer? [Se noen av våre arbeider her](/arbeid)
+
+## Prinsipper vi mener er viktige for å lykkes
+
+Vi har en pragmatisk tilnærming til teknologi, og velger alltid de beste 
+løsningene for våre kunder basert på deres spesifikke behov. Våre rådgivere 
+og utviklere jobber tett sammen for å sikre at hver løsning er optimal for 
+hver spesifikk situasjon. For å ha en objektiv tilnærming til prosjektene, 
+søker vi i aller største grad å være “teknologi-agnostikere”. Det vil si at 
+vi ikke har noen overbevisning om at en type teknologi eller et 
+programmeringsspråk er bedre enn andre, men at vi finner den beste løsningen 
+for hver enkelt situasjon.
+
+### Kunden og brukerne i sentrum
+
+### Tetta samarbeid
+
+### Et kompetent og motivert utviklingsteam
+
+### Effekt og Pragmatikk
+
+### Sikkerhet
+
+### Transparens
+
+### Funksjonalitet og brukervennlighet
 
 ## Hvor starter vi?
 
