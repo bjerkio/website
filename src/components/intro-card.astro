@@ -1,25 +1,33 @@
 ---
-const { title, description} = Astro.props;
+const { title, description, flowDirection} = Astro.props;
 ---
 
 <div class="card">
   <img src="assets/intro-card.png" alt="big-smile" />
-  <h2>{title}</h2>
-  <p>{description}</p>
+  <div class="intro-content">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </div>
 </div>
 
-<style>
+<style define:vars={{ flowDirection }}>
   img {
-    width: 100%;
+    width: 240px;
     border-radius: 1em;
     object-fit: cover;
   }
   .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--flowDirection);
     align-items: center;
     padding: 20px;
     border-radius: 10px;
     background-color: hsl(var(--blue-base) 95%);
+    gap: 2rem;
+    padding: 2em;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
   }
 </style>

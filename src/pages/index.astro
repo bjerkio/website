@@ -14,6 +14,7 @@ const introCards = [
       Se for deg en løsning som er unikt tilpasset dine behov, skaper enda bedre arbeidsflyer, og gir deg
       noe som kan skaleres og utvikle videre i takt med nye brukerbehov og endringer. Nice, ikke sant?
     `,
+    flowDirection: 'row',
   },
   {
     image: '@assets/smile.png',
@@ -23,6 +24,7 @@ const introCards = [
       alltid oppdatert data i alle systemer. Bedre datainnsamling og nøyaktig rapportering gir et solid
       grunnlag for gode beslutninger, og en konkurransefordel som vokser med bedriften din.
     `,
+    flowDirection: 'row-reverse',
   },
   {
     image: '@assets/smile.png',
@@ -32,6 +34,7 @@ const introCards = [
       nåværende systemer kan du fjerne feil, skape nødvendige integrasjoner, og rydde opp i komplisert kode.
       Dette gir deg løsninger som er tilpasset nye forretningsbehov og endringer i teknologien.
     `,
+    flowDirection: 'row',
   },
 ];
 ---
@@ -67,6 +70,7 @@ const introCards = [
       <IntroCard 
         title={item.title}
         description={item.description}
+        flowDirection={item.flowDirection}
       />
       ))}
     </section>
@@ -91,8 +95,8 @@ const introCards = [
     gap: 1rem;
   }
   .intro-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-block-start: 2rem;
   }
