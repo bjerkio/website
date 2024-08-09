@@ -63,13 +63,14 @@ const introCards = [
     </div>
     <Image src={LandingImage} alt="Abstract art image" class="landing-image" />
     <section class="intro-cards">
-      {introCards.map((item) => (
-      <IntroCard 
-        title={item.title}
-        description={item.description}
-      />
-      ))}
-    </section>
+      {
+        introCards.map(item => (
+          <IntroCard>
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </IntroCard>
+        ))
+      }
     </section>
   </main>
 </Layout>
@@ -91,8 +92,8 @@ const introCards = [
     gap: 1rem;
   }
   .intro-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-block-start: 2rem;
   }
