@@ -32,7 +32,7 @@ programvareløsninger ved å forbedre eksisterende systemer, sy ulike systemer
 sammen eller utvikle helt nye løsninger.
 
 
-Lurer du på hva dette faktisk innebærer? [Se noen av våre arbeider her](/arbeid)
+Lurer du på hva dette faktisk innebærer? [Se noen av våre arbeid her](/arbeid)
 
 ## Prinsipper vi mener er viktige for å lykkes
 
