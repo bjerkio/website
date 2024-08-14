@@ -2,7 +2,6 @@
 ---
 
 <form action="">
-  <div>
     <input
       placeholder="E-postadresse"
       type="text"
@@ -10,7 +9,6 @@
       id="name"
       required
     />
-  </div>
   <div>
     <textarea
       placeholder="Hva dreier deg seg om?"
@@ -18,8 +16,13 @@
       id="text"
       rows="5"
       required
-    >
-    </textarea>
+    />
+    <p>
+      Ved å sende inn dette skjemaet godtar du at vi lagrer og behandler
+      personopplysningene dine. Les mer om hvordan vi behandler personopplysninger
+      i vår
+      <a href="/personvern">personvernerklæring</a>.
+    </p>
     <button class="primary" type="submit" id="submit">Send inn</button>
   </div>
 </form>
@@ -33,5 +36,10 @@
   }
   form {
     gap: 2rem;
+  }
+  p {
+    font-size: 12px;
+    font-weight: lighter;
+    margin: 0;
   }
 </style>
