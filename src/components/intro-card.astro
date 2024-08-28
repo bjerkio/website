@@ -1,5 +1,12 @@
+---
+interface Props {
+  image: ImageMetadata
+};
+
+const { image } = Astro.props;
+---
 <div class="card">
-  <img src="assets/intro-card.png" alt="big-smile" />
+  <img src={image.src} />
   <div class="intro-content">
     <slot />
   </div>
@@ -7,9 +14,11 @@
 
 <style>
   img {
-    width: 240px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
     border-radius: 1em;
     object-fit: cover;
+    object-position: bottom;
   }
   .card {
     display: flex;
