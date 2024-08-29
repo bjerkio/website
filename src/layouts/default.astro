@@ -1,11 +1,11 @@
 ---
-import type { WithContext, Thing } from 'schema-dts';
-import '@fontsource-variable/sora';
-import { jsonLd } from './json-ld';
-import Header from '@components/header.astro';
-import ContactFooter from '@components/contact-footer.astro';
-import Footer from '@components/footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import type { WithContext, Thing } from "schema-dts";
+import "@fontsource-variable/sora";
+import { jsonLd } from "./json-ld";
+import Header from "@components/header.astro";
+import ContactFooter from "@components/contact-footer.astro";
+import Footer from "@components/footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
   /**
@@ -31,13 +31,6 @@ export type Props = {
    * @default title
    */
   headline?: string;
-
-  /**
-   * The heading on the page next to headline. Should be longer than headline.
-   *
-   * @default title
-   */
-  heading?: string;
 
   /**
    * The heading on the page next to headline. Should be longer than headline.
@@ -317,35 +310,6 @@ const canonical = new URL(path, Astro.site);
         width: 100%;
         height: auto;
         aspect-ratio: auto;
-      }
-
-      input,
-      textarea {
-        width: auto;
-        padding: 1em;
-        resize: none;
-        font-family:
-          'Sora Variable',
-          system-ui,
-          -apple-system,
-          sans-seri;
-        transition: all 0.5s ease;
-        max-width: 60ch;
-        background-color: transparent;
-      }
-      input {
-        border: none;
-        border-block-end: 1px solid grey;
-        padding: 16px 0;
-      }
-      textarea {
-        border-radius: 8px;
-      }
-      textarea:focus,
-      input:focus {
-        background-color: hsl(var(--blue-base) 95%);
-        padding: 16px 1em;
-        background-color: white;
       }
 
       input,
