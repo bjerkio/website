@@ -11,12 +11,7 @@ const humanDate = formatHumanDate(data.date);
 
 <a href={data.sameAs ? data.sameAs[0] : `/artikler/${slug}`}>
   <article>
-    <Image 
-    width={550}
-    height={350}
-    src={data.image} 
-    alt={data.title} 
-    class="project-image" />
+    <Image src={data.image} alt={data.title} class="project-image" />
     <header>
       <time datetime={data.date.toISOString()}>
         {humanDate}

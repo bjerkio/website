@@ -3,7 +3,6 @@ import type { WithContext, Thing } from "schema-dts";
 import "@fontsource-variable/sora";
 import { jsonLd } from "./json-ld";
 import Header from "@components/header.astro";
-import ContactFooter from "@components/contact-footer.astro";
 import Footer from "@components/footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -31,13 +30,6 @@ export type Props = {
    * @default title
    */
   headline?: string;
-
-  /**
-   * The heading on the page next to headline. Should be longer than headline.
-   *
-   * @default title
-   */
-  heading?: string;
 
   /**
    * The title for social media platforms. The ideal length is approximately 47 characters.
@@ -87,11 +79,6 @@ export type Props = {
   articleAuthor?: string;
 
   /**
-   * Set to false for pages that shouldn't have a contact form at the bottom.
-   */
-  contactFooter?: boolean;
-
-  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -118,7 +105,6 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
-  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -198,10 +184,6 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
-    {
-      contactFooter && 
-      <ContactFooter />
-    }
     <Footer />
     <style is:global>
       :root {
@@ -221,6 +203,7 @@ const canonical = new URL(path, Astro.site);
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
+
       html {
         font-family:
           'Sora Variable',
@@ -235,9 +218,6 @@ const canonical = new URL(path, Astro.site);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
-      }
-      main {
-        margin-bottom: 4rem;
       }
 
       body {
@@ -258,25 +238,6 @@ const canonical = new URL(path, Astro.site);
       ::selection {
         background: hsl(var(--blue-base) 90%);
         color: #1d1d1d;
-      }
-
-      .primary {
-        font-size: 1rem;
-        padding: 0.25rem 1rem;
-        border-radius: 16px;
-        border: solid;
-        border-width: 2px;
-        border-color: hsl(var(--green-base) 75%);
-        text-decoration: none;
-        background-color: hsl(var(--green-base) 75%);
-        width: fit-content;
-      }
-      .primary:hover {
-        background-color: hsl(var(--green-base) 75%);
-      }
-      .primary:active {
-        border-color: hsl(var(--green-base) 55%);
-        background-color: hsl(var(--green-base) 55%);
       }
 
       body *::-webkit-scrollbar {
@@ -305,35 +266,6 @@ const canonical = new URL(path, Astro.site);
         text-decoration-skip-ink: none;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.125em;
-      }
-
-      input,
-      textarea {
-        width: auto;
-        padding: 1em;
-        resize: none;
-        font-family:
-          'Sora Variable',
-          system-ui,
-          -apple-system,
-          sans-seri;
-        transition: all 0.5s ease;
-        max-width: 60ch;
-        background-color: transparent;
-      }
-      input {
-        border: none;
-        border-block-end: 1px solid grey;
-        padding: 16px 0;
-      }
-      textarea {
-        border-radius: 8px;
-      }
-      textarea:focus,
-      input:focus {
-        background-color: hsl(var(--blue-base) 95%);
-        padding: 16px 1em;
-        background-color: white;
       }
 
       @media (hover) {
