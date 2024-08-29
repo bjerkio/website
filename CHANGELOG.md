@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## 0.0.3 (2024-08-29)
+## 0.0.2 (2024-08-29)
 
 
 ### Features
@@ -151,7 +151,6 @@ All notable changes to this project will be documented in this file. See [commit
 * add eslint-disable ([e95f7b0](https://github.com/bjerkio/website/commit/e95f7b08fcd5e9303b1ae9e427afb80fa41215ba))
 * Add improved fonts ([#171](https://github.com/bjerkio/website/issues/171)) ([3eef82b](https://github.com/bjerkio/website/commit/3eef82bb18b40ec415f66e615e8813dbc566deec))
 * added homepage intro without projects ([#48](https://github.com/bjerkio/website/issues/48)) ([1fd525c](https://github.com/bjerkio/website/commit/1fd525c11494bd1545883313396283aaddf0e96c))
-* adjust contact form ([#772](https://github.com/bjerkio/website/issues/772)) ([8ae8b07](https://github.com/bjerkio/website/commit/8ae8b07e563ea48a075fdc748f8cc215922ca775))
 * Adjust placement ([b3d5518](https://github.com/bjerkio/website/commit/b3d55180120e90e7bf58a6d9c228da62276e821f))
 * booking button color in dark mode ([#490](https://github.com/bjerkio/website/issues/490)) ([309fd86](https://github.com/bjerkio/website/commit/309fd86d108a4efda94f1ea35257c78824d37fd5))
 * **booking:** Improve sizing on mobile ([96cfba8](https://github.com/bjerkio/website/commit/96cfba800def306f7d8787ff179facc4dc384708))
@@ -196,8 +195,6 @@ All notable changes to this project will be documented in this file. See [commit
 * padding ([#139](https://github.com/bjerkio/website/issues/139)) ([3ec9e60](https://github.com/bjerkio/website/commit/3ec9e602ff7a0b4ef126b49fb7728eebe4caecf4))
 * Padding added to nested elements ([a66461b](https://github.com/bjerkio/website/commit/a66461b6444d4762fb93d12fbe1ba2b931338ade))
 * position issue ([a4f0b3f](https://github.com/bjerkio/website/commit/a4f0b3f83212af4e5a1cd7706bbdbc303649a959))
-* present intro cards on mobile ([#768](https://github.com/bjerkio/website/issues/768)) ([954fdd9](https://github.com/bjerkio/website/commit/954fdd97d425439efa3bbe751269c101e7a15ee8))
-* present intro cards on mobile ([#770](https://github.com/bjerkio/website/issues/770)) ([0f3d65d](https://github.com/bjerkio/website/commit/0f3d65dd520e1a0a77dd56286c6716c02cb71029))
 * published time as ISO ([cb634d9](https://github.com/bjerkio/website/commit/cb634d9ace4d7adeeae0c063a1af6ac811f58ebe))
 * Quick stranslate ([cac1d89](https://github.com/bjerkio/website/commit/cac1d89ac4637551314c1561dcc7fe87401412cf))
 * remove avfall norge ([#470](https://github.com/bjerkio/website/issues/470)) ([9238e54](https://github.com/bjerkio/website/commit/9238e54937145b9b51badd2891f8b1357c327dd3))
