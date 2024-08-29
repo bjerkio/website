@@ -34,31 +34,6 @@ sammen eller utvikle helt nye løsninger.
 
 Lurer du på hva dette faktisk innebærer? [Se noen av våre arbeid her](/arbeid)
 
-## Prinsipper vi mener er viktige for å lykkes
-
-Vi har en pragmatisk tilnærming til teknologi, og velger alltid de beste 
-løsningene for våre kunder basert på deres spesifikke behov. Våre rådgivere 
-og utviklere jobber tett sammen for å sikre at hver løsning er optimal for 
-hver spesifikk situasjon. For å ha en objektiv tilnærming til prosjektene, 
-søker vi i aller største grad å være “teknologi-agnostikere”. Det vil si at 
-vi ikke har noen overbevisning om at en type teknologi eller et 
-programmeringsspråk er bedre enn andre, men at vi finner den beste løsningen 
-for hver enkelt situasjon.
-
-### Kunden og brukerne i sentrum
-
-### Tetta samarbeid
-
-### Et kompetent og motivert utviklingsteam
-
-### Effekt og Pragmatikk
-
-### Sikkerhet
-
-### Transparens
-
-### Funksjonalitet og brukervennlighet
-
 ## Hvor starter vi?
 
 Et godt samarbeid starter med en god relasjon. Vi liker å begynne med en 
