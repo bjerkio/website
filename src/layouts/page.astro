@@ -12,14 +12,29 @@ const { frontmatter } = Astro.props;
   {...frontmatter}
 >
   <main>
-    {
-      frontmatter.headline && (
-        <aside>
-          <h1>{frontmatter.headline}</h1>
-        </aside>
-      )
-    }
-    <section class="main-section">
+    <article>
+      <div class="hero">
+        { frontmatter.headline && (
+          <Brief 
+          title={frontmatter.headline}>
+            {
+              frontmatter.heading && (
+                <p>
+                  {frontmatter.heading}
+                </p>
+              )
+            }
+        </Brief>  
+        )}
+        { frontmatter.image && (
+                  <Image 
+        src={frontmatter.image} 
+        alt={frontmatter.imageAlt}
+        width={2140}
+        height={2140}
+        />  
+        )}
+      </div>
       <slot />
     </article>
   </main>
@@ -35,7 +50,13 @@ const { frontmatter } = Astro.props;
     line-height: 1.6;
     letter-spacing: -0.003em;
 
-  :global(.main-section > :first-child) {
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 1fr)
+      minmax(auto, 60ch)
+      minmax(auto, 1fr);
+  }
+  article :global(> p:first-of-type strong) {
     font-weight: 600;
     font-size: clamp(0.8rem, 5vw, 1.5rem);
   }
