@@ -295,6 +295,7 @@ const canonical = new URL(path, Astro.site);
 
       p {
         margin-inline-end: 1em;
+        max-width: 60ch;
       }
 
       a {
@@ -305,6 +306,11 @@ const canonical = new URL(path, Astro.site);
         text-decoration-skip-ink: none;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.125em;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
       }
 
       input,
