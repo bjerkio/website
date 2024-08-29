@@ -47,4 +47,15 @@ const { image, imageAlt } = Astro.props;
     display: flex;
     flex-direction: column;
   }
+  @media (max-width: 768px) {
+  .card:nth-child(odd) {
+    flex-direction: column;
+  }
+  .card:nth-child(even) {
+    flex-direction: column;
+  }
+    img {
+      width: 200px;
+    }
+  }
 </style>
