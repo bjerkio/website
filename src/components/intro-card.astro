@@ -1,12 +1,19 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
   image: ImageMetadata
+  imageAlt: string
 };
 
-const { image } = Astro.props;
+const { image, imageAlt } = Astro.props;
 ---
 <div class="card">
-  <img src={image.src} />
+  <Image 
+  src={image}
+  alt={imageAlt}
+  width={400} 
+  />
   <div class="intro-content">
     <slot />
   </div>
@@ -15,6 +22,7 @@ const { image } = Astro.props;
 <style>
   img {
     width: 200px;
+    height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 1em;
     object-fit: cover;
