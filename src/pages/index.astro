@@ -3,12 +3,16 @@ import Layout from '@layouts/default.astro';
 import { Image } from 'astro:assets';
 import ArrowRight from '~icons/ph/arrow-right';
 import LandingImage from '@assets/lea-l-q--99IzY8Lw-unsplash.jpg';
+import ImproveExistingSystemsImage from '@assets/forbedre-eksisterende.jpg';
+import IntegrationsImage from '@assets/integrasjoner.jpg';
+import CreateSomethingNewImage from '@assets/utvikle-noe-nytt.jpg';
 import IntroCard from '@components/intro-card.astro';
 
 const url = Astro.site;
+
 const introCards = [
   {
-    image: '@assets/smile.png',
+    image: CreateSomethingNewImage,
     title: 'Skreddersydd programvare',
     description: `
       Se for deg en løsning som er unikt tilpasset dine behov, skaper enda bedre arbeidsflyer, og gir deg
@@ -16,19 +20,19 @@ const introCards = [
     `,
   },
   {
-    image: '@assets/smile.png',
+    image: IntegrationsImage,
     title: 'Skap effektivitet og vekst med egne integrasjoner',
     description: `
-      ved å sy sammen de ulike systemene i bedriften kan du legge til rette for sømløse arbeidsflyer og 
+      Ved å sy sammen de ulike systemene i bedriften kan du legge til rette for sømløse arbeidsflyer og 
       alltid oppdatert data i alle systemer. Bedre datainnsamling og nøyaktig rapportering gir et solid
       grunnlag for gode beslutninger, og en konkurransefordel som vokser med bedriften din.
     `,
   },
   {
-    image: '@assets/smile.png',
+    image: ImproveExistingSystemsImage,
     title: 'Forbedre eksisterende systemer',
     description: `
-      noen ganger det best å bygge videre på det du allerede har invistert i. Ved å videreutvikle dine
+      Noen ganger det best å bygge videre på det du allerede har invistert i. Ved å videreutvikle dine
       nåværende systemer kan du fjerne feil, skape nødvendige integrasjoner, og rydde opp i komplisert kode.
       Dette gir deg løsninger som er tilpasset nye forretningsbehov og endringer i teknologien.
     `,
@@ -65,9 +69,11 @@ const introCards = [
     <section class="intro-cards">
       {
         introCards.map(item => (
-          <IntroCard>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
+          <IntroCard image={item.image}>
+            <div class="intro-content">
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </div>
           </IntroCard>
         ))
       }
