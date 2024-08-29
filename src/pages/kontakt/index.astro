@@ -1,6 +1,8 @@
 ---
+import Brief from '@components/brief.astro';
 import Person from '@components/person.astro';
 import Layout from '@layouts/default.astro';
+import ContactForm from '@components/contact-form.astro';
 import { getCollection } from 'astro:content';
 
 const people = await getCollection('people');
@@ -26,6 +28,7 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   socialMediaTitle="🚀 Start samtalen med Bjerk: Bli med å skap noe med oss!"
   socialMediaDescription="Start en samtale med Bjerk i dag for å lage skreddersydde løsningerog få tilgang på ekspertise innen digital innovasjon."
   path="/kontakt"
+  contactFooter={false}
   schema={{
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
@@ -64,36 +67,44 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   }}
 >
   <main>
-    <section class="brief">
-      <h1>Vi gleder oss til å høre fra deg!</h1>
-      <p>
-        Bjerk har kontorer i Oslo ved Akersgata 51, 0180 Oslo og Finland. Du får
-        tak i oss via e-post til
-        <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
-      </p>
-    </section>
-
-    <section class="details">
-      <dl>
-        <div>
-          <dt>E-post</dt>
-          <dd>kontoret@bjerk.io</dd>
-        </div>
-        <div>
-          <dt>Adresse</dt>
-          <dd>
-            <a
-              href="https://maps.app.goo.gl/67ck5eWotdaAxZA5A"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Arbins gate 11, 0253 Oslo <!-- <ArrowSquareOut /> -->
-            </a>
-          </dd>
-        </div>
-      </dl>
-    </section>
-
+    <Brief title='Kontakt'>
+      <div class="contact-info">
+        <section>
+          <p>Vi gleder oss til å høre fra deg!</p>
+          <p>
+            Bjerk har kontorer i Oslo ved Arbins gate 11, 0253 Oslo og Finland. Du får
+            tak i oss via e-post til
+            <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
+          </p>
+        </section>
+        <section class="details">
+          <dl>
+            <div>
+              <dt>E-post</dt>
+              <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
+            </div>
+            <div>
+              <dt>Adresse</dt>
+              <dd>
+                <a
+                  href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Arbins gate 11, 0253 Oslo <!-- <ArrowSquareOut /> -->
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <section class="contact-form">
+          <p>
+            Send oss en melding
+          </p> 
+          <ContactForm />
+        </section>
+      </div>
+    </Brief>
     <section class="employees">
       {employees.map(person => <Person person={person} />)}
     </section>
@@ -111,6 +122,14 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   .brief {
     max-width: 64ch;
   }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .contact-form {
+    padding-top: 1.5em;
+  }
 
   main {
     width: var(--container-width);
@@ -119,12 +138,20 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   }
 
   dl {
-    display: grid;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    gap: 2rem;
+    font-family:
+          'Sora Variable',
+          system-ui,
+          -apple-system,
+          sans-seri;
   }
 
   dl div > dt {
-    font-weight: bold;
+    opacity: 50%;
   }
 
   dl div > dd {
@@ -134,7 +161,6 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
   dl div > dd a {
     color: inherit;
   }
-
   .employees {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));

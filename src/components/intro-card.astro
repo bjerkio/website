@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata
+  imageAlt: string
+};
+
+const { image, imageAlt } = Astro.props;
+---
+<div class="card">
+  <Image 
+  src={image}
+  alt={imageAlt}
+  width={400} 
+  />
+  <div class="intro-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  img {
+    width: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: hsl(var(--blue-base) 95%);
+    gap: 2rem;
+    padding: 2em;
+  }
+  .card:nth-child(odd) {
+    flex-direction: row;
+  }
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+  .card:nth-child(odd) {
+    flex-direction: column;
+  }
+  .card:nth-child(even) {
+    flex-direction: column;
+  }
+    img {
+      width: 200px;
+    }
+  }
+</style>
