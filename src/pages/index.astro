@@ -13,6 +13,7 @@ const url = Astro.site;
 const introCards = [
   {
     image: CreateSomethingNewImage,
+    imageAlt: "Bilde av stammen til et bjørketre ved noen steiner",
     title: 'Skreddersydd programvare',
     description: `
       Se for deg en løsning som er unikt tilpasset dine behov, skaper enda bedre arbeidsflyer, og gir deg
@@ -21,6 +22,7 @@ const introCards = [
   },
   {
     image: IntegrationsImage,
+    imageAlt: "Naturbilde av bjørketrær med løv på bakken",
     title: 'Skap effektivitet og vekst med egne integrasjoner',
     description: `
       Ved å sy sammen de ulike systemene i bedriften kan du legge til rette for sømløse arbeidsflyer og 
@@ -30,6 +32,7 @@ const introCards = [
   },
   {
     image: ImproveExistingSystemsImage,
+    imageAlt: "Grønt naturbilde med bjerktrær",
     title: 'Forbedre eksisterende systemer',
     description: `
       Noen ganger det best å bygge videre på det du allerede har invistert i. Ved å videreutvikle dine
@@ -69,7 +72,7 @@ const introCards = [
     <section class="intro-cards">
       {
         introCards.map(item => (
-          <IntroCard image={item.image}>
+          <IntroCard image={item.image} imageAlt={item.imageAlt}>
             <div class="intro-content">
               <h2>{item.title}</h2>
               <p>{item.description}</p>
