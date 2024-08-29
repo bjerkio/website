@@ -312,6 +312,19 @@ const canonical = new URL(path, Astro.site);
         aspect-ratio: auto;
       }
 
+      article {
+        display: grid;
+        grid-template-columns:
+        minmax(auto, 1fr)
+        minmax(auto, 1fr)
+        minmax(auto, 60ch)
+        minmax(auto, 1fr)
+        minmax(auto, 1fr);
+      }
+
+      article > * {
+        grid-column: 3;
+      }
       input,
       textarea {
         width: auto;
