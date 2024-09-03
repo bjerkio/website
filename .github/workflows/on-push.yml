@@ -60,7 +60,7 @@ jobs:
           git reset --hard main
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: promote/main-to-next
           title: 'Promote changes in main → next'
