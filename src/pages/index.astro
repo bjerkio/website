@@ -1,46 +1,10 @@
 ---
-import Layout from '@layouts/default.astro';
-import { Image } from 'astro:assets';
-import ArrowRight from '~icons/ph/arrow-right';
-import LandingImage from '@assets/lea-l-q--99IzY8Lw-unsplash.jpg';
-import ImproveExistingSystemsImage from '@assets/forbedre-eksisterende.jpg';
-import IntegrationsImage from '@assets/integrasjoner.jpg';
-import CreateSomethingNewImage from '@assets/utvikle-noe-nytt.jpg';
-import IntroCard from '@components/intro-card.astro';
+import Layout from "@layouts/default.astro";
+import { Image } from "astro:assets";
+import ArrowRight from "~icons/ph/arrow-right";
+import LandingImage from "@assets/lea-l-q--99IzY8Lw-unsplash.jpg";
 
 const url = Astro.site;
-
-const introCards = [
-  {
-    image: CreateSomethingNewImage,
-    imageAlt: "Bilde av stammen til et bjørketre ved noen steiner",
-    title: 'Skreddersydd programvare',
-    description: `
-      Se for deg en løsning som er unikt tilpasset dine behov, skaper enda bedre arbeidsflyer, og gir deg
-      noe som kan skaleres og utvikle videre i takt med nye brukerbehov og endringer. Nice, ikke sant?
-    `,
-  },
-  {
-    image: IntegrationsImage,
-    imageAlt: "Naturbilde av bjørketrær med løv på bakken",
-    title: 'Skap effektivitet og vekst med egne integrasjoner',
-    description: `
-      Ved å sy sammen de ulike systemene i bedriften kan du legge til rette for sømløse arbeidsflyer og 
-      alltid oppdatert data i alle systemer. Bedre datainnsamling og nøyaktig rapportering gir et solid
-      grunnlag for gode beslutninger, og en konkurransefordel som vokser med bedriften din.
-    `,
-  },
-  {
-    image: ImproveExistingSystemsImage,
-    imageAlt: "Grønt naturbilde med bjerktrær",
-    title: 'Forbedre eksisterende systemer',
-    description: `
-      Noen ganger det best å bygge videre på det du allerede har invistert i. Ved å videreutvikle dine
-      nåværende systemer kan du fjerne feil, skape nødvendige integrasjoner, og rydde opp i komplisert kode.
-      Dette gir deg løsninger som er tilpasset nye forretningsbehov og endringer i teknologien.
-    `,
-  },
-];
 ---
 
 <Layout
@@ -69,18 +33,6 @@ const introCards = [
       </a>
     </div>
     <Image src={LandingImage} alt="Abstract art image" class="landing-image" />
-    <section class="intro-cards">
-      {
-        introCards.map(item => (
-          <IntroCard image={item.image} imageAlt={item.imageAlt}>
-            <div class="intro-content">
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          </IntroCard>
-        ))
-      }
-    </section>
   </main>
 </Layout>
 
