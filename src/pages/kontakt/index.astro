@@ -1,25 +1,26 @@
 ---
-import Brief from '@components/brief.astro';
-import Person from '@components/person.astro';
-import Layout from '@layouts/default.astro';
-import ContactForm from '@components/contact-form.astro';
-import { getCollection } from 'astro:content';
+import Brief from "@components/brief.astro";
+import Person from "@components/person.astro";
+import Layout from "@layouts/default.astro";
+import ContactForm from "@components/contact-form.astro";
+import { getCollection } from "astro:content";
 
-const people = await getCollection('people');
+const people = await getCollection("people");
 const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 
+const employees = people
+  .filter((person) => person.data.email.includes("@bjerk.io"))
+  .sort((a, b) => {
+    if (b.data.position.toLowerCase().includes("styreleder")) {
+      return -1;
+    }
 
-const employees = people.filter(person => person.data.email.includes('@bjerk.io')).sort((a, b) => {
-  if (b.data.position.toLowerCase().includes('styreleder')) {
-    return -1;
-  }
+    if (a.data.position.toLowerCase().includes("rådgiver")) {
+      return -1;
+    }
 
-  if (a.data.position.toLowerCase().includes('rådgiver')) {
-    return -1;
-  }
-
-  return a.data.givenName.localeCompare(b.data.givenName);
-});
+    return a.data.givenName.localeCompare(b.data.givenName);
+  });
 ---
 
 <Layout
@@ -96,12 +97,6 @@ const employees = people.filter(person => person.data.email.includes('@bjerk.io'
               </dd>
             </div>
           </dl>
-        </section>
-        <section class="contact-form">
-          <p>
-            Send oss en melding
-          </p> 
-          <ContactForm />
         </section>
       </div>
     </Brief>
