@@ -2,7 +2,7 @@
   "name": "astro",
   "type": "module",
   "version": "0.0.3",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.12.1",
   "prettier": "@simenandre/prettier",
   "scripts": {
     "format": "biome format ./ --write && prettier --write src/content",
