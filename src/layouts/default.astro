@@ -1,9 +1,8 @@
 ---
 import type { WithContext, Thing } from "schema-dts";
-import "@fontsource-variable/sora";
+import "@fontsource/ibm-plex-sans";
 import { jsonLd } from "./json-ld";
 import Header from "@components/header.astro";
-import ContactFooter from "@components/contact-footer.astro";
 import Footer from "@components/footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -87,11 +86,6 @@ export type Props = {
   articleAuthor?: string;
 
   /**
-   * Set to false for pages that shouldn't have a contact form at the bottom.
-   */
-  contactFooter?: boolean;
-
-  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -118,7 +112,6 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
-  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -198,20 +191,24 @@ const canonical = new URL(path, Astro.site);
   <body>
     <Header />
     <slot />
-    {
-      contactFooter && 
-      <ContactFooter />
-    }
     <Footer />
     <style is:global>
-      :root {
+    :root {
+        --hue-frostbite: 181;
+        --hue-grapetastic: 250;
+        --hue-sandglow: 36;
+
+        --base-frostbite: 181 51%;
+        --base-grapetastic: 250 100%;
+        --base-sandglow: 36 92%;
+
         --color-light: var(--green20);
         --color-dark: var(--dark100);
 
         --green-base: 122 83%;
         --blue-base: 234 66%;
 
-        --container-width: min(90ch, 100% - 4rem);
+        --container-width: min(1430px, 100% - 4rem);
 
         /* Legacy color variables */
         --color-app-bg: white;
@@ -221,9 +218,10 @@ const canonical = new URL(path, Astro.site);
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
+
       html {
         font-family:
-          'Sora Variable',
+          'IBM Plex Sans',
           system-ui,
           -apple-system,
           sans-seri;
@@ -236,6 +234,7 @@ const canonical = new URL(path, Astro.site);
         -moz-osx-font-smoothing: grayscale;
         font-feature-settings: 'kern', 'liga';
       }
+
       main {
         margin-bottom: 4rem;
       }

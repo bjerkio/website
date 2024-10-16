@@ -17,6 +17,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.0.3",
     "@fontsource-variable/sora": "^5.0.15",
+    "@fontsource/ibm-plex-sans": "^5.1.0",
     "astro": "^4.0.0",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
