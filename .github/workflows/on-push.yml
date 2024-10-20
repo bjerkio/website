@@ -40,7 +40,7 @@ jobs:
 
       - name: Lint 🔨
         run: pnpm lint
- 
+
   update-next:
     name: Update next
     runs-on: ubuntu-latest

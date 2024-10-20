@@ -87,5 +87,5 @@ jobs:
             '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
           projectId: bjerk-io
           expires: 30d
-          channelID: ${{ steps.branch-names.outputs.current_branch }} 
+          channelID: ${{ steps.branch-names.outputs.current_branch }}
           target: next
