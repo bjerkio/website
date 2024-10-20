@@ -124,7 +124,7 @@ const makeUrl = (newPath: string) => new URL(newPath, Astro.site).toString();
 const canonical = new URL(path, Astro.site);
 ---
 
-<html lang="nb">
+<html lang="nb" x-data="{ colorScheme: 'light' }">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href={makeUrl('favicon.svg')} />
@@ -187,9 +187,13 @@ const canonical = new URL(path, Astro.site);
     }
 
     {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs-intersect/3.14.3/cdn.min.js" integrity="sha512-zUi+vHO/A+Mh3PQDYpAhzo3GGnrSTdOdyUkFby6I2p+k5kOhVNDMJMnhaJgZtecorfhS/+Y5PbkDu7iWsnk8+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
-  <body>
+  <body :data-color-scheme="colorScheme">
     <Header />
+    <button @click="colorScheme = colorScheme === 'light' ? 'dark' : 'light'">
+      Bytt farge
+    </button>
     <slot />
     <Footer />
     <style is:global>
@@ -208,7 +212,10 @@ const canonical = new URL(path, Astro.site);
         --green-base: 122 83%;
         --blue-base: 234 66%;
 
-        --container-width: min(1430px, 100% - 4rem);
+        --container-width: min(1620px, 100% - 4rem);
+
+        --color-text: black;
+
 
         /* Legacy color variables */
         --color-app-bg: white;
@@ -227,7 +234,7 @@ const canonical = new URL(path, Astro.site);
           sans-seri;
         font-size: 16px;
         line-height: 1.5;
-        color: #1d1d1d;
+        color: var(--color-text);
         background-color: var(--color-light);
 
         -webkit-font-smoothing: antialiased;
@@ -246,6 +253,16 @@ const canonical = new URL(path, Astro.site);
         -webkit-text-size-adjust: 100%;
         touch-action: manipulation;
         caret-color: hsl(var(--blue-base) 40%);
+        transition: 
+          color .4s cubic-bezier(.65,.05,.36,1),
+          background-color .4s cubic-bezier(.65,.05,.36,1);
+      }
+
+      body[data-color-scheme='dark'] {
+          --color-text: white;
+          --color-app-bg: hsl(var(--blue-base) 10%);
+          --color-subtle-bg: hsl(var(--blue-base) 15%);
+        --color-subtle-border: hsl(var(--blue-base) 15%);
       }
 
       *,

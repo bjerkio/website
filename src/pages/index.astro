@@ -1,5 +1,7 @@
 ---
 import Layout from "@layouts/default.astro";
+import { Image } from "astro:assets";
+import HeroImage from "../assets/people-working.jpg";
 
 const url = Astro.site;
 ---
@@ -19,24 +21,26 @@ const url = Astro.site;
   }}
 >
   <main>
-    <div class="hero">
-      <h1>Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og	forenkle for ambisiøse bedrifter.</h1>
-      <a href="/om" class="button">
-        Kom i gang →
-      </a>
-    </div>
-
+    <section class="hero">
+      <div class="pitch">
+        <h1>Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og	forenkle for ambisiøse bedrifter.</h1>
+        <a href="/om" class="button">
+          Kom i gang →
+        </a>
+      </div>
+      <Image src={HeroImage} alt="Bilde av folk som jobber" class="landing-image" />
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
-    width: var(--container-width);
-    margin-inline: auto;
-  }
-
   .hero {
-    max-width: 65ch;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    width: min(var(--container-width), 1460px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .section {
@@ -54,12 +58,13 @@ const url = Astro.site;
   }
 
   .landing-image {
+    max-width: 1151px;
     width: 100%;
     height: auto;
-    border-radius: 1em;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     margin-block-start: 2rem;
+    align-self: flex-end;
   }
 
   h1 {
@@ -67,11 +72,17 @@ const url = Astro.site;
     line-height: 1.1;
     font-weight: 400;
     text-wrap: pretty;
+    max-width: 40ch;
   }
 
   .button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration-color: inherit;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.25rem;
   }
 </style>

@@ -1,20 +1,14 @@
 ---
-import Logo from './logo.astro';
-import DiscordIcon from '~icons/ph/discord-logo-fill';
-import GitHubIcon from '~icons/ph/github-logo-fill';
-import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
+import Logo from "./logo.astro";
+import DiscordIcon from "~icons/ph/discord-logo-fill";
+import GitHubIcon from "~icons/ph/github-logo-fill";
+import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 ---
 
 <footer>
   <div class="container">
-    <section class="logo">
-      <Logo />
-      <div>
-        © Bjerk 2023
-      </div>
-      <div>
-        Org. nr.: 930 334 693
-      </div>
+    <section class="about">
+      <p>Vi vil være med å lage en verden hvor folk kan gjøre mer av det de er gode på, og hvor teknologien tar seg av resten. Vi skaper digitale løsninger som forbedre og forenkle måten mennesker lærer, tenker, jobber og kommuniserer på.</p>
     </section>
     <section class="contact">
       <p>
@@ -29,18 +23,7 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
         <br>
         <a href="tel:+4722120512">+47 22 12 05 12</a>
       </p>
-    </section>
-      <ul class="links">
-        <li><a href="/vilkar">Vilkår</a></li>
-        <li><a href="/personvern">Personvernerklæring</a></li>
-      </ul>
-    <section class="socials">
-      <a
-        aria-label="Discord-server for Bjerk"
-        href="https://discord.gg/v6uUBFxXNf"
-      >
-        <DiscordIcon />
-      </a>
+      <div class="socials">
       <a
         aria-label="GitHub-profile for Bjerk"
         href="https://github.com/bjerkio"
@@ -52,30 +35,26 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
         href="https://www.linkedin.com/company/bjerk"
       >
         <LinkedInIcon />
-      </a>
+        </a>
+      </div>
     </section>
+   <!-- <ul class="links"> -->
+    <!--     <li><a href="/vilkar">Vilkår</a></li> -->
+    <!--     <li><a href="/personvern">Personvernerklæring</a></li> -->
+    <!--   </ul> -->
   </div>
 </footer>
 
 <style>
-  footer {
-    background-color: hsl(var(--blue-base) 20%);
-  }
-
-  a {
-    --link-color: hsl(var(--blue-base) 80%);
-  }
-
-  @media (hover) {
-    a:hover {
-      --link-color: hsl(var(--blue-base) 70%);
+  section.about {
+    &> p {
+      max-width: 40ch;
     }
   }
 
   .container {
     width: var(--container-width);
     margin-inline: auto;
-    color: white;
     padding-block: 4rem;
 
     display: flex;
@@ -91,12 +70,6 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
     height: 100%;
   }
 
-  .logo div {
-    color: hsl(var(--blue-base) 70%);
-  }
-  .logo {
-    margin-top: 1.2rem;
-  }
   .socials {
     margin-top: 1.2rem;
     font-size: 1.7rem;
@@ -116,26 +89,9 @@ import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
     justify-content: space-around;
     list-style: none;
   }
+
   ul {
     padding: 0;
     list-style-type: none;
-  }
-  @media(max-width: 767px) {
-    .container {
-      padding-block: 1rem;
-    }
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .container {
-      justify-content: space-around;
-    }
-    .socials {
-      width: 100%;
-      justify-content: space-around;
-    }
   }
 </style>

@@ -6,6 +6,7 @@
   "prettier": "@simenandre/prettier",
   "scripts": {
     "format": "biome format ./ --write && prettier --write src/content",
+    "format:prettier": "prettier --write .",
     "lint": "biome lint --apply ./",
     "release": "commit-and-tag-version",
     "dev": "astro dev",
@@ -15,9 +16,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/sitemap": "^3.0.3",
     "@fontsource-variable/sora": "^5.0.15",
     "@fontsource/ibm-plex-sans": "^5.1.0",
+    "@types/alpinejs": "^3.0.0",
+    "alpinejs": "^3.0.0",
     "astro": "^4.0.0",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
