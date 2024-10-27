@@ -1,10 +1,10 @@
 ---
-title: 'Hva er en digital tjenesteplattform?'
+title: "Hva er en digital tjenesteplattform?"
 description:
   Digitale tjenesteplattformer er skreddersydde digitale produkter bygget rundt
   sentrale data. Målet er ofte å gjøre data tilgjengelig og å ha et fundament
   for koblinger til og mellom andre systemer, både internt og eksternt
-socialMediaTitle: 'Hva er egentlig en digital tjenesteplattform? 🤔'
+socialMediaTitle: "Hva er egentlig en digital tjenesteplattform? 🤔"
 socialMediaDescription:
   Dykk ned i hva en digital tjenesteplattform eller kjernesystem er, og hvordan
   dette kan hjelpe deg å oppnå mer av det som er viktig.
@@ -36,7 +36,7 @@ etablere et felles sted hvor dataene lagres. Fellestrekket er at det er systemer
 som er laget for å ivareta funksjoner og data felles for et fagfelt eller det vi
 kaller et domene.
 
-![Figur som viser prikker som peker mot en sentral prikk](./service-figure.svg 'Figuren illustrerer en sentral plattform som andre produkter er koblet med')
+![Figur som viser prikker som peker mot en sentral prikk](./service-figure.svg "Figuren illustrerer en sentral plattform som andre produkter er koblet med")
 
 Taksering Norge har utviklet en digital tjenesteplattform. I løsningen ligger
 oppdragene, og det er i dette systemet takstene lages. Bookingen av befaringer

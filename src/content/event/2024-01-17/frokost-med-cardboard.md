@@ -1,6 +1,6 @@
 ---
 title: Frokost og fremtidens regnskapsløsninger hos Bjerk, 17. Januar
-headline: 'Frokost hos Bjerk: Fremtidens regnskapsløsninger'
+headline: "Frokost hos Bjerk: Fremtidens regnskapsløsninger"
 description:
   Den 17. Januar inviterer Bjerk og Cardboard til en frokost. Temaet er
   regnskap, og vi skal høre fra Jakob fra Cardboard om hvordan de vil forenkle

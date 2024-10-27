@@ -1,7 +1,6 @@
 ---
 title: Plattform for e-handel
-description:
-  Utvikling av plattformen og ledelse av utviklere, arkitektur og
+description: Utvikling av plattformen og ledelse av utviklere, arkitektur og
   produktutvikling.
 categories:
   - development

@@ -1,26 +1,26 @@
-import { formatInTimeZone } from 'date-fns-tz';
-import { isSameDay, isSameYear } from 'date-fns';
-import nb from 'date-fns/locale/nb/index.js';
+import { formatInTimeZone } from "date-fns-tz";
+import { isSameDay, isSameYear } from "date-fns";
+import nb from "date-fns/locale/nb/index.js";
 
 const basicOptions = {
   locale: nb,
-  timeZone: 'Europe/Stockholm',
+  timeZone: "Europe/Stockholm",
 };
 
-const timeZone = 'Europe/Oslo';
+const timeZone = "Europe/Oslo";
 
 export function formatDate(
   dateFrom: Date,
   withTime = true,
   showYear = !isSameYear(dateFrom, new Date()),
 ) {
-  const dateFormat = showYear ? 'EEEE d. MMMM yyyy' : 'EEEE d. MMMM';
+  const dateFormat = showYear ? "EEEE d. MMMM yyyy" : "EEEE d. MMMM";
   const timeFormat = withTime ? "'kl.' HH.mm" : undefined;
 
   return formatInTimeZone(
     dateFrom,
     timeZone,
-    [dateFormat, timeFormat].join(' '),
+    [dateFormat, timeFormat].join(" "),
     basicOptions,
   ).trim();
 }
@@ -33,8 +33,8 @@ function formatDateToString(
 ) {
   const showDate = !isSameDay(dateFrom, dateTo);
 
-  const dateFormat = showYear ? 'EEEE d. MMMM yyyy' : 'EEEE d. MMMM';
-  let timeFormat = withTime ? 'HH.mm' : undefined;
+  const dateFormat = showYear ? "EEEE d. MMMM yyyy" : "EEEE d. MMMM";
+  let timeFormat = withTime ? "HH.mm" : undefined;
 
   // Add 'kl.' if we are showing date
   if (showDate) {
@@ -45,7 +45,7 @@ function formatDateToString(
     return formatInTimeZone(
       dateTo,
       timeZone,
-      [dateFormat, timeFormat].join(' '),
+      [dateFormat, timeFormat].join(" "),
       basicOptions,
     ).trim();
   }
@@ -68,9 +68,9 @@ export function formatDateRange(dateFrom: Date, dateTo: Date, withTime = true) {
 }
 
 export default function formatHumanDate(date: Date) {
-  return new Date(date).toLocaleDateString('nb-NO', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  return new Date(date).toLocaleDateString("nb-NO", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 }

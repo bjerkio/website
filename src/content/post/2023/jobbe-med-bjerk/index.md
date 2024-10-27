@@ -1,5 +1,5 @@
 ---
-title: 'Hvordan er det å jobbe med Bjerk?'
+title: "Hvordan er det å jobbe med Bjerk?"
 headline: Hvordan er det å jobbe sammen med Bjerk?
 description:
   Utforsk hvordan det er å jobbe med Bjerk gjennom en personlig fortelling som
@@ -75,7 +75,7 @@ at vi ofte bidrar med å skape en løsning ut fra en idé. I praksis betyr det a
 vi setter opp teknisk arkitektur for løsningen, prototype og plan. Vi følger
 også opp planen og sørger for alle som er med har det de trenger.
 
-![Illustrasjon som forklarer cynefin-modellen](./cynefin.svg 'Cynefin-modellen')
+![Illustrasjon som forklarer cynefin-modellen](./cynefin.svg "Cynefin-modellen")
 
 I min erfaring er det mange produkter som lages basert på mange antagelser, og
 det kan være bra med antagelser for å komme et stykke nærmere en løsning.

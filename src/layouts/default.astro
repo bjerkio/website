@@ -368,6 +368,17 @@ const canonical = new URL(path, Astro.site);
         outline-offset: 0.4em;
         border-radius: 0.225em;
       }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
     </style>
   </body>
 </html>

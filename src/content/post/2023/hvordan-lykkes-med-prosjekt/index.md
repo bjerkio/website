@@ -1,5 +1,5 @@
 ---
-title: 'Øk sannsynligheten for at ditt prosjekt lykkes'
+title: "Øk sannsynligheten for at ditt prosjekt lykkes"
 description:
   Hvordan lykkes man med et prosjekt? Og hva er utfordringene med tradisjonell
   prosjektledelse? Les mer om fallgruver og hvordan Half Double-metodikken kan

@@ -1,5 +1,5 @@
 ---
-title: 'Gikk fra Next.js til Astro: «Astro for nesten alle pengene»'
+title: "Gikk fra Next.js til Astro: «Astro for nesten alle pengene»"
 description:
   Bjerk-sjef Simen A. W. Olsen deler sine erfaringer med å bytte fra et
   rammeverk til et annet.

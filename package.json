@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.0.3",
   "packageManager": "pnpm@9.9.0",
-  "prettier": "@simenandre/prettier",
   "scripts": {
     "format": "biome format ./ --write && prettier --write src/content",
     "format:prettier": "prettier --write .",
@@ -33,6 +32,7 @@
     "@biomejs/biome": "^1.4.0",
     "@iconify-json/ph": "^1.1.6",
     "@iconify-json/tabler": "^1.1.103",
+    "prettier-plugin-astro": "^0.14.1",
     "@simenandre/prettier": "^5.0.0",
     "commit-and-tag-version": "^12.4.2",
     "prettier": "^3.0.3",

@@ -1,29 +1,42 @@
 ---
-import Logo from "./logo.astro";
-import DiscordIcon from "~icons/ph/discord-logo-fill";
+import Logo from "../components/logo-symbol.astro";
 import GitHubIcon from "~icons/ph/github-logo-fill";
 import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 ---
 
 <footer>
-  <div class="container">
-    <section class="about">
-      <p>Vi vil være med å lage en verden hvor folk kan gjøre mer av det de er gode på, og hvor teknologien tar seg av resten. Vi skaper digitale løsninger som forbedre og forenkle måten mennesker lærer, tenker, jobber og kommuniserer på.</p>
-    </section>
-    <section class="contact">
-      <p>
-        Arbins gate 11 
-        <br>
-        0253 Oslo
-      </p>
-      <p>
-        <a href="mailto:kontoret@bjerk.io">
-          kontoret@bjerk.io
-        </a>
-        <br>
-        <a href="tel:+4722120512">+47 22 12 05 12</a>
-      </p>
-      <div class="socials">
+<div class="footer-content">
+  <section aria-labelledby="footer-about" class="about">
+    <h2 id="footer-about" class="sr-only">Om Bjerk</h2>
+    <p>Vi vil være med å lage en verden hvor folk kan gjøre mer av det de er gode på, og hvor teknologien tar seg av resten. Vi skaper digitale løsninger som forbedre og forenkle måten mennesker lærer, tenker, jobber og kommuniserer på.</p>
+
+    <div class="footer-logo" aria-hidden="true">
+      <Logo />
+    </div>
+  </section>
+  <nav>
+    <ul>
+      <li><a href="/om-oss">Om oss →</a></li>
+      <li><a href="/arbeider">Arbeider →</a></li>
+      <li><a href="/vare-losning">Våre løsninger →</a></li>
+      <li><a href="/kunnskap">Kunnskap →</a></li>
+      <li><a href="/kontakt-oss">Kontakt oss →</a></li>
+    </ul>
+  </nav>
+  <section class="contact">
+    <p>
+      Arbins gate 11 
+      <br>
+      0253 Oslo
+    </p>
+    <p>
+      <a href="mailto:kontoret@bjerk.io">
+        kontoret@bjerk.io
+      </a>
+      <br>
+      <a href="tel:+4722120512">+47 22 12 05 12</a>
+    </p>
+    <div class="socials">
       <a
         aria-label="GitHub-profile for Bjerk"
         href="https://github.com/bjerkio"
@@ -35,33 +48,43 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
         href="https://www.linkedin.com/company/bjerk"
       >
         <LinkedInIcon />
-        </a>
-      </div>
+      </a>
+    </div>
     </section>
-   <!-- <ul class="links"> -->
-    <!--     <li><a href="/vilkar">Vilkår</a></li> -->
-    <!--     <li><a href="/personvern">Personvernerklæring</a></li> -->
-    <!--   </ul> -->
   </div>
+
+ <!-- <ul class="links"> -->
+  <!--     <li><a href="/vilkar">Vilkår</a></li> -->
+  <!--     <li><a href="/personvern">Personvernerklæring</a></li> -->
+  <!--   </ul> -->
 </footer>
 
 <style>
-  section.about {
-    &> p {
+  section.about { 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & > p {
       max-width: 40ch;
     }
   }
 
-  .container {
-    width: var(--container-width);
+  .footer-logo > svg {
+    height: 100px;
+  }
+
+  footer {
+    padding-inline: 2rem;
     margin-inline: auto;
     padding-block: 4rem;
 
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: 2rem;
   }
+
   .contact p:first-child {
     margin-top: 1.2rem;
     max-width: 30ch;
