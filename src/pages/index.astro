@@ -13,34 +13,81 @@ const url = Astro.site;
   description="Oppdag hvordan Bjerk driver global forandring gjennom teknologi. Vi forenkler og forbedrer læring, tenkning, arbeid og kommunikasjon med skreddersydde digitale løsninger. Bli med oss i å skape en lysere fremtid."
   path="/"
   schema={{
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Bjerk',
-    alternateName: ['Bjerk AS', 'BJRK', 'BK', 'bjerk.io'],
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Bjerk",
+    alternateName: ["Bjerk AS", "BJRK", "BK", "bjerk.io"],
     url,
   }}
 >
   <main>
     <section class="hero">
       <div class="pitch">
-        <h1>Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og	forenkle for ambisiøse bedrifter.</h1>
-        <a href="/om" class="button">
-          Kom i gang →
-        </a>
+        <h1>
+          Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og
+          forenkle for ambisiøse bedrifter.
+        </h1>
+        <a href="/om" class="button"> Kom i gang → </a>
       </div>
-      <!-- <Image src={HeroImage} alt="Bilde av folk som jobber" class="landing-image" /> -->
+      <div class="services">
+        <Image
+          src={HeroImage}
+          alt="Bilde av folk som jobber"
+          class="landing-image"
+        />
+        <nav aria-label="Det vil tilbyr">
+          <a href="/var-losninger/integrasjoner">Data og integrasjoner →</a>
+          <a href="/var-losninger/radgivning">Rådgivning →</a>
+          <a href="/var-losninger/produktutvikling">Produktutvikling →</a>
+          <a href="/var-losninger/utvikling">Teknologi og utvikling →</a>
+          <a href="/var-losninger/opplaring">Opplæring →</a>
+        </nav>
+      </div>
     </section>
   </main>
 </Layout>
 
 <style>
+  main {
+    --gap: 5rem;
+  }
+
   .hero {
     margin-block-start: 2rem;
     margin-inline: auto;
     width: min(var(--container-width), 1460px);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--gap);
+  }
+
+  .hero > .services {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .landing-image, nav {
+      max-width: 1151px;
+      align-self: flex-end;
+      width: 100%;
+    }
+
+    .landing-image {
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-block-start: 2rem;
+    }
+
+    & > nav {
+      display: grid;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      a {
+        --color-link: var(--color-app-text);
+      }
+    }
   }
 
   .section {
@@ -57,18 +104,9 @@ const url = Astro.site;
     margin-block-start: 2rem;
   }
 
-  .landing-image {
-    max-width: 1151px;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    margin-block-start: 2rem;
-    align-self: flex-end;
-  }
 
   h1 {
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     line-height: 1.1;
     font-weight: 400;
     text-wrap: pretty;
