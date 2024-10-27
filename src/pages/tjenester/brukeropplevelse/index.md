@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Lær mer om Bjerk – Brukeropplevelse'
+layout: "@layouts/page.astro"
+title: "Lær mer om Bjerk – Brukeropplevelse"
 headline: Brukeropplevelse (UX)
 path: /tjenester/brukeropplevelse
 description:

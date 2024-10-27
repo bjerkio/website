@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Lær mer om Bjerk – Universell utforming'
+layout: "@layouts/page.astro"
+title: "Lær mer om Bjerk – Universell utforming"
 headline: Universell utforming (UU)
 path: /tjenester/universell-utforming
 description:
@@ -39,8 +39,7 @@ maksimere mulighetene til å hjelpe flest mulig mennesker til å ta det i bruk.
 Visste du at det finnes tydelig definerte krav til UU i dag? Gjeldende regelverk
 og krav fra Uutilsynet kan du [lese her][uutilsynet]
 
-[uutilsynet]:
-  https://www.uutilsynet.no/regelverk/gjeldende-regelverk-og-krav/746
+[uutilsynet]: https://www.uutilsynet.no/regelverk/gjeldende-regelverk-og-krav/746
 
 Fordelene med god UU er mange. Vi mener noen viktige punkter er:
 

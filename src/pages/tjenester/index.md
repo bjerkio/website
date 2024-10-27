@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Bjerk – Våre tjenester'
+layout: "@layouts/page.astro"
+title: "Bjerk – Våre tjenester"
 headline: Vi skaper digitale produkter og løsninger
 path: /tjenester
 description:

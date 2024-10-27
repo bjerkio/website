@@ -29,9 +29,8 @@ jobs:
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount:
-            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           expires: 30d
           target: dev
           projectId: bjerk-io

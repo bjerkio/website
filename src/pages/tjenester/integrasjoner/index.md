@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Lær mer om Bjerk – Integrasjoner'
+layout: "@layouts/page.astro"
+title: "Lær mer om Bjerk – Integrasjoner"
 headline: Integrasjoner
 path: tjenester/integrasjoner
 description:

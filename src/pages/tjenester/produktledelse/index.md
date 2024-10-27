@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Lær mer om Bjerk – Produkutvikling og -ledelse'
+layout: "@layouts/page.astro"
+title: "Lær mer om Bjerk – Produkutvikling og -ledelse"
 headline: Produktutvikling og -ledelse
 path: /tjenester/produktledelse
 description:
