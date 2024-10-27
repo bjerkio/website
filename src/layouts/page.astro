@@ -1,40 +1,29 @@
 ---
-import type { MarkdownLayoutProps } from 'astro';
-import Layout, { type Props as DefaultLayoutProps } from './default.astro';
-import Brief from '@components/brief.astro';
-import Image from 'astro/components/Image.astro';
+import type { MarkdownLayoutProps } from "astro";
+import Layout, { type Props as DefaultLayoutProps } from "./default.astro";
+import Image from "astro/components/Image.astro";
 
 export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
 const { frontmatter } = Astro.props;
 ---
 
-<Layout 
-  {...frontmatter}
->
+<Layout {...frontmatter}>
   <main>
     <article>
-      <div class="hero">
-        { frontmatter.headline && (
-          <Brief 
-          title={frontmatter.headline}>
-            {
-              frontmatter.heading && (
-                <p>
-                  {frontmatter.heading}
-                </p>
-              )
-            }
-        </Brief>  
-        )}
-        { frontmatter.image && (
-                  <Image 
-        src={frontmatter.image} 
-        alt={frontmatter.imageAlt}
-        width={2140}
-        height={2140}
-        />  
-        )}
+      <div class="intro">
+        <h1>{frontmatter.headline}</h1>
+        <p>{frontmatter.heading}</p>
       </div>
+      {
+        frontmatter.image && (
+          <Image
+            src={frontmatter.image}
+            alt={frontmatter.imageAlt}
+            width={2140}
+            height={2140}
+          />
+        )
+      }
       <slot />
     </article>
   </main>
@@ -45,17 +34,32 @@ const { frontmatter } = Astro.props;
     width: var(--container-width);
     margin-inline: auto;
   }
+
+  .intro {
+    > h1 {
+      font-size: clamp(1.5rem, 2.5vw, 3rem);
+      text-wrap: pretty;
+    }
+
+    > p {
+      font-size: clamp(1rem, 2vw, 1.575rem);
+      line-height: 1.4;
+    }
+
+    margin-bottom: 3rem;
+  }
+
   article {
-    /* font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif; */
     line-height: 1.6;
     letter-spacing: -0.003em;
 
     display: grid;
     grid-template-columns:
       minmax(auto, 1fr)
-      minmax(auto, 60ch)
+      minmax(auto, 80ch)
       minmax(auto, 1fr);
   }
+
   article :global(> p:first-of-type strong) {
     font-weight: 600;
     font-size: clamp(0.8rem, 5vw, 1.5rem);
@@ -85,7 +89,9 @@ const { frontmatter } = Astro.props;
     grid-column: 2;
   }
   article :global(img) {
+    margin-inline: auto;
     width: 100%;
+    max-width: 800px;
     height: auto;
   }
   article :global(.hero) {
@@ -93,5 +99,4 @@ const { frontmatter } = Astro.props;
     flex-direction: column;
     gap: 3rem;
   }
-
 </style>

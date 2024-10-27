@@ -1,11 +1,11 @@
 ---
-import Layout from '@layouts/default.astro';
-import { getCollection } from 'astro:content';
-import ProjectCard from '@components/project-card.astro';
-import ProjectListCard from '@components/project-list-card.astro';
-import Brief from '@components/brief.astro';
+import Layout from "@layouts/default.astro";
+import { getCollection } from "astro:content";
+import ProjectCard from "@components/project-card.astro";
+import ProjectListCard from "@components/project-list-card.astro";
+import Brief from "@components/brief.astro";
 
-const projects = await getCollection('project');
+const projects = await getCollection("project");
 ---
 
 <Layout
@@ -15,15 +15,20 @@ const projects = await getCollection('project');
   path="/arbeid"
 >
   <main>
-    <Brief title="Arbeid">
-      <p>Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å forvandle måten folk tenker, jobber, prater og livnærer seg på ved å lage digre mengder digitale godbiter.</p>
+    <div class="intro">
+      <h1>Arbeider</h1>
+      <p>
+        Sjekk ut hva vi har stelt i stand siden 2009! Vi har kastet oss ut i å
+        forvandle måten folk tenker, jobber, prater og livnærer seg på ved å
+        lage digre mengder digitale godbiter.
+      </p>
       <p>Her får du en smakebit på noen av våre hjertebarn.</p>
-    </Brief>
+    </div>
     <section class="projects">
       {
         projects
-          .filter(project => project.data.image)
-          .map(project => <ProjectCard {...project} />)
+          .filter((project) => project.data.image)
+          .map((project) => <ProjectCard {...project} />)
       }
     </section>
     <section>
@@ -31,8 +36,8 @@ const projects = await getCollection('project');
       <div class="other-projects">
         {
           projects
-            .filter(project => !project.data.image)
-            .map(project => <ProjectListCard {...project} />)
+            .filter((project) => !project.data.image)
+            .map((project) => <ProjectListCard {...project} />)
         }
       </div>
     </section>
@@ -45,6 +50,10 @@ const projects = await getCollection('project');
     margin-inline: auto;
     display: grid;
     gap: 3rem;
+  }
+
+  .intro {
+    width: min(60ch, 100% - 4rem);
   }
 
   section {

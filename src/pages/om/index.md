@@ -7,9 +7,9 @@ heading:
   jobber og kommuniserer på. Bjerk samler folk med kompetanse innen
   programvareutvikling, brukeropplevelse og produktledelse for å gjøre verden
   til et bedre sted.
-image: "/assets/about-bjerk.jpg"
-imageAlt: "En mann, og to kvinner: Christina, Thomas og Sandra."
-imageTitle: "Fra venstre: Christina, Thomas og Sandra."
+# image: "/assets/about-bjerk.jpg"
+# imageAlt: "En mann, og to kvinner: Christina, Thomas og Sandra."
+# imageTitle: "Fra venstre: Christina, Thomas og Sandra."
 path: /om
 description:
   Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
