@@ -198,14 +198,10 @@ const canonical = new URL(path, Astro.site);
   </head>
   <body :data-color-scheme="colorScheme">
     <Header />
-    <!-- <button @click="colorScheme = colorScheme === 'light' ? 'dark' : 'light'"> -->
-    <!--   Bytt farge -->
-    <!-- </button> -->
     <slot />
     <Footer />
     <style is:global>
       :root {
-        /* Base Hues */
         --base-frostbite: 181 51%;
         --base-grapetastic: 250 100%;
         --hue-sandglow: 36 92%;
