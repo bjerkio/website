@@ -1,8 +1,14 @@
 ---
 import Layout from "@layouts/default.astro";
+import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import HeroImage from "../assets/people-working.jpg";
+import ProjectCard from "@components/project-card.astro";
+import PartnerCard from "@components/partner-card.astro";
+import ProjectListCard from "@components/project-list-card.astro";
 
+const projects = await getCollection("project");
+const partners = await getCollection("partner");
 const url = Astro.site;
 ---
 
@@ -44,16 +50,44 @@ const url = Astro.site;
         </nav>
       </div>
     </section>
+    <span x-intersect:enter="colorScheme = 'dark'" x-intersect:leave="colorScheme = 'light'">
+      <section class="work">
+        <p>
+          Vi skaper digitale produkter og løsninger som er tilpasset bedrifters unike behov og arbeidsprosesser.
+        </p>
+
+        <div class="projects">
+        {
+          projects
+            .filter((project) => project.data.image)
+            .map((project) => <ProjectCard {...project} />)
+            }
+        </div>
+      </section>
+      <section class="partners">
+        <h2>Noen av de vi jobber med</h2>
+
+        <div class="logos">
+        {
+          partners.map((partner) => <PartnerCard {...partner} />)
+        }
+        </div>
+      </section>
+      <section class="contact">
+        <h2>La oss utgjøre en forskjell <em>sammen</em></h2>
+        <a href="/kontakt" class="button">Kontakt oss →</a>
+      </section>
+    </span>
   </main>
 </Layout>
 
 <style>
   main {
-    --gap: 5rem;
+    --gap: 12rem;
   }
 
   .hero {
-    margin-block-start: 2rem;
+    margin-block-start: calc(var(--gap) / 2);
     margin-inline: auto;
     width: min(var(--container-width), 1460px);
     display: flex;
@@ -64,12 +98,16 @@ const url = Astro.site;
   .hero > .services {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: var(--gap);
 
     .landing-image, nav {
       max-width: 1151px;
       align-self: flex-end;
       width: 100%;
+    }
+
+    nav {
+      font-size: 1.25rem;
     }
 
     .landing-image {
@@ -90,20 +128,70 @@ const url = Astro.site;
     }
   }
 
-  .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+  .work {
+    width: var(--container-width);
+    margin-inline: auto;
+
+    margin-block-start: calc(var(--gap) * 2);
+
+    > .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    > p {
+      max-width: 40ch;
+      font-size: clamp(1rem, 2vw, 1.575rem);
+      line-height: 1.4;
+    }
   }
 
-  .intro-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-block-start: 2rem;
+  .partners {
+    max-width: 1200px;
+    text-align: center;
+    margin-inline: auto;
+    margin-block-start: var(--gap);
+    padding-inline: 2rem;
+
+    > h2 {
+      margin-bottom: 4rem;
+    }
+
+    > .logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+
+      gap: 3rem;
+    }
   }
 
+  .logos :global(> *){
+    max-height: 38px;
+    max-width: 150px;
+  }
+
+  @media (max-width: 600px) {
+    .partners > .logos {
+      gap: 1.5rem;
+    }
+
+    .logos :global(> *){
+      max-height: 25px;
+      max-width: 75px;
+    }
+  }
+
+  .contact {
+    background-color: var(--color-focus-bg);
+    color: var(--color-focus-text);
+    margin-block-start: var(--gap);
+    padding-block: 4rem;
+    text-align: center;
+  }
 
   h1 {
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);

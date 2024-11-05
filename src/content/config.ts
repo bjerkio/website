@@ -1,8 +1,8 @@
 import {
   defineCollection,
+  type ImageFunction,
   reference,
   z,
-  type ImageFunction,
 } from "astro:content";
 
 const people = defineCollection({
@@ -212,9 +212,19 @@ const event = defineCollection({
     }),
 });
 
+export const partner = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      name: z.string().optional(),
+      url: z.string().url().optional(),
+    }),
+});
+
 export const collections = {
   project,
   people,
   post,
   event,
+  partner,
 };

@@ -3,46 +3,75 @@ import Broadcast from "./broadcast.astro";
 import LogoSymbol from "./logo-symbol.astro";
 ---
 
-<header>
-  <div class="logo">
-    <a class="logo" aria-label="Gå til forsiden" href="/">
-      <LogoSymbol />
-    </a>
-    <Broadcast />
-  </div>
-  <button class="menu-button" aria-expanded="false" aria-haspopup="true">
-    <svg
-      width="18"
-      height="16"
-      viewBox="0 0 18 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+<header x-data="{ navOpen: false }">
+  <a class="logo" aria-label="Gå til forsiden" href="/">
+    <LogoSymbol />
+  </a>
+  <Broadcast />
+  <div class="right-nav">
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-haspopup="true"
+      @click="navOpen = !navOpen"
+      :aria-expanded="navOpen.toString()"
     >
-      <rect x="1.99316" y="2" width="14" height="2" fill="black"></rect>
-      <rect x="1.99316" y="7" width="14" height="2" fill="black"></rect>
-      <rect x="1.99316" y="12" width="14" height="2" fill="black"></rect>
-    </svg>
-    Meny
-  </button>
+      <svg
+        width="18"
+        height="16"
+        viewBox="0 0 18 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="1.99316" y="2" width="14" height="2" fill="black"></rect>
+        <rect x="1.99316" y="7" width="14" height="2" fill="black"></rect>
+        <rect x="1.99316" y="12" width="14" height="2" fill="black"></rect>
+      </svg>
+      Meny
+    </button>
+    <nav x-show="navOpen" x-transition @click.outside="navOpen = false">
+      <a href="/om">Om oss</a>
+      <a href="/arbeid">Arbeider</a>
+      <a href="/vare-losning">Våre løsninger</a>
+      <a href="/kunnskap">Kunnskap</a>
+      <a href="/kontakt">Kontakt oss</a>
+    </nav>
+  </div>
 </header>
 
 <style>
   header {
     display: flex;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
     width: var(--container-width);
     margin-inline: auto;
     padding: 2rem 0;
+    gap: 2rem;
   }
 
-  .logo {
+  .right-nav {
+    flex-grow: 1;
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    justify-content: flex-end;
   }
 
-  .logo a {
+  @media (max-width: 600px) {
+    header {
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    a.logo {
+      order: 2;
+    }
+
+    .right-nav {
+      order: 3;
+    }
+  }
+
+  a.logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,5 +90,39 @@ import LogoSymbol from "./logo-symbol.astro";
     background-color: var(--color-emphasis-bg);
     gap: 0.25rem;
     cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-app-bg);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 6rem;
+  }
+
+  nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  @media (hover) {
+    nav a:hover {
+      color: var(--color-link);
+    }
   }
 </style>
