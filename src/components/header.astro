@@ -8,7 +8,7 @@ import LogoSymbol from "./logo-symbol.astro";
     <LogoSymbol />
   </a>
   <Broadcast />
-  <div class="right-nav">
+  <div class="right-nav" x-init="$el.style.display = 'flex'">
     <button
       class="menu-button"
       aria-expanded="false"
@@ -29,7 +29,7 @@ import LogoSymbol from "./logo-symbol.astro";
       </svg>
       Meny
     </button>
-    <nav x-show="navOpen" x-transition @click.outside="navOpen = false" hidden>
+    <nav x-show="navOpen" x-transition @click.outside="navOpen = false">
       <a href="/om">Om oss</a>
       <a href="/arbeid">Arbeider</a>
       <a href="/tjenester">Våre tjenester</a>
@@ -51,8 +51,8 @@ import LogoSymbol from "./logo-symbol.astro";
   }
 
   .right-nav {
+    display: none; /* Hide until x-init */
     flex-grow: 1;
-    display: flex;
     justify-content: flex-end;
   }
 
@@ -107,6 +107,12 @@ import LogoSymbol from "./logo-symbol.astro";
     display: flex;
     flex-direction: column;
     padding-bottom: 6rem;
+  }
+
+  nav[hidden] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   nav a {
