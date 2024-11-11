@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 34">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 34" width="101px" height="34px">
   <g clip-path="url(#a)">
     <path fill="#fff" d="M19.709 9v24h-18V5a4 4 0 0 1 4-4"/>
     <path stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2" d="M19.709 9v24h-18V5a4 4 0 0 1 4-4"/>
