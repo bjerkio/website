@@ -34,6 +34,6 @@
     "commit-and-tag-version": "^12.4.2",
     "prettier": "^3.0.3",
     "schema-dts": "^1.1.2",
-    "vitest": "^0.34.6"
+    "vitest": "^2.0.0"
   }
 }
