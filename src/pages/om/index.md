@@ -41,6 +41,7 @@ feil eller endre retning om det er nødvendig. Vi tror det er slik vi skaper
 de beste resultatene.
 
 ## Hva vi tilbyr
+
 - [Data og integrasjoner][intg]
 - [Rådgivning][rad]
 - [Skreddersydd programvareutvikling][dev]

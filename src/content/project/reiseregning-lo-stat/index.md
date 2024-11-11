@@ -33,20 +33,20 @@ oppdrag.
 
 Utfordringen var tydelig definert – medlemmer som strevde med kompliserte
 skjemaer etter inspirerende møter og konferanser. Ansatte som brukte
-uforholdsmessig mye tid på å manuelt behandle utlegg i stedet for å fokusere 
+uforholdsmessig mye tid på å manuelt behandle utlegg i stedet for å fokusere
 på medlemsservice. En prosess som var ment å være en enkel administrativ
 oppgave, hadde blitt en barriere for engasjement og effektivitet.
 
-LO Media leverer blant annet teknologi og digitale tjenester til de ulike 
-foreningene i LO. De innså tidlig at noe måtte gjøres for å støtte 
-organisasjonene rundt seg. De trengte å skape en løsning som ikke bare 
+LO Media leverer blant annet teknologi og digitale tjenester til de ulike
+foreningene i LO. De innså tidlig at noe måtte gjøres for å støtte
+organisasjonene rundt seg. De trengte å skape en løsning som ikke bare
 effektiviserte prosessen, men som også gjenspeilet organisasjonens verdier
 om inkludering og støtte. Det var her Bjerk kom inn i bildet.
 
 ## Vår tilnærming: Teknologi møter mennesker
 
 Vi i Bjerk tror på at den beste teknologien er den du knapt merker at du bruker.
-Vi startet oppdraget med å  snakke med alle relevante interessenter for å skaffe
+Vi startet oppdraget med å snakke med alle relevante interessenter for å skaffe
 et tydelig bilde av hvordan dagens løsninger fungerte, og hvor skoen faktisk klemte.
 
 En kritisk innsikt dukket raskt opp: For mange medlemmer var reiseregninger en
@@ -88,6 +88,3 @@ Implementeringen av den nye plattformen ga LO Media noen håndfaste gevinster:
 
 Det handler ikke bare om å digitalisere prosesser, men om å gi medlemmene verktøy som faktisk gjør hverdagen enklere.
 Mens reiseregninger kanskje ikke endrer verden, har dette prosjektet vist at selv de minste endringene kan ha stor innvirkning. For hvert minutt spart på administrasjon, er det et minutt mer til å utføre meningsfylt arbeid. Og i en organisasjon som LO, hvor hvert medlem teller, kan disse minuttene summere seg opp til reell, positiv endring i arbeidslivet.
-
-
-

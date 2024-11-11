@@ -23,16 +23,16 @@ noe nytt, men å gjøre det enklere å ta gode valg, raskere.
 Vi tilbyr opplæring innen:
 
 - **Bruk av AI/Maskinlæring**: Hvordan kan AI og maskinlæring hjelpe deg med å
-jobbe smartere og mer effektivt?
+  jobbe smartere og mer effektivt?
 
 - **Digitale kontorverktøy**: Hvordan kan du bruke digitale verktøy som Teams,
-Slack og Google Workspace for å samarbeide bedre og mer effektivt?
+  Slack og Google Workspace for å samarbeide bedre og mer effektivt?
 
 - **Prosjektledelse**: Hvordan kan du bruke digitale verktøy for å lede prosjekter
-på en effektiv måte?
+  på en effektiv måte?
 
 - **Kommunikasjon og samarbeid**: Hvordan kan du bruke digitale verktøy for å
-kommunisere og samarbeide bedre med kolleger og kunder?
+  kommunisere og samarbeide bedre med kolleger og kunder?
 
 Vi tilbyr både individuell opplæring og kurs for grupper. Vi kan også hjelpe
 deg med å utvikle en helhetlig opplæringsstrategi for din virksomhet.

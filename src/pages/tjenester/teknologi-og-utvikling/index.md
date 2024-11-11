@@ -30,7 +30,7 @@ for å øke kapasiteten, dykke dypt i komplekse utfordringer eller
 bare få ting gjort – raskt og riktig. For mange er vi utviklingsavdelingen
 til selskapet deres, eller en forlengelse av det eksisterende teamet.
 
-Vi har *fokus på fart uten kompromisser*, som betyr at vi jobber i korte arbeidsøkter
+Vi har _fokus på fart uten kompromisser_, som betyr at vi jobber i korte arbeidsøkter
 med klare mål, og at vi bruker tid på å skape en felles forståelse av hva vi skal
 lage. Vi tror det er viktig å levere tidlig og ofte, men sørge for at kvaliteten
 er til å stole på. Bjerk har mye erfaring fra regnskap, bank og finans, og forstår
