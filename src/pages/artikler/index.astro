@@ -1,10 +1,9 @@
 ---
-import Layout from '@layouts/default.astro';
-import { getCollection } from 'astro:content';
-import PostCard from '@components/post-card.astro';
-import Brief from '@components/brief.astro';
+import Layout from "@layouts/default.astro";
+import { getCollection } from "astro:content";
+import PostCard from "@components/post-card.astro";
 
-const posts = await getCollection('post');
+const posts = await getCollection("post");
 ---
 
 <Layout
@@ -14,22 +13,19 @@ const posts = await getCollection('post');
   path="/artikler"
 >
   <main>
-    <Brief 
-      title="Artikler"
-    >
-      <p>
-        I Bjerk jobber det mennesker med ulike bakgrunner og perspektiver. Med det kommer 
-        det mange meninger om ulike temaer. Vi er også glad i å skrive, og et utvalg av det 
-        vil du finne her. Alt fra fag og teknologi, til ledelse og samarbeid. 
-        Og kanskje noe helt utenom dette også.  
-      </p> 
-    </Brief>
+    <h1>Artikler</h1>
+    <p>
+      I Bjerk jobber det mennesker med ulike bakgrunner og perspektiver. Med det
+      kommer det mange meninger om ulike temaer. Vi er også glad i å skrive, og
+      et utvalg av det vil du finne her. Alt fra fag og teknologi, til ledelse
+      og samarbeid. Og kanskje noe helt utenom dette også.
+    </p>
     <section class="posts">
       {
         posts
           .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
           .filter((project, index) => project.data.image && index < 12)
-          .map(project => <PostCard {...project} />)
+          .map((project) => <PostCard {...project} />)
       }
     </section>
   </main>
@@ -43,6 +39,10 @@ const posts = await getCollection('post');
     gap: 3rem;
   }
 
+  main p {
+    max-width: 60ch;
+  }
+
   section {
     margin-block: 1rem;
   }
@@ -52,5 +52,4 @@ const posts = await getCollection('post');
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
-
 </style>

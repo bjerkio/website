@@ -1,8 +1,6 @@
 ---
-import Brief from "@components/brief.astro";
 import Person from "@components/person.astro";
 import Layout from "@layouts/default.astro";
-import ContactForm from "@components/contact-form.astro";
 import { getCollection } from "astro:content";
 
 const people = await getCollection("people");

@@ -50,27 +50,29 @@ const url = Astro.site;
         </nav>
       </div>
     </section>
-    <span x-intersect:enter="colorScheme = 'dark'" x-intersect:leave="colorScheme = 'light'">
+    <span
+      x-intersect:enter="colorScheme = 'dark'"
+      x-intersect:leave="colorScheme = 'light'"
+    >
       <section class="work">
         <p>
-          Vi skaper digitale produkter og løsninger som er tilpasset bedrifters unike behov og arbeidsprosesser.
+          Vi skaper digitale produkter og løsninger som er tilpasset bedrifters
+          unike behov og arbeidsprosesser.
         </p>
 
         <div class="projects">
-        {
-          projects
-            .filter((project) => project.data.image)
-            .map((project) => <ProjectCard {...project} />)
-            }
+          {
+            projects
+              .filter((project) => project.data.image)
+              .map((project) => <ProjectCard {...project} />)
+          }
         </div>
       </section>
       <section class="partners">
         <h2>Noen av de vi jobber med</h2>
 
         <div class="logos">
-        {
-          partners.map((partner) => <PartnerCard {...partner} />)
-        }
+          {partners.map((partner) => <PartnerCard {...partner} />)}
         </div>
       </section>
       <section class="contact">
@@ -100,7 +102,8 @@ const url = Astro.site;
     flex-direction: column;
     gap: var(--gap);
 
-    .landing-image, nav {
+    .landing-image,
+    nav {
       max-width: 1151px;
       align-self: flex-end;
       width: 100%;
@@ -169,7 +172,7 @@ const url = Astro.site;
     }
   }
 
-  .logos :global(> *){
+  .logos :global(> *) {
     max-height: 38px;
     max-width: 150px;
   }
@@ -179,7 +182,7 @@ const url = Astro.site;
       gap: 1.5rem;
     }
 
-    .logos :global(> *){
+    .logos :global(> *) {
       max-height: 25px;
       max-width: 75px;
     }
