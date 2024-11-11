@@ -70,7 +70,7 @@
           "headers": [
             {
               "key": "Content-Security-Policy",
-              "value": "script-src 'self' https://gc.zgo.at https://cdnjs.cloudflare.com; connect-src https://bjerk.goatcounter.com/count"
+              "value": "script-src 'self' https://gc.zgo.at https://cdnjs.cloudflare.com 'unsafe-eval'; connect-src https://bjerk.goatcounter.com/count"
             },
             {
               "key": "X-Frame-Options",
