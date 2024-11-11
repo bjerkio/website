@@ -48,11 +48,9 @@ teknologien støtter dine forretningsmål – og gir resultater.
 
 Vi kan også hjelpe deg med **teknologisk rådgivning**. Hvilke verktøy trenger du
 for å nå målet ditt? Hvordan kan du sikre at valgene du tar i dag, fortsetter å
-gi verdi i morgen?
-
-Et annet område er **prosessoptimalisering**. Hvordan kan du bruke teknologi
-til å effektivisere arbeidsprosessene dine? Hvordan kan du sikre at du jobber
-smartere, ikke hardere?
+gi verdi i morgen? Et annet område er **prosessoptimalisering**. Hvordan kan
+du bruke teknologi til å effektivisere arbeidsprosessene dine? Hvordan kan du
+sikre at du jobber smartere, ikke hardere?
 
 Et steg videre er **innovasjon og utvikling**, hvor vi sammen identifiserer
 nye muligheter for vekst og forbedring gjennom digitale løsninger.
@@ -62,3 +60,4 @@ nye muligheter for vekst og forbedring gjennom digitale løsninger.
 La oss starte med en uforpliktende samtale. Sammen kan vi skape digitale
 løsninger som virkelig gjør en forskjell for din virksomhet.
 
+[Snakk med oss →](https://tally.so/r/3EbV2B)

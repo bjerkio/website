@@ -11,13 +11,51 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const data = entry.data;
+
+const siteUrl = new URL(Astro.site);
+
+const overviewUrl = new URL("/arbeider", siteUrl);
+const serviceUrl = new URL(`/arbeider/${data.slug}`, siteUrl);
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Tjenester",
+        item: overviewUrl.toString(),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: data.title,
+        item: serviceUrl.toString(),
+      },
+    ],
+  },
+];
+
+// if (frontmatter.schema) {
+//   if (Array.isArray(frontmatter.schema)) {
+//     schema.push(...frontmatter.schema);
+//   } else {
+//     schema.push(frontmatter.schema);
+//   }
+// }
+
 const { Content } = await entry.render();
 ---
 
 <Layout {...entry.data}>
   <main>
-    <h1>{entry.data.title}</h1>
-    <Content />
+    <article>
+      <h1>{entry.data.title}</h1>
+      <Content />
+    </article>
   </main>
 </Layout>
 
@@ -26,20 +64,55 @@ const { Content } = await entry.render();
     width: var(--container-width);
     margin-inline: auto;
   }
-  h1 {
-    font-size: clamp(3rem, 5vw, 2.5rem);
-    font-weight: 400;
-    line-height: 1.3;
-    grid-column: 1 / 6;
 
+  article {
+    line-height: 1.6;
+    letter-spacing: -0.003em;
+
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 1fr)
+      minmax(auto, 80ch)
+      minmax(auto, 1fr);
+  }
+
+  article :global(> p) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(ul > li) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(> pre) {
+    padding: 1rem;
+  }
+
+  article :global(> h1) {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
     text-wrap: pretty;
-    max-width: 25ch;
+  }
 
+  article :global(> h2) {
+    margin-top: 2rem;
     margin-bottom: 0;
   }
-  @media (max-width: 640px) {
-    h1 {
-      font-size: clamp(2rem, 5vw, 2rem);
-    }
+
+  article > .hero {
+    grid-column: 1 / -1;
+  }
+  article :global(> *) {
+    grid-column: 2;
+  }
+  article :global(img) {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+  article :global(.hero) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 </style>
