@@ -5,7 +5,6 @@ import { Image } from "astro:assets";
 import HeroImage from "../assets/people-working.jpg";
 import ProjectCard from "@components/project-card.astro";
 import PartnerCard from "@components/partner-card.astro";
-import ProjectListCard from "@components/project-list-card.astro";
 
 const projects = await getCollection("project");
 const partners = await getCollection("partner");
@@ -45,7 +44,9 @@ const url = Astro.site;
           <a href="/tjenester/integrasjoner">Data og integrasjoner →</a>
           <a href="/tjenester/radgivning">Rådgivning →</a>
           <a href="/tjenester/produktutvikling">Produktutvikling →</a>
-          <a href="/tjenester/teknologi-og-utvikling">Teknologi og utvikling →</a>
+          <a href="/tjenester/teknologi-og-utvikling"
+            >Teknologi og utvikling →</a
+          >
           <a href="/tjenester/opplaring">Opplæring →</a>
         </nav>
       </div>
