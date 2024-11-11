@@ -29,7 +29,7 @@ import LogoSymbol from "./logo-symbol.astro";
       </svg>
       Meny
     </button>
-    <nav x-show="navOpen" x-transition @click.outside="navOpen = false">
+    <nav x-show="navOpen" x-transition @click.outside="navOpen = false" hidden>
       <a href="/om">Om oss</a>
       <a href="/arbeid">Arbeider</a>
       <a href="/tjenester">Våre tjenester</a>
@@ -93,7 +93,6 @@ import LogoSymbol from "./logo-symbol.astro";
   }
 
   nav {
-    display: none;
     position: absolute;
     z-index: 9999;
     top: 100%;
