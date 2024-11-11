@@ -1,0 +1,163 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Layout, { type Props as DefaultLayoutProps } from "./default.astro";
+
+export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
+const { frontmatter } = Astro.props;
+
+const siteUrl = new URL(Astro.site);
+
+const overviewUrl = new URL("/tjenester", siteUrl);
+const serviceUrl = new URL(frontmatter.path, siteUrl);
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Tjenester",
+        item: overviewUrl.toString(),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: frontmatter.title,
+        item: serviceUrl.toString(),
+      },
+    ],
+  },
+];
+
+if (frontmatter.schema) {
+  if (Array.isArray(frontmatter.schema)) {
+    schema.push(...frontmatter.schema);
+  } else {
+    schema.push(frontmatter.schema);
+  }
+}
+---
+
+<Layout {...frontmatter} schema={schema}>
+  <main>
+    <nav aria-label="breadcrumb">
+      <a href="/tjenester">← Tilbake til tjenester</a>
+    </nav>
+    <article>
+      <slot />
+    </article>
+    <section class="services">
+      <h2>Les mer om våre tjenester</h2>
+      <nav>
+        <a href="/tjenester/integrasjoner">
+          Data og integrasjoner
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="/tjenester/radgivning">
+          Rådgivning
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="/tjenester/teknologi-og-utvikling">
+          Skreddersydd programvareutvikling
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="/tjenester/produktutvikling">
+          Produktutvikling og -ledelse
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="/tjenester/opplaring">
+          Opplæring innen digitale verktøy
+          <span aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  .services {
+    margin-top: 6rem;
+    max-width: 80ch;
+    margin-inline: auto;
+
+    > nav {
+      display: grid;
+      gap: 1rem;
+
+      > a {
+        --color-link: var(--color-focus-text);
+        font-size: 1.25rem;
+        text-decoration-color: inherit;
+        text-decoration-thickness: 0.1rem;
+        text-underline-offset: 0.25rem;
+      }
+    }
+  } 
+
+  article {
+    line-height: 1.6;
+    letter-spacing: -0.003em;
+
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 1fr)
+      minmax(auto, 80ch)
+      minmax(auto, 1fr);
+  }
+
+  article :global(> p) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(ul > li) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(> pre) {
+    padding: 1rem;
+  }
+
+  article :global(> h1) {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    text-wrap: pretty;
+  }
+
+  article :global(> p:first-of-type) {
+    max-width: 60ch;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    text-wrap: pretty;
+
+    border-bottom: 1rem solid var(--color-subtle-bg);
+  }
+
+  article :global(> h2) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  article > .hero {
+    grid-column: 1 / -1;
+  }
+  article :global(> *) {
+    grid-column: 2;
+  }
+  article :global(img) {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+  article :global(.hero) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+</style>

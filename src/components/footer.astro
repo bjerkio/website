@@ -5,6 +5,10 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 ---
 
 <footer>
+  <section class="call-to-action">
+    <h2>La oss utgjøre en forskjell <em>sammen</em></h2>
+    <a href="/kontakt" class="button">Kontakt oss →</a>
+  </section>
   <div class="footer-content">
     <section aria-labelledby="footer-about" class="about">
       <h2 id="footer-about" class="sr-only">Om Bjerk</h2>
@@ -20,7 +24,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
         <li><a href="/om">Om oss →</a></li>
         <li><a href="/arbeid">Arbeider →</a></li>
         <li><a href="/tjenester">Tjenester →</a></li>
-        <li><a href="/kunnskap">Kunnskap →</a></li>
+        <li><a href="/artikler">Artikler →</a></li>
         <li><a href="/kontakt">Kontakt oss →</a></li>
       </ul>
     </nav>
@@ -74,6 +78,23 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 
   .footer-logo > svg {
     height: 100px;
+  }
+
+  .call-to-action {
+    background-color: var(--color-focus-bg);
+    color: var(--color-focus-text);
+    margin-block-start: var(--gap);
+    padding-block: 8rem;
+    text-align: center;
+
+    & > a {
+      gap: 0.5rem;
+      color: inherit;
+      font-size: 1.25rem;
+      text-decoration-color: inherit;
+      text-decoration-thickness: 0.1rem;
+      text-underline-offset: 0.25rem;
+    }
   }
 
   footer > .footer-content {
@@ -140,5 +161,3 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
     color: inherit;
   }
 </style>
-
-

@@ -45,7 +45,7 @@ const url = Astro.site;
           <a href="/tjenester/integrasjoner">Data og integrasjoner →</a>
           <a href="/tjenester/radgivning">Rådgivning →</a>
           <a href="/tjenester/produktutvikling">Produktutvikling →</a>
-          <a href="/tjenester/utvikling">Teknologi og utvikling →</a>
+          <a href="/tjenester/teknologi-og-utvikling">Teknologi og utvikling →</a>
           <a href="/tjenester/opplaring">Opplæring →</a>
         </nav>
       </div>
@@ -74,10 +74,6 @@ const url = Astro.site;
         <div class="logos">
           {partners.map((partner) => <PartnerCard {...partner} />)}
         </div>
-      </section>
-      <section class="contact">
-        <h2>La oss utgjøre en forskjell <em>sammen</em></h2>
-        <a href="/kontakt" class="button">Kontakt oss →</a>
       </section>
     </span>
   </main>
@@ -154,7 +150,7 @@ const url = Astro.site;
     max-width: 1200px;
     text-align: center;
     margin-inline: auto;
-    margin-block-start: var(--gap);
+    margin-block: var(--gap);
     padding-inline: 2rem;
 
     > h2 {
@@ -186,14 +182,6 @@ const url = Astro.site;
       max-height: 25px;
       max-width: 75px;
     }
-  }
-
-  .contact {
-    background-color: var(--color-focus-bg);
-    color: var(--color-focus-text);
-    margin-block-start: var(--gap);
-    padding-block: 8rem;
-    text-align: center;
   }
 
   h1 {

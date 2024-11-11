@@ -28,6 +28,7 @@ export type Props = {
    * The headline on the page. The ideal length is approximately 47 characters.
    *
    * @default title
+   * @deprecated Use <h1> or # in Markdown instead
    */
   headline?: string;
 
@@ -35,6 +36,7 @@ export type Props = {
    * The heading on the page next to headline. Should be longer than headline.
    *
    * @default title
+   * @deprecated Just write the text instead
    */
   heading?: string;
 
@@ -208,8 +210,8 @@ const canonical = new URL(path, Astro.site);
 
         --color-app-bg: #ffffff;
         --color-app-text: black;
-        --color-app-link: hsl(var(--base-frostbite) 30%);
-        --color-app-link-hover: hsl(var(--base-frostbite) 50%);
+        --color-app-link: var(--color-app-text);
+        --color-app-link-hover: hsl(var(--base-grapetastic) 20%);
         --color-app-focus-intense: hsl(var(--base-frostbite) 40%);
         --color-app-focus-subtle: hsl(var(--base-frostbite) 95%);
 

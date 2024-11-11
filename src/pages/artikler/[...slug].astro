@@ -38,14 +38,14 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
   articlePublishDate={entry.data.date}
   path={`/artikler/${entry.slug}`}
   schema={{
-    '@type': 'NewsArticle',
-    '@context': 'http://schema.org',
+    "@type": "NewsArticle",
+    "@context": "http://schema.org",
     headline: headline,
     // about: entry.data.description,
     description: entry.data.description,
     // TODO: wordCount: 1394,
-    author: authors.map(author => ({
-      '@type': 'Person',
+    author: authors.map((author) => ({
+      "@type": "Person",
       name: `${author.data.givenName} ${author.data.familyName}`,
       url: Astro.site,
     })),
@@ -58,28 +58,28 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
     // TODO: assesses: 'Hvordan posisjonere seg i markedet, skape attraktiv merkevare',
     mainEntityOfPage: makeUrl(`/artikler/${entry.slug}`),
     publisher: {
-      '@context': 'https://schema.org',
-      '@type': 'ProfessionalService',
-      name: 'Bjerk',
-      url: makeUrl('/'),
-      logo: makeUrl('/assets/logo.svg'),
-      image: makeUrl('/assets/logo.svg'),
-      telephone: '+4722120512',
-      email: 'office@bjerk.io',
-      taxID: '930 334 693',
-      priceRange: '$$$',
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: "Bjerk",
+      url: makeUrl("/"),
+      logo: makeUrl("/assets/logo.svg"),
+      image: makeUrl("/assets/logo.svg"),
+      telephone: "+4722120512",
+      email: "office@bjerk.io",
+      taxID: "930 334 693",
+      priceRange: "$$$",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Akersgata 51',
-        addressLocality: 'Oslo',
-        addressRegion: 'Oslo',
-        postalCode: '0180',
-        addressCountry: 'NO',
+        "@type": "PostalAddress",
+        streetAddress: "Akersgata 51",
+        addressLocality: "Oslo",
+        addressRegion: "Oslo",
+        postalCode: "0180",
+        addressCountry: "NO",
       },
       sameAs: [
-        'https://www.facebook.com/bjerkorg',
-        'https://www.linkedin.com/company/bjerk',
-        'https://github.com/bjerkio',
+        "https://www.facebook.com/bjerkorg",
+        "https://www.linkedin.com/company/bjerk",
+        "https://github.com/bjerkio",
       ],
     },
   }}
@@ -92,7 +92,7 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
           <div class="meta-type">Publisert</div>
           <time datetime={entry.data.date.toISOString()}>
             {humanDate}
-          </time>  
+          </time>
         </div>
         <div>
           <div class="meta-type">Skrevet av</div>
@@ -114,13 +114,13 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
       />
       <Content />
       {
-        mainAuthor.data.type == 'external-author' && (
+        mainAuthor.data.type == "external-author" && (
           <div class="disclaimer">
             <strong>Gjesteforfatter.</strong> Dette er en artikkel skrevet av
             noen andre enn Bjerk.
           </div>
         )
-      }
+        }
     </article>
   </main>
 </Layout>
@@ -192,6 +192,14 @@ const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 
   article :global(> p) {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
+  }
+
+  article :global(> ul) {
+    padding-inline-start: 2rem;
+    padding-block-start: 1rem;
+    li {
+      font-size: clamp(0.8rem, 4vw, 1.2rem);
+    }
   }
 
   article :global(> pre) {

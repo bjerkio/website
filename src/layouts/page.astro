@@ -1,7 +1,6 @@
 ---
 import type { MarkdownLayoutProps } from "astro";
 import Layout, { type Props as DefaultLayoutProps } from "./default.astro";
-import Image from "astro/components/Image.astro";
 
 export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
 const { frontmatter } = Astro.props;
@@ -10,20 +9,6 @@ const { frontmatter } = Astro.props;
 <Layout {...frontmatter}>
   <main>
     <article>
-      <div class="intro">
-        <h1>{frontmatter.headline}</h1>
-        <p>{frontmatter.heading}</p>
-      </div>
-      {
-        frontmatter.image && (
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.imageAlt}
-            width={2140}
-            height={2140}
-          />
-        )
-      }
       <slot />
     </article>
   </main>
@@ -33,20 +18,6 @@ const { frontmatter } = Astro.props;
   main {
     width: var(--container-width);
     margin-inline: auto;
-  }
-
-  .intro {
-    > h1 {
-      font-size: clamp(1.5rem, 2.5vw, 3rem);
-      text-wrap: pretty;
-    }
-
-    > p {
-      font-size: clamp(1rem, 2vw, 1.575rem);
-      line-height: 1.4;
-    }
-
-    margin-bottom: 3rem;
   }
 
   article {
@@ -60,28 +31,28 @@ const { frontmatter } = Astro.props;
       minmax(auto, 1fr);
   }
 
-  article :global(> p:first-of-type strong) {
-    font-weight: 600;
-    font-size: clamp(0.8rem, 5vw, 1.5rem);
-  }
-
-  article :global(> p:first-of-type) {
-    margin-top: 2em;
-  }
-
   article :global(> p) {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
+
   article :global(ul > li) {
     font-size: clamp(0.8rem, 4vw, 1.2rem);
   }
+
   article :global(> pre) {
     padding: 1rem;
   }
+
+  article :global(> h1) {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    text-wrap: pretty;
+  }
+
   article :global(> h2) {
     margin-top: 2rem;
     margin-bottom: 0;
   }
+
   article > .hero {
     grid-column: 1 / -1;
   }

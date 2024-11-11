@@ -33,7 +33,7 @@ import LogoSymbol from "./logo-symbol.astro";
       <a href="/om">Om oss</a>
       <a href="/arbeid">Arbeider</a>
       <a href="/vare-losning">Våre løsninger</a>
-      <a href="/kunnskap">Kunnskap</a>
+      <a href="/artikler">Artikler</a>
       <a href="/kontakt">Kontakt oss</a>
     </nav>
   </div>
@@ -98,24 +98,23 @@ import LogoSymbol from "./logo-symbol.astro";
     top: 100%;
     right: 0px;
     width: 100%;
-    max-width: 450px;
     background-color: var(--color-app-bg);
     opacity: 1;
     visibility: visible;
     transition: 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+    text-align: right;
 
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     padding-bottom: 6rem;
   }
 
   nav a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-right: 0rem;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 800;
   }
 
   @media (hover) {
