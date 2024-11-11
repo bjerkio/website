@@ -1,0 +1,10 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+export type Props = CollectionEntry<"partner">;
+
+const { render } = Astro.props;
+const { Content } = await render();
+---
+
+{Content && <Content />}

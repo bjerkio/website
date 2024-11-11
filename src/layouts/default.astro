@@ -1,9 +1,8 @@
 ---
 import type { WithContext, Thing } from "schema-dts";
-import "@fontsource-variable/sora";
+import "@fontsource/ibm-plex-sans";
 import { jsonLd } from "./json-ld";
 import Header from "@components/header.astro";
-import ContactFooter from "@components/contact-footer.astro";
 import Footer from "@components/footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -29,6 +28,7 @@ export type Props = {
    * The headline on the page. The ideal length is approximately 47 characters.
    *
    * @default title
+   * @deprecated Use <h1> or # in Markdown instead
    */
   headline?: string;
 
@@ -36,6 +36,7 @@ export type Props = {
    * The heading on the page next to headline. Should be longer than headline.
    *
    * @default title
+   * @deprecated Just write the text instead
    */
   heading?: string;
 
@@ -87,11 +88,6 @@ export type Props = {
   articleAuthor?: string;
 
   /**
-   * Set to false for pages that shouldn't have a contact form at the bottom.
-   */
-  contactFooter?: boolean;
-
-  /**
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
@@ -118,7 +114,6 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
-  contactFooter = true,
 } = Astro.props;
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
@@ -131,26 +126,26 @@ const makeUrl = (newPath: string) => new URL(newPath, Astro.site).toString();
 const canonical = new URL(path, Astro.site);
 ---
 
-<html lang="nb">
+<html lang="nb" x-data="{ colorScheme: 'light' }">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href={makeUrl('favicon.svg')} />
+    <link rel="icon" type="image/svg+xml" href={makeUrl("favicon.svg")} />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href={makeUrl('favicon-16x16.png')}
+      href={makeUrl("favicon-16x16.png")}
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href={makeUrl('favicon-32x32.png')}
+      href={makeUrl("favicon-32x32.png")}
     />
-    <link rel="shortcut icon" href={makeUrl('favicon.ico')} />
-    <link rel="mask-icon" href={makeUrl('mask-icon.svg')} color="#FFFFFF" />
+    <link rel="shortcut icon" href={makeUrl("favicon.ico")} />
+    <link rel="mask-icon" href={makeUrl("mask-icon.svg")} color="#FFFFFF" />
     <meta name="viewport" content="width=device-width" />
-    <link type="text/plain" rel="author" href={makeUrl('humans.txt')} />
+    <link type="text/plain" rel="author" href={makeUrl("humans.txt")} />
     <ViewTransitions />
 
     <title>{title}</title>
@@ -167,18 +162,20 @@ const canonical = new URL(path, Astro.site);
     <meta property="og:type" content={type} />
     <meta property="og:title" content={socialMediaTitle} />
     <meta property="og:description" content={socialMediaDescription} />
-    {images.map(img => <meta property="og:image" content={img} />)}
+    {images.map((img) => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Bjerk" />
-    <script data-goatcounter="https://bjerk.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://bjerk.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"></script>
 
     {
-      type == 'article' && articleAuthor && (
+      type == "article" && articleAuthor && (
         <meta property="article:author" content={articleAuthor} />
       )
     }
     {
-      type == 'article' && articlePublishDate && (
+      type == "article" && articlePublishDate && (
         <>
           <meta
             name="publish_date"
@@ -194,55 +191,85 @@ const canonical = new URL(path, Astro.site);
     }
 
     {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs-intersect/3.14.3/cdn.min.js"
+      integrity="sha512-zUi+vHO/A+Mh3PQDYpAhzo3GGnrSTdOdyUkFby6I2p+k5kOhVNDMJMnhaJgZtecorfhS/+Y5PbkDu7iWsnk8+A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
   </head>
-  <body>
+  <body :data-color-scheme="colorScheme">
     <Header />
     <slot />
     <Footer />
     <style is:global>
       :root {
-        --color-light: var(--green20);
-        --color-dark: var(--dark100);
+        --base-frostbite: 181 51%;
+        --base-grapetastic: 250 100%;
+        --hue-sandglow: 36 92%;
 
-        --green-base: 122 83%;
-        --blue-base: 234 66%;
+        --color-app-bg: #ffffff;
+        --color-app-text: black;
+        --color-app-link: var(--color-app-text);
+        --color-app-link-hover: hsl(var(--base-grapetastic) 20%);
+        --color-app-focus-intense: hsl(var(--base-frostbite) 40%);
+        --color-app-focus-subtle: hsl(var(--base-frostbite) 95%);
 
-        --container-width: min(90ch, 100% - 4rem);
+        --color-subtle-bg: hsl(var(--base-frostbite) 95%);
+        --color-subtle-border: hsl(var(--base-frostbite) 95%);
+        --color-subtle-text: hsl(var(--base-frostbite) 40%);
 
-        /* Legacy color variables */
-        --color-app-bg: white;
-        --color-subtle-bg: hsl(var(--blue-base) 95%);
-        --color-subtle-border: hsl(var(--blue-base) 95%);
+        --color-card-bg: hsl(var(--base-frostbite) 30% 98%);
+        --color-text-subtle: hsl(var(--base-frostbite) 40%);
+
+        --color-emphasis-bg: hsl(var(--base-frostbite) 85%);
+        --color-emphasis-text: hsl(var(--base-frostbite) 10%);
+
+        --color-focus-bg: hsl(var(--base-grapetastic) 90%);
+        --color-focus-text: hsl(var(--base-grapetastic) 5%);
+
+        --container-width: min(1620px, 100% - 4rem);
 
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
       }
+
+      main {
+        margin-bottom: 4rem;
+      }
+
+      body,
       html {
+        min-height: 100vh;
+        background-color: var(--color-app-bg);
         font-family:
-          'Sora Variable',
+          "IBM Plex Sans",
           system-ui,
           -apple-system,
           sans-seri;
         font-size: 16px;
         line-height: 1.5;
-        color: #1d1d1d;
-        background-color: var(--color-light);
+        color: var(--color-app-text);
 
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'kern', 'liga';
-      }
-      main {
-        margin-bottom: 4rem;
-      }
-
-      body {
+        font-feature-settings: "kern", "liga";
         margin: 0;
-        overflow-y: scroll;
-        background-color: var(--color-app-bg);
         -webkit-text-size-adjust: 100%;
         touch-action: manipulation;
-        caret-color: hsl(var(--blue-base) 40%);
+        caret-color: hsl(var(--base-frostbite) 40%);
+        transition:
+          color 0.4s cubic-bezier(0.65, 0.05, 0.36, 1),
+          background-color 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+
+      body[data-color-scheme="dark"] {
+        --color-app-text: white;
+        --color-app-bg: hsl(var(--base-frostbite) 1%);
+        --color-subtle-bg: hsl(var(--base-frostbite) 15%);
+        --color-subtle-border: hsl(var(--base-frostbite) 15%);
+        --color-app-link: hsl(var(--base-frostbite) 60%);
+        --color-app-link-hover: hsl(var(--base-frostbite) 80%);
       }
 
       *,
@@ -252,41 +279,24 @@ const canonical = new URL(path, Astro.site);
       }
 
       ::selection {
-        background: hsl(var(--blue-base) 90%);
-        color: #1d1d1d;
-      }
-
-      .primary {
-        font-size: 1rem;
-        padding: 0.25rem 1rem;
-        border-radius: 16px;
-        border: solid;
-        border-width: 2px;
-        border-color: hsl(var(--green-base) 75%);
-        text-decoration: none;
-        background-color: hsl(var(--green-base) 75%);
-        width: fit-content;
-      }
-      .primary:hover {
-        background-color: hsl(var(--green-base) 75%);
-      }
-      .primary:active {
-        border-color: hsl(var(--green-base) 55%);
-        background-color: hsl(var(--green-base) 55%);
+        --color-selection-bg: var(--color-focus-bg);
+        --color-selection-text: var(--color-focus-text);
+        background: var(--color-selection-bg);
+        color: var(--color-selection-text);
       }
 
       body *::-webkit-scrollbar {
-        background-color: hsl(var(--blue-base) 90%);
+        background-color: var(--color-focus-bg);
       }
 
       body *::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: hsl(var(--blue-base) 90%);
-        border: 3px solid hsl(var(--blue-base) 90%);
+        background-color: var(--color-focus-bg);
+        border: 3px solid var(--color-focus-bg);
       }
 
       body *::-webkit-scrollbar-thumb:hover {
-        background-color: hsl(var(--blue-base) 90%);
+        background-color: var(--color-app-focus-intense);
       }
 
       p {
@@ -294,14 +304,28 @@ const canonical = new URL(path, Astro.site);
       }
 
       a {
-        --link-color: hsl(var(--blue-base) 40%);
+        --color-link: var(--color-app-link);
+        --color-link-hover: var(--color-app-link-hover);
 
-        color: var(--link-color);
-        text-decoration-color: var(--link-color);
+        color: var(--color-link);
+        text-decoration-color: var(--color-link);
         text-decoration-skip-ink: none;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.125em;
       }
+
+      @media (hover) {
+        a:hover {
+          --color-link: var(--color-link-hover);
+        }
+      }
+
+      a:focus-visible {
+        outline-color: var(--link-color);
+        outline-offset: 0.4em;
+        border-radius: 0.225em;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -314,7 +338,7 @@ const canonical = new URL(path, Astro.site);
         padding: 1em;
         resize: none;
         font-family:
-          'Sora Variable',
+          "Sora Variable",
           system-ui,
           -apple-system,
           sans-seri;
@@ -322,31 +346,33 @@ const canonical = new URL(path, Astro.site);
         max-width: 60ch;
         background-color: transparent;
       }
+
       input {
         border: none;
         border-block-end: 1px solid grey;
         padding: 16px 0;
       }
+
       textarea {
         border-radius: 8px;
       }
+
       textarea:focus,
       input:focus {
-        background-color: hsl(var(--blue-base) 95%);
+        background-color: var(--color-focus-bg);
         padding: 16px 1em;
         background-color: white;
       }
 
-      @media (hover) {
-        a:hover {
-          --link-color: hsl(var(--blue-base) 5%);
-        }
-      }
-
-      a:focus-visible {
-        outline-color: var(--link-color);
-        outline-offset: 0.4em;
-        border-radius: 0.225em;
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
       }
     </style>
   </body>

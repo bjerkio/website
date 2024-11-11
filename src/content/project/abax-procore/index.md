@@ -8,9 +8,9 @@ socialMediaDescription:
   Discover the innovative partnership of Procore and ABAX, uniting construction
   and telematics technologies to streamline project management and promote
   environmental responsibility.
-image: ./AM_Sc03_01-v2.gif
+image: ./procore-abax.png
 socialMediaImages:
-  - ./ABAX-PROCORE-SOME.png
+  - ./procore-abax.png
 categories:
   - development
   - ux

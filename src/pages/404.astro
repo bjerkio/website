@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/default.astro';
+import Layout from "@layouts/default.astro";
 ---
 
 <Layout title="Woops! Siden finnes ikke hos Bjerk" path="/">
@@ -13,14 +13,24 @@ import Layout from '@layouts/default.astro';
     </p>
     <ul>
       <li><a href="/">Gå tilbake til forsiden</a></li>
-      <li><a href="/kontakt">Si ifra til noen™</a></li>
+      <li><a href="/kontakt">Ta kontakt med oss</a></li>
     </ul>
   </main>
 </Layout>
 
 <style>
   main {
-    width: min(40ch, 100% - 4rem);
+    width: var(--container-width);
     margin-inline: auto;
+    margin-block: 10rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-inline: 0;
+  }
+
+  p {
+    width: min(60ch, 100% - 4rem);
   }
 </style>

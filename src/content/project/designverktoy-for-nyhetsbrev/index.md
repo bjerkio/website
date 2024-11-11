@@ -1,6 +1,6 @@
 ---
+image: ./morgenlevering-bjerk.png
 headline: Gode morgenstunder rett i innboksen!
-image: ./morgenlevering.jpg
 socialMediaImages:
   - ./morgenlevering-some.png
 categories:

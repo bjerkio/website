@@ -1,8 +1,7 @@
 ---
-title:
-  Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
+title: Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
   November
-headline: 'Frokost hos Bjerk: «Universell utforming» med Christian Thon'
+headline: "Frokost hos Bjerk: «Universell utforming» med Christian Thon"
 description:
   Den 30. november inviterer Bjerk til en frokost og lærerik dialog med
   Christian Thon fra Norges Blindeforbund. Opplev hvordan universell utforming
@@ -22,7 +21,7 @@ eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 eventStatus: https://schema.org/EventScheduled
 offers:
   - url: https://forms.gle/oAyVtHDGAsp3WhH9A
-    price: '0'
+    price: "0"
     priceCurrency: NOK
     availability: https://schema.org/SoldOut
     validFrom: 2023-11-08T08:00+01:00

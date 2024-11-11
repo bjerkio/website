@@ -1,8 +1,9 @@
 import { defineConfig } from "astro/config";
 import remarkGfm from "remark-gfm";
 import Icons from "unplugin-icons/vite";
-
 import sitemap from "@astrojs/sitemap";
+
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,5 +18,5 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkGfm],
   },
-  integrations: [sitemap()],
+  integrations: [sitemap(), alpinejs()],
 });

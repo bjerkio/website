@@ -1,135 +1,126 @@
 ---
-import MobileNav from './mobile-nav.astro';
-import Logo from './logo.astro';
-import Megaphone from '~icons/ph/megaphone';
-
-const navs = [
-  {name: "Om", path: "/om"},
-  {name: "Arbeid", path: "/arbeid"},
-  {name: "Artikler", path: "/artikler"},
-  {name: "Kontakt", path: "/kontakt"}
-]
-
-const removeTrailingSlash = (url: URL) => {
-  if (url.pathname.endsWith("/")) {
-    url.pathname = url.pathname.slice(0, -1);
-  }
-  return url;
-};
-
-const currentPath = removeTrailingSlash(Astro.url).pathname;
-
+import Broadcast from "./broadcast.astro";
+import LogoSymbol from "./logo-symbol.astro";
 ---
 
-<header>
+<header x-data="{ navOpen: false }">
   <a class="logo" aria-label="Gå til forsiden" href="/">
-    <Logo />
+    <LogoSymbol />
   </a>
-  <nav>
-    <ul>
-      {navs.map(nav =>
-        <li class={nav.path === currentPath ? "active" : "inactive" } ><a href={nav.path}>{nav.name}</a></li>
-      )}
-    </ul>
-    <div class="mobile-nav" transition:persist>
-      <MobileNav navOptions={navs} />
-    </div>
-  </nav>
+  <Broadcast />
+  <div class="right-nav">
+    <button
+      class="menu-button"
+      aria-expanded="false"
+      aria-haspopup="true"
+      @click="navOpen = !navOpen"
+      :aria-expanded="navOpen.toString()"
+    >
+      <svg
+        width="18"
+        height="16"
+        viewBox="0 0 18 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="1.99316" y="2" width="14" height="2" fill="black"></rect>
+        <rect x="1.99316" y="7" width="14" height="2" fill="black"></rect>
+        <rect x="1.99316" y="12" width="14" height="2" fill="black"></rect>
+      </svg>
+      Meny
+    </button>
+    <nav x-show="navOpen" x-transition @click.outside="navOpen = false">
+      <a href="/om">Om oss</a>
+      <a href="/arbeid">Arbeider</a>
+      <a href="/tjenester">Våre tjenester</a>
+      <a href="/artikler">Artikler</a>
+      <a href="/kontakt">Kontakt oss</a>
+    </nav>
+  </div>
 </header>
 
 <style>
   header {
     display: flex;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
     width: var(--container-width);
     margin-inline: auto;
     padding: 2rem 0;
+    gap: 2rem;
   }
 
-  header .logo {
+  .right-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    a.logo {
+      order: 2;
+    }
+
+    .right-nav {
+      order: 3;
+    }
+  }
+
+  a.logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: inherit;
   }
-  nav {
+
+  .menu-button {
+    font-size: 1rem;
     display: flex;
-    list-style: none;
-    gap: 1rem;
     align-items: center;
+    border: none;
+    border-radius: var(--border-radius);
+    padding-block: 0.5rem;
+    padding-inline: 0.8rem;
+    color: var(--color-emphasis-text);
+    background-color: var(--color-emphasis-bg);
+    gap: 0.25rem;
+    cursor: pointer;
   }
 
-  nav ul {
+  nav {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    right: 0px;
+    width: 100%;
+    background-color: var(--color-app-bg);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+    text-align: right;
+
     display: flex;
-    list-style: none;
-    gap: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    flex-direction: column;
+    padding-bottom: 6rem;
   }
 
-  nav ul li {
-    font-size: rem;
-    padding: 0.25rem 1rem;
-    border-radius: 16px;
-  }
-
-  nav ul li a {
-    color: inherit;
+  nav a {
+    display: block;
+    padding: 0.5rem;
+    padding-right: 0rem;
     text-decoration: none;
-  }
-
-  nav ul .active {
-    background-color: hsl(var(--green-base) 75%);
+    font-size: 1.5rem;
   }
 
   @media (hover) {
-    nav ul li a:hover {
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
-      text-decoration-thickness: 0.125em;
-      text-underline-offset: 0.2em;
+    nav a:hover {
+      color: var(--color-link);
     }
-  }
-
-  nav ul li:first-child {
-    margin-left: 0;
-  }
-
-  .mobile-nav {
-    display: none;
-  }
-
-  @media (max-width: 640px) {
-    header nav ul li:not(.emphasis) {
-      display: none;
-    }
-
-    .mobile-nav {
-      display: block;
-    }
-  }
-
-  .broadcast {
-    width: var(--container-width);
-    margin-inline: auto;
-  }
-
-  .broadcast .icon {
-    min-width: 1.5rem;
-    color: hsl(var(--blue-base) 20%);
-  }
-
-  .broadcast > .broadcast-content {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    background-color: hsl(var(--blue-base) 90%);
-    padding-inline: 1rem;
-    border-radius: 0.6rem;
-    margin-top: 1rem;
-
-    color: hsl(var(--blue-base) 20%);
-    font-size: 0.9rem;
   }
 </style>

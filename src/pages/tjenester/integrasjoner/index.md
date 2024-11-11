@@ -1,6 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Lær mer om Bjerk – Integrasjoner'
+layout: "@layouts/service-page.astro"
+title: "Lær mer om Bjerk – Integrasjoner"
 headline: Integrasjoner
 path: tjenester/integrasjoner
 description:
@@ -12,6 +12,8 @@ socialMediaDescription:
   Vårt oppdrag er å forbedre menneskers liv gjennom teknologi. Vi skaper
   digitale produkter og tjenester for mennesker.
 ---
+
+# Integrasjoner
 
 I dag har de fleste virksomheter ikke bare mange ulike arbeidsverktøy og
 systemer, men også store mengder data. For å få disse ulike systemene til å
@@ -32,9 +34,8 @@ og ressurser enkelt kan bevege seg fra en øy til en annen. Dette gir deg
 muligheten til å spare tid og ressurser, fordi informasjon og funksjonalitet kan
 deles på tvers av systemene, noe som resulterer i mer effektivitet og økt verdi.
 
-Se noen eksempler på integrasjoner vi har skapt her:
-
-[ABAX - Procore][kundecase-1]
+Se noen eksempler på integrasjoner vi har skapt her: [ABAX - Procore][kundecase-1].
+Du kan også [lese om at integrasjoner er redningen du ikke viste du trengte](/artikler/2024/systemkaos).
 
 ![Abstrakt maleri i nyanser av blå, skapt av Anni Roenkae](./pexels-anni-roenkae.jpg)
 

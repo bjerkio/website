@@ -1,9 +1,13 @@
 ---
 import Layout from "@layouts/default.astro";
+import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import ArrowRight from "~icons/ph/arrow-right";
-import LandingImage from "@assets/lea-l-q--99IzY8Lw-unsplash.jpg";
+import HeroImage from "../assets/people-working.jpg";
+import ProjectCard from "@components/project-card.astro";
+import PartnerCard from "@components/partner-card.astro";
 
+const projects = await getCollection("project");
+const partners = await getCollection("partner");
 const url = Astro.site;
 ---
 
@@ -14,70 +18,189 @@ const url = Astro.site;
   description="Oppdag hvordan Bjerk driver global forandring gjennom teknologi. Vi forenkler og forbedrer læring, tenkning, arbeid og kommunikasjon med skreddersydde digitale løsninger. Bli med oss i å skape en lysere fremtid."
   path="/"
   schema={{
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Bjerk',
-    alternateName: ['Bjerk AS', 'BJRK', 'BK', 'bjerk.io'],
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Bjerk",
+    alternateName: ["Bjerk AS", "BJRK", "BK", "bjerk.io"],
     url,
   }}
 >
   <main>
-    <div class="hero">
-      <h1>La folk gjøre mer av det de er gode på</h1>
-      <p>
-        Digitale produkter og løsninger som er tilpasset din bedrifts unike
-        behov og arbeidsflyter.
-      </p>
-      <a href="/om" class="button">
-        Les mer om oss <ArrowRight />
-      </a>
-    </div>
-    <Image src={LandingImage} alt="Abstract art image" class="landing-image" />
+    <section class="hero">
+      <div class="pitch">
+        <h1>
+          Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og
+          forenkle for ambisiøse bedrifter.
+        </h1>
+        <a href="/om" class="button">Kom i gang →</a>
+      </div>
+      <div class="services">
+        <Image
+          src={HeroImage}
+          alt="Bilde av folk som jobber"
+          class="landing-image"
+        />
+        <nav aria-label="Det vil tilbyr">
+          <a href="/tjenester/integrasjoner">Data og integrasjoner →</a>
+          <a href="/tjenester/radgivning">Rådgivning →</a>
+          <a href="/tjenester/produktutvikling">Produktutvikling →</a>
+          <a href="/tjenester/teknologi-og-utvikling"
+            >Teknologi og utvikling →</a
+          >
+          <a href="/tjenester/opplaring">Opplæring →</a>
+        </nav>
+      </div>
+    </section>
+    <span
+      x-intersect:enter="colorScheme = 'dark'"
+      x-intersect:leave="colorScheme = 'light'"
+    >
+      <section class="work">
+        <p>
+          Vi skaper digitale produkter og løsninger som er tilpasset bedrifters
+          unike behov og arbeidsprosesser.
+        </p>
+
+        <div class="projects">
+          {
+            projects
+              .filter((project) => project.data.image)
+              .map((project) => <ProjectCard {...project} />)
+          }
+        </div>
+      </section>
+      <section class="partners">
+        <h2>Noen av de vi jobber med</h2>
+
+        <div class="logos">
+          {partners.map((partner) => <PartnerCard {...partner} />)}
+        </div>
+      </section>
+    </span>
   </main>
 </Layout>
 
 <style>
   main {
-    width: var(--container-width);
-    margin-inline: auto;
+    --gap: 12rem;
   }
 
   .hero {
-    max-width: 60ch;
-  }
-
-  .section {
+    margin-block-start: calc(var(--gap) / 2);
+    margin-inline: auto;
+    width: min(var(--container-width), 1460px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .intro-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-block-start: 2rem;
+    gap: var(--gap);
   }
 
-  .landing-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1em;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    margin-block-start: 2rem;
+  .hero > .services {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    .landing-image,
+    nav {
+      max-width: 1151px;
+      align-self: flex-end;
+      width: 100%;
+    }
+
+    nav {
+      font-size: 1.25rem;
+    }
+
+    .landing-image {
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-block-start: 2rem;
+    }
+
+    & > nav {
+      display: grid;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      a {
+        --color-link: var(--color-app-text);
+      }
+    }
+  }
+
+  .work {
+    width: var(--container-width);
+    margin-inline: auto;
+
+    margin-block-start: calc(var(--gap) * 2);
+
+    > .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    > p {
+      max-width: 40ch;
+      font-size: clamp(1rem, 2vw, 1.575rem);
+      line-height: 1.4;
+    }
+  }
+
+  .partners {
+    max-width: 1200px;
+    text-align: center;
+    margin-inline: auto;
+    margin-block: var(--gap);
+    padding-inline: 2rem;
+
+    > h2 {
+      margin-bottom: 4rem;
+    }
+
+    > .logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+
+      gap: 3rem;
+    }
+  }
+
+  .logos :global(> *) {
+    max-height: 38px;
+    max-width: 150px;
+  }
+
+  @media (max-width: 600px) {
+    .partners > .logos {
+      gap: 1.5rem;
+    }
+
+    .logos :global(> *) {
+      max-height: 25px;
+      max-width: 75px;
+    }
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     line-height: 1.1;
-    font-weight: 900;
+    font-weight: 400;
     text-wrap: pretty;
+    max-width: 40ch;
   }
 
   .button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration-color: inherit;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.25rem;
   }
 </style>

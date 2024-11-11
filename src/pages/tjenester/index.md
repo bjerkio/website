@@ -1,7 +1,6 @@
 ---
-layout: '@layouts/page.astro'
-title: 'Bjerk – Våre tjenester'
-headline: Vi skaper digitale produkter og løsninger
+layout: "@layouts/page.astro"
+title: "Bjerk – Våre tjenester"
 path: /tjenester
 description:
   Bjerk samler folk med kompetanse innen programvareutvikling, brukeropplevelse
@@ -12,25 +11,24 @@ socialMediaDescription:
   digitale produkter og tjenester for mennesker.
 ---
 
+# Vi skaper digitale produkter og løsninger
+
 Bjerk samler folk med kompetanse innen programvareutvikling, brukeropplevelse og
 produktledelse for å gjøre verden til et litt bedre sted. Vi håper at gjennom å
 lage digitale produkter, så kan vi skape positive effekter for mennesker.
 
-- [Produktutvikling og -ledelse][pm]
-- [Digital tjenesteplattform][plattform]
+- [Data og integrasjoner][intg]
+- [Rådgivning][rad]
 - [Skreddersydd programvareutvikling][dev]
-- [Brukeropplevelse][ux]
-- [Integrasjoner][intg]
-- [teknologiledelse][itm]
-- [Universell utforming][uu]
+- [Produktutvikling og -ledelse][pm]
+- [Opplæring innen digitale verktøy][edu]
 
-[pm]: https://bjerk.io/tjenester/produktledelse
-[plattform]: #
-[dev]: #
-[ux]: https://bjerk.io/tjenester/brukeropplevelse
-[intg]: https://bjerk.io/tjenester/integrasjoner
-[itm]: #
-[uu]: https://bjerk.io/tjenester/universell-utforming
+[pm]: /tjenester/produktutvikling
+[rad]: /tjenester/radgivning
+[dev]: /tjenester/teknologi-og-utvikling
+[ux]: /tjenester/brukeropplevelse
+[intg]: /tjenester/integrasjoner
+[edu]: /tjenester/opplaring
 
 ## Hva gjør Bjerk?
 

@@ -1,8 +1,7 @@
 ---
 title: – Det er hva man gjør som teller
 socialMediaTitle: – Det er hva man gjør som teller 💡🚀
-description:
-  Det viktigste er at man får effekt ut av det man gjør. Lær hvordan
+description: Det viktigste er at man får effekt ut av det man gjør. Lær hvordan
   kombinasjonen av kompetanse, gjennomføringsevne og mangfold i teamarbeid
   skaper suksess.
 date: 2023-11-27T15:00:00
@@ -30,8 +29,7 @@ Stordalen, som hevder at den [viktigste nøkkelen til suksess er systematisk og
 hard øving][petter-podcast], og at gjennomføringskraft er det som gjør oss best.
 
 [andy-about-okr]: https://www.youtube.com/watch?v=1ht_1VAF6ik
-[petter-podcast]:
-  https://open.spotify.com/episode/2fqNNyRhPYDFduRV8vTS6y?si=970f5688cd314ddc
+[petter-podcast]: https://open.spotify.com/episode/2fqNNyRhPYDFduRV8vTS6y?si=970f5688cd314ddc
 
 I Bjerk følger vi denne filosofien. Grunnen for at vi i Bjerk lykkes med å
 forbedre hvordan mennesker kommuniserer, lærer, tenker og jobber handler om
@@ -61,5 +59,4 @@ ekstraordinære resulter.
 Det handler ikke bare om å ha alle de riktige svarene, men om å stille de
 riktige spørsmålene og utforske svar sammen.
 
-[der-ideer-skapes]:
-  https://www.linkedin.com/pulse/der-id%25C3%25A9er-skapes-simen-a-w-olsen/
+[der-ideer-skapes]: https://www.linkedin.com/pulse/der-id%25C3%25A9er-skapes-simen-a-w-olsen/

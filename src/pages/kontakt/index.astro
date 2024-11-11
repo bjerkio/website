@@ -1,8 +1,6 @@
 ---
-import Brief from "@components/brief.astro";
 import Person from "@components/person.astro";
 import Layout from "@layouts/default.astro";
-import ContactForm from "@components/contact-form.astro";
 import { getCollection } from "astro:content";
 
 const people = await getCollection("people");
@@ -29,79 +27,71 @@ const employees = people
   socialMediaTitle="🚀 Start samtalen med Bjerk: Bli med å skap noe med oss!"
   socialMediaDescription="Start en samtale med Bjerk i dag for å lage skreddersydde løsningerog få tilgang på ekspertise innen digital innovasjon."
   path="/kontakt"
-  contactFooter={false}
   schema={{
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Bjerk',
-    url: makeUrl('/'),
-    logo: [makeUrl('/assets/logo.svg'), makeUrl('/assets/square-logo.svg')],
-    image: makeUrl('/assets/logo.svg'),
-    telephone: '+47 95308087',
-    email: 'office@bjerk.io',
-    taxID: '930 334 693',
-    priceRange: '$$$',
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Bjerk",
+    url: makeUrl("/"),
+    logo: [makeUrl("/assets/logo.svg"), makeUrl("/assets/square-logo.svg")],
+    image: makeUrl("/assets/logo.svg"),
+    telephone: "+47 95308087",
+    email: "office@bjerk.io",
+    taxID: "930 334 693",
+    priceRange: "$$$",
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Arbins gate 11',
-      addressLocality: 'Oslo',
-      addressRegion: 'Oslo',
-      postalCode: '0253',
-      addressCountry: 'NO',
+      "@type": "PostalAddress",
+      streetAddress: "Arbins gate 11",
+      addressLocality: "Oslo",
+      addressRegion: "Oslo",
+      postalCode: "0253",
+      addressCountry: "NO",
     },
     sameAs: [
-      'https://www.facebook.com/bjerkorg',
-      'https://www.linkedin.com/company/bjerk',
-      'https://github.com/bjerkio',
+      "https://www.facebook.com/bjerkorg",
+      "https://www.linkedin.com/company/bjerk",
+      "https://github.com/bjerkio",
     ],
-    member: people.map(person => ({
-      '@type': 'EmployeeRole',
+    member: people.map((person) => ({
+      "@type": "EmployeeRole",
       name: person.data.position,
       member: {
-        '@type': 'Person',
+        "@type": "Person",
         givenName: person.data.givenName,
         familyName: person.data.familyName,
         image: person.data.image.src,
-        sameAs: person.data.socialMedia.map(media => media.url),
+        sameAs: person.data.socialMedia.map((media) => media.url),
       },
     })),
   }}
 >
   <main>
-    <Brief title='Kontakt'>
-      <div class="contact-info">
-        <section>
-          <p>Vi gleder oss til å høre fra deg!</p>
-          <p>
-            Bjerk har kontorer i Oslo ved Arbins gate 11, 0253 Oslo og Finland. Du får
-            tak i oss via e-post til
-            <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>.
-          </p>
-        </section>
-        <section class="details">
-          <dl>
-            <div>
-              <dt>E-post</dt>
-              <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
-            </div>
-            <div>
-              <dt>Adresse</dt>
-              <dd>
-                <a
-                  href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Arbins gate 11, 0253 Oslo <!-- <ArrowSquareOut /> -->
-                </a>
-              </dd>
-            </div>
-          </dl>
-        </section>
-      </div>
-    </Brief>
+    <div class="contact-info">
+      <a href="https://tally.so/r/3EbV2B" class="button">
+        Send oss en melding →
+      </a>
+      <section class="details">
+        <dl>
+          <div>
+            <dt>E-post</dt>
+            <dd><a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a></dd>
+          </div>
+          <div>
+            <dt>Adresse</dt>
+            <dd>
+              <a
+                href="https://goo.gl/maps/FkcqThLgRtCauPmZA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Arbins gate 11, 0253 Oslo
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </div>
     <section class="employees">
-      {employees.map(person => <Person person={person} />)}
+      {employees.map((person) => <Person person={person} />)}
     </section>
   </main>
 </Layout>
@@ -114,16 +104,12 @@ const employees = people
     justify-content: center;
   }
 
-  .brief {
-    max-width: 64ch;
-  }
   .contact-info {
     display: flex;
     flex-direction: column;
     gap: 1em;
-  }
-  .contact-form {
-    padding-top: 1.5em;
+
+    margin-block: 4rem;
   }
 
   main {
@@ -139,10 +125,10 @@ const employees = people
     font-size: 1rem;
     gap: 2rem;
     font-family:
-          'Sora Variable',
-          system-ui,
-          -apple-system,
-          sans-seri;
+      "Sora Variable",
+      system-ui,
+      -apple-system,
+      sans-seri;
   }
 
   dl div > dt {
@@ -156,9 +142,21 @@ const employees = people
   dl div > dd a {
     color: inherit;
   }
+
   .employees {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
     gap: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration-color: inherit;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.25rem;
   }
 </style>

@@ -38,11 +38,12 @@ Next branches are development channels for this website. There is a permanent
 next website available at https://next.bjerk.io/. This website is deployed when
 pushing to the [`next`](https://github.com/bjerkio/website/tree/next) branch.
 
-You can also deploy a temporary next website by pushing to a branch named `next-<name>`.
-The URL for that branch will be available in the GitHub Actions logs.
+You can also deploy a temporary next website by pushing to a branch named
+`next-<name>`. The URL for that branch will be available in the GitHub Actions
+logs.
 
-The `next` branch is kept update to date with `main` branches with an auto update
-workflow.
+The `next` branch is kept update to date with `main` branches with an auto
+update workflow.
 
 ## Legacy
 
@@ -57,5 +58,4 @@ We love contributions! Before submitting a Pull Request, it's always good to
 start with a new issue first. Another good way to start is [searching in our
 codebase for TODOs][todos].
 
-[todos]:
-  https://github.com/search?q=repo%3Abjerkio%2Fwebsite%20TODO%3A&type=code
+[todos]: https://github.com/search?q=repo%3Abjerkio%2Fwebsite%20TODO%3A&type=code

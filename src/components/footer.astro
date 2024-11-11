@@ -1,141 +1,163 @@
 ---
-import Logo from './logo.astro';
-import DiscordIcon from '~icons/ph/discord-logo-fill';
-import GitHubIcon from '~icons/ph/github-logo-fill';
-import LinkedInIcon from '~icons/ph/linkedin-logo-fill';
+import Logo from "../components/logo-symbol.astro";
+import GitHubIcon from "~icons/ph/github-logo-fill";
+import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 ---
 
 <footer>
-  <div class="container">
-    <section class="logo">
-      <Logo />
-      <div>
-        © Bjerk 2023
-      </div>
-      <div>
-        Org. nr.: 998 732 867
-      </div>
-    </section>
-    <section class="contact">
+  <section class="call-to-action">
+    <h2>La oss utgjøre en forskjell <em>sammen</em></h2>
+    <a href="/kontakt" class="button">Kontakt oss →</a>
+  </section>
+  <div class="footer-content">
+    <section aria-labelledby="footer-about" class="about">
+      <h2 id="footer-about" class="sr-only">Om Bjerk</h2>
       <p>
-        Arbins gate 11 
-        <br>
-        0253 Oslo
-      </p>
-      <p>
-        <a href="mailto:kontoret@bjerk.io">
-          kontoret@bjerk.io
-        </a>
-        <br>
-        <a href="tel:+4722120512">+47 22 12 05 12</a>
+        Vi vil være med å lage en verden hvor folk kan gjøre mer av det de er
+        gode på, og hvor teknologien tar seg av resten. Vi skaper digitale
+        løsninger som forbedre og forenkle måten mennesker lærer, tenker, jobber
+        og kommuniserer på.
       </p>
     </section>
-      <ul class="links">
-        <li><a href="/vilkar">Vilkår</a></li>
-        <li><a href="/personvern">Personvernerklæring</a></li>
+    <nav>
+      <ul>
+        <li><a href="/om">Om oss →</a></li>
+        <li><a href="/arbeid">Arbeider →</a></li>
+        <li><a href="/tjenester">Tjenester →</a></li>
+        <li><a href="/artikler">Artikler →</a></li>
+        <li><a href="/kontakt">Kontakt oss →</a></li>
       </ul>
-    <section class="socials">
-      <a
-        aria-label="Discord-server for Bjerk"
-        href="https://discord.gg/v6uUBFxXNf"
-      >
-        <DiscordIcon />
-      </a>
-      <a
-        aria-label="GitHub-profile for Bjerk"
-        href="https://github.com/bjerkio"
-      >
-        <GitHubIcon />
-      </a>
-      <a
-        aria-label="Linked-profile for Bjerk"
-        href="https://www.linkedin.com/company/bjerk"
-      >
-        <LinkedInIcon />
-      </a>
+    </nav>
+    <section class="contact">
+      <address>
+        <p>Arbins gate 11, 0253 Oslo</p>
+        <a href="tel:+4722120512">22 12 05 12</a>
+        <a href="mailto:kontoret@bjerk.io"> kontoret@bjerk.io </a>
+      </address>
+      <div class="socials">
+        <a
+          aria-label="GitHub-profile for Bjerk"
+          href="https://github.com/bjerkio"
+        >
+          <GitHubIcon />
+        </a>
+        <a
+          aria-label="Linked-profile for Bjerk"
+          href="https://www.linkedin.com/company/bjerk"
+        >
+          <LinkedInIcon />
+        </a>
+      </div>
     </section>
+  </div>
+  <div class="bottom-footer">
+    <div class="footer-logo" aria-hidden="true">
+      <Logo />
+    </div>
+    <nav class="links">
+      <a href="/vilkar">Vilkår</a>
+      <a href="/personvern">Personvernerklæring</a>
+    </nav>
   </div>
 </footer>
 
 <style>
-  footer {
-    background-color: hsl(var(--blue-base) 20%);
-  }
-
   a {
-    --link-color: hsl(var(--blue-base) 80%);
+    --color-link: var(--color-app-text);
   }
 
-  @media (hover) {
-    a:hover {
-      --link-color: hsl(var(--blue-base) 70%);
+  section.about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & > p {
+      max-width: 40ch;
     }
   }
 
-  .container {
-    width: var(--container-width);
-    margin-inline: auto;
-    color: white;
+  .footer-logo > svg {
+    height: 100px;
+  }
+
+  .call-to-action {
+    background-color: var(--color-focus-bg);
+    color: var(--color-focus-text);
+    margin-block-start: var(--gap);
+    padding-block: 8rem;
+    text-align: center;
+
+    & > a {
+      gap: 0.5rem;
+      color: inherit;
+      font-size: 1.25rem;
+      text-decoration-color: inherit;
+      text-decoration-thickness: 0.1rem;
+      text-underline-offset: 0.25rem;
+    }
+  }
+
+  footer > .footer-content {
+    padding-inline: 2rem;
     padding-block: 4rem;
 
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  .contact p:first-child {
-    margin-top: 1.2rem;
-    max-width: 30ch;
-  }
-  .content {
-    height: 100%;
+    gap: 2rem;
+    max-width: 1125px;
+
+    & > nav > ul {
+      display: grid;
+      gap: 0.5rem;
+      list-style: none;
+    }
   }
 
-  .logo div {
-    color: hsl(var(--blue-base) 70%);
+  footer > .bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    & > .links {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      & > a {
+        display: block;
+      }
+    }
   }
-  .logo {
-    margin-top: 1.2rem;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
+
+  .contact > address {
+    & > p {
+      margin-bottom: 0;
+    }
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .socials {
     margin-top: 1.2rem;
     font-size: 1.7rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .socials a {
-    color: white;
-  }
-
-  .links {
-    display: flex;
-    height: 100px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style: none;
-  }
-  ul {
-    padding: 0;
-    list-style-type: none;
-  }
-  @media(max-width: 767px) {
-    .container {
-      padding-block: 1rem;
-    }
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .container {
-      justify-content: space-around;
-    }
-    .socials {
-      width: 100%;
-      justify-content: space-around;
-    }
+    color: inherit;
   }
 </style>

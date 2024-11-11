@@ -1,12 +1,12 @@
 import {
   defineCollection,
+  type ImageFunction,
   reference,
   z,
-  type ImageFunction,
-} from 'astro:content';
+} from "astro:content";
 
 const people = defineCollection({
-  type: 'data',
+  type: "data",
   schema: ({ image }) =>
     z.object({
       givenName: z.string(),
@@ -15,16 +15,16 @@ const people = defineCollection({
       phone: z.union([z.string(), z.array(z.string())]),
       email: z.string().email(),
       type: z
-        .union([z.literal('employee'), z.literal('external-author')])
-        .default('employee'),
+        .union([z.literal("employee"), z.literal("external-author")])
+        .default("employee"),
       socialMedia: z.array(
         z.object({
-          type: z.enum(['github', 'linkedin', 'matrix']),
+          type: z.enum(["github", "linkedin", "matrix"]),
           url: z.string().url(),
         }),
       ),
-      image: image().refine(img => img.width >= 300, {
-        message: 'Cover image must be at least 1080 pixels wide!',
+      image: image().refine((img) => img.width >= 300, {
+        message: "Cover image must be at least 1080 pixels wide!",
       }),
       imageAlt: z.string().optional(),
       photographerName: z.string().optional(),
@@ -34,8 +34,8 @@ const people = defineCollection({
 
 const defaultFields = (image: ImageFunction) => ({
   image: image()
-    .refine(img => img.width >= 300, {
-      message: 'Cover image must be at least 1080 pixels wide!',
+    .refine((img) => img.width >= 300, {
+      message: "Cover image must be at least 1080 pixels wide!",
     })
     .optional(), // Image type validation depends on your implementation
   title: z.string(),
@@ -56,24 +56,24 @@ const defaultFields = (image: ImageFunction) => ({
   socialMediaDescription: z.string().optional(),
   socialMediaImages: z
     .array(
-      image().refine(img => img.width >= 300, {
-        message: 'Social media images must be at least 1080 pixels wide!',
+      image().refine((img) => img.width >= 300, {
+        message: "Social media images must be at least 1080 pixels wide!",
       }),
     )
     .optional(), // Image type validation depends on your implementation
 });
 
 const services = z.enum([
-  'accessiblity',
-  'development',
-  'integrations',
-  'product-management',
-  'technology-management',
-  'ux',
+  "accessiblity",
+  "development",
+  "integrations",
+  "product-management",
+  "technology-management",
+  "ux",
 ]);
 
 const project = defineCollection({
-  type: 'content',
+  type: "content",
   schema: ({ image }) =>
     z.object({
       ...defaultFields(image),
@@ -95,13 +95,13 @@ const project = defineCollection({
 });
 
 const post = defineCollection({
-  type: 'content',
+  type: "content",
   schema: ({ image }) =>
     z.object({
       ...defaultFields(image),
       date: z.date(),
-      author: reference('people')
-        .or(z.array(reference('people')))
+      author: reference("people")
+        .or(z.array(reference("people")))
         .optional(),
       sameAs: z.array(z.string().url()).optional(),
     }),
@@ -113,14 +113,14 @@ const post = defineCollection({
 const eventOffer = z.object({
   url: z.string(),
   price: z.string(),
-  priceCurrency: z.string().default('NOK'),
+  priceCurrency: z.string().default("NOK"),
   availability: z.enum([
-    'https://schema.org/InStock',
-    'https://schema.org/SoldOut',
-    'https://schema.org/PreOrder',
-    'https://schema.org/AvailableForPurchase',
-    'https://schema.org/OutOfStock',
-    'https://schema.org/Discontinued',
+    "https://schema.org/InStock",
+    "https://schema.org/SoldOut",
+    "https://schema.org/PreOrder",
+    "https://schema.org/AvailableForPurchase",
+    "https://schema.org/OutOfStock",
+    "https://schema.org/Discontinued",
   ]),
   validFrom: z.string().optional(),
   validThrough: z.string().optional(),
@@ -131,7 +131,7 @@ const eventOffer = z.object({
  */
 const eventOrganization = (image: ImageFunction) =>
   z.object({
-    type: z.literal('Organization'),
+    type: z.literal("Organization"),
     name: z.string(),
     url: z.string(),
     logo: image().optional(),
@@ -142,7 +142,7 @@ const eventOrganization = (image: ImageFunction) =>
  */
 const eventPerson = (image: ImageFunction) =>
   z.object({
-    type: z.literal('Person'),
+    type: z.literal("Person"),
     name: z.string(),
     url: z.string(),
     jobTitle: z.string().optional(),
@@ -156,7 +156,7 @@ const eventPerformer = (image: ImageFunction) =>
   z.union([eventOrganization(image), eventPerson(image)]);
 
 const event = defineCollection({
-  type: 'content',
+  type: "content",
   schema: ({ image }) =>
     z.object({
       ...defaultFields(image),
@@ -164,21 +164,21 @@ const event = defineCollection({
       endDate: z.date(),
       eventAttendanceMode: z
         .enum([
-          'https://schema.org/OnlineEventAttendanceMode',
-          'https://schema.org/OfflineEventAttendanceMode',
-          'https://schema.org/MixedEventAttendanceMode',
+          "https://schema.org/OnlineEventAttendanceMode",
+          "https://schema.org/OfflineEventAttendanceMode",
+          "https://schema.org/MixedEventAttendanceMode",
         ])
-        .default('https://schema.org/OnlineEventAttendanceMode'),
+        .default("https://schema.org/OnlineEventAttendanceMode"),
       eventStatus: z
         .enum([
-          'https://schema.org/EventScheduled',
-          'https://schema.org/EventCancelled',
-          'https://schema.org/EventMovedOnline',
-          'https://schema.org/EventPostponed',
-          'https://schema.org/EventRescheduled',
-          'https://schema.org/EventLive',
+          "https://schema.org/EventScheduled",
+          "https://schema.org/EventCancelled",
+          "https://schema.org/EventMovedOnline",
+          "https://schema.org/EventPostponed",
+          "https://schema.org/EventRescheduled",
+          "https://schema.org/EventLive",
         ])
-        .default('https://schema.org/EventScheduled'),
+        .default("https://schema.org/EventScheduled"),
       location: z
         .object({
           name: z.string(),
@@ -190,12 +190,12 @@ const event = defineCollection({
           }),
         })
         .default({
-          name: 'Bjerk',
+          name: "Bjerk",
           address: {
-            streetAddress: 'Akersgata 51',
-            addressLocality: 'Oslo',
-            postalCode: '0180',
-            addressCountry: 'NO',
+            streetAddress: "Akersgata 51",
+            addressLocality: "Oslo",
+            postalCode: "0180",
+            addressCountry: "NO",
           },
         }),
       offers: z.array(eventOffer).default([]),
@@ -204,11 +204,20 @@ const event = defineCollection({
         .nonempty()
         .default([
           {
-            type: 'Organization',
-            name: 'Bjerk',
-            url: 'https://bjerk.io',
+            type: "Organization",
+            name: "Bjerk",
+            url: "https://bjerk.io",
           },
         ]),
+    }),
+});
+
+export const partner = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      name: z.string().optional(),
+      url: z.string().url().optional(),
     }),
 });
 
@@ -217,4 +226,5 @@ export const collections = {
   people,
   post,
   event,
+  partner,
 };

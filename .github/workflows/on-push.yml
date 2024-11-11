@@ -3,7 +3,7 @@ name: On Push
 on:
   schedule:
     # Schedule for every day at 12:00 CEST
-    - cron: '0 10 * * *'
+    - cron: "0 10 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Lint 🔨
         run: pnpm lint
- 
+
   update-next:
     name: Update next
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           branch: promote/main-to-next
-          title: 'Promote changes in main → next'
+          title: "Promote changes in main → next"
           body: |
             This PR promotes changes from the main branch to the next branch.
 
@@ -96,9 +96,8 @@ jobs:
       - name: Upload website
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount:
-            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           channelId: live
           target: prod
           projectId: bjerk-io

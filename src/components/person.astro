@@ -1,12 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import LinkedInLogo from '~icons/ph/linkedin-logo';
-import GithubLogo from '~icons/ph/github-logo';
-import MatrixLogo from '~icons/tabler/brand-matrix';
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import LinkedInLogo from "~icons/ph/linkedin-logo";
+import GithubLogo from "~icons/ph/github-logo";
+import MatrixLogo from "~icons/tabler/brand-matrix";
 
 interface Props {
-  person: CollectionEntry<'people'>;
+  person: CollectionEntry<"people">;
 }
 
 const { person } = Astro.props;
@@ -34,8 +34,8 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
         socialMedia.length > 0 && (
           <ul class="social-media-links">
             {socialMedia
-              .filter(link => link.type === 'linkedin')
-              .map(link => (
+              .filter((link) => link.type === "linkedin")
+              .map((link) => (
                 <li>
                   <a
                     href={link.url}
@@ -48,8 +48,8 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
                 </li>
               ))}
             {socialMedia
-              .filter(link => link.type === 'github')
-              .map(link => (
+              .filter((link) => link.type === "github")
+              .map((link) => (
                 <li>
                   <a
                     href={link.url}
@@ -62,8 +62,8 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
                 </li>
               ))}
             {socialMedia
-              .filter(link => link.type === 'matrix')
-              .map(link => (
+              .filter((link) => link.type === "matrix")
+              .map((link) => (
                 <li>
                   <a
                     href={link.url}
@@ -77,20 +77,19 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
               ))}
           </ul>
         )
-      }  
+      }
     </div>
   </div>
-    <div class="details">
-      {
-        typeof phone === 'string' ? (
-          <a href={`tel:${phone}`}>{phone}</a>
-        ) : (
-          phone.map(phone => <a href={`tel:${phone}`}>{phone}</a>)
-        )
-      }
+  <div class="details">
+    {
+      typeof phone === "string" ? (
+        <a href={`tel:${phone}`}>{phone}</a>
+      ) : (
+        phone.map((phone) => <a href={`tel:${phone}`}>{phone}</a>)
+      )
+    }
 
-      <a href={`mailto:${email}`}>{email}</a>
-    </div>
+    <a href={`mailto:${email}`}>{email}</a>
   </div>
 </div>
 
@@ -150,7 +149,7 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
   }
 
   img {
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   .social-media-links {

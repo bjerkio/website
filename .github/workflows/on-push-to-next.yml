@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'next-pages'
+  group: "next-pages"
   cancel-in-progress: true
 
 jobs:
@@ -71,9 +71,8 @@ jobs:
         if: ${{ steps.branch-names.outputs.current_branch == env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount:
-            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           projectId: bjerk-io
           channelId: live
           target: next
@@ -82,10 +81,9 @@ jobs:
         if: ${{ steps.branch-names.outputs.current_branch != env.NEXT_BRANCH }}
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount:
-            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}'
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           projectId: bjerk-io
           expires: 30d
-          channelID: ${{ steps.branch-names.outputs.current_branch }} 
+          channelID: ${{ steps.branch-names.outputs.current_branch }}
           target: next
