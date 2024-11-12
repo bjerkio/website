@@ -21,24 +21,26 @@ tenker, jobber og kommuniserer.
 Helt siden Bjerk ble stiftet i 2009, har vi hatt en visjon om å skape et selskap
 som gjør en reell forskjell. Vi ønsker gi det folk det de trenger for å lykkes,
 ikke bare det de tror de vil ha. For oss handler det om å utgjøre en positiv
-effekt. Ved å bli kjent med brukerne våre, kan vi bedre forstå deres utfordringer
-og skape løsninger som virkelig betyr noe.
+effekt. Ved å bli kjent med brukerne våre, kan vi bedre forstå deres
+utfordringer og skape løsninger som virkelig betyr noe.
 
-Bjerk samler mennesker med kompetanse innen programvareutvikling, brukeropplevelse,
-produktledelse og teknologirådgivning. Vi fyller gaper etterlatt av standardiserte
-programvareløsninger ved å forbedre eksisterende systemer, [integrere ulike systemer](/tjenester/integrasjoner)
-eller utvikle helt nye løsninger.
+Bjerk samler mennesker med kompetanse innen programvareutvikling,
+brukeropplevelse, produktledelse og teknologirådgivning. Vi fyller gaper
+etterlatt av standardiserte programvareløsninger ved å forbedre eksisterende
+systemer, [integrere ulike systemer](/tjenester/integrasjoner) eller utvikle
+helt nye løsninger.
 
-Et godt samarbeid starter med en god relasjon. Vi begynner gjerne med en uformell
-prat for å bli kjent og forstå dine mål. Deretter kan vi arrangere et møte eller
-en uforpliktelse arbeidsøkt for å dykke dypere inn i dine behov og visjon.
+Et godt samarbeid starter med en god relasjon. Vi begynner gjerne med en
+uformell prat for å bli kjent og forstå dine mål. Deretter kan vi arrangere et
+møte eller en uforpliktelse arbeidsøkt for å dykke dypere inn i dine behov og
+visjon.
 
-Vi legger stor vekt på kommunikasjon og samhandling. Vi jobber gjerne dialogdrevet
-og tverrgalig, hvor alle er med på å forme både løsningen og prosessen. Det er ofte
-best å jobbe i korte økter med klare mål, og at vi bruker tid på å skape en felles
-forståelse av hva vi skal gjøre og hvorfor. Vi er ikke redd for å prøve, gjøre
-feil eller endre retning om det er nødvendig. Vi tror det er slik vi skaper
-de beste resultatene.
+Vi legger stor vekt på kommunikasjon og samhandling. Vi jobber gjerne
+dialogdrevet og tverrgalig, hvor alle er med på å forme både løsningen og
+prosessen. Det er ofte best å jobbe i korte økter med klare mål, og at vi bruker
+tid på å skape en felles forståelse av hva vi skal gjøre og hvorfor. Vi er ikke
+redd for å prøve, gjøre feil eller endre retning om det er nødvendig. Vi tror
+det er slik vi skaper de beste resultatene.
 
 ## Hva vi tilbyr
 

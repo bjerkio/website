@@ -16,15 +16,15 @@ verktøy trenger du? Hvordan vet du at valgene du tar i dag, fortsetter å gi
 verdi i morgen?
 
 Vi mener at teknologi skal gjøre livet enklere, ikke mer komplisert. Vi skal
-hjelpe deg med å navigere gjennom alt dette, med målrettet rådgivning so gjør
-at du kan fokusere på det du gjør best; å drive din virksomhet.
+hjelpe deg med å navigere gjennom alt dette, med målrettet rådgivning so gjør at
+du kan fokusere på det du gjør best; å drive din virksomhet.
 
 ## Din suksess er vår misjon
 
 Vi starter med å forstå dine behov og mål. Hvorfor eksisterer din virksomhet?
 Hva er målet ditt? Og hvordan kan teknologi bli motoren får deg dit? Det som
-driver oss videre er å skape noe som faktisk gir mening, som får deg til å lykkes
-og som gir en positiv effekt.
+driver oss videre er å skape noe som faktisk gir mening, som får deg til å
+lykkes og som gir en positiv effekt.
 
 Vi har lang erfaring med å hjelpe virksomheter med å ta de riktige valgene. Vi
 har sett hva som fungerer, og hva som ikke gjør det. Vi har også sett at det
@@ -48,12 +48,12 @@ teknologien støtter dine forretningsmål – og gir resultater.
 
 Vi kan også hjelpe deg med **teknologisk rådgivning**. Hvilke verktøy trenger du
 for å nå målet ditt? Hvordan kan du sikre at valgene du tar i dag, fortsetter å
-gi verdi i morgen? Et annet område er **prosessoptimalisering**. Hvordan kan
-du bruke teknologi til å effektivisere arbeidsprosessene dine? Hvordan kan du
-sikre at du jobber smartere, ikke hardere?
+gi verdi i morgen? Et annet område er **prosessoptimalisering**. Hvordan kan du
+bruke teknologi til å effektivisere arbeidsprosessene dine? Hvordan kan du sikre
+at du jobber smartere, ikke hardere?
 
-Et steg videre er **innovasjon og utvikling**, hvor vi sammen identifiserer
-nye muligheter for vekst og forbedring gjennom digitale løsninger.
+Et steg videre er **innovasjon og utvikling**, hvor vi sammen identifiserer nye
+muligheter for vekst og forbedring gjennom digitale løsninger.
 
 ## Klar for å ta det første steget?
 

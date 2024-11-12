@@ -31,7 +31,8 @@ Krav fra den registrerte skal besvares kostnadsfritt og senest innen 30 dager.
 
 Du kan se når personvernerklæringen oppdateres på [GitHub][github-privacy].
 
-[github-privacy]: https://github.com/bjerkio/website/blob/main/src/pages/personvern/index.md
+[github-privacy]:
+  https://github.com/bjerkio/website/blob/main/src/pages/personvern/index.md
 
 ## Arrangementer
 

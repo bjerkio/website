@@ -97,7 +97,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
+          firebaseServiceAccount:
+            "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           channelId: live
           target: prod
           projectId: bjerk-io

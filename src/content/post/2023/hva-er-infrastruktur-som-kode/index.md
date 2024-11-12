@@ -6,7 +6,8 @@ description:
   egentlig alt det der? Finn det ut her.
 date: 2023-11-03T15:00:00
 image: ./simen-host-2023.jpg
-keywords: devops, sikkerhet, menneskelig feil, deployment, "devops-tjenester",
+keywords:
+  devops, sikkerhet, menneskelig feil, deployment, "devops-tjenester",
   distribusjon
 author:
   - simenandre
@@ -98,7 +99,8 @@ programmeringsspråk. Begge verktøyene jeg har vist frem her er basert på åpe
 kildekode. Personlig har jeg bidratt både til Terraform og Pulumi (kanskje
 spesielt [Pulumis GitHub Action-ting][pulumi-github-actions]).
 
-[pulumi-github-actions]: https://www.pulumi.com/blog/supercharging-our-github-action-with-the-pulumi-automation-api/
+[pulumi-github-actions]:
+  https://www.pulumi.com/blog/supercharging-our-github-action-with-the-pulumi-automation-api/
 
 ## Hva hjelper dette deg?
 
@@ -133,7 +135,8 @@ skyleverandører eller annet, så er du velkommen til [vår
 Discord-server][discord]. Her finner du de fleste av oss i Bjerk!
 
 [import-pulumi]: https://www.pulumi.com/docs/reference/cli/pulumi_import/
-[import-terraform]: https://developer.hashicorp.com/terraform/language/state/import
+[import-terraform]:
+  https://developer.hashicorp.com/terraform/language/state/import
 [våre rådgivere]: https://bjerk.io/kontakt
 [pug]: https://www.meetup.com/oslo-pulumi-user-group/
 [discord]: https://discord.gg/v6uUBFxXNf

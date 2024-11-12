@@ -72,7 +72,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
+          firebaseServiceAccount:
+            "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           projectId: bjerk-io
           channelId: live
           target: next
@@ -82,7 +83,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
+          firebaseServiceAccount:
+            "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           projectId: bjerk-io
           expires: 30d
           channelID: ${{ steps.branch-names.outputs.current_branch }}

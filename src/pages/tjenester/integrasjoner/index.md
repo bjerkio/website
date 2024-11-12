@@ -34,8 +34,9 @@ og ressurser enkelt kan bevege seg fra en øy til en annen. Dette gir deg
 muligheten til å spare tid og ressurser, fordi informasjon og funksjonalitet kan
 deles på tvers av systemene, noe som resulterer i mer effektivitet og økt verdi.
 
-Se noen eksempler på integrasjoner vi har skapt her: [ABAX - Procore][kundecase-1].
-Du kan også [lese om at integrasjoner er redningen du ikke viste du trengte](/artikler/2024/systemkaos).
+Se noen eksempler på integrasjoner vi har skapt her: [ABAX -
+Procore][kundecase-1]. Du kan også
+[lese om at integrasjoner er redningen du ikke viste du trengte](/artikler/2024/systemkaos).
 
 ![Abstrakt maleri i nyanser av blå, skapt av Anni Roenkae](./pexels-anni-roenkae.jpg)
 

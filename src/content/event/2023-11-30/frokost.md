@@ -1,5 +1,6 @@
 ---
-title: Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
+title:
+  Nettverksfrokost hos Bjerk - Universell utforming med Christian Thon, 30.
   November
 headline: "Frokost hos Bjerk: «Universell utforming» med Christian Thon"
 description:

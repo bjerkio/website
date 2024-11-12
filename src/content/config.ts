@@ -23,7 +23,7 @@ const people = defineCollection({
           url: z.string().url(),
         }),
       ),
-      image: image().refine((img) => img.width >= 300, {
+      image: image().refine(img => img.width >= 300, {
         message: "Cover image must be at least 1080 pixels wide!",
       }),
       imageAlt: z.string().optional(),
@@ -34,7 +34,7 @@ const people = defineCollection({
 
 const defaultFields = (image: ImageFunction) => ({
   image: image()
-    .refine((img) => img.width >= 300, {
+    .refine(img => img.width >= 300, {
       message: "Cover image must be at least 1080 pixels wide!",
     })
     .optional(), // Image type validation depends on your implementation
@@ -56,7 +56,7 @@ const defaultFields = (image: ImageFunction) => ({
   socialMediaDescription: z.string().optional(),
   socialMediaImages: z
     .array(
-      image().refine((img) => img.width >= 300, {
+      image().refine(img => img.width >= 300, {
         message: "Social media images must be at least 1080 pixels wide!",
       }),
     )
