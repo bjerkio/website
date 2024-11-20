@@ -4,7 +4,7 @@ description: |
   En inneklemt fredag i mai ble til en løsning som sparer tid, bygger tillit
   og gjør hverdagen enklere for alle involverte.
 date: 2024-11-12T12:00:00
-image: ./cop-oslo-2023.jpg
+image: ./mats-cop-moterom.jpg
 author:
   - carl-oscar-petterson
 ---
