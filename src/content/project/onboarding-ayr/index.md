@@ -69,11 +69,9 @@ løsningen møtte reelle brukerbehov.
 
 Implementeringen av det nye onboardingskjemaet ga Ayr noen tydelige fordeler:
 
-1. Drastisk redusert onboardingtid for nye kunder - fra dager til timer, og i
-   noen tilfeller minutter
-2. Økt brukeropplevelse for kunder gjennom en strømlinjeformet prosess
-3. Frigjøring av ressurser for Ayrs team til mer verdiskapende aktiviteter
-4. Forbedret datakvalitet gjennom automatisert innsamling og validering
+1. Rakere, enklere og mer tilpasset onboarding for nye kunder
+2. Frigjøring av ressurser for Ayrs team til mer verdiskapende aktiviteter
+3. Forbedret datakvalitet gjennom automatisert innsamling og validering
 
 Dette prosjektet har ikke bare forbedret Ayrs onboardingprosess - det har
 tydeliggjort noen essensielle innsikter hva gjelder kundeengasjement:
@@ -86,7 +84,7 @@ tydeliggjort noen essensielle innsikter hva gjelder kundeengasjement:
 - Data er gull – riktig datainnsamling gir dypere innsikt i kundenes behov og
   atferd
 
-For Ayr markerer registreringsskjemaet starten på en ny måte å kommunisere med
+For Ayr markerer denne onboarding en ny måte å kommunisere med
 sine kunder.
 
 Og for oss i Bjerk? Det er nok en bekreftelse på at når vi kombinerer teknisk
