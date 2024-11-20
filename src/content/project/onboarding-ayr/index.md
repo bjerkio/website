@@ -84,8 +84,7 @@ tydeliggjort noen essensielle innsikter hva gjelder kundeengasjement:
 - Data er gull – riktig datainnsamling gir dypere innsikt i kundenes behov og
   atferd
 
-For Ayr markerer denne onboarding en ny måte å kommunisere med
-sine kunder.
+For Ayr markerer denne onboarding en ny måte å kommunisere med sine kunder.
 
 Og for oss i Bjerk? Det er nok en bekreftelse på at når vi kombinerer teknisk
 kunnskap med genuin forståelse for menneskelige behov, kan vi skape løsninger

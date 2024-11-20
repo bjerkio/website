@@ -31,11 +31,12 @@ kan snuble over uventede hindringer. For LO Stat ble håndteringen av
 reiseregninger en voksende hodepine som stjal verdifull tid fra deres egentlige
 oppdrag.
 
-Utfordringen var tydelig definert – medlemmer som strevde med tilganger og lite brukervennlige
-prosesser for registrering av utlegg etter inspirerende møter og konferanser. Ansatte som brukte
-uforholdsmessig mye tid på å manuelt behandle utlegg i stedet for å fokusere på
-medlemsservice. En prosess som var ment å være en enkel administrativ oppgave,
-hadde blitt en barriere for engasjement og effektivitet.
+Utfordringen var tydelig definert – medlemmer som strevde med tilganger og lite
+brukervennlige prosesser for registrering av utlegg etter inspirerende møter og
+konferanser. Ansatte som brukte uforholdsmessig mye tid på å manuelt behandle
+utlegg i stedet for å fokusere på medlemsservice. En prosess som var ment å være
+en enkel administrativ oppgave, hadde blitt en barriere for engasjement og
+effektivitet.
 
 LO Media leverer blant annet teknologi og digitale tjenester til de ulike
 foreningene i LO. De innså tidlig at noe måtte gjøres for å støtte
@@ -80,8 +81,8 @@ tekniske detaljer for spesielt interesserte):
   grensesnitt
 - Backend: tRPC for effektiv og typesikker kommunikasjon mellom klient og server
 - Integrasjon: Typical-fetch for robust kommunikasjon med Visma Expense API
-- Infrastruktur: Pulumi for infrastruktur som kode (IaC), som sikrer konsistent og
-  repeterbar utrulling
+- Infrastruktur: Pulumi for infrastruktur som kode (IaC), som sikrer konsistent
+  og repeterbar utrulling
 
 ![Skjermbilde-reiseregning](./lo-stat-bjerk.jpg)
 
@@ -96,8 +97,8 @@ Implementeringen av den nye plattformen ga LO Media noen håndfaste gevinster:
 - Forbedret datakvalitet gjennom automatisert innsamling og validering
 
 Det handler ikke bare om å digitalisere prosesser, men om å gi medlemmene
-verktøy som faktisk gjør hverdagen enklere. Dette prosjektet har vist at selv de minste 
-endringene kan ha stor innvirkning. For hvert minutt spart på administrasjon, er det et minutt mer
-til å utføre meningsfylt arbeid. Og i en organisasjon som LO, hvor hvert medlem
-teller, kan disse minuttene summere seg opp til reell, positiv endring i
-arbeidslivet.
+verktøy som faktisk gjør hverdagen enklere. Dette prosjektet har vist at selv de
+minste endringene kan ha stor innvirkning. For hvert minutt spart på
+administrasjon, er det et minutt mer til å utføre meningsfylt arbeid. Og i en
+organisasjon som LO, hvor hvert medlem teller, kan disse minuttene summere seg
+opp til reell, positiv endring i arbeidslivet.
