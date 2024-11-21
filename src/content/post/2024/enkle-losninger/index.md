@@ -74,11 +74,11 @@ beste løsningene kan være overraskende enkle. Som å vise folk hva du faktisk
 bruker tiden din på. Eller å ta det "umulige" problemet ditt og bryte det ned
 til noe håndterbart.
 
-Prosjektrapporten ble ikke laget for at vi skulle tjene
-noe på det. Og skal vi være helt ærlige, så ble den kanskje delvis laget fordi
-vi var lei av å svare på spørsmålet "Hva har dere egentlig brukt tiden på?". Men
-som en uventet bonus har den vist seg å være gull verdt når det gjelder å bygge
-tillit og styrke kundeforholdene våre.
+Prosjektrapporten ble ikke laget for at vi skulle tjene noe på det. Og skal vi
+være helt ærlige, så ble den kanskje delvis laget fordi vi var lei av å svare på
+spørsmålet "Hva har dere egentlig brukt tiden på?". Men som en uventet bonus har
+den vist seg å være gull verdt når det gjelder å bygge tillit og styrke
+kundeforholdene våre.
 
 Det viser seg at når du gir folk innsyn i det du gjør, stoler de mer på deg.
 
