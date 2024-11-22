@@ -162,12 +162,14 @@ const canonical = new URL(path, Astro.site);
     <meta property="og:type" content={type} />
     <meta property="og:title" content={socialMediaTitle} />
     <meta property="og:description" content={socialMediaDescription} />
-    {images.map((img) => <meta property="og:image" content={img} />)}
+    {images.map(img => <meta property="og:image" content={img} />)}
     <meta property="og:site_name" content="Bjerk" />
     <script
       data-goatcounter="https://bjerk.goatcounter.com/count"
       async
-      src="//gc.zgo.at/count.js"></script>
+      src="//gc.zgo.at/count.js"
+    >
+    </script>
 
     {
       type == "article" && articleAuthor && (
@@ -196,7 +198,9 @@ const canonical = new URL(path, Astro.site);
       src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs-intersect/3.14.3/cdn.min.js"
       integrity="sha512-zUi+vHO/A+Mh3PQDYpAhzo3GGnrSTdOdyUkFby6I2p+k5kOhVNDMJMnhaJgZtecorfhS/+Y5PbkDu7iWsnk8+A=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+      referrerpolicy="no-referrer"
+    >
+    </script>
     <style>
       .hidden {
         display: none;
@@ -284,10 +288,8 @@ const canonical = new URL(path, Astro.site);
       }
 
       ::selection {
-        --color-selection-bg: var(--color-focus-bg);
-        --color-selection-text: var(--color-focus-text);
-        background: var(--color-selection-bg);
-        color: var(--color-selection-text);
+        background: var(--color-focus-bg);
+        color: var(--color-focus-text);
       }
 
       body *::-webkit-scrollbar {
