@@ -9,7 +9,7 @@ socialMediaDescription: |
   Her får du en praktisk guide for bedriftsledere som vil ta smarte
   teknologivalg. Vi deler erfaringer fra hundrevis av
   vellykkede prosjekter.
-date: 2024-11-10T11:16:00
+date: 2024-12-+3T09:44:00
 image: ./oda-kontoret.jpg
 author:
   - simenandre
