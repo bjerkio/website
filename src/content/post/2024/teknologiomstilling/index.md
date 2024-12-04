@@ -19,9 +19,8 @@ Hvordan skal vi håndtere teknologiendringene som skyller over oss? Kunstig
 intelligens, automatisering og digitalisering er ikke lenger fremtid, det er
 konkurransefortrinn som skiller vinnerne fra taperne i dagens marked.
 
-Men la oss være ærlig: Det er lett å føle seg overveldet. Hvor skal man begynne?
-Hvilken kompetanse trenger man? Og hvordan sikrer man investeringene gir faktisk
-verdi?
+Det er lett å føle seg overveldet. Hvor skal man begynne? Hvilken kompetanse
+trenger man? Og hvordan sikrer man investeringene gir faktisk verdi?
 
 ## Start med det viktigste først
 
