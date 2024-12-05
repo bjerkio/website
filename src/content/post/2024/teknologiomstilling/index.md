@@ -15,12 +15,13 @@ author:
   - simenandre
 ---
 
-Hvordan skal vi håndtere teknologiendringene som skyller over oss? Kunstig
-intelligens, automatisering og digitalisering er ikke lenger fremtid, det er
-konkurransefortrinn som skiller vinnerne fra taperne i dagens marked.
+Et sentralt tema i samfunnet og poltikken er spørsmålet om hvordan vi skal
+lykkes med omstilling. Hvordan skal vi håndtere teknologendringene?
 
-Det er lett å føle seg overveldet. Hvor skal man begynne? Hvilken kompetanse
-trenger man? Og hvordan sikrer man investeringene gir faktisk verdi?
+For å forsatt være relevant for en målgruppe må man kanskje ta i bruk kunstig
+intelligens, gjøre mer automatisering og generell _digitalisering_. Hvor skal 
+man begynne? Hvilken kompetanse trenger man? Og hvordan sikrer man
+investeringene gir faktisk verdi?
 
 ## Start med det viktigste først
 
@@ -59,8 +60,6 @@ det kan skje. De mest vellykkede prosjektene starter smått, beviser verdi raskt
 og skalerer gradvis. Det handler om å finne den rette balansen mellom ambisjon
 og gjennomføringsevne.
 
-## Veien videre
-
 Teknologiomstilling er ikke et prosjekt med start og slutt, det er en
 kontinuerlig innsats. Du trenger ikke å ta alle stegene alene; de beste
 resultatene kommer når du har en klar visjon for hva du vil oppnå, starter med
@@ -68,8 +67,6 @@ konkrete, håndterbare prosjekter, velger en partner som forstår både teknolog
 og forretning og bygger en kultur for kontinuerlig læring og forbedring.
 
 Norsk næringsliv står ovenfor store muligheter, like mye nå med dårlige tider.
-Med rett tilnæring til teknologi kan din bedrift ikke bare overleve endringene
-som kommer, men den kan lede an.
 
 _Vil du vite mer om hvordan din bedrift kan lykkes med teknologiomstilling? Ta
 kontakt med oss i Bjerk for en uforpliktende prat._
