@@ -65,9 +65,9 @@ Det er her de viktige spørsmålene kommer inn:
 ## Veien til smartere forenkling
 
 God digitalisering handler ikke om å fjerne kompleksitet, men om å plassere den
-riktig. Det krever at vi aksepterer at kompleksitet er unngåelig, kartlegger hvor
-den gjør minst skade, følger med at fordelingen fungerer over tid og investerer
-deretter.
+riktig. Det krever at vi aksepterer at kompleksitet er unngåelig, kartlegger
+hvor den gjør minst skade, følger med at fordelingen fungerer over tid og
+investerer deretter.
 
 For noen virksomheter betyr det å investere i kraftige systemer, utvikle selv,
 og ha en stor IT-avdeling. For andre betyr det å forenkle prosesser, fjerne
