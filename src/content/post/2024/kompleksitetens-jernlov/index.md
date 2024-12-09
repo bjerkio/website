@@ -8,7 +8,7 @@ socialMediaDescription: |
   Hvorfor ender digitaliseringsprosjekter ofte opp mer kompliserte
   enn planlagt? Teslers Law avslører hvorfor 'forenkling' ofte er
   en illusjon - og hva du kan gjøre med det.
-date: 2024-12-09T10:10:00
+date: 2024-12-09T09:50:00
 image: ./simen-ute-akersgata.jpg
 author:
   - simenandre
