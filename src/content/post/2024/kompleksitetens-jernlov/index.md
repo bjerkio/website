@@ -16,46 +16,41 @@ author:
 
 – Vi må gjøre det enklere
 
-Det er setningen jeg oftest hører når jeg møter ledere som skal digitalisere
-virksomheten sin. De ser komplekse systemer, tungvinte prosesser og frustrerte
-medarbeidere. Løsningen virker åpenbar: Vi må forenkle.
+Det hører jeg folk som skal bygge digitale produkter eller optimalisere ting i
+selskapet. De ser komplekse systemer, tungvinte prosesser og frustrerte
+medarbeidere. Det er jo _åpenbart_, vi må forenkle.
 
-Det er vanskelig å være uenig. Hva om jeg fortalte deg at virkelig forenkling er
-umulig? At kompleksitet ikke kan fjernes, bare flyttes? Som når du rydder til
-gjester kommer på besøk, og stapper alt rotet inn i det ene skapet ingen skal
-åpne. Det er ikke bare en morsom sammenligning – det er faktisk et av de
-viktigste prinsippene i moderne teknologiutvikling. Det har til og med fått et
-navn: Tesler's Law.
+Det er vanskelig å si seg uenig i det, men _virkelig forenkling_ er faktisk
+umulig. Kompleksitet kan ikke fjernes, den kan flyttes. Det er Tesler's Law of
+Conservation of Complexity. La meg forklare.
 
 ## Den vanskelige balansegangen
 
-Tenk på iPhone. Den er så enkel å bruke at selv små barn mestrer den. Bak den
-glatte overflaten ligger det lag på lag med kompleks teknologi. Apple har ikke
-fjernet kompleksiteten, de har bare bestemt at den skal ligge hos deres
+La oss ta et eksempel. iPhone er så enkel å bruke at selv små barn mestrer den.
+Bak den glatte overflaten ligger det lag på lag med kompleks teknologi. Apple
+har ikke fjernet kompleksiteten, de har bare bestemt at den skal ligge hos deres
 utviklere, ikke hos deg og meg.
 
-Det samme gjelder for alle digitaliseringsprosjekter. Når vi forenkler én del av
-systemet, dukker kompleksiteten opp i et annet sted. Det er som et digitlat
-nullsumspill.
-
-## Tre steder kompleksiteten kan ligge
+Det samme gjelder for alle teknologiprosjekter. Når vi forenkler én del av
+systemet, dukker kompleksiteten opp i et annet sted. Det er som et slags
+digitalt nullsumspill.
 
 I praksis har vi tre valg når vi fordeler kompleksitet.
 
 1. Hos brukerne; de må lære seg systemer, huske prosedyrer og ta beslutninger
    Dette er synlig kompleksitet som ofte fører til frustrasjon og feil.
 
-2. I systemene. Kompleksiteten bakes inn i programvaren. Dette gjør hverdagen
+2. I systemene; Kompleksiteten bakes inn i programvaren. Dette gjør hverdagen
    enklere for brukerne, men øker kostnadene for utvikling og vedlikehold.
 
-3. I organisasjonen. Vi kan opprette støttefunksjoner, superbrukere og
+3. I organisasjonen; Vi kan opprette støttefunksjoner, superbrukere og
    ekspertteam som tar seg av det komplekse. Dette flytter byrden fra de mange
    til de få.
 
 ## Hvorfor er dette viktig for deg?
 
 Neste gang noen lover deg et system som skal "fjerne all kompleksitet", bør du
-spørre: Hvor blir den egentlig av? For kompleksitet forsvinner ikke, den flytter
+spørre: Hvor blir den egentlig av? Kompleksitet forsvinner ikke, den flytter
 seg. Om du ikke velger bevisst hvor den skal ligge, risikerer du at den dukker
 opp der den gjør mest skade.
 
@@ -70,7 +65,7 @@ Det er her de viktige spørsmålene kommer inn:
 ## Veien til smartere forenkling
 
 God digitalisering handler ikke om å fjerne kompleksitet, men om å plassere den
-riktig. Det kreer at vi aksepterer at kompleksitet er unngåelig, kartlegger hvor
+riktig. Det krever at vi aksepterer at kompleksitet er unngåelig, kartlegger hvor
 den gjør minst skade, følger med at fordelingen fungerer over tid og investerer
 deretter.
 
@@ -89,6 +84,11 @@ fordele det komplekse på.
 For det fine med å forstå at kompleksitet ikke kan fjernes, er at vi kan slutte
 å jakte på umulige løsninger. I stedet kan vi bruke energien på det som virkelig
 betyr noe; å finne den beste balansen for akkurat vår virksomhet.
+
+Om jeg forstår samfunnet, så blir det stadig større krav til at vi flytte
+kompleksitet fra brukerne til systemene. Det er også fordi vi har blitt flinkere
+til å lage systemer som kan håndtere kompleksitet, og fordi vi har fått bedre
+verktøy for å gjøre det.
 
 _Bjerk hjelper selskaper med rådgivning som hjelper med å finne balansen, og
 utvikling av systemer som gjør det enklere for brukerne. [Ta kontakt](/kontakt)
