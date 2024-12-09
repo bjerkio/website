@@ -8,7 +8,7 @@ socialMediaDescription: |
   Hvorfor ender digitaliseringsprosjekter ofte opp mer kompliserte
   enn planlagt? Teslers Law avslører hvorfor 'forenkling' ofte er
   en illusjon - og hva du kan gjøre med det.
-date: 2024-11-22T10:10:00
+date: 2024-12-09T10:10:00
 image: ./simen-ute-akersgata.jpg
 author:
   - simenandre
@@ -22,7 +22,7 @@ medarbeidere. Det er jo _åpenbart_, vi må forenkle.
 
 Det er vanskelig å si seg uenig i det, men _virkelig forenkling_ er faktisk
 umulig. Kompleksitet kan ikke fjernes, den kan flyttes. Det er Tesler's Law of
-Conservation of Complexity. La meg forklare.
+Conservation of Complexity.
 
 ## Den vanskelige balansegangen
 
