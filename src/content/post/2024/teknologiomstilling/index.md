@@ -16,7 +16,7 @@ author:
 ---
 
 Et sentralt tema i samfunnet og poltikken er spørsmålet om hvordan vi skal
-lykkes med omstilling. Hvordan skal vi håndtere teknologendringene?
+lykkes med omstilling. Hvordan skal vi håndtere teknologiendringene?
 
 For å forsatt være relevant for en målgruppe må man kanskje ta i bruk kunstig
 intelligens, gjøre mer automatisering og generell _digitalisering_. Hvor skal
