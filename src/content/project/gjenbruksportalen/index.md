@@ -68,7 +68,7 @@ Selve applikasjonen utviklet vi med Astro og React, sammen med et knippe utvalgt
 
 Gjenbruksportalen har funnet sin nisje, selv om den foreløpig ikke har de mest avanserte funksjonene. Med et prosjekt finansiert av støttemidler måtte vi prioritere hardt underveis. Nettopp derfor var det åpenbart riktig å lansere produktet som åpen kildekode – for å gi det muligheten til å vokse og forbedres over tid, både i funksjonalitet, brukeropplevelse og design.
 
-Det viktigste er at portalen allerede i dag leverer på sitt hovedløfte. *Å gjøre det mer oversiktlig og enklere å ta bærekraftige forbrukervalg*.
+Det viktigste er at portalen allerede i dag leverer på sitt hovedløfte: _**å gjøre det mer oversiktlig og enklere å ta bærekraftige forbrukervalg.**_
 <br></br>
 > "Vi er veldig fornøyde med utseende, brukervennligheten og funksjonaliteten vi har fått på plass til tross for begrensede midler. Kartløsningen gir oss et solid fundament for testing gjennom bruk, og videreutvikling\."<br></br>*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
 
