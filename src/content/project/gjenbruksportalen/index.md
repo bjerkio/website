@@ -17,8 +17,6 @@ customer: Framtiden i Våre Hender
 dateFrom: 2025-05-01
 ---
 
-# **Gjenbruksportalen - Bærekraftig teknologi for Framtiden i Våre Hender**
-
 Framtiden i våre hender (FIVH) er en av Norges største miljø- og solidaritetsorganisasjoner med over 50.000 medlemmer. Organisasjonen ble stiftet under et folkemøte i Nadderudhallen, Bekkestua i 1974 etter initiativ fra Erik Dammann, og har siden da vært en viktig stemme for etisk og bærekraftig forbruk i Norge.
 
 Gjennom årene har FIVH jobbet målrettet med klima, naturvern, gjenbruk og rettferdig handel. Med en kombinasjon av kampanjer, politisk arbeid og folkelig engasjement har de skapt positive endringer, blant annet innen tekstilindustrien og gjenbrukskultur i Norge.
