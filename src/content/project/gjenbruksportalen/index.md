@@ -2,9 +2,9 @@
 image: ./gjenbruksportalen-skjermbilde.png
 headline: En portal for gjenbruk og bærekfratige valg
 socialMediaImages:
-  - ./morgenlevering-some.png
+  - ./gjenbruksportalen-some.png
 categories:
-  - product-development
+  - product-management
   - development
   - ux
 technologies:
