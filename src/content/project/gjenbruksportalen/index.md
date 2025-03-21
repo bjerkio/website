@@ -1,5 +1,5 @@
 ---
-image: ./gjenbruksportalen-skjermbilde.png
+image: ./gjenbruksportalen-bjerk.png
 headline: En portal for gjenbruk og bærekfratige valg
 socialMediaImages:
   - ./gjenbruksportalen-some.png
