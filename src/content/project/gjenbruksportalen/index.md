@@ -17,14 +17,15 @@ customer: Framtiden i Våre Hender
 dateFrom: 2025-05-01
 ---
 
-# **Gjenbruksportalen - Bærekraftig utvikling for Framtiden i Våre Hender**
+# **Gjenbruksportalen - Bærekraftig teknologi for Framtiden i Våre Hender**
 
 Framtiden i våre hender (FIVH) er en av Norges største miljø- og solidaritetsorganisasjoner med over 50.000 medlemmer. Organisasjonen ble stiftet under et folkemøte i Nadderudhallen, Bekkestua i 1974 etter initiativ fra Erik Dammann, og har siden da vært en viktig stemme for etisk og bærekraftig forbruk i Norge.
 
 Gjennom årene har FIVH jobbet målrettet med klima, naturvern, gjenbruk og rettferdig handel. Med en kombinasjon av kampanjer, politisk arbeid og folkelig engasjement har de skapt positive endringer, blant annet innen tekstilindustrien og gjenbrukskultur i Norge.
 <br></br>
 
-![Bilde-av-nadderudhallen](./nadderudhallen.jpg "Nadderudhallen - hvor FIVH ble stiftet 25 april 1974.") Nadderudhallen - hvor FIVH ble stiftet 25 april 1974. *Foto: [MortenHV](https://lokalhistoriewiki.no/wiki/Bruker:MortenHV) / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)*
+![Bilde-av-nadderudhallen](./nadderudhallen.jpg "Nadderudhallen - hvor FIVH ble stiftet 25 april 1974.") 
+*Nadderudhallen - hvor FIVH ble stiftet 25 april 1974. *Foto: [MortenHV](https://lokalhistoriewiki.no/wiki/Bruker:MortenHV) / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)**
 <br></br>
 
 ## **Utfordringen**
@@ -46,10 +47,10 @@ Vi jobbet oss grundig gjennom målsettinger, målgrupper, prioriteringer, funksj
 * Plattformen måtte være tilrettelagt for framtidig utvikling og skalering  
 * Produktet skulle reflektere FIVHs kjerneverdier og personlighet
 <br></br>
-"Samarbeidet med Bjerk har vært smidig, effektivt og en hyggelig opplevelse. Brage og Carl Oscar har strukket seg langt for å imøtekomme våre behov, både til arbeidstider, frister, designvalg og økonomiske rammer. Samtidig har vi blitt godt veiledet og involvert i valgene som 
+> "Samarbeidet med Bjerk har vært smidig, effektivt og en hyggelig opplevelse. Brage og Carl Oscar har strukket seg langt for å imøtekomme våre behov, både til arbeidstider, frister, designvalg og økonomiske rammer. Samtidig har vi blitt godt veiledet og involvert i valgene som 
 ble gjort i sanntid. Vi håper å kunne ta opp igjen samarbeidet i nær framtid!\"
 <br>
-*\- Ørjan Furnes, Prosjektleder/Styremedlem FIVH Bergen*
+*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
 </br>
 
 ## **Løsningen**
@@ -73,9 +74,9 @@ Gjenbruksportalen har funnet sin nisje, selv om den foreløpig ikke har de mest 
 
 Det viktigste er at portalen allerede i dag leverer på sitt hovedløfte. *Å gjøre det mer oversiktlig og enklere å ta bærekraftige forbrukervalg*.
 <br></br>
-"Vi er veldig fornøyde med utseende, brukervennligheten og funksjonaliteten vi har fått på plass til tross for begrensede midler. Kartløsningen gir oss et solid fundament for testing gjennom bruk, og videreutvikling\."
+> "Vi er veldig fornøyde med utseende, brukervennligheten og funksjonaliteten vi har fått på plass til tross for begrensede midler. Kartløsningen gir oss et solid fundament for testing gjennom bruk, og videreutvikling\."
 <br>
-*\- Ørjan Furnes, Prosjektleder/Styremedlem FIVH Bergen*
+*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
 </br>
 
 <br></br>
