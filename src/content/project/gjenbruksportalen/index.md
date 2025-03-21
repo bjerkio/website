@@ -46,10 +46,8 @@ Vi jobbet oss grundig gjennom målsettinger, målgrupper, prioriteringer, funksj
 * Produktet skulle reflektere FIVHs kjerneverdier og personlighet
 <br></br>
 > "Samarbeidet med Bjerk har vært smidig, effektivt og en hyggelig opplevelse. Brage og Carl Oscar har strukket seg langt for å imøtekomme våre behov, både til arbeidstider, frister, designvalg og økonomiske rammer. Samtidig har vi blitt godt veiledet og involvert i valgene som 
-ble gjort i sanntid. Vi håper å kunne ta opp igjen samarbeidet i nær framtid!\"
-<br>
-*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
-</br>
+ble gjort i sanntid. Vi håper å kunne ta opp igjen samarbeidet i nær framtid!\"<br></br>*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
+
 
 ## **Løsningen**
 
@@ -72,14 +70,14 @@ Gjenbruksportalen har funnet sin nisje, selv om den foreløpig ikke har de mest 
 
 Det viktigste er at portalen allerede i dag leverer på sitt hovedløfte. *Å gjøre det mer oversiktlig og enklere å ta bærekraftige forbrukervalg*.
 <br></br>
-> "Vi er veldig fornøyde med utseende, brukervennligheten og funksjonaliteten vi har fått på plass til tross for begrensede midler. Kartløsningen gir oss et solid fundament for testing gjennom bruk, og videreutvikling\."
-<br>
-*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
-</br>
+> "Vi er veldig fornøyde med utseende, brukervennligheten og funksjonaliteten vi har fått på plass til tross for begrensede midler. Kartløsningen gir oss et solid fundament for testing gjennom bruk, og videreutvikling\."<br></br>*\- Ørjan Olsen Furnes, Prosjektleder og Styremedlem FIVH Bergen*
 
-<br></br>
 ---
 
 **Har du en idé som fortjener å bli realisert, eller en utfordring som trenger en smart løsning?**
 
 Ta en prat med oss, så finner vi ut hvordan vi kan gjøre det mulig sammen!
+
+<div>
+ <a href="/om" class="button">Kontakt oss →</a>
+</div>
