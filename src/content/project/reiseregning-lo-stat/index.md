@@ -31,8 +31,8 @@ kan snuble over uventede hindringer. For LO Stat ble håndteringen av
 reiseregninger en voksende hodepine som stjal verdifull tid fra deres egentlige
 oppdrag.
 
-Utfordringen var tydelig definert – medlemmer som strevde med tilganger og lite brukervennlige
-prosesser for registrering av utlegg etter inspirerende møter og konferanser. Ansatte som brukte
+Utfordringen var tydelig definert – medlemmer som strevde med kompliserte
+skjemaer etter inspirerende møter og konferanser. Ansatte som brukte
 uforholdsmessig mye tid på å manuelt behandle utlegg i stedet for å fokusere på
 medlemsservice. En prosess som var ment å være en enkel administrativ oppgave,
 hadde blitt en barriere for engasjement og effektivitet.
@@ -66,7 +66,7 @@ tilpasset løsningen basert på reelle tilbakemeldinger.
 Resultatet av vårt samarbeid med LO Media er en digital plattform som
 fasiliterer for løpet fra utlegg til refusjon. Nøkkelfunksjonene inkluderer:
 
-- Intuitivt brukergrensesnitt som guider medlemmer steg for steg gjennom
+- Intuitivt brukergrensesnitt som guides medlemmer steg for steg gjennom
   prosessen
 - Mulighet for å laste opp bilder av kvitteringer direkte fra mobilen
 - Automatisk datavalidering for å redusere feil og frustrasjoner
@@ -80,24 +80,24 @@ tekniske detaljer for spesielt interesserte):
   grensesnitt
 - Backend: tRPC for effektiv og typesikker kommunikasjon mellom klient og server
 - Integrasjon: Typical-fetch for robust kommunikasjon med Visma Expense API
-- Infrastruktur: Pulumi for infrastruktur som kode (IaC), som sikrer konsistent og
+- Infrastruktur: Pulumi for infrastruktur som kode, som sikrer konsistent og
   repeterbar utrulling
-
-![Skjermbilde-reiseregning](./lo-stat-bjerk.jpg)
 
 ## Innsikt
 
 Implementeringen av den nye plattformen ga LO Media noen håndfaste gevinster:
 
-- Redusert tid for innlevering og behandling av reiseregninger
+- Drastisk redusert tid for innlevering og behandling av reiseregninger - fra
+  dager til timer
 - Økt brukertilfredshet blant medlemmer, spesielt de som sjelden sender inn
   reiseregninger
 - Frigjøring av administrative ressurser til mer verdiskapende aktiviteter
 - Forbedret datakvalitet gjennom automatisert innsamling og validering
 
 Det handler ikke bare om å digitalisere prosesser, men om å gi medlemmene
-verktøy som faktisk gjør hverdagen enklere. Dette prosjektet har vist at selv de minste 
-endringene kan ha stor innvirkning. For hvert minutt spart på administrasjon, er det et minutt mer
+verktøy som faktisk gjør hverdagen enklere. Mens reiseregninger kanskje ikke
+endrer verden, har dette prosjektet vist at selv de minste endringene kan ha
+stor innvirkning. For hvert minutt spart på administrasjon, er det et minutt mer
 til å utføre meningsfylt arbeid. Og i en organisasjon som LO, hvor hvert medlem
 teller, kan disse minuttene summere seg opp til reell, positiv endring i
 arbeidslivet.
