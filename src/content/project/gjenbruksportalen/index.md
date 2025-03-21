@@ -77,7 +77,7 @@ Det viktigste er at portalen allerede i dag leverer på sitt hovedløfte: _**å 
 **Har du en idé som fortjener å bli realisert, eller en utfordring som trenger en smart løsning?**
 
 Ta en prat med oss, så finner vi ut hvordan vi kan gjøre det mulig sammen!
-
+<br></br>
 <div>
  <a href="/om" class="button">Kontakt oss →</a>
 </div>
