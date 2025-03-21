@@ -51,9 +51,9 @@ ble gjort i sanntid. Vi håper å kunne ta opp igjen samarbeidet i nær framtid!
 
 ## **Løsningen**
 
-Gjenbruksportalen gir brukerne et interaktivt kart som viser veien til gjenbruksbutikker, utlånssteder og reparasjonsverksteder i Bergen. Disse er geografiske datapunkteneKartet er hjertet i løsningen, og her tok vi et valg som passet perfekt med både våre og FIVHs verdier – å lene oss på Open Street Map (OSM).
+Gjenbruksportalen gir brukerne et interaktivt kart som viser veien til gjenbruksbutikker, utlånssteder og reparasjonsverksteder i Bergen. Disse geografiske datapunktene er hjertet i løsningen, og her tok vi et valg som passet perfekt med både våre og FIVHs verdier – å lene oss på Open Street Map (OSM).
 
- OSM er en fellesskapsdrevet karttjeneste som er åpen og gratis for alle – enten du er privatperson, frivillig organisasjon eller kommersiell aktør. Kartdata fra OSM brukes i en rekke applikasjoner som Uber, Snapchat, Pokémon GO og Strava, men OSM inneholder også data om butikker og andre institusjoner. Med det fleksible taggesystemet i OSM kan man skildre bruktbutikker og andre bærekraftsorienterte ting. 
+OSM er en fellesskapsdrevet karttjeneste som er åpen og gratis for alle – enten du er privatperson, frivillig organisasjon eller kommersiell aktør. Kartdata fra OSM brukes i en rekke applikasjoner som Uber, Snapchat, Pokémon GO og Strava, men OSM inneholder også data om butikker og andre institusjoner. Med det fleksible taggesystemet i OSM kan man skildre bruktbutikker og andre bærekraftsorienterte ting. 
 
 Det geniale med OSM i dette prosjektet er at det åpner for bred deltakelse og samspill mellom ulike løsninger. Som frivillig organisasjon har ikke FIVH kapasitet til å dedikere fulltidsressurser til å vedlikeholde datagrunnlaget for Gjenbruksportalen. Heldigvis kan hvem som helst bidra til OSM – både våre frivillige og brukere av andre løsninger som bygger på den samme åpne databasen. Dette betyr at Gjenbruksportalen ikke bare drar nytte av frivillig innsats, men også av kontinuerlige oppdateringer fra et bredere økosystem. Løsningene konkurrerer ikke om data, men tilbyr ulike skreddersydde grensesnitt basert på den samme felles datakilden.<br></br>
 
