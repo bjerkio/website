@@ -4,7 +4,7 @@ import Layout from "@layouts/default.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("project");
-  return blogEntries.map((entry) => ({
+  return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -114,5 +114,14 @@ const { Content } = await entry.render();
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  article :global(blockquote) {
+    font-size: clamp(0.8rem, 4vw, 1.2rem);
+    font-style: italic;
+
+    em {
+      font-style: normal;
+    }
   }
 </style>
