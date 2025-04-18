@@ -29,16 +29,16 @@ Hva er den faktiske utfordringen du ønsker å løse? Det er nemlig ikke
 teknologien i seg selv som skaper verdi, og det er ofte den største delen av
 jobben å virkelig forstå problemet.
 
-Jeg møter stadig på «vi må bli mer digitale» eller «ta i bruk AI», men når
-jeg graver dypere, handler det om noe annet konkret. Kanskje leverer ikke
+Jeg møter stadig på «vi må bli mer digitale» eller «ta i bruk AI», men når jeg
+graver dypere, handler det om noe annet konkret. Kanskje leverer ikke
 kundeservice raskt eller bra nok, manuelle prosesser som stjeler verdifull tid,
 data som ligger spredt og utilgjengelig eller systemer som ikke snakker sammen.
 
 Vi mangler folk med rett kompetanse, snakkes det også mye om. I mange tilfeller
-handler det ikke om å ansette en hel IT-avdeling eller leie inn konsulenter,
-men ofte er løsningen å styrke de ansatte du har med digital kompetanse, knytte
-til deg spisskompetanse når det trengs eller velge en teknologpartner som kan
-være med deg hele reisen.
+handler det ikke om å ansette en hel IT-avdeling eller leie inn konsulenter, men
+ofte er løsningen å styrke de ansatte du har med digital kompetanse, knytte til
+deg spisskompetanse når det trengs eller velge en teknologpartner som kan være
+med deg hele reisen.
 
 Det viktigste er ikke å kunne kode selv, men å forstå mulighetsrommet teknologi
 gir.
