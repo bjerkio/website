@@ -34,9 +34,10 @@ konkurransefortrinn:
 Vi starter med å forstå din virksomhet og dine utfordringer. Vi lytter,
 analyserer og utfordrer før vi designer teknologi som løser problemet. Vi jobber
 i tverrfaglige team sammen med våre kunder. Vår oppgave er å kode, vedlikeholde,
-drifte og forbedre systemene. Vi skaper bærekraftige løsninger som varer. Det
-betyr teknologi som er enkel å vedlikeholde, skalerbar og effektiv. Vi bygger
-langsiktige relasjoner og setter kvalitet først.
+drifte og forbedre systemene. Vi skaper bærekraftige løsninger som varer.
+
+Det betyr teknologi som er enkel å vedlikeholde, skalerbar og effektiv. Vi
+bygger langsiktige relasjoner og setter kvalitet først.
 
 ## Hvem er vi
 
