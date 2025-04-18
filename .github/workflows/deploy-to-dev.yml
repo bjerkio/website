@@ -47,4 +47,4 @@ jobs:
             "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BJERK_IO }}"
           projectId: bjerk-io
           channelId: live
-          target: bjerk-dev
+          target: dev
