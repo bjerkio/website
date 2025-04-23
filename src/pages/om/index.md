@@ -1,46 +1,49 @@
 ---
 layout: "@layouts/page.astro"
-title: "Lær om Bjerk – Vi skaper digitale produkter"
+title: "Lær om Bjerk: Vi bygger teknologi som tar deg videre"
 path: /om
 description:
-  Bjerk er et dialogdrevet byrå som skaper digitale løsninger. Gjennom 14 år har
-  vi transformert hvordan folk lærer og jobber.
+  Bjerk leverer skreddersydde tekniske løsninger for små og mellomstore
+  bedrifter. Vi bygger brukervennlige systemer som endrer hvordan folk lærer,
+  tenker, jobber og kommuniserer.
 socialMediaTitle: Oppdag Bjerk 🌳
 socialMediaDescription:
-  Vårt oppdrag er å forbedre menneskers liv gjennom teknologi. Vi skaper
-  digitale produkter og tjenester for mennesker.
+  Vi skaper teknologi folk faktisk liker å bruke. 15 års erfaring med effektive
+  løsninger.
 ---
 
-# Vi skaper digitale produkter
+# Vi skaper teknologi som tar deg videre
 
-Vi drømmer om en verden der mennesker kan bruke mer tid på det de elsker,
-mestrer, og som skaper mest verdi, mens teknologien tar seg av alt det andre.
-Gjennom våre digitale løsninger forenkler og forbedrer vi hvordan folk lærer,
-tenker, jobber og kommuniserer.
+Forandring skjer når mennesker samles rundt det de brenner for. I 15 år har vi
+jobbet for å gjøre teknologi mer tilgjengelig og skapt løsninger som utgjør en
+forskjell. Bjerk utvikler tekniske løsninger som hjelper små og mellomstore
+bedrifter å forandre måten mennesker lærer, tenker, jobber og kommuniserer.
 
-Helt siden Bjerk ble stiftet i 2009, har vi hatt en visjon om å skape et selskap
-som gjør en reell forskjell. Vi ønsker gi det folk det de trenger for å lykkes,
-ikke bare det de tror de vil ha. For oss handler det om å utgjøre en positiv
-effekt. Ved å bli kjent med brukerne våre, kan vi bedre forstå deres
-utfordringer og skape løsninger som virkelig betyr noe.
+## Dette leverer vi
 
-Bjerk samler mennesker med kompetanse innen programvareutvikling,
-brukeropplevelse, produktledelse og teknologirådgivning. Vi fyller gaper
-etterlatt av standardiserte programvareløsninger ved å forbedre eksisterende
-systemer, [integrere ulike systemer](/tjenester/integrasjoner) eller utvikle
-helt nye løsninger.
+Vi skaper skreddersydde tekniske løsninger som gir bedrifter
+konkurransefortrinn:
 
-Et godt samarbeid starter med en god relasjon. Vi begynner gjerne med en
-uformell prat for å bli kjent og forstå dine mål. Deretter kan vi arrangere et
-møte eller en uforpliktelse arbeidsøkt for å dykke dypere inn i dine behov og
-visjon.
+- Brukervennlige løsninger folk faktisk liker å bruke
+- Arbeidsverktøy som frigjør tid og ressurser
+- Kommunikasjonsplattformer som kobler mennesker sammen
+- Systemer som gjør komplekse oppgaver enklere
 
-Vi legger stor vekt på kommunikasjon og samhandling. Vi jobber gjerne
-dialogdrevet og tverrgalig, hvor alle er med på å forme både løsningen og
-prosessen. Det er ofte best å jobbe i korte økter med klare mål, og at vi bruker
-tid på å skape en felles forståelse av hva vi skal gjøre og hvorfor. Vi er ikke
-redd for å prøve, gjøre feil eller endre retning om det er nødvendig. Vi tror
-det er slik vi skaper de beste resultatene.
+## Slik arbeider vi
+
+Vi starter med å forstå din virksomhet og dine utfordringer. Vi lytter,
+analyserer og utfordrer før vi designer teknologi som løser problemet. Vi jobber
+i tverrfaglige team sammen med våre kunder. Vår oppgave er å kode, vedlikeholde,
+drifte og forbedre systemene. Vi skaper bærekraftige løsninger som varer.
+
+Det betyr teknologi som er enkel å vedlikeholde, skalerbar og effektiv. Vi
+bygger langsiktige relasjoner og setter kvalitet først.
+
+## Hvem er vi
+
+Hos Bjerk møter du teknologer og rådgivere som forstår både kode og forretning.
+Vi prioriterer menneskelige relasjoner, utfordrer etablerte sannheter og skaper
+langsiktig verdi. Vi måler suksess i varige effekter.
 
 ## Hva vi tilbyr
 
