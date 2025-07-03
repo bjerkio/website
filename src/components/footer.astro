@@ -89,6 +89,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
     padding-block: 8rem;
     text-align: center;
     border-radius: 0.5rem;
+    padding-inline: 2rem;
 
     & > a {
       gap: 0.5rem;
@@ -113,6 +114,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 
     & > nav > ul {
       display: grid;
+      padding: 0px;
       gap: 0.5rem;
       list-style: none;
     }
@@ -121,6 +123,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
   footer > .bottom-footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: true;
     align-items: center;
     padding: 2rem;
 
@@ -134,6 +137,13 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
       & > a {
         display: block;
       }
+    }
+  }
+
+  /* Hide footer logo on mobile */
+  @media (max-width: 700px) {
+    footer > .bottom-footer > .footer-logo {
+      display: none;
     }
   }
 

@@ -1,14 +1,12 @@
 ---
 import Layout from "@layouts/base.astro";
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-import HeroImage from "../assets/people-working.jpg";
-import ProjectCard from "@components/project-card.astro";
 import PartnerCard from "@components/partner-card.astro";
 import Header from "@components/header.astro";
 import Footer from "@components/footer.astro";
+import { Image } from "astro:assets";
+import HeroImage from "../assets/people-working.jpg";
 
-const projects = await getCollection("project");
 const partners = await getCollection("partner");
 const url = Astro.site;
 ---
@@ -28,18 +26,25 @@ const url = Astro.site;
     url,
   }}
 >
-  <div class="container">
-    <div class="hero">
-      <Header />
-      <section class="pitch">
+  <Header />
+  <main>
+    <section class="hero">
+      <div class="pitch">
         <h1>Vi lager økonomisystemer folk liker å bruke</h1>
         <p>
           Enkle, smarte digitale produkter som gir deg mer tid til det som
           virkelig betyr noe.
         </p>
         <a href="/om" class="button">Les mer →</a>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="people">
+    <Image
+      src={HeroImage}
+      alt="Bilde av folk som jobber"
+      class="landing-image"
+      />
+    </section>
     <section class="partners">
       <h2>Noen av de vi jobber med</h2>
 
@@ -47,27 +52,47 @@ const url = Astro.site;
         {partners.map(partner => <PartnerCard {...partner} />)}
       </div>
     </section>
-  </div>
+  </main>
   <Footer />
 </Layout>
 
 <style>
-  .container {
+  main {
     --gap: 12rem;
   }
 
-  .pitch {
+  section.people {
+    display:flex;
+    flex-direction: column;
+    gap: 12rem;
+
+    width: min(var(--container-width), 1460px);
+    margin-inline: auto;
+
+    .landing-image {
+      max-width: 1151px;
+      align-self: flex-end;
+      width: 100%;
+
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin-block-start: 2rem;
+    }
+  }
+
+  .hero {
     min-height: 30vh;
 
-    text-align: center;
+    width: min(var(--container-width), 1460px);
+    margin-inline: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     p {
       max-width: 40ch;
-      text-align: center;
       padding-bottom: 0rem;
       font-size: 1.25rem;
       text-wrap: pretty;
@@ -80,12 +105,10 @@ const url = Astro.site;
       line-height: 1.1;
       font-weight: 800;
       text-wrap: pretty;
-      text-align: center;
     }
 
     .button {
       display: inline-block;
-      text-align: center;
       color: inherit;
       font-size: 1.25rem;
       text-decoration-color: inherit;
@@ -93,6 +116,7 @@ const url = Astro.site;
       text-underline-offset: 0.25rem;
       padding: 0.5rem;
       border-radius: 0.5rem;
+      margin-left: -0.5rem;
     }
 
     .button:hover {
