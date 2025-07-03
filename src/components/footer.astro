@@ -13,18 +13,15 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
     <section aria-labelledby="footer-about" class="about">
       <h2 id="footer-about" class="sr-only">Om Bjerk</h2>
       <p>
-        Vi vil være med å lage en verden hvor folk kan gjøre mer av det de er
-        gode på, og hvor teknologien tar seg av resten. Vi skaper digitale
-        løsninger som forbedre og forenkle måten mennesker lærer, tenker, jobber
-        og kommuniserer på.
+        Bjerk er et lite produkthus fra Oslo som har spesialisert seg på
+        økonomisystemer for små og mellomstore bedrifter. Vi har over 15 års
+        erfaring med å lage regnskaps- og økonomisystemer med brukeropplevelse i
+        fokus.
       </p>
     </section>
     <nav>
       <ul>
         <li><a href="/om">Om oss →</a></li>
-        <li><a href="/arbeid">Arbeider →</a></li>
-        <li><a href="/tjenester">Tjenester →</a></li>
-        <li><a href="/artikler">Artikler →</a></li>
         <li><a href="/kontakt">Kontakt oss →</a></li>
       </ul>
     </nav>
@@ -32,7 +29,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
       <address>
         <p>Arbins gate 11, 0253 Oslo</p>
         <a href="tel:+4722120512">22 12 05 12</a>
-        <a href="mailto:kontoret@bjerk.io"> kontoret@bjerk.io </a>
+        <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>
       </address>
       <div class="socials">
         <a
@@ -62,6 +59,11 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 </footer>
 
 <style>
+  footer {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding: 2rem 0;
+  }
   a {
     --color-link: var(--color-app-text);
   }
@@ -86,6 +88,8 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
     margin-block-start: var(--gap);
     padding-block: 8rem;
     text-align: center;
+    border-radius: 0.5rem;
+    padding-inline: 2rem;
 
     & > a {
       gap: 0.5rem;
@@ -110,6 +114,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 
     & > nav > ul {
       display: grid;
+      padding: 0px;
       gap: 0.5rem;
       list-style: none;
     }
@@ -118,6 +123,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
   footer > .bottom-footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: true;
     align-items: center;
     padding: 2rem;
 
@@ -131,6 +137,13 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
       & > a {
         display: block;
       }
+    }
+  }
+
+  /* Hide footer logo on mobile */
+  @media (max-width: 700px) {
+    footer > .bottom-footer > .footer-logo {
+      display: none;
     }
   }
 

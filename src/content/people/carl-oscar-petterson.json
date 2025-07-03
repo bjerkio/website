@@ -1,7 +1,8 @@
 {
   "givenName": "Carl Oscar",
   "familyName": "Petterson",
-  "position": "Daglig leder og rådgiver",
+  "type": "external-author",
+  "position": "Rådgiver",
   "phone": "+47 908 59 851",
   "email": "cop@bjerk.io",
   "image": "./cop.jpg",
