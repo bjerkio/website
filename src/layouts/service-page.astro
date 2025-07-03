@@ -1,6 +1,7 @@
 ---
 import type { MarkdownLayoutProps } from "astro";
 import Layout, { type Props as DefaultLayoutProps } from "./default.astro";
+import Header from "@components/header.astro";
 
 export type Props = MarkdownLayoutProps<DefaultLayoutProps>;
 const { frontmatter } = Astro.props;
@@ -41,6 +42,7 @@ if (frontmatter.schema) {
 ---
 
 <Layout {...frontmatter} schema={schema}>
+  <Header />
   <main>
     <nav aria-label="breadcrumb">
       <a href="/tjenester">← Tilbake til tjenester</a>
@@ -99,7 +101,7 @@ if (frontmatter.schema) {
         text-underline-offset: 0.25rem;
       }
     }
-  } 
+  }
 
   article {
     line-height: 1.6;
