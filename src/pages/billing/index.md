@@ -39,5 +39,5 @@ only be used when EHF is unavailable.
 ## Bjerkin Oy (Finland)
 
 - **Y code:** 3375578-4
-- **Postal Address:** Vehkakuja 2 C 20, 40700 JYVÄSKYLÄ
+- **Postal Address:** Wilhelm Schildtin katu 22 A 11, 40740 JYVÄSKYLÄ
 - **Invoice email:** invoice@bjerk.io
