@@ -40,4 +40,5 @@ only be used when EHF is unavailable.
 
 - **Y code:** 3375578-4
 - **Postal Address:** Wilhelm Schildtin katu 22 A 11, 40740 JYVÄSKYLÄ
-- **Invoice email:** invoice@bjerk.io
+- **E-invoice Address:** 003733755784
+- **Broker ID:** DABAFIHH
