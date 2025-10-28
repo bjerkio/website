@@ -7,7 +7,8 @@ const people = await getCollection("people");
 const makeUrl = (path: string) => new URL(path, Astro.site).toString();
 
 const employees = people
-  .filter((person) => person.data.email.includes("@bjerk.io"))
+  .filter(person => person.data.email.includes("@bjerk.io"))
+  .filter(person => person.data.type === "employee")
   .sort((a, b) => {
     if (b.data.position.toLowerCase().includes("styreleder")) {
       return -1;
@@ -51,7 +52,7 @@ const employees = people
       "https://www.linkedin.com/company/bjerk",
       "https://github.com/bjerkio",
     ],
-    member: people.map((person) => ({
+    member: people.map(person => ({
       "@type": "EmployeeRole",
       name: person.data.position,
       member: {
@@ -59,7 +60,7 @@ const employees = people
         givenName: person.data.givenName,
         familyName: person.data.familyName,
         image: person.data.image.src,
-        sameAs: person.data.socialMedia.map((media) => media.url),
+        sameAs: person.data.socialMedia.map(media => media.url),
       },
     })),
   }}
@@ -91,7 +92,7 @@ const employees = people
       </section>
     </div>
     <section class="employees">
-      {employees.map((person) => <Person person={person} />)}
+      {employees.map(person => <Person person={person} />)}
     </section>
   </main>
 </Layout>
