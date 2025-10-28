@@ -3,7 +3,7 @@
   "familyName": "Petterson",
   "position": "Daglig leder og rådgiver",
   "phone": "+47 908 59 851",
-  "email": "cop@bjerk.io",
+  "email": "kontoret@bjerk.io",
   "image": "./cop.jpg",
   "socialMedia": [
     {
@@ -15,5 +15,6 @@
       "url": "https://github.com/copetterson"
     }
   ],
-  "photographerName": "Tom-Egil Jensen"
+  "photographerName": "Tom-Egil Jensen",
+  "type": "external-author"
 }
