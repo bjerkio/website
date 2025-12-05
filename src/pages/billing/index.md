@@ -30,7 +30,7 @@ Cardboard and generate an invoice email.
 - **Bank account:** 1503.29.29602
 - **IBAN:** NO47 1503 2929 602
 - **SWIFT/BIC:** DNBANOKKXXX
-- **Invoice email:** invoice@bjerk.io
+- **Invoice email:** <invoice@bjerk.io>
 
 **⚠️ Invoices must be sent using EHF format!**  
 If you are unable to send EHF invoices: please contact us. Invoice email must
@@ -39,6 +39,6 @@ only be used when EHF is unavailable.
 ## Bjerkin Oy (Finland)
 
 - **Y code:** 3375578-4
-- **Postal Address:** Wilhelm Schildtin katu 22 A 11, 40740 JYVÄSKYLÄ
+- **Postal Address:** Wilhelm Schildtin katu 22 A 4, 40740 JYVÄSKYLÄ
 - **E-invoice Address:** 003733755784
 - **Broker ID:** DABAFIHH
