@@ -12,50 +12,25 @@ socialMediaDescription:
   løsninger.
 ---
 
-# Vi skaper teknologi som tar deg videre
+# Du har bedre ting å gjøre enn å fikse økonomisystemet.
 
-Forandring skjer når mennesker samles rundt det de brenner for. I 15 år har vi
-jobbet for å gjøre teknologi mer tilgjengelig og skapt løsninger som utgjør en
-forskjell. Bjerk utvikler tekniske løsninger som hjelper små og mellomstore
-bedrifter å forandre måten mennesker lærer, tenker, jobber og kommuniserer.
+Små og mellomstore bedrifter fortjener økonomisystemer som gir dem mer tid til
+det som virkelig betyr noe. Vi jobber for færre timer med regnskapskaos,
+kompliserte systemer og dyre systemer som kompliserer mer enn de hjelper.
 
-## Dette leverer vi
+Vi lager regnskaps- og økonomisystemer med fokus på brukeropplevelse. Enkle,
+smarte produkter bygget for bedrifter som ønsker å bruke tiden sin på å skape
+verdi, ikke på å slåss med teknologi.
 
-Vi skaper skreddersydde tekniske løsninger som gir bedrifter
-konkurransefortrinn:
+Vi tror på langsiktige partnerskap fordi utvikling av gode produkter tar tid.
+Våre beste samarbeid oppstår når vi og våre kunder deler troen på at kvalitet og
+fokus på effekt betaler seg over tid.
 
-- Brukervennlige løsninger folk faktisk liker å bruke
-- Arbeidsverktøy som frigjør tid og ressurser
-- Kommunikasjonsplattformer som kobler mennesker sammen
-- Systemer som gjør komplekse oppgaver enklere
+**Hvordan vi samarbeider:**
 
-## Slik arbeider vi
+- Langsiktige partnerskap hvor vi tar ansvar for hele produktet
+- Felles oppstart av nye selskaper med delt risiko og oppside
+- Målrettede prosjekter som løser spesifikke utfordringer
 
-Vi starter med å forstå din virksomhet og dine utfordringer. Vi lytter,
-analyserer og utfordrer før vi designer teknologi som løser problemet. Vi jobber
-i tverrfaglige team sammen med våre kunder. Vår oppgave er å kode, vedlikeholde,
-drifte og forbedre systemene. Vi skaper bærekraftige løsninger som varer.
-
-Det betyr teknologi som er enkel å vedlikeholde, skalerbar og effektiv. Vi
-bygger langsiktige relasjoner og setter kvalitet først.
-
-## Hvem er vi
-
-Hos Bjerk møter du teknologer og rådgivere som forstår både kode og forretning.
-Vi prioriterer menneskelige relasjoner, utfordrer etablerte sannheter og skaper
-langsiktig verdi. Vi måler suksess i varige effekter.
-
-## Hva vi tilbyr
-
-- [Data og integrasjoner][intg]
-- [Rådgivning][rad]
-- [Skreddersydd programvareutvikling][dev]
-- [Produktutvikling og -ledelse][pm]
-- [Opplæring innen digitale verktøy][edu]
-
-[pm]: /tjenester/produktutvikling
-[rad]: /tjenester/radgivning
-[dev]: /tjenester/teknologi-og-utvikling
-[ux]: /tjenester/brukeropplevelse
-[intg]: /tjenester/integrasjoner
-[edu]: /tjenester/opplaring
+Vi har kapasitet til noen få nye partnerskap per år. Hvis du deler vår
+tilnærming, la oss ta en prat.

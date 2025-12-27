@@ -1,22 +1,23 @@
 ---
-import Layout from "@layouts/default.astro";
+import Layout from "@layouts/base.astro";
 import { getCollection } from "astro:content";
+import PartnerCard from "@components/partner-card.astro";
+import Header from "@components/header.astro";
+import Footer from "@components/footer.astro";
 import { Image } from "astro:assets";
 import HeroImage from "../assets/people-working.jpg";
-import ProjectCard from "@components/project-card.astro";
-import PartnerCard from "@components/partner-card.astro";
 
-const projects = await getCollection("project");
 const partners = await getCollection("partner");
 const url = Astro.site;
 ---
 
 <Layout
-  title="Bjerk - Vi skaper en bedre verden gjennom teknologi"
-  socialMediaTitle="Vi skaper en bedre verden gjennom teknologi 🌳"
-  socialMediaDescription="✨ Vi i Bjerk tror på kraften av teknologi for å forme en bedre fremtid! Bli med på reisen vår mens vi transformerer måten vi lærer, tenker, jobber og kommuniserer på. Sammen skaper vi digitale løsninger for en lysere og smartere verden"
-  description="Oppdag hvordan Bjerk driver global forandring gjennom teknologi. Vi forenkler og forbedrer læring, tenkning, arbeid og kommunikasjon med skreddersydde digitale løsninger. Bli med oss i å skape en lysere fremtid."
+  title="Bjerk - Økonomisystemer som funker for små og mellomstore bedrifter"
+  description="Vi lager regnskaps- og økonomisystemer folk faktisk liker å bruke. Enkle, smarte produkter som gir små og mellomstore bedrifter mer tid til å skape verdi."
+  socialMediaTitle="Vi lager økonomisystemer folk faktisk liker å bruke 🌳"
+  socialMediaDescription="Slipp å slåss med kompliserte regnskapssystemer. Vi lager økonomisystemer med fokus på brukeropplevelse - enkle, smarte produkter som gir deg mer tid til det som virkelig betyr noe. Langsiktige partnerskap for varig effekt."
   path="/"
+  colorScheme="light"
   schema={{
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -25,59 +26,34 @@ const url = Astro.site;
     url,
   }}
 >
+  <Header />
   <main>
     <section class="hero">
       <div class="pitch">
-        <h1>
-          Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og
-          forenkle for ambisiøse bedrifter.
-        </h1>
-        <a href="/om" class="button">Kom i gang →</a>
-      </div>
-      <div class="services">
-        <Image
-          src={HeroImage}
-          alt="Bilde av folk som jobber"
-          class="landing-image"
-        />
-        <nav aria-label="Det vil tilbyr">
-          <a href="/tjenester/integrasjoner">Data og integrasjoner →</a>
-          <a href="/tjenester/radgivning">Rådgivning →</a>
-          <a href="/tjenester/produktutvikling">Produktutvikling →</a>
-          <a href="/tjenester/teknologi-og-utvikling"
-            >Teknologi og utvikling →</a
-          >
-          <a href="/tjenester/opplaring">Opplæring →</a>
-        </nav>
+        <h1>Vi lager økonomisystemer folk liker å bruke</h1>
+        <p>
+          Enkle, smarte digitale produkter som gir deg mer tid til det som
+          virkelig betyr noe.
+        </p>
+        <a href="/om" class="button">Les mer →</a>
       </div>
     </section>
-    <span
-      x-intersect:enter="colorScheme = 'dark'"
-      x-intersect:leave="colorScheme = 'light'"
-    >
-      <section class="work">
-        <p>
-          Vi skaper digitale produkter og løsninger som er tilpasset bedrifters
-          unike behov og arbeidsprosesser.
-        </p>
+    <section class="people">
+    <Image
+      src={HeroImage}
+      alt="Bilde av folk som jobber"
+      class="landing-image"
+      />
+    </section>
+    <section class="partners">
+      <h2>Noen av de vi jobber med</h2>
 
-        <div class="projects">
-          {
-            projects
-              .filter((project) => project.data.image)
-              .map((project) => <ProjectCard {...project} />)
-          }
-        </div>
-      </section>
-      <section class="partners">
-        <h2>Noen av de vi jobber med</h2>
-
-        <div class="logos">
-          {partners.map((partner) => <PartnerCard {...partner} />)}
-        </div>
-      </section>
-    </span>
+      <div class="logos">
+        {partners.map(partner => <PartnerCard {...partner} />)}
+      </div>
+    </section>
   </main>
+  <Footer />
 </Layout>
 
 <style>
@@ -85,65 +61,71 @@ const url = Astro.site;
     --gap: 12rem;
   }
 
-  .hero {
-    margin-block-start: calc(var(--gap) / 2);
-    margin-inline: auto;
+  section.people {
+    display:flex;
+    flex-direction: column;
+    gap: 12rem;
+
     width: min(var(--container-width), 1460px);
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-  }
+    margin-inline: auto;
 
-  .hero > .services {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-
-    .landing-image,
-    nav {
+    .landing-image {
       max-width: 1151px;
       align-self: flex-end;
       width: 100%;
-    }
 
-    nav {
-      font-size: 1.25rem;
-    }
-
-    .landing-image {
       height: auto;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       margin-block-start: 2rem;
     }
-
-    & > nav {
-      display: grid;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-
-      a {
-        --color-link: var(--color-app-text);
-      }
-    }
   }
 
-  .work {
-    width: var(--container-width);
+  .hero {
+    min-height: 30vh;
+
+    width: min(var(--container-width), 1460px);
     margin-inline: auto;
 
-    margin-block-start: calc(var(--gap) * 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    > .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+    p {
+      max-width: 40ch;
+      padding-bottom: 0rem;
+      font-size: 1.25rem;
+      text-wrap: pretty;
     }
 
-    > p {
-      max-width: 40ch;
-      font-size: clamp(1rem, 2vw, 1.575rem);
-      line-height: 1.4;
+    h1 {
+      font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+      margin-bottom: 0;
+      max-width: 60ch;
+      line-height: 1.1;
+      font-weight: 800;
+      text-wrap: pretty;
+    }
+
+    .button {
+      display: inline-block;
+      color: inherit;
+      font-size: 1.25rem;
+      text-decoration-color: inherit;
+      text-decoration-thickness: 0.1rem;
+      text-underline-offset: 0.25rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      margin-left: -0.5rem;
+    }
+
+    .button:hover {
+      outline: 2px solid var(--color-focus-bg);
+      outline-offset: 2px;
+    }
+
+    .button:focus {
+      background-color: hsl(250, 100%, 98%);
     }
   }
 
@@ -183,24 +165,5 @@ const url = Astro.site;
       max-height: 25px;
       max-width: 75px;
     }
-  }
-
-  h1 {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    line-height: 1.1;
-    font-weight: 400;
-    text-wrap: pretty;
-    max-width: 40ch;
-  }
-
-  .button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: inherit;
-    font-size: 1.25rem;
-    text-decoration-color: inherit;
-    text-decoration-thickness: 0.1rem;
-    text-underline-offset: 0.25rem;
   }
 </style>

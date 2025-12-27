@@ -7,36 +7,10 @@ import LogoSymbol from "./logo-symbol.astro";
   <a class="logo" aria-label="Gå til forsiden" href="/">
     <LogoSymbol />
   </a>
-  <Broadcast />
-  <div class="right-nav" x-init="$el.style.display = 'flex'">
-    <button
-      class="menu-button"
-      aria-expanded="false"
-      aria-haspopup="true"
-      @click="navOpen = !navOpen"
-      :aria-expanded="navOpen.toString()"
-    >
-      <svg
-        width="18"
-        height="16"
-        viewBox="0 0 18 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect x="1.99316" y="2" width="14" height="2" fill="black"></rect>
-        <rect x="1.99316" y="7" width="14" height="2" fill="black"></rect>
-        <rect x="1.99316" y="12" width="14" height="2" fill="black"></rect>
-      </svg>
-      Meny
-    </button>
-    <nav x-show="navOpen" x-transition @click.outside="navOpen = false">
-      <a href="/om">Om oss</a>
-      <a href="/arbeid">Arbeider</a>
-      <a href="/tjenester">Våre tjenester</a>
-      <a href="/artikler">Artikler</a>
-      <a href="/kontakt">Kontakt oss</a>
-    </nav>
-  </div>
+  <nav class="right-nav" x-init="$el.style.display = 'flex'">
+    <a href="/om">Om oss</a>
+    <a href="/kontakt">Kontakt oss</a>
+  </nav>
 </header>
 
 <style>
@@ -48,12 +22,6 @@ import LogoSymbol from "./logo-symbol.astro";
     margin-inline: auto;
     padding: 2rem 0;
     gap: 2rem;
-  }
-
-  .right-nav {
-    display: none; /* Hide until x-init */
-    flex-grow: 1;
-    justify-content: flex-end;
   }
 
   @media (max-width: 600px) {
@@ -78,41 +46,11 @@ import LogoSymbol from "./logo-symbol.astro";
     color: inherit;
   }
 
-  .menu-button {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: var(--border-radius);
-    padding-block: 0.5rem;
-    padding-inline: 0.8rem;
-    color: var(--color-emphasis-text);
-    background-color: var(--color-emphasis-bg);
-    gap: 0.25rem;
-    cursor: pointer;
-  }
-
   nav {
-    position: absolute;
-    z-index: 9999;
-    top: 100%;
-    right: 0px;
-    width: 100%;
-    background-color: var(--color-app-bg);
-    opacity: 1;
-    visibility: visible;
-    transition: 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
-    text-align: right;
-
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 6rem;
-  }
-
-  nav[hidden] {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: grid;
+    gap: 0.5rem;
   }
 
   nav a {
@@ -120,7 +58,8 @@ import LogoSymbol from "./logo-symbol.astro";
     padding: 0.5rem;
     padding-right: 0rem;
     text-decoration: none;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    text-transform: lowercase;
   }
 
   @media (hover) {
