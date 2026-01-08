@@ -24,7 +24,7 @@
     "date-fns-tz": "^2.0.0",
     "remark-gfm": "^4.0.0",
     "sharp": "^0.32.6",
-    "unplugin-icons": "^0.17.1"
+    "unplugin-icons": "^22.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.0",
