@@ -13,7 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/alpinejs": "^0.5.0",
     "@astrojs/sitemap": "^3.0.3",
     "@fontsource-variable/sora": "^5.0.15",
     "@fontsource/ibm-plex-sans": "^5.1.0",
