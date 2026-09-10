@@ -27,7 +27,7 @@
     "unplugin-icons": "^0.17.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.4.0",
+    "@biomejs/biome": "^2.0.0",
     "@iconify-json/ph": "^1.1.6",
     "@iconify-json/tabler": "^1.1.103",
     "prettier-plugin-astro": "^0.14.1",
