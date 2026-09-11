@@ -2,10 +2,10 @@
 import Layout from "@layouts/default.astro";
 ---
 
-<Layout title="Woops! Siden finnes ikke hos Bjerk" path="/">
+<Layout title="Woops! Siden finnes ikke hos Bjerk" path="/" hasMarkdown={false}>
   <main>
-    <p>404 Ikke funnet</p>
-    <h1>SIDEN FINNES IKKE</h1>
+    <p class="status">404 – ikke funnet</p>
+    <h1>Siden finnes ikke</h1>
     <p>
       Siden du leter etter er enten flyttet eller eksisterer ikke lenger. Dersom
       vi har linket feil, så setter vi veldig pris på om du sender oss en
@@ -28,6 +28,11 @@ import Layout from "@layouts/default.astro";
   ul {
     list-style: none;
     padding-inline: 0;
+  }
+
+  li a {
+    display: inline-block;
+    padding-block: 0.15rem;
   }
 
   p {

@@ -42,15 +42,17 @@ if (frontmatter.schema) {
 
 <Layout {...frontmatter} schema={schema}>
   <main>
-    <nav aria-label="breadcrumb">
-      <a href="/tjenester">← Tilbake til tjenester</a>
+    <nav aria-label="Brødsmulesti" class="breadcrumb">
+      <a href="/tjenester">
+        <span aria-hidden="true">←</span> Tilbake til tjenester
+      </a>
     </nav>
     <article>
       <slot />
     </article>
     <section class="services">
-      <h2>Les mer om våre tjenester</h2>
-      <nav>
+      <h2 id="flere-tjenester">Les mer om våre tjenester</h2>
+      <nav aria-labelledby="flere-tjenester">
         <a href="/tjenester/integrasjoner">
           Data og integrasjoner
           <span aria-hidden="true">→</span>
@@ -82,6 +84,11 @@ if (frontmatter.schema) {
     margin-inline: auto;
   }
 
+  .breadcrumb a {
+    display: inline-block;
+    padding-block: 0.15rem;
+  }
+
   .services {
     margin-top: 6rem;
     max-width: 80ch;
@@ -99,7 +106,7 @@ if (frontmatter.schema) {
         text-underline-offset: 0.25rem;
       }
     }
-  } 
+  }
 
   article {
     line-height: 1.6;

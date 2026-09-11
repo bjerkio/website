@@ -1,9 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import formatHumanDate from 'src/utils';
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import formatHumanDate from "src/utils";
 
-export type Props = CollectionEntry<'post'>;
+export type Props = CollectionEntry<"post">;
 
 const { data, slug } = Astro.props;
 const humanDate = formatHumanDate(data.date);
@@ -11,12 +11,13 @@ const humanDate = formatHumanDate(data.date);
 
 <a href={data.sameAs ? data.sameAs[0] : `/artikler/${slug}`}>
   <article>
-    <Image 
-    width={550}
-    height={350}
-    src={data.image} 
-    alt={data.title} 
-    class="project-image" />
+    <Image
+      width={550}
+      height={350}
+      src={data.image}
+      alt=""
+      class="project-image"
+    />
     <header>
       <time datetime={data.date.toISOString()}>
         {humanDate}
@@ -34,7 +35,12 @@ const humanDate = formatHumanDate(data.date);
     display: block;
     color: inherit;
     text-decoration: inherit;
-    outline: 0;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
   }
 
   a:hover {
@@ -47,7 +53,6 @@ const humanDate = formatHumanDate(data.date);
     height: auto;
     object-fit: cover;
   }
-
 
   time {
     display: block;
@@ -72,5 +77,4 @@ const humanDate = formatHumanDate(data.date);
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
   }
-
 </style>

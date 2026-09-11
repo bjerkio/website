@@ -34,42 +34,42 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
         socialMedia.length > 0 && (
           <ul class="social-media-links">
             {socialMedia
-              .filter((link) => link.type === "linkedin")
-              .map((link) => (
+              .filter(link => link.type === "linkedin")
+              .map(link => (
                 <li>
                   <a
                     href={link.url}
                     target="_blank"
-                    rel="noopener"
-                    aria-label={`Gå til LinkedIn-profilen til ${name}`}
+                    rel="noopener noreferrer"
+                    aria-label={`Gå til LinkedIn-profilen til ${name} (åpner i ny fane)`}
                   >
                     <LinkedInLogo />
                   </a>
                 </li>
               ))}
             {socialMedia
-              .filter((link) => link.type === "github")
-              .map((link) => (
+              .filter(link => link.type === "github")
+              .map(link => (
                 <li>
                   <a
                     href={link.url}
                     target="_blank"
-                    rel="noopener"
-                    aria-label={`Gå til GitHub-profilen til ${name}`}
+                    rel="noopener noreferrer"
+                    aria-label={`Gå til GitHub-profilen til ${name} (åpner i ny fane)`}
                   >
                     <GithubLogo />
                   </a>
                 </li>
               ))}
             {socialMedia
-              .filter((link) => link.type === "matrix")
-              .map((link) => (
+              .filter(link => link.type === "matrix")
+              .map(link => (
                 <li>
                   <a
                     href={link.url}
                     target="_blank"
-                    rel="noopener"
-                    aria-label={`Kontakt ${name} på Matrix`}
+                    rel="noopener noreferrer"
+                    aria-label={`Kontakt ${name} på Matrix (åpner i ny fane)`}
                   >
                     <MatrixLogo />
                   </a>
@@ -85,7 +85,7 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
       typeof phone === "string" ? (
         <a href={`tel:${phone}`}>{phone}</a>
       ) : (
-        phone.map((phone) => <a href={`tel:${phone}`}>{phone}</a>)
+        phone.map(phone => <a href={`tel:${phone}`}>{phone}</a>)
       )
     }
 
@@ -136,7 +136,7 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
   }
 
   .description > .position {
-    color: var(--color-low-contrast-text);
+    color: var(--color-text-subtle);
   }
 
   .details > * {
@@ -159,5 +159,11 @@ const imageAlt = person.data.imageAlt ?? `Bilde av ${name}`;
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  .social-media-links a {
+    display: inline-flex;
+    padding: 0.3rem;
+    margin: -0.3rem;
   }
 </style>

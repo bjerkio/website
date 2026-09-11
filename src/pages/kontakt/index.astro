@@ -66,11 +66,13 @@ const employees = people
   }}
 >
   <main>
+    <h1>Kontakt oss</h1>
     <div class="contact-info">
       <a href="https://tally.so/r/3EbV2B" class="button">
-        Send oss en melding →
+        Send oss en melding <span aria-hidden="true">→</span>
       </a>
-      <section class="details">
+      <section class="details" aria-labelledby="kontaktinfo">
+        <h2 id="kontaktinfo" class="sr-only">Kontaktinformasjon</h2>
         <dl>
           <div>
             <dt>E-post</dt>
@@ -85,13 +87,15 @@ const employees = people
                 rel="noopener noreferrer"
               >
                 Arbins gate 11, 0253 Oslo
+                <span class="sr-only">(åpner i ny fane)</span>
               </a>
             </dd>
           </div>
         </dl>
       </section>
     </div>
-    <section class="employees">
+    <section class="employees" aria-labelledby="ansatte">
+      <h2 id="ansatte" class="sr-only">Menneskene i Bjerk</h2>
       {employees.map(person => <Person person={person} />)}
     </section>
   </main>
@@ -125,15 +129,12 @@ const employees = people
     flex-wrap: wrap;
     font-size: 1rem;
     gap: 2rem;
-    font-family:
-      "Sora Variable",
-      system-ui,
-      -apple-system,
-      sans-seri;
+    font-family: var(--font-sans);
   }
 
   dl div > dt {
-    opacity: 50%;
+    /* 50% landed at 3.94:1 against white; 72% clears 4.5:1 in both schemes. */
+    opacity: 72%;
   }
 
   dl div > dd {
@@ -141,6 +142,8 @@ const employees = people
   }
 
   dl div > dd a {
+    display: inline-block;
+    padding-block: 0.15rem;
     color: inherit;
   }
 

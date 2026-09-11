@@ -7,7 +7,9 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 <footer>
   <section class="call-to-action">
     <h2>La oss utgjøre en forskjell <em>sammen</em></h2>
-    <a href="/kontakt" class="button">Kontakt oss →</a>
+    <a href="/kontakt" class="button">
+      Kontakt oss <span aria-hidden="true">→</span>
+    </a>
   </section>
   <div class="footer-content">
     <section aria-labelledby="footer-about" class="about">
@@ -19,30 +21,42 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
         og kommuniserer på.
       </p>
     </section>
-    <nav>
+    <nav aria-label="Sidekart">
       <ul>
-        <li><a href="/om">Om oss →</a></li>
-        <li><a href="/arbeid">Arbeider →</a></li>
-        <li><a href="/tjenester">Tjenester →</a></li>
-        <li><a href="/artikler">Artikler →</a></li>
-        <li><a href="/kontakt">Kontakt oss →</a></li>
+        <li><a href="/om">Om oss <span aria-hidden="true">→</span></a></li>
+        <li>
+          <a href="/arbeid">Arbeider <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <a href="/tjenester">Tjenester <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <a href="/artikler">Artikler <span aria-hidden="true">→</span></a>
+        </li>
+        <li>
+          <a href="/kontakt">Kontakt oss <span aria-hidden="true">→</span></a>
+        </li>
       </ul>
     </nav>
     <section class="contact">
       <address>
         <p>Arbins gate 11, 0253 Oslo</p>
         <a href="tel:+4722120512">22 12 05 12</a>
-        <a href="mailto:kontoret@bjerk.io"> kontoret@bjerk.io </a>
+        <a href="mailto:kontoret@bjerk.io">kontoret@bjerk.io</a>
       </address>
       <div class="socials">
         <a
-          aria-label="GitHub-profile for Bjerk"
+          aria-label="Bjerk på GitHub (åpner i ny fane)"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://github.com/bjerkio"
         >
           <GitHubIcon />
         </a>
         <a
-          aria-label="Linked-profile for Bjerk"
+          aria-label="Bjerk på LinkedIn (åpner i ny fane)"
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/company/bjerk"
         >
           <LinkedInIcon />
@@ -54,7 +68,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
     <div class="footer-logo" aria-hidden="true">
       <Logo />
     </div>
-    <nav class="links">
+    <nav class="links" aria-label="Juridisk">
       <a href="/vilkar">Vilkår</a>
       <a href="/personvern">Personvernerklæring</a>
     </nav>
@@ -83,8 +97,8 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
   .call-to-action {
     background-color: var(--color-focus-bg);
     color: var(--color-focus-text);
-    margin-block-start: var(--gap);
-    padding-block: 8rem;
+    margin-block-start: var(--space-section);
+    padding-block: var(--space-section);
     text-align: center;
 
     & > a {
@@ -98,28 +112,35 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
   }
 
   footer > .footer-content {
-    padding-inline: 2rem;
-    padding-block: 4rem;
+    width: var(--container-width);
+    margin-inline: auto;
+    padding-block: var(--space-section);
 
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1125px;
+    gap: var(--space-block);
 
     & > nav > ul {
       display: grid;
       gap: 0.5rem;
       list-style: none;
+
+      & a {
+        display: inline-block;
+        padding-block: 0.15rem;
+      }
     }
   }
 
   footer > .bottom-footer {
+    width: var(--container-width);
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding-block: var(--space-block);
 
     & > .links {
       display: flex;
@@ -130,6 +151,7 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
 
       & > a {
         display: block;
+        padding-block: 0.15rem;
       }
     }
   }
@@ -158,6 +180,9 @@ import LinkedInIcon from "~icons/ph/linkedin-logo-fill";
   }
 
   .socials a {
+    display: inline-flex;
+    padding: 0.25rem;
+    margin: -0.25rem;
     color: inherit;
   }
 </style>

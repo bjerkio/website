@@ -32,7 +32,9 @@ const url = Astro.site;
           Bjerk er et teknologibyrå som skriver kode for å skape, forbedre og
           forenkle for ambisiøse bedrifter.
         </h1>
-        <a href="/om" class="button">Kom i gang →</a>
+        <a href="/om" class="button">
+          Kom i gang <span aria-hidden="true">→</span>
+        </a>
       </div>
       <div class="services">
         <Image
@@ -40,14 +42,22 @@ const url = Astro.site;
           alt="Bilde av folk som jobber"
           class="landing-image"
         />
-        <nav aria-label="Det vil tilbyr">
-          <a href="/tjenester/integrasjoner">Data og integrasjoner →</a>
-          <a href="/tjenester/radgivning">Rådgivning →</a>
-          <a href="/tjenester/produktutvikling">Produktutvikling →</a>
-          <a href="/tjenester/teknologi-og-utvikling"
-            >Teknologi og utvikling →</a
-          >
-          <a href="/tjenester/opplaring">Opplæring →</a>
+        <nav aria-label="Våre tjenester">
+          <a href="/tjenester/integrasjoner">
+            Data og integrasjoner <span aria-hidden="true">→</span>
+          </a>
+          <a href="/tjenester/radgivning">
+            Rådgivning <span aria-hidden="true">→</span>
+          </a>
+          <a href="/tjenester/produktutvikling">
+            Produktutvikling <span aria-hidden="true">→</span>
+          </a>
+          <a href="/tjenester/teknologi-og-utvikling">
+            Teknologi og utvikling <span aria-hidden="true">→</span>
+          </a>
+          <a href="/tjenester/opplaring">
+            Opplæring <span aria-hidden="true">→</span>
+          </a>
         </nav>
       </div>
     </section>
@@ -55,7 +65,8 @@ const url = Astro.site;
       x-intersect:enter="colorScheme = 'dark'"
       x-intersect:leave="colorScheme = 'light'"
     >
-      <section class="work">
+      <section class="work" aria-labelledby="arbeid-intro">
+        <h2 id="arbeid-intro" class="sr-only">Utvalgt arbeid</h2>
         <p>
           Vi skaper digitale produkter og løsninger som er tilpasset bedrifters
           unike behov og arbeidsprosesser.
@@ -64,8 +75,8 @@ const url = Astro.site;
         <div class="projects">
           {
             projects
-              .filter((project) => project.data.image)
-              .map((project) => <ProjectCard {...project} />)
+              .filter(project => project.data.image)
+              .map(project => <ProjectCard {...project} />)
           }
         </div>
       </section>
@@ -73,7 +84,7 @@ const url = Astro.site;
         <h2>Noen av de vi jobber med</h2>
 
         <div class="logos">
-          {partners.map((partner) => <PartnerCard {...partner} />)}
+          {partners.map(partner => <PartnerCard {...partner} />)}
         </div>
       </section>
     </span>
@@ -81,28 +92,22 @@ const url = Astro.site;
 </Layout>
 
 <style>
-  main {
-    --gap: 12rem;
-  }
-
   .hero {
-    margin-block-start: calc(var(--gap) / 2);
+    margin-block-start: var(--space-section);
     margin-inline: auto;
-    width: min(var(--container-width), 1460px);
+    width: var(--container-width);
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: var(--space-section);
   }
 
   .hero > .services {
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: var(--space-block);
 
     .landing-image,
     nav {
-      max-width: 1151px;
-      align-self: flex-end;
       width: 100%;
     }
 
@@ -114,7 +119,6 @@ const url = Astro.site;
       height: auto;
       aspect-ratio: 16 / 9;
       object-fit: cover;
-      margin-block-start: 2rem;
     }
 
     & > nav {
@@ -132,7 +136,7 @@ const url = Astro.site;
     width: var(--container-width);
     margin-inline: auto;
 
-    margin-block-start: calc(var(--gap) * 2);
+    margin-block-start: var(--space-section);
 
     > .projects {
       display: grid;
@@ -142,20 +146,21 @@ const url = Astro.site;
 
     > p {
       max-width: 40ch;
+      margin-block-end: var(--space-block);
       font-size: clamp(1rem, 2vw, 1.575rem);
       line-height: 1.4;
     }
   }
 
   .partners {
-    max-width: 1200px;
+    width: var(--container-width);
     text-align: center;
     margin-inline: auto;
-    margin-block: var(--gap);
-    padding-inline: 2rem;
+    margin-block: var(--space-section);
 
     > h2 {
-      margin-bottom: 4rem;
+      margin-block-end: var(--space-block);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
     }
 
     > .logos {
@@ -186,19 +191,20 @@ const url = Astro.site;
   }
 
   h1 {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    line-height: 1.1;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    line-height: 1.05;
     font-weight: 400;
     text-wrap: pretty;
-    max-width: 40ch;
+    max-width: 28ch;
   }
 
   .button {
     display: inline-flex;
     align-items: center;
+    margin-block-start: 2rem;
     gap: 0.5rem;
     color: inherit;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     text-decoration-color: inherit;
     text-decoration-thickness: 0.1rem;
     text-underline-offset: 0.25rem;

@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '@layouts/default.astro';
-import { Image } from 'astro:assets';
-import { formatDateRange } from 'src/utils';
+import { getCollection } from "astro:content";
+import Layout from "@layouts/default.astro";
+import { Image } from "astro:assets";
+import { formatDateRange } from "src/utils";
 
 export async function getStaticPaths() {
-  const eventEntries = await getCollection('event');
+  const eventEntries = await getCollection("event");
   return eventEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -19,18 +19,18 @@ const headline = entry.data.headline ?? entry.data.title;
 const images = entry.data.image?.src && [entry.data.image.src];
 
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Event',
+  "@context": "https://schema.org",
+  "@type": "Event",
   name: entry.data.title,
   startDate: entry.data.startDate.toISOString(),
   endDate: entry.data.endDate.toISOString(),
   eventAttendanceMode: entry.data.eventAttendanceMode,
   eventStatus: entry.data.eventStatus,
   location: {
-    '@type': 'Place',
+    "@type": "Place",
     name: entry.data.location.name,
     address: {
-      '@type': 'PostalAddress',
+      "@type": "PostalAddress",
       streetAddress: entry.data.location.streetAddress,
       addressLocality: entry.data.location.addressLocality,
       postalCode: entry.data.location.postalCode,
@@ -40,24 +40,24 @@ const schema = {
   image: images,
   description: entry.data.description,
   offers: entry.data.offers.map(offer => ({
-    '@type': 'Offer',
+    "@type": "Offer",
     ...offer,
   })),
   organizer: {
-    '@type': 'Organization',
-    name: 'Bjerk',
-    url: 'https://bjerk.io',
+    "@type": "Organization",
+    name: "Bjerk",
+    url: "https://bjerk.io",
   },
   performer: entry.data.performer.map(performer =>
-    performer.type === 'Person'
+    performer.type === "Person"
       ? {
-          '@type': 'Person',
+          "@type": "Person",
           name: performer.name,
           image: performer.image?.src ?? undefined,
           description: performer.description,
         }
       : {
-          '@type': 'Organization',
+          "@type": "Organization",
           name: performer.name,
           image: performer.image?.src ?? undefined,
           description: performer.description,
@@ -68,10 +68,10 @@ const schema = {
 const [primaryOffer] = entry.data.offers;
 const signUpUrl = primaryOffer ? primaryOffer.url : undefined;
 const contributors = entry.data.performer.filter(
-  performer => performer.name !== 'Bjerk' && performer.type === 'Organization',
+  performer => performer.name !== "Bjerk" && performer.type === "Organization",
 );
 const speakers = entry.data.performer.filter(
-  performer => performer.name !== 'Bjerk' && performer.type === 'Person',
+  performer => performer.name !== "Bjerk" && performer.type === "Person",
 );
 
 const startDate = entry.data.startDate;
@@ -83,7 +83,7 @@ const address = [
   entry.data.location.address.postalCode,
   entry.data.location.address.addressLocality,
   entry.data.location.address.addressCountry,
-].join(', ');
+].join(", ");
 
 const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
 ---
@@ -99,11 +99,11 @@ const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
       <h1 class="title">{headline}</h1>
       <p class="metadata">
         <strong>Tid:</strong>
-        {' '}<time datetime={startDate.toISOString()}>{dateFrom}</time>
-         til <time datetime={endDate.toISOString()}>
+        {" "}<time datetime={startDate.toISOString()}>{dateFrom}</time>
+        til <time datetime={endDate.toISOString()}>
           {dateTo}
         </time><br />
-        <strong>Sted:</strong>{' '}
+        <strong>Sted:</strong>{" "}
         {address}
       </p>
       <Content />
@@ -112,7 +112,7 @@ const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
         signUpUrl && (
           <div>
             <a class="sign-up-link" href={signUpUrl}>
-              Påmelding →
+              Påmelding <span aria-hidden="true">→</span>
             </a>
           </div>
         )
@@ -130,7 +130,11 @@ const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
                   )}
                   <div class="metadata">
                     <p>
-                      <a href={performer.url} target="_blank">
+                      <a
+                        href={performer.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {performer.name}
                       </a>
                     </p>
@@ -149,7 +153,11 @@ const { dateFrom, dateTo } = formatDateRange(startDate, endDate, true);
             <h2>Medvirkende / Samarbeidspartnere</h2>
             <div class="contributor">
               {contributors.map(performer => (
-                <a href={performer.url} target="_blank">
+                <a
+                  href={performer.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src={performer.logo}
                     alt={`Bilde av ${performer.name}`}

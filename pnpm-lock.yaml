@@ -14,12 +14,6 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.0.3
         version: 3.0.3
-      '@fontsource-variable/sora':
-        specifier: ^5.0.15
-        version: 5.0.15
-      '@fontsource/ibm-plex-sans':
-        specifier: ^5.1.0
-        version: 5.1.0
       '@types/alpinejs':
         specifier: ^3.0.0
         version: 3.13.10
@@ -672,12 +666,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource-variable/sora@5.0.15':
-    resolution: {integrity: sha512-TfYn6vbOTwcwEAbrrmJ5XwPBX63Z828/7XPzZR7wPJMDloSeR51kIXYzybYccj172haB/ioO+nQtlZBEsQyZIg==}
-
-  '@fontsource/ibm-plex-sans@5.1.0':
-    resolution: {integrity: sha512-v2aFHGh33ogG+At6dVNUCX6vWlNAhQ6STWj5WrBKPxVWX1SsAnHNq8sXQBa7WHEt29Irmozuk7GTp6GzFlpwdQ==}
 
   '@hutson/parse-repository-url@3.0.2':
     resolution: {integrity: sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==}
@@ -3630,10 +3618,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
-
-  '@fontsource-variable/sora@5.0.15': {}
-
-  '@fontsource/ibm-plex-sans@5.1.0': {}
 
   '@hutson/parse-repository-url@3.0.2': {}
 

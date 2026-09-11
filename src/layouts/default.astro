@@ -1,10 +1,11 @@
 ---
 import type { WithContext, Thing } from "schema-dts";
-import "@fontsource/ibm-plex-sans";
+import "../styles/switzer.css";
 import { jsonLd } from "./json-ld";
 import Header from "@components/header.astro";
 import Footer from "@components/footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import { toMarkdownUrl } from "../lib/docs";
 
 export type Props = {
   /**
@@ -91,6 +92,14 @@ export type Props = {
    * JSON-LD structured data for the page.
    */
   schema?: WithContext<Thing> | WithContext<Thing>[];
+
+  /**
+   * Every page has a Markdown twin at the same route plus `.md`. Set this on
+   * routes that have none (the 404 page) to drop the alternate link.
+   *
+   * @default true
+   */
+  hasMarkdown?: boolean;
 };
 
 const defaultDescription = `
@@ -114,7 +123,10 @@ const {
   schema,
   articleAuthor,
   articlePublishDate,
+  hasMarkdown = true,
 } = Astro.props;
+
+const markdownHref = toMarkdownUrl(Astro.url.pathname);
 
 // const parsedImages = images.map((image) => parseSocialMediaImage(image));
 // const [image] = parsedImages;
@@ -126,7 +138,11 @@ const makeUrl = (newPath: string) => new URL(newPath, Astro.site).toString();
 const canonical = new URL(path, Astro.site);
 ---
 
-<html lang="nb" x-data="{ colorScheme: 'light' }">
+<html
+  lang="nb"
+  x-data="{ colorScheme: 'light' }"
+  :data-color-scheme="colorScheme"
+>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href={makeUrl("favicon.svg")} />
@@ -152,6 +168,16 @@ const canonical = new URL(path, Astro.site);
     <meta name="robots" content="index,follow" />
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
+    {
+      hasMarkdown && (
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href={markdownHref}
+          title="Markdown-versjon av denne siden"
+        />
+      )
+    }
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={socialMediaTitle} />
@@ -208,8 +234,47 @@ const canonical = new URL(path, Astro.site);
     </style>
   </head>
   <body :data-color-scheme="colorScheme">
+    <script>
+      // Vars live on <html> so the spotlight survives view transitions, which
+      // swap out <body> (and any inline style on it).
+      const root = document.documentElement;
+      let frame = 0;
+      let pointerX = 0;
+      let pointerY = 0;
+
+      const apply = () => {
+        frame = 0;
+        root.style.setProperty("--spotlight-x", `${pointerX}px`);
+        root.style.setProperty("--spotlight-y", `${pointerY}px`);
+      };
+
+      const onMove = (event: PointerEvent) => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        if (!frame) frame = requestAnimationFrame(apply);
+      };
+
+      const onLeave = () => {
+        if (frame) cancelAnimationFrame(frame);
+        frame = 0;
+        root.style.removeProperty("--spotlight-x");
+        root.style.removeProperty("--spotlight-y");
+      };
+
+      if (
+        matchMedia("(hover: hover) and (pointer: fine)").matches &&
+        !matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
+        window.addEventListener("pointermove", onMove, { passive: true });
+        document.addEventListener("pointerleave", onLeave);
+        window.addEventListener("blur", onLeave);
+      }
+    </script>
+    <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
     <Header />
-    <slot />
+    <div id="hovedinnhold" tabindex="-1">
+      <slot />
+    </div>
     <Footer />
     <style is:global>
       :root {
@@ -221,6 +286,7 @@ const canonical = new URL(path, Astro.site);
         --color-app-text: black;
         --color-app-link: var(--color-app-text);
         --color-app-link-hover: hsl(var(--base-grapetastic) 20%);
+        --color-focus-ring: hsl(var(--base-grapetastic) 45%);
         --color-app-focus-intense: hsl(var(--base-frostbite) 40%);
         --color-app-focus-subtle: hsl(var(--base-frostbite) 95%);
 
@@ -229,7 +295,7 @@ const canonical = new URL(path, Astro.site);
         --color-subtle-text: hsl(var(--base-frostbite) 40%);
 
         --color-card-bg: hsl(var(--base-frostbite) 30% 98%);
-        --color-text-subtle: hsl(var(--base-frostbite) 40%);
+        --color-text-subtle: hsl(var(--base-frostbite) 26%);
 
         --color-emphasis-bg: hsl(var(--base-frostbite) 85%);
         --color-emphasis-text: hsl(var(--base-frostbite) 10%);
@@ -237,7 +303,22 @@ const canonical = new URL(path, Astro.site);
         --color-focus-bg: hsl(var(--base-grapetastic) 90%);
         --color-focus-text: hsl(var(--base-grapetastic) 5%);
 
+        --font-sans: "Switzer", system-ui, -apple-system, sans-serif;
+
         --container-width: min(1620px, 100% - 4rem);
+
+        /* One vertical rhythm for the whole site: --space-section between
+           sections, --space-block between blocks inside one. */
+        --space-section: clamp(4rem, 8vw, 7.5rem);
+        --space-block: clamp(1.5rem, 3vw, 2.5rem);
+
+        --pattern-dot-color: hsl(var(--base-frostbite) 8% / 0.14);
+        --pattern-dot-size: 1px;
+        --pattern-dot-gap: 24px;
+
+        --spotlight-radius: 260px;
+        --spotlight-x: -9999px;
+        --spotlight-y: -9999px;
 
         --border-radius: 0.25rem;
         --border-radius-sm: 0.125rem;
@@ -247,15 +328,57 @@ const canonical = new URL(path, Astro.site);
         margin-bottom: 4rem;
       }
 
+      h1,
+      h2,
+      h3,
+      h4 {
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        text-wrap: balance;
+      }
+
+      /* The dot grid lives on its own layer so the cursor can mask a hole in it
+         without masking the page content along with it. */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(
+          circle at center,
+          var(--pattern-dot-color) var(--pattern-dot-size),
+          transparent 0
+        );
+        background-size: var(--pattern-dot-gap) var(--pattern-dot-gap);
+        background-position: center;
+        --spotlight-mask: radial-gradient(
+          circle var(--spotlight-radius) at var(--spotlight-x)
+            var(--spotlight-y),
+          transparent 0%,
+          transparent 32%,
+          rgba(0, 0, 0, 0.2) 55%,
+          rgba(0, 0, 0, 0.65) 78%,
+          #000 100%
+        );
+        -webkit-mask-image: var(--spotlight-mask);
+        mask-image: var(--spotlight-mask);
+      }
+
+      @media print {
+        body::before {
+          display: none;
+        }
+      }
+
+      html {
+        background-color: var(--color-app-bg);
+      }
+
       body,
       html {
         min-height: 100vh;
-        background-color: var(--color-app-bg);
-        font-family:
-          "IBM Plex Sans",
-          system-ui,
-          -apple-system,
-          sans-seri;
+        font-family: var(--font-sans);
         font-size: 16px;
         line-height: 1.5;
         color: var(--color-app-text);
@@ -272,7 +395,10 @@ const canonical = new URL(path, Astro.site);
           background-color 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
       }
 
-      body[data-color-scheme="dark"] {
+      [data-color-scheme="dark"] {
+        --color-focus-ring: hsl(var(--base-frostbite) 70%);
+        --color-text-subtle: hsl(var(--base-frostbite) 75%);
+        --pattern-dot-color: hsl(var(--base-frostbite) 90% / 0.09);
         --color-app-text: white;
         --color-app-bg: hsl(var(--base-frostbite) 1%);
         --color-subtle-bg: hsl(var(--base-frostbite) 15%);
@@ -315,22 +441,50 @@ const canonical = new URL(path, Astro.site);
         --color-link-hover: var(--color-app-link-hover);
 
         color: var(--color-link);
-        text-decoration-color: var(--color-link);
+        text-decoration-color: color-mix(
+          in srgb,
+          currentColor 55%,
+          transparent
+        );
         text-decoration-skip-ink: none;
-        text-decoration-thickness: 0.125em;
-        text-underline-offset: 0.125em;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.3em;
+        transition: text-decoration-color 0.2s ease;
       }
 
       @media (hover) {
         a:hover {
           --color-link: var(--color-link-hover);
+          text-decoration-color: currentColor;
         }
       }
 
-      a:focus-visible {
-        outline-color: var(--link-color);
-        outline-offset: 0.4em;
+      :focus-visible {
+        outline: 3px solid var(--color-focus-ring);
+        outline-offset: 3px;
         border-radius: 0.225em;
+      }
+
+      /* Parked off-screen until focused, then pinned to the top-left. */
+      .skip-link {
+        position: fixed;
+        z-index: 10000;
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--border-radius);
+        background-color: var(--color-app-text);
+        color: var(--color-app-bg);
+        text-decoration: none;
+        transform: translateY(calc(-100% - 1rem));
+      }
+
+      .skip-link:focus-visible {
+        transform: none;
+      }
+
+      #hovedinnhold:focus {
+        outline: none;
       }
 
       img {
@@ -344,11 +498,7 @@ const canonical = new URL(path, Astro.site);
         width: auto;
         padding: 1em;
         resize: none;
-        font-family:
-          "Sora Variable",
-          system-ui,
-          -apple-system,
-          sans-seri;
+        font-family: var(--font-sans);
         transition: all 0.5s ease;
         max-width: 60ch;
         background-color: transparent;
@@ -369,6 +519,17 @@ const canonical = new URL(path, Astro.site);
         background-color: var(--color-focus-bg);
         padding: 16px 1em;
         background-color: white;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
       }
 
       .sr-only {
